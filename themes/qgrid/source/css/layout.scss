@@ -1,12 +1,12 @@
-$nav-width: 200px;
-$header-height: 64px;
-$footer-height: 200px;
+@import "variables";
+@import "base-classes";
 
 html, body {
     width: 100vw;
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: $font-sans;
 }
 
 body {
@@ -18,35 +18,78 @@ body {
     grid-template-columns: $nav-width 1fr;
     grid-template-rows: auto 1fr auto;
     grid-gap: 10px;
+    background: $color-background;
 }
 
 header {
+    @extend .z20;
     grid-area: header;
-    background: red;
+    color: $color-top-text;
+    background: $color-top-background;
     position: fixed;
     height: $header-height;
     width: 100vw;
+    font-family: $font-serif;
+    box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+#logo {
+    display: block;
+    margin: 17px;
+    height: $logo-height;
+    width: $logo-width;
+    background: url($logo-url) center transparent;
+}
 nav {
+    @extend .z10;
     grid-area: nav;
-    background: blue;
+    color: $color-sidebar-text;
+    background: $color-sidebar-background;
     position: fixed;
     height: 100vh;
     width: $nav-width;
+    font-family: $font-serif;
     top: $header-height;
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    ul {
+        margin-left: 20px;
+
+        li {
+            list-style: none;
+            font-size: 16px;
+            line-height: 33px;
+
+            a {
+                color: $color-sidebar-text;
+                text-decoration: none;
+                opacity: 0.8;
+
+                &:hover {
+                    opacity: 1
+                }
+            }
+        }
+    }
 }
 
 main {
     grid-area: content;
-    background: green;
+    background: $color-background;
+    color: $color-text;
     height: 2000px;
     margin-top: $header-height;
 }
 
 footer {
+    @extend .z20;
     grid-area: footer;
-    background: yellow;
+    color: $color-footer-text;
+    background: $color-footer-background;
+    font-family: $font-serif;
     height: $footer-height;
-    z-index: 1;
 }

@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="<%- page.title ? page.title + ' — ' : '' %>qgrid">
     <meta name="twitter:description" content="<%- theme.site_description %>">
-    <meta name="twitter:image" content="https://<%- theme.root_domain %>/images/logo.png">
+    <meta name="twitter:image" content="https://<%- theme.root_domain %>/assets/logo.png">
 
     <link rel="apple-touch-icon" sizes="57x57" href="<%- url_for("/icons/apple-icon-57x57.png") %>">
     <link rel="apple-touch-icon" sizes="60x60" href="<%- url_for("/icons/apple-icon-60x60.png") %>">
@@ -27,21 +27,22 @@
     <link rel="apple-touch-icon" sizes="120x120" href="<%- url_for("/icons/apple-icon-120x120.png") %>">
     <link rel="apple-touch-icon" sizes="144x144" href="<%- url_for("/icons/apple-icon-144x144.png") %>">
     <link rel="apple-touch-icon" sizes="152x152" href="<%- url_for("/icons/apple-icon-152x152.png") %>">
-    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for("/icons/apple-icon-180x180.png") %>">
-    <link rel="icon" type="image/png" sizes="192x192" href="<%- url_for("/icons/android-icon-192x192.png") %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for("/icons/favicon-32x32.png") %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for("/assets/favicons/apple-touch-icon.png") %>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<%- url_for("/assets/favicons/android-chrome-192x192.png") %>">
+    <link rel="icon" type="image/png" sizes="384x384" href="<%- url_for("/assets/favicons/android-chrome-384x384.png") %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for("/assets/favicons/favicon-32x32.png") %>">
     <link rel="icon" type="image/png" sizes="96x96" href="<%- url_for("/icons/favicon-96x96.png") %>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for("/icons/favicon-16x16.png") %>">
-    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for("/assets/favicons/favicon-16x16.png") %>">
+    <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
     <link rel="icon" href="<%- url_for("/images/logo.png") %>" type="image/png">
 
-    <meta name="msapplication-TileColor" content="#4fc08d">
-    <meta name="theme-color" content="#4fc08d">
+    <meta name="msapplication-TileColor" content="#2f80ed">
+    <meta name="theme-color" content="#2f80ed">
 
     <meta name="msapplication-config" content="browserconfig.xml">
     <link rel="manifest" href="/manifest.json">
 
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab" rel="stylesheet">
 
     <!-- main page styles -->
     <%- css(isIndex ? 'css/index' : 'css/page') %>
