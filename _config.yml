@@ -81,3 +81,9 @@ deploy:
   repo: https://github.com/qgrid/doc
   branch: gh-pages
   message: deploy
+
+node_sass:
+  debug: false
+  precision: 5
+  sourceComments: false
+  outputStyle: nested
