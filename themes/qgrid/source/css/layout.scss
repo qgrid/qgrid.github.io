@@ -1,8 +1,6 @@
 @import "variables";
-@import "base-classes";
-
-html, body {
-    width: 100vw;
+html,
+body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -11,18 +9,15 @@ html, body {
 
 body {
     display: grid;
-    grid-template-areas: 
-        "header header" 
-        "nav content" 
-        "footer footer";
+    grid-template-areas: "header header" "nav content" "footer footer";
     grid-template-columns: $nav-width 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 10px;
+    grid-template-rows: $header-height 1fr auto;
+    grid-gap: 16px;
     background: $color-background;
 }
 
 header {
-    @extend .z20;
+    z-index: 1;
     grid-area: header;
     color: $color-top-text;
     background: $color-top-background;
@@ -32,6 +27,7 @@ header {
     font-family: $font-serif;
     box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 #logo {
     display: block;
     margin: 17px;
@@ -39,38 +35,39 @@ header {
     width: $logo-width;
     background: url($logo-url) center transparent;
 }
+
 nav {
-    @extend .z10;
     grid-area: nav;
     color: $color-sidebar-text;
     background: $color-sidebar-background;
     position: fixed;
     height: 100vh;
+    padding-top: $header-height;
     width: $nav-width;
     font-family: $font-serif;
-    top: $header-height;
-
-    h3 {
-        font-size: 18px;
-        font-weight: bold;
-        margin-left: 20px;
-    }
-
-    ul {
-        margin-left: 20px;
-
-        li {
-            list-style: none;
-            font-size: 16px;
-            line-height: 33px;
-
-            a {
-                color: $color-sidebar-text;
-                text-decoration: none;
-                opacity: 0.8;
-
-                &:hover {
-                    opacity: 1
+    box-sizing: border-box;
+    >div {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        ul {
+            margin-left: 20px;
+            li {
+                list-style: none;
+                font-size: 16px;
+                line-height: 33px;
+                a {
+                    color: $color-sidebar-text;
+                    text-decoration: none;
+                    opacity: 0.8;
+                    &:hover {
+                        opacity: 1
+                    }
                 }
             }
         }
@@ -82,11 +79,9 @@ main {
     background: $color-background;
     color: $color-text;
     height: 2000px;
-    margin-top: $header-height;
 }
 
 footer {
-    @extend .z20;
     grid-area: footer;
     color: $color-footer-text;
     background: $color-footer-background;
