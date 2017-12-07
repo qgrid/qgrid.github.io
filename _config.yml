@@ -86,3 +86,4 @@ node_sass:
   debug: false
   precision: 5
   sourceComments: false
+  outputStyle: nested

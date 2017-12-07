@@ -1,3 +1,15 @@
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header" 
+        "nav content" 
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 10px;
+    height: 100vh;
+}
+
 header {
     grid-area: header;
     background: red;
