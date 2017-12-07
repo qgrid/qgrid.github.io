@@ -1,3 +1,10 @@
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: grid;
     grid-template-areas: 
@@ -7,7 +14,6 @@ body {
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr;
     grid-gap: 10px;
-    height: 100vh;
 }
 
 header {
