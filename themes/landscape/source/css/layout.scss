@@ -1,0 +1,19 @@
+header {
+    grid-area: header;
+    background: red;
+}
+
+nav {
+    grid-area: nav;
+    background: blue;
+}
+
+main {
+    grid-area: content;
+    background: green;
+}
+
+footer {
+    grid-area: footer;
+    background: yellow;
+}
