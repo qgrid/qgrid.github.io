@@ -1,1 +1,11 @@
 @import "layout";
+
+nav {
+    display: none;
+}
+
+body {
+    grid-template-areas: "header" "content" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: $header-height auto auto;
+}

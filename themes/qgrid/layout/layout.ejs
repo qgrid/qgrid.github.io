@@ -4,8 +4,7 @@
   <html lang="en">
 
   <head>
-    <title>
-      <%- page.title ? page.title + ' — ' : '' %>qgrid</title>
+    <title><%- page.title ? page.title + ' — ' : '' %>qgrid</title>
     <meta charset="utf-8">
     <meta name="description" content="<%- theme.site_description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -53,7 +52,7 @@
 
   </head>
 
-  <body>
+  <body class="<%- isIndex ? 'index' : 'pages' %>">
 
     <header>
         <%- partial('partials/header') %>        
@@ -67,9 +66,12 @@
       <%- body %>
     </main>
 
+    <% if (isIndex) { %>
     <footer>
       <%- partial('partials/footer') %>        
     </footer>
+    <% } %>
+
   </body>
 
   </html>
