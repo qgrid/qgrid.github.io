@@ -39,6 +39,11 @@ pre {
     margin: 0 30px;
     max-width: 1000px;
 }
-.embed {
-    margin: 2em 0;
+.jsfiddle-embed {
+    @extend pre;
+    padding: 0;
+    background: #f5f5f5;
+    >iframe {
+        height: 470px;
+    }
 }

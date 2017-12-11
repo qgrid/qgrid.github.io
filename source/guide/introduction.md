@@ -14,16 +14,6 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo
 
-CodePen embed example with light theme
-
-<div class="embed"><p data-height="710" data-theme-id="light" data-slug-hash="eewwmx" data-default-tab="result" data-user="eeleet" data-embed-version="2" data-pen-title="QGrid Example" class="codepen">See the Pen <a href="https://codepen.io/eeleet/pen/eewwmx/">QGrid Example</a> by Ilya Litmanovich (<a href="https://codepen.io/eeleet">@eeleet</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></div>
-
-CodePen embed example with dark theme
-
-<p data-height="300" data-theme-id="dark" data-slug-hash="eewwmx" data-default-tab="result" data-user="eeleet" data-embed-version="2" data-pen-title="QGrid Example" class="codepen">See the Pen <a href="https://codepen.io/eeleet/pen/eewwmx/">QGrid Example</a> by Ilya Litmanovich (<a href="https://codepen.io/eeleet">@eeleet</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
 
 ### Second Header
 
@@ -31,14 +21,8 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 JSFiddle embed example
 
-<script async src="//jsfiddle.net/eeleet/0qL9u2dy/1/embed/"></script>
-
-### The 'way-to-go' code embed
-
-<div class="jsfiddle-embed">
-    <div class="code"><script async src="//jsfiddle.net/eeleet/0qL9u2dy/1/embed/js,html,css/"></script></div>
-    <div class="result"><script async src="//jsfiddle.net/eeleet/0qL9u2dy/1/embed/result/"></script></div>
-<div>
+<div class="jsfiddle-embed"><script async src="//jsfiddle.net/eeleet/0qL9u2dy/3/embed/result,html,js/"></script><div>
 
 Thats all folks!
+
 
