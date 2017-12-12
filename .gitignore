@@ -4,3 +4,4 @@ node_modules
 public 
 package-lock.json
 .idea
+.deploy_git/
