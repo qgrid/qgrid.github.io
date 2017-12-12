@@ -1,6 +1,6 @@
 @import "variables";
 
-aside {
+aside#nav{
   grid-area: nav;
   color: $color-sidebar-text;
   background: $color-sidebar-background;
@@ -10,7 +10,7 @@ aside {
   width: $nav-width;
   font-family: $font-serif;
   box-sizing: border-box;
-  transition: 0.5s;
+  //transition: 0.5s;
   nav {
     height: 100%;
     overflow-y: auto;
@@ -30,7 +30,7 @@ aside {
           color: $color-sidebar-text;
           text-decoration: none;
           opacity: 0.8;
-          transition: 0.3s;
+          //transition: 0.3s;
           &:hover {
             opacity: 1
           }
@@ -42,7 +42,7 @@ aside {
 
 
 @media screen and (min-width: 699px) and (max-width: 1024px) {
-  nav {
+  #nav {
     width: 0;
   }
 }

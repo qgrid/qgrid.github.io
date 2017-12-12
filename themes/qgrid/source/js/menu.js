@@ -1,8 +1,11 @@
-function open() {
-	// document.getElementById("sidenav").style.width = "250px";
+function init() {
+
+	const triggerBtn = document.getElementById("nav-trigger");
+	triggerBtn.addEventListener('click', function () {
+		const nav = document.getElementById("nav");
+		nav.classList.toggle('hide');
+	});
+
 }
 
-function close() {
-	// document.getElementById("sidenav").style.width = "0";
-	console.log('Kate');
-}
+document.addEventListener("DOMContentLoaded", init);

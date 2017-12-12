@@ -1,5 +1,5 @@
 @import "variables";
-@import "sidenav";
+@import "nav";
 
 html,
 body {
@@ -24,6 +24,16 @@ header {
     width: 100vw;
     font-family: $font-serif;
     box-shadow: 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    #nav-trigger{
+      display: inline-block;
+      vertical-align: middle;
+      background-color: transparent;
+      color: white;
+      border-width: 0;
+      cursor: pointer;
+      outline: none;
+    }
 }
 
 #logo {
@@ -49,3 +59,6 @@ footer {
     height: $footer-height;
 }
 
+.hide {
+  display: none;
+}
