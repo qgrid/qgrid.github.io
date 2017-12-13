@@ -1,8 +1,8 @@
-@import "layout";
 @import "variables";
-nav {
-    display: none;
-}
+@import "layout";
+@import "nav";
+@import "media";
+
 
 body {
     grid-template-areas: "header" "content" "footer";
