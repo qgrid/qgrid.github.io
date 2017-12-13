@@ -1,4 +1,7 @@
 @import "variables";
+@import "mixins";
+
+@include scrollbars(.5em, $color-scrollbar-thumb);
 
 html,
 body {
@@ -6,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: $font-sans;
+    font-size: $font-size;
 }
 
 body {
@@ -42,6 +46,7 @@ header {
     height: $logo-height;
     width: $logo-width;
     background: url($logo-url) center transparent;
+
     vertical-align: middle;
     grid-area: header;
 }
