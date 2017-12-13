@@ -1,6 +1,6 @@
 @import "variables";
 
-aside#nav{
+#nav {
   grid-area: nav;
   color: $color-sidebar-text;
   background: $color-sidebar-background;
@@ -37,6 +37,9 @@ aside#nav{
         }
       }
     }
+  }
+  .nav-header {
+    display: none;
   }
 }
 

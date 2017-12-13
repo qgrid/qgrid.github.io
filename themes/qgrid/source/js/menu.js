@@ -1,9 +1,13 @@
 function init() {
 
-	const triggerBtn = document.getElementById("nav-trigger");
-	triggerBtn.addEventListener('click', function () {
-		const nav = document.getElementById("nav");
-		nav.classList.toggle('hide');
+	const triggerBtns = Array.from(document.getElementsByClassName("nav-trigger"));
+	triggerBtns.forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			const nav = document.getElementById("nav");
+			nav.classList.toggle('hide');
+			const overlay = document.getElementById("overlay");
+			overlay.classList.toggle('hide');
+		})
 	});
 
 }

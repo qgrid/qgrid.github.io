@@ -1,8 +1,19 @@
 @media screen and (max-width: 850px) {
-  #nav-trigger {
+  .nav-trigger {
     display: inline-block;
   }
   #overlay {
     display: block;
+  }
+  #nav {
+    padding-top: 0;
+    z-index: 11;
+    .nav-header {
+      display: block;
+    }
+  }
+  body {
+    grid-template-areas: "header" "content" "footer";
+    grid-template-columns: 1fr;
   }
 }
