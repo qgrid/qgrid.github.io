@@ -1,19 +1,27 @@
 @media screen and (max-width: 850px) {
-  .nav-trigger {
-    display: inline-block;
+  .pages {
+    grid-template-areas: "header" "content" "footer";
+    grid-template-columns: 1fr;
   }
   #overlay {
     display: block;
   }
   #nav {
     padding-top: 0;
-    z-index: 11;
+    z-index: 12;
     .nav-header {
       display: block;
     }
   }
-  body {
-    grid-template-areas: "header" "content" "footer";
-    grid-template-columns: 1fr;
+  .pages {
+    .nav-trigger {
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (min-width: 851px) {
+  .pages #nav.hide {
+    display: block !important;
   }
 }

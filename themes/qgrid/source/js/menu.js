@@ -1,14 +1,16 @@
+function toggleNav () {
+	var nav = document.getElementById("nav");
+	nav.classList.toggle('hide');
+	var overlay = document.getElementById("overlay");
+	overlay.classList.toggle('hide');
+}
+
 function init() {
 
-	const triggerBtns = Array.from(document.getElementsByClassName("nav-trigger"));
-	triggerBtns.forEach(function (btn) {
-		btn.addEventListener('click', function () {
-			const nav = document.getElementById("nav");
-			nav.classList.toggle('hide');
-			const overlay = document.getElementById("overlay");
-			overlay.classList.toggle('hide');
-		})
-	});
+	const triggerBtns = document.getElementsByClassName("nav-trigger");
+	for (var i = 0; i < triggerBtns.length; i++) {
+		triggerBtns[i].addEventListener('click', toggleNav, false);
+	}
 
 }
 
