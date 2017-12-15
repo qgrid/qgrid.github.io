@@ -2,10 +2,18 @@
   .pages {
     grid-template-areas: "header" "content" "footer";
     grid-template-columns: 1fr;
+    #overlay {
+      display: block;
+    }
+    .nav-trigger {
+      display: inline-block;
+    }
   }
-  #overlay {
-    display: block;
+
+  .index {
+
   }
+
   #nav {
     padding-top: 0;
     z-index: 12;
@@ -13,15 +21,10 @@
       display: block;
     }
   }
-  .pages {
-    .nav-trigger {
-      display: inline-block;
-    }
-  }
 }
 
 @media screen and (min-width: 851px) {
-  .pages #nav.hide {
+  .pages #nav {
     display: block !important;
   }
 }
