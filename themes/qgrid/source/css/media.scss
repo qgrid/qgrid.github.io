@@ -24,7 +24,12 @@
 }
 
 @media screen and (min-width: 851px) {
-  .pages #nav {
-    display: block !important;
+  .pages {
+    #nav {
+      display: block !important;
+    }
+    #overlay {
+      display: none !important;
+    }
   }
 }
