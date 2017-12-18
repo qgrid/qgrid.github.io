@@ -1,4 +1,5 @@
 @import "variables";
+@import "icons";
 @import "nav";
 @import "layout";
 @import "media";
@@ -8,8 +9,8 @@ body.index {
   grid-template-columns: 1fr;
   grid-template-rows: $header-height auto auto;
 
-  .nav-trigger,
-  #nav .nav-trigger{
+  .hamburger,
+  #nav .hamburger {
     display: inline-block;
   }
   #overlay {

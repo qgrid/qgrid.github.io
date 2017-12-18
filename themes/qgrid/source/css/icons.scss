@@ -1,0 +1,37 @@
+@import "variables";
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 17px;
+  outline: none;
+  border: 0 transparent;
+  cursor: pointer;
+  color: white;
+  grid-area: header;
+}
+
+@mixin generate-icons($class, $url, $height, $width) {
+  .#{$class} {
+    @extend .icon;
+    background: url($url) 50% 50% no-repeat transparent;
+    height: $height;
+    width: $width;
+  }
+}
+
+@include generate-icons('search', $search-url, $search-height, $search-width);
+@include generate-icons('logo', $logo-url, $logo-height, $logo-width);
+@include generate-icons('hamburger', $hamburger-url, $hamburger-height, $hamburger-width);
+
+
+.hamburger {
+  vertical-align: middle;
+  background-color: transparent;
+  color: white;
+  border: 0 transparent;
+  font-size: 36px;
+  cursor: pointer;
+  outline: none;
+}
+

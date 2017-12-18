@@ -5,7 +5,7 @@
     #overlay {
       display: block;
     }
-    .nav-trigger {
+    .hamburger {
       display: inline-block;
     }
   }
@@ -30,6 +30,9 @@
     }
     #overlay {
       display: none !important;
+    }
+    .hamburger {
+      display: none;
     }
   }
 }

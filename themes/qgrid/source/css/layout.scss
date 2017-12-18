@@ -32,41 +32,6 @@ header {
   box-shadow: 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.search {
-  grid-area: header;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 17px;
-  height: $search-height;
-  width: $search-width;
-  background: url($search-url) 50% 50% no-repeat;
-  outline: none;
-  border: 0 transparent;
-  cursor: pointer;
-  color: white;
-}
-
-.nav-trigger {
-  display: none;
-  vertical-align: middle;
-  background-color: transparent;
-  color: white;
-  border: 0 transparent;
-  font-size: 36px;
-  cursor: pointer;
-  outline: none;
-}
-
-.logo {
-  display: inline-block;
-  margin: 17px;
-  height: $logo-height;
-  width: $logo-width;
-  background: url($logo-url) center transparent;
-  vertical-align: middle;
-  grid-area: header;
-}
-
 main {
   display: grid;
   grid-template-areas: "get-sarted" "example" "feature-list" "go-to";
