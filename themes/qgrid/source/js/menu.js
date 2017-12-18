@@ -35,6 +35,9 @@ function init() {
 	var overlay = document.getElementById("overlay");
 	overlay.addEventListener('click', toggleDisplay, false);
 
+	var nav = document.getElementById("nav");
+	nav.addEventListener('click', toggleDisplay, false);
+
 	var search = document.getElementById('search');
 	if (search) {
 		search.addEventListener("keyup", filter, false)
