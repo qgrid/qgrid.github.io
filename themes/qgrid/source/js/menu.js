@@ -1,42 +1,44 @@
 function toggleDisplay() {
-    var nav = document.getElementById("nav");
-    var overlay = document.getElementById("overlay");
-    if (nav.style.display === 'block') {
-        nav.style.display = 'none';
-        overlay.style.display = 'none';
-    } else {
-        nav.style.display = 'block';
-        overlay.style.display = 'block';
-    }
+	var nav = document.getElementById("nav");
+	var overlay = document.getElementById("overlay");
+	if (nav.style.display === 'block') {
+		nav.style.display = 'none';
+		overlay.style.display = 'none';
+	} else {
+		nav.style.display = 'block';
+		overlay.style.display = 'block';
+	}
 }
 
 function filter() {
-    var input = document.getElementById('search');
-    var filter = input.value.toLowerCase();
-    var nav = document.getElementById("nav");
-    var li = nav.getElementsByTagName('li');
+	var input = document.getElementById('search');
+	var filter = input.value.toLowerCase();
+	var nav = document.getElementById("nav");
+	var li = nav.getElementsByTagName('li');
 
-    for (var i = 0; i < li.length; i++) {
-        var a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
+	for (var i = 0; i < li.length; i++) {
+		var a = li[i].getElementsByTagName("a")[0];
+		if (a.innerHTML.toLowerCase().indexOf(filter) > -1) {
+			li[i].style.display = "";
+		} else {
+			li[i].style.display = "none";
+		}
+	}
 }
 
 function init() {
 
-    var triggerBtns = document.getElementsByClassName("nav-trigger");
-    for (var i = 0; i < triggerBtns.length; i++) {
-        triggerBtns[i].addEventListener('click', toggleDisplay, false);
-    }
+	var triggerBtns = document.getElementsByClassName("nav-trigger");
+	for (var i = 0; i < triggerBtns.length; i++) {
+		triggerBtns[i].addEventListener('click', toggleDisplay, false);
+	}
+	var overlay = document.getElementById("overlay");
+	overlay.addEventListener('click', toggleDisplay, false);
 
-    var search = document.getElementById('search');
-    if (search) {
-        search.addEventListener("keyup", filter, false)
-    }
+	var search = document.getElementById('search');
+	if (search) {
+		search.addEventListener("keyup", filter, false)
+	}
 
 }
 
