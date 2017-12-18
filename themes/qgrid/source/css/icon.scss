@@ -21,5 +21,5 @@
 
 @include generate-icons('search', $search-url, $search-height, $search-width);
 @include generate-icons('logo', $logo-url, $logo-height, $logo-width);
-@include generate-icons('hamburger', $hamburger-url, $hamburger-height, $hamburger-width);
+@include generate-icons('nav-trigger', $hamburger-url, $hamburger-height, $hamburger-width);
 

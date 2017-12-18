@@ -9,8 +9,8 @@ body.index {
   grid-template-columns: 1fr;
   grid-template-rows: $header-height auto auto;
 
-  .hamburger,
-  #nav .hamburger {
+  .nav-trigger,
+  #nav .nav-trigger {
     display: inline-block;
   }
   #overlay {

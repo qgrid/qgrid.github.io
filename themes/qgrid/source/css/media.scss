@@ -5,13 +5,9 @@
     #overlay {
       display: block;
     }
-    .hamburger {
+    .nav-trigger {
       display: inline-block;
     }
-  }
-
-  .index {
-
   }
 
   #nav {
@@ -31,7 +27,7 @@
     #overlay {
       display: none !important;
     }
-    .hamburger {
+    .nav-trigger {
       display: none;
     }
   }

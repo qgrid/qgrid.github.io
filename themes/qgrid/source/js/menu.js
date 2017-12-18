@@ -28,7 +28,7 @@ function filter() {
 }
 
 function init() {
-
+	// two nav-triggers should exist for different definitions in different templates (nav and header)
 	var triggerBtns = document.getElementsByClassName("nav-trigger");
 	for (var i = 0; i < triggerBtns.length; i++) {
 		triggerBtns[i].addEventListener('click', toggleVisibility, true);
