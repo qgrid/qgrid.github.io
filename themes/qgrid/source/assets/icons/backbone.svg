@@ -1,0 +1,11 @@
+<svg width="19" height="24" viewBox="0 0 19 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Backbone</title>
+    <g id="Canvas" transform="translate(-1649 -23)">
+        <g id="Vector">
+            <use xlink:href="#path0_fill" transform="translate(1649.49 23)" fill="#FFFFFF" fill-opacity="0.8"/>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_fill" d="M 9.21358 5.46891L 0 1.60853e-08L 0 23.8333L 9.21358 18.3644L 18.4272 23.8333L 18.4272 1.60853e-08L 9.21358 5.46891ZM 4.83506 11.9165L 9.41722 9.19231L 13.9992 11.9165L 9.41722 14.641L 4.83506 11.9165ZM 3.19655 5.23552L 6.47451 7.1844L 3.19655 9.13348L 3.19655 5.23552ZM 3.19655 14.6999L 6.22876 16.5024L 3.19655 18.3054L 3.19655 14.6999ZM 15.4186 18.3054L 12.3862 16.5026L 15.4186 14.6999L 15.4186 18.3054ZM 12.1405 7.1842L 15.4186 5.23552L 15.4186 9.13348L 12.1405 7.1842Z"/>
+    </defs>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="29" height="22" viewBox="0 0 29 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Hamburger</title>
+    <g id="Canvas" transform="translate(-1697 -22)">
+        <g id="burger">
+            <g id="Line">
+                <use xlink:href="#path0_stroke" transform="matrix(1 -3.46945e-18 3.46945e-18 1 1697 44)" fill="#FFFFFF"/>
+            </g>
+            <g id="Line">
+                <use xlink:href="#path0_stroke" transform="matrix(1 -3.46945e-18 3.46945e-18 1 1697 25)" fill="#FFFFFF"/>
+            </g>
+            <g id="Line">
+                <use xlink:href="#path0_stroke" transform="matrix(1 -3.46945e-18 3.46945e-18 1 1697 34)" fill="#FFFFFF"/>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_stroke" d="M 1.5 -3C 0.671573 -3 0 -2.32843 0 -1.5C 0 -0.671573 0.671573 0 1.5 0L 1.5 -3ZM 27.5 0C 28.3284 0 29 -0.671573 29 -1.5C 29 -2.32843 28.3284 -3 27.5 -3L 27.5 0ZM 1.5 0L 27.5 0L 27.5 -3L 1.5 -3L 1.5 0Z"/>
+    </defs>
+</svg>
