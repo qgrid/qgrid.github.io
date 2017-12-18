@@ -1,4 +1,5 @@
-function toggleDisplay() {
+function toggleDisplay(e) {
+	e.stopImmediatePropagation();
 	var nav = document.getElementById("nav");
 	var overlay = document.getElementById("overlay");
 	if (nav.style.display === 'block') {
@@ -30,17 +31,17 @@ function init() {
 
 	var triggerBtns = document.getElementsByClassName("nav-trigger");
 	for (var i = 0; i < triggerBtns.length; i++) {
-		triggerBtns[i].addEventListener('click', toggleDisplay, false);
+		triggerBtns[i].addEventListener('click', toggleDisplay, true);
 	}
 	var overlay = document.getElementById("overlay");
-	overlay.addEventListener('click', toggleDisplay, false);
+	overlay.addEventListener('click', toggleDisplay, true);
 
 	var nav = document.getElementById("nav");
-	nav.addEventListener('click', toggleDisplay, false);
+	nav.addEventListener('click', toggleDisplay, true);
 
 	var search = document.getElementById('search');
 	if (search) {
-		search.addEventListener("keyup", filter, false)
+		search.addEventListener("keyup", filter, true)
 	}
 
 }
