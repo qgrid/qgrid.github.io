@@ -5,88 +5,90 @@
 
 html,
 body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: $font-sans;
-    font-size: $font-size;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: $font-sans;
+  font-size: $font-size;
 }
 
 body {
-    display: grid;
-    background: $color-background;
+  display: grid;
+  grid-template-areas: "header" "content" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: $header-height auto auto;
+  background: $color-background;
 }
 
 header {
-    z-index: 1;
-    grid-area: header;
-    color: $color-top-text;
-    background: $color-top-background;
-    position: fixed;
-    height: $header-height;
-    width: 100vw;
-    font-family: $font-serif;
-    box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#logo {
-    display: block;
-    margin: 17px;
-    height: $logo-height;
-    width: $logo-width;
-    background: url($logo-url) center transparent;
-}
-
-nav {
-    grid-area: nav;
-    color: $color-sidebar-text;
-    background: $color-sidebar-background;
-    position: fixed;
-    height: 100vh;
-    padding-top: $header-height;
-    width: $nav-width;
-    font-family: $font-serif;
-    box-sizing: border-box;
-    >div {
-        height: 100%;
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        h3 {
-            font-size: 18px;
-            font-weight: bold;
-            margin-left: 20px;
-        }
-        ul {
-            margin-left: 20px;
-            li {
-                list-style: none;
-                font-size: 16px;
-                line-height: 33px;
-                a {
-                    color: $color-sidebar-text;
-                    text-decoration: none;
-                    opacity: 0.8;
-                    &:hover {
-                        opacity: 1
-                    }
-                }
-            }
-        }
-    }
+  z-index: 1;
+  grid-area: header;
+  color: $color-top-text;
+  background: $color-top-background;
+  position: fixed;
+  height: $header-height;
+  width: 100vw;
+  font-family: $font-serif;
+  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 main {
-    grid-area: content;
-    background: $color-background;
-    color: $color-text;
-    height: 2000px;
+  display: grid;
+  grid-template-areas: "get-sarted" "example" "feature-list" "go-to";
+  grid-template-rows: 300px 400px auto auto;
+  grid-area: content;
+  background: $color-background;
+  color: $color-text;
+  height: 2000px;
+
+  .get-started {
+    grid-area: get-sarted;
+    background-color: $color-sidebar-background;
+    text-align: center;
+    color: $color-top-text;
+    h1 {
+      font-size: 5rem;
+      margin: 30px 0 10px 0;
+    }
+    a {
+      background: $color-background;
+      padding: 20px 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      margin: 10px;
+      display: inline-block;
+    }
+  }
+  .example {
+    grid-area: example;
+  }
+  .feature-list {
+    grid-area: feature-list;
+    .feature {
+      height: 200px;
+      font-size: 2rem;
+    }
+  }
+  .go-to {
+    grid-area: go-to;
+  }
 }
 
 footer {
-    grid-area: footer;
-    color: $color-footer-text;
-    background: $color-footer-background;
-    font-family: $font-serif;
-    height: $footer-height;
+  grid-area: footer;
+  color: $color-footer-text;
+  background: $color-footer-background;
+  font-family: $font-serif;
+  height: $footer-height;
 }
+
+#overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(10, 10, 10, 0.75);
+  cursor: default;
+}
+
