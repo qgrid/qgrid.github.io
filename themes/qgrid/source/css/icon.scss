@@ -8,7 +8,6 @@
   border: 0 transparent;
   cursor: pointer;
   color: white;
-  grid-area: header;
 }
 
 @mixin generate-icons($class, $url, $height, $width) {

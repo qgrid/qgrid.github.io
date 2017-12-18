@@ -1,4 +1,4 @@
-function toggleDisplay(e) {
+function toggleVisibility(e) {
 	e.stopImmediatePropagation();
 	var nav = document.getElementById("nav");
 	var overlay = document.getElementById("overlay");
@@ -31,13 +31,13 @@ function init() {
 
 	var triggerBtns = document.getElementsByClassName("nav-trigger");
 	for (var i = 0; i < triggerBtns.length; i++) {
-		triggerBtns[i].addEventListener('click', toggleDisplay, true);
+		triggerBtns[i].addEventListener('click', toggleVisibility, true);
 	}
 	var overlay = document.getElementById("overlay");
-	overlay.addEventListener('click', toggleDisplay, true);
+	overlay.addEventListener('click', toggleVisibility, true);
 
 	var nav = document.getElementById("nav");
-	nav.addEventListener('click', toggleDisplay, true);
+	nav.addEventListener('click', toggleVisibility, true);
 
 	var search = document.getElementById('search');
 	if (search) {
