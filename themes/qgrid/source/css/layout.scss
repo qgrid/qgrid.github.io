@@ -34,31 +34,13 @@ header {
 
 main {
   display: grid;
-  grid-template-areas: "get-sarted" "example" "feature-list" "go-to";
-  grid-template-rows: 300px 400px auto auto;
+  grid-template-areas: "get-started" "example" "feature-list" "go-to";
+  grid-template-rows: 500px 400px auto auto;
   grid-area: content;
   background: $color-background;
   color: $color-text;
   height: 2000px;
 
-  .get-started {
-    grid-area: get-sarted;
-    background-color: $color-sidebar-background;
-    text-align: center;
-    color: $color-top-text;
-    h1 {
-      font-size: 5rem;
-      margin: 30px 0 10px 0;
-    }
-    a {
-      background: $color-background;
-      padding: 20px 50px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      margin: 10px;
-      display: inline-block;
-    }
-  }
   .example {
     grid-area: example;
   }

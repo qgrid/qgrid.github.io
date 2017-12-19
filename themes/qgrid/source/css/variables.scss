@@ -21,16 +21,18 @@ $color-table-even-row: #97BFF6;
 
 // header
 $logo-url: "../assets/logo.png";
-$logo-height: 36px;
-$logo-width: 56px;
+
+$icon-height--small: 36px;
+$icon-width--small: 56px;
+
+$icon-height--big: 63px;
+$icon-width--big: 60px;
 
 $search-url: "../assets/icons/search.svg";
-$search-height: 36px;
-$search-width: 56px;
-
 $hamburger-url: "../assets/icons/hamburger.svg";
-$hamburger-height: 36px;
-$hamburger-width: 56px;
+$angular-url: "../assets/icons/angular.svg";
+$angular-js-url: "../assets/icons/angularjs.svg";
+$github-url: "../assets/icons/octocat.svg";
 
 $header-height: 70px;
 
