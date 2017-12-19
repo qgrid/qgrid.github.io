@@ -74,3 +74,27 @@ footer {
   cursor: default;
 }
 
+%accent-button {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: $color-go-to-button;
+  color: white;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: normal;
+  margin-right: 34px;
+  padding: 18px;
+  width: 248px;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.12), 2px 1px 3px rgba(0, 0, 0, 0.24);
+  &:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16), 3px 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
