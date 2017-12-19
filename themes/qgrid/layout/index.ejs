@@ -1,30 +1,43 @@
 <div class="get-started">
-    <h1>qgrid</h1>
-    <h2>Fast and flexible data table solution. <br> Start with your ecosystem.</h2>
-    <a href="<%- url_for('guide/introduction.html') %>" class="angular-js--big"></a>
-    <a href="<%- url_for('guide/introduction.html') %>" class="angular--big"></a>
+    <div class="wrapper">
+        <div class="qgrid-logo"></div>
+        <h2>Fast and flexible data table solution.</h2>
+        <h1>Start with your ecosystem.</h1>
+        <div class="frameworks">
+            <a href="<%- url_for('guide/introduction.html') %>" class="angular-js--big"></a>
+            <a href="<%- url_for('guide/introduction.html') %>" class="angular--big"></a>
+        </div>
+    </div>
 </div>
 <div class="example">
-    <div class="jsfiddle-embed">
-        <script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/"></script>
+    <div class="wrapper">
+        <div class="jsfiddle-embed">
+            <!--if we want no render blocking - we should use script, but if we want static height - then iframe-->
+            <!--<script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/?accentColor=2F80ED"></script>-->
+            <iframe width="100%" height="500" src="//jsfiddle.net/qgrid/cv4ohzpw/embedded/result,html,js/?accentColor=2F80ED" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+        </div>
     </div>
 </div>
 <div class="feature-list">
-    <div class="feature">
-        Considered Styles
-    </div>
-    <div class="feature">
-        Fully Customizable
-    </div>
-    <div class="feature">
-        Clear Javascript
-    </div>
-    <div class="feature">
-        Virtualization everywhere
+    <div class="wrapper">
+        <div class="feature">
+            Considered Styles
+        </div>
+        <div class="feature">
+            Fully Customizable
+        </div>
+        <div class="feature">
+            Clear Javascript
+        </div>
+        <div class="feature">
+            Virtualization everywhere
+        </div>
     </div>
 </div>
 <div class="go-to">
-    <a href="<%- url_for('guide/install.html') %>">How to Install?</a>
-    <a href="<%- url_for('guide/introduction.html') %>">Feauters and Examples</a>
-    <a href="<%- url_for('api/introduction.html') %>">API</a>
+    <div class="wrapper">
+        <a href="<%- url_for('guide/install.html') %>">How to Install?</a>
+        <a href="<%- url_for('guide/introduction.html') %>">Features and Examples</a>
+        <a href="<%- url_for('api/introduction.html') %>">API</a>
+    </div>
 </div>

@@ -33,42 +33,53 @@
     background-color: $color-sidebar-background;
     text-align: center;
     color: $color-top-text;
-    padding: 50px 0;
+    padding: 40px 0 0 0;
+    .qgrid-logo {
+      margin-bottom: 63px;
+    }
     h1, h2 {
       margin: 0;
+      font-weight: normal;
     }
     h1 {
-      font: {
-        size: 5rem;
-        weight: bold;
-      }
-      line-height: 95px;
-      margin-bottom: 40px;
+      font-size: 28px;
+      line-height: 28px;
     }
     h2 {
-      font: {
-        size: 18px;
-        weight: normal;
-      }
+      font-size: 24px;
       line-height: 24px;
-      margin-bottom: 55px;
+      margin-bottom: 10px;
+    }
+    .frameworks {
+      margin-top: 67px;
+      margin-bottom: 120px;
     }
   }
 
   .example {
-    min-width: 390px;
-    width: 70%;
-    position: relative;
-    top: -40px;
-    margin: auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    width: 100%;
+    .wrapper {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      margin: -50px auto auto auto;
+      min-width: 390px;
+    }
   }
 
   .go-to {
     text-align: center;
     font-size: 0;
+    margin: 75px 0;
     a {
       @extend %accent-button;
+    }
+  }
+
+  footer .wrapper {
+    margin: 100px auto;
+    text-align: center;
+    font: {
+      size: 18px;
+      weight: normal;
     }
   }
 }

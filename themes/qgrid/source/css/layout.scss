@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-areas: "header" "content" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: $header-height auto auto;
+  grid-template-rows: $header-height auto $footer-height;
   background: $color-background;
 }
 
@@ -35,7 +35,7 @@ header {
 main {
   display: grid;
   grid-template-areas: "get-started" "example" "feature-list" "go-to";
-  grid-template-rows: 500px 400px auto auto;
+  grid-template-rows: 588px 550px auto 235px;
   grid-area: content;
   background: $color-background;
   color: $color-text;
@@ -61,7 +61,6 @@ footer {
   color: $color-footer-text;
   background: $color-footer-background;
   font-family: $font-serif;
-  height: $footer-height;
 }
 
 #overlay {
@@ -72,6 +71,10 @@ footer {
   z-index: 10;
   background-color: rgba(10, 10, 10, 0.75);
   cursor: default;
+}
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
 }
 
 %accent-button {
@@ -97,4 +100,5 @@ footer {
     margin-right: 0;
   }
 }
+
 
