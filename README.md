@@ -1,2 +1,2 @@
 # documentation
-Documentation for qgrid
+[Documentation for qgrid](https://qgrid.github.io/doc/)

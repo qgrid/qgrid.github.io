@@ -4,15 +4,11 @@
 @import "layout";
 @import "media";
 
-body.index {
+.index {
   grid-template-areas: "header" "content" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: $header-height auto auto;
 
-  .nav-trigger,
-  #nav .nav-trigger {
-    display: inline-block;
-  }
   #overlay {
     z-index: 11;
   }
@@ -24,44 +20,46 @@ body.index {
       display: block;
     }
   }
+  .nav-trigger {
+    display: none;
+  }
   .search {
     display: none;
   }
-}
 
-main {
-  display: grid;
-  grid-template-areas: "get-sarted" "example" "feature-list" "go-to";
-  grid-template-rows: 300px 400px auto auto;
   .get-started {
-    grid-area: get-sarted;
+    grid-area: get-started;
     background-color: $color-sidebar-background;
     text-align: center;
     color: $color-top-text;
+    padding: 50px 0;
+    h1, h2 {
+      margin: 0;
+      font-family: "Roboto Slab", serif;
+    }
     h1 {
-      font-size: 5rem;
-      margin: 30px 0 10px 0;
+      font: {
+        size: 5rem;
+        weight: bold;
+      }
+      line-height: 95px;
+      margin-bottom: 40px;
     }
-    a {
-      background: $color-background;
-      padding: 20px 50px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      margin: 10px;
-      display: inline-block;
+    h2 {
+      font: {
+        size: 18px;
+        weight: normal;
+      }
+      line-height: 24px;
+      margin-bottom: 55px;
     }
   }
+
   .example {
-    grid-area: example;
-  }
-  .feature-list {
-    grid-area: feature-list;
-    .feature {
-      height: 200px;
-      font-size: 2rem;
-    }
-  }
-  .go-to {
-    grid-area: go-to;
+    min-width: 390px;
+    width: 70%;
+    position: relative;
+    top: -40px;
+    margin: auto;
   }
 }
