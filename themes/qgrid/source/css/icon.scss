@@ -1,6 +1,6 @@
 @import "variables";
 
-.icon {
+%icon {
   display: inline-block;
   vertical-align: middle;
   margin: 17px 0 17px 17px;
@@ -8,18 +8,29 @@
   border: 0 transparent;
   cursor: pointer;
   color: white;
+  height: $icon-height--small;
+  width: $icon-width--small;
 }
 
-@mixin generate-icons($class, $url, $height, $width) {
+@mixin generate-icons($class, $url) {
   .#{$class} {
-    @extend .icon;
+    @extend %icon;
     background: url($url) 50% 50% no-repeat transparent;
-    height: $height;
-    width: $width;
   }
+  .#{$class}--big {
+    @extend %icon;
+    background: url($url) 50% 50% no-repeat transparent;
+    height: $icon-height--big;
+    width: $icon-width--big;
+  }
+
 }
 
-@include generate-icons('search', $search-url, $search-height, $search-width);
-@include generate-icons('logo', $logo-url, $logo-height, $logo-width);
-@include generate-icons('nav-trigger', $hamburger-url, $hamburger-height, $hamburger-width);
+@include generate-icons('search', $search-url);
+@include generate-icons('logo', $logo-url);
+@include generate-icons('nav-trigger', $hamburger-url);
+@include generate-icons('angular', $angular-url);
+@include generate-icons('angular-js', $angular-js-url);
+@include generate-icons('github', $github-url);
+
 
