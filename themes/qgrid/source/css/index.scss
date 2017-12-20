@@ -1,8 +1,4 @@
-@import "variables";
-@import "icon";
-@import "nav";
 @import "layout";
-@import "media";
 
 .index {
   grid-template-areas: "header" "content" "footer";
@@ -21,9 +17,7 @@
       display: block;
     }
   }
-  .nav-trigger {
-    display: none;
-  }
+  .nav-trigger,
   .search {
     display: none;
   }
@@ -51,11 +45,56 @@
       margin-bottom: 10px;
     }
     .frameworks {
-      margin-top: 67px;
-      margin-bottom: 120px;
+      list-style: none;
+      padding: 0;
+      margin: 67px 0 120px 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 11px;
+        font-size: 63px;
+        min-width: 110px;
+        & > a {
+          text-decoration: none;
+          color: white;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        .angular,
+        .angular-js,
+        .react,
+        .vue,
+        .backbone {
+          color: white;
+        }
+        .text {
+          display: block;
+          padding: 5px 10px;
+          border-radius: 11px;
+          font: {
+            size: 10px;
+            family: $font-sans;
+            //weight: bold;
+          }
+          text-transform: uppercase;
+          line-height: 11px;
+          background-color: rgba(0, 72, 168, 0.35);
+          color: rgba(255, 255, 255, 0.5);
+        }
+        &.ready .text {
+          background-color: rgba(0, 72, 168, 0.75);
+          color: rgba(255, 255, 255, 0.75);
+        }
+
+        &.active .text {
+          background-color: #0048A8;
+          color: white;
+        }
+      }
     }
   }
-  .example, .go-to, .feature-list{
+  .example, .go-to, .feature-list {
     width: 60%;
     margin: auto;
   }
@@ -79,7 +118,7 @@
   }
 
   footer {
-   padding: 100px auto;
+    padding: 100px auto;
     text-align: center;
     font: {
       size: 18px;

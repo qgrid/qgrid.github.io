@@ -1,7 +1,4 @@
 @import "layout";
-@import "icon";
-@import "nav";
-@import "media";
 
 body {
   grid-template-areas: "header header" "nav content" "footer footer";

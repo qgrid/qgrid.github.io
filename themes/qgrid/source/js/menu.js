@@ -11,7 +11,8 @@ function toggleVisibility(e) {
 	}
 }
 
-function filter() {
+function filter(e) {
+	e.stopImmediatePropagation();
 	var input = document.getElementById('search');
 	var filter = input.value.toLowerCase();
 	var nav = document.getElementById("nav");
