@@ -53,15 +53,43 @@
         vertical-align: middle;
         margin-right: 11px;
         font-size: 63px;
+        min-width: 110px;
+        & > a {
+          text-decoration: none;
+          color: white;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
         .angular,
         .angular-js,
         .react,
         .vue,
         .backbone {
-          color: rgba(255, 255, 255, 0.9);
+          color: white;
         }
-        &:last-child {
-          margin-right: 0;
+        .text {
+          display: block;
+          padding: 5px 10px;
+          border-radius: 11px;
+          font: {
+            size: 10px;
+            family: $font-sans;
+            //weight: bold;
+          }
+          text-transform: uppercase;
+          line-height: 11px;
+          background-color: rgba(0, 72, 168, 0.35);
+          color: rgba(255, 255, 255, 0.5);
+        }
+        &.ready .text {
+          background-color: rgba(0, 72, 168, 0.75);
+          color: rgba(255, 255, 255, 0.75);
+        }
+
+        &.active .text {
+          background-color: #0048A8;
+          color: white;
         }
       }
     }
