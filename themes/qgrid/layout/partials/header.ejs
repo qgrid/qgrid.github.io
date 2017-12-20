@@ -1,3 +1,9 @@
+<% var isIndex = page.path === 'index.html' %>
+
 <button class="nav-trigger"></button>
-<a href="<%- url_for('/')%>" class="logo"></a>
+<% if (isIndex) { %>
+<span class="logo"></span>
+<% } else { %>
+<a href="<%- url_for('/') %>" class="logo"></a>
 <input id="search" class="search"/>
+<% } %>

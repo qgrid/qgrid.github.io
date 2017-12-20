@@ -6,24 +6,33 @@
   margin: 17px 0 17px 17px;
   outline: none;
   border: 0 transparent;
-  cursor: pointer;
   color: white;
   height: $icon-height--small;
   width: $icon-width--small;
+  background: 50% 50% no-repeat transparent;
 }
 
 @mixin generate-icons($class, $url) {
   .#{$class} {
     @extend %icon;
-    background: url($url) 50% 50% no-repeat transparent;
+    background-image: url($url);
+    cursor: pointer;
   }
   .#{$class}--big {
     @extend %icon;
-    background: url($url) 50% 50% no-repeat transparent;
+    background-image: url($url);
+    cursor: pointer;
     height: $icon-height--big;
     width: $icon-width--big;
   }
+}
 
+.qgrid-logo {
+  @extend %icon;
+  background-image: url($qgrid-logo-url);
+  width: 198px;
+  height: 136px;
+  margin: 0;
 }
 
 @include generate-icons('search', $search-url);

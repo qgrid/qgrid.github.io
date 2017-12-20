@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-areas: "header" "content" "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: $header-height auto auto;
+  grid-template-rows: $header-height auto $footer-height;
   background: $color-background;
 }
 
@@ -35,11 +35,10 @@ header {
 main {
   display: grid;
   grid-template-areas: "get-started" "example" "feature-list" "go-to";
-  grid-template-rows: 500px 400px auto auto;
+  grid-template-rows: 588px 600px auto auto;
   grid-area: content;
   background: $color-background;
   color: $color-text;
-  height: 2000px;
 
   .example {
     grid-area: example;
@@ -61,7 +60,6 @@ footer {
   color: $color-footer-text;
   background: $color-footer-background;
   font-family: $font-serif;
-  height: $footer-height;
 }
 
 #overlay {
@@ -73,4 +71,29 @@ footer {
   background-color: rgba(10, 10, 10, 0.75);
   cursor: default;
 }
+
+%accent-button {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: $color-go-to-button;
+  color: white;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: normal;
+  margin-right: 34px;
+  padding: 18px;
+  width: 248px;
+  box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.12), 2px 1px 3px rgba(0, 0, 0, 0.24);
+  &:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16), 3px 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 
