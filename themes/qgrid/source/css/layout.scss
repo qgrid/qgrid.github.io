@@ -35,11 +35,10 @@ header {
 main {
   display: grid;
   grid-template-areas: "get-started" "example" "feature-list" "go-to";
-  grid-template-rows: 588px 550px auto 235px;
+  grid-template-rows: 588px 600px auto auto;
   grid-area: content;
   background: $color-background;
   color: $color-text;
-  height: 2000px;
 
   .example {
     grid-area: example;

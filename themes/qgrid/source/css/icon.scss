@@ -6,7 +6,6 @@
   margin: 17px 0 17px 17px;
   outline: none;
   border: 0 transparent;
-  cursor: pointer;
   color: white;
   height: $icon-height--small;
   width: $icon-width--small;
@@ -17,10 +16,12 @@
   .#{$class} {
     @extend %icon;
     background-image: url($url);
+    cursor: pointer;
   }
   .#{$class}--big {
     @extend %icon;
     background-image: url($url);
+    cursor: pointer;
     height: $icon-height--big;
     width: $icon-width--big;
   }
