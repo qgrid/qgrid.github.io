@@ -1,45 +1,37 @@
 @import "variables";
+@import "iconfont";
 
 %icon {
   display: inline-block;
   vertical-align: middle;
-  margin: 17px 0 17px 17px;
   outline: none;
   border: 0 transparent;
   color: white;
-  height: $icon-height--small;
-  width: $icon-width--small;
-  background: 50% 50% no-repeat transparent;
+  text-decoration: none;
 }
 
-@mixin generate-icons($class, $url) {
+@mixin generate-icons($class, $icon-class) {
   .#{$class} {
-    @extend %icon;
-    background-image: url($url);
-    cursor: pointer;
-  }
-  .#{$class}--big {
-    @extend %icon;
-    background-image: url($url);
-    cursor: pointer;
-    height: $icon-height--big;
-    width: $icon-width--big;
+    @extend %icon, .icon, .#{$icon-class};
   }
 }
 
 .qgrid-logo {
   @extend %icon;
-  background-image: url($qgrid-logo-url);
+  background: url($qgrid-logo-url) 50% 50% no-repeat transparent;
   width: 198px;
   height: 136px;
   margin: 0;
 }
 
-@include generate-icons('search', $search-url);
-@include generate-icons('logo', $logo-url);
-@include generate-icons('nav-trigger', $hamburger-url);
-@include generate-icons('angular', $angular-url);
-@include generate-icons('angular-js', $angular-js-url);
-@include generate-icons('github', $github-url);
+@include generate-icons('search', 'icon-search');
+@include generate-icons('logo', 'icon-qgrid-logo-simple');
+//@include generate-icons('nav-trigger', $hamburger-url);
+@include generate-icons('angular', 'icon-angular');
+@include generate-icons('angular-js', 'icon-angularjs');
+@include generate-icons('react', 'icon-react');
+@include generate-icons('vue', 'icon-vue');
+@include generate-icons('backbone', 'icon-backbone');
+//@include generate-icons('github', $github-url);
 
 
