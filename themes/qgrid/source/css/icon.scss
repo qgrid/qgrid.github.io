@@ -1,6 +1,14 @@
 @import "variables";
 @import "iconfont";
 
+$iconMap: ('search-glass':'icon-search',
+        'logo':'icon-qgrid-logo-simple',
+        'angular': 'icon-angular',
+        'angular-js': 'icon-angularjs',
+        'react': 'icon-react',
+        'vue': 'icon-vue',
+        'backbone':'icon-backbone');
+
 %icon {
   display: inline-block;
   vertical-align: middle;
@@ -10,9 +18,11 @@
   text-decoration: none;
 }
 
-@mixin generate-icons($class, $icon-class) {
-  .#{$class} {
-    @extend %icon, .icon, .#{$icon-class};
+@mixin generate-icons($map) {
+  @each $class, $icon-class in $map {
+    .#{$class} {
+      @extend %icon, .icon, .#{$icon-class};
+    }
   }
 }
 
@@ -24,14 +34,6 @@
   margin: 0;
 }
 
-@include generate-icons('search', 'icon-search');
-@include generate-icons('logo', 'icon-qgrid-logo-simple');
-//@include generate-icons('nav-trigger', $hamburger-url);
-@include generate-icons('angular', 'icon-angular');
-@include generate-icons('angular-js', 'icon-angularjs');
-@include generate-icons('react', 'icon-react');
-@include generate-icons('vue', 'icon-vue');
-@include generate-icons('backbone', 'icon-backbone');
-//@include generate-icons('github', $github-url);
+@include generate-icons($iconMap);
 
 
