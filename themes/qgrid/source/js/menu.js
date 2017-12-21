@@ -1,5 +1,9 @@
 function toggleVisibility(e) {
-	e.stopImmediatePropagation();
+	var obj = (e.target ? e.target : e.srcElement);
+	if (obj.id === 'search') {
+		e.stopImmediatePropagation();
+		return;
+	}
 	var nav = document.getElementById("nav");
 	var overlay = document.getElementById("overlay");
 	if (nav.style.display === 'block') {
@@ -29,10 +33,9 @@ function filter(e) {
 }
 
 function init() {
-	// two nav-triggers should exist for different definitions in different templates (nav and header)
-	var triggerBtns = document.getElementsByClassName("nav-trigger");
-	for (var i = 0; i < triggerBtns.length; i++) {
-		triggerBtns[i].addEventListener('click', toggleVisibility, true);
+	var trigger = document.getElementById("nav-trigger");
+	if (trigger) {
+		trigger.addEventListener('click', toggleVisibility, true);
 	}
 	var overlay = document.getElementById("overlay");
 	overlay.addEventListener('click', toggleVisibility, true);
@@ -42,7 +45,7 @@ function init() {
 
 	var search = document.getElementById('search');
 	if (search) {
-		search.addEventListener("keyup", filter, true)
+		search.addEventListener("keyup", filter, true);
 	}
 
 }

@@ -9,15 +9,7 @@
   #overlay {
     z-index: 11;
   }
-  #nav {
-    z-index: 12;
-    display: none;
-    padding-top: 0;
-    .nav-header {
-      display: block;
-    }
-  }
-  .nav-trigger,
+
   .search {
     display: none;
   }
