@@ -68,7 +68,7 @@
         .backbone {
           color: white;
         }
-        .text {
+        label {
           display: block;
           padding: 5px 10px;
           border-radius: 11px;
@@ -82,12 +82,12 @@
           background-color: rgba(0, 72, 168, 0.35);
           color: rgba(255, 255, 255, 0.5);
         }
-        &.ready .text {
+        &.ready label {
           background-color: rgba(0, 72, 168, 0.75);
           color: rgba(255, 255, 255, 0.75);
         }
 
-        &.active .text {
+        &.active label {
           background-color: #0048A8;
           color: white;
         }
