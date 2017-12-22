@@ -1,6 +1,6 @@
 function toggleVisibility(e) {
 	var target = e.target || e.srcElement;
-	if (target.dataset.stopPropagate) {
+	if (target.dataset.hasOwnProperty('stopPropagation')) {
 		e.stopImmediatePropagation();
 		return;
 	}
