@@ -1,6 +1,6 @@
 function toggleVisibility(e) {
-	var obj = (e.target ? e.target : e.srcElement);
-	if (obj.id === 'search') {
+	var target = e.target || e.srcElement;
+	if (target.dataset.stopPropagate) {
 		e.stopImmediatePropagation();
 		return;
 	}
