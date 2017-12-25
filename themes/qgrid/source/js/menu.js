@@ -32,20 +32,34 @@ function filter(e) {
 	}
 }
 
+function showSearch(e) {
+	var target = e.target || e.srcElement;
+	target.style.display = "none";
+	var search = document.getElementById('search');
+	console.log(search);
+	search.style.display = "";
+}
+
 function init() {
-	var trigger = document.getElementById("nav-trigger");
-	if (trigger) {
-		trigger.addEventListener('click', toggleVisibility, true);
+	var navTrigger = document.getElementById("nav-trigger");
+	if (navTrigger) {
+		navTrigger.addEventListener('click', toggleVisibility, true);
 	}
 	var overlay = document.getElementById("overlay");
 	overlay.addEventListener('click', toggleVisibility, true);
 
 	var nav = document.getElementById("nav");
-	nav.addEventListener('click', toggleVisibility, true);
+	if (nav) {
+		nav.addEventListener('click', toggleVisibility, true);
+	}
 
 	var search = document.getElementById('search');
 	if (search) {
 		search.addEventListener("keyup", filter, true);
+	}
+	var searchTrigger = document.getElementById('search-trigger');
+	if (searchTrigger) {
+		searchTrigger.addEventListener("click", showSearch, true);
 	}
 
 }

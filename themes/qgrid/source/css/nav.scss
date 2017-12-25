@@ -16,6 +16,10 @@
     height: 69px;
     border-bottom: 1px solid white;
     display: none;
+
+    .search {
+      width: calc(100% - 34px);
+    }
   }
   nav {
     height: 100%;

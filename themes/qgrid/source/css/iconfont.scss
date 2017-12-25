@@ -20,7 +20,6 @@
   text-transform: none;
 }
 
-
 .icon-angular:before {
   content: "\E001";
 }
@@ -37,18 +36,22 @@
   content: "\E004";
 }
 
-.icon-qgrid-logo-simple:before {
+.icon-hamburger:before {
   content: "\E005";
 }
 
-.icon-react:before {
+.icon-qgrid-logo-simple:before {
   content: "\E006";
 }
 
-.icon-search:before {
+.icon-react:before {
   content: "\E007";
 }
 
-.icon-vue:before {
+.icon-search:before {
   content: "\E008";
+}
+
+.icon-vue:before {
+  content: "\E009";
 }

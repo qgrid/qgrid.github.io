@@ -33,12 +33,33 @@ header {
   width: 100vw;
   font-family: $font-serif;
   box-shadow: 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  .search {
+    display: none;
+  }
 }
 
-.logo,
-.nav-trigger {
-  font-size: 36px;
+%header-icon {
   margin: 17px 0 17px 17px;
+}
+
+.logo {
+  @extend %header-icon;
+  font-size: 31px;
+}
+
+.nav-trigger {
+  @extend %header-icon;
+  font-size: 18px;
+}
+
+.search-trigger {
+  @extend %header-icon;
+  font-size: 24px;
+}
+
+[class$="-trigger"] {
+  cursor: pointer;
 }
 
 .github {

@@ -8,7 +8,9 @@ $iconMap: ('search-glass':'icon-search',
         'react': 'icon-react',
         'vue': 'icon-vue',
         'backbone':'icon-backbone',
-        'github': 'icon-github');
+        'github': 'icon-github',
+        'nav-trigger': 'icon-hamburger',
+        'search-trigger': 'icon-search');
 
 %icon {
   display: inline-block;
@@ -17,6 +19,7 @@ $iconMap: ('search-glass':'icon-search',
   border: 0 transparent;
   color: white;
   text-decoration: none;
+  background-color: transparent;
 }
 
 @mixin generate-icons($map) {
@@ -29,7 +32,7 @@ $iconMap: ('search-glass':'icon-search',
 
 .qgrid-logo {
   @extend %icon;
-  background: url($qgrid-logo-url) 50% 50% no-repeat transparent;
+  background: url($qgrid-logo-url) 50% 50% no-repeat;
   width: 198px;
   height: 136px;
   margin: 0;
