@@ -49,11 +49,6 @@ header {
   font-size: 18px;
 }
 
-.search-trigger {
-  @extend %header-icon;
-  font-size: 24px;
-}
-
 [class$="-trigger"] {
   cursor: pointer;
 }
@@ -80,6 +75,9 @@ header {
   margin-left: 17px;
   margin-top: 17px;
   color: white;
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 
   //need to write them separately, not through comma
   //&::-webkit-input-placeholder {
@@ -100,8 +98,15 @@ header {
   }
 }
 
-#search {
-  display: none;
+.search-trigger {
+  @extend %header-icon;
+  font-size: 24px;
+  &.active {
+    display: none;
+    &+.search {
+      display: inline-block;
+    }
+  }
 }
 
 main {

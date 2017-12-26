@@ -11,8 +11,9 @@
   }
 
   header {
-    .search, .search-trigger {
-      display: none;
+    .search,
+    .search-trigger {
+      display: none !important;
     }
   }
 
