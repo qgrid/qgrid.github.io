@@ -46,7 +46,7 @@ function updateSearch(e) {
 	var searchFieldActive = e.target || e.srcElement;
 	for (var i = 0; i < searchFields.length; i++) {
 		if (searchFields[i] !== searchFieldActive) {
-			searchFields[i].value = '';
+			searchFields[i].value = searchFieldActive.value;
 		}
 	}
 	search.value = searchFieldActive.value;
