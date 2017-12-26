@@ -61,14 +61,14 @@ header {
 }
 
 %placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: $whitescale-75;
 }
 
 .search {
   background-color: $color-top-background;
   border: {
     style: solid;
-    color: rgba(255, 255, 255, 0.75);
+    color: $whitescale-75;
     width: 0 0 1px 0;
   }
   outline: none;
