@@ -13,12 +13,14 @@
   border-top: 1px solid $color-sidebar-background;
   //transition: 0.5s;
   .nav-header {
+    box-sizing: border-box;
     height: 69px;
     border-bottom: 1px solid white;
     display: none;
+    padding: 10px;
 
     .search {
-      width: calc(100% - 34px);
+      width: calc(100% - 44px);
     }
   }
   nav {
