@@ -35,10 +35,22 @@ header {
   box-shadow: 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.logo,
-.nav-trigger {
-  font-size: 36px;
+%header-icon {
   margin: 17px 0 17px 17px;
+}
+
+.logo {
+  @extend %header-icon;
+  font-size: 31px;
+}
+
+.nav-trigger {
+  @extend %header-icon;
+  font-size: 18px;
+}
+
+[class$="-trigger"] {
+  cursor: pointer;
 }
 
 .github {
@@ -49,20 +61,23 @@ header {
 }
 
 %placeholder {
-  color: rgba(255, 255, 255, 0.75);
+  color: $whitescale-75;
 }
 
 .search {
   background-color: $color-top-background;
   border: {
     style: solid;
-    color: rgba(255, 255, 255, 0.75);
+    color: $whitescale-75;
     width: 0 0 1px 0;
   }
   outline: none;
   margin-left: 17px;
   margin-top: 17px;
   color: white;
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 
   //need to write them separately, not through comma
   //&::-webkit-input-placeholder {
@@ -80,6 +95,17 @@ header {
 
   &::placeholder {
     @extend %placeholder;
+  }
+}
+
+.search-trigger {
+  @extend %header-icon;
+  font-size: 24px;
+  &.active {
+    display: none;
+    &+.search {
+      display: inline-block;
+    }
   }
 }
 

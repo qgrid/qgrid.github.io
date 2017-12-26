@@ -52,6 +52,14 @@ pre {
   }
 }
 
+.search {
+  display: none;
+  vertical-align: middle;
+  margin: 0 0 0 17px;
+  padding: 5px;
+  width: calc(#{$nav-width} - 120px);
+}
+
 table {
   border-spacing: 0;
   width: 100%;

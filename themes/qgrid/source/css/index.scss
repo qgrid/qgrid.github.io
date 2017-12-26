@@ -67,21 +67,22 @@
           font: {
             size: 10px;
             family: $font-sans;
-            //weight: bold;
           }
           text-transform: uppercase;
           line-height: 11px;
           background-color: rgba(0, 72, 168, 0.35);
-          color: rgba(255, 255, 255, 0.5);
+          color: $whitescale-50;
         }
         &.ready label {
           background-color: rgba(0, 72, 168, 0.75);
-          color: rgba(255, 255, 255, 0.75);
+          color: $whitescale-75;
+          cursor: pointer;
         }
 
         &.active label {
           background-color: #0048A8;
           color: white;
+          cursor: pointer;
         }
       }
     }
