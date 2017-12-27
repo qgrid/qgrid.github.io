@@ -30,6 +30,9 @@
       flex-flow: wrap row;
       display: flex;
       font-size: 2em;
+      .description {
+        min-width: 50%;
+      }
     }
   }
   .go-to {
