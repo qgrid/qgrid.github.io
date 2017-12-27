@@ -1,23 +1,24 @@
 <nav>
     <ul>
-        <% var groupOrder = ['Getting started', 'API', 'Features'];
-        var groupped = site.pages.reduce(function (groups, p) {
+        <% var groups = ['Getting started', 'API', 'Features'];
+        var pageGroups = site.pages.reduce(function (memo, p) {
             var key = p.group;
-            (groups[key] = groups[key] || []).push(p);
-            return groups;
+            (memo[key] = memo[key] || []).push(p);
+            return memo;
         }, {});
 
-        for (var g = 0; g < groupOrder.length; g++) {
-            var key = groupOrder[g];
+        for (var i = 0; i < groups.length; i++) {
+            var group = groups[i];
 
-        if (groupped.hasOwnProperty(key)){ %>
-        <li><h3><%- key %></h3></li>
-        <% var sorted = groupped[key].sort(function (a, b) {
-            return a.order > b.order;
-        });
+        if (pageGroups.hasOwnProperty(group)){ %>
+        <li><h3><%- group %></h3></li>
+        <% var page = pageGroups[group];
+            var pages = page.sort(function (a, b) {
+                return a.order > b.order;
+            });
 
-        for (var i = 0; i < sorted.length; i++) {
-            var p = groupped[key][i]; %>
+        for (var i = 0; i < pages.length; i++) {
+            var p = pageGroups[group][i]; %>
         <li class="<%- page.title === p.title ? 'current' : '' %> ">
             <a href="<%- url_for(p.path) %>"><%- p.title %></a>
         </li>
