@@ -1,6 +1,7 @@
 ---
 title: Test1
 type: guide
+group: Getting started
 ---
 
 ### Header

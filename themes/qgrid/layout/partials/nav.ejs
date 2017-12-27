@@ -1,91 +1,15 @@
 <nav>
-    <h3>Getting started</h3>
-
     <ul>
         <% site.pages.each(function (p) { %>
+        <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+        <% if (p.group === 'Getting started') { %>
+        <li><h3><%- p.group %></h3></li>
         <li>
-            <a href="<%- url_for(p.path) %>"><%- p.title %></a>
+            <a href="<%- url_for(p.path) %>"
+               class="<%- page.title === p.title ? ' current' : '' %> "><%- p.title %></a>
         </li>
+        <% } %>
+
         <% }) %>
-        <!--<li>-->
-            <!--<a href="#">How to install</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Concepts and architecture</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Grid model and service</a>-->
-        <!--</li>-->
-    <!--</ul>-->
-
-    <!--<h3>Features</h3>-->
-    <!--<ul>-->
-        <!--<li>-->
-            <!--<a href="#">Sorting</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Filtering</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Groupping and aggregates</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Pivoting</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Scrolling</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Pipes</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Grid appearance</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Templates</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Data editing</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Data selection and usability</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Grid navigation</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">State persistance</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Action model</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Plugins</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Mobile device support</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Localization</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Context menu</a>-->
-        <!--</li>-->
-    <!--</ul>-->
-
-    <!--<h3>API</h3>-->
-    <!--<ul>-->
-        <!--<li>-->
-            <!--<a href="#">One term</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Another point</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">Third unit</a>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<a href="#">And so on</a>-->
-        <!--</li>-->
     </ul>
 </nav>

@@ -1,6 +1,7 @@
 ---
 title: Introduction
 type: guide
+group: Getting started
 ---
 
 ### Header
