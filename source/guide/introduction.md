@@ -2,6 +2,7 @@
 title: Introduction
 type: guide
 group: Getting started
+order: 3
 ---
 
 ### Header

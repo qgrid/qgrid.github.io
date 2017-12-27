@@ -1,19 +1,22 @@
 <nav>
     <ul>
-        <% var groupped = site.pages.reduce(function (groups, p) {
+        <% var groupOrder = ['Getting started', 'API', 'Features'];
+        var groupped = site.pages.reduce(function (groups, p) {
             var key = p.group;
             (groups[key] = groups[key] || []).push(p);
             return groups;
         }, {}) %>
-
-        <% for (var key in groupped) { %>
+        <% for (var g = 0; g < groupOrder.length; g++) {
+            var key = groupOrder[g];
+        if (groupped.hasOwnProperty(key)){ %>
         <li><h3><%- key %></h3></li>
-        <% for (var i = 0; i < groupped[key].length; i++){ %>
-        <% var p = groupped[key][i] %>
+        <% for (var i = 0; i < groupped[key].length; i++){
+            var p = groupped[key][i]; %>
         <li>
             <a href="<%- url_for(p.path) %>"
                class="<%- page.title === p.title ? 'current' : '' %> "><%- p.title %></a>
         </li>
-        <% }} %>
+        <% }}} %>
+
     </ul>
 </nav>
