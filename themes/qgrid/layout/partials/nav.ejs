@@ -1,20 +1,19 @@
 <nav>
     <ul>
-        <% var start = site.pages.filter(function (p) {
-            return p.group === 'Getting started'
-        }) %>
-        <% var api = site.pages.filter(function (p) {
-            return p.group === 'API'
-        }) %>
+        <% var groupped = site.pages.reduce(function (groups, p) {
+            var key = p.group;
+            (groups[key] = groups[key] || []).push(p);
+            return groups;
+        }, {}) %>
 
-        <% if (start.length > 0) { %>
-        <li><h3>Getting started</h3></li>
-        <% start.each(function (p) { %>
-        <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+        <% for (var key in groupped) { %>
+        <li><h3><%- key %></h3></li>
+        <% for (var i = 0; i < groupped[key].length; i++){ %>
+        <% var p = groupped[key][i] %>
         <li>
             <a href="<%- url_for(p.path) %>"
                class="<%- page.title === p.title ? 'current' : '' %> "><%- p.title %></a>
         </li>
-        <% })} %>
+        <% }} %>
     </ul>
 </nav>
