@@ -2,7 +2,7 @@
 title: Test2
 type: guide
 group: Getting started
-order: 3
+order: 2
 ---
 
 ### Header
