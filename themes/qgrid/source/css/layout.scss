@@ -44,15 +44,6 @@ header {
   font-size: 31px;
 }
 
-.nav-trigger {
-  @extend %header-icon;
-  font-size: 18px;
-}
-
-[class$="-trigger"] {
-  cursor: pointer;
-}
-
 .github {
   font-size: 26px;
   position: fixed;
@@ -60,76 +51,14 @@ header {
   right: 17px;
 }
 
-%placeholder {
-  color: $whitescale-75;
-}
-
-.search {
-  background-color: $color-top-background;
-  border: {
-    style: solid;
-    color: $whitescale-75;
-    width: 0 0 1px 0;
-  }
-  outline: none;
-  margin-left: 17px;
-  margin-top: 17px;
-  color: white;
-  &::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-  }
-
-  //need to write them separately, not through comma
-  //&::-webkit-input-placeholder {
-  //  @extend %placeholder;
-  //}
-  //&::-moz-placeholder {
-  //  @extend %placeholder;
-  //}
-  //&:-ms-input-placeholder {
-  //  @extend %placeholder;
-  //}
-  //&:-moz-placeholder {
-  //  @extend %placeholder;
-  //}
-
-  &::placeholder {
-    @extend %placeholder;
-  }
-}
-
-.search-trigger {
-  @extend %header-icon;
-  font-size: 24px;
-  &.active {
-    display: none;
-    &+.search {
-      display: inline-block;
-    }
-  }
-}
 
 main {
   display: grid;
-  grid-template-areas: "get-started" "example" "feature-list" "go-to";
-  grid-template-rows: 588px 600px auto auto;
+  grid-template-areas: "get-started" "example" "features" "go-to";
+  grid-template-rows: 645px 600px auto auto;
   grid-area: content;
   background: $color-background;
   color: $color-text;
-
-  .example {
-    grid-area: example;
-  }
-  .feature-list {
-    grid-area: feature-list;
-    .feature {
-      height: 200px;
-      font-size: 2rem;
-    }
-  }
-  .go-to {
-    grid-area: go-to;
-  }
 }
 
 footer {

@@ -10,8 +10,30 @@
     z-index: 11;
   }
 
+  .example, .go-to, .features {
+    width: 60%;
+    margin: auto;
+  }
+
   .search {
     display: none;
+  }
+  .example {
+    grid-area: example;
+  }
+  .features {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    grid-area: features;
+    li {
+      flex-flow: wrap row;
+      display: flex;
+      font-size: 2em;
+    }
+  }
+  .go-to {
+    grid-area: go-to;
   }
 
   .get-started {
@@ -28,12 +50,12 @@
       font-weight: normal;
     }
     h1 {
-      font-size: 28px;
-      line-height: 28px;
+      font-size: 2em;
+      line-height: 2em;
     }
     h2 {
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 1.714em;
+      line-height: 1.714em;
       margin-bottom: 10px;
     }
     .frameworks {
@@ -44,8 +66,7 @@
         display: inline-block;
         vertical-align: middle;
         margin-right: 11px;
-        font-size: 63px;
-        min-width: 110px;
+        font-size: 4.5em;
         & > a {
           text-decoration: none;
           color: white;
@@ -87,15 +108,10 @@
       }
     }
   }
-  .example, .go-to, .feature-list {
-    width: 60%;
-    margin: auto;
-  }
 
   .example {
     margin-top: -50px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    min-width: 390px;
     iframe {
       height: 500px;
     }

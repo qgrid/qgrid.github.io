@@ -1,3 +1,27 @@
+// icons
+$iconMap: (
+        'search-glass':'icon-search',
+        'logo':'icon-qgrid-logo-simple',
+        'angular': 'icon-angular',
+        'angular-js': 'icon-angularjs',
+        'react': 'icon-react',
+        'vue': 'icon-vue',
+        'backbone':'icon-backbone',
+        'github': 'icon-github',
+        'nav-trigger': 'icon-hamburger',
+        'search-trigger': 'icon-search'
+);
+
+// images
+$logo-url: "../assets/images/logo.png";
+$qgrid-logo-url: "../assets/images/qgrid-logo.svg";
+$featuresMap: (
+        'virtualize':"../assets/images/virtualize.svg",
+        'css':"../assets/images/css.svg",
+        //'custom':"../assets/images/custom.svg",
+        'js':"../assets/images/js.svg"
+);
+
 // fonts
 $font-size: 14px;
 $font-sans: "Roboto", Helvetica, Arial, sans-serif;
@@ -26,20 +50,6 @@ $color-table-even-row: #97BFF6;
 $color-go-to-button: #0048A8;
 
 // header
-$logo-url: "../assets/logo.png";
-$qgrid-logo-url: "../assets/qgrid-logo.svg";
-
-$icon-height--small: 36px;
-$icon-width--small: 56px;
-
-$icon-height--big: 63px;
-$icon-width--big: 60px;
-
-$search-url: "../assets/icons/search.svg";
-$hamburger-url: "../assets/icons/hamburger.svg";
-$angular-url: "../assets/icons/angular.svg";
-$angular-js-url: "../assets/icons/angularjs.svg";
-$github-url: "../assets/icons/octocat.svg";
 
 $header-height: 70px;
 

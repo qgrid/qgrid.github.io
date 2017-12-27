@@ -52,12 +52,65 @@ pre {
   }
 }
 
+%placeholder {
+  color: $whitescale-75;
+}
+
+.nav-trigger {
+  @extend %header-icon;
+  font-size: 18px;
+}
+
+[class$="-trigger"] {
+  cursor: pointer;
+}
+
 .search {
+  background-color: $color-top-background;
+  border: {
+    style: solid;
+    color: $whitescale-75;
+    width: 0 0 1px 0;
+  }
+  outline: none;
+  color: white;
   display: none;
   vertical-align: middle;
-  margin: 0 0 0 17px;
+  margin: 17px 0 0 17px;
   padding: 5px;
   width: calc(#{$nav-width} - 120px);
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+
+  //need to write them separately, not through comma
+  //&::-webkit-input-placeholder {
+  //  @extend %placeholder;
+  //}
+  //&::-moz-placeholder {
+  //  @extend %placeholder;
+  //}
+  //&:-ms-input-placeholder {
+  //  @extend %placeholder;
+  //}
+  //&:-moz-placeholder {
+  //  @extend %placeholder;
+  //}
+
+  &::placeholder {
+    @extend %placeholder;
+  }
+}
+
+.search-trigger {
+  @extend %header-icon;
+  font-size: 24px;
+  &.active {
+    display: none;
+    & + .search {
+      display: inline-block;
+    }
+  }
 }
 
 table {
