@@ -18,9 +18,8 @@
 
         for (var i = 0; i < sorted.length; i++) {
             var p = groupped[key][i]; %>
-        <li>
-            <a href="<%- url_for(p.path) %>"
-               class="<%- page.title === p.title ? 'current' : '' %> "><%- p.title %></a>
+        <li class="<%- page.title === p.title ? 'current' : '' %> ">
+            <a href="<%- url_for(p.path) %>"><%- p.title %></a>
         </li>
         <% }}} %>
 
