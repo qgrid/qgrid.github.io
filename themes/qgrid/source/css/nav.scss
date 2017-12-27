@@ -28,24 +28,23 @@
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    h3 {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 0;
-      //margin-left: 20px;
-    }
     ul {
-      margin: 0;
+      margin: 10px 0 0 20px;
       padding: 0;
-      //margin-left: 20px;
       li {
         list-style: none;
         font-size: 16px;
         line-height: 33px;
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          margin: 0;
+        }
         a {
           color: $color-sidebar-text;
           text-decoration: none;
           opacity: 0.8;
+          margin-left: 20px;
           //transition: 0.3s;
           &:hover {
             opacity: 1
