@@ -13,13 +13,13 @@ $iconMap: (
 );
 
 // images
-$logo-url: "../assets/images/logo.png";
-$qgrid-logo-url: "../assets/images/qgrid-logo.svg";
+$logo-url: '../assets/images/logo.png';
+$qgrid-logo-url: '../assets/images/qgrid-logo.svg';
 $featuresMap: (
-        'virtualize':"../assets/images/virtualize.svg",
-        'css':"../assets/images/css.svg",
-        //'custom':"../assets/images/custom.svg",
-        'js':"../assets/images/js.svg"
+        'virtualize':('../assets/images/virtualize.svg', 224px, 242px),
+        'css':('../assets/images/css.svg', 297px, 142px),
+  //'custom': '../assets/images/custom.svg',
+        'js':('../assets/images/js.svg', 200px, 200px)
 );
 
 // fonts

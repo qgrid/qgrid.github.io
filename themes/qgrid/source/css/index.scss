@@ -22,16 +22,45 @@
     grid-area: example;
   }
   .features {
-    margin: 0 auto;
+    margin: 0 auto 45px auto;
     padding: 0;
     list-style: none;
     grid-area: features;
+    display: flex;
+    flex-flow: column wrap;
     li {
-      flex-flow: wrap row;
+      flex-flow: row wrap;
       display: flex;
-      font-size: 2em;
+      justify-content: center;
+      align-items: stretch;
+      flex: 1 100%;
+      margin-bottom: 55px;
       .description {
-        min-width: 50%;
+        flex: 1 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 30px;
+        text-align: left;
+        padding-left: 0;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        strong {
+          display: block;
+        }
+      }
+      div[class^="image-"]{
+        background-position: calc(100% - 70px) 0;
+      }
+      &:nth-child(2n+1) {
+        flex-direction: row-reverse;
+        .description {
+          text-align: right;
+          padding-right: 0;
+        }
+        div[class^="image-"]{
+          background-position: 70px 0;
+        }
       }
     }
   }

@@ -20,16 +20,26 @@
 }
 
 @mixin generate-features-images($map) {
-  @each $class, $url in $map {
-    .#{$class} {
+  @each $class, $props in $map {
+    $url: nth($props, 1);
+    $width: nth($props, 2);
+    $height: nth($props, 3);
+    .image-#{$class} {
       @extend %icon;
       background: url($url) 50% 50% no-repeat;
-      height: 242px;
-      width: 50%;
-      min-width: 320px;
+      background-size: $width $height;
+      height: $height;
+      flex: 1 50%;
       margin: 0;
     }
   }
+}
+
+//temp plug until image will be provided
+.image-custom {
+  height: 242px;
+  flex: 1 50%;
+  margin: 0;
 }
 
 .qgrid-logo {

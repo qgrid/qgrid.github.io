@@ -90,6 +90,15 @@
   }
 }
 
+@media all and (max-width: 1260px) {
+  .index {
+    .features li {
+      flex-direction: column;
+      flex: 1 100%;
+    }
+  }
+}
+
 @media screen and (min-width: 1011px) and (max-width: 1330px) {
   .index main .example {
     width: 75%;
