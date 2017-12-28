@@ -1,3 +1,13 @@
+@import "variables";
+
+@media screen and (min-width: 851px) and (max-width: 1500px) {
+  .index {
+    .example .jsfiddle-embed iframe {
+      width: 75%;
+    }
+  }
+}
+
 @media screen and (max-width: 850px) {
   .index {
     .example .jsfiddle-embed iframe {
@@ -11,12 +21,23 @@
           background-position: 50% 50%;
           margin-bottom: 30px;
         }
+        .image-virtualize {
+          background-size: 112px 121px;
+        }
+        .image-css {
+          background-size: 148.5px 71px;
+        }
+        .image-js {
+          background-size: 100px 100px;
+        }
         .description {
           text-align: center;
           p {
             text-align: center;
             position: relative;
             max-width: none;
+            margin-right: 20px;
+            margin-left: 20px;
           }
         }
       }
@@ -47,11 +68,20 @@
   }
 }
 
-@media screen and (min-width: 851px) and (max-width: 1500px) {
-  .index {
-    .example .jsfiddle-embed iframe {
-      width: 75%;
+@media screen and (max-width: 540px) {
+  .index main {
+    .get-started {
+      h1 {
+        font-size: 22px;
+        line-height: 22px;
+      }
+      h2 {
+        font-size: 18px;
+        line-height: 18px;
+      }
+      .frameworks li {
+        font-size: 2.5em;
+      }
     }
   }
 }
-

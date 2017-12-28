@@ -1,25 +1,25 @@
 // icons
 $iconMap: (
-        'search-glass':'icon-search',
-        'logo':'icon-qgrid-logo-simple',
-        'angular': 'icon-angular',
-        'angular-js': 'icon-angularjs',
-        'react': 'icon-react',
-        'vue': 'icon-vue',
-        'backbone':'icon-backbone',
-        'github': 'icon-github',
-        'nav-trigger': 'icon-hamburger',
-        'search-trigger': 'icon-search'
+        search-glass:'icon-search',
+        logo:'icon-qgrid-logo-simple',
+        angular: 'icon-angular',
+        angular-js: 'icon-angularjs',
+        react: 'icon-react',
+        vue: 'icon-vue',
+        backbone:'icon-backbone',
+        github: 'icon-github',
+        nav-trigger: 'icon-hamburger',
+        search-trigger: 'icon-search'
 );
 
 // images
 $logo-url: '../assets/images/logo.png';
 $qgrid-logo-url: '../assets/images/qgrid-logo.svg';
 $featuresMap: (
-        'virtualize':('../assets/images/virtualize.svg', 224px, 242px),
-        'css':('../assets/images/css.svg', 297px, 142px),
-  //'custom': '../assets/images/custom.svg',
-        'js':('../assets/images/js.svg', 200px, 200px)
+        virtualize:('../assets/images/virtualize.svg', 224px, 242px),
+        css:('../assets/images/css.svg', 297px, 142px),
+  //custom: '../assets/images/custom.svg',
+        js:('../assets/images/js.svg', 200px, 200px)
 );
 
 // fonts
