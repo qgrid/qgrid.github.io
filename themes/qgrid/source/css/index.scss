@@ -49,7 +49,7 @@
           display: block;
         }
       }
-      div[class^="image-"]{
+      div[class^="image-"] {
         background-position: calc(100% - 70px) 0;
       }
       &:nth-child(2n+1) {
@@ -58,7 +58,7 @@
           text-align: right;
           padding-right: 0;
         }
-        div[class^="image-"]{
+        div[class^="image-"] {
           background-position: 70px 0;
         }
       }
@@ -158,12 +158,4 @@
     }
   }
 
-  footer {
-    padding: 100px auto;
-    text-align: center;
-    font: {
-      size: 18px;
-      weight: normal;
-    }
-  }
 }

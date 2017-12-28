@@ -51,7 +51,6 @@ header {
   right: 17px;
 }
 
-
 main {
   display: grid;
   grid-template-areas: "get-started" "example" "features" "go-to";
@@ -65,7 +64,18 @@ footer {
   grid-area: footer;
   color: $color-footer-text;
   background: $color-footer-background;
-  font-family: $font-serif;
+  padding: 50px 0;
+  text-align: center;
+  font: {
+    family: $font-serif;
+    size: 18px;
+    weight: 200;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+  }
 }
 
 #overlay {
