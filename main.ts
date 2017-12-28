@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { GridModule } from 'ng2-qgrid';
 import { ThemeModule } from 'ng2-qgrid';
 
-window.runExample = function run(Component) {
+const wnd = window as any;
+wnd.runExample = function run(Component) {
   @NgModule({
     imports: [
       BrowserModule,
@@ -17,15 +18,13 @@ window.runExample = function run(Component) {
       HttpClientModule,
       BrowserAnimationsModule,
       GridModule,
-      ThemeModule,
-      Component
+      ThemeModule
     ],
-
     declarations: [Component],
     bootstrap: [Component],
     providers: []
   })
-  export class ExampleModule {}
+  class ExampleModule {}
 
   platformBrowserDynamic().bootstrapModule(ExampleModule);
 }
