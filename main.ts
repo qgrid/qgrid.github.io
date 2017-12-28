@@ -9,20 +9,23 @@ import { AppComponent } from './app.component';
 import { GridModule } from 'ng2-qgrid';
 import { ThemeModule } from 'ng2-qgrid';
 
-@NgModule({
-  imports: [
-    BrowserModule,
-    CommonModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    GridModule,
-    ThemeModule
-  ],
+window.runExample = function run(Component) {
+  @NgModule({
+    imports: [
+      BrowserModule,
+      CommonModule,
+      HttpClientModule,
+      BrowserAnimationsModule,
+      GridModule,
+      ThemeModule,
+      Component
+    ],
 
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
-  providers: []
-})
-export class ExampleModule {}
+    declarations: [Component],
+    bootstrap: [Component],
+    providers: []
+  })
+  export class ExampleModule {}
 
-platformBrowserDynamic().bootstrapModule(ExampleModule);
+  platformBrowserDynamic().bootstrapModule(ExampleModule);
+}
