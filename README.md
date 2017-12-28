@@ -1,36 +1,37 @@
-# documentation
-[Documentation for qgrid](https://qgrid.github.io/doc/)
+# jsfiddle
 
+```html
+<!DOCTYPE html>
+<html>
 
-## Developing
+<head>
+   <title>QGRID Plunker</title>
 
-``` bash
-$ npm install
-$ npm install hexo-cli -g
-```
+   <!-- Load common libraries -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/2.1.6/typescript.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.7.2/zone.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.47/system.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
 
-Start server dev server at http://localhost:4000
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
 
-``` bash
-$ hexo server
-```
+   <!-- Configure SystemJS -->
+   <script src="systemjs.config.js"></script>
 
-Generate public folder and watch for changes in sources
+   <script>
+      System
+         .import('main.ts')
+         .catch(console.error.bind(console));
+   </script>
 
-``` bash
-$ hexo generate --watch
-```
+</head>
 
-Delete public folder
+<body class="mat-app-background">
+   <my-app>qgrid example...</my-app>
+</body>
 
-``` bash
-$ hexo clean
-```
-
-## Deploying
-
-The site is deployed using GitHub pages:
-
-``` bash
-$ hexo clean && hexo deploy -g
+</html>
 ```
