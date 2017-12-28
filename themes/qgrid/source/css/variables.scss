@@ -1,8 +1,37 @@
+// icons
+$iconMap: (
+        search-glass:'icon-search',
+        logo:'icon-qgrid-logo-simple',
+        angular: 'icon-angular',
+        angular-js: 'icon-angularjs',
+        react: 'icon-react',
+        vue: 'icon-vue',
+        backbone:'icon-backbone',
+        github: 'icon-github',
+        nav-trigger: 'icon-hamburger',
+        search-trigger: 'icon-search'
+);
+
+// images
+$logo-url: '../assets/images/logo.png';
+$qgrid-logo-url: '../assets/images/qgrid-logo.svg';
+$featuresMap: (
+        virtualize:('../assets/images/virtualize.svg', 224px, 242px),
+        css:('../assets/images/css.svg', 297px, 142px),
+  //custom: '../assets/images/custom.svg',
+        js:('../assets/images/js.svg', 200px, 200px)
+);
+
 // fonts
 $font-size: 14px;
 $font-sans: "Roboto", Helvetica, Arial, sans-serif;
 $font-serif: 'Roboto Slab', serif;
 $font-mono: "Roboto Mono", monospace;
+
+//whitescale
+$whitescale-75: rgba(255, 255, 255, 0.75);
+$whitescale-50: rgba(255, 255, 255, 0.5);
+$whitescale-30: rgba(255, 255, 255, 0.3);
 
 // colors
 $color-text: #333;
@@ -18,19 +47,9 @@ $color-scrollbar-background: #F5F5F5;
 $color-table-header: $color-top-background;
 $color-table-odd-row: #CBDFFB;
 $color-table-even-row: #97BFF6;
+$color-go-to-button: #0048A8;
 
 // header
-$logo-url: "../assets/logo.png";
-$logo-height: 36px;
-$logo-width: 56px;
-
-$search-url: "../assets/icons/search.svg";
-$search-height: 36px;
-$search-width: 56px;
-
-$hamburger-url: "../assets/icons/hamburger.svg";
-$hamburger-height: 36px;
-$hamburger-width: 56px;
 
 $header-height: 70px;
 

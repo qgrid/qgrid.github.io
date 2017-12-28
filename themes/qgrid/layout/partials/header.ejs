@@ -1,3 +1,12 @@
-<button class="nav-trigger"></button>
-<a href="<%- url_for('/')%>" class="logo"></a>
-<input id="search" class="search"/>
+<% var isIndex = page.path === 'index.html' %>
+<% if (isIndex) { %>
+<span class="logo"></span>
+<% } else { %>
+<button class="nav-trigger" id="nav-trigger"></button>
+<a href="<%- url_for('/') %>" class="logo"></a>
+<button class="search-trigger" id="search-trigger"></button>
+<input class="search" placeholder="Search" type="search"/>
+<input id="search" type="hidden"/>
+<% } %>
+
+<a href="https://github.com/qgrid/ng" class="github"></a>

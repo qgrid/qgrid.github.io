@@ -1,27 +1,72 @@
 <div class="get-started">
-    <h1>qgrid</h1>
-    <h3>Fast and flexible data solution</h3>
-    <a href="<%- url_for('guide/introduction.html') %>">Get Started</a>
+    <div class="qgrid-logo"></div>
+    <h2>Fast and flexible data table solution.</h2>
+    <h1>Select version for your ecosystem.</h1>
+    <ul class="frameworks">
+        <li class="active">
+            <a href="<%- url_for('guide/introduction.html') %>">
+                <span class="angular-js"></span>
+                <label>AngularJS</label>
+            </a>
+        </li>
+        <li class="ready">
+            <a href="<%- url_for('guide/introduction.html') %>">
+                <span class="angular"></span>
+                <label>Angular 2+</label>
+            </a>
+        </li>
+        <li>
+            <span class="react"></span>
+            <label>In Development</label>
+        </li>
+        <li>
+            <span class="vue"></span>
+            <label>In Development</label>
+        </li>
+        <li>
+            <span class="backbone"></span>
+            <label>In Development</label>
+        </li>
+
+    </ul>
 </div>
 <div class="example">
-    HERE WILL BE AN EXAMPLE
-</div>
-<div class="feature-list">
-    <div class="feature">
-        Considered Styles
-    </div>
-    <div class="feature">
-        Fully Customizable
-    </div>
-    <div class="feature">
-        Clear Javascript
-    </div>
-    <div class="feature">
-        Virtualization everywhere
+    <div class="jsfiddle-embed">
+        <script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/?accentColor=2F80ED"></script>
     </div>
 </div>
+<ul class="features">
+    <li>
+        <div class="image-virtualize"></div>
+        <div class="description">
+            <strong>Virtualization everywhere</strong>
+            <p>Rows and columns should be virtualizable</p>
+        </div>
+    </li>
+    <li>
+        <div class="image-css"></div>
+        <div class="description">
+            <strong>Considered Styles</strong>
+            <p>User should be able to make any css customization in easy format</p>
+        </div>
+    </li>
+    <li>
+        <div class="image-custom"></div>
+        <div class="description">
+            <strong>Fully Customizable</strong>
+            <p>Header, cells, rows, footer, pagination, etc. should be templatable</p>
+        </div>
+    </li>
+    <li>
+        <div class="image-js"></div>
+        <div class="description">
+            <strong>Clear Javascript</strong>
+            <p>No html templates in javascript</p>
+        </div>
+    </li>
+</ul>
 <div class="go-to">
     <a href="<%- url_for('guide/install.html') %>">How to Install?</a>
-    <a href="<%- url_for('guide/introduction.html') %>">Feauters and Examples</a>
+    <a href="<%- url_for('guide/introduction.html') %>">Features and Examples</a>
     <a href="<%- url_for('api/introduction.html') %>">API</a>
 </div>

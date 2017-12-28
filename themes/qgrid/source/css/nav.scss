@@ -10,26 +10,40 @@
   width: $nav-width;
   font-family: $font-serif;
   box-sizing: border-box;
+  border-top: 1px solid $color-sidebar-background;
   //transition: 0.5s;
+  .nav-header {
+    box-sizing: border-box;
+    height: 69px;
+    border-bottom: 1px solid $whitescale-30;
+    display: none;
+
+    .search {
+      width: calc(100% - 44px);
+      display: inline-block;
+    }
+  }
   nav {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    h3 {
-      font-size: 18px;
-      font-weight: bold;
-      margin-left: 20px;
-    }
     ul {
-      margin-left: 20px;
+      margin: 10px 0 0 20px;
+      padding: 0;
       li {
         list-style: none;
         font-size: 16px;
         line-height: 33px;
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          margin: 0;
+        }
         a {
           color: $color-sidebar-text;
           text-decoration: none;
           opacity: 0.8;
+          margin-left: 20px;
           //transition: 0.3s;
           &:hover {
             opacity: 1
@@ -37,9 +51,6 @@
         }
       }
     }
-  }
-  .nav-header {
-    display: none;
   }
 }
 
