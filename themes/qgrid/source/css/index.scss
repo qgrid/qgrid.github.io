@@ -10,19 +10,11 @@
     z-index: 11;
   }
 
-  .example, .go-to, .features {
-    width: 60%;
-    margin: auto;
-  }
-
   .search {
     display: none;
   }
-  .example {
-    grid-area: example;
-  }
   .features {
-    margin: 0 auto 45px auto;
+    margin-bottom: 45px;
     padding: 0;
     list-style: none;
     grid-area: features;
@@ -40,13 +32,15 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        padding: 30px;
         text-align: left;
         padding-left: 0;
         font-size: 1.5em;
         line-height: 1.5em;
-        strong {
-          display: block;
+        position: relative;
+        p {
+          max-width: 400px;
+          position: absolute;
+          margin-bottom: 0;
         }
       }
       div[class^="image-"] {
@@ -57,6 +51,11 @@
         .description {
           text-align: right;
           padding-right: 0;
+          p {
+            text-align: right;
+            position: absolute;
+            right: 0;
+          }
         }
         div[class^="image-"] {
           background-position: 70px 0;
@@ -147,9 +146,17 @@
 
   .example {
     margin-top: -50px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    grid-area: example;
+    align-items: center;
+    .jsfiddle-embed {
+      flex-flow: row wrap;
+      display: flex;
+      justify-content: center;
+    }
     iframe {
       height: 500px;
+      width: 60%;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
   }
 
@@ -157,8 +164,12 @@
     text-align: center;
     margin-bottom: 100px;
     font-size: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     a {
       @extend %accent-button;
+      margin: 5px;
     }
   }
 

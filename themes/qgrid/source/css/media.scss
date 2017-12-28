@@ -1,40 +1,27 @@
-@media screen and (max-width: 542px) {
-  .pages {
-    grid-template-areas: "header" "content" "footer";
-    grid-template-columns: 1fr;
-    #overlay {
-      display: block;
-    }
-    .nav-trigger {
-      display: inline-block;
-    }
-    #nav {
-      display: block !important;
-    }
-  }
-
+@media screen and (max-width: 850px) {
   .index {
-    main {
-      .get-started {
-        .frameworks li {
-          font-size: 2.571em;
-          label {
-            padding: 4px 9px;
-            font-size: 8.5px;
+    .example .jsfiddle-embed iframe {
+      width: 95%;
+    }
+    ul.features {
+      li,
+      li:nth-child(2n+1) {
+        flex-direction: column;
+        div[class^="image-"] {
+          background-position: 50% 50%;
+          margin-bottom: 30px;
+        }
+        .description {
+          text-align: center;
+          p {
+            text-align: center;
+            position: relative;
+            max-width: none;
           }
         }
-        .example {
-          width: 100%;
-        }
-        .go-to a {
-          margin-right: 0;
-        }
       }
     }
   }
-}
-
-@media screen and (min-width: 543px) and (max-width: 860px) {
   .pages {
     grid-template-areas: "header" "content" "footer";
     grid-template-columns: 1fr;
@@ -45,78 +32,26 @@
       display: inline-block;
     }
     #nav {
-      display: block !important;
+      padding-top: 0;
+      z-index: 12;
+      .nav-header {
+        display: block;
+      }
+    }
+    header {
+      .search,
+      .search-trigger {
+        display: none !important;
+      }
     }
   }
+}
 
-  header {
-    .search,
-    .search-trigger {
-      display: none !important;
-    }
-  }
-
-  #nav {
-    padding-top: 0;
-    z-index: 12;
-    .nav-header {
-      display: block;
-    }
-  }
-
+@media screen and (min-width: 851px) and (max-width: 1500px) {
   .index {
-    main {
-      .example {
-        width: 95%;
-      }
-      .go-to a {
-        margin-right: 0;
-      }
+    .example .jsfiddle-embed iframe {
+      width: 75%;
     }
   }
 }
 
-@media screen and (min-width: 861px) and (max-width: 1010px) {
-  .index {
-    main {
-      .example {
-        width: 80%;
-      }
-      .go-to {
-        a,
-        a:last-child {
-          margin-right: 34px;
-        }
-      }
-    }
-  }
-}
-
-@media all and (max-width: 1260px) {
-  .index {
-    .features li {
-      flex-direction: column;
-      flex: 1 100%;
-    }
-  }
-}
-
-@media screen and (min-width: 1011px) and (max-width: 1330px) {
-  .index main .example {
-    width: 75%;
-  }
-}
-
-@media screen and (min-width: 851px) {
-  .pages {
-    #nav {
-      display: block !important;
-    }
-    #overlay {
-      display: none !important;
-    }
-    .nav-trigger {
-      display: none;
-    }
-  }
-}

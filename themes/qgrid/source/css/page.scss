@@ -163,3 +163,17 @@ table {
     height: 700px;
   }
 }
+
+#nav {
+  display: block !important;
+}
+
+#overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(10, 10, 10, 0.75);
+  cursor: default;
+}
