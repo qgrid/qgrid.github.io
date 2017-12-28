@@ -1,17 +1,6 @@
 @import "variables";
 @import "iconfont";
 
-$iconMap: ('search-glass':'icon-search',
-        'logo':'icon-qgrid-logo-simple',
-        'angular': 'icon-angular',
-        'angular-js': 'icon-angularjs',
-        'react': 'icon-react',
-        'vue': 'icon-vue',
-        'backbone':'icon-backbone',
-        'github': 'icon-github',
-        'nav-trigger': 'icon-hamburger',
-        'search-trigger': 'icon-search');
-
 %icon {
   display: inline-block;
   vertical-align: middle;
@@ -30,6 +19,29 @@ $iconMap: ('search-glass':'icon-search',
   }
 }
 
+@mixin generate-features-images($map) {
+  @each $class, $props in $map {
+    $url: nth($props, 1);
+    $width: nth($props, 2);
+    $height: nth($props, 3);
+    .image-#{$class} {
+      @extend %icon;
+      background: url($url) 50% 50% no-repeat;
+      background-size: $width $height;
+      height: $height;
+      flex: 1 50%;
+      margin: 0;
+    }
+  }
+}
+
+//temp plug until image will be provided
+.image-custom {
+  height: 242px;
+  flex: 1 50%;
+  margin: 0;
+}
+
 .qgrid-logo {
   @extend %icon;
   background: url($qgrid-logo-url) 50% 50% no-repeat;
@@ -39,5 +51,6 @@ $iconMap: ('search-glass':'icon-search',
 }
 
 @include generate-icons($iconMap);
+@include generate-features-images($featuresMap);
 
 

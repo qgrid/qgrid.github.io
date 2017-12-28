@@ -10,8 +10,62 @@
     z-index: 11;
   }
 
+  .example, .go-to, .features {
+    width: 60%;
+    margin: auto;
+  }
+
   .search {
     display: none;
+  }
+  .example {
+    grid-area: example;
+  }
+  .features {
+    margin: 0 auto 45px auto;
+    padding: 0;
+    list-style: none;
+    grid-area: features;
+    display: flex;
+    flex-flow: column wrap;
+    li {
+      flex-flow: row wrap;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex: 1 100%;
+      margin-bottom: 55px;
+      .description {
+        flex: 1 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 30px;
+        text-align: left;
+        padding-left: 0;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        strong {
+          display: block;
+        }
+      }
+      div[class^="image-"]{
+        background-position: calc(100% - 70px) 0;
+      }
+      &:nth-child(2n+1) {
+        flex-direction: row-reverse;
+        .description {
+          text-align: right;
+          padding-right: 0;
+        }
+        div[class^="image-"]{
+          background-position: 70px 0;
+        }
+      }
+    }
+  }
+  .go-to {
+    grid-area: go-to;
   }
 
   .get-started {
@@ -28,12 +82,12 @@
       font-weight: normal;
     }
     h1 {
-      font-size: 28px;
-      line-height: 28px;
+      font-size: 2em;
+      line-height: 2em;
     }
     h2 {
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 1.714em;
+      line-height: 1.714em;
       margin-bottom: 10px;
     }
     .frameworks {
@@ -44,8 +98,7 @@
         display: inline-block;
         vertical-align: middle;
         margin-right: 11px;
-        font-size: 63px;
-        min-width: 110px;
+        font-size: 4.5em;
         & > a {
           text-decoration: none;
           color: white;
@@ -87,15 +140,10 @@
       }
     }
   }
-  .example, .go-to, .feature-list {
-    width: 60%;
-    margin: auto;
-  }
 
   .example {
     margin-top: -50px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    min-width: 390px;
     iframe {
       height: 500px;
     }

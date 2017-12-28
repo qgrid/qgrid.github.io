@@ -1,0 +1,51 @@
+<svg viewBox="0 0 224 242" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Virtualize</title>
+    <g id="Canvas" transform="translate(-651 -1225)">
+        <g id="Group">
+            <g id="Vector">
+                <use xlink:href="#path0_fill" transform="translate(730.059 1225)" fill="#FFFFFF" fill-opacity="0.5"/>
+                <mask id="mask0_outline_ins">
+                    <use xlink:href="#path0_fill" fill="white" transform="translate(730.059 1225)"/>
+                </mask>
+                <g mask="url(#mask0_outline_ins)">
+                    <use xlink:href="#path1_stroke_2x" transform="translate(730.059 1225)" fill="#BDBDBD"
+                         fill-opacity="0.25"/>
+                </g>
+            </g>
+            <g id="Vector">
+                <use xlink:href="#path0_fill" transform="translate(703.706 1235.52)" fill="#FFFFFF" fill-opacity="0.5"/>
+                <mask id="mask1_outline_ins">
+                    <use xlink:href="#path0_fill" fill="white" transform="translate(703.706 1235.52)"/>
+                </mask>
+                <g mask="url(#mask1_outline_ins)">
+                    <use xlink:href="#path1_stroke_2x" transform="translate(703.706 1235.52)" fill="#BDBDBD"
+                         fill-opacity="0.5"/>
+                </g>
+            </g>
+            <g id="Vector">
+                <use xlink:href="#path0_fill" transform="translate(677.353 1246.04)" fill="#FFFFFF" fill-opacity="0.5"/>
+                <mask id="mask2_outline_ins">
+                    <use xlink:href="#path0_fill" fill="white" transform="translate(677.353 1246.04)"/>
+                </mask>
+                <g mask="url(#mask2_outline_ins)">
+                    <use xlink:href="#path1_stroke_2x" transform="translate(677.353 1246.04)" fill="#BDBDBD"/>
+                </g>
+            </g>
+            <g id="Vector">
+                <use xlink:href="#path0_fill" transform="translate(651 1256.57)" fill="#FFFFFF"/>
+                <mask id="mask3_outline_ins">
+                    <use xlink:href="#path0_fill" fill="white" transform="translate(651 1256.57)"/>
+                </mask>
+                <g mask="url(#mask3_outline_ins)">
+                    <use xlink:href="#path1_stroke_2x" transform="translate(651 1256.57)" fill="#2F80ED"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <path id="path0_fill" d="M 0 152.565L 0 0L 144.941 57.8696L 144.941 210.435L 0 152.565Z"/>
+        <path id="path1_stroke_2x"
+              d="M 0 0L 1.854 -4.64356L -5 -7.38011L -5 0L 0 0ZM 0 152.565L -5 152.565L -5 155.953L -1.854 157.209L 0 152.565ZM 144.941 210.435L 143.087 215.078L 149.941 217.815L 149.941 210.435L 144.941 210.435ZM 144.941 57.8696L 149.941 57.8696L 149.941 54.4821L 146.795 53.226L 144.941 57.8696ZM -5 0L -5 152.565L 5 152.565L 5 0L -5 0ZM -1.854 157.209L 143.087 215.078L 146.795 205.791L 1.854 147.922L -1.854 157.209ZM 149.941 210.435L 149.941 57.8696L 139.941 57.8696L 139.941 210.435L 149.941 210.435ZM 146.795 53.226L 1.854 -4.64356L -1.854 4.64356L 143.087 62.5131L 146.795 53.226Z"/>
+    </defs>
+</svg>
