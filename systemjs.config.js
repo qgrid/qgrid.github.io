@@ -15,8 +15,6 @@ System.config({
 
 System.config({
    map: {
-	  'main': 'main.js',
-
 	  '@angular/core': 'https://unpkg.com/@angular/core/bundles/core.umd.js',
 	  '@angular/common': 'https://unpkg.com/@angular/common/bundles/common.umd.js',
 	  '@angular/common/http': 'https://unpkg.com/@angular/common/bundles/common-http.umd.js',
