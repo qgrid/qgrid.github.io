@@ -15,18 +15,20 @@
 
   .index {
     main {
-      .get-started .frameworks li {
-        font-size: 2.571em;
-        label {
-          padding: 4px 9px;
-          font-size: 8.5px;
+      .get-started {
+        .frameworks li {
+          font-size: 2.571em;
+          label {
+            padding: 4px 9px;
+            font-size: 8.5px;
+          }
         }
-      }
-      .example {
-        width: 100%;
-      }
-      .go-to a {
-        margin-right: 0;
+        .example {
+          width: 100%;
+        }
+        .go-to a {
+          margin-right: 0;
+        }
       }
     }
   }

@@ -94,6 +94,10 @@
       list-style: none;
       padding: 0;
       margin: 67px 0 120px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
       li {
         display: inline-block;
         vertical-align: middle;
