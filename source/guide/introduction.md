@@ -23,7 +23,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 JSFiddle embed example
 
-<div class="jsfiddle-embed"><script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/"></script><div>
+{% docEditor %}
 
 ### Third Header
 
