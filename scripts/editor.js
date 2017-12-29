@@ -1,5 +1,7 @@
 const helper = args => {
-  return `<script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/"></script>`;
+  return `<div class="jsfiddle-embed">
+            <script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/"></script>
+          </div>`;
 };
 
 hexo.extend.tag.register("docEditor", helper);

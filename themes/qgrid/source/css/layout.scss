@@ -51,11 +51,10 @@ header {
   right: 17px;
 }
 
-
 main {
   display: grid;
   grid-template-areas: "get-started" "example" "features" "go-to";
-  grid-template-rows: 645px 600px auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-area: content;
   background: $color-background;
   color: $color-text;
@@ -65,22 +64,22 @@ footer {
   grid-area: footer;
   color: $color-footer-text;
   background: $color-footer-background;
-  font-family: $font-serif;
-}
-
-#overlay {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: 10;
-  background-color: rgba(10, 10, 10, 0.75);
-  cursor: default;
+  padding: 50px 0;
+  text-align: center;
+  font: {
+    family: $font-serif;
+    size: 18px;
+    weight: 200;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+  }
 }
 
 %accent-button {
   text-decoration: none;
-  display: inline-block;
   vertical-align: middle;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -90,7 +89,6 @@ footer {
   line-height: 24px;
   font-size: 18px;
   font-weight: normal;
-  margin-right: 34px;
   margin-bottom: 5px;
   padding: 18px;
   width: 248px;

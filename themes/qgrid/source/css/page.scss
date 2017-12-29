@@ -59,6 +59,7 @@ pre {
 .nav-trigger {
   @extend %header-icon;
   font-size: 18px;
+  display: none;
 }
 
 [class$="-trigger"] {
@@ -76,7 +77,7 @@ pre {
   color: white;
   display: none;
   vertical-align: middle;
-  margin: 17px 0 0 17px;
+  margin: 20px auto 25px 17px;
   padding: 5px;
   width: calc(#{$nav-width} - 120px);
   &::-webkit-search-cancel-button {
@@ -162,4 +163,14 @@ table {
   > iframe {
     height: 700px;
   }
+}
+
+#overlay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(10, 10, 10, 0.75);
+  cursor: default;
 }
