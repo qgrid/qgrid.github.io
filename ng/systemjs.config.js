@@ -13,8 +13,14 @@ System.config({
    }
 });
 
+
 System.config({
    map: {
+	  'typescript': 'https://cdnjs.cloudflare.com/ajax/libs/typescript/2.1.6/typescript.min.js',
+	  'core-js': 'https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.min.js',
+	  'zone': 'https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.7.2/zone.min.js',
+
+
 	  '@angular/core': 'https://unpkg.com/@angular/core/bundles/core.umd.js',
 	  '@angular/common': 'https://unpkg.com/@angular/common/bundles/common.umd.js',
 	  '@angular/common/http': 'https://unpkg.com/@angular/common/bundles/common-http.umd.js',
