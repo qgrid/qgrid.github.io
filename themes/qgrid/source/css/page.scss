@@ -167,6 +167,19 @@ table {
   }
 }
 
+.sb-embed {
+  @extend .jsfiddle-embed;
+  height: 700px;
+  overflow: hidden;
+  display: block;
+  > iframe{
+    border: none;
+    margin-top: -38px;
+    height: 740px;
+    width: 100%;
+  }
+}
+
 #overlay {
   display: none;
   height: 100vh;
