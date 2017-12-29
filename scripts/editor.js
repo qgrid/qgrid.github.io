@@ -1,7 +1,8 @@
 const helper = args => {
-  return `<div class="jsfiddle-embed">
-            <script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/"></script>
-          </div>`;
+  return `<span class="sb-embed">
+            <iframe src="//stackblitz.com/edit/angular-qgrid-example?embed=1&file=app/app.component.html&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+          </span>
+        `;
 };
 
 hexo.extend.tag.register("docEditor", helper);
