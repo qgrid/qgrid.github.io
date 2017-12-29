@@ -7,8 +7,6 @@ order: 3
 
 ### Header
 
-{% docEditor %}
-
 Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <pre><code class='bash'>$ npm install ng-qgrid
@@ -25,7 +23,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 JSFiddle embed example
 
-<div class="jsfiddle-embed"><script async src="//jsfiddle.net/qgrid/cv4ohzpw/embed/result,html,js/"></script><div>
+{% docEditor %}
 
 ### Third Header
 
