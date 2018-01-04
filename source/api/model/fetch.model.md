@@ -1,6 +1,10 @@
-#FetchModel
+---
+title: FetchModel
+type: api
+group: API
+---
 
-| Property |      Type     |  Description |
-|----------|:-------------:|-------------:|
-| constructor |  |              |
-| skip | intrinsic |              |
+Property | Type | Description 
+---|---|---
+constructor | `` |
+skip | `intrinsic` |

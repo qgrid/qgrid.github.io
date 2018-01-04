@@ -1,7 +1,11 @@
-#{{file.name}}
+---
+title: {{file.name}}
+type: api
+group: API
+---
 
-| Property |      Type     |  Description |
-|----------|:-------------:|-------------:|
+Property | Type | Description 
+---|---|---
 {{#each file.children}}
-| {{name}} | {{type.type}} |              |
+{{name}} | `{{type.type}}` |
 {{/each}}

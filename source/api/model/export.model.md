@@ -1,6 +1,10 @@
-#ExportModel
+---
+title: ExportModel
+type: api
+group: API
+---
 
-| Property |      Type     |  Description |
-|----------|:-------------:|-------------:|
-| constructor |  |              |
-| resource | reference |              |
+Property | Type | Description 
+---|---|---
+constructor | `` |
+resource | `reference` |
