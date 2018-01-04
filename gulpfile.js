@@ -27,8 +27,6 @@ gulp.task('markdown', done => {
     const input = fs.readFileSync(API_JSON_PATH);
     const project = JSON.parse(input);
     project.children.forEach(file => {
-        console.log(API_TEMPLATE);
-
         const link = hbs.compile(API_TEMPLATE);
         const output = link({ file });
         fs.writeFileSync(path.join(API_FOLDER, 'model', file.name), output);
