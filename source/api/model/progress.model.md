@@ -5,6 +5,5 @@ group: API
 ---
 
 
-
-Property | Type | Description 
+Property | Type | Description
 ---|---|---

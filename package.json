@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "publish": "hexo publish",
+    "serve": "hexo serve",
     "deploy": "hexo deploy",
     "doc": "gulp api"
   },

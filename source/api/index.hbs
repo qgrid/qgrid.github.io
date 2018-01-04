@@ -1,15 +1,14 @@
 ---
-title: {{file.name}}
+title: {{meta.name}}
 type: api
 group: API
 ---
+{{api-comment meta.comment}}
 
-{{file.comment.shortText}}
-
-Property | Type | Description 
+Property | Type | Description
 ---|---|---
-{{#each file.children}}
+{{#each meta.children}}
 {{#if comment.shortText}}
-{{name}} | `{{type.type}}` | {{comment.shortText}}
+{{name}}|`{{api-type type}}`|{{api-comment comment}}
 {{/if}}
 {{/each}}
