@@ -1,9 +1,10 @@
 {
   "name": "qgrid-doc-examples",
   "version": "1.0.0",
-  "private": false,  
+  "private": false,
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-unzip": "^0.2.0"
+    "fstream": "^1.0.11",
+    "glob": "^7.1.2",
+    "unzip": "^0.1.11"
   }
 }
