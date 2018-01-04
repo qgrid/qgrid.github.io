@@ -3,7 +3,7 @@ title: ActionModel
 type: api
 group: API
 ---
-A class representing a set of properties to handle custom user behaviors(like add or delete row).<br />Action bar plugin uses this model to draw buttons to execute commands.<br />
+A class to handle and visualize custom user behaviors(like add or delete row).<br />Action bar plugin uses this model to draw buttons to execute commands.<br />
 
 Property|Type|Description
 ---|---|---
