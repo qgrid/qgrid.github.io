@@ -1,1 +1,7 @@
-{{file.name}}
+#{{file.name}}
+
+| Property |      Type     |  Description |
+|----------|:-------------:|-------------:|
+{{#each file.children}}
+| {{name}} | {{type.type}} |              |
+{{/each}}
