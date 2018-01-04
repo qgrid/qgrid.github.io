@@ -6,8 +6,7 @@ const hbs = require('handlebars')
 
 const API_FOLDER = './source/api/'
 const API_JSON_PATH = path.join(API_FOLDER, 'index.json');
-const API_TEMPLATE = fs.readFileSync(path.join(API_FOLDER, 'index.hbs'));
-
+const API_TEMPLATE = fs.readFileSync(path.join(API_FOLDER, 'index.hbs'), 'utf8');
 
 gulp.task('typedoc', () =>
     gulp
@@ -28,8 +27,12 @@ gulp.task('markdown', done => {
     const project = JSON.parse(input);
     project.children.forEach(file => {
         const link = hbs.compile(API_TEMPLATE);
-        const output = link({ file });
-        fs.writeFileSync(path.join(API_FOLDER, 'model', file.name), output);
+        const output = link({ file: file.children[0] });
+        fs.writeFileSync(
+            path.join(API_FOLDER, 'model', `${path.basename(file.originalName).slice(0, -'.d.ts'.length)}.md`),
+            output,
+            {flag: 'w'}
+        );
     });
 
     done();
