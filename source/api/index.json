@@ -22,6 +22,9 @@
 					"flags": {
 						"isExported": true
 					},
+					"comment": {
+						"shortText": "A class representing access to the action model."
+					},
 					"children": [
 						{
 							"id": 3,
@@ -48,7 +51,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 5,
+									"line": 8,
 									"character": 34
 								}
 							]
@@ -61,10 +64,13 @@
 							"flags": {
 								"isExported": true
 							},
+							"comment": {
+								"shortText": "Actions that can be invoked through the command manager."
+							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 8,
+									"line": 15,
 									"character": 7
 								}
 							],
@@ -87,7 +93,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 10,
+									"line": 17,
 									"character": 9
 								}
 							],
@@ -107,7 +113,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 9,
+									"line": 16,
 									"character": 10
 								}
 							],
@@ -138,7 +144,7 @@
 					"sources": [
 						{
 							"fileName": "action/action.model.d.ts",
-							"line": 5,
+							"line": 8,
 							"character": 32
 						}
 					]

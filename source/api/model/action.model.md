@@ -4,9 +4,8 @@ type: api
 group: API
 ---
 
+A class representing access to the action model.
+
 Property | Type | Description 
 ---|---|---
-constructor | `` |
-items | `array` |
-manager | `reference` |
-shortcut | `reference` |
+items | `array` | Actions that can be invoked through the command manager.

@@ -4,8 +4,12 @@ type: api
 group: API
 ---
 
+{{file.comment.shortText}}
+
 Property | Type | Description 
 ---|---|---
 {{#each file.children}}
-{{name}} | `{{type.type}}` |
+{{#if comment.shortText}}
+{{name}} | `{{type.type}}` | {{comment.shortText}}
+{{/if}}
 {{/each}}
