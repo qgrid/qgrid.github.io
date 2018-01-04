@@ -8,4 +8,4 @@ group: API
 Property|Type|Description
 ---|---|---
 
-[file in github](https://github.com/qgrid/ng2/core/validation.model.d.ts)
+[file in github](https://github.com/qgrid/ng2/core/validation.model.js)

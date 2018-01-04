@@ -8,4 +8,4 @@ group: API
 Property|Type|Description
 ---|---|---
 
-[file in github](https://github.com/qgrid/ng2/core/layout.model.d.ts)
+[file in github](https://github.com/qgrid/ng2/core/layout.model.js)

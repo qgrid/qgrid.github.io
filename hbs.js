@@ -12,17 +12,11 @@ const print = x => {
 
 hbs.registerHelper('api-github', file => {
     const name = path.basename(file).slice(0, -'.d.ts'.length);
-    console.log(name);
-    return ''; print(`https://github.com/qgrid/ng2/core/${name}.js`);
+    return print(`https://github.com/qgrid/ng2/core/${name}.js`);
 });
 
 hbs.registerHelper('api-title', unit => {
     return print(unit.children.map(x => x.name).join(', '));
-});
-
-hbs.registerHelper('api-github', file => {
-    const name = path.basename(file);
-    return print(`https://github.com/qgrid/ng2/core/${name}`);
 });
 
 hbs.registerHelper('api-type', meta => {
