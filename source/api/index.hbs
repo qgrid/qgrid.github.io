@@ -1,14 +1,18 @@
 ---
-title: {{meta.name}}
+title: {{api-title unit}}
 type: api
 group: API
 ---
-{{api-comment meta.comment}}
+{{#each unit.children}}
+{{api-comment comment}}
 
-Property | Type | Description
+Property|Type|Description
 ---|---|---
-{{#each meta.children}}
+{{#each children}}
 {{#if comment.shortText}}
 {{name}}|`{{api-type type}}`|{{api-comment comment}}
 {{/if}}
 {{/each}}
+
+{{/each}}
+[file in github]({{api-github unit.originalName}})

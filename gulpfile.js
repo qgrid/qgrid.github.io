@@ -25,11 +25,11 @@ gulp.task('typedoc', () =>
 gulp.task('markdown', done => {
     const input = fs.readFileSync(API_JSON_PATH);
     const project = JSON.parse(input);
-    project.children.forEach(file => {
+    project.children.forEach(unit => {
         const link = hbs.compile(API_TEMPLATE);
-        const output = link({ meta: file.children[0] });
+        const output = link({ unit });
         fs.writeFileSync(
-            path.join(API_FOLDER, 'model', `${path.basename(file.originalName).slice(0, -'.d.ts'.length)}.md`),
+            path.join(API_FOLDER, 'model', `${path.basename(unit.originalName).slice(0, -'.d.ts'.length)}.md`),
             output,
             {flag: 'w'}
         );
