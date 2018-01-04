@@ -2,12 +2,13 @@ const hbs = require('handlebars')
 const path = require('path');
 
 const isArray = x => x.constructor === Array.prototype.constructor;
-const print = x => {
-    if (isArray(x)) {
-        return new hbs.SafeString(x.join('<br />'));
+const escape = x => x.replace(/\n/g, '<br />');
+const print = xs => {
+    if (isArray(xs)) {
+        return new hbs.SafeString(xs.map(escape).join('<br />'));
     }
 
-    return new hbs.SafeString(x);
+    return new hbs.SafeString(escape(xs));
 };
 
 hbs.registerHelper('api-github', file => {
@@ -21,10 +22,10 @@ hbs.registerHelper('api-title', unit => {
 
 hbs.registerHelper('api-type', meta => {
     if (meta.elementType) {
-        return print(`${meta.type}<${meta.elementType.name}>`);
+        return print(`${meta.name || meta.type}<${meta.elementType.name}>`);
     }
 
-    return print(meta.type);
+    return print(meta.name || meta.type);
 });
 
 hbs.registerHelper('api-comment', comment => {

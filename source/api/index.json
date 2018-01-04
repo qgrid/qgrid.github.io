@@ -23,8 +23,8 @@
 						"isExported": true
 					},
 					"comment": {
-						"shortText": "A class representing access to the action model.",
-						"text": "The second line  too.\n"
+						"shortText": "A class representing a set of properties to handle custom user behaviors(like add or delete row).",
+						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n"
 					},
 					"children": [
 						{
@@ -66,13 +66,12 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Actions that can be invoked through the command manager.",
-								"text": "the second one\n"
+								"shortText": "List of actions that will be added to the command manager."
 							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 18,
+									"line": 16,
 									"character": 7
 								}
 							],
@@ -92,10 +91,13 @@
 							"flags": {
 								"isExported": true
 							},
+							"comment": {
+								"shortText": "Command manager is responsible for the next questions:\n* What commands can be executed.\n* How(e.g. in which order) commands should be executed."
+							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 20,
+									"line": 28,
 									"character": 9
 								}
 							],
@@ -112,10 +114,13 @@
 							"flags": {
 								"isExported": true
 							},
+							"comment": {
+								"shortText": "This service connects keydown events with commands."
+							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 19,
+									"line": 21,
 									"character": 10
 								}
 							],
