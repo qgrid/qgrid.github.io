@@ -6,7 +6,7 @@ function toggleVisibility(e) {
 	}
 	var nav = document.getElementById('nav');
 	var overlay = document.getElementById('overlay');
-	if (nav.style.display === 'block') {
+	if (nav.style.display === 'block' || nav.style.display === '') {
 		nav.style.display = 'none';
 		overlay.style.display = 'none';
 	} else {
