@@ -1,8 +1,18 @@
 @import "variables";
+@media screen and (min-width: 851px) {
+  .pages {
+    #nav {
+      display: block !important;
+    }
+    #overlay {
+      display: none !important;
+    }
+  }
+}
 
 @media screen and (min-width: 851px) and (max-width: 1500px) {
   .index {
-    .example .jsfiddle-embed iframe {
+    .example .sb-embed iframe {
       width: 75%;
     }
   }
@@ -10,7 +20,7 @@
 
 @media screen and (max-width: 850px) {
   .index {
-    .example .jsfiddle-embed iframe {
+    .example .sb-embed iframe {
       width: 95%;
     }
     ul.features {
@@ -81,6 +91,7 @@
       }
       .frameworks li {
         font-size: 2.5em;
+        margin-bottom: 10px;
       }
     }
   }

@@ -1,15 +1,15 @@
 <nav>
     <ul>
         <%
-            var groups = ['Getting started', 'API', 'Features'];
-            var pageGroups = site.pages.reduce(function (memo, p) {
-                var key = p.group;
-                (memo[key] = memo[key] || []).push(p);
-                return memo;
-            }, {});
+        var groups = ['Getting started', 'API', 'Features'];
+        var pageGroups = site.pages.reduce(function (memo, p) {
+            var key = p.group;
+            (memo[key] = memo[key] || []).push(p);
+            return memo;
+        }, {});
 
-            for (var i = 0; i < groups.length; i++) {
-                var group = groups[i];
+        for (var i = 0; i < groups.length; i++) {
+            var group = groups[i];
 
                 if (pageGroups.hasOwnProperty(group)) {
         %>
