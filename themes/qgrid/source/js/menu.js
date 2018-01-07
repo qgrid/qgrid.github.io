@@ -6,7 +6,7 @@ function toggleVisibility(e) {
 	}
 	var nav = document.getElementById('nav');
 	var overlay = document.getElementById('overlay');
-	if (nav.style.display === 'block') {
+	if (nav.style.display === 'block' || nav.style.display === '') {
 		nav.style.display = 'none';
 		overlay.style.display = 'none';
 	} else {
@@ -70,11 +70,6 @@ function init() {
 	}
 	var overlay = document.getElementById('overlay');
 	overlay.addEventListener('click', toggleVisibility, true);
-
-	var nav = document.getElementById('nav');
-	if (nav) {
-		nav.addEventListener('click', toggleVisibility, true);
-	}
 
 	var searchFields = document.getElementsByClassName('search');
 	if (searchFields.length) {

@@ -1,33 +1,35 @@
 <nav>
     <ul>
         <%
-            var groups = ['Getting started', 'API', 'Features'];
-            var pageGroups = site.pages.reduce(function (memo, p) {
-                var key = p.group;
-                (memo[key] = memo[key] || []).push(p);
-                return memo;
-            }, {});
+        var groups = ['Getting started', 'API', 'Features'];
+        var pageGroups = site.pages.reduce(function (memo, p) {
+            var key = p.group;
+            (memo[key] = memo[key] || []).push(p);
+            return memo;
+        }, {});
 
-            for (var i = 0; i < groups.length; i++) {
-                var group = groups[i];
+        for (var i = 0; i < groups.length; i++) {
+            var group = groups[i];
 
-            if (pageGroups.hasOwnProperty(group)){
+                if (pageGroups.hasOwnProperty(group)) {
         %>
-        <li><h3><%- group %></h3></li>
+                    <li><h3><%- group %></h3></li>
         <%
-            var pages = pageGroups[group];
-            pages.sort(function (a, b) {
-                return a.order - b.order;
-            });
+                    var pages = pageGroups[group];
+                    pages.sort(function (a, b) {
+                        return a.order - b.order;
+                    });
 
-            for (var i = 0; i < pages.length; i++) {
-                var p = pages[i];
+                    for (var j = 0; j < pages.length; j++) {
+                        var p = pages[j];
         %>
-        <li class="<%- page.title === p.title ? 'current' : '' %> ">
-            <a href="<%- url_for(p.path) %>"><%- p.title %></a>
-        </li>
+                        <li class="<%- page.title === p.title ? 'current' : '' %> ">
+                            <a href="<%- url_for(p.path) %>"><%- p.title %></a>
+                        </li>
         <%
-            }}}
+                    }
+                }
+            }
         %>
 
     </ul>
