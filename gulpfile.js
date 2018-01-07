@@ -32,8 +32,13 @@ gulp.task('markdown', done => {
         }
         const link = hbs.compile(API_TEMPLATE);
         const output = link({ unit });
+        const name = path
+            .basename(unit.originalName)
+            .slice(0, -'.d.ts'.length)
+            .replace(/\./g, '-');
+
         fs.writeFileSync(
-            path.join(API_FOLDER, 'model', `${path.basename(unit.originalName).slice(0, -'.d.ts'.length)}.md`),
+            path.join(API_FOLDER, 'model', `${name}.md`),
             output,
             { flag: 'w' }
         );
