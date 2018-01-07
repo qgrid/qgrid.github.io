@@ -5,7 +5,7 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 7,
+			"id": 1,
 			"name": "\"action/action.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -15,7 +15,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.model.d.ts",
 			"children": [
 				{
-					"id": 8,
+					"id": 2,
 					"name": "ActionModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -28,7 +28,7 @@
 					},
 					"children": [
 						{
-							"id": 9,
+							"id": 3,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -37,7 +37,7 @@
 							},
 							"signatures": [
 								{
-									"id": 10,
+									"id": 4,
 									"name": "new ActionModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -45,7 +45,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ActionModel",
-										"id": 8
+										"id": 2
 									}
 								}
 							],
@@ -58,7 +58,7 @@
 							]
 						},
 						{
-							"id": 12,
+							"id": 6,
 							"name": "items",
 							"kind": 1024,
 							"kindString": "Property",
@@ -84,7 +84,7 @@
 							}
 						},
 						{
-							"id": 14,
+							"id": 8,
 							"name": "manager",
 							"kind": 1024,
 							"kindString": "Property",
@@ -107,7 +107,7 @@
 							}
 						},
 						{
-							"id": 11,
+							"id": 5,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -127,7 +127,7 @@
 							}
 						},
 						{
-							"id": 13,
+							"id": 7,
 							"name": "shortcut",
 							"kind": 1024,
 							"kindString": "Property",
@@ -155,17 +155,17 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								9
+								3
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								12,
-								14,
-								11,
-								13
+								6,
+								8,
+								5,
+								7
 							]
 						}
 					],
@@ -183,7 +183,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						8
+						2
 					]
 				}
 			],
@@ -196,7 +196,7 @@
 			]
 		},
 		{
-			"id": 1,
+			"id": 9,
 			"name": "\"body/body.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -206,7 +206,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/body/body.model.d.ts",
 			"children": [
 				{
-					"id": 2,
+					"id": 10,
 					"name": "BodyModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -215,7 +215,7 @@
 					},
 					"children": [
 						{
-							"id": 3,
+							"id": 11,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -224,7 +224,7 @@
 							},
 							"signatures": [
 								{
-									"id": 4,
+									"id": 12,
 									"name": "new BodyModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -232,7 +232,7 @@
 									"type": {
 										"type": "reference",
 										"name": "BodyModel",
-										"id": 2
+										"id": 10
 									}
 								}
 							],
@@ -245,7 +245,7 @@
 							]
 						},
 						{
-							"id": 6,
+							"id": 14,
 							"name": "cache",
 							"kind": 1024,
 							"kindString": "Property",
@@ -275,7 +275,7 @@
 							}
 						},
 						{
-							"id": 5,
+							"id": 13,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -300,15 +300,15 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								3
+								11
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								6,
-								5
+								14,
+								13
 							]
 						}
 					],
@@ -326,7 +326,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						2
+						10
 					]
 				}
 			],
@@ -339,7 +339,7 @@
 			]
 		},
 		{
-			"id": 68,
+			"id": 307,
 			"name": "\"column-list/column.list.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -349,7 +349,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-list/column.list.model.d.ts",
 			"children": [
 				{
-					"id": 69,
+					"id": 308,
 					"name": "ColumnListModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -358,7 +358,7 @@
 					},
 					"children": [
 						{
-							"id": 70,
+							"id": 309,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -367,7 +367,7 @@
 							},
 							"signatures": [
 								{
-									"id": 71,
+									"id": 310,
 									"name": "new ColumnListModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -375,7 +375,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ColumnListModel",
-										"id": 69
+										"id": 308
 									}
 								}
 							],
@@ -388,7 +388,7 @@
 							]
 						},
 						{
-							"id": 74,
+							"id": 313,
 							"name": "columns",
 							"kind": 1024,
 							"kindString": "Property",
@@ -407,12 +407,12 @@
 								"elementType": {
 									"type": "reference",
 									"name": "ColumnModel",
-									"id": 286
+									"id": 277
 								}
 							}
 						},
 						{
-							"id": 72,
+							"id": 311,
 							"name": "generation",
 							"kind": 1024,
 							"kindString": "Property",
@@ -429,11 +429,11 @@
 							"type": {
 								"type": "reference",
 								"name": "GenerationMode",
-								"id": 76
+								"id": 315
 							}
 						},
 						{
-							"id": 73,
+							"id": 312,
 							"name": "index",
 							"kind": 1024,
 							"kindString": "Property",
@@ -456,7 +456,7 @@
 							}
 						},
 						{
-							"id": 75,
+							"id": 314,
 							"name": "reference",
 							"kind": 1024,
 							"kindString": "Property",
@@ -481,17 +481,17 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								70
+								309
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								74,
-								72,
-								73,
-								75
+								313,
+								311,
+								312,
+								314
 							]
 						}
 					],
@@ -504,7 +504,7 @@
 					]
 				},
 				{
-					"id": 76,
+					"id": 315,
 					"name": "GenerationMode",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -538,14 +538,14 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						69
+						308
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						76
+						315
 					]
 				}
 			],
@@ -558,7 +558,7 @@
 			]
 		},
 		{
-			"id": 268,
+			"id": 259,
 			"name": "\"column-type/column.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -568,7 +568,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/column.model.d.ts",
 			"children": [
 				{
-					"id": 286,
+					"id": 277,
 					"name": "ColumnModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -577,7 +577,7 @@
 					},
 					"children": [
 						{
-							"id": 287,
+							"id": 278,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -586,14 +586,14 @@
 							},
 							"signatures": [
 								{
-									"id": 288,
+									"id": 279,
 									"name": "new ColumnModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
 									"flags": {},
 									"parameters": [
 										{
-											"id": 289,
+											"id": 280,
 											"name": "type",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -609,7 +609,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ColumnModel",
-										"id": 286
+										"id": 277
 									}
 								}
 							],
@@ -622,7 +622,7 @@
 							]
 						},
 						{
-							"id": 315,
+							"id": 306,
 							"name": "$label",
 							"kind": 1024,
 							"kindString": "Property",
@@ -639,11 +639,11 @@
 							"type": {
 								"type": "reference",
 								"name": "ILabel",
-								"id": 282
+								"id": 273
 							}
 						},
 						{
-							"id": 294,
+							"id": 285,
 							"name": "$value",
 							"kind": 1024,
 							"kindString": "Property",
@@ -660,11 +660,11 @@
 							"type": {
 								"type": "reference",
 								"name": "IValue",
-								"id": 278
+								"id": 269
 							}
 						},
 						{
-							"id": 305,
+							"id": 296,
 							"name": "canEdit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -684,7 +684,7 @@
 							}
 						},
 						{
-							"id": 309,
+							"id": 300,
 							"name": "canFilter",
 							"kind": 1024,
 							"kindString": "Property",
@@ -704,7 +704,7 @@
 							}
 						},
 						{
-							"id": 311,
+							"id": 302,
 							"name": "canFocus",
 							"kind": 1024,
 							"kindString": "Property",
@@ -724,7 +724,7 @@
 							}
 						},
 						{
-							"id": 310,
+							"id": 301,
 							"name": "canHighlight",
 							"kind": 1024,
 							"kindString": "Property",
@@ -744,7 +744,7 @@
 							}
 						},
 						{
-							"id": 308,
+							"id": 299,
 							"name": "canMove",
 							"kind": 1024,
 							"kindString": "Property",
@@ -764,7 +764,7 @@
 							}
 						},
 						{
-							"id": 306,
+							"id": 297,
 							"name": "canResize",
 							"kind": 1024,
 							"kindString": "Property",
@@ -784,7 +784,7 @@
 							}
 						},
 						{
-							"id": 307,
+							"id": 298,
 							"name": "canSort",
 							"kind": 1024,
 							"kindString": "Property",
@@ -804,7 +804,7 @@
 							}
 						},
 						{
-							"id": 299,
+							"id": 290,
 							"name": "class",
 							"kind": 1024,
 							"kindString": "Property",
@@ -824,7 +824,7 @@
 							}
 						},
 						{
-							"id": 300,
+							"id": 291,
 							"name": "editor",
 							"kind": 1024,
 							"kindString": "Property",
@@ -844,7 +844,7 @@
 							}
 						},
 						{
-							"id": 301,
+							"id": 292,
 							"name": "editorOptions",
 							"kind": 1024,
 							"kindString": "Property",
@@ -861,11 +861,11 @@
 							"type": {
 								"type": "reference",
 								"name": "IEditorOptions",
-								"id": 269
+								"id": 260
 							}
 						},
 						{
-							"id": 313,
+							"id": 304,
 							"name": "index",
 							"kind": 1024,
 							"kindString": "Property",
@@ -885,7 +885,7 @@
 							}
 						},
 						{
-							"id": 312,
+							"id": 303,
 							"name": "isVisible",
 							"kind": 1024,
 							"kindString": "Property",
@@ -905,7 +905,7 @@
 							}
 						},
 						{
-							"id": 291,
+							"id": 282,
 							"name": "key",
 							"kind": 1024,
 							"kindString": "Property",
@@ -925,7 +925,7 @@
 							}
 						},
 						{
-							"id": 314,
+							"id": 305,
 							"name": "label",
 							"kind": 1024,
 							"kindString": "Property",
@@ -942,11 +942,11 @@
 							"type": {
 								"type": "reference",
 								"name": "ILabel",
-								"id": 282
+								"id": 273
 							}
 						},
 						{
-							"id": 304,
+							"id": 295,
 							"name": "maxWidth",
 							"kind": 1024,
 							"kindString": "Property",
@@ -966,7 +966,7 @@
 							}
 						},
 						{
-							"id": 303,
+							"id": 294,
 							"name": "minWidth",
 							"kind": 1024,
 							"kindString": "Property",
@@ -986,7 +986,7 @@
 							}
 						},
 						{
-							"id": 297,
+							"id": 288,
 							"name": "origin",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1006,7 +1006,7 @@
 							}
 						},
 						{
-							"id": 295,
+							"id": 286,
 							"name": "path",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1026,7 +1026,7 @@
 							}
 						},
 						{
-							"id": 296,
+							"id": 287,
 							"name": "pin",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1046,7 +1046,7 @@
 							}
 						},
 						{
-							"id": 298,
+							"id": 289,
 							"name": "source",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1066,7 +1066,7 @@
 							}
 						},
 						{
-							"id": 292,
+							"id": 283,
 							"name": "title",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1086,7 +1086,7 @@
 							}
 						},
 						{
-							"id": 290,
+							"id": 281,
 							"name": "type",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1106,7 +1106,7 @@
 							}
 						},
 						{
-							"id": 293,
+							"id": 284,
 							"name": "value",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1123,11 +1123,11 @@
 							"type": {
 								"type": "reference",
 								"name": "IValue",
-								"id": 278
+								"id": 269
 							}
 						},
 						{
-							"id": 302,
+							"id": 293,
 							"name": "width",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1152,39 +1152,39 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								287
+								278
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								315,
-								294,
-								305,
-								309,
-								311,
-								310,
-								308,
 								306,
-								307,
-								299,
+								285,
+								296,
 								300,
+								302,
 								301,
-								313,
-								312,
+								299,
+								297,
+								298,
+								290,
 								291,
-								314,
+								292,
 								304,
 								303,
-								297,
+								282,
+								305,
 								295,
-								296,
-								298,
-								292,
-								290,
-								293,
-								302
+								294,
+								288,
+								286,
+								287,
+								289,
+								283,
+								281,
+								284,
+								293
 							]
 						}
 					],
@@ -1204,7 +1204,7 @@
 					]
 				},
 				{
-					"id": 269,
+					"id": 260,
 					"name": "IEditorOptions",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1213,7 +1213,7 @@
 					},
 					"children": [
 						{
-							"id": 271,
+							"id": 262,
 							"name": "cruise",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1233,7 +1233,7 @@
 							}
 						},
 						{
-							"id": 276,
+							"id": 267,
 							"name": "fetch",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1253,7 +1253,7 @@
 							}
 						},
 						{
-							"id": 275,
+							"id": 266,
 							"name": "label",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1273,7 +1273,7 @@
 							}
 						},
 						{
-							"id": 272,
+							"id": 263,
 							"name": "modelFactory",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1290,14 +1290,14 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 273,
+									"id": 264,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 274,
+											"id": 265,
 											"name": "__call",
 											"kind": 4096,
 											"kindString": "Call signature",
@@ -1319,7 +1319,7 @@
 							}
 						},
 						{
-							"id": 270,
+							"id": 261,
 							"name": "trigger",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1339,7 +1339,7 @@
 							}
 						},
 						{
-							"id": 277,
+							"id": 268,
 							"name": "value",
 							"kind": 1024,
 							"kindString": "Property",
@@ -1364,12 +1364,12 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								271,
-								276,
-								275,
-								272,
-								270,
-								277
+								262,
+								267,
+								266,
+								263,
+								261,
+								268
 							]
 						}
 					],
@@ -1382,7 +1382,7 @@
 					]
 				},
 				{
-					"id": 282,
+					"id": 273,
 					"name": "ILabel",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1391,14 +1391,14 @@
 					},
 					"signatures": [
 						{
-							"id": 283,
+							"id": 274,
 							"name": "__call",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 284,
+									"id": 275,
 									"name": "row",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1409,7 +1409,7 @@
 									}
 								},
 								{
-									"id": 285,
+									"id": 276,
 									"name": "value",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1437,7 +1437,7 @@
 					]
 				},
 				{
-					"id": 278,
+					"id": 269,
 					"name": "IValue",
 					"kind": 256,
 					"kindString": "Interface",
@@ -1446,14 +1446,14 @@
 					},
 					"signatures": [
 						{
-							"id": 279,
+							"id": 270,
 							"name": "__call",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 280,
+									"id": 271,
 									"name": "row",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1464,7 +1464,7 @@
 									}
 								},
 								{
-									"id": 281,
+									"id": 272,
 									"name": "value",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -1497,16 +1497,16 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						286
+						277
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						269,
-						282,
-						278
+						260,
+						273,
+						269
 					]
 				}
 			],
@@ -1562,7 +1562,7 @@
 											"type": {
 												"type": "reference",
 												"name": "ColumnModel",
-												"id": 286
+												"id": 277
 											}
 										}
 									],
@@ -1574,7 +1574,7 @@
 									"overwrites": {
 										"type": "reference",
 										"name": "ColumnModel.__constructor",
-										"id": 287
+										"id": 278
 									}
 								}
 							],
@@ -1588,7 +1588,7 @@
 							"overwrites": {
 								"type": "reference",
 								"name": "ColumnModel.__constructor",
-								"id": 287
+								"id": 278
 							}
 						},
 						{
@@ -1609,12 +1609,12 @@
 							"type": {
 								"type": "reference",
 								"name": "ILabel",
-								"id": 282
+								"id": 273
 							},
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.$label",
-								"id": 315
+								"id": 306
 							}
 						},
 						{
@@ -1635,12 +1635,12 @@
 							"type": {
 								"type": "reference",
 								"name": "IValue",
-								"id": 278
+								"id": 269
 							},
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.$value",
-								"id": 294
+								"id": 285
 							}
 						},
 						{
@@ -1706,7 +1706,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canEdit",
-								"id": 305
+								"id": 296
 							}
 						},
 						{
@@ -1731,7 +1731,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canFilter",
-								"id": 309
+								"id": 300
 							}
 						},
 						{
@@ -1756,7 +1756,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canFocus",
-								"id": 311
+								"id": 302
 							}
 						},
 						{
@@ -1781,7 +1781,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canHighlight",
-								"id": 310
+								"id": 301
 							}
 						},
 						{
@@ -1806,7 +1806,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canMove",
-								"id": 308
+								"id": 299
 							}
 						},
 						{
@@ -1831,7 +1831,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canResize",
-								"id": 306
+								"id": 297
 							}
 						},
 						{
@@ -1856,7 +1856,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.canSort",
-								"id": 307
+								"id": 298
 							}
 						},
 						{
@@ -1881,7 +1881,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.class",
-								"id": 299
+								"id": 290
 							}
 						},
 						{
@@ -1906,7 +1906,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.editor",
-								"id": 300
+								"id": 291
 							}
 						},
 						{
@@ -1927,12 +1927,12 @@
 							"type": {
 								"type": "reference",
 								"name": "IEditorOptions",
-								"id": 269
+								"id": 260
 							},
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.editorOptions",
-								"id": 301
+								"id": 292
 							}
 						},
 						{
@@ -1957,7 +1957,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.index",
-								"id": 313
+								"id": 304
 							}
 						},
 						{
@@ -2002,7 +2002,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.isVisible",
-								"id": 312
+								"id": 303
 							}
 						},
 						{
@@ -2027,7 +2027,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.key",
-								"id": 291
+								"id": 282
 							}
 						},
 						{
@@ -2048,12 +2048,12 @@
 							"type": {
 								"type": "reference",
 								"name": "ILabel",
-								"id": 282
+								"id": 273
 							},
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.label",
-								"id": 314
+								"id": 305
 							}
 						},
 						{
@@ -2078,7 +2078,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.maxWidth",
-								"id": 304
+								"id": 295
 							}
 						},
 						{
@@ -2103,7 +2103,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.minWidth",
-								"id": 303
+								"id": 294
 							}
 						},
 						{
@@ -2128,7 +2128,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.origin",
-								"id": 297
+								"id": 288
 							}
 						},
 						{
@@ -2153,7 +2153,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.path",
-								"id": 295
+								"id": 286
 							}
 						},
 						{
@@ -2178,7 +2178,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.pin",
-								"id": 296
+								"id": 287
 							}
 						},
 						{
@@ -2203,7 +2203,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.source",
-								"id": 298
+								"id": 289
 							}
 						},
 						{
@@ -2228,7 +2228,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.title",
-								"id": 292
+								"id": 283
 							}
 						},
 						{
@@ -2253,7 +2253,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.type",
-								"id": 290
+								"id": 281
 							}
 						},
 						{
@@ -2274,12 +2274,12 @@
 							"type": {
 								"type": "reference",
 								"name": "IValue",
-								"id": 278
+								"id": 269
 							},
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.value",
-								"id": 293
+								"id": 284
 							}
 						},
 						{
@@ -2304,7 +2304,7 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "ColumnModel.width",
-								"id": 302
+								"id": 293
 							}
 						}
 					],
@@ -2363,7 +2363,7 @@
 						{
 							"type": "reference",
 							"name": "ColumnModel",
-							"id": 286
+							"id": 277
 						}
 					]
 				},
@@ -2479,7 +2479,8 @@
 						"isExported": true
 					},
 					"comment": {
-						"shortText": "A class that gives access to the high level grid data structures."
+						"shortText": "A class that gives access to the high level grid data structures.\nUsually grid user can define this properties in different places.",
+						"text": "Inside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
 					},
 					"children": [
 						{
@@ -2491,13 +2492,14 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Set of columns to display.\nColumns property usually can be setup from the grid columns binding.\nList of columns inside html template is stored here too.\nWe can have two+ sources of columns because it's possible to do merge using column `key` property.\nIf you have defined columns in javascript and in template with the same key,\nalgorithm will try persist settings from both sources but javascript will have top priority."
+								"shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:",
+								"text": "1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\n\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 23,
-									"character": 8
+									"line": 56,
+									"character": 11
 								}
 							],
 							"type": {
@@ -2505,7 +2507,7 @@
 								"elementType": {
 									"type": "reference",
 									"name": "ColumnModel",
-									"id": 286
+									"id": 277
 								}
 							}
 						},
@@ -2518,13 +2520,13 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Chaing of methods that grid invokes asyncroniuosly anytime refresh is required.\nsee `PipeModel` that contains information when grid demands refreshing."
+								"shortText": "Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,\nsee `PipeModel` that contains information when grid demands refreshing."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 29,
-									"character": 5
+									"line": 62,
+									"character": 8
 								}
 							],
 							"type": {
@@ -2544,13 +2546,13 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "List of rows to display.\nRows property usually can be filled from the grid rows html."
+								"shortText": "List of rows to display.\nRows property can be filled from the grid rows html or grid model data rows\nproperty."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 13,
-									"character": 5
+									"line": 41,
+									"character": 8
 								}
 							],
 							"type": {
@@ -2576,7 +2578,7 @@
 					"sources": [
 						{
 							"fileName": "data/data.model.d.ts",
-							"line": 7,
+							"line": 34,
 							"character": 30
 						}
 					]
@@ -2600,7 +2602,7 @@
 			]
 		},
 		{
-			"id": 222,
+			"id": 213,
 			"name": "\"drag/drag.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -2610,7 +2612,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/drag/drag.model.d.ts",
 			"children": [
 				{
-					"id": 223,
+					"id": 214,
 					"name": "DragModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -2622,7 +2624,7 @@
 					},
 					"children": [
 						{
-							"id": 224,
+							"id": 215,
 							"name": "isActive",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2650,7 +2652,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								224
+								215
 							]
 						}
 					],
@@ -2668,7 +2670,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						223
+						214
 					]
 				}
 			],
@@ -2681,7 +2683,7 @@
 			]
 		},
 		{
-			"id": 142,
+			"id": 133,
 			"name": "\"edit/edit.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -2691,7 +2693,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.model.d.ts",
 			"children": [
 				{
-					"id": 151,
+					"id": 142,
 					"name": "EditModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -2700,7 +2702,7 @@
 					},
 					"children": [
 						{
-							"id": 152,
+							"id": 143,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -2709,7 +2711,7 @@
 							},
 							"signatures": [
 								{
-									"id": 153,
+									"id": 144,
 									"name": "new EditModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -2717,7 +2719,7 @@
 									"type": {
 										"type": "reference",
 										"name": "EditModel",
-										"id": 151
+										"id": 142
 									}
 								}
 							],
@@ -2730,7 +2732,7 @@
 							]
 						},
 						{
-							"id": 159,
+							"id": 150,
 							"name": "cancel",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2750,7 +2752,7 @@
 							}
 						},
 						{
-							"id": 161,
+							"id": 152,
 							"name": "clear",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2770,7 +2772,7 @@
 							}
 						},
 						{
-							"id": 158,
+							"id": 149,
 							"name": "commit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2790,7 +2792,7 @@
 							}
 						},
 						{
-							"id": 162,
+							"id": 153,
 							"name": "commitShortcuts",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2807,11 +2809,11 @@
 							"type": {
 								"type": "reference",
 								"name": "ICommitShortcuts",
-								"id": 143
+								"id": 134
 							}
 						},
 						{
-							"id": 157,
+							"id": 148,
 							"name": "enter",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2831,7 +2833,7 @@
 							}
 						},
 						{
-							"id": 155,
+							"id": 146,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2848,11 +2850,11 @@
 							"type": {
 								"type": "reference",
 								"name": "ModeType",
-								"id": 163
+								"id": 154
 							}
 						},
 						{
-							"id": 160,
+							"id": 151,
 							"name": "reset",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2872,7 +2874,7 @@
 							}
 						},
 						{
-							"id": 154,
+							"id": 145,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2892,7 +2894,7 @@
 							}
 						},
 						{
-							"id": 156,
+							"id": 147,
 							"name": "state",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2909,7 +2911,7 @@
 							"type": {
 								"type": "reference",
 								"name": "StateType",
-								"id": 164
+								"id": 155
 							}
 						}
 					],
@@ -2918,22 +2920,22 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								152
+								143
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								159,
-								161,
-								158,
-								162,
-								157,
-								155,
-								160,
-								154,
-								156
+								150,
+								152,
+								149,
+								153,
+								148,
+								146,
+								151,
+								145,
+								147
 							]
 						}
 					],
@@ -2946,7 +2948,7 @@
 					]
 				},
 				{
-					"id": 143,
+					"id": 134,
 					"name": "ICommitShortcuts",
 					"kind": 256,
 					"kindString": "Interface",
@@ -2955,7 +2957,7 @@
 					},
 					"children": [
 						{
-							"id": 144,
+							"id": 135,
 							"name": "$default",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2975,7 +2977,7 @@
 							}
 						},
 						{
-							"id": 146,
+							"id": 137,
 							"name": "array",
 							"kind": 1024,
 							"kindString": "Property",
@@ -2995,7 +2997,7 @@
 							}
 						},
 						{
-							"id": 145,
+							"id": 136,
 							"name": "date",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3015,7 +3017,7 @@
 							}
 						},
 						{
-							"id": 148,
+							"id": 139,
 							"name": "email",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3035,7 +3037,7 @@
 							}
 						},
 						{
-							"id": 149,
+							"id": 140,
 							"name": "file",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3055,7 +3057,7 @@
 							}
 						},
 						{
-							"id": 150,
+							"id": 141,
 							"name": "image",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3075,7 +3077,7 @@
 							}
 						},
 						{
-							"id": 147,
+							"id": 138,
 							"name": "reference",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3100,13 +3102,13 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								144,
-								146,
-								145,
-								148,
-								149,
-								150,
-								147
+								135,
+								137,
+								136,
+								139,
+								140,
+								141,
+								138
 							]
 						}
 					],
@@ -3119,7 +3121,7 @@
 					]
 				},
 				{
-					"id": 163,
+					"id": 154,
 					"name": "ModeType",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -3148,7 +3150,7 @@
 					}
 				},
 				{
-					"id": 164,
+					"id": 155,
 					"name": "StateType",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -3182,22 +3184,22 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						151
+						142
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						143
+						134
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						163,
-						164
+						154,
+						155
 					]
 				}
 			],
@@ -3210,7 +3212,7 @@
 			]
 		},
 		{
-			"id": 242,
+			"id": 233,
 			"name": "\"export/export.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -3220,7 +3222,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/export/export.model.d.ts",
 			"children": [
 				{
-					"id": 243,
+					"id": 234,
 					"name": "ExportModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -3229,7 +3231,7 @@
 					},
 					"children": [
 						{
-							"id": 244,
+							"id": 235,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -3238,7 +3240,7 @@
 							},
 							"signatures": [
 								{
-									"id": 245,
+									"id": 236,
 									"name": "new ExportModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -3246,7 +3248,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ExportModel",
-										"id": 243
+										"id": 234
 									}
 								}
 							],
@@ -3259,7 +3261,7 @@
 							]
 						},
 						{
-							"id": 246,
+							"id": 237,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3284,14 +3286,14 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								244
+								235
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								246
+								237
 							]
 						}
 					],
@@ -3309,7 +3311,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						243
+						234
 					]
 				}
 			],
@@ -3322,7 +3324,7 @@
 			]
 		},
 		{
-			"id": 247,
+			"id": 238,
 			"name": "\"fetch/fetch.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -3332,7 +3334,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/fetch/fetch.model.d.ts",
 			"children": [
 				{
-					"id": 248,
+					"id": 239,
 					"name": "FetchModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -3344,7 +3346,7 @@
 					},
 					"children": [
 						{
-							"id": 249,
+							"id": 240,
 							"name": "skip",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3372,7 +3374,7 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								249
+								240
 							]
 						}
 					],
@@ -3390,7 +3392,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						248
+						239
 					]
 				}
 			],
@@ -3403,7 +3405,7 @@
 			]
 		},
 		{
-			"id": 214,
+			"id": 205,
 			"name": "\"filter/filter.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -3413,7 +3415,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/filter/filter.model.d.ts",
 			"children": [
 				{
-					"id": 215,
+					"id": 206,
 					"name": "FilterModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -3425,7 +3427,7 @@
 					},
 					"children": [
 						{
-							"id": 221,
+							"id": 212,
 							"name": "assertFactory",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3445,7 +3447,7 @@
 							}
 						},
 						{
-							"id": 217,
+							"id": 208,
 							"name": "by",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3465,7 +3467,7 @@
 							}
 						},
 						{
-							"id": 220,
+							"id": 211,
 							"name": "fetch",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3485,7 +3487,7 @@
 							}
 						},
 						{
-							"id": 219,
+							"id": 210,
 							"name": "match",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3505,7 +3507,7 @@
 							}
 						},
 						{
-							"id": 216,
+							"id": 207,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3525,7 +3527,7 @@
 							}
 						},
 						{
-							"id": 218,
+							"id": 209,
 							"name": "unit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3553,12 +3555,12 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								221,
-								217,
-								220,
-								219,
-								216,
-								218
+								212,
+								208,
+								211,
+								210,
+								207,
+								209
 							]
 						}
 					],
@@ -3576,7 +3578,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						215
+						206
 					]
 				}
 			],
@@ -3718,7 +3720,7 @@
 			]
 		},
 		{
-			"id": 110,
+			"id": 101,
 			"name": "\"foot/foot.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -3728,7 +3730,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/foot/foot.model.d.ts",
 			"children": [
 				{
-					"id": 111,
+					"id": 102,
 					"name": "FootModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -3737,7 +3739,7 @@
 					},
 					"children": [
 						{
-							"id": 112,
+							"id": 103,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -3746,7 +3748,7 @@
 							},
 							"signatures": [
 								{
-									"id": 113,
+									"id": 104,
 									"name": "new FootModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -3754,7 +3756,7 @@
 									"type": {
 										"type": "reference",
 										"name": "FootModel",
-										"id": 111
+										"id": 102
 									}
 								}
 							],
@@ -3767,7 +3769,7 @@
 							]
 						},
 						{
-							"id": 115,
+							"id": 106,
 							"name": "cache",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3797,7 +3799,7 @@
 							}
 						},
 						{
-							"id": 114,
+							"id": 105,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -3822,15 +3824,15 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								112
+								103
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								115,
-								114
+								106,
+								105
 							]
 						}
 					],
@@ -3848,7 +3850,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						111
+						102
 					]
 				}
 			],
@@ -3991,7 +3993,7 @@
 			]
 		},
 		{
-			"id": 124,
+			"id": 115,
 			"name": "\"group/group.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -4001,7 +4003,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
 			"children": [
 				{
-					"id": 125,
+					"id": 116,
 					"name": "GroupModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -4013,7 +4015,7 @@
 					},
 					"children": [
 						{
-							"id": 128,
+							"id": 119,
 							"name": "by",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4039,7 +4041,7 @@
 							}
 						},
 						{
-							"id": 127,
+							"id": 118,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4062,7 +4064,7 @@
 							}
 						},
 						{
-							"id": 126,
+							"id": 117,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4082,7 +4084,7 @@
 							}
 						},
 						{
-							"id": 129,
+							"id": 120,
 							"name": "shortcut",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4102,7 +4104,7 @@
 							}
 						},
 						{
-							"id": 130,
+							"id": 121,
 							"name": "toggle",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4127,11 +4129,11 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								128,
-								127,
-								126,
-								129,
-								130
+								119,
+								118,
+								117,
+								120,
+								121
 							]
 						}
 					],
@@ -4149,7 +4151,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						125
+						116
 					]
 				}
 			],
@@ -4305,7 +4307,7 @@
 			]
 		},
 		{
-			"id": 191,
+			"id": 182,
 			"name": "\"highlight/highlight.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -4315,7 +4317,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/highlight/highlight.model.d.ts",
 			"children": [
 				{
-					"id": 192,
+					"id": 183,
 					"name": "HighlightModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -4327,7 +4329,7 @@
 					},
 					"children": [
 						{
-							"id": 193,
+							"id": 184,
 							"name": "columns",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4349,12 +4351,12 @@
 								"elementType": {
 									"type": "reference",
 									"name": "ColumnModel",
-									"id": 286
+									"id": 277
 								}
 							}
 						},
 						{
-							"id": 194,
+							"id": 185,
 							"name": "rows",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4385,8 +4387,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								193,
-								194
+								184,
+								185
 							]
 						}
 					],
@@ -4404,7 +4406,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						192
+						183
 					]
 				}
 			],
@@ -4529,7 +4531,7 @@
 			]
 		},
 		{
-			"id": 170,
+			"id": 161,
 			"name": "\"layer/layer.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -4539,7 +4541,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layer/layer.model.d.ts",
 			"children": [
 				{
-					"id": 171,
+					"id": 162,
 					"name": "LayerModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -4548,7 +4550,7 @@
 					},
 					"children": [
 						{
-							"id": 172,
+							"id": 163,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -4557,7 +4559,7 @@
 							},
 							"signatures": [
 								{
-									"id": 173,
+									"id": 164,
 									"name": "new LayerModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -4565,7 +4567,7 @@
 									"type": {
 										"type": "reference",
 										"name": "LayerModel",
-										"id": 171
+										"id": 162
 									}
 								}
 							],
@@ -4578,7 +4580,7 @@
 							]
 						},
 						{
-							"id": 174,
+							"id": 165,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -4603,14 +4605,14 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								172
+								163
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								174
+								165
 							]
 						}
 					],
@@ -4628,7 +4630,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						171
+						162
 					]
 				}
 			],
@@ -4832,7 +4834,7 @@
 							"type": {
 								"type": "reference",
 								"name": "ColumnModel",
-								"id": 286
+								"id": 277
 							}
 						},
 						{
@@ -4942,7 +4944,7 @@
 			]
 		},
 		{
-			"id": 175,
+			"id": 166,
 			"name": "\"pagination/pagination.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -4952,7 +4954,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pagination/pagination.model.d.ts",
 			"children": [
 				{
-					"id": 176,
+					"id": 167,
 					"name": "PaginationModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -4961,7 +4963,7 @@
 					},
 					"children": [
 						{
-							"id": 177,
+							"id": 168,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -4970,7 +4972,7 @@
 							},
 							"signatures": [
 								{
-									"id": 178,
+									"id": 169,
 									"name": "new PaginationModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -4978,7 +4980,7 @@
 									"type": {
 										"type": "reference",
 										"name": "PaginationModel",
-										"id": 176
+										"id": 167
 									}
 								}
 							],
@@ -4991,7 +4993,7 @@
 							]
 						},
 						{
-							"id": 183,
+							"id": 174,
 							"name": "count",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5011,7 +5013,7 @@
 							}
 						},
 						{
-							"id": 180,
+							"id": 171,
 							"name": "current",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5031,7 +5033,7 @@
 							}
 						},
 						{
-							"id": 179,
+							"id": 170,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5051,7 +5053,7 @@
 							}
 						},
 						{
-							"id": 181,
+							"id": 172,
 							"name": "size",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5071,7 +5073,7 @@
 							}
 						},
 						{
-							"id": 182,
+							"id": 173,
 							"name": "sizeList",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5099,18 +5101,18 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								177
+								168
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								183,
-								180,
-								179,
-								181,
-								182
+								174,
+								171,
+								170,
+								172,
+								173
 							]
 						}
 					],
@@ -5128,7 +5130,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						176
+						167
 					]
 				}
 			],
@@ -5141,7 +5143,7 @@
 			]
 		},
 		{
-			"id": 256,
+			"id": 247,
 			"name": "\"persistence/persistence.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -5151,7 +5153,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
 			"children": [
 				{
-					"id": 257,
+					"id": 248,
 					"name": "PersistenceModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -5160,7 +5162,7 @@
 					},
 					"children": [
 						{
-							"id": 258,
+							"id": 249,
 							"name": "id",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5180,7 +5182,7 @@
 							}
 						},
 						{
-							"id": 260,
+							"id": 251,
 							"name": "load",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5200,7 +5202,7 @@
 							}
 						},
 						{
-							"id": 261,
+							"id": 252,
 							"name": "remove",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5220,7 +5222,7 @@
 							}
 						},
 						{
-							"id": 262,
+							"id": 253,
 							"name": "settings",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5240,7 +5242,7 @@
 							}
 						},
 						{
-							"id": 259,
+							"id": 250,
 							"name": "storage",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5265,11 +5267,11 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								258,
-								260,
-								261,
-								262,
-								259
+								249,
+								251,
+								252,
+								253,
+								250
 							]
 						}
 					],
@@ -5287,7 +5289,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						257
+						248
 					]
 				}
 			],
@@ -5300,7 +5302,7 @@
 			]
 		},
 		{
-			"id": 263,
+			"id": 254,
 			"name": "\"pipe/pipe.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -5310,7 +5312,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.model.d.ts",
 			"children": [
 				{
-					"id": 264,
+					"id": 255,
 					"name": "PipeModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -5319,7 +5321,7 @@
 					},
 					"children": [
 						{
-							"id": 265,
+							"id": 256,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -5328,7 +5330,7 @@
 							},
 							"signatures": [
 								{
-									"id": 266,
+									"id": 257,
 									"name": "new PipeModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -5336,7 +5338,7 @@
 									"type": {
 										"type": "reference",
 										"name": "PipeModel",
-										"id": 264
+										"id": 255
 									}
 								}
 							],
@@ -5349,7 +5351,7 @@
 							]
 						},
 						{
-							"id": 267,
+							"id": 258,
 							"name": "triggers",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5374,14 +5376,14 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								265
+								256
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								267
+								258
 							]
 						}
 					],
@@ -5399,7 +5401,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						264
+						255
 					]
 				}
 			],
@@ -5412,7 +5414,7 @@
 			]
 		},
 		{
-			"id": 131,
+			"id": 122,
 			"name": "\"pivot/pivot.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -5422,7 +5424,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pivot/pivot.model.d.ts",
 			"children": [
 				{
-					"id": 132,
+					"id": 123,
 					"name": "PivotModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -5431,7 +5433,7 @@
 					},
 					"children": [
 						{
-							"id": 133,
+							"id": 124,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -5440,7 +5442,7 @@
 							},
 							"signatures": [
 								{
-									"id": 134,
+									"id": 125,
 									"name": "new PivotModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -5448,7 +5450,7 @@
 									"type": {
 										"type": "reference",
 										"name": "PivotModel",
-										"id": 132
+										"id": 123
 									}
 								}
 							],
@@ -5461,7 +5463,7 @@
 							]
 						},
 						{
-							"id": 136,
+							"id": 127,
 							"name": "by",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5484,7 +5486,7 @@
 							}
 						},
 						{
-							"id": 135,
+							"id": 126,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5509,15 +5511,15 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								133
+								124
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								136,
-								135
+								127,
+								126
 							]
 						}
 					],
@@ -5535,7 +5537,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						132
+						123
 					]
 				}
 			],
@@ -5548,7 +5550,7 @@
 			]
 		},
 		{
-			"id": 137,
+			"id": 128,
 			"name": "\"plugin/plugin.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -5558,7 +5560,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/plugin/plugin.model.d.ts",
 			"children": [
 				{
-					"id": 138,
+					"id": 129,
 					"name": "PluginModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -5567,7 +5569,7 @@
 					},
 					"children": [
 						{
-							"id": 139,
+							"id": 130,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -5576,7 +5578,7 @@
 							},
 							"signatures": [
 								{
-									"id": 140,
+									"id": 131,
 									"name": "new PluginModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -5584,7 +5586,7 @@
 									"type": {
 										"type": "reference",
 										"name": "PluginModel",
-										"id": 138
+										"id": 129
 									}
 								}
 							],
@@ -5597,7 +5599,7 @@
 							]
 						},
 						{
-							"id": 141,
+							"id": 132,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5622,14 +5624,14 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								139
+								130
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								141
+								132
 							]
 						}
 					],
@@ -5647,7 +5649,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						138
+						129
 					]
 				}
 			],
@@ -5660,7 +5662,7 @@
 			]
 		},
 		{
-			"id": 184,
+			"id": 175,
 			"name": "\"progress/progress.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -5670,7 +5672,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/progress/progress.model.d.ts",
 			"children": [
 				{
-					"id": 185,
+					"id": 176,
 					"name": "ProgressModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -5679,7 +5681,7 @@
 					},
 					"children": [
 						{
-							"id": 186,
+							"id": 177,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -5688,7 +5690,7 @@
 							},
 							"signatures": [
 								{
-									"id": 187,
+									"id": 178,
 									"name": "new ProgressModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -5696,7 +5698,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ProgressModel",
-										"id": 185
+										"id": 176
 									}
 								}
 							],
@@ -5709,7 +5711,7 @@
 							]
 						},
 						{
-							"id": 189,
+							"id": 180,
 							"name": "isBusy",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5729,7 +5731,7 @@
 							}
 						},
 						{
-							"id": 190,
+							"id": 181,
 							"name": "queue",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5752,7 +5754,7 @@
 							}
 						},
 						{
-							"id": 188,
+							"id": 179,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5777,16 +5779,16 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								186
+								177
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								189,
-								190,
-								188
+								180,
+								181,
+								179
 							]
 						}
 					],
@@ -5804,7 +5806,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						185
+						176
 					]
 				}
 			],
@@ -5817,7 +5819,7 @@
 			]
 		},
 		{
-			"id": 77,
+			"id": 68,
 			"name": "\"row/row.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -5827,7 +5829,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/row/row.model.d.ts",
 			"children": [
 				{
-					"id": 78,
+					"id": 69,
 					"name": "RowModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -5836,7 +5838,7 @@
 					},
 					"children": [
 						{
-							"id": 79,
+							"id": 70,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -5845,7 +5847,7 @@
 							},
 							"signatures": [
 								{
-									"id": 80,
+									"id": 71,
 									"name": "new RowModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -5853,7 +5855,7 @@
 									"type": {
 										"type": "reference",
 										"name": "RowModel",
-										"id": 78
+										"id": 69
 									}
 								}
 							],
@@ -5866,7 +5868,7 @@
 							]
 						},
 						{
-							"id": 90,
+							"id": 81,
 							"name": "canDrag",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5886,7 +5888,7 @@
 							}
 						},
 						{
-							"id": 91,
+							"id": 82,
 							"name": "canResize",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5906,7 +5908,7 @@
 							}
 						},
 						{
-							"id": 92,
+							"id": 83,
 							"name": "frozen",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5929,7 +5931,7 @@
 							}
 						},
 						{
-							"id": 84,
+							"id": 75,
 							"name": "height",
 							"kind": 1024,
 							"kindString": "Property",
@@ -5946,21 +5948,21 @@
 							"type": {
 								"type": "reflection",
 								"declaration": {
-									"id": 85,
+									"id": 76,
 									"name": "__type",
 									"kind": 65536,
 									"kindString": "Type literal",
 									"flags": {},
 									"signatures": [
 										{
-											"id": 86,
+											"id": 77,
 											"name": "__call",
 											"kind": 4096,
 											"kindString": "Call signature",
 											"flags": {},
 											"parameters": [
 												{
-													"id": 87,
+													"id": 78,
 													"name": "element",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -5971,7 +5973,7 @@
 													}
 												},
 												{
-													"id": 88,
+													"id": 79,
 													"name": "index",
 													"kind": 32768,
 													"kindString": "Parameter",
@@ -6008,7 +6010,7 @@
 							}
 						},
 						{
-							"id": 82,
+							"id": 73,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6025,11 +6027,11 @@
 							"type": {
 								"type": "reference",
 								"name": "SingleOrMultipleMode",
-								"id": 93
+								"id": 84
 							}
 						},
 						{
-							"id": 81,
+							"id": 72,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6049,7 +6051,7 @@
 							}
 						},
 						{
-							"id": 89,
+							"id": 80,
 							"name": "status",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6079,7 +6081,7 @@
 							}
 						},
 						{
-							"id": 83,
+							"id": 74,
 							"name": "unit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6096,7 +6098,7 @@
 							"type": {
 								"type": "reference",
 								"name": "DataOrDetailsUnit",
-								"id": 94
+								"id": 85
 							}
 						}
 					],
@@ -6105,21 +6107,21 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								79
+								70
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								90,
-								91,
-								92,
-								84,
-								82,
 								81,
-								89,
-								83
+								82,
+								83,
+								75,
+								73,
+								72,
+								80,
+								74
 							]
 						}
 					],
@@ -6132,7 +6134,7 @@
 					]
 				},
 				{
-					"id": 94,
+					"id": 85,
 					"name": "DataOrDetailsUnit",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -6161,7 +6163,7 @@
 					}
 				},
 				{
-					"id": 93,
+					"id": 84,
 					"name": "SingleOrMultipleMode",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -6195,15 +6197,15 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						78
+						69
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						94,
-						93
+						85,
+						84
 					]
 				}
 			],
@@ -6483,7 +6485,7 @@
 			]
 		},
 		{
-			"id": 234,
+			"id": 225,
 			"name": "\"scroll/scroll.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -6493,7 +6495,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scroll/scroll.model.d.ts",
 			"children": [
 				{
-					"id": 235,
+					"id": 226,
 					"name": "ScrollModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -6502,7 +6504,7 @@
 					},
 					"children": [
 						{
-							"id": 236,
+							"id": 227,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -6511,7 +6513,7 @@
 							},
 							"signatures": [
 								{
-									"id": 237,
+									"id": 228,
 									"name": "new ScrollModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -6519,7 +6521,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ScrollModel",
-										"id": 235
+										"id": 226
 									}
 								}
 							],
@@ -6532,7 +6534,7 @@
 							]
 						},
 						{
-							"id": 241,
+							"id": 232,
 							"name": "cursor",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6552,7 +6554,7 @@
 							}
 						},
 						{
-							"id": 240,
+							"id": 231,
 							"name": "left",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6572,7 +6574,7 @@
 							}
 						},
 						{
-							"id": 238,
+							"id": 229,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6592,7 +6594,7 @@
 							}
 						},
 						{
-							"id": 239,
+							"id": 230,
 							"name": "top",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6617,17 +6619,17 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								236
+								227
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								241,
-								240,
-								238,
-								239
+								232,
+								231,
+								229,
+								230
 							]
 						}
 					],
@@ -6645,7 +6647,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						235
+						226
 					]
 				}
 			],
@@ -6658,7 +6660,7 @@
 			]
 		},
 		{
-			"id": 95,
+			"id": 86,
 			"name": "\"selection/selection.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -6668,7 +6670,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/selection/selection.model.d.ts",
 			"children": [
 				{
-					"id": 99,
+					"id": 90,
 					"name": "SelectionModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -6677,7 +6679,7 @@
 					},
 					"children": [
 						{
-							"id": 100,
+							"id": 91,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -6686,7 +6688,7 @@
 							},
 							"signatures": [
 								{
-									"id": 101,
+									"id": 92,
 									"name": "new SelectionModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -6694,7 +6696,7 @@
 									"type": {
 										"type": "reference",
 										"name": "SelectionModel",
-										"id": 99
+										"id": 90
 									}
 								}
 							],
@@ -6707,7 +6709,7 @@
 							]
 						},
 						{
-							"id": 102,
+							"id": 93,
 							"name": "area",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6727,7 +6729,7 @@
 							}
 						},
 						{
-							"id": 106,
+							"id": 97,
 							"name": "items",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6750,7 +6752,7 @@
 							}
 						},
 						{
-							"id": 107,
+							"id": 98,
 							"name": "key",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6767,11 +6769,11 @@
 							"type": {
 								"type": "reference",
 								"name": "IKey",
-								"id": 96
+								"id": 87
 							}
 						},
 						{
-							"id": 105,
+							"id": 96,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6788,11 +6790,11 @@
 							"type": {
 								"type": "reference",
 								"name": "ModeType",
-								"id": 109
+								"id": 100
 							}
 						},
 						{
-							"id": 103,
+							"id": 94,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6812,7 +6814,7 @@
 							}
 						},
 						{
-							"id": 104,
+							"id": 95,
 							"name": "unit",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6829,7 +6831,7 @@
 							"type": {
 								"type": "reference",
 								"name": "UnitType",
-								"id": 108
+								"id": 99
 							}
 						}
 					],
@@ -6838,19 +6840,19 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								100
+								91
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								102,
-								106,
-								107,
-								105,
-								103,
-								104
+								93,
+								97,
+								98,
+								96,
+								94,
+								95
 							]
 						}
 					],
@@ -6863,7 +6865,7 @@
 					]
 				},
 				{
-					"id": 96,
+					"id": 87,
 					"name": "IKey",
 					"kind": 256,
 					"kindString": "Interface",
@@ -6872,7 +6874,7 @@
 					},
 					"children": [
 						{
-							"id": 98,
+							"id": 89,
 							"name": "column",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6892,7 +6894,7 @@
 							}
 						},
 						{
-							"id": 97,
+							"id": 88,
 							"name": "row",
 							"kind": 1024,
 							"kindString": "Property",
@@ -6917,8 +6919,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								98,
-								97
+								89,
+								88
 							]
 						}
 					],
@@ -6931,7 +6933,7 @@
 					]
 				},
 				{
-					"id": 109,
+					"id": 100,
 					"name": "ModeType",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -6964,7 +6966,7 @@
 					}
 				},
 				{
-					"id": 108,
+					"id": 99,
 					"name": "UnitType",
 					"kind": 4194304,
 					"kindString": "Type alias",
@@ -7006,22 +7008,22 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						99
+						90
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						96
+						87
 					]
 				},
 				{
 					"title": "Type aliases",
 					"kind": 4194304,
 					"children": [
-						109,
-						108
+						100,
+						99
 					]
 				}
 			],
@@ -7034,7 +7036,7 @@
 			]
 		},
 		{
-			"id": 116,
+			"id": 107,
 			"name": "\"sort/sort.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -7044,7 +7046,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/sort/sort.model.d.ts",
 			"children": [
 				{
-					"id": 117,
+					"id": 108,
 					"name": "SortModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -7053,7 +7055,7 @@
 					},
 					"children": [
 						{
-							"id": 118,
+							"id": 109,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -7062,7 +7064,7 @@
 							},
 							"signatures": [
 								{
-									"id": 119,
+									"id": 110,
 									"name": "new SortModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -7070,7 +7072,7 @@
 									"type": {
 										"type": "reference",
 										"name": "SortModel",
-										"id": 117
+										"id": 108
 									}
 								}
 							],
@@ -7083,7 +7085,7 @@
 							]
 						},
 						{
-							"id": 121,
+							"id": 112,
 							"name": "by",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7106,7 +7108,7 @@
 							}
 						},
 						{
-							"id": 122,
+							"id": 113,
 							"name": "mode",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7123,11 +7125,11 @@
 							"type": {
 								"type": "reference",
 								"name": "ModeType",
-								"id": 109
+								"id": 100
 							}
 						},
 						{
-							"id": 120,
+							"id": 111,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7147,7 +7149,7 @@
 							}
 						},
 						{
-							"id": 123,
+							"id": 114,
 							"name": "trigger",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7175,17 +7177,17 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								118
+								109
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								121,
-								122,
-								120,
-								123
+								112,
+								113,
+								111,
+								114
 							]
 						}
 					],
@@ -7203,7 +7205,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						117
+						108
 					]
 				}
 			],
@@ -7216,7 +7218,7 @@
 			]
 		},
 		{
-			"id": 225,
+			"id": 216,
 			"name": "\"style/style.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -7226,7 +7228,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
 			"children": [
 				{
-					"id": 226,
+					"id": 217,
 					"name": "StyleModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -7235,7 +7237,7 @@
 					},
 					"children": [
 						{
-							"id": 227,
+							"id": 218,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -7244,7 +7246,7 @@
 							},
 							"signatures": [
 								{
-									"id": 228,
+									"id": 219,
 									"name": "new StyleModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -7252,7 +7254,7 @@
 									"type": {
 										"type": "reference",
 										"name": "StyleModel",
-										"id": 226
+										"id": 217
 									}
 								}
 							],
@@ -7265,7 +7267,7 @@
 							]
 						},
 						{
-							"id": 230,
+							"id": 221,
 							"name": "cell",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7285,7 +7287,7 @@
 							}
 						},
 						{
-							"id": 233,
+							"id": 224,
 							"name": "cells",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7308,7 +7310,7 @@
 							}
 						},
 						{
-							"id": 231,
+							"id": 222,
 							"name": "invalidate",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7328,7 +7330,7 @@
 							}
 						},
 						{
-							"id": 229,
+							"id": 220,
 							"name": "row",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7348,7 +7350,7 @@
 							}
 						},
 						{
-							"id": 232,
+							"id": 223,
 							"name": "rows",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7376,18 +7378,18 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								227
+								218
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								230,
-								233,
-								231,
-								229,
-								232
+								221,
+								224,
+								222,
+								220,
+								223
 							]
 						}
 					],
@@ -7405,7 +7407,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						226
+						217
 					]
 				}
 			],
@@ -7530,7 +7532,7 @@
 			]
 		},
 		{
-			"id": 165,
+			"id": 156,
 			"name": "\"toolbar/toolbar.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -7540,7 +7542,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/toolbar/toolbar.model.d.ts",
 			"children": [
 				{
-					"id": 166,
+					"id": 157,
 					"name": "ToolbarModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -7549,7 +7551,7 @@
 					},
 					"children": [
 						{
-							"id": 167,
+							"id": 158,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -7558,7 +7560,7 @@
 							},
 							"signatures": [
 								{
-									"id": 168,
+									"id": 159,
 									"name": "new ToolbarModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -7566,7 +7568,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ToolbarModel",
-										"id": 166
+										"id": 157
 									}
 								}
 							],
@@ -7579,7 +7581,7 @@
 							]
 						},
 						{
-							"id": 169,
+							"id": 160,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7604,14 +7606,14 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								167
+								158
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								169
+								160
 							]
 						}
 					],
@@ -7629,7 +7631,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						166
+						157
 					]
 				}
 			],
@@ -7642,7 +7644,7 @@
 			]
 		},
 		{
-			"id": 250,
+			"id": 241,
 			"name": "\"validation/validation.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -7652,7 +7654,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
 			"children": [
 				{
-					"id": 251,
+					"id": 242,
 					"name": "ValidationModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -7661,7 +7663,7 @@
 					},
 					"children": [
 						{
-							"id": 252,
+							"id": 243,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -7670,7 +7672,7 @@
 							},
 							"signatures": [
 								{
-									"id": 253,
+									"id": 244,
 									"name": "new ValidationModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -7678,7 +7680,7 @@
 									"type": {
 										"type": "reference",
 										"name": "ValidationModel",
-										"id": 251
+										"id": 242
 									}
 								}
 							],
@@ -7691,7 +7693,7 @@
 							]
 						},
 						{
-							"id": 254,
+							"id": 245,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7711,7 +7713,7 @@
 							}
 						},
 						{
-							"id": 255,
+							"id": 246,
 							"name": "rules",
 							"kind": 1024,
 							"kindString": "Property",
@@ -7739,15 +7741,15 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								252
+								243
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								254,
-								255
+								245,
+								246
 							]
 						}
 					],
@@ -7765,7 +7767,7 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						251
+						242
 					]
 				}
 			],
@@ -7846,7 +7848,7 @@
 								"elementType": {
 									"type": "reference",
 									"name": "ColumnModel",
-									"id": 286
+									"id": 277
 								}
 							}
 						},
@@ -7963,7 +7965,7 @@
 			]
 		},
 		{
-			"id": 195,
+			"id": 186,
 			"name": "\"visibility/visibility.model.d\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -7973,7 +7975,7 @@
 			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/visibility/visibility.model.d.ts",
 			"children": [
 				{
-					"id": 204,
+					"id": 195,
 					"name": "VisibilityModel",
 					"kind": 128,
 					"kindString": "Class",
@@ -7982,7 +7984,7 @@
 					},
 					"children": [
 						{
-							"id": 205,
+							"id": 196,
 							"name": "constructor",
 							"kind": 512,
 							"kindString": "Constructor",
@@ -7991,7 +7993,7 @@
 							},
 							"signatures": [
 								{
-									"id": 206,
+									"id": 197,
 									"name": "new VisibilityModel",
 									"kind": 16384,
 									"kindString": "Constructor signature",
@@ -7999,7 +8001,7 @@
 									"type": {
 										"type": "reference",
 										"name": "VisibilityModel",
-										"id": 204
+										"id": 195
 									}
 								}
 							],
@@ -8012,7 +8014,7 @@
 							]
 						},
 						{
-							"id": 210,
+							"id": 201,
 							"name": "body",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8032,7 +8034,7 @@
 							}
 						},
 						{
-							"id": 209,
+							"id": 200,
 							"name": "foot",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8052,7 +8054,7 @@
 							}
 						},
 						{
-							"id": 208,
+							"id": 199,
 							"name": "head",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8072,7 +8074,7 @@
 							}
 						},
 						{
-							"id": 212,
+							"id": 203,
 							"name": "pin",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8089,11 +8091,11 @@
 							"type": {
 								"type": "reference",
 								"name": "IPin",
-								"id": 201
+								"id": 192
 							}
 						},
 						{
-							"id": 213,
+							"id": 204,
 							"name": "plugin",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8113,7 +8115,7 @@
 							}
 						},
 						{
-							"id": 207,
+							"id": 198,
 							"name": "resource",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8133,7 +8135,7 @@
 							}
 						},
 						{
-							"id": 211,
+							"id": 202,
 							"name": "toolbar",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8150,7 +8152,7 @@
 							"type": {
 								"type": "reference",
 								"name": "IToolbar",
-								"id": 196
+								"id": 187
 							}
 						}
 					],
@@ -8159,20 +8161,20 @@
 							"title": "Constructors",
 							"kind": 512,
 							"children": [
-								205
+								196
 							]
 						},
 						{
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								210,
-								209,
-								208,
-								212,
-								213,
-								207,
-								211
+								201,
+								200,
+								199,
+								203,
+								204,
+								198,
+								202
 							]
 						}
 					],
@@ -8185,7 +8187,7 @@
 					]
 				},
 				{
-					"id": 201,
+					"id": 192,
 					"name": "IPin",
 					"kind": 256,
 					"kindString": "Interface",
@@ -8194,7 +8196,7 @@
 					},
 					"children": [
 						{
-							"id": 202,
+							"id": 193,
 							"name": "left",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8214,7 +8216,7 @@
 							}
 						},
 						{
-							"id": 203,
+							"id": 194,
 							"name": "right",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8239,8 +8241,8 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								202,
-								203
+								193,
+								194
 							]
 						}
 					],
@@ -8253,7 +8255,7 @@
 					]
 				},
 				{
-					"id": 196,
+					"id": 187,
 					"name": "IToolbar",
 					"kind": 256,
 					"kindString": "Interface",
@@ -8262,7 +8264,7 @@
 					},
 					"children": [
 						{
-							"id": 198,
+							"id": 189,
 							"name": "bottom",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8282,7 +8284,7 @@
 							}
 						},
 						{
-							"id": 200,
+							"id": 191,
 							"name": "left",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8302,7 +8304,7 @@
 							}
 						},
 						{
-							"id": 199,
+							"id": 190,
 							"name": "right",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8322,7 +8324,7 @@
 							}
 						},
 						{
-							"id": 197,
+							"id": 188,
 							"name": "top",
 							"kind": 1024,
 							"kindString": "Property",
@@ -8347,10 +8349,10 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								198,
-								200,
-								199,
-								197
+								189,
+								191,
+								190,
+								188
 							]
 						}
 					],
@@ -8368,15 +8370,15 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						204
+						195
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						201,
-						196
+						192,
+						187
 					]
 				}
 			],
@@ -8394,44 +8396,44 @@
 			"title": "External modules",
 			"kind": 1,
 			"children": [
-				7,
 				1,
-				68,
-				268,
+				9,
+				307,
+				259,
 				316,
 				40,
-				222,
-				142,
-				242,
-				247,
-				214,
+				213,
+				133,
+				233,
+				238,
+				205,
 				63,
-				110,
+				101,
 				15,
-				124,
+				115,
 				45,
-				191,
+				182,
 				353,
-				170,
+				161,
 				51,
 				55,
+				166,
+				247,
+				254,
+				122,
+				128,
 				175,
-				256,
-				263,
-				131,
-				137,
-				184,
-				77,
+				68,
 				20,
-				234,
-				95,
-				116,
 				225,
+				86,
+				107,
+				216,
 				358,
-				165,
-				250,
+				156,
+				241,
 				32,
-				195
+				186
 			]
 		}
 	]

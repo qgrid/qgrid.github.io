@@ -4,7 +4,8 @@ type: api
 group: API
 order: 9
 ---
-A class that can be used in custom user pipe within `PaginationModel` to make server request when<br />virtual scrolling is enabeld.
+A class that can be used in custom user pipe within `PaginationModel` to make server request when
+virtual scrolling is enabeld.
 
 Property|Type|Description
 ---|---|---
