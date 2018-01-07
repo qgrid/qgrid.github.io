@@ -25,11 +25,14 @@ gulp.task('typedoc', () =>
 gulp.task('markdown', done => {
     const input = fs.readFileSync(API_JSON_PATH);
     const project = JSON.parse(input);
-    project.children.forEach(unit => {
+    project.children.forEach((unit, i) => {
         if (!unit.children.some(x => x.comment && x.comment.shortText)) {
             // omit files without documentaion
             return;
         }
+
+        unit.order = i;
+        
         const link = hbs.compile(API_TEMPLATE);
         const output = link({ unit });
         const name = path

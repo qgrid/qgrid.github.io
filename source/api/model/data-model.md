@@ -2,6 +2,7 @@
 title: DataModel
 type: api
 group: API
+order: 5
 ---
 A class that gives access to the high level grid data structures.
 

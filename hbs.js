@@ -43,4 +43,6 @@ hbs.registerHelper('api-comment', comment => {
     return print(lines);
 });
 
+hbs.registerHelper('api-order', unit => unit.order);
+
 module.exports = hbs;
