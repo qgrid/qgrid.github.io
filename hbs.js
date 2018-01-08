@@ -22,11 +22,14 @@ hbs.registerHelper('api-title', unit => {
 });
 
 hbs.registerHelper('api-type', meta => {
+	const type = meta.name || meta.type;
 	if (meta.elementType) {
-		return print(`${meta.name || meta.type}<${meta.elementType.name}>`);
+		return print(type === 'array'
+			? `${type}<${meta.elementType.name}>`
+			: `${meta.elementType.name}[]`);
 	}
 
-	return print(meta.name || meta.type);
+	return print(type);
 });
 
 hbs.registerHelper('api-comment', comment => {

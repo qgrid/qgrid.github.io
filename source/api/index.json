@@ -24,7 +24,7 @@
 					},
 					"comment": {
 						"shortText": "A class to handle and visualize custom user behaviors(like add or delete row).",
-						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n"
+						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n```html\n<q-grid>\n <q-grid-action-bar>\n   <q-grid-action title=\"Add Row\" command=\"userAddRowCommand\"></q-grid-action>\n <q-grid-action-bar>\n<q-grid>\n```\n"
 					},
 					"children": [
 						{
@@ -52,7 +52,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 11,
+									"line": 18,
 									"character": 34
 								}
 							]
@@ -71,7 +71,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 19,
+									"line": 26,
 									"character": 7
 								}
 							],
@@ -92,12 +92,12 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Command manager is responsible for the next questions:\n* What commands can be executed.\n* How(e.g. in which order) commands should be executed."
+								"shortText": "Command manager is responsible for the next questions:\n1. What commands can be executed.\n2. How(e.g. in which order) commands should be executed."
 							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 31,
+									"line": 38,
 									"character": 9
 								}
 							],
@@ -117,7 +117,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 14,
+									"line": 21,
 									"character": 10
 								}
 							],
@@ -140,7 +140,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 24,
+									"line": 31,
 									"character": 10
 								}
 							],
@@ -172,7 +172,7 @@
 					"sources": [
 						{
 							"fileName": "action/action.model.d.ts",
-							"line": 11,
+							"line": 18,
 							"character": 32
 						}
 					]
@@ -2492,13 +2492,12 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:",
-								"text": "1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\n\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
+								"shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:\n1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 56,
+									"line": 54,
 									"character": 11
 								}
 							],
@@ -2525,7 +2524,7 @@
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 62,
+									"line": 60,
 									"character": 8
 								}
 							],
