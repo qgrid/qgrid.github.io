@@ -24,7 +24,7 @@
 					},
 					"comment": {
 						"shortText": "A class to handle and visualize custom user behaviors(like add or delete row).",
-						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n"
+						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n```html\n<q-grid>\n <q-grid-action-bar>\n   <q-grid-action title=\"Add Row\" command=\"userAddRowCommand\"></q-grid-action>\n <q-grid-action-bar>\n<q-grid>\n```\n"
 					},
 					"children": [
 						{
@@ -52,7 +52,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 11,
+									"line": 18,
 									"character": 34
 								}
 							]
@@ -71,7 +71,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 19,
+									"line": 26,
 									"character": 7
 								}
 							],
@@ -92,12 +92,12 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Command manager is responsible for the next questions:\n* What commands can be executed.\n* How(e.g. in which order) commands should be executed."
+								"shortText": "Command manager is responsible for the next questions:\n1. What commands can be executed.\n2. How(e.g. in which order) commands should be executed."
 							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 31,
+									"line": 38,
 									"character": 9
 								}
 							],
@@ -117,7 +117,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 14,
+									"line": 21,
 									"character": 10
 								}
 							],
@@ -140,7 +140,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 24,
+									"line": 31,
 									"character": 10
 								}
 							],
@@ -172,7 +172,7 @@
 					"sources": [
 						{
 							"fileName": "action/action.model.d.ts",
-							"line": 11,
+							"line": 18,
 							"character": 32
 						}
 					]
@@ -2479,7 +2479,8 @@
 						"isExported": true
 					},
 					"comment": {
-						"shortText": "A class that gives access to the high level grid data structures."
+						"shortText": "A class that gives access to the high level grid data structures.\nUsually grid user can define this properties in different places.",
+						"text": "Inside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
 					},
 					"children": [
 						{
@@ -2491,13 +2492,13 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Set of columns to display.\nColumns property usually can be setup from the grid columns binding.\nList of columns inside html template is stored here too.\nWe can have two+ sources of columns because it's possible to do merge using column `key` property.\nIf you have defined columns in javascript and in template with the same key,\nalgorithm will try persist settings from both sources but javascript will have top priority."
+								"shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:\n1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 23,
-									"character": 8
+									"line": 54,
+									"character": 11
 								}
 							],
 							"type": {
@@ -2518,13 +2519,13 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Chaing of methods that grid invokes asyncroniuosly anytime refresh is required.\nsee `PipeModel` that contains information when grid demands refreshing."
+								"shortText": "Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,\nsee `PipeModel` that contains information when grid demands refreshing."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 29,
-									"character": 5
+									"line": 60,
+									"character": 8
 								}
 							],
 							"type": {
@@ -2544,13 +2545,13 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "List of rows to display.\nRows property usually can be filled from the grid rows html."
+								"shortText": "List of rows to display.\nRows property can be filled from the grid rows html or grid model data rows\nproperty."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 13,
-									"character": 5
+									"line": 41,
+									"character": 8
 								}
 							],
 							"type": {
@@ -2576,7 +2577,7 @@
 					"sources": [
 						{
 							"fileName": "data/data.model.d.ts",
-							"line": 7,
+							"line": 34,
 							"character": 30
 						}
 					]

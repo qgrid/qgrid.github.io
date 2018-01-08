@@ -25,15 +25,23 @@ gulp.task('typedoc', () =>
 gulp.task('markdown', done => {
     const input = fs.readFileSync(API_JSON_PATH);
     const project = JSON.parse(input);
-    project.children.forEach(unit => {
+    project.children.forEach((unit, i) => {
         if (!unit.children.some(x => x.comment && x.comment.shortText)) {
             // omit files without documentaion
             return;
         }
+
+        unit.order = i;
+        
         const link = hbs.compile(API_TEMPLATE);
         const output = link({ unit });
+        const name = path
+            .basename(unit.originalName)
+            .slice(0, -'.d.ts'.length)
+            .replace(/\./g, '-');
+
         fs.writeFileSync(
-            path.join(API_FOLDER, 'model', `${path.basename(unit.originalName).slice(0, -'.d.ts'.length)}.md`),
+            path.join(API_FOLDER, 'model', `${name}.md`),
             output,
             { flag: 'w' }
         );
