@@ -24,7 +24,18 @@
                         var p = pages[j];
         %>
                         <li class="<%- page.title === p.title ? 'current' : '' %> ">
+        <%
+                            if (page.title === p.title) {
+
+        %>
+                            <span><%- p.title %></span>
+        <%
+                            } else {
+        %>
                             <a href="<%- url_for(p.path) %>"><%- p.title %></a>
+        <%
+                            }
+        %>
                         </li>
         <%
                     }
