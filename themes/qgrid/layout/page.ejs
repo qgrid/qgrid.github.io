@@ -1,4 +1,9 @@
 <div class="page-wrapper">
-    <h2><%- page.title%></h2>
+    <h2>
+        <%- page.title%>
+        <% if (page.github) { %>
+            <a class="github-link" target="_blank" href="https://github.com/<%- page.github%>"><span><%- page.github.split('/').pop()%></span></a>
+        <% } %>
+    </h2>
     <%- page.content %>
 </div>

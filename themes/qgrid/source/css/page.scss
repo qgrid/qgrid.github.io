@@ -123,6 +123,7 @@ table {
     td {
       padding: 0.5em 1em;
       text-align: left;
+      vertical-align: top;
 
       code {
         background: #F5F5F5;
@@ -171,6 +172,37 @@ table {
     height: 740px;
     width: 100%;
   }
+}
+
+.github-link {
+  @extend .github;
+  position: relative;
+  color: blue;
+  display: inline-block;
+  font-size: 14px;
+  margin: -90px 0 0 20px;
+  padding: 7px 0 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0.5;
+  border: 1px solid blue;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+
+    &:hover {
+      overflow: visible;
+      width: auto;
+      opacity: 1;
+    }
+    span {
+      vertical-align: top;
+      display: inline-block;
+      margin: -1.5px 10px;
+    }
+
 }
 
 #overlay {
