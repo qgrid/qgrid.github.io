@@ -28,11 +28,11 @@
                             if (page.title === p.title) {
 
         %>
-                            <span><%- p.title %></span>
+                            <span data-stop-propagation><%- p.title %></span>
         <%
                             } else {
         %>
-                            <a href="<%- url_for(p.path) %>"><%- p.title %></a>
+                            <a href="<%- url_for(p.path) %>" data-stop-propagation><%- p.title %></a>
         <%
                             }
         %>

@@ -71,6 +71,11 @@ function init() {
 	var overlay = document.getElementById('overlay');
 	overlay.addEventListener('click', toggleVisibility, true);
 
+	var nav = document.getElementById('nav');
+	if (nav) {
+		nav.addEventListener('click', toggleVisibility, true);
+	}
+
 	var searchFields = document.getElementsByClassName('search');
 	if (searchFields.length) {
 		for (var i = 0; i < searchFields.length; i++) {
