@@ -12,4 +12,4 @@ columnIndex|`number`|Index of column for focused cell.
 isActive|`boolean`|Indicates if grid is focused or not.
 rowIndex|`number`|Index of row for focused cell.
 
-[file in github](https://github.com/qgrid/ng2/core/focus.model.js)
+[file in github](https://github.com/qgrid/ng2/tree/master/core/focus/focus.model.js)
