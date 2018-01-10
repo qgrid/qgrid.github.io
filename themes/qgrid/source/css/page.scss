@@ -121,8 +121,9 @@ table {
 
   tr {
     td {
-      padding: 0.5em 1em;
+      padding: 1em;
       text-align: left;
+      vertical-align: top;
 
       code {
         background: #F5F5F5;
@@ -172,6 +173,50 @@ table {
     width: 100%;
   }
 }
+
+.github-link {
+  @extend .github;
+  position: relative;
+  color: blue;
+  display: inline-block;
+  font-size: 14px;
+  margin: -90px 0 0 20px;
+  padding: 7px 0 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  opacity: 0.5;
+  border: 1px solid blue;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+
+    &:hover {
+      overflow: visible;
+      width: auto;
+      opacity: 1;
+    }
+    span {
+      vertical-align: top;
+      display: inline-block;
+      margin: -1.5px 10px;
+    }
+
+}
+.github-link2 {
+  @extend .github-link;
+  float: right;
+  color: white;
+  font-size: 12px;
+  font-family: Roboto;
+  position: relative;
+  margin: -18px -19px 0 0;
+  border-color: white;
+  padding: 3px 0 0 3px;
+  opacity: 0.75;
+}
+
 
 #overlay {
   display: none;
