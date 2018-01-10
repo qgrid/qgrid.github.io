@@ -12,7 +12,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/action/action.model.d.ts",
 			"children": [
 				{
 					"id": 2,
@@ -24,7 +24,7 @@
 					},
 					"comment": {
 						"shortText": "A class to handle and visualize custom user behaviors(like add or delete row).",
-						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n```html\n<q-grid>\n <q-grid-action-bar>\n   <q-grid-action title=\"Add Row\" command=\"userAddRowCommand\"></q-grid-action>\n <q-grid-action-bar>\n<q-grid>\n```\n"
+						"text": "Action bar plugin uses this model to draw buttons to execute commands.\n"
 					},
 					"children": [
 						{
@@ -52,7 +52,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 18,
+									"line": 11,
 									"character": 34
 								}
 							]
@@ -71,7 +71,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 26,
+									"line": 19,
 									"character": 7
 								}
 							],
@@ -92,12 +92,12 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Command manager is responsible for the next questions:\n1. What commands can be executed.\n2. How(e.g. in which order) commands should be executed."
+								"shortText": "Command manager is responsible for the next questions:\n* What commands can be executed.\n* How(e.g. in which order) commands should be executed."
 							},
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 38,
+									"line": 31,
 									"character": 9
 								}
 							],
@@ -117,7 +117,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 21,
+									"line": 14,
 									"character": 10
 								}
 							],
@@ -140,7 +140,7 @@
 							"sources": [
 								{
 									"fileName": "action/action.model.d.ts",
-									"line": 31,
+									"line": 24,
 									"character": 10
 								}
 							],
@@ -172,7 +172,7 @@
 					"sources": [
 						{
 							"fileName": "action/action.model.d.ts",
-							"line": 18,
+							"line": 11,
 							"character": 32
 						}
 					]
@@ -203,7 +203,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/body/body.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/body/body.model.d.ts",
 			"children": [
 				{
 					"id": 10,
@@ -346,7 +346,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-list/column.list.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/column-list/column.list.model.d.ts",
 			"children": [
 				{
 					"id": 308,
@@ -565,7 +565,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/column.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/column-type/column.model.d.ts",
 			"children": [
 				{
 					"id": 277,
@@ -1526,7 +1526,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/data.column.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/column-type/data.column.model.d.ts",
 			"children": [
 				{
 					"id": 320,
@@ -2468,7 +2468,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/data/data.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/data/data.model.d.ts",
 			"children": [
 				{
 					"id": 41,
@@ -2492,12 +2492,13 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:\n1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority."
+								"shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:",
+								"text": "1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\n\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 54,
+									"line": 56,
 									"character": 11
 								}
 							],
@@ -2524,7 +2525,7 @@
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 60,
+									"line": 62,
 									"character": 8
 								}
 							],
@@ -2608,7 +2609,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/drag/drag.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/drag/drag.model.d.ts",
 			"children": [
 				{
 					"id": 214,
@@ -2689,7 +2690,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/edit/edit.model.d.ts",
 			"children": [
 				{
 					"id": 142,
@@ -3218,7 +3219,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/export/export.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/export/export.model.d.ts",
 			"children": [
 				{
 					"id": 234,
@@ -3330,7 +3331,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/fetch/fetch.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/fetch/fetch.model.d.ts",
 			"children": [
 				{
 					"id": 239,
@@ -3411,7 +3412,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/filter/filter.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/filter/filter.model.d.ts",
 			"children": [
 				{
 					"id": 206,
@@ -3597,7 +3598,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/focus/focus.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/focus/focus.model.d.ts",
 			"children": [
 				{
 					"id": 64,
@@ -3726,7 +3727,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/foot/foot.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/foot/foot.model.d.ts",
 			"children": [
 				{
 					"id": 102,
@@ -3869,7 +3870,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/grid/grid.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/grid/grid.model.d.ts",
 			"children": [
 				{
 					"id": 16,
@@ -3999,7 +4000,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
 			"children": [
 				{
 					"id": 116,
@@ -4170,7 +4171,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/head/head.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/head/head.model.d.ts",
 			"children": [
 				{
 					"id": 46,
@@ -4313,7 +4314,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/highlight/highlight.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/highlight/highlight.model.d.ts",
 			"children": [
 				{
 					"id": 183,
@@ -4425,7 +4426,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/import/import.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/import/import.model.d.ts",
 			"children": [
 				{
 					"id": 354,
@@ -4537,7 +4538,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layer/layer.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/layer/layer.model.d.ts",
 			"children": [
 				{
 					"id": 162,
@@ -4649,7 +4650,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layout/layout.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/layout/layout.model.d.ts",
 			"children": [
 				{
 					"id": 52,
@@ -4774,7 +4775,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/navigation/navigation.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/navigation/navigation.model.d.ts",
 			"children": [
 				{
 					"id": 56,
@@ -4950,7 +4951,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pagination/pagination.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/pagination/pagination.model.d.ts",
 			"children": [
 				{
 					"id": 167,
@@ -5149,7 +5150,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
 			"children": [
 				{
 					"id": 248,
@@ -5308,7 +5309,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/pipe/pipe.model.d.ts",
 			"children": [
 				{
 					"id": 255,
@@ -5420,7 +5421,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pivot/pivot.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/pivot/pivot.model.d.ts",
 			"children": [
 				{
 					"id": 123,
@@ -5556,7 +5557,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/plugin/plugin.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/plugin/plugin.model.d.ts",
 			"children": [
 				{
 					"id": 129,
@@ -5668,7 +5669,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/progress/progress.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/progress/progress.model.d.ts",
 			"children": [
 				{
 					"id": 176,
@@ -5825,7 +5826,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/row/row.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/row/row.model.d.ts",
 			"children": [
 				{
 					"id": 69,
@@ -6224,7 +6225,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scene/scene.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/scene/scene.model.d.ts",
 			"children": [
 				{
 					"id": 21,
@@ -6491,7 +6492,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scroll/scroll.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/scroll/scroll.model.d.ts",
 			"children": [
 				{
 					"id": 226,
@@ -6666,7 +6667,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/selection/selection.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/selection/selection.model.d.ts",
 			"children": [
 				{
 					"id": 90,
@@ -7042,7 +7043,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/sort/sort.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/sort/sort.model.d.ts",
 			"children": [
 				{
 					"id": 108,
@@ -7224,7 +7225,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
 			"children": [
 				{
 					"id": 217,
@@ -7426,7 +7427,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/template/template.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/template/template.model.d.ts",
 			"children": [
 				{
 					"id": 359,
@@ -7538,7 +7539,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/toolbar/toolbar.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/toolbar/toolbar.model.d.ts",
 			"children": [
 				{
 					"id": 157,
@@ -7650,7 +7651,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
 			"children": [
 				{
 					"id": 242,
@@ -7786,7 +7787,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/view/view.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/view/view.model.d.ts",
 			"children": [
 				{
 					"id": 33,
@@ -7971,7 +7972,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/visibility/visibility.model.d.ts",
+			"originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/visibility/visibility.model.d.ts",
 			"children": [
 				{
 					"id": 195,

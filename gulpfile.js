@@ -40,6 +40,8 @@ gulp.task('markdown', done => {
             .slice(0, -'.d.ts'.length)
             .replace(/\./g, '-');
 
+        console.log(`process: ${name}`);
+
         fs.writeFileSync(
             path.join(API_FOLDER, 'model', `${name}.md`),
             output,

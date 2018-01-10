@@ -12,9 +12,17 @@ const print = xs => {
 	return new hbs.SafeString(escape(xs));
 };
 
-hbs.registerHelper('api-github', file => {
+hbs.registerHelper('api-github-url', file => {
+	const path = file
+		.slice(file.indexOf('/core/') + 1)
+		.slice(0, -'.d.ts'.length);
+
+	return print(`https://github.com/qgrid/ng2/tree/master/${path}.js`);
+});
+
+hbs.registerHelper('api-github-name', file => {
 	const name = path.basename(file).slice(0, -'.d.ts'.length);
-	return print(`https://github.com/qgrid/ng2/core/${name}.js`);
+	return print(`${name}.js`);
 });
 
 hbs.registerHelper('api-title', unit => {
@@ -22,11 +30,11 @@ hbs.registerHelper('api-title', unit => {
 });
 
 hbs.registerHelper('api-type', meta => {
-	const type = meta.name || meta.type;
+	const type = meta.name || meta.type;	
 	if (meta.elementType) {
 		return print(type === 'array'
-			? `${type}<${meta.elementType.name}>`
-			: `${meta.elementType.name}[]`);
+			? `${meta.elementType.name}[]`
+			: `${type}<${meta.elementType.name}>`);
 	}
 
 	return print(type);
