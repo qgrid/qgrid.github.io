@@ -6,11 +6,8 @@ order: 5
 ---
 A class that gives access to the high level grid data structures.
 
-Property|Type|Description<a class="github-link2" target="_blank" href="https://github.com/qgrid/ng2/tree/master/core/data/data.model.js"><span>data.model.js</span></a>
----|---|---
-columns|`ColumnModel[]`|Set of columns to display.<br>Usually data columns can be setup from 3 places: 1. Columns binding property. 2. Columns component. 3. Grid model data columns property.  We can have 3 sources of columns because each column has `key` property, that allows to make a merge. If you have defined columns in javascript and in template with the same key, algorithm will try persist settings from both sources but javascript will have top priority. 
-pipe|`IPipe[]`|Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,<br>see `PipeModel` that contains information when grid demands refreshing.
-rows|`any[]`|List of rows to display, rows property can be filled from the grid rows html or grid model data rows property.
+{% docTable "/api/data.model.json" %}
+
 ### Usage
 Usually grid user can define this properties in different places.
 

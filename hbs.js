@@ -60,6 +60,12 @@ hbs.registerHelper('api-type', meta => {
 	return print(type);
 });
 
+hbs.registerHelper('api-path', file => {
+	const name = path.basename(file).slice(0, -'.d.ts'.length);
+	return print(`/api/${name}.json`);
+});
+	
+
 hbs.registerHelper('api-description', comment => {
 	const lines = split(comment);
 	const result = [];

@@ -1,0 +1,131 @@
+{
+   "id": 15,
+   "name": "\"grid/grid.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/grid/grid.model.d.ts",
+   "children": [
+      {
+         "id": 16,
+         "name": "GridModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class contains basic grid options like id and title."
+         },
+         "children": [
+            {
+               "id": 17,
+               "name": "id",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Grid identifier that is in sync with element id.\nMostly this id is used in a style generation routine to link concrete grid with appropriate style.\nAlso is used in data manipulation plugin to identify correct list of pressets."
+               },
+               "sources": [
+                  {
+                     "fileName": "grid/grid.model.d.ts",
+                     "line": 10,
+                     "character": 3
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 18,
+               "name": "status",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Indicates a state of the model:\n1. `unbound` - model is not connected to a grid element.\n2. `bound` - model connected to a grid element.",
+                  "text": "Current version of the grid doesn't allow to use one model on several grids,\nso if user will try to do that exception will be thrown.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "grid/grid.model.d.ts",
+                     "line": 20,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 19,
+               "name": "title",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Text that is used by grid title plugin to show header inside top toolbar."
+               },
+               "sources": [
+                  {
+                     "fileName": "grid/grid.model.d.ts",
+                     "line": 25,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  17,
+                  18,
+                  19
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "grid/grid.model.d.ts",
+               "line": 4,
+               "character": 30
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            16
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "grid/grid.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 13
+}

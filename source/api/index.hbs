@@ -7,12 +7,7 @@ order: {{api-order unit}}
 {{#each unit.children}}
 {{api-description comment}}
 
-Property|Type|Description<a class="github-link2" target="_blank" href="{{api-github-url ../unit/originalName}}"><span>{{api-github-name ../unit/originalName}}</span></a>
----|---|---
-{{#each children}}
-{{#if comment.shortText}}
-{{name}}|`{{api-type type}}`|{{api-comment-inline comment}}
-{{/if}}
-{{/each}}
+{% docTable "{{api-path ../unit/originalName}}" %}
+
 {{api-comment comment}}
 {{/each}}

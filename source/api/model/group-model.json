@@ -1,0 +1,172 @@
+{
+   "id": 115,
+   "name": "\"group/group.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid-doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
+   "children": [
+      {
+         "id": 116,
+         "name": "GroupModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that allows to apply some hierarchy to the grid.\nHowever user is allowed to write any kind of custom hierarchies just by overriding default pipe and\nworking with `Node` object from the grid service."
+         },
+         "children": [
+            {
+               "id": 119,
+               "name": "by",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of column keys to build appropriate hierarchy.\nEach item represents next level."
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 23,
+                     "character": 3
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "string"
+                  }
+               }
+            },
+            {
+               "id": 118,
+               "name": "mode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "How grid will render nodes:\n1. `column` - all hierarchy levels inside one group type column.\n2. `subhead` - group column try to use all available space to display hierarchy.\n3. `rowspan` -"
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 18,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 117,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 10,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Resource"
+               }
+            },
+            {
+               "id": 120,
+               "name": "shortcut",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 24,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "object"
+               }
+            },
+            {
+               "id": 121,
+               "name": "toggle",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 25,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  119,
+                  118,
+                  117,
+                  120,
+                  121
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "group/group.model.d.ts",
+               "line": 9,
+               "character": 31
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            116
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "group/group.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 14
+}

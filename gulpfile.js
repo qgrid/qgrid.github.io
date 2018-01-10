@@ -47,6 +47,12 @@ gulp.task('markdown', done => {
             output,
             { flag: 'w' }
         );
+
+        fs.writeFileSync(
+            path.join(API_FOLDER, 'model', `${name}.json`),
+            JSON.stringify(unit, null, 3),
+            { flag: 'w' }
+        );
     });
 
     done();
