@@ -3,7 +3,7 @@
 #nav {
   grid-area: nav;
   color: $color-sidebar-text;
-  background: $color-sidebar-background;
+  background-color: $color-sidebar-background;
   position: fixed;
   height: 100vh;
   padding-top: $header-height;
@@ -28,12 +28,16 @@
     overflow-y: auto;
     overflow-x: hidden;
     ul {
-      margin: 10px 0 0 20px;
+      margin: 0;
       padding: 0;
       li {
         list-style: none;
         font-size: 16px;
         line-height: 33px;
+        padding-left: 20px;
+        &:first-child {
+          margin-top: 10px;
+        }
         h3 {
           font-size: 18px;
           font-weight: bold;
@@ -41,18 +45,22 @@
         }
         a,
         span {
-          color: $color-sidebar-text;
+          color: rgba(255, 255, 255, 0.8);
           text-decoration: none;
-          opacity: 0.8;
           margin-left: 20px;
           cursor: pointer;
           //transition: 0.3s;
           &:hover {
-            opacity: 1
+            color: white;
           }
+        }
+      }
+      .current {
+        a,
+        span {
+          color: white;
         }
       }
     }
   }
 }
-

@@ -6,12 +6,12 @@ function toggleVisibility(e) {
 	}
 	var nav = document.getElementById('nav');
 	var overlay = document.getElementById('overlay');
-	if (nav.style.display === 'block' || nav.style.display === '') {
-		nav.style.display = 'none';
-		overlay.style.display = 'none';
-	} else {
+	if (nav.style.display === 'none' || nav.style.display === '') {
 		nav.style.display = 'block';
 		overlay.style.display = 'block';
+	} else {
+		nav.style.display = 'none';
+		overlay.style.display = 'none';
 	}
 }
 
@@ -70,6 +70,11 @@ function init() {
 	}
 	var overlay = document.getElementById('overlay');
 	overlay.addEventListener('click', toggleVisibility, true);
+
+	var nav = document.getElementById('nav');
+	if (nav) {
+		nav.addEventListener('click', toggleVisibility, true);
+	}
 
 	var searchFields = document.getElementsByClassName('search');
 	if (searchFields.length) {

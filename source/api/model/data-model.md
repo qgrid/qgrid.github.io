@@ -38,4 +38,4 @@ columns|`array<ColumnModel>`|Set of columns to display.<br />Usually data column
 pipe|`array<IPipe>`|Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,<br />see `PipeModel` that contains information when grid demands refreshing.
 rows|`array<any>`|List of rows to display.<br />Rows property can be filled from the grid rows html or grid model data rows<br />property.
 
-[file in github](https://github.com/qgrid/ng2/core/data.model.js)
+[file in github](https://github.com/qgrid/ng2/tree/master/core/data/data.model.js)
