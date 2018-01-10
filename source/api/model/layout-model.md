@@ -10,3 +10,4 @@ Property|Type|Description<a class="github-link2" target="_blank" href="https://g
 ---|---|---
 columns|`Map`|Set of column sizes.
 rows|`Map`|Set of row sizes.
+

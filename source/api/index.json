@@ -2479,8 +2479,8 @@
 						"isExported": true
 					},
 					"comment": {
-						"shortText": "A class that gives access to the high level grid data structures.\nUsually grid user can define this properties in different places.",
-						"text": "Inside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
+						"shortText": "A class that gives access to the high level grid data structures.",
+						"text": "### Usage\nUsually grid user can define this properties in different places.\n\nInside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t <q-grid-columns>\n\t    <q-grid-column key=\"id\"></q-grid-column>\n     <q-grid-column key=\"name\"><q-grid-column>\n\t </q-grid-columns>\n</q-grid>\n```\n\nInside js code throught the model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\ngridModel.data({\n\t  rows: userRows,\n   columns: userColumns\n});\n```\n"
 					},
 					"children": [
 						{
@@ -2498,7 +2498,7 @@
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 56,
+									"line": 55,
 									"character": 11
 								}
 							],
@@ -2525,7 +2525,7 @@
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 62,
+									"line": 61,
 									"character": 8
 								}
 							],
@@ -2546,12 +2546,12 @@
 								"isExported": true
 							},
 							"comment": {
-								"shortText": "List of rows to display.\nRows property can be filled from the grid rows html or grid model data rows\nproperty."
+								"shortText": "List of rows to display, rows property can be filled from the grid rows html or grid model data rows property."
 							},
 							"sources": [
 								{
 									"fileName": "data/data.model.d.ts",
-									"line": 41,
+									"line": 40,
 									"character": 8
 								}
 							],
@@ -2578,7 +2578,7 @@
 					"sources": [
 						{
 							"fileName": "data/data.model.d.ts",
-							"line": 34,
+							"line": 35,
 							"character": 30
 						}
 					]

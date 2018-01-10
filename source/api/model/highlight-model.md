@@ -10,3 +10,4 @@ Property|Type|Description<a class="github-link2" target="_blank" href="https://g
 ---|---|---
 columns|`ColumnModel[]`|Set of columns that should be highlighted.
 rows|`any[]`|Set of rows that should be highlighted.
+

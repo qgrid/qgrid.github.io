@@ -11,3 +11,4 @@ Property|Type|Description<a class="github-link2" target="_blank" href="https://g
 columnIndex|`number`|Index of column for focused cell.
 isActive|`boolean`|Indicates if grid is focused or not.
 rowIndex|`number`|Index of row for focused cell.
+
