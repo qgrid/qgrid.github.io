@@ -38,10 +38,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: false
-  auto_detect: false
-  tab_replace:
+  enable: false
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -87,3 +84,8 @@ node_sass:
   precision: 5
   sourceComments: false
   outputStyle: nested
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'vs'
+  line_number: true    # default false
