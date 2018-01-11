@@ -26,15 +26,13 @@ header {
 		grid-area: header;
 		color: $color-top-text;
 		background: $color-top-background;
-		position: fixed;
 		height: $header-height;
 		width: 100vw;
 		font-family: $font-serif;
-		box-shadow: 0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 %header-icon {
-		margin: 17px 0 17px 17px;
+		margin: 17px 0 17px 20px;
 }
 
 .logo {
@@ -44,9 +42,9 @@ header {
 
 .github {
 		font-size: 26px;
-		position: fixed;
+		position: absolute;
 		top: 17px;
-		right: 17px;
+		right: 20px;
 }
 
 main {
@@ -79,10 +77,7 @@ footer {
 %accent-button {
 		text-decoration: none;
 		vertical-align: middle;
-		-webkit-border-radius: 2px;
-		-moz-border-radius: 2px;
-		border-radius: 2px;
-		background-color: $color-go-to-button;
+		background-color: $accent-color;
 		color: white;
 		line-height: 24px;
 		font-size: 18px;
@@ -90,9 +85,8 @@ footer {
 		margin-bottom: 5px;
 		padding: 18px;
 		width: 248px;
-		box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.12), 2px 1px 3px rgba(0, 0, 0, 0.24);
 		&:hover {
-				box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16), 3px 3px 6px rgba(0, 0, 0, 0.23);
+			background-color: darken($accent-color, 5%);
 		}
 		&:last-child {
 				margin-right: 0;
