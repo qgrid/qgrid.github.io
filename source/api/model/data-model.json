@@ -1,0 +1,142 @@
+{
+   "id": 40,
+   "name": "\"data/data.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/data/data.model.d.ts",
+   "children": [
+      {
+         "id": 41,
+         "name": "DataModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that gives access to the high level grid data structures.",
+            "text": "## Usage\nUsually grid user can define this properties in different places.\nInside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
+         },
+         "children": [
+            {
+               "id": 43,
+               "name": "columns",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:",
+                  "text": "1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\n\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "data/data.model.d.ts",
+                     "line": 57,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "ColumnModel",
+                     "id": 277
+                  }
+               }
+            },
+            {
+               "id": 44,
+               "name": "pipe",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,\nsee `PipeModel` that contains information when grid demands refreshing."
+               },
+               "sources": [
+                  {
+                     "fileName": "data/data.model.d.ts",
+                     "line": 63,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "IPipe"
+                  }
+               }
+            },
+            {
+               "id": 42,
+               "name": "rows",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of rows to display.\nRows property can be filled from the grid rows html or grid model data rows\nproperty."
+               },
+               "sources": [
+                  {
+                     "fileName": "data/data.model.d.ts",
+                     "line": 42,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  43,
+                  44,
+                  42
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "data/data.model.d.ts",
+               "line": 35,
+               "character": 30
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            41
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "data/data.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 5
+}

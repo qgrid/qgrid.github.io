@@ -1,38 +1,24 @@
 // icons
-$iconMap: (
-        search-glass:'icon-search',
-        logo:'icon-qgrid-logo-simple',
-        angular: 'icon-angular',
-        angular-js: 'icon-angularjs',
-        react: 'icon-react',
-        vue: 'icon-vue',
-        backbone:'icon-backbone',
-        github: 'icon-github',
-        nav-trigger: 'icon-hamburger',
-        search-trigger: 'icon-search'
-);
-
+$iconMap: ( search-glass:'icon-search', logo:'icon-qgrid-logo-simple', angular: 'icon-angular', angular-js: 'icon-angularjs', react: 'icon-react', vue: 'icon-vue', backbone:'icon-backbone', github: 'icon-github', nav-trigger: 'icon-hamburger', search-trigger: 'icon-search');
 // images
 $logo-url: '../assets/images/logo.png';
 $qgrid-logo-url: '../assets/images/qgrid-logo.svg';
-$featuresMap: (
-        virtualize:('../assets/images/virtualize.svg', 224px, 242px),
-        css:('../assets/images/css.svg', 297px, 142px),
-  //custom: '../assets/images/custom.svg',
-        js:('../assets/images/js.svg', 200px, 200px)
-);
-
+$featuresMap: ( virtualize:('../assets/images/virtualize.svg', 224px, 242px), css:('../assets/images/css.svg', 297px, 142px), //custom: '../assets/images/custom.svg',
+js:('../assets/images/js.svg', 200px, 200px));
 // fonts
 $font-size: 14px;
-$font-sans: "Roboto", Helvetica, Arial, sans-serif;
-$font-serif: 'Roboto Slab', serif;
-$font-mono: "Roboto Mono", monospace;
-
+$font-sans: "Roboto",
+Helvetica,
+Arial,
+sans-serif;
+$font-serif: 'Roboto Slab',
+serif;
+$font-mono: "Roboto Mono",
+monospace;
 //whitescale
 $whitescale-75: rgba(255, 255, 255, 0.75);
 $whitescale-50: rgba(255, 255, 255, 0.5);
 $whitescale-30: rgba(255, 255, 255, 0.3);
-
 // colors
 $color-text: #333;
 $color-background: #fff;
@@ -48,13 +34,9 @@ $color-table-header: $color-top-background;
 $color-table-even-row: #CBDFFB;
 $color-table-odd-row: #e7f1ff;
 $color-go-to-button: #0048A8;
-
 // header
-
 $header-height: 70px;
-
 // nav
 $nav-width: 300px;
-
 // footer
 $footer-height: 215px;

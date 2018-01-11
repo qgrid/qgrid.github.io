@@ -5,7 +5,12 @@ group: API
 order: 5
 ---
 A class that gives access to the high level grid data structures.
-Usually grid user can define this properties in different places. Inside html through attribute bindings:
+
+{% docTable "source/api/model/data-model.json" %}
+
+## Usage
+Usually grid user can define this properties in different places.
+Inside html through attribute bindings:
 ```html
 <q-grid [columns]="userColumns" [rows]="userRows">
 ```
@@ -31,11 +36,3 @@ gridModel.data({
 })
 ```
 
-
-Property|Type|Description
----|---|---
-columns|`array<ColumnModel>`|Set of columns to display.<br />Usually data columns can be setup from 3 places:<br />1. Columns binding property.<br />2. Columns component.<br />3. Grid model data columns property.<br />We can have 3 sources of columns because each column has `key` property,<br />that allows to make a merge. If you have defined columns in javascript and in template<br />with the same key, algorithm will try persist settings from both sources but<br />javascript will have top priority.
-pipe|`array<IPipe>`|Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,<br />see `PipeModel` that contains information when grid demands refreshing.
-rows|`array<any>`|List of rows to display.<br />Rows property can be filled from the grid rows html or grid model data rows<br />property.
-
-[file in github](https://github.com/qgrid/ng2/tree/master/core/data/data.model.js)

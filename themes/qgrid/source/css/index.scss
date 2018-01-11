@@ -1,180 +1,173 @@
 @import "layout";
-
 .index {
-  grid-template-areas: "header" "content" "footer";
-  grid-template-columns: 1fr;
-  grid-template-rows: $header-height auto $footer-height;
-  font-family: $font-serif;
-
-  #overlay {
-    z-index: 11;
-  }
-
-  .search {
-    display: none;
-  }
-  .features {
-    margin-bottom: 45px;
-    padding: 0;
-    list-style: none;
-    grid-area: features;
-    display: flex;
-    flex-flow: column wrap;
-    li {
-      flex-flow: row wrap;
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      flex: 1 100%;
-      margin-bottom: 55px;
-      .description {
-        flex: 1 50%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-align: left;
-        padding-left: 0;
-        font-size: 1.5em;
-        line-height: 1.5em;
-        position: relative;
-        p {
-          max-width: 400px;
-          position: absolute;
-          margin-bottom: 0;
-        }
-      }
-      div[class^="image-"] {
-        background-position: calc(100% - 70px) 0;
-      }
-      &:nth-child(2n+1) {
-        flex-direction: row-reverse;
-        .description {
-          text-align: right;
-          padding-right: 0;
-          p {
-            text-align: right;
-            position: absolute;
-            right: 0;
-          }
-        }
-        div[class^="image-"] {
-          background-position: 70px 0;
-        }
-      }
-    }
-  }
-  .go-to {
-    grid-area: go-to;
-  }
-
-  .get-started {
-    grid-area: get-started;
-    background-color: $color-sidebar-background;
-    text-align: center;
-    color: $color-top-text;
-    padding: 40px 0 0 0;
-    .qgrid-logo {
-      margin-bottom: 63px;
-    }
-    h1, h2 {
-      margin: 0;
-      font-weight: normal;
-    }
-    h1 {
-      font-size: 2em;
-      line-height: 2em;
-    }
-    h2 {
-      font-size: 1.714em;
-      line-height: 1.714em;
-      margin-bottom: 10px;
-    }
-    .frameworks {
-      list-style: none;
-      padding: 0;
-      margin: 67px 0 120px 0;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-content: center;
-      li {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 11px;
-        font-size: 4.5em;
-        & > a {
-          text-decoration: none;
-          color: white;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-        .angular,
-        .angular-js,
-        .react,
-        .vue,
-        .backbone {
-          color: white;
-        }
-        label {
-          display: block;
-          padding: 5px 10px;
-          border-radius: 11px;
-          font: {
-            size: 10px;
-            family: $font-sans;
-          }
-          text-transform: uppercase;
-          line-height: 11px;
-          background-color: rgba(0, 72, 168, 0.35);
-          color: $whitescale-50;
-        }
-        &.ready label {
-          background-color: rgba(0, 72, 168, 0.75);
-          color: $whitescale-75;
-          cursor: pointer;
-        }
-
-        &.active label {
-          background-color: #0048A8;
-          color: white;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-
-  .example {
-    margin-top: -50px;
-    grid-area: example;
-    align-items: center;
-    margin-bottom: 100px;
-    .sb-embed {
-      flex-flow: row wrap;
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-    }
-    iframe {
-      margin-top: -38px;
-      height: 540px;
-      width: 60%;
-      border: none;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    }
-  }
-
-  .go-to {
-    text-align: center;
-    margin-bottom: 100px;
-    font-size: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    a {
-      @extend %accent-button;
-      margin: 5px;
-    }
-  }
-
+		grid-template-areas: "header" "content" "footer";
+		grid-template-columns: 1fr;
+		grid-template-rows: $header-height auto $footer-height;
+		font-family: $font-serif;
+		#overlay {
+				z-index: 11;
+		}
+		.search {
+				display: none;
+		}
+		.features {
+				margin-bottom: 45px;
+				padding: 0;
+				list-style: none;
+				grid-area: features;
+				display: flex;
+				flex-flow: column wrap;
+				li {
+						flex-flow: row wrap;
+						display: flex;
+						justify-content: center;
+						align-items: stretch;
+						flex: 1 100%;
+						margin-bottom: 55px;
+						.description {
+								flex: 1 50%;
+								-webkit-box-sizing: border-box;
+								-moz-box-sizing: border-box;
+								box-sizing: border-box;
+								text-align: left;
+								padding-left: 0;
+								font-size: 1.5em;
+								line-height: 1.5em;
+								position: relative;
+								p {
+										max-width: 400px;
+										position: absolute;
+										margin-bottom: 0;
+								}
+						}
+						div[class^="image-"] {
+								background-position: calc(100% - 70px) 0;
+						}
+						&:nth-child(2n+1) {
+								flex-direction: row-reverse;
+								.description {
+										text-align: right;
+										padding-right: 0;
+										p {
+												text-align: right;
+												position: absolute;
+												right: 0;
+										}
+								}
+								div[class^="image-"] {
+										background-position: 70px 0;
+								}
+						}
+				}
+		}
+		.go-to {
+				grid-area: go-to;
+		}
+		.get-started {
+				grid-area: get-started;
+				background-color: $color-sidebar-background;
+				text-align: center;
+				color: $color-top-text;
+				padding: 40px 0 0 0;
+				.qgrid-logo {
+						margin-bottom: 63px;
+				}
+				h1,
+				h2 {
+						margin: 0;
+						font-weight: normal;
+				}
+				h1 {
+						font-size: 2em;
+						line-height: 2em;
+				}
+				h2 {
+						font-size: 1.714em;
+						line-height: 1.714em;
+						margin-bottom: 10px;
+				}
+				.frameworks {
+						list-style: none;
+						padding: 0;
+						margin: 67px 0 120px 0;
+						display: flex;
+						flex-flow: row wrap;
+						justify-content: center;
+						align-content: center;
+						li {
+								display: inline-block;
+								vertical-align: middle;
+								margin-right: 11px;
+								font-size: 4.5em;
+								&>a {
+										text-decoration: none;
+										color: white;
+								}
+								&:last-child {
+										margin-right: 0;
+								}
+								.angular,
+								.angular-js,
+								.react,
+								.vue,
+								.backbone {
+										color: white;
+								}
+								label {
+										display: block;
+										padding: 5px 10px;
+										border-radius: 11px;
+										font: {
+												size: 10px;
+												family: $font-sans;
+										}
+										text-transform: uppercase;
+										line-height: 11px;
+										background-color: rgba(0, 72, 168, 0.35);
+										color: $whitescale-50;
+								}
+								&.ready label {
+										background-color: rgba(0, 72, 168, 0.75);
+										color: $whitescale-75;
+										cursor: pointer;
+								}
+								&.active label {
+										background-color: #0048A8;
+										color: white;
+										cursor: pointer;
+								}
+						}
+				}
+		}
+		.example {
+				margin-top: -50px;
+				grid-area: example;
+				align-items: center;
+				margin-bottom: 100px;
+				.preview {
+						flex-flow: row wrap;
+						display: flex;
+						justify-content: center;
+						overflow: hidden;
+				}
+				iframe {
+						margin-top: -38px;
+						height: 540px;
+						width: 60%;
+						border: none;
+						box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+				}
+		}
+		.go-to {
+				text-align: center;
+				margin-bottom: 100px;
+				font-size: 0;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: center;
+				a {
+						@extend %accent-button;
+						margin: 5px;
+				}
+		}
 }

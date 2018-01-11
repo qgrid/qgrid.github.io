@@ -5,15 +5,9 @@ group: API
 order: {{api-order unit}}
 ---
 {{#each unit.children}}
+{{api-description comment}}
+
+{% docTable "{{api-path ../unit/originalName}}" %}
+
 {{api-comment comment}}
-
-Property|Type|Description
----|---|---
-{{#each children}}
-{{#if comment.shortText}}
-{{name}}|`{{api-type type}}`|{{api-comment-inline comment}}
-{{/if}}
 {{/each}}
-
-{{/each}}
-[file in github]({{api-github unit.originalName}})

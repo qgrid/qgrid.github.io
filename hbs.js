@@ -1,65 +1,72 @@
 const hbs = require('handlebars')
 const path = require('path');
 
-const isArray = x => x.constructor === Array.prototype.constructor;
-const br = x => x.replace(/\n/g, '<br />');
-const escape = x => x;
-const print = xs => {
+function isArray(x) {
+	return x.constructor === Array.prototype.constructor;
+}
+
+function print(xs) {
 	if (isArray(xs)) {
-		return new hbs.SafeString(xs.map(escape).join(' '));
+		return new hbs.SafeString(xs.join('\n'));
 	}
 
-	return new hbs.SafeString(escape(xs));
-};
+	return new hbs.SafeString(xs);
+}
 
-hbs.registerHelper('api-github', file => {
-	const name = path.basename(file).slice(0, -'.d.ts'.length);
-	return print(`https://github.com/qgrid/ng2/core/${name}.js`);
-});
+function split(comment) {
+	const result = [];
+	if (comment) {
+		if (comment.shortText) {
+			result.push(comment.shortText);
+		}
+
+		if (comment.text) {
+			const lines = comment.text.split(/\r?\n/);
+			result.push(...lines);
+		}
+	}
+	return result;
+};
 
 hbs.registerHelper('api-title', unit => {
 	return print(unit.children.map(x => x.name).join(', '));
 });
 
-hbs.registerHelper('api-type', meta => {
-	const type = meta.name || meta.type;
-	if (meta.elementType) {
-		return print(type === 'array'
-			? `${type}<${meta.elementType.name}>`
-			: `${meta.elementType.name}[]`);
+hbs.registerHelper('api-path', file => {
+	const name = path.basename(file).slice(0, -'.d.ts'.length).replace(/\./g, '-');
+	return print(`source/api/model/${name}.json`);
+});
+
+hbs.registerHelper('api-description', comment => {
+	const lines = split(comment);
+	const result = [];
+	for (const line of lines) {
+		if (line[0] === '#') {
+			break;
+		}
+
+		result.push(line);
 	}
 
-	return print(type);
+	return print(result);
 });
+
 
 hbs.registerHelper('api-comment', comment => {
-	const lines = [];
-	if (comment) {
-		if (comment.shortText) {
-			lines.push(comment.shortText);
+	const lines = split(comment);
+	const result = [];
+	let isComment = false;
+	for (const line of lines) {
+		if (!isComment && line[0] === '#') {
+			isComment = true;
 		}
 
-		if (comment.text) {
-			lines.push(comment.text);
-		}
-	}
-
-	return print(lines);
-});
-
-hbs.registerHelper('api-comment-inline', comment => {
-	const lines = [];
-	if (comment) {
-		if (comment.shortText) {
-			lines.push(br(comment.shortText));
-		}
-
-		if (comment.text) {
-			lines.push(br(comment.text));
+		if (isComment) {
+			result.push(line);
 		}
 	}
 
-	return print(lines);
+	return print(result);
 });
 
 hbs.registerHelper('api-order', unit => unit.order);

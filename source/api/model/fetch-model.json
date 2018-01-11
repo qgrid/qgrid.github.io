@@ -1,0 +1,82 @@
+{
+   "id": 238,
+   "name": "\"fetch/fetch.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/fetch/fetch.model.d.ts",
+   "children": [
+      {
+         "id": 239,
+         "name": "FetchModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that can be used in custom user pipe within `PaginationModel` to make server request when\nvirtual scrolling is enabeld."
+         },
+         "children": [
+            {
+               "id": 240,
+               "name": "skip",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Number of rows that should be skipped to get new portion of data,\nthis property is filled by internal virtual scroll service."
+               },
+               "sources": [
+                  {
+                     "fileName": "fetch/fetch.model.d.ts",
+                     "line": 10,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  240
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "fetch/fetch.model.d.ts",
+               "line": 5,
+               "character": 31
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            239
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "fetch/fetch.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 9
+}

@@ -1,56 +1,57 @@
 @import "variables";
 @import "iconfont";
-
 %icon {
-  display: inline-block;
-  vertical-align: middle;
-  outline: none;
-  border: 0 transparent;
-  color: white;
-  text-decoration: none;
-  background-color: transparent;
+		display: inline-block;
+		vertical-align: middle;
+		outline: none;
+		border: 0 transparent;
+		color: white;
+		text-decoration: none;
+		background-color: transparent;
 }
 
 @mixin generate-icons($map) {
-  @each $class, $icon-class in $map {
-    .#{$class} {
-      @extend %icon, .icon, .#{$icon-class};
-    }
-  }
+		@each $class,
+		$icon-class in $map {
+				.#{$class} {
+						@extend %icon,
+						.icon,
+						.#{$icon-class};
+				}
+		}
 }
 
 @mixin generate-features-images($map) {
-  @each $class, $props in $map {
-    $url: nth($props, 1);
-    $width: nth($props, 2);
-    $height: nth($props, 3);
-    .image-#{$class} {
-      @extend %icon;
-      background: url($url) 50% 50% no-repeat;
-      background-size: $width $height;
-      height: $height;
-      flex: 1 50%;
-      margin: 0;
-    }
-  }
+		@each $class,
+		$props in $map {
+				$url: nth($props, 1);
+				$width: nth($props, 2);
+				$height: nth($props, 3);
+				.image-#{$class} {
+						@extend %icon;
+						background: url($url) 50% 50% no-repeat;
+						background-size: $width $height;
+						height: $height;
+						flex: 1 50%;
+						margin: 0;
+				}
+		}
 }
 
 //temp plug until image will be provided
 .image-custom {
-  height: 242px;
-  flex: 1 50%;
-  margin: 0;
+		height: 242px;
+		flex: 1 50%;
+		margin: 0;
 }
 
 .qgrid-logo {
-  @extend %icon;
-  background: url($qgrid-logo-url) 50% 50% no-repeat;
-  width: 198px;
-  height: 136px;
-  margin: 0;
+		@extend %icon;
+		background: url($qgrid-logo-url) 50% 50% no-repeat;
+		width: 198px;
+		height: 136px;
+		margin: 0;
 }
 
 @include generate-icons($iconMap);
 @include generate-features-images($featuresMap);
-
-

@@ -6,10 +6,6 @@ order: 11
 ---
 A class that contains focused cell position.
 
-Property|Type|Description
----|---|---
-columnIndex|`number`|Index of column for focused cell.
-isActive|`boolean`|Indicates if grid is focused or not.
-rowIndex|`number`|Index of row for focused cell.
+{% docTable "source/api/model/focus-model.json" %}
 
-[file in github](https://github.com/qgrid/ng2/tree/master/core/focus/focus.model.js)
+
