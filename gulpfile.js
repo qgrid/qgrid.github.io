@@ -6,7 +6,7 @@ const hbs = require('./hbs');
 
 const API_FOLDER = './source/api/'
 const API_JSON_PATH = path.join(API_FOLDER, 'index.json');
-const API_TEMPLATE = fs.readFileSync(path.join(API_FOLDER, 'index.hbs'), 'utf8');
+const API_TEMPLATE = fs.readFileSync(path.join(API_FOLDER, 'index.dhbs'), 'utf8');
 
 gulp.task('typedoc', () =>
     gulp
