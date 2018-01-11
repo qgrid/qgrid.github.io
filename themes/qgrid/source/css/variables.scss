@@ -3,8 +3,10 @@ $iconMap: ( search-glass:'icon-search', logo:'icon-qgrid-logo-simple', angular: 
 // images
 $logo-url: '../assets/images/logo.png';
 $qgrid-logo-url: '../assets/images/qgrid-logo.svg';
-$featuresMap: ( virtualize:('../assets/images/virtualize.svg', 224px, 242px), css:('../assets/images/css.svg', 297px, 142px), //custom: '../assets/images/custom.svg',
-js:('../assets/images/js.svg', 200px, 200px));
+$featuresMap: ( virtualize:('../assets/images/virtualize.svg', 224px, 242px),
+        css:('../assets/images/css.svg', 297px, 142px),
+        custom: ('../assets/images/custom.svg', 231px, 199px),
+        js:('../assets/images/js.svg', 200px, 200px));
 // fonts
 $font-size: 14px;
 $font-sans: "Roboto",
