@@ -8,6 +8,10 @@ body {
 	grid-gap: 16px;
 }
 
+header {
+	display: none;
+}
+
 h2 {
 	font-family: $font-serif;
 	font-weight: normal;
