@@ -54,6 +54,9 @@
 				}
 		}
 		.pages {
+				header {
+					display: block;
+				}
 				grid-template-areas: "header" "content" "footer";
 				grid-template-columns: 1fr;
 				.nav-trigger {
@@ -65,12 +68,6 @@
 						z-index: 12;
 						.nav-header {
 								display: block;
-						}
-				}
-				header {
-						.search,
-						.search-trigger {
-								display: none !important;
 						}
 				}
 		}

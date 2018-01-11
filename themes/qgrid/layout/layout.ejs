@@ -65,7 +65,9 @@
 <% if (!isIndex) { %>
 <aside id="nav">
     <div class="nav-header">
-        <input class="search" placeholder="Search" type="search" data-stop-propagation />
+        <a href="<%- url_for('/') %>" class="logo"></a>
+        <button class="search-trigger" id="search-trigger" data-stop-propagation></button>
+        <input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
     </div>
     <%- partial('partials/nav') %>
 </aside>
