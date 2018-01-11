@@ -1,5 +1,6 @@
 const path = require('path');
-const fs = require('fs')
+const fs = require('fs');
+const marked = require('marked');
 
 const apiGithubUrl = file => {
   const path = file
@@ -37,7 +38,7 @@ const apiComment = comment => {
       result.push(...lines);
     }
   }
-  return result.join('\n');
+  return marked(result.join('\n'));
 };
 
 
@@ -49,7 +50,7 @@ const helper = args => {
   const unitMeta = unitCls.children;
   const lines = unitMeta
     .filter(m => !!(m.comment && m.comment.shortText))
-    .map(m => `<tr><td>${m.name}</td><td>${apiType(m.type)}</td><td>${apiComment(m.comment)}</td></tr>`);
+    .map(m => `<tr><td>${m.name}</td><td><code>${apiType(m.type)}</code></td><td>${apiComment(m.comment)}</td></tr>`);
 
   const template = `
   <table>
