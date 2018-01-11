@@ -32,12 +32,12 @@ header {
 }
 
 %header-icon {
-	margin: 17px 0 17px 20px;
+	margin: 80px 0 35px 80px
 }
 
 .logo {
 	@extend %header-icon;
-	font-size: 170px;
+	font-size: 100px;
 }
 
 .github {

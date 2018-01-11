@@ -12,6 +12,14 @@ header {
 	display: none;
 }
 
+h1 {
+	font-family: "Roboto Slab", serif;
+	font-weight: normal;
+	padding: 0px 0 55px 0;
+	margin-top: 120px;
+	font-size: 50px;
+}
+
 h2 {
 	font-family: $font-serif;
 	font-weight: normal;
@@ -62,14 +70,14 @@ p {
 		color: $whitescale-75;
 		width: 0 0 1px 0;
 	}
+	background: #444;
 	text-decoration: none;
 	outline: none;
 	color: white;
-	display: none;
 	vertical-align: middle;
 	margin: 20px auto 25px 17px;
-	padding: 5px;
-	width: calc(#{$nav-width} - 120px);
+	padding: 15px;
+	width: 280px;
 	&::-webkit-search-cancel-button {
 		-webkit-appearance: none;
 	} //need to write them separately, not through comma

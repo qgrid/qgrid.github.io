@@ -8,6 +8,9 @@ table {
 				&:first-child {
 					margin-top: 0;
 				}
+				&:last-child {
+					margin-bottom: 0;
+				}
 			}
 			padding: 1em;
 			text-align: left;
@@ -33,5 +36,6 @@ table {
 		font-family: $font-serif;
 		font-weight: normal;
 		background: $color-table-header;
+		padding: 0.5em !important;
 	}
 }
