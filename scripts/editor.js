@@ -2,7 +2,7 @@ const helper = args => {
   const name = args[0];
   const file = "app/app.component.html";
   return `
-    <span class="active tab-panel tab-preview">
+    <span class="editor">
       <iframe src="//stackblitz.com/edit/${name}?embed=1&file=${file}&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
     </span>
 `;
