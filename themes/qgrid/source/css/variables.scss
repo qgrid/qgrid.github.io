@@ -20,20 +20,22 @@ $whitescale-75: rgba(255, 255, 255, 0.75);
 $whitescale-50: rgba(255, 255, 255, 0.5);
 $whitescale-30: rgba(255, 255, 255, 0.3);
 // colors
+$accent-color: #0078CF;
+
 $color-text: #333;
 $color-background: #fff;
 $color-top-text: #fff;
-$color-top-background: #2F80ED;
+$color-top-background: #353535;
 $color-sidebar-text: #fff;
-$color-sidebar-background: #2F80ED;
+$color-sidebar-background: #353535;
 $color-footer-text: #fff;
-$color-footer-background: #1D2E45;
+$color-footer-background: #111;
 $color-scrollbar-thumb: #649EED;
 $color-scrollbar-background: #F5F5F5;
-$color-table-header: $color-top-background;
+$color-table-header: #2F80ED;
 $color-table-even-row: #CBDFFB;
 $color-table-odd-row: #e7f1ff;
-$color-go-to-button: #0048A8;
+
 // header
 $header-height: 70px;
 // nav

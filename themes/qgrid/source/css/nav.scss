@@ -5,21 +5,11 @@
 		background-color: $color-sidebar-background;
 		position: fixed;
 		height: 100vh;
-		padding-top: $header-height;
 		width: $nav-width;
 		font-family: $font-serif;
 		box-sizing: border-box;
 		border-top: 1px solid $color-sidebar-background; //transition: 0.5s;
-		.nav-header {
-				box-sizing: border-box;
-				height: 69px;
-				border-bottom: 1px solid $whitescale-30;
-				display: none;
-				.search {
-						width: calc(100% - 44px);
-						display: inline-block;
-				}
-		}
+
 		nav {
 				height: 100%;
 				overflow-y: auto;
@@ -52,6 +42,7 @@
 								}
 						}
 						.current {
+							background-color: $accent-color;
 								a,
 								span {
 										color: white;
