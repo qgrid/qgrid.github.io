@@ -25,9 +25,21 @@ const apiType = meta => {
   return type;
 };
 
-const apiComment = meta => {
-  return meta.comment.shortText;
+const apiComment = comment => {
+  const result = [];
+  if (comment) {
+    if (comment.shortText) {
+      result.push(comment.shortText);
+    }
+
+    if (comment.text) {
+      const lines = comment.text.split(/\r?\n/);
+      result.push(...lines);
+    }
+  }
+  return result.join('\n');
 };
+
 
 const helper = args => {
   const jsonPath = args[0];
@@ -37,7 +49,7 @@ const helper = args => {
   const unitMeta = unitCls.children;
   const lines = unitMeta
     .filter(m => !!(m.comment && m.comment.shortText))
-    .map(m => `<tr><td>${m.name}</td><td>${apiType(m.type)}</td><td>${apiComment(m)}</td></tr>`);
+    .map(m => `<tr><td>${m.name}</td><td>${apiType(m.type)}</td><td>${apiComment(m.comment)}</td></tr>`);
 
   const template = `
   <table>
