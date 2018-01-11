@@ -22,7 +22,7 @@ function split(comment) {
 
 		if (comment.text) {
 			const lines = comment.text.split(/\r?\n/);
-			result.push(...lines);			
+			result.push(...lines);
 		}
 	}
 	return result;
@@ -36,11 +36,11 @@ hbs.registerHelper('api-path', file => {
 	const name = path.basename(file).slice(0, -'.d.ts'.length).replace(/\./g, '-');
 	return print(`source/api/model/${name}.json`);
 });
-	
+
 hbs.registerHelper('api-description', comment => {
 	const lines = split(comment);
 	const result = [];
-	for(const line of lines) {
+	for (const line of lines) {
 		if (line[0] === '#') {
 			break;
 		}
@@ -56,7 +56,7 @@ hbs.registerHelper('api-comment', comment => {
 	const lines = split(comment);
 	const result = [];
 	let isComment = false;
-	for(const line of lines) {
+	for (const line of lines) {
 		if (!isComment && line[0] === '#') {
 			isComment = true;
 		}

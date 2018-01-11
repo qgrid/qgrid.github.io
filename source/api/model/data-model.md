@@ -5,6 +5,10 @@ group: API
 order: 5
 ---
 A class that gives access to the high level grid data structures.
+
+{% docTable "source/api/model/data-model.json" %}
+
+## Usage
 Usually grid user can define this properties in different places.
 Inside html through attribute bindings:
 ```html
@@ -31,8 +35,4 @@ gridModel.data({
  columns: userColumns
 })
 ```
-
-
-{% docTable "source/api/model/data-model.json" %}
-
 

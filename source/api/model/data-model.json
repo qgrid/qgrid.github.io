@@ -17,8 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that gives access to the high level grid data structures.\nUsually grid user can define this properties in different places.",
-            "text": "Inside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
+            "shortText": "A class that gives access to the high level grid data structures.",
+            "text": "## Usage\nUsually grid user can define this properties in different places.\nInside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
          },
          "children": [
             {
@@ -30,12 +30,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:\n1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority."
+                  "shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:",
+                  "text": "1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\n\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 54,
+                     "line": 57,
                      "character": 11
                   }
                ],
@@ -62,7 +63,7 @@
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 60,
+                     "line": 63,
                      "character": 8
                   }
                ],
@@ -88,7 +89,7 @@
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 41,
+                     "line": 42,
                      "character": 8
                   }
                ],
@@ -115,7 +116,7 @@
          "sources": [
             {
                "fileName": "data/data.model.d.ts",
-               "line": 34,
+               "line": 35,
                "character": 30
             }
          ]

@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class to handle and visualize custom user behaviors(like add or delete row).",
-            "text": "Action bar plugin uses this model to draw buttons to execute commands.\n```html\n<q-grid>\n <q-grid-action-bar>\n   <q-grid-action title=\"Add Row\" command=\"userAddRowCommand\"></q-grid-action>\n <q-grid-action-bar>\n<q-grid>\n```\n"
+            "text": "Action bar plugin uses this model to draw buttons to execute commands.\n"
          },
          "children": [
             {
@@ -46,7 +46,7 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 18,
+                     "line": 11,
                      "character": 34
                   }
                ]
@@ -65,7 +65,7 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 26,
+                     "line": 19,
                      "character": 7
                   }
                ],
@@ -86,12 +86,12 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Command manager is responsible for the next questions:\n1. What commands can be executed.\n2. How(e.g. in which order) commands should be executed."
+                  "shortText": "Command manager is responsible for the next questions:\n* What commands can be executed.\n* How(e.g. in which order) commands should be executed."
                },
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 38,
+                     "line": 31,
                      "character": 9
                   }
                ],
@@ -111,7 +111,7 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 21,
+                     "line": 14,
                      "character": 10
                   }
                ],
@@ -134,7 +134,7 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 31,
+                     "line": 24,
                      "character": 10
                   }
                ],
@@ -166,7 +166,7 @@
          "sources": [
             {
                "fileName": "action/action.model.d.ts",
-               "line": 18,
+               "line": 11,
                "character": 32
             }
          ]
