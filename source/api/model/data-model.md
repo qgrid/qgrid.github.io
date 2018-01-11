@@ -5,12 +5,7 @@ group: API
 order: 5
 ---
 A class that gives access to the high level grid data structures.
-
-{% docTable "/api/data.model.json" %}
-
-### Usage
 Usually grid user can define this properties in different places.
-
 Inside html through attribute bindings:
 ```html
 <q-grid [columns]="userColumns" [rows]="userRows">
@@ -19,20 +14,25 @@ Inside html through attribute bindings:
 Inside html throught component:
 ```html
 <q-grid>
-	 <q-grid-columns>
-	    <q-grid-column key="id"></q-grid-column>
-     <q-grid-column key="name"><q-grid-column>
-	 </q-grid-columns>
+	<q-grid-columns>
+		<q-grid-column key="id"></q-grid-column>
+		<q-grid-column key="name"><q-grid-column>
+	</q-grid-columns>
 </q-grid>
 ```
 
-Inside js code throught the model:
+Inside js code throught model:
 ```javascript
 const userRows = [];
 const userColumns = [];
+
 gridModel.data({
-	  rows: userRows,
-   columns: userColumns
-});
+ rows: userRows,
+ columns: userColumns
+})
 ```
+
+
+{% docTable "source/api/model/data-model.json" %}
+
 

@@ -6,6 +6,6 @@ order: 11
 ---
 A class that contains focused cell position.
 
-{% docTable "/api/focus.model.json" %}
+{% docTable "source/api/model/focus-model.json" %}
 
 

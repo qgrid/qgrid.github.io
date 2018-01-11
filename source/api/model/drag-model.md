@@ -6,6 +6,6 @@ order: 6
 ---
 A class to work with drag and drop grid infrastructure.
 
-{% docTable "/api/drag.model.json" %}
+{% docTable "source/api/model/drag-model.json" %}
 
 

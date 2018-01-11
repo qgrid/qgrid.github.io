@@ -6,6 +6,6 @@ order: 10
 ---
 A class to setup data filters and expressions.
 
-{% docTable "/api/filter.model.json" %}
+{% docTable "source/api/model/filter-model.json" %}
 
 

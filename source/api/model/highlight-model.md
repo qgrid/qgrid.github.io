@@ -6,6 +6,6 @@ order: 16
 ---
 A class contains highlight data for rows and columns
 
-{% docTable "/api/highlight.model.json" %}
+{% docTable "source/api/model/highlight-model.json" %}
 
 
