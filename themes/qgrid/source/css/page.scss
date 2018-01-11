@@ -1,5 +1,6 @@
 @import "layout";
 @import "editor";
+@import "tabs";
 
 body {
 	grid-template-areas: "header header" "nav content" "footer footer";

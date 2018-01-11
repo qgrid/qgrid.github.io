@@ -1,0 +1,17 @@
+.editor {
+    >ul {
+        list-style: none;
+        li {
+            display: inline;
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+    .tab-panel {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
