@@ -1,57 +1,57 @@
 @font-face {
-  font-family: "qgrid-iconfont";
-  src: url('../assets/fonts/qgrid-iconfont.eot');
-  src: url('../assets/fonts/qgrid-iconfont.eot?#iefix') format('eot'),
-  url('../assets/fonts/qgrid-iconfont.woff2') format('woff2'),
-  url('../assets/fonts/qgrid-iconfont.woff') format('woff'),
-  url('../assets/fonts/qgrid-iconfont.ttf') format('truetype'),
-  url('../assets/fonts/qgrid-iconfont.svg#qgrid-iconfont') format('svg');
+		font-family: "qgrid-iconfont";
+		src: url('../assets/fonts/qgrid-iconfont.eot');
+		src: url('../assets/fonts/qgrid-iconfont.eot?#iefix') format('eot'), 
+		 url('../assets/fonts/qgrid-iconfont.woff2') format('woff2'),
+		 url('../assets/fonts/qgrid-iconfont.woff') format('woff'), 
+		 url('../assets/fonts/qgrid-iconfont.ttf') format('truetype'), 
+		 url('../assets/fonts/qgrid-iconfont.svg#qgrid-iconfont') format('svg');
 }
 
 .icon:before {
-  font-family: "qgrid-iconfont";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
-  text-decoration: none;
-  text-transform: none;
+		font-family: "qgrid-iconfont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+		text-decoration: none;
+		text-transform: none;
 }
 
 .icon-angular:before {
-  content: "\E001";
+		content: "\E001";
 }
 
 .icon-angularjs:before {
-  content: "\E002";
+		content: "\E002";
 }
 
 .icon-backbone:before {
-  content: "\E003";
+		content: "\E003";
 }
 
 .icon-github:before {
-  content: "\E004";
+		content: "\E004";
 }
 
 .icon-hamburger:before {
-  content: "\E005";
+		content: "\E005";
 }
 
 .icon-qgrid-logo-simple:before {
-  content: "\E006";
+		content: "\E006";
 }
 
 .icon-react:before {
-  content: "\E007";
+		content: "\E007";
 }
 
 .icon-search:before {
-  content: "\E008";
+		content: "\E008";
 }
 
 .icon-vue:before {
-  content: "\E009";
+		content: "\E009";
 }

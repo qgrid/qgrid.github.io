@@ -1,7 +1,6 @@
 @import "layout";
 @import "editor";
 @import "table";
-
 body {
 	grid-template-areas: "header header" "nav content" "footer footer";
 	grid-template-columns: $nav-width 1fr;
@@ -69,9 +68,7 @@ p {
 	width: calc(#{$nav-width} - 120px);
 	&::-webkit-search-cancel-button {
 		-webkit-appearance: none;
-	}
-
-	//need to write them separately, not through comma
+	} //need to write them separately, not through comma
 	//&::-webkit-input-placeholder {
 	//  @extend %placeholder;
 	//}
@@ -84,7 +81,6 @@ p {
 	//&:-moz-placeholder {
 	//  @extend %placeholder;
 	//}
-
 	&::placeholder {
 		@extend %placeholder;
 	}
@@ -95,7 +91,7 @@ p {
 	font-size: 24px;
 	&.active {
 		display: none;
-		& + .search {
+		&+.search {
 			display: inline-block;
 		}
 	}
@@ -107,7 +103,6 @@ p {
 	table {
 		margin: 1em 0;
 	}
-
 	pre.line-numbers {
 		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 		border: 0;
@@ -131,19 +126,18 @@ p {
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
-
-		&:hover {
-			overflow: visible;
-			width: auto;
-			opacity: 1;
-		}
-		span {
-			vertical-align: top;
-			display: inline-block;
-			margin: -1.5px 10px;
-		}
-
+	&:hover {
+		overflow: visible;
+		width: auto;
+		opacity: 1;
+	}
+	span {
+		vertical-align: top;
+		display: inline-block;
+		margin: -1.5px 10px;
+	}
 }
+
 .github-link2 {
 	@extend .github-link;
 	float: right;
@@ -156,7 +150,6 @@ p {
 	padding: 3px 0 0 3px;
 	opacity: 0.75;
 }
-
 
 #overlay {
 	display: none;
