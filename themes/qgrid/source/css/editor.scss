@@ -1,23 +1,32 @@
-.preview {
+.preview,
+.editor {
 	background: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 1em;
 	margin: 2em 0;
 	padding: 0;
 	background: #f5f5f5;
-	width: 100%;
-	height: 700px;
 	overflow: hidden;
 	display: block;
 	iframe {
-		height: 740px;
+		border: none;
+		width: 100%;
+		height: 100%;	
 	}
 }
 
-iframe {
-	border: none;
-	margin-top: -38px;
-	width: 100%;
-	height: 100%;
-	height: 500px;
+.preview {
+    iframe {
+        height: 740px;
+		margin-top: -38px;
+    }
 }
+
+.editor{
+	iframe {
+        height: 660px;
+    }
+}
+
+
+

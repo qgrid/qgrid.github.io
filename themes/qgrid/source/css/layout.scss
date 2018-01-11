@@ -6,92 +6,89 @@
 @include scrollbars(.5em, $color-scrollbar-thumb);
 html,
 body {
-		min-height: 100vh;
-		margin: 0;
-		padding: 0;
-		font-family: $font-sans;
-		font-size: $font-size;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: $font-sans;
+	font-size: $font-size;
 }
 
 body {
-		display: grid;
-		grid-template-areas: "header" "content" "footer";
-		grid-template-columns: 1fr;
-		grid-template-rows: $header-height auto $footer-height;
-		background: $color-background;
+	display: grid;
+	grid-template-areas: "header" "content" "footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: $header-height auto $footer-height;
+	background: $color-background;
 }
 
 header {
-		z-index: 1;
-		grid-area: header;
-		color: $color-top-text;
-		background: $color-top-background;
-		height: $header-height;
-		width: 100vw;
-		font-family: $font-serif;
+	z-index: 1;
+	grid-area: header;
+	color: $color-top-text;
+	background: $color-top-background;
+	height: $header-height;
+	width: 100vw;
+	font-family: $font-serif;
 }
 
 %header-icon {
-		margin: 17px 0 17px 20px;
+	margin: 17px 0 17px 20px;
 }
 
 .logo {
-		@extend %header-icon;
-		font-size: 31px;
+	@extend %header-icon;
+	font-size: 170px;
 }
 
 .github {
-		font-size: 26px;
-		position: absolute;
-		top: 17px;
-		right: 20px;
+	font-size: 26px;
+	position: absolute;
+	top: 17px;
+	right: 20px;
 }
 
 main {
-		display: grid;
-		grid-template-areas: "get-started" "example" "features" "go-to";
-		grid-template-rows: auto auto auto auto;
-		grid-area: content;
-		background: $color-background;
-		color: $color-text;
+	display: grid;
+	grid-template-areas: "get-started" "example" "features" "go-to";
+	grid-template-rows: auto auto auto auto;
+	grid-area: content;
+	background: $color-background;
+	color: $color-text;
 }
 
 footer {
-		grid-area: footer;
-		color: $color-footer-text;
-		background: $color-footer-background;
-		padding: 50px 0;
-		text-align: center;
-		font: {
-				family: $font-serif;
-				size: 18px;
-				weight: 200;
-		}
-		a {
-				color: white;
-				text-decoration: none;
-				font-weight: 400;
-		}
+	grid-area: footer;
+	color: $color-footer-text;
+	background: $color-footer-background;
+	padding: 50px 0;
+	text-align: center;
+	font: {
+		family: $font-serif;
+		size: 18px;
+		weight: 200;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: 400;
+	}
 }
 
 %accent-button {
-		text-decoration: none;
-		vertical-align: middle;
-		//-webkit-border-radius: 2px;
-		//-moz-border-radius: 2px;
-		//border-radius: 2px;
-		background-color: $accent-color;
-		color: white;
-		line-height: 24px;
-		font-size: 18px;
-		font-weight: normal;
-		margin-bottom: 5px;
-		padding: 18px;
-		width: 248px;
-		&:hover {
-			background-color: darken($accent-color, 5%);
-		}
-		&:last-child {
-				margin-right: 0;
-		}
+	text-decoration: none;
+	vertical-align: middle;
+	background-color: $accent-color;
+	color: white;
+	line-height: 24px;
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	padding: 18px;
+	width: 248px;
+	&:hover {
+		background-color: darken($accent-color, 5%);
+	}
+	&:last-child {
+		margin-right: 0;
+	}
 }
