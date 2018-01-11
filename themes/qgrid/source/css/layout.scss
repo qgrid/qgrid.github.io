@@ -37,7 +37,7 @@ header {
 
 .logo {
 	@extend %header-icon;
-	font-size: 31px;
+	font-size: 170px;
 }
 
 .github {
@@ -76,9 +76,7 @@ footer {
 
 %accent-button {
 	text-decoration: none;
-	vertical-align: middle; //-webkit-border-radius: 2px;
-	//-moz-border-radius: 2px;
-	//border-radius: 2px;
+	vertical-align: middle;
 	background-color: $accent-color;
 	color: white;
 	line-height: 24px;
