@@ -60,6 +60,11 @@
 	.pages {
 		.logo {
 			font-size: 31px;
+			margin: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 17px;
 		}
 		header {
 			display: block;
@@ -67,8 +72,9 @@
 		grid-template-areas: "header" "content" "footer";
 		grid-template-columns: 1fr;
 		.nav-trigger {
-			display: inline-block;
+			display: block;
 		}
+
 		#nav {
 			display: none;
 			padding-top: 0;

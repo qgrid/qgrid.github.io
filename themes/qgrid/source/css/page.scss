@@ -10,6 +10,7 @@ body {
 
 header {
 	display: none;
+	position: fixed;
 }
 
 h1 {
@@ -54,9 +55,11 @@ p {
 }
 
 .nav-trigger {
-	@extend %header-icon;
 	font-size: 18px;
 	display: none;
+	position: absolute;
+	top: 27px;
+	left: 20px;
 }
 
 [class$="-trigger"] {
@@ -98,16 +101,6 @@ p {
 	}
 }
 
-.search-trigger {
-	@extend %header-icon;
-	font-size: 24px;
-	&.active {
-		display: none;
-		&+.search {
-			display: inline-block;
-		}
-	}
-}
 
 .page-wrapper {
 	margin: 0 30px;
