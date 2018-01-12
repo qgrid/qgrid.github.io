@@ -123,26 +123,26 @@ p {
         display: block;
         overflow-x: auto;
         td.comment {
-			width: 100%;
+            width: 100%;
             min-width: 200px;
         }
     }
     table,
     pre.line-numbers {
         border: 1px solid rgba(0, 0, 0, 0.1);
-	}
-	
+    }
+    
     pre[class*="language-"]::selection,
     pre[class*="language-"] ::selection,
     code[class*="language-"]::selection,
     code[class*="language-"] ::selection {
         background: #ddd;
-	}
-	
-	a{
-		text-decoration: none;
-		color: #0078cf
-	}
+    }
+    
+    a{
+        text-decoration: none;
+        color: #0078cf
+    }
 }
 
 .github-link {
