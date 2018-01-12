@@ -115,10 +115,16 @@ p {
 .page-wrapper {
 	margin: 0 30px 40px 30px;
 	max-width: 1000px;
+	overflow: hidden;
 	table {
 		margin: 1em 0;
-		border: 1px solid rgba(0, 0, 0, 0.1);
+		display: block;
+		overflow-x: auto;
+		td.comment {
+			min-width: 200px;
+		}
 	}
+	table,
 	pre.line-numbers {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 	}
