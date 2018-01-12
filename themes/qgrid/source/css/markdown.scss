@@ -1,3 +1,4 @@
+	@import "variables";
 .page-wrapper {
 	h1:first-child {
 		font-family: "Roboto Slab", serif;
@@ -68,5 +69,21 @@
 		-webkit-border-radius: 2px;
 		-moz-border-radius: 2px;
 		border-radius: 2px;
+	}
+	ul {
+		list-style: none;
+		> li {
+			position: relative;
+			line-height: 1.4em;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0.6em;
+				left: -13px;
+				width: 8px;
+				height: 1px;
+				background-color: #353535;
+			}
+		}
 	}
 }

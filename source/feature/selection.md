@@ -51,3 +51,5 @@ To deselect one row at a time, either:
 * Deselect the checkbox of the specific row, or
 * Press and hold shift, and go down or up with arrow keys.
 
+## Suggested Links
+* [Selection model](/doc/api/selection-model.html)
