@@ -2,7 +2,6 @@
 @import "editor";
 @import "table";
 @import "nav";
-
 body {
 	display: grid;
 	grid-template-areas: "nav content";
@@ -118,10 +117,10 @@ p {
 	max-width: 1000px;
 	table {
 		margin: 1em 0;
+		border: 1px solid rgba(0, 0, 0, 0.1);
 	}
 	pre.line-numbers {
-		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
-		border: 0;
+		border: 1px solid rgba(0, 0, 0, 0.1);
 	}
 }
 
