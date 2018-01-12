@@ -94,13 +94,12 @@ p {
 
 .search {
 	display: block;
-	background-color: $color-top-background;
+	background-color: #444;
 	border: {
 		style: solid;
 		color: $whitescale-75;
 		width: 0 0 1px 0;
 	}
-	background: #444;
 	text-decoration: none;
 	outline: none;
 	color: white;
@@ -109,6 +108,9 @@ p {
 	width: 280px;
 	&::placeholder {
 		@extend %placeholder;
+	}
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
 	}
 }
 
