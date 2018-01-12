@@ -58,17 +58,14 @@
 
 <body class="<%- isIndex ? 'index' : 'pages' %>">
 
+<% if (!isIndex) { %>
 <header>
     <%- partial('partials/header') %>
 </header>
 
-<% if (!isIndex) { %>
 <aside id="nav">
-    <div class="nav-header">
-        <a href="<%- url_for('/') %>" class="logo"></a>
-        <button class="search-trigger" id="search-trigger" data-stop-propagation></button>
-        <input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
-    </div>
+    <a href="<%- url_for('/') %>" class="logo"></a>
+    <input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
     <%- partial('partials/nav') %>
 </aside>
 <% } %>

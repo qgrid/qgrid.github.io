@@ -34,7 +34,7 @@ hbs.registerHelper('api-title', unit => {
 
 hbs.registerHelper('api-path', file => {
 	const name = path.basename(file).slice(0, -'.d.ts'.length).replace(/\./g, '-');
-	return print(`source/api/model/${name}.json`);
+	return print(`source/api/${name}.json`);
 });
 
 hbs.registerHelper('api-description', comment => {

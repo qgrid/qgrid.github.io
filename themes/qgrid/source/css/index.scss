@@ -1,14 +1,48 @@
 @import "layout";
 .index {
-	grid-template-areas: "header" "content" "footer";
+	grid-template-areas: "content" "footer";
 	grid-template-columns: 1fr;
-	grid-template-rows: $header-height auto $footer-height;
+	grid-template-rows: auto $footer-height;
 	font-family: $font-serif;
-	#overlay {
-		z-index: 11;
+
+	main {
+		display: grid;
+		grid-template-areas: "get-started" "example" "features" "go-to";
+		grid-template-rows: auto auto auto auto;
+		grid-area: content;
+		background: $color-background;
+		color: $color-text;
 	}
-	.search {
-		display: none;
+	footer {
+		grid-area: footer;
+		color: $color-footer-text;
+		background: $color-footer-background;
+		padding: 50px 0;
+		text-align: center;
+		font: {
+			family: $font-serif;
+			size: 18px;
+			weight: 200;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			font-weight: 400;
+		}
+	}
+	%accent-button {
+		text-decoration: none;
+		vertical-align: middle;
+		background-color: $accent-color;
+		color: white;
+		line-height: 24px;
+		font-size: 18px;
+		font-weight: normal;
+		padding: 18px;
+		width: 248px;
+		&:hover {
+			background-color: darken($accent-color, 5%);
+		}
 	}
 	.features {
 		margin-bottom: 45px;
@@ -106,11 +140,7 @@
 				&:last-child {
 					margin-right: 0;
 				}
-				.angular,
-				.angular-js,
-				.react,
-				.vue,
-				.backbone {
+				span {
 					color: white;
 				}
 				label {
@@ -163,7 +193,7 @@
 		justify-content: center;
 		a {
 			@extend %accent-button;
-			margin: 5px;
+			margin: 5px;			
 		}
 	}
 }

@@ -6,7 +6,7 @@ order: 5
 ---
 A class that gives access to the high level grid data structures.
 
-{% docTable "source/api/model/data-model.json" %}
+{% docTable "source/api/data-model.json" %}
 
 ## Usage
 Usually grid user can define this properties in different places.

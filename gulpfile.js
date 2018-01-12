@@ -4,9 +4,9 @@ const path = require('path');
 const fs = require('fs')
 const hbs = require('./hbs');
 
-const API_FOLDER = './source/api/'
-const API_JSON_PATH = path.join(API_FOLDER, 'index.json');
-const API_TEMPLATE = fs.readFileSync(path.join(API_FOLDER, 'index.hbs'), 'utf8');
+const API_FOLDER = './source/api/';
+const API_JSON_PATH = path.join(API_FOLDER, 'api.json');
+const API_TEMPLATE = fs.readFileSync(path.join('./api.hbs'), 'utf8');
 
 gulp.task('typedoc', () =>
     gulp
@@ -32,7 +32,7 @@ gulp.task('markdown', done => {
         }
 
         unit.order = i;
-        
+
         const link = hbs.compile(API_TEMPLATE);
         const output = link({ unit });
         const name = path
@@ -43,13 +43,13 @@ gulp.task('markdown', done => {
         console.log(`process: ${name}`);
 
         fs.writeFileSync(
-            path.join(API_FOLDER, 'model', `${name}.md`),
+            path.join(API_FOLDER, `${name}.md`),
             output,
             { flag: 'w' }
         );
 
         fs.writeFileSync(
-            path.join(API_FOLDER, 'model', `${name}.json`),
+            path.join(API_FOLDER, `${name}.json`),
             JSON.stringify(unit, null, 3),
             { flag: 'w' }
         );

@@ -8,6 +8,6 @@ A class to handle and visualize custom user behaviors(like add or delete row).
 Action bar plugin uses this model to draw buttons to execute commands.
 
 
-{% docTable "source/api/model/action-model.json" %}
+{% docTable "source/api/action-model.json" %}
 
 
