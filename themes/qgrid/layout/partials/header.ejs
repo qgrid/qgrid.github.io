@@ -1,7 +1,9 @@
 <% var isIndex = page.path === 'index.html' %>
 <% if (!isIndex) { %>
-<a href="<%- url_for('/') %>" class="logo"></a>
 <button class="nav-trigger" id="nav-trigger"></button>
+<div class="logo-wrapper">
+    <a href="<%- url_for('/') %>" class="logo"></a>
+</div>
 <% } %>
 
 <a target="_blank" href="https://github.com/qgrid/ng" class="github"></a>

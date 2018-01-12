@@ -62,21 +62,31 @@
 			h1 {
 				margin-top: 80px;
 			}
+			.github-link2 {
+				border: none;
+				span {
+					display: none;
+				}
+			}
 		}
 		header {
 			display: block;
-			.logo {
-				font-size: 31px;
+			.logo-wrapper {
 				margin: 0;
 				position: absolute;
 				text-align: center;
 				width: 100%;
 				top: 17px;
+				z-index: -1;
+				.logo {
+					font-size: 31px;
+					margin: 0;
+				}
 			}
 		}
 		grid-template-areas: "header" "content";
-		grid-template-columns: 1fr;
 		grid-template-rows: 70px auto;
+		grid-template-columns: 100%;
 		.nav-trigger {
 			display: block;
 		}
@@ -84,6 +94,9 @@
 			display: none;
 			padding-top: 0;
 			z-index: 12;
+			nav {
+				height: calc(100% - 95px);
+			}
 			.logo {
 				display: none;
 			}

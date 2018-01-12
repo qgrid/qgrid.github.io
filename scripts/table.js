@@ -50,7 +50,7 @@ const helper = args => {
   const unitMeta = unitCls.children;
   const lines = unitMeta
     .filter(m => !!(m.comment && m.comment.shortText))
-    .map(m => `<tr><td>${m.name}</td><td><code>${apiType(m.type)}</code></td><td>${apiComment(m.comment)}</td></tr>`);
+    .map(m => `<tr><td class="name">${m.name}</td><td class="type"><code>${apiType(m.type)}</code></td><td class="comment">${apiComment(m.comment)}</td></tr>`);
 
   const template = `
   <table>

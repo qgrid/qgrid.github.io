@@ -10,7 +10,7 @@
 	box-sizing: border-box;
 	border-top: 1px solid $color-sidebar-background; //transition: 0.5s;
 	nav {
-		height: 100%;
+		height: calc(100% - 340px);
 		overflow-y: auto;
 		overflow-x: hidden;
 		ul {
