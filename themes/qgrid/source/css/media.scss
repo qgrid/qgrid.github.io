@@ -74,13 +74,12 @@
 		.nav-trigger {
 			display: block;
 		}
-
 		#nav {
 			display: none;
 			padding-top: 0;
 			z-index: 12;
-			.nav-header {
-				display: block;
+			.logo {
+				display: none;
 			}
 		}
 	}

@@ -1,11 +1,19 @@
 @import "layout";
 @import "editor";
 @import "table";
+@import "nav";
+
 body {
-	grid-template-areas: "nav content" "footer footer";
+	display: grid;
+	grid-template-areas: "nav content";
 	grid-template-columns: $nav-width 1fr;
-	grid-template-rows: 1fr auto;
 	grid-gap: 16px;
+}
+
+main {
+	grid-area: content;
+	background: $color-background;
+	color: $color-text;
 }
 
 header {
@@ -19,7 +27,6 @@ header {
 	width: 100vw;
 	font-family: $font-serif;
 }
-
 
 .logo {
 	font-size: 100px;
@@ -87,6 +94,7 @@ p {
 }
 
 .search {
+	display: block;
 	background-color: $color-top-background;
 	border: {
 		style: solid;
@@ -97,30 +105,13 @@ p {
 	text-decoration: none;
 	outline: none;
 	color: white;
-	vertical-align: middle;
 	margin: 20px auto 25px 17px;
 	padding: 15px;
 	width: 280px;
-	&::-webkit-search-cancel-button {
-		-webkit-appearance: none;
-	} //need to write them separately, not through comma
-	//&::-webkit-input-placeholder {
-	//  @extend %placeholder;
-	//}
-	//&::-moz-placeholder {
-	//  @extend %placeholder;
-	//}
-	//&:-ms-input-placeholder {
-	//  @extend %placeholder;
-	//}
-	//&:-moz-placeholder {
-	//  @extend %placeholder;
-	//}
 	&::placeholder {
 		@extend %placeholder;
 	}
 }
-
 
 .page-wrapper {
 	margin: 0 30px;
