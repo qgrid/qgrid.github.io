@@ -84,6 +84,9 @@
 			display: none;
 			padding-top: 0;
 			z-index: 12;
+			nav {
+				height: calc(100% - 95px);
+			}
 			.logo {
 				display: none;
 			}
