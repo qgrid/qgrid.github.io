@@ -2,6 +2,7 @@
 @import "editor";
 @import "table";
 @import "nav";
+@import "markdown";
 body {
 	display: grid;
 	grid-template-areas: "nav content";
@@ -37,43 +38,6 @@ header {
 	position: absolute;
 	top: 22px;
 	right: 20px;
-}
-
-h1 {
-	font-family: "Roboto Slab", serif;
-	font-weight: normal;
-	padding: 0px 0 55px 0;
-	margin-top: 120px;
-	font-size: 50px;
-}
-
-h2 {
-	font-family: $font-serif;
-	font-weight: normal;
-	font-size: 2.5em;
-	padding: 0.5em 0;
-}
-
-h3 {
-	@extend h2;
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
-h4 {
-	@extend h2;
-	font-size: 1.2em;
-	font-weight: bold;
-}
-
-h5 {
-	@extend h2;
-	font-size: 1em;
-	font-weight: bold;
-}
-
-p {
-	font-size: 1em;
 }
 
 %placeholder {
@@ -118,31 +82,6 @@ p {
 	margin: 0 30px 40px 30px;
 	max-width: 1000px;
 	overflow: hidden;
-	table {
-		margin: 1em 0;
-		display: block;
-		overflow-x: auto;
-		td.comment {
-			width: 100%;
-			min-width: 200px;
-		}
-	}
-	table,
-	pre.line-numbers {
-		border: 1px solid rgba(0, 0, 0, 0.1);
-	}
-	
-	pre[class*="language-"]::selection,
-	pre[class*="language-"] ::selection,
-	code[class*="language-"]::selection,
-	code[class*="language-"] ::selection {
-		background: #ddd;
-	}
-	
-	a{
-		text-decoration: none;
-		color: #0078cf
-	}
 }
 
 .github-link {

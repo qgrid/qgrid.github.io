@@ -12,7 +12,7 @@ A class that gives access to the high level grid data structures.
 Usually grid user can define this properties in different places.
 Inside html through attribute bindings:
 ```html
-<q-grid [columns]="userColumns" [rows]="userRows">
+<q-grid [columns]="myColumns" [rows]="myRows">
 ```
 
 Inside html throught component:
@@ -27,12 +27,12 @@ Inside html throught component:
 
 Inside js code throught model:
 ```javascript
-const userRows = [];
-const userColumns = [];
+const myRows = [];
+const myColumns = [];
 
 gridModel.data({
- rows: userRows,
- columns: userColumns
+ rows: myRows,
+ columns: myColumns
 })
 ```
 
