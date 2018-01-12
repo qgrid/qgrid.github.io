@@ -11,6 +11,26 @@ body {
 header {
 	display: none;
 	position: fixed;
+	z-index: 1;
+	grid-area: header;
+	color: $color-top-text;
+	background: $color-top-background;
+	height: $header-height;
+	width: 100vw;
+	font-family: $font-serif;
+}
+
+
+.logo {
+	font-size: 100px;
+	margin: 80px 0 35px 80px;
+}
+
+.github {
+	font-size: 26px;
+	position: absolute;
+	top: 22px;
+	right: 20px;
 }
 
 h1 {
