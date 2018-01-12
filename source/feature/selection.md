@@ -10,11 +10,12 @@ There are situations when you would like to enable the end user to select rows o
 ## Setup
 
 To enable the selection, configure the [selection model](/doc/api/selection-model.html).
+
 ```javascript
 gridModel.selection({
     unit: 'row',
     mode: 'multiple'
-})
+});
 ```
 
 ## Modes and Features
@@ -52,4 +53,6 @@ To deselect one row at a time, either:
 * Press and hold shift, and go down or up with arrow keys.
 
 ## Suggested Links
-* [Selection model](/doc/api/selection-model.html)
+
+* [Selection Model](/doc/api/selection-model.html)
+* [Example]()

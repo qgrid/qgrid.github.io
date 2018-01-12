@@ -1,6 +1,6 @@
 const helper = args => {
   return `<span class="preview">
-            <iframe src="//stackblitz.com/edit/angular-qgrid-example?embed=1&file=app/app.component.html&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+            <iframe src="//stackblitz.com/edit/qgrid-ng-5-01-02-simple?embed=1&file=app/app.component.ts&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
           </span>
         `;
 };

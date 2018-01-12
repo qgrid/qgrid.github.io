@@ -76,10 +76,14 @@ Add html markup to your component.
 
 The q-grid package requires the following peer dependencies that have to be installed by your application.
 
-* @angular/common
+* rxjs
+* core-js
+* @angular/cdk
 * @angular/core
 * @angular/forms
-* rxjs
+* @angular/common
+* @angular/material
+* @angular/anmations
 
 ## Development
 
