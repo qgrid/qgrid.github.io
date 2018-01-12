@@ -1,7 +1,7 @@
 <nav>
     <ul>
         <%
-        var groups = ['Getting started', 'API', 'Features'];
+        var groups = ['Getting started', 'Features', 'API'];
         var pageGroups = site.pages.reduce(function (memo, p) {
             var key = p.group;
             (memo[key] = memo[key] || []).push(p);
@@ -23,7 +23,7 @@
                     for (var j = 0; j < pages.length; j++) {
                         var p = pages[j];
         %>
-                        <li class="<%- page.title === p.title ? 'current' : '' %> ">
+                        <li class="<%- page.title === p.title ? 'active-topic' : '' %> ">
         <%
                             if (page.title === p.title) {
 

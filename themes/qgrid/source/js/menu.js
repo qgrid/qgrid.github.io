@@ -56,6 +56,11 @@ function init() {
 	if (searchTrigger) {
 		searchTrigger.addEventListener('click', activateSearch, true);
 	}
+
+	const activeTopic = document.getElementsByClassName('active-topic')[0];
+	if (activeTopic) {
+		activeTopic.scrollIntoView();
+	}
 }
 
 document.addEventListener('DOMContentLoaded', init);
