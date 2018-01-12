@@ -136,7 +136,12 @@ p {
     code[class*="language-"]::selection,
     code[class*="language-"] ::selection {
         background: #ddd;
-    }
+	}
+	
+	a{
+		text-decoration: none;
+		color: #0078cf
+	}
 }
 
 .github-link {
