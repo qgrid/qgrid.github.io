@@ -71,13 +71,17 @@
 		}
 		header {
 			display: block;
-			.logo {
-				font-size: 31px;
+			.logo-wrapper {
 				margin: 0;
 				position: absolute;
 				text-align: center;
 				width: 100%;
 				top: 17px;
+				z-index: -1;
+				.logo {
+					font-size: 31px;
+					margin: 0;
+				}
 			}
 		}
 		grid-template-areas: "header" "content";
