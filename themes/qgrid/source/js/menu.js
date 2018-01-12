@@ -17,7 +17,6 @@ function toggleVisibility(e) {
 
 function filter(e) {
 	e.stopImmediatePropagation();
-	activateSearch();
 	const input = e.target || e.srcElement;
 	const filter = input.value.toLowerCase();
 	const nav = document.getElementById('nav');
@@ -35,35 +34,7 @@ function filter(e) {
 	}
 }
 
-function activateSearch(e) {
-	const searchTrigger = e.target || e.srcElement;
-	if (!searchTrigger.classList.contains('active')) {
-		searchTrigger.classList.add('active');
-	}
-}
-
-function updateSearch(e) {
-	const search = document.getElementById('search');
-	const searchFields = document.getElementsByClassName('search');
-	const searchFieldActive = e.target || e.srcElement;
-	const value = searchFieldActive.value;
-	for (let i = 0; i < searchFields.length; i++) {
-		if (searchFields[i] !== searchFieldActive) {
-			searchFields[i].value = value;
-			searchFields[i].setAttribute('value', value);
-		}
-	}
-	search.value = value;
-
-	const event = new Event('searchEvent');
-	search.dispatchEvent(event);
-}
-
 function init() {
-	const search = document.getElementById('search');
-	if (search) {
-		search.addEventListener('searchEvent', filter, false);
-	}
 	const navTrigger = document.getElementById('nav-trigger');
 	if (navTrigger) {
 		navTrigger.addEventListener('click', toggleVisibility, true);
@@ -76,9 +47,9 @@ function init() {
 		nav.addEventListener('click', toggleVisibility, true);
 	}
 
-	const searchField = document.getElementById('search');
-	if (searchField) {
-		searchField.addEventListener('keyup', updateSearch, true);
+	const search = document.getElementById('search');
+	if (search) {
+		search.addEventListener('keyup', filter, true);
 	}
 
 	const searchTrigger = document.getElementById('search-trigger');
