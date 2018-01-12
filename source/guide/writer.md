@@ -7,90 +7,61 @@ order: 3
 
 ## Markdown Documentation
 
-### Best Practices
-
-### Example
-
-Go [here](/doc/feature/selection.html) to find the markdown file example.
+* [The ultimate guide](https://blog.ghost.org/markdown/).
+* [Etalon example](/doc/feature/selection.html).
+* [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ## Typescript Documentation
 
-### Run Generation
+### Significant Comment Example
 
-
-
-### Best Practices
-
-* Try to use markdown everywhere.
-* Avoid to use custom html tags.
-* Use 3 spaces for code formatting inside markdown code.
-
-### Example
-
-```javascript
-import { ColumnModel } from '../column-type/column.model';
-import { IPipe } from '../pipe/pipe.item';
+```typescript
 
 /**
- * A class that gives access to the high level grid data structures.
+ * All this text will go to the head of page. 
+ * We call it "description".
+ * 
+ * ### Header
+ * Starting the header above all text will go to the bottom of page. 
+ * We call it "comment".
  *
- * ## Usage
- * Usually grid user can define this properties in different places.
- * Inside html through attribute bindings:
- * ```html ``
- * <q-grid [columns]="userColumns" [rows]="userRows">
- * ```
- *
- * Inside html throught component:
- * ```html
- * <q-grid>
- *   <q-grid-columns>
- *     <q-grid-column key="id"></q-grid-column>
- *     <q-grid-column key="name"><q-grid-column>
- *  </q-grid-columns>
- * </q-grid>
- * ```
- *
- * Inside js code throught model:
- ``* ```javascript``
- * const userRows = [];
- * const userColumns = [];
- *
- * gridModel.data({
- *    rows: userRows,
- *    columns: userColumns
- * });
- ``* ``` ``
  */
-export declare class DataModel {
+export declare class MyClass {
 
   /**
-   * List of rows to display.
-   * Rows property can be filled from the grid rows html or grid model data rows
-   * property.
+   * All properties inside class will be displayed in a table between "description" and "comment"
    */
-    rows: any[];
+    foo: any[];
 
   /**
-   * Set of columns to display.
-   * Usually data columns can be setup from 3 places:
-   *
-   * 1. Columns binding property.
-   * 2. Columns component.
-   * 3. Grid model data columns property.
-   *
-   * We can have 3 sources of columns because each column has `key` property,
-   * that allows to make a merge. If you have defined columns in javascript and in template
-   * with the same key, algorithm will try persist settings from both sources but
-   * javascript will have top priority.
+   * Type is deferred automatically so no need to describe it.
    */
-    columns: ColumnModel[];
+    bar: string;
 
   /**
-   * Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,
-   * see `PipeModel` that contains information when grid demands refreshing.
+   * Property won't be rendered if there is no any comment for it.
    */
-    pipe: IPipe[];
+    baz: Date;
 }
-
 ```
+
+### Consider to
+
+* Make comments inside declaration `d.ts` files.
+* Try to use `markdown` everywhere.
+* `Avoid` to use html tags.
+* For example, use ` ```html ` syntax to make an code example.
+* Use 3 spaces for formatting inside markdown code example.
+* Do not include live examples.
+
+### Build Markdown from Typescript
+
+* We use [typedoc](https://github.com/TypeStrong/typedoc) to generate `api.json` file that contains reflection metadata for defenitions.
+* We use [gulp](https://github.com/qgrid/doc/blob/master/gulpfile.js) + [handlebars](https://github.com/qgrid/doc/blob/master/api.hbs) + [habdlebars extensions](https://github.com/qgrid/doc/blob/master/hbs.js) to generate `markdown` files from `api.json`.
+* we use [ejs hexo plugin](https://github.com/qgrid/doc/blob/master/scripts/table.js) + [marked lib](https://www.npmjs.com/package/marked) to generate table that can contain markdown inside the cells.
+* You type `npm run doc` to generate documentation, from `node_modules/ng2-qgrid/core/` folder.
+* How you update `node_modules/ng2-qgrid/core/` folder is not defined yet.
+
+### Version Support
+
+> Not defined yet.
