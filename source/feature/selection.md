@@ -52,7 +52,10 @@ To deselect one row at a time, either:
 * Deselect the checkbox of the specific row, or
 * Press and hold shift, and go down or up with arrow keys.
 
+## Example
+
+{% docEditor "qgrid-ng-5-01-02-selection" %}
+
 ## Suggested Links
 
 * [Selection Model](/doc/api/selection-model.html)
-* [Example]()

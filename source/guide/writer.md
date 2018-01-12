@@ -62,6 +62,12 @@ export declare class MyClass {
 * You type `npm run doc` to generate documentation, from `node_modules/ng2-qgrid/core/` folder.
 * How you update `node_modules/ng2-qgrid/core/` folder is not defined yet.
 
+### Stackblitz
+
+* https://stackblitz.com/@qgrid
+* Name convention is `qgrid-{framework}-{version}-{feature}`.
+* For instance, `qgrid-ng-5-1-2-selection`.
+
 ### Version Support
 
-> Not defined yet.
+> Not defined.
