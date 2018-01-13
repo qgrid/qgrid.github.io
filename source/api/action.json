@@ -1,0 +1,208 @@
+{
+   "id": 459,
+   "name": "\"action/action.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.d.ts",
+   "children": [
+      {
+         "id": 460,
+         "name": "Action",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class to connect Command and UI."
+         },
+         "children": [
+            {
+               "id": 461,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 462,
+                     "name": "new Action",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 463,
+                           "name": "command",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Command",
+                              "id": 299
+                           }
+                        },
+                        {
+                           "id": 464,
+                           "name": "title",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        },
+                        {
+                           "id": 465,
+                           "name": "icon",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "Action",
+                        "id": 460
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "action/action.d.ts",
+                     "line": 6,
+                     "character": 29
+                  }
+               ]
+            },
+            {
+               "id": 466,
+               "name": "command",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "User command that will be executed when:\n* Action button is clicked.\n* Command shortcut keys are pressed."
+               },
+               "sources": [
+                  {
+                     "fileName": "action/action.d.ts",
+                     "line": 14,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 468,
+               "name": "icon",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Icon key that will be rendered as a button."
+               },
+               "sources": [
+                  {
+                     "fileName": "action/action.d.ts",
+                     "line": 24,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 467,
+               "name": "title",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Text that will be shown as a tooltip for the action button."
+               },
+               "sources": [
+                  {
+                     "fileName": "action/action.d.ts",
+                     "line": 19,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  461
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  466,
+                  468,
+                  467
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "action/action.d.ts",
+               "line": 6,
+               "character": 27
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            460
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "action/action.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 0
+}

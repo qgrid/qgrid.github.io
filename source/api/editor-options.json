@@ -1,0 +1,264 @@
+{
+   "id": 6,
+   "name": "\"column-type/editor.options.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/editor.options.d.ts",
+   "children": [
+      {
+         "id": 7,
+         "name": "IEditorOptions",
+         "kind": 256,
+         "kindString": "Interface",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "Specific options for the cell edit mode."
+         },
+         "children": [
+            {
+               "id": 9,
+               "name": "cruise",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Defines navigation behavior when cell is in edit mode.",
+                  "text": "* `'control'` when cell is in edit mode, keyboard navigation events are disabled(in general, `tab` and `shift+tab` still works).\n* `'transparent'` when cell is in edit mode, keyboard navigation event are still applicable.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 23,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 13,
+               "name": "fetch",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Can be used by e.g. `auto-complete` editor to populate list of items."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 33,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 14,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 15,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "type": {
+                              "type": "union",
+                              "types": [
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 },
+                                 {
+                                    "type": "reference",
+                                    "name": "Promise"
+                                 },
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              ]
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "column-type/editor.options.d.ts",
+                           "line": 33,
+                           "character": 10
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 16,
+               "name": "label",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 35,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 10,
+               "name": "modelFactory",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "q-grid model factory, can be used by reference column to draw a anpther q-grid in edit cell mode."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 28,
+                     "character": 16
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 11,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 12,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Model",
+                              "id": 914
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "column-type/editor.options.d.ts",
+                           "line": 28,
+                           "character": 17
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 8,
+               "name": "trigger",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Says when cell should go to the edit mode.",
+                  "text": "* `'click'` edit mode activates when user clicks on cell.\n* `'custom'` if user defines own edit mode trigger, like button for reference column edit, this option should be used.\n* `'focus'` edit mode activates when cell recieves focus.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 15,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 17,
+               "name": "value",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 36,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  9,
+                  13,
+                  16,
+                  10,
+                  8,
+                  17
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "column-type/editor.options.d.ts",
+               "line": 6,
+               "character": 31
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Interfaces",
+         "kind": 256,
+         "children": [
+            7
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "column-type/editor.options.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 17
+}

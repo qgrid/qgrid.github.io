@@ -1,0 +1,200 @@
+{
+   "id": 194,
+   "name": "\"column-list/column.list.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-list/column.list.model.d.ts",
+   "children": [
+      {
+         "id": 195,
+         "name": "ColumnListModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that responsible for the generation and order of columns.",
+            "text": "## Usage\n\n* Example of how user usually can define column generation type and list of columns in template.\n\n```html\n<q-grid>\n   <q-grid-columns generation=\"deep\">\n      <q-grid-column key=\"myKey\"></q-grid-column>\n   </q-grid-columns>\n</q-grid>\n```\n\n* Example of how user usually can define some options for the all columns of appropriate type.\n```html\n<q-grid>\n   <q-grid-columns>\n      <q-grid-column type=\"number\" canSort=\"false\" canFilter=\"false\"></q-grid-column>\n   </q-grid-columns>\n</q-grid>\n```\n"
+         },
+         "children": [
+            {
+               "id": 196,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 197,
+                     "name": "new ColumnListModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "ColumnListModel",
+                        "id": 195
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "column-list/column.list.model.d.ts",
+                     "line": 28,
+                     "character": 38
+                  }
+               ]
+            },
+            {
+               "id": 200,
+               "name": "columns",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of columns from html template. Usually that kind of column is defined as `<q-grid-column>` in html."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-list/column.list.model.d.ts",
+                     "line": 48,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "ColumnModel",
+                     "id": 19
+                  }
+               }
+            },
+            {
+               "id": 198,
+               "name": "generation",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "When setup columns will be generated automatically based on passed data source.\n- `None` means auto generation is off.\n- `Deep` means that algorithm traverses all levels keys of the passed data source item.\n- `Shallow` means algoithm traverses only first level keys of the passed data source item."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-list/column.list.model.d.ts",
+                     "line": 37,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "GenerationMode",
+                  "id": 193
+               }
+            },
+            {
+               "id": 199,
+               "name": "index",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Contains array of column keys, the q-grid will order columns depending on this list.\nIt is filled automatically by internal service."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-list/column.list.model.d.ts",
+                     "line": 43,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "string"
+                  }
+               }
+            },
+            {
+               "id": 201,
+               "name": "reference",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "If user omits key property while defining a column, this column goes to the reference\nobject as `{columnType: myColumn}`. The reference settings will be applied for all\ncolumn of appropriate type as defaults."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-list/column.list.model.d.ts",
+                     "line": 55,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "object"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  196
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  200,
+                  198,
+                  199,
+                  201
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "column-list/column.list.model.d.ts",
+               "line": 28,
+               "character": 36
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            195
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "column-list/column.list.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 9
+}

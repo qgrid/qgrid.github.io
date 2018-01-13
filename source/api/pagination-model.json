@@ -1,0 +1,216 @@
+{
+   "id": 359,
+   "name": "\"pagination/pagination.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pagination/pagination.model.d.ts",
+   "children": [
+      {
+         "id": 360,
+         "name": "PaginationModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that allows to split data to pages, also virtual scroll use some options from here."
+         },
+         "children": [
+            {
+               "id": 361,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 362,
+                     "name": "new PaginationModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "PaginationModel",
+                        "id": 360
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "pagination/pagination.model.d.ts",
+                     "line": 6,
+                     "character": 38
+                  }
+               ]
+            },
+            {
+               "id": 367,
+               "name": "count",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Count of total rows."
+               },
+               "sources": [
+                  {
+                     "fileName": "pagination/pagination.model.d.ts",
+                     "line": 28,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 364,
+               "name": "current",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Current page number;"
+               },
+               "sources": [
+                  {
+                     "fileName": "pagination/pagination.model.d.ts",
+                     "line": 13,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 363,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pagination/pagination.model.d.ts",
+                     "line": 8,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Resource",
+                  "id": 132
+               }
+            },
+            {
+               "id": 365,
+               "name": "size",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Selected page size."
+               },
+               "sources": [
+                  {
+                     "fileName": "pagination/pagination.model.d.ts",
+                     "line": 18,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 366,
+               "name": "sizeList",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of available sizes."
+               },
+               "sources": [
+                  {
+                     "fileName": "pagination/pagination.model.d.ts",
+                     "line": 23,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "number"
+                  }
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  361
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  367,
+                  364,
+                  363,
+                  365,
+                  366
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "pagination/pagination.model.d.ts",
+               "line": 6,
+               "character": 36
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            360
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pagination/pagination.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 137
+}
