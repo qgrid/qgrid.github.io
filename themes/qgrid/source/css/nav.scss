@@ -39,6 +39,12 @@
 						color: white;
 					}
 				}
+				a {
+					display: block;
+					width: 100%;
+					margin-left: -20px;
+					padding-left: 40px;
+				}
 			}
 			.active-topic {
 				background-color: $accent-color;
