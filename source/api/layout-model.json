@@ -1,5 +1,5 @@
 {
-   "id": 51,
+   "id": 175,
    "name": "\"layout/layout.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layout/layout.model.d.ts",
    "children": [
       {
-         "id": 52,
+         "id": 176,
          "name": "LayoutModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 53,
+               "id": 177,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
@@ -54,7 +54,7 @@
                }
             },
             {
-               "id": 54,
+               "id": 178,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -92,8 +92,8 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  53,
-                  54
+                  177,
+                  178
                ]
             }
          ],
@@ -111,7 +111,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            52
+            176
          ]
       }
    ],
@@ -122,5 +122,5 @@
          "character": 0
       }
    ],
-   "order": 19
+   "order": 128
 }

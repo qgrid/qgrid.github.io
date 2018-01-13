@@ -1,5 +1,5 @@
 {
-   "id": 15,
+   "id": 1,
    "name": "\"grid/grid.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/grid/grid.model.d.ts",
    "children": [
       {
-         "id": 16,
+         "id": 2,
          "name": "GridModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 17,
+               "id": 3,
                "name": "id",
                "kind": 1024,
                "kindString": "Property",
@@ -44,7 +44,7 @@
                }
             },
             {
-               "id": 18,
+               "id": 4,
                "name": "status",
                "kind": 1024,
                "kindString": "Property",
@@ -52,7 +52,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates a state of the model:\n1. `unbound` - model is not connected to a grid element.\n2. `bound` - model connected to a grid element.",
+                  "shortText": "Indicates a state of the model:\n* `unbound` model is not connected to a grid element.\n* `bound` model connected to a grid element.",
                   "text": "Current version of the grid doesn't allow to use one model on several grids,\nso if user will try to do that exception will be thrown.\n"
                },
                "sources": [
@@ -68,7 +68,7 @@
                }
             },
             {
-               "id": 19,
+               "id": 5,
                "name": "title",
                "kind": 1024,
                "kindString": "Property",
@@ -96,9 +96,9 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  17,
-                  18,
-                  19
+                  3,
+                  4,
+                  5
                ]
             }
          ],
@@ -116,7 +116,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            16
+            2
          ]
       }
    ],
@@ -127,5 +127,5 @@
          "character": 0
       }
    ],
-   "order": 13
+   "order": 102
 }

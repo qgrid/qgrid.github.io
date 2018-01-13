@@ -10,7 +10,7 @@ const API_TEMPLATE = fs.readFileSync(path.join('./api.hbs'), 'utf8');
 
 gulp.task('typedoc', () =>
     gulp
-        .src(['./node_modules/ng2-qgrid/core/**/*.model.d.ts'])
+        .src(['./node_modules/ng2-qgrid/core/**/*.d.ts'])
         .pipe(typedoc({
             module: 'commonjs',
             target: 'es5',

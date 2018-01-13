@@ -2,7 +2,7 @@
 title: LayoutModel
 type: api
 group: API
-order: 19
+order: 128
 ---
 A class contains rewritten widthes and heights of rows and columns
 

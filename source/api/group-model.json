@@ -1,5 +1,5 @@
 {
-   "id": 115,
+   "id": 314,
    "name": "\"group/group.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
    "children": [
       {
-         "id": 116,
+         "id": 315,
          "name": "GroupModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 119,
+               "id": 318,
                "name": "by",
                "kind": 1024,
                "kindString": "Property",
@@ -47,7 +47,7 @@
                }
             },
             {
-               "id": 118,
+               "id": 317,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
@@ -55,7 +55,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "How grid will render nodes:\n1. `column` - all hierarchy levels inside one group type column.\n2. `subhead` - group column try to use all available space to display hierarchy.\n3. `rowspan` -"
+                  "shortText": "How grid will render nodes:\n* `column` - all hierarchy levels inside one group type column.\n* `subhead` - group column try to use all available space to display hierarchy.\n* `rowspan` - under construction"
                },
                "sources": [
                   {
@@ -70,7 +70,7 @@
                }
             },
             {
-               "id": 117,
+               "id": 316,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -86,11 +86,12 @@
                ],
                "type": {
                   "type": "reference",
-                  "name": "Resource"
+                  "name": "Resource",
+                  "id": 132
                }
             },
             {
-               "id": 120,
+               "id": 319,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
@@ -110,7 +111,7 @@
                }
             },
             {
-               "id": 121,
+               "id": 320,
                "name": "toggle",
                "kind": 1024,
                "kindString": "Property",
@@ -126,7 +127,8 @@
                ],
                "type": {
                   "type": "reference",
-                  "name": "Command"
+                  "name": "Command",
+                  "id": 299
                }
             }
          ],
@@ -135,11 +137,11 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  119,
-                  118,
-                  117,
-                  120,
-                  121
+                  318,
+                  317,
+                  316,
+                  319,
+                  320
                ]
             }
          ],
@@ -157,7 +159,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            116
+            315
          ]
       }
    ],
@@ -168,5 +170,5 @@
          "character": 0
       }
    ],
-   "order": 14
+   "order": 104
 }
