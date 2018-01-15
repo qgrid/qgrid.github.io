@@ -38,17 +38,17 @@
 		td:last-child {
 			width: 100%;
 		}
-		
+
 		td.comment{
 			min-width: 200px;
 		}
 	}
-	table,
+
 	pre.line-numbers {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		code {
 			background: transparent;
-			padding: 0;
+			padding: 0em;
 			line-height: 1.4em;
 		}
 	}
@@ -56,20 +56,21 @@
 	pre[class*="language-"] ::selection,
 	code[class*="language-"]::selection,
 	code[class*="language-"] ::selection {
-		background: lightyellow;
+		background: $color-code-selection;
 	}
 	a {
 		text-decoration: none;
 		color: #0078cf
 	}
 	blockquote {
-		padding: 0 1em;
+		padding: 1em 2em;
 		color: #6a737d;
-		border-left: 0.25em solid #e7f1ff;
 		margin: 1em 0;
+		background: #e7f1ff;
+		font-style: italic;
 	}
 	code {
-		background: lightyellow;
+		background: $color-code-default;
 		padding: 0 0.25em;
 		-webkit-border-radius: 2px;
 		-moz-border-radius: 2px;
