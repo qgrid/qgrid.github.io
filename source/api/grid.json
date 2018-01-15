@@ -1,0 +1,286 @@
+{
+   "id": 3826,
+   "name": "\"services/grid.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/services/grid.d.ts",
+   "children": [
+      {
+         "id": 3827,
+         "name": "GridService",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 3828,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3829,
+                     "name": "new GridService",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 3830,
+                           "name": "model",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Model",
+                              "id": 915
+                           }
+                        },
+                        {
+                           "id": 3831,
+                           "name": "apply",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "INoopResult",
+                              "id": 225
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "GridService",
+                        "id": 3827
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "services/grid.d.ts",
+                     "line": 8,
+                     "character": 34
+                  }
+               ]
+            },
+            {
+               "id": 3832,
+               "name": "apply",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "services/grid.d.ts",
+                     "line": 11,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "INoopResult",
+                  "id": 225
+               }
+            },
+            {
+               "id": 3838,
+               "name": "busy",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3839,
+                     "name": "busy",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 3840,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 3841,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "services/grid.d.ts",
+                                 "line": 15,
+                                 "character": 11
+                              }
+                           ]
+                        }
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "services/grid.d.ts",
+                     "line": 15,
+                     "character": 8
+                  }
+               ]
+            },
+            {
+               "id": 3833,
+               "name": "invalidate",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3834,
+                     "name": "invalidate",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 3835,
+                           "name": "source",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        },
+                        {
+                           "id": 3836,
+                           "name": "changes",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "object"
+                           }
+                        },
+                        {
+                           "id": 3837,
+                           "name": "pipe",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "reference",
+                                 "name": "IPipe",
+                                 "id": 118
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "Promise",
+                        "typeArguments": [
+                           {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "services/grid.d.ts",
+                     "line": 13,
+                     "character": 14
+                  }
+               ]
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  3828
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  3832
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  3838,
+                  3833
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "services/grid.d.ts",
+               "line": 8,
+               "character": 32
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            3827
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "services/grid.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 203
+}

@@ -35,8 +35,11 @@
 		margin: 1em 0;
 		display: block;
 		overflow-x: auto;
-		td.comment {
+		td:last-child {
 			width: 100%;
+		}
+		
+		td.comment{
 			min-width: 200px;
 		}
 	}

@@ -1,0 +1,166 @@
+{
+   "id": 889,
+   "name": "\"persistence/persistence.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
+   "children": [
+      {
+         "id": 890,
+         "name": "PersistenceModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under construction"
+         },
+         "children": [
+            {
+               "id": 891,
+               "name": "id",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 8,
+                     "character": 3
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 893,
+               "name": "load",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 10,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 894,
+               "name": "remove",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 11,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 895,
+               "name": "settings",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 12,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "object"
+               }
+            },
+            {
+               "id": 892,
+               "name": "storage",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 9,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "PersistenceStorage",
+                  "id": 877
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  891,
+                  893,
+                  894,
+                  895,
+                  892
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "persistence/persistence.model.d.ts",
+               "line": 7,
+               "character": 37
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            890
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "persistence/persistence.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 141
+}
