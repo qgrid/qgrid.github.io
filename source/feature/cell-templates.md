@@ -1,5 +1,5 @@
 ---
-title: Selection
+title: Cell Templates
 type: guide
 group: Features
 order: 2
