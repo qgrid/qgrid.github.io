@@ -48,7 +48,7 @@ const helper = args => {
   const unit = JSON.parse(json);
   const unitCls = unit.children[0];
   const unitMeta = unitCls.children;
-  const lines = unitMeta
+  const lines = unitMeta || []
     .filter(m => !!(m.comment && m.comment.shortText))
     .map(m => `<tr><td class="name">${m.name}</td><td class="type"><code>${apiType(m.type)}</code></td><td class="comment">${apiComment(m.comment)}</td></tr>`);
 
@@ -70,7 +70,7 @@ const helper = args => {
     </tbody>
   </table>`;
 
-  return template;
+  return lines.length ? template : '';
 };
 
 hexo.extend.tag.register("docTable", helper);
