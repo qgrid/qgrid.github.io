@@ -1,5 +1,5 @@
 ---
-title: IEditorOptions
+title: EditorOptions
 type: api
 group: API
 order: 17

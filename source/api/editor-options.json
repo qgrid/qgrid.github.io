@@ -10,9 +10,9 @@
    "children": [
       {
          "id": 7,
-         "name": "IEditorOptions",
-         "kind": 256,
-         "kindString": "Interface",
+         "name": "EditorOptions",
+         "kind": 128,
+         "kindString": "Class",
          "flags": {
             "isExported": true
          },
@@ -239,15 +239,15 @@
             {
                "fileName": "column-type/editor.options.d.ts",
                "line": 6,
-               "character": 31
+               "character": 26
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Interfaces",
-         "kind": 256,
+         "title": "Classes",
+         "kind": 128,
          "children": [
             7
          ]

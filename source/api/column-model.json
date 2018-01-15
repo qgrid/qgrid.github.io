@@ -528,7 +528,7 @@
                ],
                "type": {
                   "type": "reference",
-                  "name": "IEditorOptions",
+                  "name": "EditorOptions",
                   "id": 7
                }
             },
@@ -1057,52 +1057,52 @@
             {
                "type": "reference",
                "name": "DataColumnModel",
-               "id": 1646
+               "id": 1704
             },
             {
                "type": "reference",
                "name": "FilterRowColumnModel",
-               "id": 2132
+               "id": 2190
             },
             {
                "type": "reference",
                "name": "GroupColumnModel",
-               "id": 2199
+               "id": 2257
             },
             {
                "type": "reference",
                "name": "PadColumnModel",
-               "id": 2475
+               "id": 2533
             },
             {
                "type": "reference",
                "name": "PivotColumnModel",
-               "id": 2610
+               "id": 2668
             },
             {
                "type": "reference",
                "name": "RowDetailsColumnModel",
-               "id": 2746
+               "id": 2804
             },
             {
                "type": "reference",
                "name": "RowExpandColumnModel",
-               "id": 2812
+               "id": 2870
             },
             {
                "type": "reference",
                "name": "RowIndicatorColumnModel",
-               "id": 2878
+               "id": 2936
             },
             {
                "type": "reference",
                "name": "RowNumberColumnModel",
-               "id": 2944
+               "id": 3002
             },
             {
                "type": "reference",
                "name": "SelectColumnModel",
-               "id": 3079
+               "id": 3137
             }
          ]
       }

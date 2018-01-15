@@ -307,8 +307,7 @@
                ],
                "type": {
                   "type": "reference",
-                  "name": "IEditorOptions",
-                  "id": 7
+                  "name": "IEditorOptions"
                }
             },
             {
