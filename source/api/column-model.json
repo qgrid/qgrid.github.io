@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that represents any column in the q-grid."
+            "shortText": "A class that represents any column in the q-grid.",
+            "text": "## Usage\n\n``` javascript\ngridModel.data({\n   columns: [\n   {\n\t     key: 'id',\n\t  \t title: 'ID',\n\t\t type: 'id',\n\t\t editor: 'number'\n\t  },\n   {\n\t     key: 'avatar',\n\t\t title: 'Avatar',\n\t\t type: 'image',\n\t\t width: 80,\n\t\t value: (item, value) => isUndef(value) ? item.avatar : item.avatar = value,\n\t\t labelPath: 'avatarFileName'\n\t  },\n\t  {\n\t     key: 'name.last',\n\t\t title: 'Last Name',\n\t\t type: 'text',\n\t\t path: 'name.last'\n\t  },\n\t  {\n\t     key: 'gender',\n\t\t title: 'Gender',\n\t\t type: 'text',\n\t\t value: (item, value) => isUndef(value) ? item.gender : item.gender = value,\n\t\t editor: 'dropdown',\n\t\t editorOptions: {\n\t\t    fetch: ['female', 'male']\n\t\t }\n\t  },\n\t  {\n\t     key: 'birthday',\n\t\t title: 'Birthday',\n\t\t type: 'date'\n\t  },\n\t  {\n\t     key: 'comment',\n\t\t title: 'Comment',\n\t\t type: 'text',\n\t\t editor: 'text-area',\n\t\t width: 200,\n\t\t maxLength: 8000\n\t  },\n\t  {\n\t\t key: 'password',\n\t\t title: 'Password',\n\t\t type: 'password',\n\t\t isDefault: false\n\t  },\n\t  {\n\t     key: 'teammates',\n\t\t title: 'Teammates',\n\t\t type: 'reference',\n\t\t editorOptions: {\n\t\t    modelFactory: () => {\n\t\t\t   const model = qgrid.model();\n\t\t\t   model\n               .selection({\n\t\t\t         mode: 'multiple',\n\t\t\t\t     unit: 'row'\n\t\t\t      })\n\t\t\t\t  .columnList({\n\t\t\t\t     generation: 'deep'\n\t\t\t\t  })\n\t\t\t\t  .data({\n\t\t\t\t     rows: ctrl.rows\n\t\t\t\t  });\n\n\t\t\t      return model;\n\t\t\t   }\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'contact.address.zip',\n\t\t   title: 'Zip',\n\t\t   type: 'number',\n\t\t   path: 'contact.address.zip',\n\t\t   width: 70,\n\t\t   isDefault: false\n\t\t},\n\t\t{\n\t\t   key: 'contact.phone',\n\t\t   title: 'Contact Phones',\n\t\t   type: 'array',\n\t\t   path: 'contact.phone',\n\t\t   width: 250\n\t\t},\n\t\t{\n\t\t   key: 'contact.email.primary',\n\t\t   title: 'Primary Email',\n        type: 'email'\n     },\n\t\t{\n\t\t\tkey: 'contact.email.secondary',\n\t\t\ttitle: 'Secondary Email',\n\t\t\ttype: 'email',\n\t\t\teditor: 'autocomplete',\n\t\t\teditorOptions: {\n               fetch: (item, d, search = '') =>\n                   new Promise(resolve => resolve(['foo@bar.ru']))\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'salary',\n\t\t   title: 'Salary',\n\t\t   type: 'currency'\n\t\t}\n\t\t{\n\t\t   key: 'modifiedTime',\n\t\t   title: 'Modified Time',\n\t\t   type: 'time'\n\t\t},\n\t\t{\n\t\t   key: 'webPage',\n\t\t   title: 'Web Page',\n\t\t   type: 'url'\n\t\t},\n\t\t{\n\t\t   key: 'attachment',\n\t\t   title: 'Attachment',\n\t\t   type: 'file'\n\t\t},\n\t\t{\n\t\t   key: 'isOnline',\n\t\t   title: 'Online',\n\t       type: 'bool'\n\t\t}]\n});\n```\n\n## Suggested Links\n\n* [value.js](https://github.com/qgrid/ng2/blob/master/core/services/value.js)\n* [label.js](https://github.com/qgrid/ng2/blob/master/core/services/label.js)\n* [column.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/column.pipe.js)\n"
          },
          "children": [
             {
@@ -60,13 +61,13 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 6,
+                     "line": 147,
                      "character": 34
                   }
                ]
             },
             {
-               "id": 60,
+               "id": 66,
                "name": "$label",
                "kind": 1024,
                "kindString": "Property",
@@ -76,28 +77,28 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 156,
-                     "character": 7
+                     "line": 327,
+                     "character": 10
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 61,
+                     "id": 67,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 62,
+                           "id": 68,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 63,
+                                 "id": 69,
                                  "name": "row",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -108,7 +109,7 @@
                                  }
                               },
                               {
-                                 "id": 64,
+                                 "id": 70,
                                  "name": "value",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -130,8 +131,8 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 156,
-                           "character": 8
+                           "line": 327,
+                           "character": 11
                         }
                      ]
                   }
@@ -148,8 +149,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 53,
-                     "character": 7
+                     "line": 195,
+                     "character": 10
                   }
                ],
                "type": {
@@ -202,8 +203,8 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 53,
-                           "character": 8
+                           "line": 195,
+                           "character": 11
                         }
                      ]
                   }
@@ -223,8 +224,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 106,
-                     "character": 8
+                     "line": 266,
+                     "character": 11
                   }
                ],
                "type": {
@@ -246,8 +247,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 128,
-                     "character": 10
+                     "line": 288,
+                     "character": 13
                   }
                ],
                "type": {
@@ -269,8 +270,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 138,
-                     "character": 9
+                     "line": 298,
+                     "character": 12
                   }
                ],
                "type": {
@@ -292,8 +293,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 133,
-                     "character": 13
+                     "line": 293,
+                     "character": 16
                   }
                ],
                "type": {
@@ -315,8 +316,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 122,
-                     "character": 8
+                     "line": 282,
+                     "character": 11
                   }
                ],
                "type": {
@@ -338,8 +339,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 111,
-                     "character": 10
+                     "line": 271,
+                     "character": 13
                   }
                ],
                "type": {
@@ -361,8 +362,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 117,
-                     "character": 8
+                     "line": 277,
+                     "character": 11
                   }
                ],
                "type": {
@@ -378,16 +379,110 @@
                "flags": {
                   "isExported": true
                },
+               "comment": {
+                  "shortText": "A functional type of a the column.",
+                  "text": " * `'control'` behavior controllers (e.g. `select` type column).\n * `'data'` real user data.\n * `'markup'` used for the internal markup needs (e.g. `pad` type column).\n * `'pivot'`multi head pivot.\n"
+               },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 70,
-                     "character": 6
+                     "line": 230,
+                     "character": 9
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "string"
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "data"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "control"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "markup"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "pivot"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 61,
+               "name": "compare",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "This function is used by `column sort` pipe to order row values."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 325,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 62,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 63,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 64,
+                                 "name": "x",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 65,
+                                 "name": "y",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "boolean"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "column-type/column.model.d.ts",
+                           "line": 325,
+                           "character": 12
+                        }
+                     ]
+                  }
                }
             },
             {
@@ -399,13 +494,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Editor type, will be shown in cell edit mode instead of default column type editor.\nFor instance, it can be used for id type column `<q-grid-column type=\"id\" editor=\"number\">`."
+                  "shortText": "Editor type, will be shown in cell edit mode instead of default column type editor.\nFor instance, it can be used for id type column `<q-grid-column type=\"id\" editor=\"number\">`"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 76,
-                     "character": 7
+                     "line": 236,
+                     "character": 10
                   }
                ],
                "type": {
@@ -427,8 +522,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 81,
-                     "character": 14
+                     "line": 241,
+                     "character": 17
                   }
                ],
                "type": {
@@ -451,8 +546,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 148,
-                     "character": 6
+                     "line": 308,
+                     "character": 9
                   }
                ],
                "type": {
@@ -474,8 +569,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 143,
-                     "character": 10
+                     "line": 303,
+                     "character": 13
                   }
                ],
                "type": {
@@ -497,8 +592,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 42,
-                     "character": 4
+                     "line": 183,
+                     "character": 7
                   }
                ],
                "type": {
@@ -520,8 +615,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 154,
-                     "character": 6
+                     "line": 314,
+                     "character": 9
                   }
                ],
                "type": {
@@ -574,11 +669,34 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 154,
-                           "character": 7
+                           "line": 314,
+                           "character": 10
                         }
                      ]
                   }
+               }
+            },
+            {
+               "id": 60,
+               "name": "labelPath",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Path to the label. Example is `address.phones.0.num`, if `labelPath` property is setup, it is used\nto get/set cell label, but it has a lower priority than column `label property."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 320,
+                     "character": 13
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
                }
             },
             {
@@ -595,8 +713,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 101,
-                     "character": 9
+                     "line": 261,
+                     "character": 12
                   }
                ],
                "type": {
@@ -618,8 +736,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 96,
-                     "character": 9
+                     "line": 256,
+                     "character": 12
                   }
                ],
                "type": {
@@ -638,8 +756,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 68,
-                     "character": 7
+                     "line": 211,
+                     "character": 10
                   }
                ],
                "type": {
@@ -656,13 +774,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Path to the value. Example is `address.phones.0.num`, if path property is setup, it is used\nto get/set cell value, but it has a lower priority than column value property."
+                  "shortText": "Path to the value. Example is `address.phones.0.num`, if `path` property is setup, it is used\nto get/set cell value, but it has a lower priority than column `value` property."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 59,
-                     "character": 5
+                     "line": 201,
+                     "character": 8
                   }
                ],
                "type": {
@@ -684,13 +802,26 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 67,
-                     "character": 4
+                     "line": 209,
+                     "character": 7
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "string"
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "intrinsic",
+                        "name": "null"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "left"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "right"
+                     }
+                  ]
                }
             },
             {
@@ -701,11 +832,15 @@
                "flags": {
                   "isExported": true
                },
+               "comment": {
+                  "shortText": "Place where a column was created.",
+                  "text": "* `'generation'` was auto-generated by the q-grid.\n* `'template'` was defined by user in the html template.\n* `'user'` was defined by user in the javascript/typescript.\n"
+               },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 69,
-                     "character": 7
+                     "line": 220,
+                     "character": 10
                   }
                ],
                "type": {
@@ -727,8 +862,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 47,
-                     "character": 6
+                     "line": 188,
+                     "character": 9
                   }
                ],
                "type": {
@@ -745,13 +880,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Type of column. Beside below list user is free to define own column type.\nBe aware that some column types are used for internal purposes.\n- array\n- bool\n- currency\n- date\n- email\n- file\n- filter-row\n- group\n- id\n- image\n- number\n- pad\n- pivot\n- reference\n- row-details\n- row-expand\n- row-indicator\n- row-number\n- row-options\n- select\n- text\n- time\n- url"
+                  "shortText": "Type of column. Beside below list user is free to define own column type.\nBe aware that some column types are used for internal purposes.\n- `array`\n- `bool`\n- `currency`\n- `date`\n- `email`\n- `file`\n- `filter-row`\n- `group`\n- `id`\n- `image`\n- `number`\n- `pad`\n- `pivot`\n- `reference`\n- `row-details`\n- `row-expand`\n- `row-indicator`\n- `row-number`\n- `row-options`\n- `select`\n- `text`\n- `time`\n- `url`"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 36,
-                     "character": 5
+                     "line": 177,
+                     "character": 8
                   }
                ],
                "type": {
@@ -768,13 +903,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Getter, setter for cell value. If value property is setup, it is used to get/set cell value."
+                  "shortText": "Getter, setter for a cell value. If the value property is setup, it is used to get/set cell value."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 52,
-                     "character": 6
+                     "line": 193,
+                     "character": 9
                   }
                ],
                "type": {
@@ -827,8 +962,8 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 52,
-                           "character": 7
+                           "line": 193,
+                           "character": 10
                         }
                      ]
                   }
@@ -844,13 +979,13 @@
                },
                "comment": {
                   "shortText": "Width of the q-grid column.",
-                  "text": "* Can be setup in pixels like `<q-grid-column width=\"100\">`.\n* Can be setup in persents like `<q-grid-column width=\"20%\"`.\n\nPercents are materialized only once on init, and depend on grid size.\n"
+                  "text": "* Can be setup in `pixels` like `<q-grid-column width=\"100\">`.\n* Can be setup in `persents` like `<q-grid-column width=\"20%\"`.\n\nPercents are materialized only once on init, and depend on the q-grid size.\n"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 91,
-                     "character": 6
+                     "line": 251,
+                     "character": 9
                   }
                ],
                "type": {
@@ -880,7 +1015,7 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  60,
+                  66,
                   31,
                   46,
                   50,
@@ -890,12 +1025,14 @@
                   47,
                   48,
                   40,
+                  61,
                   41,
                   42,
                   54,
                   53,
                   24,
                   55,
+                  60,
                   45,
                   44,
                   38,
@@ -912,7 +1049,7 @@
          "sources": [
             {
                "fileName": "column-type/column.model.d.ts",
-               "line": 6,
+               "line": 147,
                "character": 32
             }
          ],
@@ -920,52 +1057,52 @@
             {
                "type": "reference",
                "name": "DataColumnModel",
-               "id": 1703
+               "id": 1646
             },
             {
                "type": "reference",
                "name": "FilterRowColumnModel",
-               "id": 2147
+               "id": 2132
             },
             {
                "type": "reference",
                "name": "GroupColumnModel",
-               "id": 2208
+               "id": 2199
             },
             {
                "type": "reference",
                "name": "PadColumnModel",
-               "id": 2460
+               "id": 2475
             },
             {
                "type": "reference",
                "name": "PivotColumnModel",
-               "id": 2583
+               "id": 2610
             },
             {
                "type": "reference",
                "name": "RowDetailsColumnModel",
-               "id": 2707
+               "id": 2746
             },
             {
                "type": "reference",
                "name": "RowExpandColumnModel",
-               "id": 2767
+               "id": 2812
             },
             {
                "type": "reference",
                "name": "RowIndicatorColumnModel",
-               "id": 2827
+               "id": 2878
             },
             {
                "type": "reference",
                "name": "RowNumberColumnModel",
-               "id": 2887
+               "id": 2944
             },
             {
                "type": "reference",
                "name": "SelectColumnModel",
-               "id": 3010
+               "id": 3079
             }
          ]
       }

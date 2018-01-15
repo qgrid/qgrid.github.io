@@ -1,5 +1,5 @@
 {
-   "id": 179,
+   "id": 185,
    "name": "\"navigation/navigation.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/navigation/navigation.model.d.ts",
    "children": [
       {
-         "id": 180,
+         "id": 186,
          "name": "NavigationModel",
          "kind": 128,
          "kindString": "Class",
@@ -17,11 +17,12 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that"
+            "shortText": "A class that gives access to the current cell position inside the q-grid.",
+            "text": "## Suggested Links\n\n* [Navigation View](/doc/api/navigation-view.html)\n* [navigation.js](https://github.com/qgrid/ng2/blob/master/core/navigation/navigation.js)\n"
          },
          "children": [
             {
-               "id": 181,
+               "id": 187,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 182,
+                     "id": 188,
                      "name": "new NavigationModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -38,20 +39,20 @@
                      "type": {
                         "type": "reference",
                         "name": "NavigationModel",
-                        "id": 180
+                        "id": 186
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 6,
+                     "line": 11,
                      "character": 38
                   }
                ]
             },
             {
-               "id": 186,
+               "id": 192,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -64,7 +65,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 27,
+                     "line": 32,
                      "character": 16
                   }
                ],
@@ -75,7 +76,7 @@
                }
             },
             {
-               "id": 184,
+               "id": 190,
                "name": "columnIndex",
                "kind": 1024,
                "kindString": "Property",
@@ -88,7 +89,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 17,
+                     "line": 22,
                      "character": 21
                   }
                ],
@@ -98,7 +99,7 @@
                }
             },
             {
-               "id": 185,
+               "id": 191,
                "name": "row",
                "kind": 1024,
                "kindString": "Property",
@@ -111,7 +112,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 22,
+                     "line": 27,
                      "character": 13
                   }
                ],
@@ -121,7 +122,7 @@
                }
             },
             {
-               "id": 183,
+               "id": 189,
                "name": "rowIndex",
                "kind": 1024,
                "kindString": "Property",
@@ -134,7 +135,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 12,
+                     "line": 17,
                      "character": 18
                   }
                ],
@@ -149,24 +150,24 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  181
+                  187
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  186,
-                  184,
-                  185,
-                  183
+                  192,
+                  190,
+                  191,
+                  189
                ]
             }
          ],
          "sources": [
             {
                "fileName": "navigation/navigation.model.d.ts",
-               "line": 6,
+               "line": 11,
                "character": 36
             }
          ]
@@ -177,7 +178,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            180
+            186
          ]
       }
    ],

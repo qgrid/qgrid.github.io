@@ -2,7 +2,7 @@
 title: PipeModel
 type: api
 group: API
-order: 152
+order: 153
 ---
 A class that contains setting to control when and how q-grid should be updated.
 

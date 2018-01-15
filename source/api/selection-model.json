@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that allows to control selection function of the q-grid."
+            "shortText": "A class that allows to control selection function of the q-grid.",
+            "text": "## Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n* [selection.service.js](https://github.com/qgrid/ng2/blob/master/core/selection/selection.service.js)\n"
          },
          "children": [
             {
@@ -45,7 +46,7 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 9,
+                     "line": 12,
                      "character": 37
                   }
                ]
@@ -65,7 +66,7 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 20,
+                     "line": 23,
                      "character": 6
                   }
                ],
@@ -88,7 +89,7 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 44,
+                     "line": 47,
                      "character": 7
                   }
                ],
@@ -115,7 +116,7 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 52,
+                     "line": 55,
                      "character": 5
                   }
                ],
@@ -137,7 +138,7 @@
                            "sources": [
                               {
                                  "fileName": "selection/selection.model.d.ts",
-                                 "line": 54,
+                                 "line": 57,
                                  "character": 10
                               }
                            ],
@@ -165,7 +166,7 @@
                                  "sources": [
                                     {
                                        "fileName": "selection/selection.model.d.ts",
-                                       "line": 54,
+                                       "line": 57,
                                        "character": 11
                                     }
                                  ]
@@ -181,7 +182,7 @@
                            "sources": [
                               {
                                  "fileName": "selection/selection.model.d.ts",
-                                 "line": 53,
+                                 "line": 56,
                                  "character": 7
                               }
                            ],
@@ -209,7 +210,7 @@
                                  "sources": [
                                     {
                                        "fileName": "selection/selection.model.d.ts",
-                                       "line": 53,
+                                       "line": 56,
                                        "character": 8
                                     }
                                  ]
@@ -230,7 +231,7 @@
                      "sources": [
                         {
                            "fileName": "selection/selection.model.d.ts",
-                           "line": 52,
+                           "line": 55,
                            "character": 6
                         }
                      ]
@@ -252,14 +253,26 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 39,
+                     "line": 42,
                      "character": 6
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "SelectionMode",
-                  "id": 245
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "single"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "mutiple"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "range"
+                     }
+                  ]
                }
             },
             {
@@ -273,14 +286,14 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 12,
+                     "line": 15,
                      "character": 10
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 132
+                  "id": 138
                }
             },
             {
@@ -298,14 +311,30 @@
                "sources": [
                   {
                      "fileName": "selection/selection.model.d.ts",
-                     "line": 30,
+                     "line": 33,
                      "character": 6
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "SelectionUnit",
-                  "id": 243
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "row"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "cell"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "column"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "mix"
+                     }
+                  ]
                }
             }
          ],
@@ -333,7 +362,7 @@
          "sources": [
             {
                "fileName": "selection/selection.model.d.ts",
-               "line": 9,
+               "line": 12,
                "character": 35
             }
          ]
@@ -355,5 +384,5 @@
          "character": 0
       }
    ],
-   "order": 186
+   "order": 187
 }

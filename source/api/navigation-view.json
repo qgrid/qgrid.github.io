@@ -1,0 +1,371 @@
+{
+   "id": 4136,
+   "name": "\"navigation/navigation.view.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/navigation/navigation.view.d.ts",
+   "children": [
+      {
+         "id": 4137,
+         "name": "NavigationView",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 4138,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4139,
+                     "name": "new NavigationView",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4140,
+                           "name": "model",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Model",
+                              "id": 915
+                           }
+                        },
+                        {
+                           "id": 4141,
+                           "name": "table",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Table",
+                              "id": 1472
+                           }
+                        },
+                        {
+                           "id": 4142,
+                           "name": "commandManager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CommandManager",
+                              "id": 470
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "NavigationView",
+                        "id": 4137
+                     },
+                     "overwrites": {
+                        "type": "reference",
+                        "name": "View.__constructor",
+                        "id": 1150
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.view.d.ts",
+                     "line": 10,
+                     "character": 50
+                  }
+               ],
+               "overwrites": {
+                  "type": "reference",
+                  "name": "View.__constructor",
+                  "id": 1150
+               }
+            },
+            {
+               "id": 4143,
+               "name": "focus",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.view.d.ts",
+                     "line": 13,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 4145,
+               "name": "model",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.d.ts",
+                     "line": 6,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               },
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "View.model",
+                  "id": 1153
+               }
+            },
+            {
+               "id": 4144,
+               "name": "scrollTo",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.view.d.ts",
+                     "line": 14,
+                     "character": 12
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 4153,
+               "name": "dispose",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4154,
+                     "name": "dispose",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.dispose",
+                        "id": 1146
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 6,
+                     "character": 9
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.dispose",
+                  "id": 1146
+               }
+            },
+            {
+               "id": 4146,
+               "name": "using",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4147,
+                     "name": "using",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4148,
+                           "name": "dispose",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 4149,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 4150,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "view/disposable.view.d.ts",
+                                       "line": 4,
+                                       "character": 16
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 4151,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 4152,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "view/disposable.view.d.ts",
+                                 "line": 4,
+                                 "character": 29
+                              }
+                           ]
+                        }
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.using",
+                        "id": 1139
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 4,
+                     "character": 7
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.using",
+                  "id": 1139
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  4138
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  4143,
+                  4145,
+                  4144
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  4153,
+                  4146
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "navigation/navigation.view.d.ts",
+               "line": 10,
+               "character": 35
+            }
+         ],
+         "extendedTypes": [
+            {
+               "type": "reference",
+               "name": "View",
+               "id": 1149
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            4137
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "navigation/navigation.view.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 132
+}

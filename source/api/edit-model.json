@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class represent options to control q-grid edit mode."
+            "shortText": "A class represent options to control q-grid edit mode.",
+            "text": "## Suggested Links\n\n* [Edit Cell View](/doc/api/edit-cell-view.html)\n* [Edit Row View](/doc/api/edit-row-view.html)\n"
          },
          "children": [
             {
@@ -45,7 +46,7 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 9,
+                     "line": 14,
                      "character": 32
                   }
                ]
@@ -64,7 +65,7 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 39,
+                     "line": 44,
                      "character": 7
                   }
                ],
@@ -88,7 +89,7 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 49,
+                     "line": 54,
                      "character": 6
                   }
                ],
@@ -112,7 +113,7 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 34,
+                     "line": 39,
                      "character": 7
                   }
                ],
@@ -136,14 +137,14 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 55,
+                     "line": 60,
                      "character": 16
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "ICommitShortcuts",
-                  "id": 3318
+                  "id": 3469
                }
             },
             {
@@ -160,7 +161,7 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 29,
+                     "line": 34,
                      "character": 6
                   }
                ],
@@ -185,14 +186,13 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 19,
+                     "line": 24,
                      "character": 5
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "Mode",
-                  "id": 333
+                  "type": "intrinsic",
+                  "name": "string"
                }
             },
             {
@@ -209,7 +209,7 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 44,
+                     "line": 49,
                      "character": 6
                   }
                ],
@@ -230,14 +230,14 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 11,
+                     "line": 16,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 132
+                  "id": 138
                }
             },
             {
@@ -249,19 +249,18 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates if q-grid is in `edit` or in `view` mode."
+                  "shortText": "Indicates if q-grid is in `'edit'` or in a `'view'` mode."
                },
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 24,
+                     "line": 29,
                      "character": 6
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "State",
-                  "id": 335
+                  "type": "intrinsic",
+                  "name": "string"
                }
             }
          ],
@@ -292,7 +291,7 @@
          "sources": [
             {
                "fileName": "edit/edit.model.d.ts",
-               "line": 9,
+               "line": 14,
                "character": 30
             }
          ]

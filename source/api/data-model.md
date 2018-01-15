@@ -36,3 +36,7 @@ gridModel.data({
 })
 ```
 
+## Suggested Links
+
+* [data.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/data.pipe.js)
+

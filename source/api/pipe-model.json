@@ -1,5 +1,5 @@
 {
-   "id": 903,
+   "id": 904,
    "name": "\"pipe/pipe.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.model.d.ts",
    "children": [
       {
-         "id": 904,
+         "id": 905,
          "name": "PipeModel",
          "kind": 128,
          "kindString": "Class",
@@ -22,7 +22,7 @@
          },
          "children": [
             {
-               "id": 905,
+               "id": 906,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 906,
+                     "id": 907,
                      "name": "new PipeModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "PipeModel",
-                        "id": 904
+                        "id": 905
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 907,
+               "id": 908,
                "name": "reduce",
                "kind": 1024,
                "kindString": "Property",
@@ -72,21 +72,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 908,
+                     "id": 909,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 909,
+                           "id": 910,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 910,
+                                 "id": 911,
                                  "name": "xs",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -96,12 +96,12 @@
                                     "elementType": {
                                        "type": "reference",
                                        "name": "PipeUnit",
-                                       "id": 896
+                                       "id": 897
                                     }
                                  }
                               },
                               {
-                                 "id": 911,
+                                 "id": 912,
                                  "name": "Model",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -117,7 +117,7 @@
                               "elementType": {
                                  "type": "reference",
                                  "name": "PipeUnit",
-                                 "id": 896
+                                 "id": 897
                               }
                            }
                         }
@@ -133,7 +133,7 @@
                }
             },
             {
-               "id": 912,
+               "id": 913,
                "name": "triggers",
                "kind": 1024,
                "kindString": "Property",
@@ -162,15 +162,15 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  905
+                  906
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  907,
-                  912
+                  908,
+                  913
                ]
             }
          ],
@@ -188,7 +188,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            904
+            905
          ]
       }
    ],
@@ -199,5 +199,5 @@
          "character": 0
       }
    ],
-   "order": 152
+   "order": 153
 }

@@ -1,0 +1,483 @@
+{
+   "id": 4825,
+   "name": "\"style/style.view.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.view.d.ts",
+   "children": [
+      {
+         "id": 4826,
+         "name": "StyleView",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 4827,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4828,
+                     "name": "new StyleView",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4829,
+                           "name": "model",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Model",
+                              "id": 915
+                           }
+                        },
+                        {
+                           "id": 4830,
+                           "name": "table",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Table",
+                              "id": 1472
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "StyleView",
+                        "id": 4826
+                     },
+                     "overwrites": {
+                        "type": "reference",
+                        "name": "View.__constructor",
+                        "id": 1150
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "style/style.view.d.ts",
+                     "line": 9,
+                     "character": 45
+                  }
+               ],
+               "overwrites": {
+                  "type": "reference",
+                  "name": "View.__constructor",
+                  "id": 1150
+               }
+            },
+            {
+               "id": 4841,
+               "name": "model",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.d.ts",
+                     "line": 6,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               },
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "View.model",
+                  "id": 1153
+               }
+            },
+            {
+               "id": 4831,
+               "name": "monitor",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.view.d.ts",
+                     "line": 12,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4832,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "children": [
+                        {
+                           "id": 4834,
+                           "name": "cell",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "style/style.view.d.ts",
+                                 "line": 14,
+                                 "character": 12
+                              }
+                           ],
+                           "type": {
+                              "type": "reference",
+                              "name": "Monitor",
+                              "id": 4814
+                           }
+                        },
+                        {
+                           "id": 4833,
+                           "name": "row",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "style/style.view.d.ts",
+                                 "line": 13,
+                                 "character": 11
+                              }
+                           ],
+                           "type": {
+                              "type": "reference",
+                              "name": "Monitor",
+                              "id": 4814
+                           }
+                        }
+                     ],
+                     "groups": [
+                        {
+                           "title": "Variables",
+                           "kind": 32,
+                           "children": [
+                              4834,
+                              4833
+                           ]
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "style/style.view.d.ts",
+                           "line": 12,
+                           "character": 12
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 4849,
+               "name": "dispose",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4850,
+                     "name": "dispose",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.dispose",
+                        "id": 1146
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 6,
+                     "character": 9
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.dispose",
+                  "id": 1146
+               }
+            },
+            {
+               "id": 4835,
+               "name": "invalidate",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4836,
+                     "name": "invalidate",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4837,
+                           "name": "domRow",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        },
+                        {
+                           "id": 4838,
+                           "name": "domCell",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "style/style.view.d.ts",
+                     "line": 17,
+                     "character": 14
+                  }
+               ]
+            },
+            {
+               "id": 4839,
+               "name": "needInvalidate",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4840,
+                     "name": "needInvalidate",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "style/style.view.d.ts",
+                     "line": 18,
+                     "character": 18
+                  }
+               ]
+            },
+            {
+               "id": 4842,
+               "name": "using",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4843,
+                     "name": "using",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4844,
+                           "name": "dispose",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 4845,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 4846,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "view/disposable.view.d.ts",
+                                       "line": 4,
+                                       "character": 16
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 4847,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 4848,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "view/disposable.view.d.ts",
+                                 "line": 4,
+                                 "character": 29
+                              }
+                           ]
+                        }
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.using",
+                        "id": 1139
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 4,
+                     "character": 7
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.using",
+                  "id": 1139
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  4827
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  4841,
+                  4831
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  4849,
+                  4835,
+                  4839,
+                  4842
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "style/style.view.d.ts",
+               "line": 9,
+               "character": 30
+            }
+         ],
+         "extendedTypes": [
+            {
+               "type": "reference",
+               "name": "View",
+               "id": 1149
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            4826
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "style/style.view.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 221
+}

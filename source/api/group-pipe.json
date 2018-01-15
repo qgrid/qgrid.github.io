@@ -1,0 +1,59 @@
+{
+   "id": 4248,
+   "name": "\"pipe/group.pipe.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/group.pipe.d.ts",
+   "children": [
+      {
+         "id": 4249,
+         "name": "groupPipe",
+         "kind": 32,
+         "kindString": "Variable",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "sources": [
+            {
+               "fileName": "pipe/group.pipe.d.ts",
+               "line": 6,
+               "character": 30
+            }
+         ],
+         "type": {
+            "type": "reference",
+            "name": "IPipe",
+            "id": 118,
+            "typeArguments": [
+               {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            ]
+         }
+      }
+   ],
+   "groups": [
+      {
+         "title": "Variables",
+         "kind": 32,
+         "children": [
+            4249
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pipe/group.pipe.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 147
+}

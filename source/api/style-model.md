@@ -2,7 +2,7 @@
 title: StyleModel
 type: api
 group: API
-order: 217
+order: 219
 ---
 A class that allows to apply styles to rows and cells.
 
@@ -43,4 +43,9 @@ A class that allows to apply styles to rows and cells.
        }
    });
 ```
+
+## Suggested Links
+
+* [Style View](/doc/api/style-view.html)
+* [style.monitor.js](https://github.com/qgrid/ng2/blob/master/core/style/style.monitor.js)
 

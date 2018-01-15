@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class"
+            "shortText": "A class that implements command pattern in the q-grid.\nAny q-grid actions are implemented through this pattern.",
+            "text": "## Instanciate a Command\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n```\n\n## Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n"
          },
          "children": [
             {
@@ -61,7 +62,7 @@
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 6,
+                     "line": 30,
                      "character": 30
                   }
                ]
@@ -80,7 +81,7 @@
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 12,
+                     "line": 36,
                      "character": 11
                   }
                ],
@@ -126,7 +127,7 @@
                      "sources": [
                         {
                            "fileName": "command/command.d.ts",
-                           "line": 12,
+                           "line": 36,
                            "character": 12
                         }
                      ]
@@ -147,7 +148,7 @@
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 17,
+                     "line": 41,
                      "character": 8
                   }
                ],
@@ -193,7 +194,7 @@
                      "sources": [
                         {
                            "fileName": "command/command.d.ts",
-                           "line": 17,
+                           "line": 41,
                            "character": 9
                         }
                      ]
@@ -215,7 +216,7 @@
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 36,
+                     "line": 60,
                      "character": 9
                   }
                ],
@@ -235,12 +236,12 @@
                },
                "comment": {
                   "shortText": "Sequence of keyboard key codes, to execute the command.",
-                  "text": "Some examples:\n\n* `shift+a`\n* `ctrl+s`\n* `f2`\n\n"
+                  "text": "Some examples:\n\n* `'shift+a'`\n* `'ctrl+s'`\n* `'f2'`\n\n"
                },
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 29,
+                     "line": 53,
                      "character": 9
                   }
                ],
@@ -261,7 +262,7 @@
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 38,
+                     "line": 62,
                      "character": 7
                   }
                ],
@@ -294,7 +295,7 @@
          "sources": [
             {
                "fileName": "command/command.d.ts",
-               "line": 6,
+               "line": 30,
                "character": 28
             }
          ]

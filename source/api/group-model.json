@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that allows to apply some hierarchy to the grid.\nHowever user is allowed to write any kind of custom hierarchies just by overriding default pipe and\nworking with `Node` object from the grid service."
+            "shortText": "A class that allows to apply some hierarchy to the grid.\nHowever user is allowed to write any kind of custom hierarchies just by overriding default pipe and\nworking with `Node` object from the grid service.",
+            "text": "## Suggested Links\n\n* [Group View](/doc/api/group-view.html)\n* [group.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/group.pipe.js)\n* [group.build.js](https://github.com/qgrid/ng2/blob/master/core/group/group.build.js)\n* [node.js]((https://github.com/qgrid/ng2/blob/master/core/node/node.js)\n* [node.build.js](https://github.com/qgrid/ng2/blob/master/core/node.build.js)\n"
          },
          "children": [
             {
@@ -34,7 +35,7 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 23,
+                     "line": 31,
                      "character": 3
                   }
                ],
@@ -55,12 +56,12 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "How grid will render nodes:\n* `column` - all hierarchy levels inside one group type column.\n* `subhead` - group column try to use all available space to display hierarchy.\n* `rowspan` - under construction"
+                  "shortText": "How grid will render nodes:\n* `'column'` all hierarchy levels inside one group type column.\n* `'subhead'` group column try to use all available space to display hierarchy.\n* `'rowspan'` under construction"
                },
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 18,
+                     "line": 26,
                      "character": 5
                   }
                ],
@@ -80,14 +81,14 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 10,
+                     "line": 18,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 132
+                  "id": 138
                }
             },
             {
@@ -101,7 +102,7 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 24,
+                     "line": 32,
                      "character": 9
                   }
                ],
@@ -121,7 +122,7 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 25,
+                     "line": 33,
                      "character": 7
                   }
                ],
@@ -148,7 +149,7 @@
          "sources": [
             {
                "fileName": "group/group.model.d.ts",
-               "line": 9,
+               "line": 17,
                "character": 31
             }
          ]

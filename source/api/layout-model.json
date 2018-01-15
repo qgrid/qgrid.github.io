@@ -1,5 +1,5 @@
 {
-   "id": 175,
+   "id": 181,
    "name": "\"layout/layout.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layout/layout.model.d.ts",
    "children": [
       {
-         "id": 176,
+         "id": 182,
          "name": "LayoutModel",
          "kind": 128,
          "kindString": "Class",
@@ -17,11 +17,12 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class contains rewritten widthes and heights of rows and columns"
+            "shortText": "A class contains rewritten widthes and heights of rows and columns",
+            "text": "## Suggested Links\n* [Layout View](/doc/api/layout-view.html)\n"
          },
          "children": [
             {
-               "id": 177,
+               "id": 183,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
@@ -34,7 +35,7 @@
                "sources": [
                   {
                      "fileName": "layout/layout.model.d.ts",
-                     "line": 10,
+                     "line": 13,
                      "character": 11
                   }
                ],
@@ -54,7 +55,7 @@
                }
             },
             {
-               "id": 178,
+               "id": 184,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -67,7 +68,7 @@
                "sources": [
                   {
                      "fileName": "layout/layout.model.d.ts",
-                     "line": 15,
+                     "line": 18,
                      "character": 8
                   }
                ],
@@ -92,15 +93,15 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  177,
-                  178
+                  183,
+                  184
                ]
             }
          ],
          "sources": [
             {
                "fileName": "layout/layout.model.d.ts",
-               "line": 6,
+               "line": 9,
                "character": 32
             }
          ]
@@ -111,7 +112,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            176
+            182
          ]
       }
    ],

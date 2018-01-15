@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class representing the q-grid job state."
+            "shortText": "A class representing the q-grid job state.",
+            "text": "## Usage\n\nIn general this model is not modified directly, consider to [grid service](`/doc/api/grid-service.html`).\n\n```javascript\n\tconst gridModel = qgrid.model();\n\tconst service = qgrid.service(gridModel);\n\tconst cancelBusy = service.busy();\n\n\tnew Promise(resolve => {\n\t   cancelBusy();\n    resolve()\n\t});\n```\n"
          },
          "children": [
             {
@@ -45,7 +46,7 @@
                "sources": [
                   {
                      "fileName": "progress/progress.model.d.ts",
-                     "line": 6,
+                     "line": 21,
                      "character": 36
                   }
                ]
@@ -64,7 +65,7 @@
                "sources": [
                   {
                      "fileName": "progress/progress.model.d.ts",
-                     "line": 13,
+                     "line": 28,
                      "character": 7
                   }
                ],
@@ -87,7 +88,7 @@
                "sources": [
                   {
                      "fileName": "progress/progress.model.d.ts",
-                     "line": 18,
+                     "line": 33,
                      "character": 6
                   }
                ],
@@ -110,14 +111,14 @@
                "sources": [
                   {
                      "fileName": "progress/progress.model.d.ts",
-                     "line": 8,
+                     "line": 23,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 132
+                  "id": 138
                }
             }
          ],
@@ -142,7 +143,7 @@
          "sources": [
             {
                "fileName": "progress/progress.model.d.ts",
-               "line": 6,
+               "line": 21,
                "character": 34
             }
          ]
@@ -164,5 +165,5 @@
          "character": 0
       }
    ],
-   "order": 166
+   "order": 167
 }

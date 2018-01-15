@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "Command resolution manager that controls what commands and in which order columns should be executed.\nUsually other q-grid internal services use this class after some keyboard events."
+            "shortText": "Command resolution manager that controls what commands and in which order columns should be executed.\nUsually other q-grid internal services use this class after some keyboard events.",
+            "text": "## Suggested Links\n\n* [Command](/doc/api/command.html)\n* [Shortcut](/doc/api/shortcut.html)\n"
          },
          "children": [
             {
@@ -45,7 +46,7 @@
                "sources": [
                   {
                      "fileName": "command/command.manager.d.ts",
-                     "line": 6,
+                     "line": 11,
                      "character": 37
                   }
                ]
@@ -117,7 +118,7 @@
                "sources": [
                   {
                      "fileName": "command/command.manager.d.ts",
-                     "line": 23,
+                     "line": 28,
                      "character": 7
                   }
                ]
@@ -185,7 +186,7 @@
                "sources": [
                   {
                      "fileName": "command/command.manager.d.ts",
-                     "line": 15,
+                     "line": 20,
                      "character": 7
                   }
                ]
@@ -211,7 +212,7 @@
          "sources": [
             {
                "fileName": "command/command.manager.d.ts",
-               "line": 6,
+               "line": 11,
                "character": 35
             }
          ],
@@ -219,7 +220,7 @@
             {
                "type": "reference",
                "name": "TableCommandManager",
-               "id": 3271
+               "id": 3422
             }
          ]
       }

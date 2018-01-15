@@ -9,4 +9,7 @@ virtual scrolling is enabeld.
 
 {% docTable "source/api/fetch-model.json" %}
 
+## Suggested Links
+
+* [Scroll View](/doc/api/scroll-view.html)
 

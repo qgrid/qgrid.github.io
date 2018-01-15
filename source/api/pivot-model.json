@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class to control q-grid pivoting functions."
+            "shortText": "A class to control q-grid pivoting functions.",
+            "text": "## Suggested Links\n\n* [Pivot View](/doc/api/pivot-view.html)\n* [pivot.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/pivot.pipe.js)\n* [pivot.build.js](https://github.com/qgrid/ng2/blob/master/core/pivot/pivot.build.js)\n* [pivot.form.js](https://github.com/qgrid/ng2/blob/master/core/pivot/pivot.form.js)\n"
          },
          "children": [
             {
@@ -45,7 +46,7 @@
                "sources": [
                   {
                      "fileName": "pivot/pivot.model.d.ts",
-                     "line": 6,
+                     "line": 13,
                      "character": 33
                   }
                ]
@@ -64,7 +65,7 @@
                "sources": [
                   {
                      "fileName": "pivot/pivot.model.d.ts",
-                     "line": 13,
+                     "line": 20,
                      "character": 3
                   }
                ],
@@ -72,7 +73,7 @@
                   "type": "array",
                   "elementType": {
                      "type": "intrinsic",
-                     "name": "any"
+                     "name": "string"
                   }
                }
             },
@@ -87,14 +88,14 @@
                "sources": [
                   {
                      "fileName": "pivot/pivot.model.d.ts",
-                     "line": 8,
+                     "line": 15,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 132
+                  "id": 138
                }
             }
          ],
@@ -118,7 +119,7 @@
          "sources": [
             {
                "fileName": "pivot/pivot.model.d.ts",
-               "line": 6,
+               "line": 13,
                "character": 31
             }
          ]
@@ -140,5 +141,5 @@
          "character": 0
       }
    ],
-   "order": 163
+   "order": 164
 }

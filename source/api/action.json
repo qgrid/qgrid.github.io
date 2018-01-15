@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class to connect Command and UI."
+            "shortText": "A class to connect the q-grid [command](/doc/api/command.html) with user interface.\nUsually action represents button in UI. If user action doesn't populate UI attributes like `title` or `icon`,\ncommand can be still available through keyboard shortcut.",
+            "text": "## Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n"
          },
          "children": [
             {
@@ -85,7 +86,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 6,
+                     "line": 14,
                      "character": 29
                   }
                ]
@@ -99,12 +100,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "User command that will be executed when:\n* Action button is clicked.\n* Command shortcut keys are pressed."
+                  "shortText": "User command that will be executed when:",
+                  "text": "* Action button is clicked.\n* Command shortcut keys are pressed.\n"
                },
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 14,
+                     "line": 23,
                      "character": 8
                   }
                ],
@@ -123,12 +125,12 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Icon key that will be rendered as a button."
+                  "shortText": "Icon key that will be rendered as a button image."
                },
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 24,
+                     "line": 34,
                      "character": 5
                   }
                ],
@@ -146,12 +148,12 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Text that will be shown as a tooltip for the action button."
+                  "shortText": "Text that will be shown as a tooltip for the action button, if icon property\nis not set this text can be shown as a label(depends on [action bar](/doc/feature/action.html) plugin implementation)."
                },
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 19,
+                     "line": 29,
                      "character": 6
                   }
                ],
@@ -182,7 +184,7 @@
          "sources": [
             {
                "fileName": "action/action.d.ts",
-               "line": 6,
+               "line": 14,
                "character": 27
             }
          ]

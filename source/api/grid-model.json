@@ -17,7 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class contains basic grid options like id and title."
+            "shortText": "A class contains basic grid options like id and title.",
+            "text": "* Suggested Links\n\n* [grid.ctrl.js](https://github.com/qgrid/ng2/blob/master/core/grid/grid.ctrl.js)\n"
          },
          "children": [
             {
@@ -34,7 +35,7 @@
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 10,
+                     "line": 14,
                      "character": 3
                   }
                ],
@@ -58,7 +59,7 @@
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 20,
+                     "line": 24,
                      "character": 7
                   }
                ],
@@ -81,7 +82,7 @@
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 25,
+                     "line": 29,
                      "character": 6
                   }
                ],
@@ -105,7 +106,7 @@
          "sources": [
             {
                "fileName": "grid/grid.model.d.ts",
-               "line": 4,
+               "line": 8,
                "character": 30
             }
          ]

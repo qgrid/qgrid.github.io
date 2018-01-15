@@ -1,0 +1,567 @@
+{
+   "id": 3524,
+   "name": "\"edit/edit.cell.view.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.cell.view.d.ts",
+   "children": [
+      {
+         "id": 3525,
+         "name": "EditCellView",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 3526,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3527,
+                     "name": "new EditCellView",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 3528,
+                           "name": "model",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Model",
+                              "id": 915
+                           }
+                        },
+                        {
+                           "id": 3529,
+                           "name": "table",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Table",
+                              "id": 1472
+                           }
+                        },
+                        {
+                           "id": 3530,
+                           "name": "commandManager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CommandManager",
+                              "id": 470
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "EditCellView",
+                        "id": 3525
+                     },
+                     "overwrites": {
+                        "type": "reference",
+                        "name": "View.__constructor",
+                        "id": 1150
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 14,
+                     "character": 48
+                  }
+               ],
+               "overwrites": {
+                  "type": "reference",
+                  "name": "View.__constructor",
+                  "id": 1150
+               }
+            },
+            {
+               "id": 3534,
+               "name": "cancel",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 20,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3539,
+               "name": "column",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 25,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "ColumnModel",
+                  "id": 19
+               }
+            },
+            {
+               "id": 3533,
+               "name": "commit",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 19,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3531,
+               "name": "editor",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 17,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "CellEditor",
+                  "id": 3502
+               }
+            },
+            {
+               "id": 3532,
+               "name": "enter",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 18,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3536,
+               "name": "exit",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 22,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3540,
+               "name": "fetch",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 26,
+                     "character": 18
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "INoopResult",
+                  "id": 225
+               }
+            },
+            {
+               "id": 3538,
+               "name": "label",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 24,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 3542,
+               "name": "model",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.d.ts",
+                     "line": 6,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               },
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "View.model",
+                  "id": 1153
+               }
+            },
+            {
+               "id": 3541,
+               "name": "options",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 27,
+                     "character": 20
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IEditorOptions",
+                  "id": 7
+               }
+            },
+            {
+               "id": 3535,
+               "name": "reset",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 21,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3537,
+               "name": "value",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 23,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 3550,
+               "name": "dispose",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3551,
+                     "name": "dispose",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.dispose",
+                        "id": 1146
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 6,
+                     "character": 9
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.dispose",
+                  "id": 1146
+               }
+            },
+            {
+               "id": 3543,
+               "name": "using",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3544,
+                     "name": "using",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 3545,
+                           "name": "dispose",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 3546,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 3547,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "view/disposable.view.d.ts",
+                                       "line": 4,
+                                       "character": 16
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 3548,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 3549,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "view/disposable.view.d.ts",
+                                 "line": 4,
+                                 "character": 29
+                              }
+                           ]
+                        }
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.using",
+                        "id": 1139
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 4,
+                     "character": 7
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.using",
+                  "id": 1139
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  3526
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  3534,
+                  3539,
+                  3533,
+                  3531,
+                  3532,
+                  3536,
+                  3540,
+                  3538,
+                  3542,
+                  3541,
+                  3535,
+                  3537
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  3550,
+                  3543
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "edit/edit.cell.view.d.ts",
+               "line": 14,
+               "character": 33
+            }
+         ],
+         "extendedTypes": [
+            {
+               "type": "reference",
+               "name": "View",
+               "id": 1149
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            3525
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "edit/edit.cell.view.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 77
+}

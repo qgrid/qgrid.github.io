@@ -1,5 +1,5 @@
 {
-   "id": 118,
+   "id": 124,
    "name": "\"view/view.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/view/view.model.d.ts",
    "children": [
       {
-         "id": 119,
+         "id": 125,
          "name": "ViewModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 120,
+               "id": 126,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,7 +30,7 @@
                },
                "signatures": [
                   {
-                     "id": 121,
+                     "id": 127,
                      "name": "new ViewModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -38,7 +38,7 @@
                      "type": {
                         "type": "reference",
                         "name": "ViewModel",
-                        "id": 119
+                        "id": 125
                      }
                   }
                ],
@@ -51,7 +51,7 @@
                ]
             },
             {
-               "id": 123,
+               "id": 129,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
@@ -78,7 +78,7 @@
                }
             },
             {
-               "id": 124,
+               "id": 130,
                "name": "nodes",
                "kind": 1024,
                "kindString": "Property",
@@ -104,7 +104,7 @@
                }
             },
             {
-               "id": 125,
+               "id": 131,
                "name": "pivot",
                "kind": 1024,
                "kindString": "Property",
@@ -124,11 +124,11 @@
                "type": {
                   "type": "reference",
                   "name": "IPivot",
-                  "id": 100
+                  "id": 106
                }
             },
             {
-               "id": 122,
+               "id": 128,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -159,17 +159,17 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  120
+                  126
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  123,
-                  124,
-                  125,
-                  122
+                  129,
+                  130,
+                  131,
+                  128
                ]
             }
          ],
@@ -187,7 +187,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            119
+            125
          ]
       }
    ],
@@ -198,5 +198,5 @@
          "character": 0
       }
    ],
-   "order": 230
+   "order": 232
 }

@@ -2,7 +2,7 @@
 title: SortModel
 type: api
 group: API
-order: 214
+order: 216
 ---
 A class that allows to control sorting.
 
@@ -19,4 +19,9 @@ gridModel.sort({
    by: ['+myColumnKey', '-myOtherColumnKey']
 });
 ```
+
+## Suggested Links
+
+* [Sort View](/doc/api/sort-view.html)
+* [sort.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/sort.pipe.js)
 

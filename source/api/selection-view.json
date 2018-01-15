@@ -1,0 +1,649 @@
+{
+   "id": 4572,
+   "name": "\"selection/selection.view.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/selection/selection.view.d.ts",
+   "children": [
+      {
+         "id": 4573,
+         "name": "SelectionView",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 4574,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4575,
+                     "name": "new SelectionView",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4576,
+                           "name": "model",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Model",
+                              "id": 915
+                           }
+                        },
+                        {
+                           "id": 4577,
+                           "name": "table",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Table",
+                              "id": 1472
+                           }
+                        },
+                        {
+                           "id": 4578,
+                           "name": "commandManager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CommandManager",
+                              "id": 470
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "SelectionView",
+                        "id": 4573
+                     },
+                     "overwrites": {
+                        "type": "reference",
+                        "name": "View.__constructor",
+                        "id": 1150
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 14,
+                     "character": 49
+                  }
+               ],
+               "overwrites": {
+                  "type": "reference",
+                  "name": "View.__constructor",
+                  "id": 1150
+               }
+            },
+            {
+               "id": 4581,
+               "name": "columns",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 19,
+                     "character": 20
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "ColumnModel",
+                     "id": 19
+                  }
+               }
+            },
+            {
+               "id": 4598,
+               "name": "model",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.d.ts",
+                     "line": 6,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               },
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "View.model",
+                  "id": 1153
+               }
+            },
+            {
+               "id": 4580,
+               "name": "rows",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 18,
+                     "character": 17
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            },
+            {
+               "id": 4579,
+               "name": "selection",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 17,
+                     "character": 22
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "SelectionModel",
+                  "id": 247
+               }
+            },
+            {
+               "id": 4583,
+               "name": "toggleCell",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 22,
+                     "character": 14
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 4584,
+               "name": "toggleColumn",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 23,
+                     "character": 16
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 4582,
+               "name": "toggleRow",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 21,
+                     "character": 13
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 4596,
+               "name": "destroy",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4597,
+                     "name": "destroy",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 31,
+                     "character": 11
+                  }
+               ]
+            },
+            {
+               "id": 4606,
+               "name": "dispose",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4607,
+                     "name": "dispose",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.dispose",
+                        "id": 1146
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 6,
+                     "character": 9
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.dispose",
+                  "id": 1146
+               }
+            },
+            {
+               "id": 4593,
+               "name": "isIndeterminate",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4594,
+                     "name": "isIndeterminate",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4595,
+                           "name": "item",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 29,
+                     "character": 19
+                  }
+               ]
+            },
+            {
+               "id": 4585,
+               "name": "selectRange",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4586,
+                     "name": "selectRange",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4587,
+                           "name": "startCell",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CellView",
+                              "id": 623
+                           }
+                        },
+                        {
+                           "id": 4588,
+                           "name": "endCell",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CellView",
+                              "id": 623
+                           }
+                        },
+                        {
+                           "id": 4589,
+                           "name": "source",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 25,
+                     "character": 15
+                  }
+               ]
+            },
+            {
+               "id": 4590,
+               "name": "state",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4591,
+                     "name": "state",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4592,
+                           "name": "item",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "selection/selection.view.d.ts",
+                     "line": 27,
+                     "character": 9
+                  }
+               ]
+            },
+            {
+               "id": 4599,
+               "name": "using",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 4600,
+                     "name": "using",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4601,
+                           "name": "dispose",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 4602,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 4603,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "view/disposable.view.d.ts",
+                                       "line": 4,
+                                       "character": 16
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 4604,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 4605,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "view/disposable.view.d.ts",
+                                 "line": 4,
+                                 "character": 29
+                              }
+                           ]
+                        }
+                     },
+                     "inheritedFrom": {
+                        "type": "reference",
+                        "name": "DisposableView.using",
+                        "id": 1139
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/disposable.view.d.ts",
+                     "line": 4,
+                     "character": 7
+                  }
+               ],
+               "inheritedFrom": {
+                  "type": "reference",
+                  "name": "DisposableView.using",
+                  "id": 1139
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  4574
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  4581,
+                  4598,
+                  4580,
+                  4579,
+                  4583,
+                  4584,
+                  4582
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  4596,
+                  4606,
+                  4593,
+                  4585,
+                  4590,
+                  4599
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "selection/selection.view.d.ts",
+               "line": 14,
+               "character": 34
+            }
+         ],
+         "extendedTypes": [
+            {
+               "type": "reference",
+               "name": "View",
+               "id": 1149
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            4573
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "selection/selection.view.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 191
+}
