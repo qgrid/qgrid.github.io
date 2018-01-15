@@ -1,0 +1,321 @@
+{
+   "id": 298,
+   "name": "\"command/command.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.d.ts",
+   "children": [
+      {
+         "id": 299,
+         "name": "Command",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that implements command pattern in the q-grid.\nAny q-grid actions are implemented through this pattern.",
+            "text": "## Instanciate a Command\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n```\n\n## Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n"
+         },
+         "children": [
+            {
+               "id": 300,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 301,
+                     "name": "new Command",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 302,
+                           "name": "context",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "reference",
+                              "name": "IContext",
+                              "id": 288
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "Command",
+                        "id": 299
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 30,
+                     "character": 30
+                  }
+               ]
+            },
+            {
+               "id": 303,
+               "name": "canExecute",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Indicates if command is invokable."
+               },
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 36,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 304,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 305,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 306,
+                                 "name": "args",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {
+                                    "isRest": true
+                                 },
+                                 "type": {
+                                    "type": "array",
+                                    "elementType": {
+                                       "type": "intrinsic",
+                                       "name": "any"
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "boolean"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "command/command.d.ts",
+                           "line": 36,
+                           "character": 12
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 307,
+               "name": "execute",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Invoke the command."
+               },
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 41,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 308,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 309,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 310,
+                                 "name": "args",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {
+                                    "isRest": true
+                                 },
+                                 "type": {
+                                    "type": "array",
+                                    "elementType": {
+                                       "type": "intrinsic",
+                                       "name": "any"
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "command/command.d.ts",
+                           "line": 41,
+                           "character": 9
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 312,
+               "name": "priority",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Command priority that can be used by `command manager` to specify order if commands to execute.\nOne of the examples if several commands have the same shortcut, we need a way to understand\nin what order these commands should be executed."
+               },
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 60,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 311,
+               "name": "shortcut",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Sequence of keyboard key codes, to execute the command.",
+                  "text": "Some examples:\n\n* `'shift+a'`\n* `'ctrl+s'`\n* `'f2'`\n\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 53,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 313,
+               "name": "source",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 62,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  300
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  303,
+                  307,
+                  312,
+                  311,
+                  313
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "command/command.d.ts",
+               "line": 30,
+               "character": 28
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            299
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "command/command.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 40
+}

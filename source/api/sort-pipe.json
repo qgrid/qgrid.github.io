@@ -1,0 +1,59 @@
+{
+   "id": 4272,
+   "name": "\"pipe/sort.pipe.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/sort.pipe.d.ts",
+   "children": [
+      {
+         "id": 4273,
+         "name": "sortPipe",
+         "kind": 32,
+         "kindString": "Variable",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "sources": [
+            {
+               "fileName": "pipe/sort.pipe.d.ts",
+               "line": 6,
+               "character": 29
+            }
+         ],
+         "type": {
+            "type": "reference",
+            "name": "IPipe",
+            "id": 118,
+            "typeArguments": [
+               {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            ]
+         }
+      }
+   ],
+   "groups": [
+      {
+         "title": "Variables",
+         "kind": 32,
+         "children": [
+            4273
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pipe/sort.pipe.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 156
+}

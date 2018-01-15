@@ -1,0 +1,447 @@
+{
+   "id": 499,
+   "name": "\"shortcut/shortcut.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/shortcut/shortcut.d.ts",
+   "children": [
+      {
+         "id": 500,
+         "name": "Shortcut",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under construction.",
+            "text": "## Suggested Links\n\n* [shortcut.manager.js](https://github.com/qgrid/ng2/blob/master/core/shortcut/shortuct.manager.js)\n* [shortcut.dispatcher.js](https://github.com/qgrid/ng2/blob/master/core/shortcut/shortcut.dispatcher.js)\n"
+         },
+         "children": [
+            {
+               "id": 501,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 502,
+                     "name": "new Shortcut",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 503,
+                           "name": "manager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "ShortcutDispatcher",
+                              "id": 482
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "Shortcut",
+                        "id": 500
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 13,
+                     "character": 31
+                  }
+               ]
+            },
+            {
+               "id": 516,
+               "name": "factory",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 517,
+                     "name": "factory",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 518,
+                           "name": "commandManager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CommandManager",
+                              "id": 470
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "object"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 24,
+                     "character": 11
+                  }
+               ]
+            },
+            {
+               "id": 519,
+               "name": "keyDown",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 520,
+                     "name": "keyDown",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 521,
+                           "name": "e",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        },
+                        {
+                           "id": 522,
+                           "name": "source",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 26,
+                     "character": 11
+                  }
+               ]
+            },
+            {
+               "id": 523,
+               "name": "register",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 524,
+                     "name": "register",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 525,
+                           "name": "commandManager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CommandManager",
+                              "id": 470
+                           }
+                        },
+                        {
+                           "id": 526,
+                           "name": "commands",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "intrinsic",
+                                 "name": "any"
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 28,
+                     "character": 12
+                  }
+               ]
+            },
+            {
+               "id": 504,
+               "name": "isControl",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 505,
+                     "name": "isControl",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 506,
+                           "name": "keyCode",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "KeyCode",
+                              "id": 496
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 16,
+                     "character": 20
+                  }
+               ]
+            },
+            {
+               "id": 507,
+               "name": "isPrintable",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 508,
+                     "name": "isPrintable",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 509,
+                           "name": "keyCode",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "KeyCode",
+                              "id": 496
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 18,
+                     "character": 22
+                  }
+               ]
+            },
+            {
+               "id": 510,
+               "name": "stringify",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 511,
+                     "name": "stringify",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 512,
+                           "name": "keyCode",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "KeyCode",
+                              "id": 496
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 20,
+                     "character": 20
+                  }
+               ]
+            },
+            {
+               "id": 513,
+               "name": "translate",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 514,
+                     "name": "translate",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 515,
+                           "name": "e",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "string"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "shortcut/shortcut.d.ts",
+                     "line": 22,
+                     "character": 20
+                  }
+               ]
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  501
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  516,
+                  519,
+                  523,
+                  504,
+                  507,
+                  510,
+                  513
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "shortcut/shortcut.d.ts",
+               "line": 13,
+               "character": 29
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            500
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "shortcut/shortcut.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 214
+}

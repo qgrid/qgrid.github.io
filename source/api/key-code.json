@@ -1,0 +1,100 @@
+{
+   "id": 495,
+   "name": "\"shortcut/key.code.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/shortcut/key.code.d.ts",
+   "children": [
+      {
+         "id": 496,
+         "name": "KeyCode",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 497,
+               "name": "code",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "shortcut/key.code.d.ts",
+                     "line": 5,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 498,
+               "name": "key",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "shortcut/key.code.d.ts",
+                     "line": 6,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  497,
+                  498
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "shortcut/key.code.d.ts",
+               "line": 4,
+               "character": 20
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            496
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "shortcut/key.code.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 213
+}

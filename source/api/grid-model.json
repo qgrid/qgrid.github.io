@@ -1,5 +1,5 @@
 {
-   "id": 15,
+   "id": 1,
    "name": "\"grid/grid.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/grid/grid.model.d.ts",
    "children": [
       {
-         "id": 16,
+         "id": 2,
          "name": "GridModel",
          "kind": 128,
          "kindString": "Class",
@@ -17,11 +17,12 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class contains basic grid options like id and title."
+            "shortText": "A class contains basic grid options like id and title.",
+            "text": "### Suggested Links\n\n* [grid.ctrl.js](https://github.com/qgrid/ng2/blob/master/core/grid/grid.ctrl.js)\n"
          },
          "children": [
             {
-               "id": 17,
+               "id": 3,
                "name": "id",
                "kind": 1024,
                "kindString": "Property",
@@ -34,7 +35,7 @@
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 10,
+                     "line": 14,
                      "character": 3
                   }
                ],
@@ -44,7 +45,7 @@
                }
             },
             {
-               "id": 18,
+               "id": 4,
                "name": "status",
                "kind": 1024,
                "kindString": "Property",
@@ -52,13 +53,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates a state of the model:\n1. `unbound` - model is not connected to a grid element.\n2. `bound` - model connected to a grid element.",
+                  "shortText": "Indicates a state of the model:\n* `unbound` model is not connected to a grid element.\n* `bound` model connected to a grid element.",
                   "text": "Current version of the grid doesn't allow to use one model on several grids,\nso if user will try to do that exception will be thrown.\n"
                },
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 20,
+                     "line": 24,
                      "character": 7
                   }
                ],
@@ -68,7 +69,7 @@
                }
             },
             {
-               "id": 19,
+               "id": 5,
                "name": "title",
                "kind": 1024,
                "kindString": "Property",
@@ -81,7 +82,7 @@
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 25,
+                     "line": 29,
                      "character": 6
                   }
                ],
@@ -96,16 +97,16 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  17,
-                  18,
-                  19
+                  3,
+                  4,
+                  5
                ]
             }
          ],
          "sources": [
             {
                "fileName": "grid/grid.model.d.ts",
-               "line": 4,
+               "line": 8,
                "character": 30
             }
          ]
@@ -116,7 +117,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            16
+            2
          ]
       }
    ],
@@ -127,5 +128,5 @@
          "character": 0
       }
    ],
-   "order": 13
+   "order": 102
 }

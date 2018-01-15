@@ -1,0 +1,59 @@
+{
+   "id": 4252,
+   "name": "\"pipe/pagination.pipe.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pagination.pipe.d.ts",
+   "children": [
+      {
+         "id": 4253,
+         "name": "paginationPipe",
+         "kind": 32,
+         "kindString": "Variable",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "sources": [
+            {
+               "fileName": "pipe/pagination.pipe.d.ts",
+               "line": 6,
+               "character": 35
+            }
+         ],
+         "type": {
+            "type": "reference",
+            "name": "IPipe",
+            "id": 118,
+            "typeArguments": [
+               {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            ]
+         }
+      }
+   ],
+   "groups": [
+      {
+         "title": "Variables",
+         "kind": 32,
+         "children": [
+            4253
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pipe/pagination.pipe.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 149
+}

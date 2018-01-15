@@ -1,5 +1,5 @@
 {
-   "id": 213,
+   "id": 434,
    "name": "\"drag/drag.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/drag/drag.model.d.ts",
    "children": [
       {
-         "id": 214,
+         "id": 435,
          "name": "DragModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 215,
+               "id": 436,
                "name": "isActive",
                "kind": 1024,
                "kindString": "Property",
@@ -49,7 +49,7 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  215
+                  436
                ]
             }
          ],
@@ -67,7 +67,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            214
+            435
          ]
       }
    ],
@@ -78,5 +78,5 @@
          "character": 0
       }
    ],
-   "order": 6
+   "order": 74
 }

@@ -1,0 +1,193 @@
+{
+   "id": 446,
+   "name": "\"scroll/scroll.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scroll/scroll.model.d.ts",
+   "children": [
+      {
+         "id": 447,
+         "name": "ScrollModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that contains properties about scroll status.",
+            "text": "## Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n"
+         },
+         "children": [
+            {
+               "id": 448,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 449,
+                     "name": "new ScrollModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "ScrollModel",
+                        "id": 447
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "scroll/scroll.model.d.ts",
+                     "line": 8,
+                     "character": 34
+                  }
+               ]
+            },
+            {
+               "id": 453,
+               "name": "cursor",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Row index on top of the q-grid client area."
+               },
+               "sources": [
+                  {
+                     "fileName": "scroll/scroll.model.d.ts",
+                     "line": 32,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 452,
+               "name": "left",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Left scroll position."
+               },
+               "sources": [
+                  {
+                     "fileName": "scroll/scroll.model.d.ts",
+                     "line": 27,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 450,
+               "name": "mode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Scroll mode.",
+                  "text": "* `'default'` mode without virtualization.\n* `'virtual'` turn on virtual mode.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "scroll/scroll.model.d.ts",
+                     "line": 17,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 451,
+               "name": "top",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Top scroll position."
+               },
+               "sources": [
+                  {
+                     "fileName": "scroll/scroll.model.d.ts",
+                     "line": 22,
+                     "character": 4
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  448
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  453,
+                  452,
+                  450,
+                  451
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "scroll/scroll.model.d.ts",
+               "line": 8,
+               "character": 32
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            447
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "scroll/scroll.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 183
+}

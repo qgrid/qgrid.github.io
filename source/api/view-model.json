@@ -1,0 +1,202 @@
+{
+   "id": 124,
+   "name": "\"view/view.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/view/view.model.d.ts",
+   "children": [
+      {
+         "id": 125,
+         "name": "ViewModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that represent raw data to render."
+         },
+         "children": [
+            {
+               "id": 126,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 127,
+                     "name": "new ViewModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "ViewModel",
+                        "id": 125
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "view/view.model.d.ts",
+                     "line": 7,
+                     "character": 32
+                  }
+               ]
+            },
+            {
+               "id": 129,
+               "name": "columns",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "The last row of columns that should be rendered."
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.model.d.ts",
+                     "line": 18,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "ColumnModel",
+                     "id": 19
+                  }
+               }
+            },
+            {
+               "id": 130,
+               "name": "nodes",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of nodes to render."
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.model.d.ts",
+                     "line": 23,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "Node"
+                  }
+               }
+            },
+            {
+               "id": 131,
+               "name": "pivot",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Pivot data to render."
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.model.d.ts",
+                     "line": 28,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPivot",
+                  "id": 106
+               }
+            },
+            {
+               "id": 128,
+               "name": "rows",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of data rows to render."
+               },
+               "sources": [
+                  {
+                     "fileName": "view/view.model.d.ts",
+                     "line": 13,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  126
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  129,
+                  130,
+                  131,
+                  128
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "view/view.model.d.ts",
+               "line": 7,
+               "character": 30
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            125
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "view/view.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 232
+}

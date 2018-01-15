@@ -1,0 +1,355 @@
+{
+   "id": 208,
+   "name": "\"row/row.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/row/row.model.d.ts",
+   "children": [
+      {
+         "id": 209,
+         "name": "RowModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under construction.",
+            "text": "## Suggested Links\n\n* [Row View](/doc/api/row-view.html)\n"
+         },
+         "children": [
+            {
+               "id": 210,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 211,
+                     "name": "new RowModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "RowModel",
+                        "id": 209
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 10,
+                     "character": 31
+                  }
+               ]
+            },
+            {
+               "id": 221,
+               "name": "canDrag",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 18,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 222,
+               "name": "canResize",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 19,
+                     "character": 13
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 223,
+               "name": "frozen",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 20,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            },
+            {
+               "id": 215,
+               "name": "height",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 16,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 216,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 217,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 218,
+                                 "name": "element",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "HTMLElement"
+                                 }
+                              },
+                              {
+                                 "id": 219,
+                                 "name": "index",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "number"
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "union",
+                              "types": [
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "number"
+                                 },
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "number"
+                                 }
+                              ]
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "row/row.model.d.ts",
+                           "line": 16,
+                           "character": 11
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 213,
+               "name": "mode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 14,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "single"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "multiple"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 212,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 13,
+                     "character": 12
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Resource",
+                  "id": 138
+               }
+            },
+            {
+               "id": 220,
+               "name": "status",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 17,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Map",
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     },
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 214,
+               "name": "unit",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 15,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "data"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "details"
+                     }
+                  ]
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  210
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  221,
+                  222,
+                  223,
+                  215,
+                  213,
+                  212,
+                  220,
+                  214
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "row/row.model.d.ts",
+               "line": 10,
+               "character": 29
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            209
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "row/row.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 175
+}

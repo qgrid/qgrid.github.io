@@ -1,5 +1,5 @@
 {
-   "id": 115,
+   "id": 314,
    "name": "\"group/group.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
    "children": [
       {
-         "id": 116,
+         "id": 315,
          "name": "GroupModel",
          "kind": 128,
          "kindString": "Class",
@@ -17,11 +17,12 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that allows to apply some hierarchy to the grid.\nHowever user is allowed to write any kind of custom hierarchies just by overriding default pipe and\nworking with `Node` object from the grid service."
+            "shortText": "A class that allows to apply some hierarchy to the grid.\nHowever user is allowed to write any kind of custom hierarchies just by overriding default pipe and\nworking with `Node` object from the grid service.",
+            "text": "## Suggested Links\n\n* [Group View](/doc/api/group-view.html)\n* [group.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/group.pipe.js)\n* [group.build.js](https://github.com/qgrid/ng2/blob/master/core/group/group.build.js)\n* [node.js]((https://github.com/qgrid/ng2/blob/master/core/node/node.js)\n* [node.build.js](https://github.com/qgrid/ng2/blob/master/core/node.build.js)\n"
          },
          "children": [
             {
-               "id": 119,
+               "id": 318,
                "name": "by",
                "kind": 1024,
                "kindString": "Property",
@@ -34,7 +35,7 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 23,
+                     "line": 31,
                      "character": 3
                   }
                ],
@@ -47,7 +48,7 @@
                }
             },
             {
-               "id": 118,
+               "id": 317,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
@@ -55,12 +56,12 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "How grid will render nodes:\n1. `column` - all hierarchy levels inside one group type column.\n2. `subhead` - group column try to use all available space to display hierarchy.\n3. `rowspan` -"
+                  "shortText": "How grid will render nodes:\n* `'column'` all hierarchy levels inside one group type column.\n* `'subhead'` group column try to use all available space to display hierarchy.\n* `'rowspan'` under construction"
                },
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 18,
+                     "line": 26,
                      "character": 5
                   }
                ],
@@ -70,7 +71,7 @@
                }
             },
             {
-               "id": 117,
+               "id": 316,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -80,17 +81,18 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 10,
+                     "line": 18,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
-                  "name": "Resource"
+                  "name": "Resource",
+                  "id": 138
                }
             },
             {
-               "id": 120,
+               "id": 319,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
@@ -100,7 +102,7 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 24,
+                     "line": 32,
                      "character": 9
                   }
                ],
@@ -110,7 +112,7 @@
                }
             },
             {
-               "id": 121,
+               "id": 320,
                "name": "toggle",
                "kind": 1024,
                "kindString": "Property",
@@ -120,13 +122,14 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 25,
+                     "line": 33,
                      "character": 7
                   }
                ],
                "type": {
                   "type": "reference",
-                  "name": "Command"
+                  "name": "Command",
+                  "id": 299
                }
             }
          ],
@@ -135,18 +138,18 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  119,
-                  118,
-                  117,
-                  120,
-                  121
+                  318,
+                  317,
+                  316,
+                  319,
+                  320
                ]
             }
          ],
          "sources": [
             {
                "fileName": "group/group.model.d.ts",
-               "line": 9,
+               "line": 17,
                "character": 31
             }
          ]
@@ -157,7 +160,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            116
+            315
          ]
       }
    ],
@@ -168,5 +171,5 @@
          "character": 0
       }
    ],
-   "order": 14
+   "order": 104
 }

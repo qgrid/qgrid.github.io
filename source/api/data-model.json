@@ -1,5 +1,5 @@
 {
-   "id": 40,
+   "id": 132,
    "name": "\"data/data.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/data/data.model.d.ts",
    "children": [
       {
-         "id": 41,
+         "id": 133,
          "name": "DataModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class that gives access to the high level grid data structures.",
-            "text": "## Usage\nUsually grid user can define this properties in different places.\nInside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n"
+            "text": "## Usage\nUsually grid user can define this properties in different places.\nInside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n\n## Suggested Links\n\n* [data.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/data.pipe.js)\n"
          },
          "children": [
             {
-               "id": 43,
+               "id": 135,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
@@ -30,13 +30,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Set of columns to display.\nUsually data columns can be setup from 3 places:",
-                  "text": "1. Columns binding property.\n2. Columns component.\n3. Grid model data columns property.\n\nWe can have 3 sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
+                  "shortText": "Set of columns to display.\nUsually data columns can be setup from different places for the same grid:",
+                  "text": "* Columns `binding` property, `<q-grid [columns]=\"userColumns\">`.\n* Columns component, `<q-grid-columns>`.\n* Through q-grid model data columns property.\n\nWe can have different sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 57,
+                     "line": 63,
                      "character": 11
                   }
                ],
@@ -45,12 +45,12 @@
                   "elementType": {
                      "type": "reference",
                      "name": "ColumnModel",
-                     "id": 277
+                     "id": 19
                   }
                }
             },
             {
-               "id": 44,
+               "id": 136,
                "name": "pipe",
                "kind": 1024,
                "kindString": "Property",
@@ -58,12 +58,12 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Chaing of methods that grid invokes asyncroniuosly anytime refresh is required,\nsee `PipeModel` that contains information when grid demands refreshing."
+                  "shortText": "Chain of methods that grid invokes asyncroniuosly anytime refresh is required,\nsee `PipeModel` that contains information when grid demands refreshing."
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 63,
+                     "line": 69,
                      "character": 8
                   }
                ],
@@ -71,12 +71,13 @@
                   "type": "array",
                   "elementType": {
                      "type": "reference",
-                     "name": "IPipe"
+                     "name": "IPipe",
+                     "id": 118
                   }
                }
             },
             {
-               "id": 42,
+               "id": 134,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -84,12 +85,13 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "List of rows to display.\nRows property can be filled from the grid rows html or grid model data rows\nproperty."
+                  "shortText": "List of data rows to display.\nUsually data rows can be setup from different places:",
+                  "text": "* Rows `binding` property, `<q-grid [rows]=\"userRows\">`\n* Through q-grid mode data rows property.\n"
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 42,
+                     "line": 48,
                      "character": 8
                   }
                ],
@@ -107,16 +109,16 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  43,
-                  44,
-                  42
+                  135,
+                  136,
+                  134
                ]
             }
          ],
          "sources": [
             {
                "fileName": "data/data.model.d.ts",
-               "line": 35,
+               "line": 39,
                "character": 30
             }
          ]
@@ -127,7 +129,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            41
+            133
          ]
       }
    ],
@@ -138,5 +140,5 @@
          "character": 0
       }
    ],
-   "order": 5
+   "order": 45
 }

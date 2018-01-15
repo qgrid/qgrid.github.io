@@ -1,5 +1,5 @@
 {
-   "id": 1,
+   "id": 527,
    "name": "\"action/action.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.model.d.ts",
    "children": [
       {
-         "id": 2,
+         "id": 528,
          "name": "ActionModel",
          "kind": 128,
          "kindString": "Class",
@@ -17,12 +17,12 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class to handle and visualize custom user behaviors(like add or delete row).",
-            "text": "Action bar plugin uses this model to draw buttons to execute commands.\n"
+            "shortText": "A class to handle and visualize in UI custom user behaviors(like add or delete row).\nFor instance, [action bar](/doc/feature/action.html) plugin uses this model to draw buttons on top of the q-grid\nto execute user commands.",
+            "text": "## Usage\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n\n const addRowAction = new qgrid.Action({\n    command: addRowCommand,\n    title: 'Add new row',\n    icon: 'add'\n });\n\n gridModel.action({\n    items: [addRowAction]\n });\n```\n\n## Suggested Links\n\n* [Action](/doc/api/action.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n* [Shortcut](/doc/api/shortcut.html)\n* [Command Manager](/doc/api/command-manager.html)\n"
          },
          "children": [
             {
-               "id": 3,
+               "id": 529,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 4,
+                     "id": 530,
                      "name": "new ActionModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,20 +39,20 @@
                      "type": {
                         "type": "reference",
                         "name": "ActionModel",
-                        "id": 2
+                        "id": 528
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 11,
+                     "line": 47,
                      "character": 34
                   }
                ]
             },
             {
-               "id": 6,
+               "id": 532,
                "name": "items",
                "kind": 1024,
                "kindString": "Property",
@@ -60,25 +60,26 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "List of actions that will be added to the command manager."
+                  "shortText": "List of actions that will be added to the command manager,\nand binded to the keydown events."
                },
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 19,
-                     "character": 7
+                     "line": 56,
+                     "character": 9
                   }
                ],
                "type": {
                   "type": "array",
                   "elementType": {
                      "type": "reference",
-                     "name": "Action"
+                     "name": "Action",
+                     "id": 460
                   }
                }
             },
             {
-               "id": 8,
+               "id": 534,
                "name": "manager",
                "kind": 1024,
                "kindString": "Property",
@@ -91,17 +92,18 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 31,
-                     "character": 9
+                     "line": 68,
+                     "character": 11
                   }
                ],
                "type": {
                   "type": "reference",
-                  "name": "CommandManager"
+                  "name": "CommandManager",
+                  "id": 470
                }
             },
             {
-               "id": 5,
+               "id": 531,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -111,17 +113,18 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 14,
-                     "character": 10
+                     "line": 50,
+                     "character": 12
                   }
                ],
                "type": {
                   "type": "reference",
-                  "name": "Resource"
+                  "name": "Resource",
+                  "id": 138
                }
             },
             {
-               "id": 7,
+               "id": 533,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
@@ -129,18 +132,19 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "This service connects keydown events with commands."
+                  "shortText": "The service that connects keydown events and commands."
                },
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 24,
-                     "character": 10
+                     "line": 61,
+                     "character": 12
                   }
                ],
                "type": {
                   "type": "reference",
-                  "name": "Shortcut"
+                  "name": "Shortcut",
+                  "id": 500
                }
             }
          ],
@@ -149,24 +153,24 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  3
+                  529
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  6,
-                  8,
-                  5,
-                  7
+                  532,
+                  534,
+                  531,
+                  533
                ]
             }
          ],
          "sources": [
             {
                "fileName": "action/action.model.d.ts",
-               "line": 11,
+               "line": 47,
                "character": 32
             }
          ]
@@ -177,7 +181,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            2
+            528
          ]
       }
    ],
@@ -188,5 +192,5 @@
          "character": 0
       }
    ],
-   "order": 0
+   "order": 1
 }

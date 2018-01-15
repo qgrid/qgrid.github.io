@@ -2,7 +2,7 @@
 title: DataModel
 type: api
 group: API
-order: 5
+order: 45
 ---
 A class that gives access to the high level grid data structures.
 
@@ -12,7 +12,7 @@ A class that gives access to the high level grid data structures.
 Usually grid user can define this properties in different places.
 Inside html through attribute bindings:
 ```html
-<q-grid [columns]="myColumns" [rows]="myRows">
+<q-grid [columns]="userColumns" [rows]="userRows">
 ```
 
 Inside html throught component:
@@ -27,12 +27,16 @@ Inside html throught component:
 
 Inside js code throught model:
 ```javascript
-const myRows = [];
-const myColumns = [];
+const userRows = [];
+const userColumns = [];
 
 gridModel.data({
- rows: myRows,
- columns: myColumns
+ rows: userRows,
+ columns: userColumns
 })
 ```
+
+## Suggested Links
+
+* [data.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/data.pipe.js)
 
