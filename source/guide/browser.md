@@ -7,7 +7,7 @@ order: 3
 
 For now we support only the latest Chrome.
 
-* Chrome `supported`.
-* Safari `in progress`.
-* FireFox `in progress`.
-* Edge `in progress`.
+* `Chrome` supported.
+* `Safari` in progress.
+* `FireFox` in progress.
+* `Edge` in progress.
