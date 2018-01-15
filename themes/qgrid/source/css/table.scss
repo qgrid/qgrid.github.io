@@ -17,7 +17,7 @@
 				text-align: left;
 				vertical-align: top;
 				code {
-					background: lightyellow;
+					background: $color-code-table;
 				}
 			}
 			&:nth-child(odd) {
