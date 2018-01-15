@@ -1,0 +1,319 @@
+{
+   "id": 4259,
+   "name": "\"pipe/pipe.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.d.ts",
+   "children": [
+      {
+         "id": 4260,
+         "name": "Pipe",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 4268,
+               "name": "column",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 14,
+                     "character": 26
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4261,
+               "name": "data",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 7,
+                     "character": 24
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4262,
+               "name": "filter",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 8,
+                     "character": 26
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4266,
+               "name": "group",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 12,
+                     "character": 25
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4265,
+               "name": "memo",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 11,
+                     "character": 24
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4263,
+               "name": "pagination",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 9,
+                     "character": 30
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4267,
+               "name": "pivot",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 13,
+                     "character": 25
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4264,
+               "name": "sort",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 10,
+                     "character": 24
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 4269,
+               "name": "view",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isStatic": true,
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "pipe/pipe.d.ts",
+                     "line": 15,
+                     "character": 24
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "IPipe",
+                  "id": 118,
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  4268,
+                  4261,
+                  4262,
+                  4266,
+                  4265,
+                  4263,
+                  4267,
+                  4264,
+                  4269
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "pipe/pipe.d.ts",
+               "line": 6,
+               "character": 25
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            4260
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pipe/pipe.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 151
+}

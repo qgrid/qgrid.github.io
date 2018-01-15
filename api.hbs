@@ -1,0 +1,13 @@
+---
+title: {{api-title unit}}
+type: api
+group: API
+order: {{api-order unit}}
+---
+{{#each unit.children}}
+{{api-description comment}}
+
+{% docTable "{{api-path ../unit/originalName}}" %}
+
+{{api-comment comment}}
+{{/each}}

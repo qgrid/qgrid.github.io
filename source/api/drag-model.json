@@ -1,0 +1,82 @@
+{
+   "id": 434,
+   "name": "\"drag/drag.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/drag/drag.model.d.ts",
+   "children": [
+      {
+         "id": 435,
+         "name": "DragModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class to work with drag and drop grid infrastructure."
+         },
+         "children": [
+            {
+               "id": 436,
+               "name": "isActive",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Flag that indicates drag in drop is perfoming.\nUsually is used inside the grid to apply some custom styles."
+               },
+               "sources": [
+                  {
+                     "fileName": "drag/drag.model.d.ts",
+                     "line": 9,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  436
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "drag/drag.model.d.ts",
+               "line": 4,
+               "character": 30
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            435
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "drag/drag.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 74
+}

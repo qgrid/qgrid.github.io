@@ -1,0 +1,39 @@
+@import 'variables.scss';
+.page-wrapper {
+	table {
+		border-spacing: 0;
+		width: 100%;
+		tr {
+			td {
+				p {
+					&:first-child {
+						margin-top: 0;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+				padding: 1em;
+				text-align: left;
+				vertical-align: top;
+				code {
+					background: $color-code-table;
+				}
+			}
+			&:nth-child(odd) {
+				background: $color-table-odd-row;
+			}
+			&:nth-child(even) {
+				background: $color-table-even-row;
+			}
+		}
+		th {
+			@extend td;
+			color: #fff;
+			font-family: $font-serif;
+			font-weight: normal;
+			background: $color-table-header;
+			padding: 0.5em !important;
+		}
+	}
+}

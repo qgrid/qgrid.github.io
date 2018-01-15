@@ -5,3 +5,4 @@ public
 package-lock.json
 .idea
 .deploy_git/
+source/api/api.json

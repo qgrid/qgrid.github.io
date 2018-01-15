@@ -1,58 +1,58 @@
 @import "variables";
-
 #nav {
-  grid-area: nav;
-  color: $color-sidebar-text;
-  background: $color-sidebar-background;
-  position: fixed;
-  height: 100vh;
-  padding-top: $header-height;
-  width: $nav-width;
-  font-family: $font-serif;
-  box-sizing: border-box;
-  border-top: 1px solid $color-sidebar-background;
-  //transition: 0.5s;
-  .nav-header {
-    box-sizing: border-box;
-    height: 69px;
-    border-bottom: 1px solid $whitescale-30;
-    display: none;
-
-    .search {
-      width: calc(100% - 44px);
-      display: inline-block;
-    }
-  }
-  nav {
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    ul {
-      margin: 10px 0 0 20px;
-      padding: 0;
-      li {
-        list-style: none;
-        font-size: 16px;
-        line-height: 33px;
-        h3 {
-          font-size: 18px;
-          font-weight: bold;
-          margin: 0;
-        }
-        a,
-        span {
-          color: $color-sidebar-text;
-          text-decoration: none;
-          opacity: 0.8;
-          margin-left: 20px;
-          cursor: pointer;
-          //transition: 0.3s;
-          &:hover {
-            opacity: 1
-          }
-        }
-      }
-    }
-  }
+	grid-area: nav;
+	color: $color-sidebar-text;
+	background-color: $color-sidebar-background;
+	position: fixed;
+	height: 100vh;
+	width: $nav-width;
+	font-family: $font-serif;
+	box-sizing: border-box;
+	border-top: 1px solid $color-sidebar-background; //transition: 0.5s;
+	nav {
+		height: calc(100% - 340px);
+		overflow-y: auto;
+		overflow-x: hidden;
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				font-size: 16px;
+				line-height: 33px;
+				padding-left: 20px;
+				&:first-child {
+					margin-top: 10px;
+				}
+				h3 {
+					font-size: 18px;
+					font-weight: bold;
+					margin: 0;
+				}
+				a,
+				span {
+					color: rgba(255, 255, 255, 0.8);
+					text-decoration: none;
+					margin-left: 20px;
+					cursor: pointer; //transition: 0.3s;
+					&:hover {
+						color: white;
+					}
+				}
+				a {
+					display: block;
+					width: 100%;
+					margin-left: -20px;
+					padding-left: 40px;
+				}
+			}
+			.active-topic {
+				background-color: $accent-color;
+				a,
+				span {
+					color: white;
+				}
+			}
+		}
+	}
 }
-

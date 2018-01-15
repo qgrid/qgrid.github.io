@@ -1,0 +1,59 @@
+{
+   "id": 4246,
+   "name": "\"pipe/filter.pipe.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/filter.pipe.d.ts",
+   "children": [
+      {
+         "id": 4247,
+         "name": "filterPipe",
+         "kind": 32,
+         "kindString": "Variable",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "sources": [
+            {
+               "fileName": "pipe/filter.pipe.d.ts",
+               "line": 6,
+               "character": 31
+            }
+         ],
+         "type": {
+            "type": "reference",
+            "name": "IPipe",
+            "id": 118,
+            "typeArguments": [
+               {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            ]
+         }
+      }
+   ],
+   "groups": [
+      {
+         "title": "Variables",
+         "kind": 32,
+         "children": [
+            4247
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pipe/filter.pipe.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 146
+}

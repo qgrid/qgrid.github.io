@@ -1,0 +1,278 @@
+{
+   "id": 3584,
+   "name": "\"edit/edit.row.view.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.row.view.d.ts",
+   "children": [
+      {
+         "id": 3585,
+         "name": "EditRowView",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "children": [
+            {
+               "id": 3586,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3587,
+                     "name": "new EditRowView",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 3588,
+                           "name": "model",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        },
+                        {
+                           "id": 3589,
+                           "name": "table",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Table",
+                              "id": 1472
+                           }
+                        },
+                        {
+                           "id": 3590,
+                           "name": "commandManager",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "CommandManager",
+                              "id": 470
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "reference",
+                        "name": "EditRowView",
+                        "id": 3585
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 10,
+                     "character": 34
+                  }
+               ]
+            },
+            {
+               "id": 3594,
+               "name": "cancel",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 15,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3593,
+               "name": "commit",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 14,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3591,
+               "name": "editor",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 12,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "RowEditor",
+                  "id": 3570
+               }
+            },
+            {
+               "id": 3592,
+               "name": "enter",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 13,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3595,
+               "name": "reset",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 16,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 3596,
+               "name": "destroy",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 3597,
+                     "name": "destroy",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "void"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "edit/edit.row.view.d.ts",
+                     "line": 17,
+                     "character": 11
+                  }
+               ]
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  3586
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  3594,
+                  3593,
+                  3591,
+                  3592,
+                  3595
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  3596
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "edit/edit.row.view.d.ts",
+               "line": 10,
+               "character": 32
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            3585
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "edit/edit.row.view.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 80
+}

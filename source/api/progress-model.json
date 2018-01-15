@@ -1,0 +1,169 @@
+{
+   "id": 368,
+   "name": "\"progress/progress.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/progress/progress.model.d.ts",
+   "children": [
+      {
+         "id": 369,
+         "name": "ProgressModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class representing the q-grid job state.",
+            "text": "## Usage\n\nIn general this model is not modified directly, consider to [grid service](`/doc/api/grid-service.html`).\n\n```javascript\n\tconst gridModel = qgrid.model();\n\tconst service = qgrid.service(gridModel);\n\tconst cancelBusy = service.busy();\n\n\tnew Promise(resolve => {\n\t   cancelBusy();\n    resolve()\n\t});\n```\n"
+         },
+         "children": [
+            {
+               "id": 370,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 371,
+                     "name": "new ProgressModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "ProgressModel",
+                        "id": 369
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "progress/progress.model.d.ts",
+                     "line": 21,
+                     "character": 36
+                  }
+               ]
+            },
+            {
+               "id": 373,
+               "name": "isBusy",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Indicates if there a running job or not."
+               },
+               "sources": [
+                  {
+                     "fileName": "progress/progress.model.d.ts",
+                     "line": 28,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 374,
+               "name": "queue",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of progress jobs."
+               },
+               "sources": [
+                  {
+                     "fileName": "progress/progress.model.d.ts",
+                     "line": 33,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "string"
+                  }
+               }
+            },
+            {
+               "id": 372,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "progress/progress.model.d.ts",
+                     "line": 23,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Resource",
+                  "id": 138
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  370
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  373,
+                  374,
+                  372
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "progress/progress.model.d.ts",
+               "line": 21,
+               "character": 34
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            369
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "progress/progress.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 167
+}

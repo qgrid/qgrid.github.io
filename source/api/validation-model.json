@@ -1,0 +1,145 @@
+{
+   "id": 538,
+   "name": "\"validation/validation.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
+   "children": [
+      {
+         "id": 539,
+         "name": "ValidationModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class to setup validation rules settings.",
+            "text": "## Suggested Links\n\n* [LIVR](https://github.com/koorchik/LIVR)\n"
+         },
+         "children": [
+            {
+               "id": 540,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 541,
+                     "name": "new ValidationModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "ValidationModel",
+                        "id": 539
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "validation/validation.model.d.ts",
+                     "line": 10,
+                     "character": 38
+                  }
+               ]
+            },
+            {
+               "id": 542,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "validation/validation.model.d.ts",
+                     "line": 13,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Resource",
+                  "id": 138
+               }
+            },
+            {
+               "id": 543,
+               "name": "rules",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of validation rules."
+               },
+               "sources": [
+                  {
+                     "fileName": "validation/validation.model.d.ts",
+                     "line": 18,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  540
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  542,
+                  543
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "validation/validation.model.d.ts",
+               "line": 10,
+               "character": 36
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            539
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "validation/validation.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 227
+}

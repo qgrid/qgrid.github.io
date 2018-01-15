@@ -2,66 +2,19 @@
 title: Introduction
 type: guide
 group: Getting started
-order: 3
+order: 2
 ---
 
-### Header
+The q-grid is a powerful widget which allows you to visualize and edit data via its table representation. It provides a variety of options about how to present and perform operations over the underlying data, such as paging, sorting, filtering, grouping, editing, etc. To feed the grid with data, you can supply either local or remote data.
 
-Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## For Developers
 
-<pre><code class='bash'>$ npm install ng-qgrid
-$ bower install ng-qgrid</code></pre>
+Developers love q-grid. Once moving to q-grid, their lives will be easier - they'll develop applications quicker and spend more time on things that matter.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo
+## For Users
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo
+Users will lessen the need to export to Excel and use other reporting tools. The advanced features of q-grid will help keep your users on your platform and get more done.
 
+## For Applications
 
-### Second Header
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo
-
-JSFiddle embed example
-
-{% docEditor %}
-
-### Third Header
-
-#### Ok, lets try some tables
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is | left-aligned  | $1600 |
-| col 2 is | centered      | $12   |
-| col 3 is | right-aligned | $1    |
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | [`renders`](https://www.google.com "Google's Homepage") | **nicely**
-1 | 2 | 3
-
-#### And lists
-
-* One
-  * oneone
-  * onetwo
-    1. foo
-    2. bar
-* Two
-* Three
-
-1. First
-    - foo
-         - bar
-2. Second
-3. Third
-4. Fourth
-
-
-Thats all folks!
-
-
-
-
-
-
+An application with q-grid will perform more smoothly giving your application a professional and expert feel. A great grid is the foundation of a great application.

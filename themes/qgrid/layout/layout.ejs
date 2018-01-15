@@ -5,7 +5,7 @@
 
 <head>
     <title>
-        <%- page.title ? page.title + ' — ' : '' %>qgrid</title>
+        <%- page.title ? page.title + ' — ' : '' %>q-grid</title>
     <meta charset="utf-8">
     <meta name="description" content="<%- theme.description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -57,15 +57,14 @@
 
 <body class="<%- isIndex ? 'index' : 'pages' %>">
 
+<% if (!isIndex) { %>
 <header>
     <%- partial('partials/header') %>
 </header>
 
-<% if (!isIndex) { %>
 <aside id="nav">
-    <div class="nav-header">
-        <input class="search" placeholder="Search" type="search" data-stop-propagation />
-    </div>
+    <a href="<%- url_for('/') %>" class="logo"></a>
+    <input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
     <%- partial('partials/nav') %>
 </aside>
 <% } %>

@@ -1,184 +1,137 @@
 @import "layout";
-
+@import "editor";
+@import "table";
+@import "nav";
+@import "markdown";
 body {
-  grid-template-areas: "header header" "nav content" "footer footer";
-  grid-template-columns: $nav-width 1fr;
-  grid-template-rows: $header-height 1fr auto;
-  grid-gap: 16px;
+	display: grid;
+	grid-template-areas: "nav content";
+	grid-template-columns: $nav-width 1fr;
+	grid-gap: 16px;
 }
 
-h2 {
-  font-family: $font-serif;
-  font-weight: normal;
-  font-size: 2.5em;
-  padding: 0.5em 0;
+main {
+	grid-area: content;
+	background: $color-background;
+	color: $color-text;
 }
 
-h3 {
-  @extend h2;
-  font-size: 1.5em;
-  font-weight: bold;
+header {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	grid-area: header;
+	color: $color-top-text;
+	background: $color-top-background;
+	height: $header-height;
+	width: 100vw;
+	font-family: $font-serif;
 }
 
-h4 {
-  @extend h2;
-  font-size: 1.2em;
-  font-weight: bold;
+.logo {
+	font-size: 100px;
+	margin: 80px 0 35px 80px;
 }
 
-h5 {
-  @extend h2;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-p {
-  font-size: 1em;
-}
-
-pre {
-  background: #fff;
-  border: 1px solid #f2f2f2;
-  padding: 1em;
-  margin: 2em 0;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
-
-  > code {
-    font-weight: bold;
-
-    &.bash {
-      line-height: 2em;
-    }
-  }
+.github {
+	font-size: 26px;
+	position: absolute;
+	top: 22px;
+	right: 20px;
 }
 
 %placeholder {
-  color: $whitescale-75;
+	color: $whitescale-75;
 }
 
 .nav-trigger {
-  @extend %header-icon;
-  font-size: 18px;
-  display: none;
+	font-size: 18px;
+	display: none;
+	position: absolute;
+	top: 27px;
+	left: 20px;
 }
 
 [class$="-trigger"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .search {
-  background-color: $color-top-background;
-  border: {
-    style: solid;
-    color: $whitescale-75;
-    width: 0 0 1px 0;
-  }
-  text-decoration: none;
-  outline: none;
-  color: white;
-  display: none;
-  vertical-align: middle;
-  margin: 20px auto 25px 17px;
-  padding: 5px;
-  width: calc(#{$nav-width} - 120px);
-  &::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-  }
-
-  //need to write them separately, not through comma
-  //&::-webkit-input-placeholder {
-  //  @extend %placeholder;
-  //}
-  //&::-moz-placeholder {
-  //  @extend %placeholder;
-  //}
-  //&:-ms-input-placeholder {
-  //  @extend %placeholder;
-  //}
-  //&:-moz-placeholder {
-  //  @extend %placeholder;
-  //}
-
-  &::placeholder {
-    @extend %placeholder;
-  }
-}
-
-.search-trigger {
-  @extend %header-icon;
-  font-size: 24px;
-  &.active {
-    display: none;
-    & + .search {
-      display: inline-block;
-    }
-  }
-}
-
-table {
-  border-spacing: 0;
-  width: 100%;
-
-  tr {
-    td {
-      padding: 0.5em 1em;
-      text-align: left;
-
-      code {
-        background: #F5F5F5;
-        padding: 0 0.25em;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-      }
-    }
-
-    &:nth-child(odd) {
-      background: $color-table-odd-row;
-    }
-    &:nth-child(even) {
-      background: $color-table-even-row;
-    }
-  }
-  th {
-    @extend td;
-    color: #fff;
-    font-family: $font-serif;
-    font-weight: normal;
-    background: $color-table-header;
-  }
+	display: block;
+	background-color: #444;
+	border: {
+		style: solid;
+		color: $whitescale-75;
+		width: 0 0 1px 0;
+	}
+	text-decoration: none;
+	outline: none;
+	color: white;
+	margin: 20px auto 25px 17px;
+	padding: 15px;
+	width: 280px;
+	&::placeholder {
+		@extend %placeholder;
+	}
+	&::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+	}
 }
 
 .page-wrapper {
-  margin: 0 30px;
-  max-width: 1000px;
-  table {
-    margin: 1em 0;
-  }
+	margin: 0 30px 40px 30px;
+	max-width: 1000px;
+	overflow: hidden;
 }
 
-.sb-embed {
-  @extend pre;
-  padding: 0;
-  background: #f5f5f5;
-  width: 100%;
-  height: 700px;
-  overflow: hidden;
-  display: block;
-  > iframe{
-    border: none;
-    margin-top: -38px;
-    height: 740px;
-    width: 100%;
-  }
+.github-link {
+	@extend .github;
+	position: relative;
+	color: blue;
+	display: inline-block;
+	font-size: 14px;
+	margin: -90px 0 0 20px;
+	padding: 7px 0px 5px 7px;
+	border-radius: 3px;
+	white-space: nowrap;
+	opacity: 0.5;
+	border: 1px solid blue;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	&:hover {
+		overflow: visible;
+		width: auto;
+		opacity: 1;
+	}
+	span {
+		vertical-align: top;
+		display: inline-block;
+		margin: 0px 5px;
+	}
+}
+
+a.github-link2 {
+	@extend .github-link;
+	float: right;
+	color: white;
+	font-size: 12px;
+	font-family: Roboto;
+	position: relative;
+	margin: -22px -19px 0 0;
+	border-color: white;
+	padding: 3px 3px 0 6px;
+	opacity: 0.75;
 }
 
 #overlay {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: 10;
-  background-color: rgba(10, 10, 10, 0.75);
-  cursor: default;
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	z-index: 10;
+	background-color: rgba(10, 10, 10, 0.75);
+	cursor: default;
 }

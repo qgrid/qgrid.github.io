@@ -1,0 +1,193 @@
+{
+   "id": 185,
+   "name": "\"navigation/navigation.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/navigation/navigation.model.d.ts",
+   "children": [
+      {
+         "id": 186,
+         "name": "NavigationModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that gives access to the current cell position inside the q-grid.",
+            "text": "## Suggested Links\n\n* [Navigation View](/doc/api/navigation-view.html)\n* [navigation.js](https://github.com/qgrid/ng2/blob/master/core/navigation/navigation.js)\n"
+         },
+         "children": [
+            {
+               "id": 187,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 188,
+                     "name": "new NavigationModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "NavigationModel",
+                        "id": 186
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.model.d.ts",
+                     "line": 11,
+                     "character": 38
+                  }
+               ]
+            },
+            {
+               "id": 192,
+               "name": "column",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Focused cell column."
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.model.d.ts",
+                     "line": 32,
+                     "character": 16
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "ColumnModel",
+                  "id": 19
+               }
+            },
+            {
+               "id": 190,
+               "name": "columnIndex",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Index of the focused cell column."
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.model.d.ts",
+                     "line": 22,
+                     "character": 21
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 191,
+               "name": "row",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Focused cell row."
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.model.d.ts",
+                     "line": 27,
+                     "character": 13
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 189,
+               "name": "rowIndex",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Index of the focused cell row."
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.model.d.ts",
+                     "line": 17,
+                     "character": 18
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  187
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  192,
+                  190,
+                  191,
+                  189
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "navigation/navigation.model.d.ts",
+               "line": 11,
+               "character": 36
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            186
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "navigation/navigation.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 131
+}

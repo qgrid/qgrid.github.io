@@ -1,0 +1,223 @@
+{
+   "id": 437,
+   "name": "\"style/style.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
+   "children": [
+      {
+         "id": 438,
+         "name": "StyleModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that allows to apply styles to rows and cells.",
+            "text": "## Usage\n\n```javascript\n   gridModel.style({\n       row: (row, context) => {\n           if (row.gender === 'female') {\n               context.class(`female-row-${this.femaleColor}`, {background: '#' + this.femaleColor});\n           }\n\n           if (row.gender === 'male') {\n               context.class(`male-row-${this.maleColor}`, {background: '#' + this.maleColor});\n           }\n       },\n       cell: (row, column, context) => {\n           if (column.key === 'birthday') {\n               context.class('red-birthday', {background: '#f00', color: '#fff'});\n           }\n\n           if (column.key === 'name.last') {\n               if (context.value(row, context.columns.map.gender) === 'female') {\n                   context.class('female-name-last', {background: '#ff0', color: '#000'});\n               }\n           }\n\n           if (column.key === 'name.first') {\n               if (context.row % 2) {\n                   context.class('first-name-even', {background: '#000', color: '#fff'});\n               }\n               else {\n                   context.class('first-name-odd', {background: '#fff', color: '#000'});\n               }\n           }\n       }\n   });\n```\n\n## Suggested Links\n\n* [Style View](/doc/api/style-view.html)\n* [style.monitor.js](https://github.com/qgrid/ng2/blob/master/core/style/style.monitor.js)\n"
+         },
+         "children": [
+            {
+               "id": 439,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 440,
+                     "name": "new StyleModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "StyleModel",
+                        "id": 438
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 48,
+                     "character": 33
+                  }
+               ]
+            },
+            {
+               "id": 442,
+               "name": "cell",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Style cell."
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 59,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 445,
+               "name": "cells",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Queue of cell styles that can be used internally or in plugins."
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 75,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            },
+            {
+               "id": 443,
+               "name": "invalidate",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "On invalidate."
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 64,
+                     "character": 14
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 299
+               }
+            },
+            {
+               "id": 441,
+               "name": "row",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Style row."
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 54,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 444,
+               "name": "rows",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Queue of row styles that can be used internally or in plugins."
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 69,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  439
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  442,
+                  445,
+                  443,
+                  441,
+                  444
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "style/style.model.d.ts",
+               "line": 48,
+               "character": 31
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            438
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "style/style.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 219
+}

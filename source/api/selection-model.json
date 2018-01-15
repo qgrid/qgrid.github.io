@@ -1,0 +1,388 @@
+{
+   "id": 246,
+   "name": "\"selection/selection.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/selection/selection.model.d.ts",
+   "children": [
+      {
+         "id": 247,
+         "name": "SelectionModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class that allows to control selection function of the q-grid.",
+            "text": "## Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n* [selection.service.js](https://github.com/qgrid/ng2/blob/master/core/selection/selection.service.js)\n"
+         },
+         "children": [
+            {
+               "id": 248,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 249,
+                     "name": "new SelectionModel",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "SelectionModel",
+                        "id": 247
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 12,
+                     "character": 37
+                  }
+               ]
+            },
+            {
+               "id": 251,
+               "name": "area",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Controls if click on the q-grid body should select row or not.",
+                  "text": "* `'body'` click on the q-grid body leads to row select/unselect.\n* `'custom'` only select checkbox click leads to row select/unselect.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 23,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 254,
+               "name": "items",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "List of selected items."
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 47,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            },
+            {
+               "id": 255,
+               "name": "key",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Set of map function, that can convert column and row to nessesary format.",
+                  "text": "* `'column'` custom column key will be stored in the items property.\n* `'row'` custom row id will be stored in the items property.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 55,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 256,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "children": [
+                        {
+                           "id": 260,
+                           "name": "column",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "selection/selection.model.d.ts",
+                                 "line": 57,
+                                 "character": 10
+                              }
+                           ],
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 261,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 262,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "selection/selection.model.d.ts",
+                                       "line": 57,
+                                       "character": 11
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "id": 257,
+                           "name": "row",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "selection/selection.model.d.ts",
+                                 "line": 56,
+                                 "character": 7
+                              }
+                           ],
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 258,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 259,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "selection/selection.model.d.ts",
+                                       "line": 56,
+                                       "character": 8
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "groups": [
+                        {
+                           "title": "Variables",
+                           "kind": 32,
+                           "children": [
+                              260,
+                              257
+                           ]
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "selection/selection.model.d.ts",
+                           "line": 55,
+                           "character": 6
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 253,
+               "name": "mode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Selection mode.",
+                  "text": "* `'single'`\n* `'multiple'`\n* `'range'`\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 42,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "single"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "mutiple"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "range"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 250,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 15,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Resource",
+                  "id": 138
+               }
+            },
+            {
+               "id": 252,
+               "name": "unit",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Selection primitive.",
+                  "text": "* `'row'` user can select rows by clicking on checkboxes or q-grid body area.\n* `'cell'` `default` user can select cells clicking on the q-grid body area.\n* `'column'` user can select columns by clicking on the q-grid body area.\n* `'mix'` user can select both rows and cells, rows are selectable by clicking on row-indicator column.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "selection/selection.model.d.ts",
+                     "line": 33,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "row"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "cell"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "column"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "mix"
+                     }
+                  ]
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  248
+               ]
+            },
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  251,
+                  254,
+                  255,
+                  253,
+                  250,
+                  252
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "selection/selection.model.d.ts",
+               "line": 12,
+               "character": 35
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            247
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "selection/selection.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 187
+}

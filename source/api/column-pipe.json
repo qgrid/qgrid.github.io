@@ -1,0 +1,59 @@
+{
+   "id": 4242,
+   "name": "\"pipe/column.pipe.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/column.pipe.d.ts",
+   "children": [
+      {
+         "id": 4243,
+         "name": "columnPipe",
+         "kind": 32,
+         "kindString": "Variable",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "> Under Construction."
+         },
+         "sources": [
+            {
+               "fileName": "pipe/column.pipe.d.ts",
+               "line": 6,
+               "character": 31
+            }
+         ],
+         "type": {
+            "type": "reference",
+            "name": "IPipe",
+            "id": 118,
+            "typeArguments": [
+               {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            ]
+         }
+      }
+   ],
+   "groups": [
+      {
+         "title": "Variables",
+         "kind": 32,
+         "children": [
+            4243
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "pipe/column.pipe.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 144
+}

@@ -1,0 +1,127 @@
+{
+   "id": 181,
+   "name": "\"layout/layout.model.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layout/layout.model.d.ts",
+   "children": [
+      {
+         "id": 182,
+         "name": "LayoutModel",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "A class contains rewritten widthes and heights of rows and columns",
+            "text": "## Suggested Links\n* [Layout View](/doc/api/layout-view.html)\n"
+         },
+         "children": [
+            {
+               "id": 183,
+               "name": "columns",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Set of column sizes."
+               },
+               "sources": [
+                  {
+                     "fileName": "layout/layout.model.d.ts",
+                     "line": 13,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Map",
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "string"
+                     },
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 184,
+               "name": "rows",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "comment": {
+                  "shortText": "Set of row sizes."
+               },
+               "sources": [
+                  {
+                     "fileName": "layout/layout.model.d.ts",
+                     "line": 18,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Map",
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     },
+                     {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  ]
+               }
+            }
+         ],
+         "groups": [
+            {
+               "title": "Properties",
+               "kind": 1024,
+               "children": [
+                  183,
+                  184
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "layout/layout.model.d.ts",
+               "line": 9,
+               "character": 32
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            182
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "layout/layout.model.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 128
+}

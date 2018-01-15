@@ -1,0 +1,245 @@
+{
+   "id": 469,
+   "name": "\"command/command.manager.d\"",
+   "kind": 1,
+   "kindString": "External module",
+   "flags": {
+      "isExported": true
+   },
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.manager.d.ts",
+   "children": [
+      {
+         "id": 470,
+         "name": "CommandManager",
+         "kind": 128,
+         "kindString": "Class",
+         "flags": {
+            "isExported": true
+         },
+         "comment": {
+            "shortText": "Command resolution manager that controls what commands and in which order columns should be executed.\nUsually other q-grid internal services use this class after some keyboard events.",
+            "text": "## Suggested Links\n\n* [Command](/doc/api/command.html)\n* [Shortcut](/doc/api/shortcut.html)\n"
+         },
+         "children": [
+            {
+               "id": 471,
+               "name": "constructor",
+               "kind": 512,
+               "kindString": "Constructor",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 472,
+                     "name": "new CommandManager",
+                     "kind": 16384,
+                     "kindString": "Constructor signature",
+                     "flags": {},
+                     "type": {
+                        "type": "reference",
+                        "name": "CommandManager",
+                        "id": 470
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "command/command.manager.d.ts",
+                     "line": 11,
+                     "character": 37
+                  }
+               ]
+            },
+            {
+               "id": 477,
+               "name": "filter",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 478,
+                     "name": "filter",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "comment": {
+                        "shortText": "Filter out disabled commands, usually command `canExecute` method is used."
+                     },
+                     "parameters": [
+                        {
+                           "id": 479,
+                           "name": "commands",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "comment": {
+                              "text": "list of commands that are candidates for execution."
+                           },
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "reference",
+                                 "name": "Command",
+                                 "id": 299
+                              }
+                           }
+                        },
+                        {
+                           "id": 480,
+                           "name": "source",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "comment": {
+                              "text": "indicates a source of command execution.\n"
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "array",
+                        "elementType": {
+                           "type": "reference",
+                           "name": "Command",
+                           "id": 299
+                        }
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "command/command.manager.d.ts",
+                     "line": 28,
+                     "character": 7
+                  }
+               ]
+            },
+            {
+               "id": 473,
+               "name": "invoke",
+               "kind": 2048,
+               "kindString": "Method",
+               "flags": {
+                  "isExported": true
+               },
+               "signatures": [
+                  {
+                     "id": 474,
+                     "name": "invoke",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "comment": {
+                        "shortText": "Execute commands in a manager specific way."
+                     },
+                     "parameters": [
+                        {
+                           "id": 475,
+                           "name": "commands",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "comment": {
+                              "text": "list of commands to execute, usually come after filter invokation."
+                           },
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "reference",
+                                 "name": "Command",
+                                 "id": 299
+                              }
+                           }
+                        },
+                        {
+                           "id": 476,
+                           "name": "source",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {
+                              "isOptional": true
+                           },
+                           "comment": {
+                              "text": "indicates a source of command execution.\n"
+                           },
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "boolean"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "command/command.manager.d.ts",
+                     "line": 20,
+                     "character": 7
+                  }
+               ]
+            }
+         ],
+         "groups": [
+            {
+               "title": "Constructors",
+               "kind": 512,
+               "children": [
+                  471
+               ]
+            },
+            {
+               "title": "Methods",
+               "kind": 2048,
+               "children": [
+                  477,
+                  473
+               ]
+            }
+         ],
+         "sources": [
+            {
+               "fileName": "command/command.manager.d.ts",
+               "line": 11,
+               "character": 35
+            }
+         ],
+         "extendedBy": [
+            {
+               "type": "reference",
+               "name": "TableCommandManager",
+               "id": 3422
+            }
+         ]
+      }
+   ],
+   "groups": [
+      {
+         "title": "Classes",
+         "kind": 128,
+         "children": [
+            470
+         ]
+      }
+   ],
+   "sources": [
+      {
+         "fileName": "command/command.manager.d.ts",
+         "line": 1,
+         "character": 0
+      }
+   ],
+   "order": 41
+}
