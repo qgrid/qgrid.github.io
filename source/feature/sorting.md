@@ -23,7 +23,7 @@ gridModel.sort({
 
 ## Modes and Features
 
-The q-grid provides interaction options for the user to sort by:
+The q-grid provides interaction options for the user to sort in:
 
 * [Ascending order](#Ascending order)
 * [Descending order](#Descending order)
