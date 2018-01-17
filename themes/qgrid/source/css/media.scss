@@ -59,8 +59,12 @@
 	.pages {
 		.page-wrapper {
 			margin: 0 20px 40px 20px;
-			h1 {
+			h1:first-child {
 				margin-top: 80px;
+				font-size: 40px;
+			}
+			h2 {
+				font-size: 1.5em;
 			}
 			.github-link2 {
 				border: none;
