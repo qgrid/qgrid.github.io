@@ -8,7 +8,7 @@ A class that allows to apply styles to rows and cells.
 
 {% docTable "source/api/style-model.json" %}
 
-## Usage
+### Usage
 
 ```javascript
    gridModel.style({
@@ -44,7 +44,7 @@ A class that allows to apply styles to rows and cells.
    });
 ```
 
-## Suggested Links
+### Suggested Links
 
 * [Style View](/doc/api/style-view.html)
 * [style.monitor.js](https://github.com/qgrid/ng2/blob/master/core/style/style.monitor.js)

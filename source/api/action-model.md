@@ -10,7 +10,7 @@ to execute user commands.
 
 {% docTable "source/api/action-model.json" %}
 
-## Usage
+### Usage
 
 ```javascript
 	const addRowCommand = new qgrid.Command({
@@ -38,7 +38,7 @@ to execute user commands.
  });
 ```
 
-## Suggested Links
+### Suggested Links
 
 * [Action](/doc/api/action.html)
 * [Command](/doc/api/command.html)

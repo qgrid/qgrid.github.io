@@ -1,5 +1,5 @@
 {
-   "id": 538,
+   "id": 539,
    "name": "\"validation/validation.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
    "children": [
       {
-         "id": 539,
+         "id": 540,
          "name": "ValidationModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class to setup validation rules settings.",
-            "text": "## Suggested Links\n\n* [LIVR](https://github.com/koorchik/LIVR)\n"
+            "text": "### Suggested Links\n\n* [LIVR](https://github.com/koorchik/LIVR)\n"
          },
          "children": [
             {
-               "id": 540,
+               "id": 541,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 541,
+                     "id": 542,
                      "name": "new ValidationModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "ValidationModel",
-                        "id": 539
+                        "id": 540
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 542,
+               "id": 543,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -73,7 +73,7 @@
                }
             },
             {
-               "id": 543,
+               "id": 544,
                "name": "rules",
                "kind": 1024,
                "kindString": "Property",
@@ -104,15 +104,15 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  540
+                  541
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  542,
-                  543
+                  543,
+                  544
                ]
             }
          ],
@@ -130,7 +130,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            539
+            540
          ]
       }
    ],

@@ -8,7 +8,7 @@ A class that allows to control sorting.
 
 {% docTable "source/api/sort-model.json" %}
 
-## Usage
+### Usage
 ```javascript
 gridModel.sort({
    by: [{myColumnKey: 'asc', myOtherColumnKey: 'desc'}]
@@ -20,7 +20,7 @@ gridModel.sort({
 });
 ```
 
-## Suggested Links
+### Suggested Links
 
 * [Sort View](/doc/api/sort-view.html)
 * [sort.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/sort.pipe.js)

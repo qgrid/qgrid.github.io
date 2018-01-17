@@ -1,5 +1,5 @@
 {
-   "id": 527,
+   "id": 528,
    "name": "\"action/action.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.model.d.ts",
    "children": [
       {
-         "id": 528,
+         "id": 529,
          "name": "ActionModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class to handle and visualize in UI custom user behaviors(like add or delete row).\nFor instance, [action bar](/doc/feature/action.html) plugin uses this model to draw buttons on top of the q-grid\nto execute user commands.",
-            "text": "## Usage\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n\n const addRowAction = new qgrid.Action({\n    command: addRowCommand,\n    title: 'Add new row',\n    icon: 'add'\n });\n\n gridModel.action({\n    items: [addRowAction]\n });\n```\n\n## Suggested Links\n\n* [Action](/doc/api/action.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n* [Shortcut](/doc/api/shortcut.html)\n* [Command Manager](/doc/api/command-manager.html)\n"
+            "text": "### Usage\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n\n const addRowAction = new qgrid.Action({\n    command: addRowCommand,\n    title: 'Add new row',\n    icon: 'add'\n });\n\n gridModel.action({\n    items: [addRowAction]\n });\n```\n\n### Suggested Links\n\n* [Action](/doc/api/action.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n* [Shortcut](/doc/api/shortcut.html)\n* [Command Manager](/doc/api/command-manager.html)\n"
          },
          "children": [
             {
-               "id": 529,
+               "id": 530,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 530,
+                     "id": 531,
                      "name": "new ActionModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "ActionModel",
-                        "id": 528
+                        "id": 529
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 532,
+               "id": 533,
                "name": "items",
                "kind": 1024,
                "kindString": "Property",
@@ -74,12 +74,12 @@
                   "elementType": {
                      "type": "reference",
                      "name": "Action",
-                     "id": 460
+                     "id": 461
                   }
                }
             },
             {
-               "id": 534,
+               "id": 535,
                "name": "manager",
                "kind": 1024,
                "kindString": "Property",
@@ -99,11 +99,11 @@
                "type": {
                   "type": "reference",
                   "name": "CommandManager",
-                  "id": 470
+                  "id": 471
                }
             },
             {
-               "id": 531,
+               "id": 532,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -124,7 +124,7 @@
                }
             },
             {
-               "id": 533,
+               "id": 534,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
@@ -144,7 +144,7 @@
                "type": {
                   "type": "reference",
                   "name": "Shortcut",
-                  "id": 500
+                  "id": 501
                }
             }
          ],
@@ -153,17 +153,17 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  529
+                  530
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
+                  533,
+                  535,
                   532,
-                  534,
-                  531,
-                  533
+                  534
                ]
             }
          ],
@@ -181,7 +181,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            528
+            529
          ]
       }
    ],

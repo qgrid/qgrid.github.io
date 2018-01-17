@@ -10,7 +10,7 @@ working with `Node` object from the grid service.
 
 {% docTable "source/api/group-model.json" %}
 
-## Suggested Links
+### Suggested Links
 
 * [Group View](/doc/api/group-view.html)
 * [group.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/group.pipe.js)

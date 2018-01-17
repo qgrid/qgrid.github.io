@@ -1,5 +1,5 @@
 {
-   "id": 4250,
+   "id": 4314,
    "name": "\"pipe/memo.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/memo.pipe.d.ts",
    "children": [
       {
-         "id": 4251,
+         "id": 4315,
          "name": "memoPipe",
          "kind": 32,
          "kindString": "Variable",
@@ -44,7 +44,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4251
+            4315
          ]
       }
    ],

@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that allows to apply some hierarchy to the grid.\nHowever user is allowed to write any kind of custom hierarchies just by overriding default pipe and\nworking with `Node` object from the grid service.",
-            "text": "## Suggested Links\n\n* [Group View](/doc/api/group-view.html)\n* [group.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/group.pipe.js)\n* [group.build.js](https://github.com/qgrid/ng2/blob/master/core/group/group.build.js)\n* [node.js]((https://github.com/qgrid/ng2/blob/master/core/node/node.js)\n* [node.build.js](https://github.com/qgrid/ng2/blob/master/core/node.build.js)\n"
+            "text": "### Suggested Links\n\n* [Group View](/doc/api/group-view.html)\n* [group.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/group.pipe.js)\n* [group.build.js](https://github.com/qgrid/ng2/blob/master/core/group/group.build.js)\n* [node.js]((https://github.com/qgrid/ng2/blob/master/core/node/node.js)\n* [node.build.js](https://github.com/qgrid/ng2/blob/master/core/node.build.js)\n"
          },
          "children": [
             {

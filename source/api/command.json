@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that implements command pattern in the q-grid.\nAny q-grid actions are implemented through this pattern.",
-            "text": "## Instanciate a Command\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n```\n\n## Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n"
+            "text": "### Instanciate a Command\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n```\n\n### Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n"
          },
          "children": [
             {

@@ -1,5 +1,5 @@
 {
-   "id": 896,
+   "id": 897,
    "name": "\"pipe/pipe.unit.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.unit.d.ts",
    "children": [
       {
-         "id": 897,
+         "id": 898,
          "name": "PipeUnit",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 900,
+               "id": 901,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -54,7 +54,7 @@
                }
             },
             {
-               "id": 898,
+               "id": 899,
                "name": "default",
                "kind": 1024,
                "kindString": "Property",
@@ -87,7 +87,7 @@
                }
             },
             {
-               "id": 903,
+               "id": 904,
                "name": "group",
                "kind": 1024,
                "kindString": "Property",
@@ -120,7 +120,7 @@
                }
             },
             {
-               "id": 901,
+               "id": 902,
                "name": "row",
                "kind": 1024,
                "kindString": "Property",
@@ -153,7 +153,7 @@
                }
             },
             {
-               "id": 902,
+               "id": 903,
                "name": "rowDetails",
                "kind": 1024,
                "kindString": "Property",
@@ -186,7 +186,7 @@
                }
             },
             {
-               "id": 899,
+               "id": 900,
                "name": "view",
                "kind": 1024,
                "kindString": "Property",
@@ -224,12 +224,12 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  900,
-                  898,
-                  903,
                   901,
+                  899,
+                  904,
                   902,
-                  899
+                  903,
+                  900
                ]
             }
          ],
@@ -247,7 +247,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            897
+            898
          ]
       }
    ],

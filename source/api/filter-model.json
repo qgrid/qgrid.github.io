@@ -1,5 +1,5 @@
 {
-   "id": 420,
+   "id": 421,
    "name": "\"filter/filter.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/filter/filter.model.d.ts",
    "children": [
       {
-         "id": 421,
+         "id": 422,
          "name": "FilterModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class to setup data filters and expressions.",
-            "text": "## Usage\n\n```javascript\ngridModel.filter({\n   by: {\n      myTextColumn: {items: ['foo', 'bar']},\n      myNumberColumn: {expression: {\n\t\t    kind: 'group',\n\t\t    op: 'and',\n\t\t    left: {\n\t\t\t   kind: 'condition',\n\t\t\t   left: key,\n\t\t\t   op: 'in',\n\t\t\t   right: ['foo', 'bar']\n\t\t   },\n\t\t   right: null\n\t     }}\n   }\n});\n```\n\n## Suggested Links\n\n* [filter.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/filter.pipe.js)\n"
+            "text": "### Usage\n\n```javascript\ngridModel.filter({\n   by: {\n      myTextColumn: {items: ['foo', 'bar']},\n      myNumberColumn: {expression: {\n\t\t    kind: 'group',\n\t\t    op: 'and',\n\t\t    left: {\n\t\t\t   kind: 'condition',\n\t\t\t   left: key,\n\t\t\t   op: 'in',\n\t\t\t   right: ['foo', 'bar']\n\t\t   },\n\t\t   right: null\n\t     }}\n   }\n});\n```\n\n### Suggested Links\n\n* [filter.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/filter.pipe.js)\n"
          },
          "children": [
             {
-               "id": 431,
+               "id": 432,
                "name": "assertFactory",
                "kind": 1024,
                "kindString": "Property",
@@ -43,14 +43,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 432,
+                     "id": 433,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 433,
+                           "id": 434,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
@@ -58,7 +58,7 @@
                            "type": {
                               "type": "reference",
                               "name": "IAssert",
-                              "id": 404
+                              "id": 405
                            }
                         }
                      ],
@@ -73,7 +73,7 @@
                }
             },
             {
-               "id": 423,
+               "id": 424,
                "name": "by",
                "kind": 1024,
                "kindString": "Property",
@@ -97,7 +97,7 @@
                }
             },
             {
-               "id": 428,
+               "id": 429,
                "name": "fetch",
                "kind": 1024,
                "kindString": "Property",
@@ -117,14 +117,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 429,
+                     "id": 430,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 430,
+                           "id": 431,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
@@ -159,7 +159,7 @@
                }
             },
             {
-               "id": 425,
+               "id": 426,
                "name": "match",
                "kind": 1024,
                "kindString": "Property",
@@ -179,14 +179,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 426,
+                     "id": 427,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 427,
+                           "id": 428,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
@@ -194,7 +194,7 @@
                            "type": {
                               "type": "reference",
                               "name": "IMatch",
-                              "id": 399
+                              "id": 400
                            }
                         }
                      ],
@@ -209,7 +209,7 @@
                }
             },
             {
-               "id": 422,
+               "id": 423,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -230,7 +230,7 @@
                }
             },
             {
-               "id": 424,
+               "id": 425,
                "name": "unit",
                "kind": 1024,
                "kindString": "Property",
@@ -259,12 +259,12 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  431,
+                  432,
+                  424,
+                  429,
+                  426,
                   423,
-                  428,
-                  425,
-                  422,
-                  424
+                  425
                ]
             }
          ],
@@ -282,7 +282,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            421
+            422
          ]
       }
    ],

@@ -1,5 +1,5 @@
 {
-   "id": 4252,
+   "id": 4316,
    "name": "\"pipe/pagination.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pagination.pipe.d.ts",
    "children": [
       {
-         "id": 4253,
+         "id": 4317,
          "name": "paginationPipe",
          "kind": 32,
          "kindString": "Variable",
@@ -44,7 +44,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4253
+            4317
          ]
       }
    ],

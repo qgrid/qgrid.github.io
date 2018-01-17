@@ -8,7 +8,7 @@ A class to control q-grid pivoting functions.
 
 {% docTable "source/api/pivot-model.json" %}
 
-## Suggested Links
+### Suggested Links
 
 * [Pivot View](/doc/api/pivot-view.html)
 * [pivot.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/pivot.pipe.js)

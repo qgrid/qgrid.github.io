@@ -8,7 +8,7 @@ order: 175
 
 {% docTable "source/api/row-model.json" %}
 
-## Suggested Links
+### Suggested Links
 
 * [Row View](/doc/api/row-view.html)
 

@@ -1,5 +1,5 @@
 {
-   "id": 446,
+   "id": 447,
    "name": "\"scroll/scroll.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scroll/scroll.model.d.ts",
    "children": [
       {
-         "id": 447,
+         "id": 448,
          "name": "ScrollModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class that contains properties about scroll status.",
-            "text": "## Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n"
+            "text": "### Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n"
          },
          "children": [
             {
-               "id": 448,
+               "id": 449,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 449,
+                     "id": 450,
                      "name": "new ScrollModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "ScrollModel",
-                        "id": 447
+                        "id": 448
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 453,
+               "id": 454,
                "name": "cursor",
                "kind": 1024,
                "kindString": "Property",
@@ -75,7 +75,7 @@
                }
             },
             {
-               "id": 452,
+               "id": 453,
                "name": "left",
                "kind": 1024,
                "kindString": "Property",
@@ -98,7 +98,7 @@
                }
             },
             {
-               "id": 450,
+               "id": 451,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
@@ -122,7 +122,7 @@
                }
             },
             {
-               "id": 451,
+               "id": 452,
                "name": "top",
                "kind": 1024,
                "kindString": "Property",
@@ -150,17 +150,17 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  448
+                  449
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
+                  454,
                   453,
-                  452,
-                  450,
-                  451
+                  451,
+                  452
                ]
             }
          ],
@@ -178,7 +178,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            447
+            448
          ]
       }
    ],

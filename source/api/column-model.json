@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that represents any column in the q-grid.",
-            "text": "## Usage\n\n``` javascript\ngridModel.data({\n   columns: [\n   {\n\t     key: 'id',\n\t  \t title: 'ID',\n\t\t type: 'id',\n\t\t editor: 'number'\n\t  },\n   {\n\t     key: 'avatar',\n\t\t title: 'Avatar',\n\t\t type: 'image',\n\t\t width: 80,\n\t\t value: (item, value) => isUndef(value) ? item.avatar : item.avatar = value,\n\t\t labelPath: 'avatarFileName'\n\t  },\n\t  {\n\t     key: 'name.last',\n\t\t title: 'Last Name',\n\t\t type: 'text',\n\t\t path: 'name.last'\n\t  },\n\t  {\n\t     key: 'gender',\n\t\t title: 'Gender',\n\t\t type: 'text',\n\t\t value: (item, value) => isUndef(value) ? item.gender : item.gender = value,\n\t\t editor: 'dropdown',\n\t\t editorOptions: {\n\t\t    fetch: ['female', 'male']\n\t\t }\n\t  },\n\t  {\n\t     key: 'birthday',\n\t\t title: 'Birthday',\n\t\t type: 'date'\n\t  },\n\t  {\n\t     key: 'comment',\n\t\t title: 'Comment',\n\t\t type: 'text',\n\t\t editor: 'text-area',\n\t\t width: 200,\n\t\t maxLength: 8000\n\t  },\n\t  {\n\t\t key: 'password',\n\t\t title: 'Password',\n\t\t type: 'password',\n\t\t isDefault: false\n\t  },\n\t  {\n\t     key: 'teammates',\n\t\t title: 'Teammates',\n\t\t type: 'reference',\n\t\t editorOptions: {\n\t\t    modelFactory: () => {\n\t\t\t   const model = qgrid.model();\n\t\t\t   model\n               .selection({\n\t\t\t         mode: 'multiple',\n\t\t\t\t     unit: 'row'\n\t\t\t      })\n\t\t\t\t  .columnList({\n\t\t\t\t     generation: 'deep'\n\t\t\t\t  })\n\t\t\t\t  .data({\n\t\t\t\t     rows: ctrl.rows\n\t\t\t\t  });\n\n\t\t\t      return model;\n\t\t\t   }\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'contact.address.zip',\n\t\t   title: 'Zip',\n\t\t   type: 'number',\n\t\t   path: 'contact.address.zip',\n\t\t   width: 70,\n\t\t   isDefault: false\n\t\t},\n\t\t{\n\t\t   key: 'contact.phone',\n\t\t   title: 'Contact Phones',\n\t\t   type: 'array',\n\t\t   path: 'contact.phone',\n\t\t   width: 250\n\t\t},\n\t\t{\n\t\t   key: 'contact.email.primary',\n\t\t   title: 'Primary Email',\n        type: 'email'\n     },\n\t\t{\n\t\t\tkey: 'contact.email.secondary',\n\t\t\ttitle: 'Secondary Email',\n\t\t\ttype: 'email',\n\t\t\teditor: 'autocomplete',\n\t\t\teditorOptions: {\n               fetch: (item, d, search = '') =>\n                   new Promise(resolve => resolve(['foo@bar.ru']))\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'salary',\n\t\t   title: 'Salary',\n\t\t   type: 'currency'\n\t\t}\n\t\t{\n\t\t   key: 'modifiedTime',\n\t\t   title: 'Modified Time',\n\t\t   type: 'time'\n\t\t},\n\t\t{\n\t\t   key: 'webPage',\n\t\t   title: 'Web Page',\n\t\t   type: 'url'\n\t\t},\n\t\t{\n\t\t   key: 'attachment',\n\t\t   title: 'Attachment',\n\t\t   type: 'file'\n\t\t},\n\t\t{\n\t\t   key: 'isOnline',\n\t\t   title: 'Online',\n\t       type: 'bool'\n\t\t}]\n});\n```\n\n## Suggested Links\n\n* [value.js](https://github.com/qgrid/ng2/blob/master/core/services/value.js)\n* [label.js](https://github.com/qgrid/ng2/blob/master/core/services/label.js)\n* [column.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/column.pipe.js)\n"
+            "text": "### Usage\n\n``` javascript\ngridModel.data({\n   columns: [\n   {\n\t     key: 'id',\n\t  \t title: 'ID',\n\t\t type: 'id',\n\t\t editor: 'number'\n\t  },\n   {\n\t     key: 'avatar',\n\t\t title: 'Avatar',\n\t\t type: 'image',\n\t\t width: 80,\n\t\t value: (item, value) => isUndef(value) ? item.avatar : item.avatar = value,\n\t\t labelPath: 'avatarFileName'\n\t  },\n\t  {\n\t     key: 'name.last',\n\t\t title: 'Last Name',\n\t\t type: 'text',\n\t\t path: 'name.last'\n\t  },\n\t  {\n\t     key: 'gender',\n\t\t title: 'Gender',\n\t\t type: 'text',\n\t\t value: (item, value) => isUndef(value) ? item.gender : item.gender = value,\n\t\t editor: 'dropdown',\n\t\t editorOptions: {\n\t\t    fetch: ['female', 'male']\n\t\t }\n\t  },\n\t  {\n\t     key: 'birthday',\n\t\t title: 'Birthday',\n\t\t type: 'date'\n\t  },\n\t  {\n\t     key: 'comment',\n\t\t title: 'Comment',\n\t\t type: 'text',\n\t\t editor: 'text-area',\n\t\t width: 200,\n\t\t maxLength: 8000\n\t  },\n\t  {\n\t\t key: 'password',\n\t\t title: 'Password',\n\t\t type: 'password',\n\t\t isDefault: false\n\t  },\n\t  {\n\t     key: 'teammates',\n\t\t title: 'Teammates',\n\t\t type: 'reference',\n\t\t editorOptions: {\n\t\t    modelFactory: () => {\n\t\t\t   const model = qgrid.model();\n\t\t\t   model\n               .selection({\n\t\t\t         mode: 'multiple',\n\t\t\t\t     unit: 'row'\n\t\t\t      })\n\t\t\t\t  .columnList({\n\t\t\t\t     generation: 'deep'\n\t\t\t\t  })\n\t\t\t\t  .data({\n\t\t\t\t     rows: ctrl.rows\n\t\t\t\t  });\n\n\t\t\t      return model;\n\t\t\t   }\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'contact.address.zip',\n\t\t   title: 'Zip',\n\t\t   type: 'number',\n\t\t   path: 'contact.address.zip',\n\t\t   width: 70,\n\t\t   isDefault: false\n\t\t},\n\t\t{\n\t\t   key: 'contact.phone',\n\t\t   title: 'Contact Phones',\n\t\t   type: 'array',\n\t\t   path: 'contact.phone',\n\t\t   width: 250\n\t\t},\n\t\t{\n\t\t   key: 'contact.email.primary',\n\t\t   title: 'Primary Email',\n        type: 'email'\n     },\n\t\t{\n\t\t\tkey: 'contact.email.secondary',\n\t\t\ttitle: 'Secondary Email',\n\t\t\ttype: 'email',\n\t\t\teditor: 'autocomplete',\n\t\t\teditorOptions: {\n               fetch: (item, d, search = '') =>\n                   new Promise(resolve => resolve(['foo@bar.ru']))\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'salary',\n\t\t   title: 'Salary',\n\t\t   type: 'currency'\n\t\t}\n\t\t{\n\t\t   key: 'modifiedTime',\n\t\t   title: 'Modified Time',\n\t\t   type: 'time'\n\t\t},\n\t\t{\n\t\t   key: 'webPage',\n\t\t   title: 'Web Page',\n\t\t   type: 'url'\n\t\t},\n\t\t{\n\t\t   key: 'attachment',\n\t\t   title: 'Attachment',\n\t\t   type: 'file'\n\t\t},\n\t\t{\n\t\t   key: 'isOnline',\n\t\t   title: 'Online',\n\t       type: 'bool'\n\t\t}]\n});\n```\n\n### Suggested Links\n\n* [value.js](https://github.com/qgrid/ng2/blob/master/core/services/value.js)\n* [label.js](https://github.com/qgrid/ng2/blob/master/core/services/label.js)\n* [column.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/column.pipe.js)\n"
          },
          "children": [
             {
@@ -1057,52 +1057,52 @@
             {
                "type": "reference",
                "name": "DataColumnModel",
-               "id": 1704
+               "id": 1717
             },
             {
                "type": "reference",
                "name": "FilterRowColumnModel",
-               "id": 2190
+               "id": 2203
             },
             {
                "type": "reference",
                "name": "GroupColumnModel",
-               "id": 2257
+               "id": 2270
             },
             {
                "type": "reference",
                "name": "PadColumnModel",
-               "id": 2533
+               "id": 2546
             },
             {
                "type": "reference",
                "name": "PivotColumnModel",
-               "id": 2668
+               "id": 2681
             },
             {
                "type": "reference",
                "name": "RowDetailsColumnModel",
-               "id": 2804
+               "id": 2817
             },
             {
                "type": "reference",
                "name": "RowExpandColumnModel",
-               "id": 2870
+               "id": 2883
             },
             {
                "type": "reference",
                "name": "RowIndicatorColumnModel",
-               "id": 2936
+               "id": 2949
             },
             {
                "type": "reference",
                "name": "RowNumberColumnModel",
-               "id": 3002
+               "id": 3015
             },
             {
                "type": "reference",
                "name": "SelectColumnModel",
-               "id": 3137
+               "id": 3150
             }
          ]
       }

@@ -1,5 +1,5 @@
 {
-   "id": 375,
+   "id": 376,
    "name": "\"highlight/highlight.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/highlight/highlight.model.d.ts",
    "children": [
       {
-         "id": 376,
+         "id": 377,
          "name": "HighlightModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 377,
+               "id": 378,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
@@ -48,7 +48,7 @@
                }
             },
             {
-               "id": 378,
+               "id": 379,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -79,8 +79,8 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  377,
-                  378
+                  378,
+                  379
                ]
             }
          ],
@@ -98,7 +98,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            376
+            377
          ]
       }
    ],

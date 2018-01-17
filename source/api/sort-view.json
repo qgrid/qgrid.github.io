@@ -1,5 +1,5 @@
 {
-   "id": 4774,
+   "id": 4765,
    "name": "\"sort/sort.view.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/sort/sort.view.d.ts",
    "children": [
       {
-         "id": 4775,
+         "id": 4766,
          "name": "SortView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4776,
+               "id": 4767,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4777,
+                     "id": 4768,
                      "name": "new SortView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4778,
+                           "id": 4769,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -51,12 +51,12 @@
                      "type": {
                         "type": "reference",
                         "name": "SortView",
-                        "id": 4775
+                        "id": 4766
                      },
                      "overwrites": {
                         "type": "reference",
                         "name": "View.__constructor",
-                        "id": 1150
+                        "id": 1151
                      }
                   }
                ],
@@ -70,11 +70,11 @@
                "overwrites": {
                   "type": "reference",
                   "name": "View.__constructor",
-                  "id": 1150
+                  "id": 1151
                }
             },
             {
-               "id": 4779,
+               "id": 4770,
                "name": "hover",
                "kind": 1024,
                "kindString": "Property",
@@ -94,7 +94,7 @@
                }
             },
             {
-               "id": 4787,
+               "id": 4778,
                "name": "model",
                "kind": 1024,
                "kindString": "Property",
@@ -115,11 +115,11 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "View.model",
-                  "id": 1153
+                  "id": 1154
                }
             },
             {
-               "id": 4780,
+               "id": 4771,
                "name": "toggle",
                "kind": 1024,
                "kindString": "Property",
@@ -140,7 +140,7 @@
                }
             },
             {
-               "id": 4781,
+               "id": 4772,
                "name": "direction",
                "kind": 2048,
                "kindString": "Method",
@@ -149,14 +149,14 @@
                },
                "signatures": [
                   {
-                     "id": 4782,
+                     "id": 4773,
                      "name": "direction",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4783,
+                           "id": 4774,
                            "name": "column",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -171,7 +171,7 @@
                      "type": {
                         "type": "reference",
                         "name": "IMapResult",
-                        "id": 4754
+                        "id": 4745
                      }
                   }
                ],
@@ -184,7 +184,7 @@
                ]
             },
             {
-               "id": 4795,
+               "id": 4786,
                "name": "dispose",
                "kind": 2048,
                "kindString": "Method",
@@ -193,7 +193,7 @@
                },
                "signatures": [
                   {
-                     "id": 4796,
+                     "id": 4787,
                      "name": "dispose",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -205,7 +205,7 @@
                      "inheritedFrom": {
                         "type": "reference",
                         "name": "DisposableView.dispose",
-                        "id": 1146
+                        "id": 1147
                      }
                   }
                ],
@@ -219,11 +219,11 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "DisposableView.dispose",
-                  "id": 1146
+                  "id": 1147
                }
             },
             {
-               "id": 4784,
+               "id": 4775,
                "name": "order",
                "kind": 2048,
                "kindString": "Method",
@@ -232,14 +232,14 @@
                },
                "signatures": [
                   {
-                     "id": 4785,
+                     "id": 4776,
                      "name": "order",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4786,
+                           "id": 4777,
                            "name": "column",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -254,7 +254,7 @@
                      "type": {
                         "type": "reference",
                         "name": "IIndexResult",
-                        "id": 4757
+                        "id": 4748
                      }
                   }
                ],
@@ -267,7 +267,7 @@
                ]
             },
             {
-               "id": 4788,
+               "id": 4779,
                "name": "using",
                "kind": 2048,
                "kindString": "Method",
@@ -276,14 +276,14 @@
                },
                "signatures": [
                   {
-                     "id": 4789,
+                     "id": 4780,
                      "name": "using",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4790,
+                           "id": 4781,
                            "name": "dispose",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -291,14 +291,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4791,
+                                 "id": 4782,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "signatures": [
                                     {
-                                       "id": 4792,
+                                       "id": 4783,
                                        "name": "__call",
                                        "kind": 4096,
                                        "kindString": "Call signature",
@@ -323,14 +323,14 @@
                      "type": {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4793,
+                           "id": 4784,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "signatures": [
                               {
-                                 "id": 4794,
+                                 "id": 4785,
                                  "name": "__call",
                                  "kind": 4096,
                                  "kindString": "Call signature",
@@ -353,7 +353,7 @@
                      "inheritedFrom": {
                         "type": "reference",
                         "name": "DisposableView.using",
-                        "id": 1139
+                        "id": 1140
                      }
                   }
                ],
@@ -367,7 +367,7 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "DisposableView.using",
-                  "id": 1139
+                  "id": 1140
                }
             }
          ],
@@ -376,26 +376,26 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4776
+                  4767
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4779,
-                  4787,
-                  4780
+                  4770,
+                  4778,
+                  4771
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4781,
-                  4795,
-                  4784,
-                  4788
+                  4772,
+                  4786,
+                  4775,
+                  4779
                ]
             }
          ],
@@ -410,7 +410,7 @@
             {
                "type": "reference",
                "name": "View",
-               "id": 1149
+               "id": 1150
             }
          ]
       }
@@ -420,7 +420,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4775
+            4766
          ]
       }
    ],

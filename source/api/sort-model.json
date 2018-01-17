@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that allows to control sorting.",
-            "text": "## Usage\n```javascript\ngridModel.sort({\n   by: [{myColumnKey: 'asc', myOtherColumnKey: 'desc'}]\n});\n\n// In the nearest future\ngridModel.sort({\n   by: ['+myColumnKey', '-myOtherColumnKey']\n});\n```\n\n## Suggested Links\n\n* [Sort View](/doc/api/sort-view.html)\n* [sort.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/sort.pipe.js)\n"
+            "text": "### Usage\n```javascript\ngridModel.sort({\n   by: [{myColumnKey: 'asc', myOtherColumnKey: 'desc'}]\n});\n\n// In the nearest future\ngridModel.sort({\n   by: ['+myColumnKey', '-myOtherColumnKey']\n});\n```\n\n### Suggested Links\n\n* [Sort View](/doc/api/sort-view.html)\n* [sort.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/sort.pipe.js)\n"
          },
          "children": [
             {

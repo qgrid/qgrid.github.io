@@ -9,7 +9,7 @@ Any q-grid actions are implemented through this pattern.
 
 {% docTable "source/api/command.json" %}
 
-## Instanciate a Command
+### Instanciate a Command
 
 ```javascript
 	const addRowCommand = new qgrid.Command({
@@ -27,7 +27,7 @@ Any q-grid actions are implemented through this pattern.
 	});
 ```
 
-## Suggested Links
+### Suggested Links
 
 * [Action Model](/doc/api/action-model.html)
 * [Action](/doc/api/action.html)

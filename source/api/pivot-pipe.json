@@ -1,5 +1,5 @@
 {
-   "id": 4270,
+   "id": 4334,
    "name": "\"pipe/pivot.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pivot.pipe.d.ts",
    "children": [
       {
-         "id": 4271,
+         "id": 4335,
          "name": "pivotPipe",
          "kind": 32,
          "kindString": "Variable",
@@ -44,7 +44,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4271
+            4335
          ]
       }
    ],

@@ -8,7 +8,7 @@ A class to setup data filters and expressions.
 
 {% docTable "source/api/filter-model.json" %}
 
-## Usage
+### Usage
 
 ```javascript
 gridModel.filter({
@@ -29,7 +29,7 @@ gridModel.filter({
 });
 ```
 
-## Suggested Links
+### Suggested Links
 
 * [filter.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/filter.pipe.js)
 

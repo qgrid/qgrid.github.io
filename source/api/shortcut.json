@@ -1,5 +1,5 @@
 {
-   "id": 499,
+   "id": 500,
    "name": "\"shortcut/shortcut.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/shortcut/shortcut.d.ts",
    "children": [
       {
-         "id": 500,
+         "id": 501,
          "name": "Shortcut",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "> Under construction.",
-            "text": "## Suggested Links\n\n* [shortcut.manager.js](https://github.com/qgrid/ng2/blob/master/core/shortcut/shortuct.manager.js)\n* [shortcut.dispatcher.js](https://github.com/qgrid/ng2/blob/master/core/shortcut/shortcut.dispatcher.js)\n"
+            "text": "### Suggested Links\n\n* [shortcut.manager.js](https://github.com/qgrid/ng2/blob/master/core/shortcut/shortuct.manager.js)\n* [shortcut.dispatcher.js](https://github.com/qgrid/ng2/blob/master/core/shortcut/shortcut.dispatcher.js)\n"
          },
          "children": [
             {
-               "id": 501,
+               "id": 502,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,14 +31,14 @@
                },
                "signatures": [
                   {
-                     "id": 502,
+                     "id": 503,
                      "name": "new Shortcut",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 503,
+                           "id": 504,
                            "name": "manager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -46,14 +46,14 @@
                            "type": {
                               "type": "reference",
                               "name": "ShortcutDispatcher",
-                              "id": 482
+                              "id": 483
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "Shortcut",
-                        "id": 500
+                        "id": 501
                      }
                   }
                ],
@@ -66,7 +66,7 @@
                ]
             },
             {
-               "id": 516,
+               "id": 517,
                "name": "factory",
                "kind": 2048,
                "kindString": "Method",
@@ -75,14 +75,14 @@
                },
                "signatures": [
                   {
-                     "id": 517,
+                     "id": 518,
                      "name": "factory",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 518,
+                           "id": 519,
                            "name": "commandManager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -90,7 +90,7 @@
                            "type": {
                               "type": "reference",
                               "name": "CommandManager",
-                              "id": 470
+                              "id": 471
                            }
                         }
                      ],
@@ -109,7 +109,7 @@
                ]
             },
             {
-               "id": 519,
+               "id": 520,
                "name": "keyDown",
                "kind": 2048,
                "kindString": "Method",
@@ -118,14 +118,14 @@
                },
                "signatures": [
                   {
-                     "id": 520,
+                     "id": 521,
                      "name": "keyDown",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 521,
+                           "id": 522,
                            "name": "e",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -136,7 +136,7 @@
                            }
                         },
                         {
-                           "id": 522,
+                           "id": 523,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -164,7 +164,7 @@
                ]
             },
             {
-               "id": 523,
+               "id": 524,
                "name": "register",
                "kind": 2048,
                "kindString": "Method",
@@ -173,14 +173,14 @@
                },
                "signatures": [
                   {
-                     "id": 524,
+                     "id": 525,
                      "name": "register",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 525,
+                           "id": 526,
                            "name": "commandManager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -188,11 +188,11 @@
                            "type": {
                               "type": "reference",
                               "name": "CommandManager",
-                              "id": 470
+                              "id": 471
                            }
                         },
                         {
-                           "id": 526,
+                           "id": 527,
                            "name": "commands",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -221,7 +221,7 @@
                ]
             },
             {
-               "id": 504,
+               "id": 505,
                "name": "isControl",
                "kind": 2048,
                "kindString": "Method",
@@ -231,14 +231,14 @@
                },
                "signatures": [
                   {
-                     "id": 505,
+                     "id": 506,
                      "name": "isControl",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 506,
+                           "id": 507,
                            "name": "keyCode",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -246,7 +246,7 @@
                            "type": {
                               "type": "reference",
                               "name": "KeyCode",
-                              "id": 496
+                              "id": 497
                            }
                         }
                      ],
@@ -265,7 +265,7 @@
                ]
             },
             {
-               "id": 507,
+               "id": 508,
                "name": "isPrintable",
                "kind": 2048,
                "kindString": "Method",
@@ -275,14 +275,14 @@
                },
                "signatures": [
                   {
-                     "id": 508,
+                     "id": 509,
                      "name": "isPrintable",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 509,
+                           "id": 510,
                            "name": "keyCode",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -290,7 +290,7 @@
                            "type": {
                               "type": "reference",
                               "name": "KeyCode",
-                              "id": 496
+                              "id": 497
                            }
                         }
                      ],
@@ -309,7 +309,7 @@
                ]
             },
             {
-               "id": 510,
+               "id": 511,
                "name": "stringify",
                "kind": 2048,
                "kindString": "Method",
@@ -319,14 +319,14 @@
                },
                "signatures": [
                   {
-                     "id": 511,
+                     "id": 512,
                      "name": "stringify",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 512,
+                           "id": 513,
                            "name": "keyCode",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -334,7 +334,7 @@
                            "type": {
                               "type": "reference",
                               "name": "KeyCode",
-                              "id": 496
+                              "id": 497
                            }
                         }
                      ],
@@ -353,7 +353,7 @@
                ]
             },
             {
-               "id": 513,
+               "id": 514,
                "name": "translate",
                "kind": 2048,
                "kindString": "Method",
@@ -363,14 +363,14 @@
                },
                "signatures": [
                   {
-                     "id": 514,
+                     "id": 515,
                      "name": "translate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 515,
+                           "id": 516,
                            "name": "e",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -401,20 +401,20 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  501
+                  502
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  516,
-                  519,
-                  523,
-                  504,
-                  507,
-                  510,
-                  513
+                  517,
+                  520,
+                  524,
+                  505,
+                  508,
+                  511,
+                  514
                ]
             }
          ],
@@ -432,7 +432,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            500
+            501
          ]
       }
    ],

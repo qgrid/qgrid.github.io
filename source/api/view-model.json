@@ -17,7 +17,7 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that represent raw data to render."
+            "shortText": "A class that represent a raw data to render."
          },
          "children": [
             {
@@ -112,7 +112,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Pivot data to render."
+                  "shortText": "Pivoted data structure to render."
                },
                "sources": [
                   {
