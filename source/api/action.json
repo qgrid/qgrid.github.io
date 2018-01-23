@@ -1,5 +1,5 @@
 {
-   "id": 459,
+   "id": 460,
    "name": "\"action/action.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.d.ts",
    "children": [
       {
-         "id": 460,
+         "id": 461,
          "name": "Action",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class to connect the q-grid [command](/doc/api/command.html) with user interface.\nUsually action represents button in UI. If user action doesn't populate UI attributes like `title` or `icon`,\ncommand can be still available through keyboard shortcut.",
-            "text": "## Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n"
+            "text": "### Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n"
          },
          "children": [
             {
-               "id": 461,
+               "id": 462,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,14 +31,14 @@
                },
                "signatures": [
                   {
-                     "id": 462,
+                     "id": 463,
                      "name": "new Action",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 463,
+                           "id": 464,
                            "name": "command",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -50,7 +50,7 @@
                            }
                         },
                         {
-                           "id": 464,
+                           "id": 465,
                            "name": "title",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -63,7 +63,7 @@
                            }
                         },
                         {
-                           "id": 465,
+                           "id": 466,
                            "name": "icon",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -79,7 +79,7 @@
                      "type": {
                         "type": "reference",
                         "name": "Action",
-                        "id": 460
+                        "id": 461
                      }
                   }
                ],
@@ -92,7 +92,7 @@
                ]
             },
             {
-               "id": 466,
+               "id": 467,
                "name": "command",
                "kind": 1024,
                "kindString": "Property",
@@ -117,7 +117,7 @@
                }
             },
             {
-               "id": 468,
+               "id": 469,
                "name": "icon",
                "kind": 1024,
                "kindString": "Property",
@@ -140,7 +140,7 @@
                }
             },
             {
-               "id": 467,
+               "id": 468,
                "name": "title",
                "kind": 1024,
                "kindString": "Property",
@@ -168,16 +168,16 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  461
+                  462
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  466,
-                  468,
-                  467
+                  467,
+                  469,
+                  468
                ]
             }
          ],
@@ -195,7 +195,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            460
+            461
          ]
       }
    ],

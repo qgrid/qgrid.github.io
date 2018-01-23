@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class contains basic grid options like id and title.",
-            "text": "### Suggested Links\n\n* [grid.ctrl.js](https://github.com/qgrid/ng2/blob/master/core/grid/grid.ctrl.js)\n"
+            "text": "## Suggested Links\n\n* [grid.ctrl.js](https://github.com/qgrid/ng2/blob/master/core/grid/grid.ctrl.js)\n"
          },
          "children": [
             {

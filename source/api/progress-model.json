@@ -1,5 +1,5 @@
 {
-   "id": 368,
+   "id": 369,
    "name": "\"progress/progress.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/progress/progress.model.d.ts",
    "children": [
       {
-         "id": 369,
+         "id": 370,
          "name": "ProgressModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class representing the q-grid job state.",
-            "text": "## Usage\n\nIn general this model is not modified directly, consider to [grid service](`/doc/api/grid-service.html`).\n\n```javascript\n\tconst gridModel = qgrid.model();\n\tconst service = qgrid.service(gridModel);\n\tconst cancelBusy = service.busy();\n\n\tnew Promise(resolve => {\n\t   cancelBusy();\n    resolve()\n\t});\n```\n"
+            "text": "### Usage\n\nIn general this model is not modified directly, consider to [grid service](`/doc/api/grid-service.html`).\n\n```javascript\n\tconst gridModel = qgrid.model();\n\tconst service = qgrid.service(gridModel);\n\tconst cancelBusy = service.busy();\n\n\tnew Promise(resolve => {\n\t   cancelBusy();\n    resolve()\n\t});\n```\n"
          },
          "children": [
             {
-               "id": 370,
+               "id": 371,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 371,
+                     "id": 372,
                      "name": "new ProgressModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "ProgressModel",
-                        "id": 369
+                        "id": 370
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 373,
+               "id": 374,
                "name": "isBusy",
                "kind": 1024,
                "kindString": "Property",
@@ -75,7 +75,7 @@
                }
             },
             {
-               "id": 374,
+               "id": 375,
                "name": "queue",
                "kind": 1024,
                "kindString": "Property",
@@ -101,7 +101,7 @@
                }
             },
             {
-               "id": 372,
+               "id": 373,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -127,16 +127,16 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  370
+                  371
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  373,
                   374,
-                  372
+                  375,
+                  373
                ]
             }
          ],
@@ -154,7 +154,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            369
+            370
          ]
       }
    ],

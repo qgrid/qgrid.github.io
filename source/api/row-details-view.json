@@ -1,5 +1,5 @@
 {
-   "id": 4402,
+   "id": 4393,
    "name": "\"row-details/row.details.view.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/row-details/row.details.view.d.ts",
    "children": [
       {
-         "id": 4403,
+         "id": 4394,
          "name": "RowDetailsView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4404,
+               "id": 4395,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4405,
+                     "id": 4396,
                      "name": "new RowDetailsView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4406,
+                           "id": 4397,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 915
+                              "id": 916
                            }
                         },
                         {
-                           "id": 4407,
+                           "id": 4398,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1472
+                              "id": 1473
                            }
                         },
                         {
-                           "id": 4408,
+                           "id": 4399,
                            "name": "commandManager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -69,19 +69,19 @@
                            "type": {
                               "type": "reference",
                               "name": "CommandManager",
-                              "id": 470
+                              "id": 471
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "RowDetailsView",
-                        "id": 4403
+                        "id": 4394
                      },
                      "overwrites": {
                         "type": "reference",
                         "name": "View.__constructor",
-                        "id": 1150
+                        "id": 1151
                      }
                   }
                ],
@@ -95,11 +95,11 @@
                "overwrites": {
                   "type": "reference",
                   "name": "View.__constructor",
-                  "id": 1150
+                  "id": 1151
                }
             },
             {
-               "id": 4412,
+               "id": 4403,
                "name": "model",
                "kind": 1024,
                "kindString": "Property",
@@ -120,11 +120,11 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "View.model",
-                  "id": 1153
+                  "id": 1154
                }
             },
             {
-               "id": 4420,
+               "id": 4411,
                "name": "dispose",
                "kind": 2048,
                "kindString": "Method",
@@ -133,7 +133,7 @@
                },
                "signatures": [
                   {
-                     "id": 4421,
+                     "id": 4412,
                      "name": "dispose",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -145,7 +145,7 @@
                      "inheritedFrom": {
                         "type": "reference",
                         "name": "DisposableView.dispose",
-                        "id": 1146
+                        "id": 1147
                      }
                   }
                ],
@@ -159,11 +159,11 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "DisposableView.dispose",
-                  "id": 1146
+                  "id": 1147
                }
             },
             {
-               "id": 4409,
+               "id": 4400,
                "name": "status",
                "kind": 2048,
                "kindString": "Method",
@@ -172,14 +172,14 @@
                },
                "signatures": [
                   {
-                     "id": 4410,
+                     "id": 4401,
                      "name": "status",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4411,
+                           "id": 4402,
                            "name": "row",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -205,7 +205,7 @@
                ]
             },
             {
-               "id": 4413,
+               "id": 4404,
                "name": "using",
                "kind": 2048,
                "kindString": "Method",
@@ -214,14 +214,14 @@
                },
                "signatures": [
                   {
-                     "id": 4414,
+                     "id": 4405,
                      "name": "using",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4415,
+                           "id": 4406,
                            "name": "dispose",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -229,14 +229,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4416,
+                                 "id": 4407,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "signatures": [
                                     {
-                                       "id": 4417,
+                                       "id": 4408,
                                        "name": "__call",
                                        "kind": 4096,
                                        "kindString": "Call signature",
@@ -261,14 +261,14 @@
                      "type": {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4418,
+                           "id": 4409,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "signatures": [
                               {
-                                 "id": 4419,
+                                 "id": 4410,
                                  "name": "__call",
                                  "kind": 4096,
                                  "kindString": "Call signature",
@@ -291,7 +291,7 @@
                      "inheritedFrom": {
                         "type": "reference",
                         "name": "DisposableView.using",
-                        "id": 1139
+                        "id": 1140
                      }
                   }
                ],
@@ -305,7 +305,7 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "DisposableView.using",
-                  "id": 1139
+                  "id": 1140
                }
             }
          ],
@@ -314,23 +314,23 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4404
+                  4395
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4412
+                  4403
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4420,
-                  4409,
-                  4413
+                  4411,
+                  4400,
+                  4404
                ]
             }
          ],
@@ -345,7 +345,7 @@
             {
                "type": "reference",
                "name": "View",
-               "id": 1149
+               "id": 1150
             }
          ]
       }
@@ -355,7 +355,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4403
+            4394
          ]
       }
    ],

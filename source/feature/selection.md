@@ -59,3 +59,4 @@ To deselect one row at a time, either:
 ### Suggested Links
 
 * [Selection Model](/doc/api/selection-model.html)
+* [Selection View](/doc/api/selection-view.html)

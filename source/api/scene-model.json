@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that contains results of q-grid invalidate.",
-            "text": "## Suggested Links\n[table.js](https://github.com/qgrid/ng2/blob/master/core/dom/table.js)\n"
+            "text": "### Suggested Links\n[table.js](https://github.com/qgrid/ng2/blob/master/core/dom/table.js)\n"
          },
          "children": [
             {

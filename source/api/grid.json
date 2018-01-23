@@ -1,5 +1,5 @@
 {
-   "id": 3826,
+   "id": 3817,
    "name": "\"services/grid.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/services/grid.d.ts",
    "children": [
       {
-         "id": 3827,
+         "id": 3818,
          "name": "GridService",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 3828,
+               "id": 3819,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 3829,
+                     "id": 3820,
                      "name": "new GridService",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3830,
+                           "id": 3821,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 915
+                              "id": 916
                            }
                         },
                         {
-                           "id": 3831,
+                           "id": 3822,
                            "name": "apply",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -64,7 +64,7 @@
                      "type": {
                         "type": "reference",
                         "name": "GridService",
-                        "id": 3827
+                        "id": 3818
                      }
                   }
                ],
@@ -77,7 +77,7 @@
                ]
             },
             {
-               "id": 3832,
+               "id": 3823,
                "name": "apply",
                "kind": 1024,
                "kindString": "Property",
@@ -98,7 +98,7 @@
                }
             },
             {
-               "id": 3838,
+               "id": 3829,
                "name": "busy",
                "kind": 2048,
                "kindString": "Method",
@@ -107,7 +107,7 @@
                },
                "signatures": [
                   {
-                     "id": 3839,
+                     "id": 3830,
                      "name": "busy",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -115,14 +115,14 @@
                      "type": {
                         "type": "reflection",
                         "declaration": {
-                           "id": 3840,
+                           "id": 3831,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "signatures": [
                               {
-                                 "id": 3841,
+                                 "id": 3832,
                                  "name": "__call",
                                  "kind": 4096,
                                  "kindString": "Call signature",
@@ -153,7 +153,7 @@
                ]
             },
             {
-               "id": 3833,
+               "id": 3824,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -162,14 +162,14 @@
                },
                "signatures": [
                   {
-                     "id": 3834,
+                     "id": 3825,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3835,
+                           "id": 3826,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -182,7 +182,7 @@
                            }
                         },
                         {
-                           "id": 3836,
+                           "id": 3827,
                            "name": "changes",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -195,7 +195,7 @@
                            }
                         },
                         {
-                           "id": 3837,
+                           "id": 3828,
                            "name": "pipe",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -238,22 +238,22 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  3828
+                  3819
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  3832
+                  3823
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  3838,
-                  3833
+                  3829,
+                  3824
                ]
             }
          ],
@@ -271,7 +271,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            3827
+            3818
          ]
       }
    ],

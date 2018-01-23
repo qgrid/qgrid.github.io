@@ -1,5 +1,5 @@
 {
-   "id": 495,
+   "id": 496,
    "name": "\"shortcut/key.code.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/shortcut/key.code.d.ts",
    "children": [
       {
-         "id": 496,
+         "id": 497,
          "name": "KeyCode",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 497,
+               "id": 498,
                "name": "code",
                "kind": 1024,
                "kindString": "Property",
@@ -41,7 +41,7 @@
                }
             },
             {
-               "id": 498,
+               "id": 499,
                "name": "key",
                "kind": 1024,
                "kindString": "Property",
@@ -66,8 +66,8 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  497,
-                  498
+                  498,
+                  499
                ]
             }
          ],
@@ -85,7 +85,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            496
+            497
          ]
       }
    ],

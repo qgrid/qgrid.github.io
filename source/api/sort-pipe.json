@@ -1,5 +1,5 @@
 {
-   "id": 4272,
+   "id": 4336,
    "name": "\"pipe/sort.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/sort.pipe.d.ts",
    "children": [
       {
-         "id": 4273,
+         "id": 4337,
          "name": "sortPipe",
          "kind": 32,
          "kindString": "Variable",
@@ -44,7 +44,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4273
+            4337
          ]
       }
    ],

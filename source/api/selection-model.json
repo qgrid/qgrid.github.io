@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that allows to control selection function of the q-grid.",
-            "text": "## Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n* [selection.service.js](https://github.com/qgrid/ng2/blob/master/core/selection/selection.service.js)\n"
+            "text": "### Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n* [selection.service.js](https://github.com/qgrid/ng2/blob/master/core/selection/selection.service.js)\n"
          },
          "children": [
             {

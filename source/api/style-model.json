@@ -1,5 +1,5 @@
 {
-   "id": 437,
+   "id": 438,
    "name": "\"style/style.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
    "children": [
       {
-         "id": 438,
+         "id": 439,
          "name": "StyleModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class that allows to apply styles to rows and cells.",
-            "text": "## Usage\n\n```javascript\n   gridModel.style({\n       row: (row, context) => {\n           if (row.gender === 'female') {\n               context.class(`female-row-${this.femaleColor}`, {background: '#' + this.femaleColor});\n           }\n\n           if (row.gender === 'male') {\n               context.class(`male-row-${this.maleColor}`, {background: '#' + this.maleColor});\n           }\n       },\n       cell: (row, column, context) => {\n           if (column.key === 'birthday') {\n               context.class('red-birthday', {background: '#f00', color: '#fff'});\n           }\n\n           if (column.key === 'name.last') {\n               if (context.value(row, context.columns.map.gender) === 'female') {\n                   context.class('female-name-last', {background: '#ff0', color: '#000'});\n               }\n           }\n\n           if (column.key === 'name.first') {\n               if (context.row % 2) {\n                   context.class('first-name-even', {background: '#000', color: '#fff'});\n               }\n               else {\n                   context.class('first-name-odd', {background: '#fff', color: '#000'});\n               }\n           }\n       }\n   });\n```\n\n## Suggested Links\n\n* [Style View](/doc/api/style-view.html)\n* [style.monitor.js](https://github.com/qgrid/ng2/blob/master/core/style/style.monitor.js)\n"
+            "text": "### Usage\n\n```javascript\n   gridModel.style({\n       row: (row, context) => {\n           if (row.gender === 'female') {\n               context.class(`female-row-${this.femaleColor}`, {background: '#' + this.femaleColor});\n           }\n\n           if (row.gender === 'male') {\n               context.class(`male-row-${this.maleColor}`, {background: '#' + this.maleColor});\n           }\n       },\n       cell: (row, column, context) => {\n           if (column.key === 'birthday') {\n               context.class('red-birthday', {background: '#f00', color: '#fff'});\n           }\n\n           if (column.key === 'name.last') {\n               if (context.value(row, context.columns.map.gender) === 'female') {\n                   context.class('female-name-last', {background: '#ff0', color: '#000'});\n               }\n           }\n\n           if (column.key === 'name.first') {\n               if (context.row % 2) {\n                   context.class('first-name-even', {background: '#000', color: '#fff'});\n               }\n               else {\n                   context.class('first-name-odd', {background: '#fff', color: '#000'});\n               }\n           }\n       }\n   });\n```\n\n### Suggested Links\n\n* [Style View](/doc/api/style-view.html)\n* [style.monitor.js](https://github.com/qgrid/ng2/blob/master/core/style/style.monitor.js)\n"
          },
          "children": [
             {
-               "id": 439,
+               "id": 440,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 440,
+                     "id": 441,
                      "name": "new StyleModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "StyleModel",
-                        "id": 438
+                        "id": 439
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 442,
+               "id": 443,
                "name": "cell",
                "kind": 1024,
                "kindString": "Property",
@@ -75,7 +75,7 @@
                }
             },
             {
-               "id": 445,
+               "id": 446,
                "name": "cells",
                "kind": 1024,
                "kindString": "Property",
@@ -101,7 +101,7 @@
                }
             },
             {
-               "id": 443,
+               "id": 444,
                "name": "invalidate",
                "kind": 1024,
                "kindString": "Property",
@@ -125,7 +125,7 @@
                }
             },
             {
-               "id": 441,
+               "id": 442,
                "name": "row",
                "kind": 1024,
                "kindString": "Property",
@@ -148,7 +148,7 @@
                }
             },
             {
-               "id": 444,
+               "id": 445,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -179,18 +179,18 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  439
+                  440
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  442,
-                  445,
                   443,
-                  441,
-                  444
+                  446,
+                  444,
+                  442,
+                  445
                ]
             }
          ],
@@ -208,7 +208,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            438
+            439
          ]
       }
    ],

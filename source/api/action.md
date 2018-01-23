@@ -10,7 +10,7 @@ command can be still available through keyboard shortcut.
 
 {% docTable "source/api/action.json" %}
 
-## Suggested Links
+### Suggested Links
 
 * [Action Model](/doc/api/action-model.html)
 * [Command](/doc/api/command.html)

@@ -1,5 +1,5 @@
 {
-   "id": 4136,
+   "id": 4127,
    "name": "\"navigation/navigation.view.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/navigation/navigation.view.d.ts",
    "children": [
       {
-         "id": 4137,
+         "id": 4128,
          "name": "NavigationView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4138,
+               "id": 4129,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4139,
+                     "id": 4130,
                      "name": "new NavigationView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4140,
+                           "id": 4131,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 915
+                              "id": 916
                            }
                         },
                         {
-                           "id": 4141,
+                           "id": 4132,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1472
+                              "id": 1473
                            }
                         },
                         {
-                           "id": 4142,
+                           "id": 4133,
                            "name": "commandManager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -69,19 +69,19 @@
                            "type": {
                               "type": "reference",
                               "name": "CommandManager",
-                              "id": 470
+                              "id": 471
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "NavigationView",
-                        "id": 4137
+                        "id": 4128
                      },
                      "overwrites": {
                         "type": "reference",
                         "name": "View.__constructor",
-                        "id": 1150
+                        "id": 1151
                      }
                   }
                ],
@@ -95,11 +95,11 @@
                "overwrites": {
                   "type": "reference",
                   "name": "View.__constructor",
-                  "id": 1150
+                  "id": 1151
                }
             },
             {
-               "id": 4143,
+               "id": 4134,
                "name": "focus",
                "kind": 1024,
                "kindString": "Property",
@@ -120,7 +120,7 @@
                }
             },
             {
-               "id": 4145,
+               "id": 4136,
                "name": "model",
                "kind": 1024,
                "kindString": "Property",
@@ -141,11 +141,11 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "View.model",
-                  "id": 1153
+                  "id": 1154
                }
             },
             {
-               "id": 4144,
+               "id": 4135,
                "name": "scrollTo",
                "kind": 1024,
                "kindString": "Property",
@@ -166,7 +166,7 @@
                }
             },
             {
-               "id": 4153,
+               "id": 4144,
                "name": "dispose",
                "kind": 2048,
                "kindString": "Method",
@@ -175,7 +175,7 @@
                },
                "signatures": [
                   {
-                     "id": 4154,
+                     "id": 4145,
                      "name": "dispose",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -187,7 +187,7 @@
                      "inheritedFrom": {
                         "type": "reference",
                         "name": "DisposableView.dispose",
-                        "id": 1146
+                        "id": 1147
                      }
                   }
                ],
@@ -201,11 +201,11 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "DisposableView.dispose",
-                  "id": 1146
+                  "id": 1147
                }
             },
             {
-               "id": 4146,
+               "id": 4137,
                "name": "using",
                "kind": 2048,
                "kindString": "Method",
@@ -214,14 +214,14 @@
                },
                "signatures": [
                   {
-                     "id": 4147,
+                     "id": 4138,
                      "name": "using",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4148,
+                           "id": 4139,
                            "name": "dispose",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -229,14 +229,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4149,
+                                 "id": 4140,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "signatures": [
                                     {
-                                       "id": 4150,
+                                       "id": 4141,
                                        "name": "__call",
                                        "kind": 4096,
                                        "kindString": "Call signature",
@@ -261,14 +261,14 @@
                      "type": {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4151,
+                           "id": 4142,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "signatures": [
                               {
-                                 "id": 4152,
+                                 "id": 4143,
                                  "name": "__call",
                                  "kind": 4096,
                                  "kindString": "Call signature",
@@ -291,7 +291,7 @@
                      "inheritedFrom": {
                         "type": "reference",
                         "name": "DisposableView.using",
-                        "id": 1139
+                        "id": 1140
                      }
                   }
                ],
@@ -305,7 +305,7 @@
                "inheritedFrom": {
                   "type": "reference",
                   "name": "DisposableView.using",
-                  "id": 1139
+                  "id": 1140
                }
             }
          ],
@@ -314,24 +314,24 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4138
+                  4129
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4143,
-                  4145,
-                  4144
+                  4134,
+                  4136,
+                  4135
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4153,
-                  4146
+                  4144,
+                  4137
                ]
             }
          ],
@@ -346,7 +346,7 @@
             {
                "type": "reference",
                "name": "View",
-               "id": 1149
+               "id": 1150
             }
          ]
       }
@@ -356,7 +356,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4137
+            4128
          ]
       }
    ],

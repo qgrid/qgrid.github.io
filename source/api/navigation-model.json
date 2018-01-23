@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class that gives access to the current cell position inside the q-grid.",
-            "text": "## Suggested Links\n\n* [Navigation View](/doc/api/navigation-view.html)\n* [navigation.js](https://github.com/qgrid/ng2/blob/master/core/navigation/navigation.js)\n"
+            "text": "### Suggested Links\n\n* [Navigation View](/doc/api/navigation-view.html)\n* [navigation.js](https://github.com/qgrid/ng2/blob/master/core/navigation/navigation.js)\n"
          },
          "children": [
             {

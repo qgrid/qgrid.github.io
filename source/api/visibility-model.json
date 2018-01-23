@@ -1,5 +1,5 @@
 {
-   "id": 379,
+   "id": 380,
    "name": "\"visibility/visibility.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/visibility/visibility.model.d.ts",
    "children": [
       {
-         "id": 380,
+         "id": 381,
          "name": "VisibilityModel",
          "kind": 128,
          "kindString": "Class",
@@ -17,11 +17,11 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class to control visibility q-grid areas visibility ."
+            "shortText": "A class to control visibility of the q-grid areas."
          },
          "children": [
             {
-               "id": 381,
+               "id": 382,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,7 +30,7 @@
                },
                "signatures": [
                   {
-                     "id": 382,
+                     "id": 383,
                      "name": "new VisibilityModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -38,7 +38,7 @@
                      "type": {
                         "type": "reference",
                         "name": "VisibilityModel",
-                        "id": 380
+                        "id": 381
                      }
                   }
                ],
@@ -51,7 +51,7 @@
                ]
             },
             {
-               "id": 386,
+               "id": 387,
                "name": "body",
                "kind": 1024,
                "kindString": "Property",
@@ -59,7 +59,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates if the q-grid body is visible."
+                  "shortText": "Indicates if the q-grid `body` is visible."
                },
                "sources": [
                   {
@@ -74,7 +74,7 @@
                }
             },
             {
-               "id": 385,
+               "id": 386,
                "name": "foot",
                "kind": 1024,
                "kindString": "Property",
@@ -82,7 +82,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates if the q-grid foot is visible."
+                  "shortText": "Indicates if the q-grid `foot` is visible."
                },
                "sources": [
                   {
@@ -97,7 +97,7 @@
                }
             },
             {
-               "id": 384,
+               "id": 385,
                "name": "head",
                "kind": 1024,
                "kindString": "Property",
@@ -105,7 +105,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates if the q-grid head is visible."
+                  "shortText": "Indicates if the q-grid `head` is visible."
                },
                "sources": [
                   {
@@ -120,7 +120,7 @@
                }
             },
             {
-               "id": 393,
+               "id": 394,
                "name": "pin",
                "kind": 1024,
                "kindString": "Property",
@@ -128,7 +128,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Controls the q-grid frozen panels visibility.",
+                  "shortText": "Object that controls if the q-grid `frozen` panels are visible.",
                   "text": "* `'right'` show/hide right pin panel.\n* `'left'` show/hide left pin panel.\n"
                },
                "sources": [
@@ -141,14 +141,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 394,
+                     "id": 395,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "children": [
                         {
-                           "id": 395,
+                           "id": 396,
                            "name": "left",
                            "kind": 32,
                            "kindString": "Variable",
@@ -166,7 +166,7 @@
                            }
                         },
                         {
-                           "id": 396,
+                           "id": 397,
                            "name": "right",
                            "kind": 32,
                            "kindString": "Variable",
@@ -189,8 +189,8 @@
                            "title": "Variables",
                            "kind": 32,
                            "children": [
-                              395,
-                              396
+                              396,
+                              397
                            ]
                         }
                      ],
@@ -205,7 +205,7 @@
                }
             },
             {
-               "id": 397,
+               "id": 398,
                "name": "plugin",
                "kind": 1024,
                "kindString": "Property",
@@ -225,7 +225,7 @@
                }
             },
             {
-               "id": 383,
+               "id": 384,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
@@ -246,7 +246,7 @@
                }
             },
             {
-               "id": 387,
+               "id": 388,
                "name": "toolbar",
                "kind": 1024,
                "kindString": "Property",
@@ -254,7 +254,7 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Controls if the q-grid toolbar panels are visible.",
+                  "shortText": "Object that controls if the q-grid `toolbar` panels are visible.",
                   "text": "* `'top'` show/hide top toolbar.\n* `'right'` show/hide right toolbar.\n* `'bottom'` show/hide bottom toolbar.\n* `'left'` show/hide left toolbar.\n"
                },
                "sources": [
@@ -267,14 +267,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 388,
+                     "id": 389,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "children": [
                         {
-                           "id": 391,
+                           "id": 392,
                            "name": "bottom",
                            "kind": 32,
                            "kindString": "Variable",
@@ -292,7 +292,7 @@
                            }
                         },
                         {
-                           "id": 392,
+                           "id": 393,
                            "name": "left",
                            "kind": 32,
                            "kindString": "Variable",
@@ -310,7 +310,7 @@
                            }
                         },
                         {
-                           "id": 390,
+                           "id": 391,
                            "name": "right",
                            "kind": 32,
                            "kindString": "Variable",
@@ -328,7 +328,7 @@
                            }
                         },
                         {
-                           "id": 389,
+                           "id": 390,
                            "name": "top",
                            "kind": 32,
                            "kindString": "Variable",
@@ -351,10 +351,10 @@
                            "title": "Variables",
                            "kind": 32,
                            "children": [
-                              391,
                               392,
-                              390,
-                              389
+                              393,
+                              391,
+                              390
                            ]
                         }
                      ],
@@ -374,20 +374,20 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  381
+                  382
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
+                  387,
                   386,
                   385,
+                  394,
+                  398,
                   384,
-                  393,
-                  397,
-                  383,
-                  387
+                  388
                ]
             }
          ],
@@ -405,7 +405,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            380
+            381
          ]
       }
    ],

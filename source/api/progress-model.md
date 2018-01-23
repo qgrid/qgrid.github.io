@@ -8,7 +8,7 @@ A class representing the q-grid job state.
 
 {% docTable "source/api/progress-model.json" %}
 
-## Usage
+### Usage
 
 In general this model is not modified directly, consider to [grid service](`/doc/api/grid-service.html`).
 

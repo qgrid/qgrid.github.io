@@ -8,7 +8,7 @@ A class that contains properties about scroll status.
 
 {% docTable "source/api/scroll-model.json" %}
 
-## Suggested Links
+### Suggested Links
 
 * [Scroll View](/doc/api/scroll-view.html)
 

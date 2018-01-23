@@ -2,7 +2,7 @@
 title: For Writers
 type: guide
 group: Getting started
-order: 4
+order: 8
 ---
 
 ## Markdown Documentation

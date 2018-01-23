@@ -1,5 +1,5 @@
 {
-   "id": 535,
+   "id": 536,
    "name": "\"fetch/fetch.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/fetch/fetch.model.d.ts",
    "children": [
       {
-         "id": 536,
+         "id": 537,
          "name": "FetchModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class that can be used in custom user pipe within `PaginationModel` to make server request when\nvirtual scrolling is enabeld.",
-            "text": "## Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n"
+            "text": "### Suggested Links\n\n* [Scroll View](/doc/api/scroll-view.html)\n"
          },
          "children": [
             {
-               "id": 537,
+               "id": 538,
                "name": "skip",
                "kind": 1024,
                "kindString": "Property",
@@ -50,7 +50,7 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  537
+                  538
                ]
             }
          ],
@@ -68,7 +68,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            536
+            537
          ]
       }
    ],

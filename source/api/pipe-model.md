@@ -8,7 +8,7 @@ A class that contains setting to control when and how q-grid should be updated.
 
 {% docTable "source/api/pipe-model.json" %}
 
-## Default Triggers
+### Default Triggers
 ```javascript
  {
 	   'data': {

@@ -1,5 +1,5 @@
 {
-   "id": 4248,
+   "id": 4312,
    "name": "\"pipe/group.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/group.pipe.d.ts",
    "children": [
       {
-         "id": 4249,
+         "id": 4313,
          "name": "groupPipe",
          "kind": 32,
          "kindString": "Variable",
@@ -44,7 +44,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4249
+            4313
          ]
       }
    ],

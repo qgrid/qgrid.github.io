@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class to control q-grid pivoting functions.",
-            "text": "## Suggested Links\n\n* [Pivot View](/doc/api/pivot-view.html)\n* [pivot.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/pivot.pipe.js)\n* [pivot.build.js](https://github.com/qgrid/ng2/blob/master/core/pivot/pivot.build.js)\n* [pivot.form.js](https://github.com/qgrid/ng2/blob/master/core/pivot/pivot.form.js)\n"
+            "text": "### Suggested Links\n\n* [Pivot View](/doc/api/pivot-view.html)\n* [pivot.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/pivot.pipe.js)\n* [pivot.build.js](https://github.com/qgrid/ng2/blob/master/core/pivot/pivot.build.js)\n* [pivot.form.js](https://github.com/qgrid/ng2/blob/master/core/pivot/pivot.form.js)\n"
          },
          "children": [
             {

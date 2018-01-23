@@ -1,5 +1,5 @@
 {
-   "id": 4259,
+   "id": 4323,
    "name": "\"pipe/pipe.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.d.ts",
    "children": [
       {
-         "id": 4260,
+         "id": 4324,
          "name": "Pipe",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4268,
+               "id": 4332,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -49,7 +49,7 @@
                }
             },
             {
-               "id": 4261,
+               "id": 4325,
                "name": "data",
                "kind": 1024,
                "kindString": "Property",
@@ -77,7 +77,7 @@
                }
             },
             {
-               "id": 4262,
+               "id": 4326,
                "name": "filter",
                "kind": 1024,
                "kindString": "Property",
@@ -105,7 +105,7 @@
                }
             },
             {
-               "id": 4266,
+               "id": 4330,
                "name": "group",
                "kind": 1024,
                "kindString": "Property",
@@ -133,7 +133,7 @@
                }
             },
             {
-               "id": 4265,
+               "id": 4329,
                "name": "memo",
                "kind": 1024,
                "kindString": "Property",
@@ -161,7 +161,7 @@
                }
             },
             {
-               "id": 4263,
+               "id": 4327,
                "name": "pagination",
                "kind": 1024,
                "kindString": "Property",
@@ -189,7 +189,7 @@
                }
             },
             {
-               "id": 4267,
+               "id": 4331,
                "name": "pivot",
                "kind": 1024,
                "kindString": "Property",
@@ -217,7 +217,7 @@
                }
             },
             {
-               "id": 4264,
+               "id": 4328,
                "name": "sort",
                "kind": 1024,
                "kindString": "Property",
@@ -245,7 +245,7 @@
                }
             },
             {
-               "id": 4269,
+               "id": 4333,
                "name": "view",
                "kind": 1024,
                "kindString": "Property",
@@ -278,15 +278,15 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4268,
-                  4261,
-                  4262,
-                  4266,
-                  4265,
-                  4263,
-                  4267,
-                  4264,
-                  4269
+                  4332,
+                  4325,
+                  4326,
+                  4330,
+                  4329,
+                  4327,
+                  4331,
+                  4328,
+                  4333
                ]
             }
          ],
@@ -304,7 +304,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4260
+            4324
          ]
       }
    ],

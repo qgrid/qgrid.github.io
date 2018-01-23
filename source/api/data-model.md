@@ -8,7 +8,7 @@ A class that gives access to the high level grid data structures.
 
 {% docTable "source/api/data-model.json" %}
 
-## Usage
+### Usage
 Usually grid user can define this properties in different places.
 Inside html through attribute bindings:
 ```html
@@ -36,7 +36,7 @@ gridModel.data({
 })
 ```
 
-## Suggested Links
+### Suggested Links
 
 * [data.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/data.pipe.js)
 

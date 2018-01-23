@@ -18,7 +18,7 @@
          },
          "comment": {
             "shortText": "A class contains rewritten widthes and heights of rows and columns",
-            "text": "## Suggested Links\n* [Layout View](/doc/api/layout-view.html)\n"
+            "text": "### Suggested Links\n* [Layout View](/doc/api/layout-view.html)\n"
          },
          "children": [
             {

@@ -1,5 +1,5 @@
 {
-   "id": 469,
+   "id": 470,
    "name": "\"command/command.manager.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.manager.d.ts",
    "children": [
       {
-         "id": 470,
+         "id": 471,
          "name": "CommandManager",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "Command resolution manager that controls what commands and in which order columns should be executed.\nUsually other q-grid internal services use this class after some keyboard events.",
-            "text": "## Suggested Links\n\n* [Command](/doc/api/command.html)\n* [Shortcut](/doc/api/shortcut.html)\n"
+            "text": "### Suggested Links\n\n* [Command](/doc/api/command.html)\n* [Shortcut](/doc/api/shortcut.html)\n"
          },
          "children": [
             {
-               "id": 471,
+               "id": 472,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 472,
+                     "id": 473,
                      "name": "new CommandManager",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "CommandManager",
-                        "id": 470
+                        "id": 471
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 477,
+               "id": 478,
                "name": "filter",
                "kind": 2048,
                "kindString": "Method",
@@ -61,7 +61,7 @@
                },
                "signatures": [
                   {
-                     "id": 478,
+                     "id": 479,
                      "name": "filter",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -71,7 +71,7 @@
                      },
                      "parameters": [
                         {
-                           "id": 479,
+                           "id": 480,
                            "name": "commands",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -89,7 +89,7 @@
                            }
                         },
                         {
-                           "id": 480,
+                           "id": 481,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -124,7 +124,7 @@
                ]
             },
             {
-               "id": 473,
+               "id": 474,
                "name": "invoke",
                "kind": 2048,
                "kindString": "Method",
@@ -133,7 +133,7 @@
                },
                "signatures": [
                   {
-                     "id": 474,
+                     "id": 475,
                      "name": "invoke",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -143,7 +143,7 @@
                      },
                      "parameters": [
                         {
-                           "id": 475,
+                           "id": 476,
                            "name": "commands",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -161,7 +161,7 @@
                            }
                         },
                         {
-                           "id": 476,
+                           "id": 477,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -197,15 +197,15 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  471
+                  472
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  477,
-                  473
+                  478,
+                  474
                ]
             }
          ],
@@ -220,7 +220,7 @@
             {
                "type": "reference",
                "name": "TableCommandManager",
-               "id": 3422
+               "id": 1651
             }
          ]
       }
@@ -230,7 +230,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            470
+            471
          ]
       }
    ],

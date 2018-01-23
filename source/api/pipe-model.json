@@ -1,5 +1,5 @@
 {
-   "id": 904,
+   "id": 905,
    "name": "\"pipe/pipe.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.model.d.ts",
    "children": [
       {
-         "id": 905,
+         "id": 906,
          "name": "PipeModel",
          "kind": 128,
          "kindString": "Class",
@@ -18,11 +18,11 @@
          },
          "comment": {
             "shortText": "A class that contains setting to control when and how q-grid should be updated.",
-            "text": "## Default Triggers\n```javascript\n {\n\t   'data': {\n\t      'rows': PU.default,\n\t\t  'columns': PU.column\n\t   'pagination': {\n\t\t  'current': PU.default,\n\t\t  'size': PU.default\n\t\t},\n\t\t'fetch': {\n\t\t   'skip': PU.default,\n\t\t   'round': PU.default\n\t\t},\n\t\t'sort': {\n\t\t   'by': PU.default\n\t\t},\n\t\t'filter': {\n\t\t   'by': PU.default,\n\t\t   'unit': PU.column\n\t\t},\n\t\t'group': {\n\t\t   'by': PU.default\n\t\t},\n\t\t'pivot': {\n\t\t   'by': PU.default\n\t\t},\n\t\t'columnList': {\n\t\t   'index': PU.column\n\t\t},\n\t\t'row': {\n\t\t   'status': PU.rowDetails,\n        'canDrag': PU.column,\n        'canResize': PU.column\n\t\t},\n\t\t'selection': {\n\t\t   'mode': PU.column,\n\t\t   'unit': PU.column\n\t\t}\n };\n```\n"
+            "text": "### Default Triggers\n```javascript\n {\n\t   'data': {\n\t      'rows': PU.default,\n\t\t  'columns': PU.column\n\t   'pagination': {\n\t\t  'current': PU.default,\n\t\t  'size': PU.default\n\t\t},\n\t\t'fetch': {\n\t\t   'skip': PU.default,\n\t\t   'round': PU.default\n\t\t},\n\t\t'sort': {\n\t\t   'by': PU.default\n\t\t},\n\t\t'filter': {\n\t\t   'by': PU.default,\n\t\t   'unit': PU.column\n\t\t},\n\t\t'group': {\n\t\t   'by': PU.default\n\t\t},\n\t\t'pivot': {\n\t\t   'by': PU.default\n\t\t},\n\t\t'columnList': {\n\t\t   'index': PU.column\n\t\t},\n\t\t'row': {\n\t\t   'status': PU.rowDetails,\n        'canDrag': PU.column,\n        'canResize': PU.column\n\t\t},\n\t\t'selection': {\n\t\t   'mode': PU.column,\n\t\t   'unit': PU.column\n\t\t}\n };\n```\n"
          },
          "children": [
             {
-               "id": 906,
+               "id": 907,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 907,
+                     "id": 908,
                      "name": "new PipeModel",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,7 +39,7 @@
                      "type": {
                         "type": "reference",
                         "name": "PipeModel",
-                        "id": 905
+                        "id": 906
                      }
                   }
                ],
@@ -52,7 +52,7 @@
                ]
             },
             {
-               "id": 908,
+               "id": 909,
                "name": "reduce",
                "kind": 1024,
                "kindString": "Property",
@@ -72,21 +72,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 909,
+                     "id": 910,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 910,
+                           "id": 911,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 911,
+                                 "id": 912,
                                  "name": "xs",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -96,12 +96,12 @@
                                     "elementType": {
                                        "type": "reference",
                                        "name": "PipeUnit",
-                                       "id": 897
+                                       "id": 898
                                     }
                                  }
                               },
                               {
-                                 "id": 912,
+                                 "id": 913,
                                  "name": "Model",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -117,7 +117,7 @@
                               "elementType": {
                                  "type": "reference",
                                  "name": "PipeUnit",
-                                 "id": 897
+                                 "id": 898
                               }
                            }
                         }
@@ -133,7 +133,7 @@
                }
             },
             {
-               "id": 913,
+               "id": 914,
                "name": "triggers",
                "kind": 1024,
                "kindString": "Property",
@@ -162,15 +162,15 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  906
+                  907
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  908,
-                  913
+                  909,
+                  914
                ]
             }
          ],
@@ -188,7 +188,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            905
+            906
          ]
       }
    ],

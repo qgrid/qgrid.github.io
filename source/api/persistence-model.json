@@ -1,5 +1,5 @@
 {
-   "id": 889,
+   "id": 890,
    "name": "\"persistence/persistence.model.d\"",
    "kind": 1,
    "kindString": "External module",
@@ -9,7 +9,7 @@
    "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
    "children": [
       {
-         "id": 890,
+         "id": 891,
          "name": "PersistenceModel",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 891,
+               "id": 892,
                "name": "id",
                "kind": 1024,
                "kindString": "Property",
@@ -41,7 +41,7 @@
                }
             },
             {
-               "id": 893,
+               "id": 894,
                "name": "load",
                "kind": 1024,
                "kindString": "Property",
@@ -62,7 +62,7 @@
                }
             },
             {
-               "id": 894,
+               "id": 895,
                "name": "remove",
                "kind": 1024,
                "kindString": "Property",
@@ -83,7 +83,7 @@
                }
             },
             {
-               "id": 895,
+               "id": 896,
                "name": "settings",
                "kind": 1024,
                "kindString": "Property",
@@ -103,7 +103,7 @@
                }
             },
             {
-               "id": 892,
+               "id": 893,
                "name": "storage",
                "kind": 1024,
                "kindString": "Property",
@@ -120,7 +120,7 @@
                "type": {
                   "type": "reference",
                   "name": "PersistenceStorage",
-                  "id": 877
+                  "id": 878
                }
             }
          ],
@@ -129,11 +129,11 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  891,
-                  893,
+                  892,
                   894,
                   895,
-                  892
+                  896,
+                  893
                ]
             }
          ],
@@ -151,7 +151,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            890
+            891
          ]
       }
    ],
