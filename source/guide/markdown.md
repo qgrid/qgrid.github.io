@@ -26,6 +26,9 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 JSFiddle embed example
 
 {% docEditor "qgrid-ng-5-01-02-simple" %}
+{% docEditor "qgrid-ng-5-01-02-simple" %}
+{% docEditor "qgrid-ng-5-01-02-simple" %}
+{% docEditor "qgrid-ng-5-01-02-simple" %}
 
 ### Third Header
 
