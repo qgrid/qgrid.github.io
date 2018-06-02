@@ -2,7 +2,8 @@ const helper = args => {
   const name = args[0];
   const file = "app/app.component.html";
   return `
-    <span class="editor" data-src="//stackblitz.com/edit/${name}?embed=1&file=${file}&hideNavigation=1&view=preview">
+    <span class="editor">
+      <iframe data-src="//stackblitz.com/edit/${name}?embed=1&file=${file}&hideNavigation=1&view=preview"></iframe>
     </span>
 `;
 };
