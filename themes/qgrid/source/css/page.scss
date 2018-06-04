@@ -82,6 +82,41 @@ header {
 	margin: 0 30px 40px 30px;
 	max-width: 1000px;
 	overflow: hidden;
+
+	.features {
+		display: flex;
+		flex-flow: column wrap;
+		margin-bottom: 45px;
+		padding: 0;
+		list-style: none;
+		li {
+			flex: 1 100%;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-items: stretch;
+			margin-bottom: 55px;
+			.description {
+				display: flex;
+				flex: 1 50%;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				text-align: left;
+				padding-left: 0;
+				font-size: 1.5em;
+				line-height: 1.5em;
+				position: relative;
+				p {
+					max-width: 400px;
+					position: absolute;
+					margin-bottom: 0;
+				}
+			}
+			div[class^="image-"] {
+				background-position: calc(100% - 70px) 0;
+			}
+		}
+	}
 }
 
 .github-link {
@@ -109,7 +144,7 @@ header {
 	span {
 		vertical-align: top;
 		display: inline-block;
-		margin: 0px 5px;
+		margin: 0 5px;
 	}
 }
 
