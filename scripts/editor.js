@@ -3,7 +3,7 @@ const helper = args => {
   const file = "app/app.component.html";
   return `
     <span class="editor">
-      <iframe src="//stackblitz.com/edit/${name}?embed=1&file=${file}&hideNavigation=1&view=preview"></iframe>
+      <iframe data-src="//stackblitz.com/edit/${name}?embed=1&file=${file}&hideNavigation=1&view=preview"></iframe>
     </span>
 `;
 };
