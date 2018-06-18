@@ -2,7 +2,7 @@
 title: VisibilityModel
 type: api
 group: API
-order: 233
+order: 254
 ---
 A class to control visibility of the q-grid areas.
 

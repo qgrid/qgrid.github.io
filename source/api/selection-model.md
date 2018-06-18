@@ -2,7 +2,7 @@
 title: SelectionModel
 type: api
 group: API
-order: 187
+order: 204
 ---
 A class that allows to control selection function of the q-grid.
 

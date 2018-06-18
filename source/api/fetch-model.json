@@ -1,18 +1,18 @@
 {
-   "id": 536,
+   "id": 642,
    "name": "\"fetch/fetch.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/fetch/fetch.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/fetch/fetch.model.d.ts",
    "children": [
       {
-         "id": 537,
+         "id": 643,
          "name": "FetchModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,12 +22,13 @@
          },
          "children": [
             {
-               "id": 538,
+               "id": 644,
                "name": "skip",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Number of rows that should be skipped to get new portion of data,\nthis property is filled by internal virtual scroll service."
@@ -50,7 +51,7 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  538
+                  644
                ]
             }
          ],
@@ -58,17 +59,17 @@
             {
                "fileName": "fetch/fetch.model.d.ts",
                "line": 9,
-               "character": 31
+               "character": 35
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            537
+            643
          ]
       }
    ],
@@ -79,5 +80,5 @@
          "character": 0
       }
    ],
-   "order": 93
+   "order": 104
 }

@@ -1,15 +1,15 @@
 {
-   "id": 18,
+   "id": 87,
    "name": "\"column-type/column.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/column.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/column-type/column.model.d.ts",
    "children": [
       {
-         "id": 19,
+         "id": 88,
          "name": "ColumnModel",
          "kind": 128,
          "kindString": "Class",
@@ -22,83 +22,39 @@
          },
          "children": [
             {
-               "id": 20,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 21,
-                     "name": "new ColumnModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 22,
-                           "name": "type",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {
-                              "isOptional": true
-                           },
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "string"
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "reference",
-                        "name": "ColumnModel",
-                        "id": 19
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 147,
-                     "character": 34
-                  }
-               ]
-            },
-            {
-               "id": 66,
+               "id": 135,
                "name": "$label",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 327,
-                     "character": 10
+                     "line": 338,
+                     "character": 7
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 67,
+                     "id": 136,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 68,
+                           "id": 137,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 69,
+                                 "id": 138,
                                  "name": "row",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -109,7 +65,7 @@
                                  }
                               },
                               {
-                                 "id": 70,
+                                 "id": 139,
                                  "name": "value",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -123,54 +79,64 @@
                               }
                            ],
                            "type": {
-                              "type": "intrinsic",
-                              "name": "any"
+                              "type": "union",
+                              "types": [
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 },
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              ]
                            }
                         }
                      ],
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 327,
-                           "character": 11
+                           "line": 338,
+                           "character": 9
                         }
                      ]
                   }
                }
             },
             {
-               "id": 31,
+               "id": 97,
                "name": "$value",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 195,
-                     "character": 10
+                     "line": 194,
+                     "character": 7
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 32,
+                     "id": 98,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 33,
+                           "id": 99,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 34,
+                                 "id": 100,
                                  "name": "row",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -181,7 +147,7 @@
                                  }
                               },
                               {
-                                 "id": 35,
+                                 "id": 101,
                                  "name": "value",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -203,20 +169,21 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 195,
-                           "character": 11
+                           "line": 194,
+                           "character": 9
                         }
                      ]
                   }
                }
             },
             {
-               "id": 46,
+               "id": 114,
                "name": "canEdit",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if cells in the column are editable."
@@ -224,8 +191,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 266,
-                     "character": 11
+                     "line": 272,
+                     "character": 8
                   }
                ],
                "type": {
@@ -234,12 +201,13 @@
                }
             },
             {
-               "id": 50,
+               "id": 118,
                "name": "canFilter",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if data in the column can be filtered.\n`Column filter` plugin is used this property to enable/disable filter icon."
@@ -247,8 +215,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 288,
-                     "character": 13
+                     "line": 294,
+                     "character": 10
                   }
                ],
                "type": {
@@ -257,12 +225,13 @@
                }
             },
             {
-               "id": 52,
+               "id": 120,
                "name": "canFocus",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if column cells can take focus."
@@ -270,8 +239,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 298,
-                     "character": 12
+                     "line": 304,
+                     "character": 9
                   }
                ],
                "type": {
@@ -280,12 +249,13 @@
                }
             },
             {
-               "id": 51,
+               "id": 119,
                "name": "canHighlight",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if underneath column cells should be highlighted when mouse is over column header."
@@ -293,53 +263,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 293,
-                     "character": 16
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "boolean"
-               }
-            },
-            {
-               "id": 49,
-               "name": "canMove",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Indicates if drang and drop is allowed for the column."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 282,
-                     "character": 11
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "boolean"
-               }
-            },
-            {
-               "id": 47,
-               "name": "canResize",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Indicates if column is resizable."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 271,
+                     "line": 299,
                      "character": 13
                   }
                ],
@@ -349,21 +273,22 @@
                }
             },
             {
-               "id": 48,
-               "name": "canSort",
+               "id": 117,
+               "name": "canMove",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "Indicates if sorting can be applied to the column.\n`Column sort` plugin is used this property to enable/disable sort arrow icons."
+                  "shortText": "Indicates if drang and drop is allowed for the column."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 277,
-                     "character": 11
+                     "line": 288,
+                     "character": 8
                   }
                ],
                "type": {
@@ -372,12 +297,89 @@
                }
             },
             {
-               "id": 40,
+               "id": 115,
+               "name": "canResize",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Indicates if column is resizable."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 277,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 116,
+               "name": "canSort",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Indicates if sorting can be applied to the column.\n`Column sort` plugin is used this property to enable/disable sort arrow icons."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 283,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 134,
+               "name": "children",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "If children property is setup the column automatically becomes a group container."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 336,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "ColumnModel",
+                     "id": 88
+                  }
+               }
+            },
+            {
+               "id": 106,
                "name": "class",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "A functional type of a the column.",
@@ -386,8 +388,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 230,
-                     "character": 9
+                     "line": 229,
+                     "character": 6
                   }
                ],
                "type": {
@@ -413,12 +415,13 @@
                }
             },
             {
-               "id": 61,
+               "id": 129,
                "name": "compare",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "This function is used by `column sort` pipe to order row values."
@@ -426,28 +429,28 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 325,
-                     "character": 11
+                     "line": 331,
+                     "character": 8
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 62,
+                     "id": 130,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 63,
+                           "id": 131,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 64,
+                                 "id": 132,
                                  "name": "x",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -458,7 +461,7 @@
                                  }
                               },
                               {
-                                 "id": 65,
+                                 "id": 133,
                                  "name": "y",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -471,27 +474,28 @@
                            ],
                            "type": {
                               "type": "intrinsic",
-                              "name": "boolean"
+                              "name": "number"
                            }
                         }
                      ],
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 325,
-                           "character": 12
+                           "line": 331,
+                           "character": 10
                         }
                      ]
                   }
                }
             },
             {
-               "id": 41,
+               "id": 107,
                "name": "editor",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Editor type, will be shown in cell edit mode instead of default column type editor.\nFor instance, it can be used for id type column `<q-grid-column type=\"id\" editor=\"number\">`"
@@ -499,100 +503,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 236,
-                     "character": 10
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "string"
-               }
-            },
-            {
-               "id": 42,
-               "name": "editorOptions",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Options for cell edit mode."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 241,
-                     "character": 17
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "EditorOptions",
-                  "id": 7
-               }
-            },
-            {
-               "id": 54,
-               "name": "index",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Indicates the order of the column."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 308,
-                     "character": 9
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "number"
-               }
-            },
-            {
-               "id": 53,
-               "name": "isVisible",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Indicates if column is visible or not."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 303,
-                     "character": 13
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "boolean"
-               }
-            },
-            {
-               "id": 24,
-               "name": "key",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Column identifier, should be unique across all columns. If path is not setup, key property is used\nto retrieve a cell value."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 183,
+                     "line": 235,
                      "character": 7
                   }
                ],
@@ -602,12 +513,110 @@
                }
             },
             {
-               "id": 55,
+               "id": 108,
+               "name": "editorOptions",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Options for cell edit mode."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 240,
+                     "character": 14
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "EditorOptions",
+                  "id": 57
+               }
+            },
+            {
+               "id": 122,
+               "name": "index",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Indicates the order of the column."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 314,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 121,
+               "name": "isVisible",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Indicates if column is visible or not."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 309,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 90,
+               "name": "key",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Column identifier, should be unique across all columns. If path is not setup, key property is used\nto retrieve a cell value."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 182,
+                     "character": 4
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 123,
                "name": "label",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates what text should be shown in the cell. If property is not set column value is used.\nAlso `filter plugin` uses this property to show list of items and for filter application."
@@ -615,28 +624,28 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 314,
-                     "character": 9
+                     "line": 320,
+                     "character": 6
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 56,
+                     "id": 124,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 57,
+                           "id": 125,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 58,
+                                 "id": 126,
                                  "name": "row",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -647,7 +656,7 @@
                                  }
                               },
                               {
-                                 "id": 59,
+                                 "id": 127,
                                  "name": "value",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -661,28 +670,38 @@
                               }
                            ],
                            "type": {
-                              "type": "intrinsic",
-                              "name": "string"
+                              "type": "union",
+                              "types": [
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "string"
+                                 },
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              ]
                            }
                         }
                      ],
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 314,
-                           "character": 10
+                           "line": 320,
+                           "character": 8
                         }
                      ]
                   }
                }
             },
             {
-               "id": 60,
+               "id": 128,
                "name": "labelPath",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Path to the label. Example is `address.phones.0.num`, if `labelPath` property is setup, it is used\nto get/set cell label, but it has a lower priority than column `label property."
@@ -690,73 +709,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 320,
-                     "character": 13
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "string"
-               }
-            },
-            {
-               "id": 45,
-               "name": "maxWidth",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Maximum width of the column."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 261,
-                     "character": 12
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "number"
-               }
-            },
-            {
-               "id": 44,
-               "name": "minWidth",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Minimal width of the column."
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 256,
-                     "character": 12
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "number"
-               }
-            },
-            {
-               "id": 38,
-               "name": "origin",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "column-type/column.model.d.ts",
-                     "line": 211,
+                     "line": 326,
                      "character": 10
                   }
                ],
@@ -766,21 +719,67 @@
                }
             },
             {
-               "id": 36,
-               "name": "path",
+               "id": 111,
+               "name": "maxWidth",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "Path to the value. Example is `address.phones.0.num`, if `path` property is setup, it is used\nto get/set cell value, but it has a lower priority than column `value` property."
+                  "shortText": "Maximum width of the column."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 201,
-                     "character": 8
+                     "line": 260,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 110,
+               "name": "minWidth",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Minimal width of the column."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 255,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 104,
+               "name": "origin",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 210,
+                     "character": 7
                   }
                ],
                "type": {
@@ -789,12 +788,37 @@
                }
             },
             {
-               "id": 37,
+               "id": 102,
+               "name": "path",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Path to the value. Example is `address.phones.0.num`, if `path` property is setup, it is used\nto get/set cell value, but it has a lower priority than column `value` property."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 200,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 103,
                "name": "pin",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if column should be frozen.\n- `'left'` - freeze a column to the grid's left.\n- `'right'` - freeze a column to the grids'right.\n- `null` - do not freeze  a column."
@@ -802,8 +826,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 209,
-                     "character": 7
+                     "line": 208,
+                     "character": 4
                   }
                ],
                "type": {
@@ -825,12 +849,13 @@
                }
             },
             {
-               "id": 39,
+               "id": 105,
                "name": "source",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Place where a column was created.",
@@ -839,8 +864,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 220,
-                     "character": 10
+                     "line": 219,
+                     "character": 7
                   }
                ],
                "type": {
@@ -849,12 +874,13 @@
                }
             },
             {
-               "id": 25,
+               "id": 91,
                "name": "title",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Column header text, also can be shown as column tooltip, or used in plugins like column filter plugin."
@@ -862,8 +888,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 188,
-                     "character": 9
+                     "line": 187,
+                     "character": 6
                   }
                ],
                "type": {
@@ -872,21 +898,22 @@
                }
             },
             {
-               "id": 23,
+               "id": 89,
                "name": "type",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "Type of column. Beside below list user is free to define own column type.\nBe aware that some column types are used for internal purposes.\n- `array`\n- `bool`\n- `currency`\n- `date`\n- `email`\n- `file`\n- `filter-row`\n- `group`\n- `id`\n- `image`\n- `number`\n- `pad`\n- `pivot`\n- `reference`\n- `row-details`\n- `row-expand`\n- `row-indicator`\n- `row-number`\n- `row-options`\n- `select`\n- `text`\n- `time`\n- `url`"
+                  "shortText": "Type of column. Beside below list user is free to define own column type.\nBe aware that some column types are used for internal purposes.\n- `array`\n- `bool`\n- `currency`\n- `date`\n- `email`\n- `file`\n- `filter-row`\n- `group`\n- `id`\n- `image`\n- `number`\n- `pad`\n- `pivot`\n- `reference`\n- `row-details`\n- `row-expand`\n- `row-indicator`\n- `row-number`\n- `row-options`\n- `select`\n- `summary`\n- `text`\n- `time`\n- `url`"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 177,
-                     "character": 8
+                     "line": 176,
+                     "character": 5
                   }
                ],
                "type": {
@@ -895,12 +922,13 @@
                }
             },
             {
-               "id": 26,
+               "id": 92,
                "name": "value",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Getter, setter for a cell value. If the value property is setup, it is used to get/set cell value."
@@ -908,28 +936,28 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 193,
-                     "character": 9
+                     "line": 192,
+                     "character": 6
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 27,
+                     "id": 93,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 28,
+                           "id": 94,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 29,
+                                 "id": 95,
                                  "name": "row",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -940,7 +968,7 @@
                                  }
                               },
                               {
-                                 "id": 30,
+                                 "id": 96,
                                  "name": "value",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -962,20 +990,45 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 193,
-                           "character": 10
+                           "line": 192,
+                           "character": 8
                         }
                      ]
                   }
                }
             },
             {
-               "id": 43,
+               "id": 112,
+               "name": "viewWidth",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "If set, column width will be expanded to this value on focus."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 265,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 109,
                "name": "width",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Width of the q-grid column.",
@@ -984,8 +1037,8 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 251,
-                     "character": 9
+                     "line": 250,
+                     "character": 6
                   }
                ],
                "type": {
@@ -1001,48 +1054,65 @@
                      }
                   ]
                }
+            },
+            {
+               "id": 113,
+               "name": "widthMode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/column.model.d.ts",
+                     "line": 267,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
             }
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  20
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  66,
-                  31,
-                  46,
-                  50,
-                  52,
-                  51,
-                  49,
-                  47,
-                  48,
-                  40,
-                  61,
-                  41,
-                  42,
-                  54,
-                  53,
-                  24,
-                  55,
-                  60,
-                  45,
-                  44,
-                  38,
-                  36,
-                  37,
-                  39,
-                  25,
-                  23,
-                  26,
-                  43
+                  135,
+                  97,
+                  114,
+                  118,
+                  120,
+                  119,
+                  117,
+                  115,
+                  116,
+                  134,
+                  106,
+                  129,
+                  107,
+                  108,
+                  122,
+                  121,
+                  90,
+                  123,
+                  128,
+                  111,
+                  110,
+                  104,
+                  102,
+                  103,
+                  105,
+                  91,
+                  89,
+                  92,
+                  112,
+                  109,
+                  113
                ]
             }
          ],
@@ -1057,52 +1127,57 @@
             {
                "type": "reference",
                "name": "DataColumnModel",
-               "id": 1717
+               "id": 1932
+            },
+            {
+               "type": "reference",
+               "name": "CohortColumnModel",
+               "id": 2133
             },
             {
                "type": "reference",
                "name": "FilterRowColumnModel",
-               "id": 2203
+               "id": 2456
             },
             {
                "type": "reference",
                "name": "GroupColumnModel",
-               "id": 2270
+               "id": 2518
             },
             {
                "type": "reference",
                "name": "PadColumnModel",
-               "id": 2546
+               "id": 2839
             },
             {
                "type": "reference",
                "name": "PivotColumnModel",
-               "id": 2681
+               "id": 2964
             },
             {
                "type": "reference",
                "name": "RowDetailsColumnModel",
-               "id": 2817
+               "id": 3090
             },
             {
                "type": "reference",
                "name": "RowExpandColumnModel",
-               "id": 2883
+               "id": 3151
             },
             {
                "type": "reference",
                "name": "RowIndicatorColumnModel",
-               "id": 2949
+               "id": 3212
             },
             {
                "type": "reference",
                "name": "RowNumberColumnModel",
-               "id": 3015
+               "id": 3273
             },
             {
                "type": "reference",
                "name": "SelectColumnModel",
-               "id": 3150
+               "id": 3398
             }
          ]
       }
@@ -1112,7 +1187,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            19
+            88
          ]
       }
    ],
@@ -1123,5 +1198,5 @@
          "character": 0
       }
    ],
-   "order": 13
+   "order": 14
 }

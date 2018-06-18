@@ -1,15 +1,15 @@
 {
-   "id": 4430,
+   "id": 4969,
    "name": "\"scroll/scroll.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scroll/scroll.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/scroll/scroll.view.d.ts",
    "children": [
       {
-         "id": 4431,
+         "id": 4970,
          "name": "ScrollView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4432,
+               "id": 4971,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4433,
+                     "id": 4972,
                      "name": "new ScrollView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4434,
+                           "id": 4973,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         },
                         {
-                           "id": 4435,
+                           "id": 4974,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1473
+                              "id": 1578
                            }
                         },
                         {
-                           "id": 4436,
+                           "id": 4975,
                            "name": "vscroll",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -75,30 +75,20 @@
                      "type": {
                         "type": "reference",
                         "name": "ScrollView",
-                        "id": 4431
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 4970
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "scroll/scroll.view.d.ts",
-                     "line": 10,
-                     "character": 46
+                     "line": 8,
+                     "character": 33
                   }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
+               ]
             },
             {
-               "id": 4439,
+               "id": 4976,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
@@ -108,81 +98,26 @@
                "sources": [
                   {
                      "fileName": "scroll/scroll.view.d.ts",
-                     "line": 15,
-                     "character": 17
+                     "line": 11,
+                     "character": 14
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "SingleOrMultipleMode"
-               }
-            },
-            {
-               "id": 4440,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
-               }
-            },
-            {
-               "id": 4448,
-               "name": "dispose",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4449,
-                     "name": "dispose",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "virtual"
                      },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
+                     {
+                        "type": "stringLiteral",
+                        "value": "default"
                      }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
+                  ]
                }
             },
             {
-               "id": 4437,
+               "id": 4977,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -191,7 +126,7 @@
                },
                "signatures": [
                   {
-                     "id": 4438,
+                     "id": 4978,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -206,113 +141,9 @@
                   {
                      "fileName": "scroll/scroll.view.d.ts",
                      "line": 13,
-                     "character": 14
+                     "character": 11
                   }
                ]
-            },
-            {
-               "id": 4441,
-               "name": "using",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4442,
-                     "name": "using",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 4443,
-                           "name": "dispose",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                 "id": 4444,
-                                 "name": "__type",
-                                 "kind": 65536,
-                                 "kindString": "Type literal",
-                                 "flags": {},
-                                 "signatures": [
-                                    {
-                                       "id": 4445,
-                                       "name": "__call",
-                                       "kind": 4096,
-                                       "kindString": "Call signature",
-                                       "flags": {},
-                                       "type": {
-                                          "type": "intrinsic",
-                                          "name": "void"
-                                       }
-                                    }
-                                 ],
-                                 "sources": [
-                                    {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
-                                    }
-                                 ]
-                              }
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 4446,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 4447,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
-               }
             }
          ],
          "groups": [
@@ -320,39 +151,29 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4432
+                  4971
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4439,
-                  4440
+                  4976
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4448,
-                  4437,
-                  4441
+                  4977
                ]
             }
          ],
          "sources": [
             {
                "fileName": "scroll/scroll.view.d.ts",
-               "line": 10,
+               "line": 8,
                "character": 31
-            }
-         ],
-         "extendedTypes": [
-            {
-               "type": "reference",
-               "name": "View",
-               "id": 1150
             }
          ]
       }
@@ -362,7 +183,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4431
+            4970
          ]
       }
    ],
@@ -373,5 +194,5 @@
          "character": 0
       }
    ],
-   "order": 184
+   "order": 202
 }

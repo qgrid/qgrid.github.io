@@ -1,18 +1,18 @@
 {
-   "id": 376,
+   "id": 417,
    "name": "\"highlight/highlight.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/highlight/highlight.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/highlight/highlight.model.d.ts",
    "children": [
       {
-         "id": 377,
+         "id": 418,
          "name": "HighlightModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -21,12 +21,35 @@
          },
          "children": [
             {
-               "id": 378,
+               "id": 421,
+               "name": "cell",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "highlight/highlight.model.d.ts",
+                     "line": 17,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "CellViewPosition",
+                  "id": 409
+               }
+            },
+            {
+               "id": 419,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Set of columns that should be highlighted."
@@ -41,19 +64,19 @@
                "type": {
                   "type": "array",
                   "elementType": {
-                     "type": "reference",
-                     "name": "ColumnModel",
-                     "id": 19
+                     "type": "intrinsic",
+                     "name": "string"
                   }
                }
             },
             {
-               "id": 379,
+               "id": 420,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Set of rows that should be highlighted."
@@ -69,7 +92,7 @@
                   "type": "array",
                   "elementType": {
                      "type": "intrinsic",
-                     "name": "any"
+                     "name": "number"
                   }
                }
             }
@@ -79,8 +102,9 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  378,
-                  379
+                  421,
+                  419,
+                  420
                ]
             }
          ],
@@ -88,17 +112,17 @@
             {
                "fileName": "highlight/highlight.model.d.ts",
                "line": 6,
-               "character": 35
+               "character": 39
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            377
+            418
          ]
       }
    ],
@@ -109,5 +133,5 @@
          "character": 0
       }
    ],
-   "order": 109
+   "order": 121
 }

@@ -1,18 +1,18 @@
 {
-   "id": 185,
+   "id": 247,
    "name": "\"navigation/navigation.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/navigation/navigation.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/navigation/navigation.model.d.ts",
    "children": [
       {
-         "id": 186,
+         "id": 248,
          "name": "NavigationModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,42 +22,134 @@
          },
          "children": [
             {
-               "id": 187,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
+               "id": 254,
+               "name": "cell",
+               "kind": 1024,
+               "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
-               "signatures": [
-                  {
-                     "id": 188,
-                     "name": "new NavigationModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "NavigationModel",
-                        "id": 186
-                     }
-                  }
-               ],
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 11,
-                     "character": 38
+                     "line": 39,
+                     "character": 5
                   }
-               ]
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 255,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "children": [
+                        {
+                           "id": 259,
+                           "name": "column",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "navigation/navigation.model.d.ts",
+                                 "line": 43,
+                                 "character": 8
+                              }
+                           ],
+                           "type": {
+                              "type": "reference",
+                              "name": "ColumnModel",
+                              "id": 88
+                           }
+                        },
+                        {
+                           "id": 257,
+                           "name": "columnIndex",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "navigation/navigation.model.d.ts",
+                                 "line": 41,
+                                 "character": 13
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "number"
+                           }
+                        },
+                        {
+                           "id": 258,
+                           "name": "row",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "navigation/navigation.model.d.ts",
+                                 "line": 42,
+                                 "character": 5
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        },
+                        {
+                           "id": 256,
+                           "name": "rowIndex",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "navigation/navigation.model.d.ts",
+                                 "line": 40,
+                                 "character": 10
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "number"
+                           }
+                        }
+                     ],
+                     "groups": [
+                        {
+                           "title": "Variables",
+                           "kind": 32,
+                           "children": [
+                              259,
+                              257,
+                              258,
+                              256
+                           ]
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "navigation/navigation.model.d.ts",
+                           "line": 39,
+                           "character": 7
+                        }
+                     ]
+                  }
+               }
             },
             {
-               "id": 192,
+               "id": 252,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Focused cell column."
@@ -65,23 +157,24 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 32,
+                     "line": 30,
                      "character": 16
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "ColumnModel",
-                  "id": 19
+                  "id": 88
                }
             },
             {
-               "id": 190,
+               "id": 250,
                "name": "columnIndex",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Index of the focused cell column."
@@ -89,7 +182,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 22,
+                     "line": 20,
                      "character": 21
                   }
                ],
@@ -99,12 +192,37 @@
                }
             },
             {
-               "id": 191,
+               "id": 253,
+               "name": "debounce",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Appropriate framework tick timeout while navigation by keyboard is occured.\n* For angularjs - digest is called.\n* For angular - ApplicationRef.tick is called."
+               },
+               "sources": [
+                  {
+                     "fileName": "navigation/navigation.model.d.ts",
+                     "line": 37,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "number"
+               }
+            },
+            {
+               "id": 251,
                "name": "row",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Focused cell row."
@@ -112,7 +230,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 27,
+                     "line": 25,
                      "character": 13
                   }
                ],
@@ -122,12 +240,13 @@
                }
             },
             {
-               "id": 189,
+               "id": 249,
                "name": "rowIndex",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Index of the focused cell row."
@@ -135,7 +254,7 @@
                "sources": [
                   {
                      "fileName": "navigation/navigation.model.d.ts",
-                     "line": 17,
+                     "line": 15,
                      "character": 18
                   }
                ],
@@ -147,20 +266,15 @@
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  187
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  192,
-                  190,
-                  191,
-                  189
+                  254,
+                  252,
+                  250,
+                  253,
+                  251,
+                  249
                ]
             }
          ],
@@ -168,17 +282,17 @@
             {
                "fileName": "navigation/navigation.model.d.ts",
                "line": 11,
-               "character": 36
+               "character": 40
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            186
+            248
          ]
       }
    ],
@@ -189,5 +303,5 @@
          "character": 0
       }
    ],
-   "order": 131
+   "order": 144
 }

@@ -1,18 +1,18 @@
 {
-   "id": 314,
+   "id": 343,
    "name": "\"group/group.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/group/group.model.d.ts",
    "children": [
       {
-         "id": 315,
+         "id": 344,
          "name": "GroupModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,12 +22,13 @@
          },
          "children": [
             {
-               "id": 318,
+               "id": 347,
                "name": "by",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "List of column keys to build appropriate hierarchy.\nEach item represents next level."
@@ -35,7 +36,7 @@
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 31,
+                     "line": 33,
                      "character": 3
                   }
                ],
@@ -48,88 +49,238 @@
                }
             },
             {
-               "id": 317,
+               "id": 354,
+               "name": "flatten",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 37,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 355,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 356,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 357,
+                                 "name": "nodes",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "array",
+                                    "elementType": {
+                                       "type": "reference",
+                                       "name": "Node",
+                                       "id": 330
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "reference",
+                                 "name": "Node",
+                                 "id": 330
+                              }
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "group/group.model.d.ts",
+                           "line": 37,
+                           "character": 10
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 346,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "How grid will render nodes:\n* `'column'` all hierarchy levels inside one group type column.\n* `'subhead'` group column try to use all available space to display hierarchy.\n* `'rowspan'` under construction"
+                  "shortText": "How grid will render nodes:\n* `'nest'` all hierarchy levels inside one group type column.\n* `'flat'` all hierarch levels inside own group type columns.\n* `'subhead'` group column try to use all available space to display hierarchy.\n* `'rowspan'` group column occupies all space on expand"
                },
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 26,
+                     "line": 28,
                      "character": 5
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "string"
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "nest"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "column"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "subhead"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "rowspan"
+                     }
+                  ]
                }
             },
             {
-               "id": 316,
+               "id": 345,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 18,
+                     "line": 19,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             },
             {
-               "id": 319,
+               "id": 350,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 32,
+                     "line": 36,
                      "character": 9
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "object"
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 351,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "indexSignature": [
+                        {
+                           "id": 352,
+                           "name": "__index",
+                           "kind": 8192,
+                           "kindString": "Index signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 353,
+                                 "name": "key",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "string"
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "group/group.model.d.ts",
+                           "line": 36,
+                           "character": 11
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 320,
+               "id": 348,
                "name": "toggle",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "group/group.model.d.ts",
-                     "line": 33,
+                     "line": 34,
                      "character": 7
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
+               }
+            },
+            {
+               "id": 349,
+               "name": "toggleAll",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "group/group.model.d.ts",
+                     "line": 35,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
                }
             }
          ],
@@ -138,29 +289,31 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  318,
-                  317,
-                  316,
-                  319,
-                  320
+                  347,
+                  354,
+                  346,
+                  345,
+                  350,
+                  348,
+                  349
                ]
             }
          ],
          "sources": [
             {
                "fileName": "group/group.model.d.ts",
-               "line": 17,
-               "character": 31
+               "line": 18,
+               "character": 35
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            315
+            344
          ]
       }
    ],
@@ -171,5 +324,5 @@
          "character": 0
       }
    ],
-   "order": 104
+   "order": 116
 }

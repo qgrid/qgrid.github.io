@@ -2,7 +2,7 @@
 title: EditModel
 type: api
 group: API
-order: 78
+order: 85
 ---
 A class represent options to control q-grid edit mode.
 

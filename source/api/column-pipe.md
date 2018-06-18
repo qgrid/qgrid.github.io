@@ -2,7 +2,7 @@
 title: columnPipe
 type: api
 group: API
-order: 144
+order: 156
 ---
 > Under Construction.
 

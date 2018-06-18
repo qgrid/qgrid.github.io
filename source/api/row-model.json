@@ -1,18 +1,18 @@
 {
-   "id": 208,
+   "id": 271,
    "name": "\"row/row.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/row/row.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/row/row.model.d.ts",
    "children": [
       {
-         "id": 209,
+         "id": 272,
          "name": "RowModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,131 +22,81 @@
          },
          "children": [
             {
-               "id": 210,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 211,
-                     "name": "new RowModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "RowModel",
-                        "id": 209
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "row/row.model.d.ts",
-                     "line": 10,
-                     "character": 31
-                  }
-               ]
-            },
-            {
-               "id": 221,
-               "name": "canDrag",
+               "id": 282,
+               "name": "canMove",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "row/row.model.d.ts",
-                     "line": 18,
-                     "character": 11
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "boolean"
-               }
-            },
-            {
-               "id": 222,
-               "name": "canResize",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "row/row.model.d.ts",
-                     "line": 19,
-                     "character": 13
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "boolean"
-               }
-            },
-            {
-               "id": 223,
-               "name": "frozen",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "row/row.model.d.ts",
-                     "line": 20,
-                     "character": 10
-                  }
-               ],
-               "type": {
-                  "type": "array",
-                  "elementType": {
-                     "type": "intrinsic",
-                     "name": "any"
-                  }
-               }
-            },
-            {
-               "id": 215,
-               "name": "height",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "row/row.model.d.ts",
                      "line": 16,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 283,
+               "name": "canResize",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 17,
                      "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "boolean"
+               }
+            },
+            {
+               "id": 276,
+               "name": "height",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 14,
+                     "character": 7
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 216,
+                     "id": 277,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 217,
+                           "id": 278,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 218,
+                                 "id": 279,
                                  "name": "element",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -157,7 +107,7 @@
                                  }
                               },
                               {
-                                 "id": 219,
+                                 "id": 280,
                                  "name": "index",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -186,26 +136,27 @@
                      "sources": [
                         {
                            "fileName": "row/row.model.d.ts",
-                           "line": 16,
-                           "character": 11
+                           "line": 14,
+                           "character": 9
                         }
                      ]
                   }
                }
             },
             {
-               "id": 213,
+               "id": 274,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "row/row.model.d.ts",
-                     "line": 14,
-                     "character": 8
+                     "line": 12,
+                     "character": 5
                   }
                ],
                "type": {
@@ -223,39 +174,89 @@
                }
             },
             {
-               "id": 212,
-               "name": "resource",
+               "id": 285,
+               "name": "pinBottom",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "row/row.model.d.ts",
-                     "line": 13,
-                     "character": 12
+                     "line": 19,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            },
+            {
+               "id": 284,
+               "name": "pinTop",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 18,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "intrinsic",
+                     "name": "any"
+                  }
+               }
+            },
+            {
+               "id": 273,
+               "name": "resource",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "row/row.model.d.ts",
+                     "line": 11,
+                     "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             },
             {
-               "id": 220,
+               "id": 281,
                "name": "status",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "row/row.model.d.ts",
-                     "line": 17,
-                     "character": 10
+                     "line": 15,
+                     "character": 7
                   }
                ],
                "type": {
@@ -274,18 +275,19 @@
                }
             },
             {
-               "id": 214,
+               "id": 275,
                "name": "unit",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "row/row.model.d.ts",
-                     "line": 15,
-                     "character": 8
+                     "line": 13,
+                     "character": 5
                   }
                ],
                "type": {
@@ -305,24 +307,18 @@
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  210
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  221,
-                  222,
-                  223,
-                  215,
-                  213,
-                  212,
-                  220,
-                  214
+                  282,
+                  283,
+                  276,
+                  274,
+                  285,
+                  284,
+                  273,
+                  281,
+                  275
                ]
             }
          ],
@@ -330,17 +326,17 @@
             {
                "fileName": "row/row.model.d.ts",
                "line": 10,
-               "character": 29
+               "character": 33
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            209
+            272
          ]
       }
    ],
@@ -351,5 +347,5 @@
          "character": 0
       }
    ],
-   "order": 175
+   "order": 192
 }

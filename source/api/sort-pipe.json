@@ -1,15 +1,15 @@
 {
-   "id": 4336,
+   "id": 4780,
    "name": "\"pipe/sort.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/sort.pipe.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pipe/sort.pipe.d.ts",
    "children": [
       {
-         "id": 4337,
+         "id": 4781,
          "name": "sortPipe",
          "kind": 32,
          "kindString": "Variable",
@@ -27,15 +27,113 @@
             }
          ],
          "type": {
-            "type": "reference",
-            "name": "IPipe",
-            "id": 118,
-            "typeArguments": [
-               {
-                  "type": "intrinsic",
-                  "name": "any"
-               }
-            ]
+            "type": "reflection",
+            "declaration": {
+               "id": 4782,
+               "name": "__type",
+               "kind": 65536,
+               "kindString": "Type literal",
+               "flags": {},
+               "signatures": [
+                  {
+                     "id": 4783,
+                     "name": "__call",
+                     "kind": 4096,
+                     "kindString": "Call signature",
+                     "flags": {},
+                     "parameters": [
+                        {
+                           "id": 4784,
+                           "name": "rows",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "intrinsic",
+                                 "name": "any"
+                              }
+                           }
+                        },
+                        {
+                           "id": 4785,
+                           "name": "context",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "PipeContext",
+                              "id": 170
+                           }
+                        },
+                        {
+                           "id": 4786,
+                           "name": "next",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 4787,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 4788,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "parameters": [
+                                          {
+                                             "id": 4789,
+                                             "name": "param",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "reference",
+                                                "name": "PipeMemo",
+                                                "id": 166
+                                             }
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "void"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "pipe/sort.pipe.d.ts",
+                                       "line": 6,
+                                       "character": 72
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "intrinsic",
+                        "name": "any"
+                     }
+                  }
+               ],
+               "sources": [
+                  {
+                     "fileName": "pipe/sort.pipe.d.ts",
+                     "line": 6,
+                     "character": 30
+                  }
+               ]
+            }
          }
       }
    ],
@@ -44,7 +142,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4337
+            4781
          ]
       }
    ],
@@ -55,5 +153,5 @@
          "character": 0
       }
    ],
-   "order": 156
+   "order": 168
 }

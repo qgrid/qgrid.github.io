@@ -1,18 +1,18 @@
 {
-   "id": 321,
+   "id": 358,
    "name": "\"pivot/pivot.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pivot/pivot.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pivot/pivot.model.d.ts",
    "children": [
       {
-         "id": 322,
+         "id": 359,
          "name": "PivotModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,42 +22,13 @@
          },
          "children": [
             {
-               "id": 323,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 324,
-                     "name": "new PivotModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "PivotModel",
-                        "id": 322
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "pivot/pivot.model.d.ts",
-                     "line": 13,
-                     "character": 33
-                  }
-               ]
-            },
-            {
-               "id": 326,
+               "id": 361,
                "name": "by",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "A list of column keys to pivot. Each item represents next level."
@@ -65,7 +36,7 @@
                "sources": [
                   {
                      "fileName": "pivot/pivot.model.d.ts",
-                     "line": 20,
+                     "line": 19,
                      "character": 3
                   }
                ],
@@ -78,41 +49,35 @@
                }
             },
             {
-               "id": 325,
+               "id": 360,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "pivot/pivot.model.d.ts",
-                     "line": 15,
+                     "line": 14,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             }
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  323
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  326,
-                  325
+                  361,
+                  360
                ]
             }
          ],
@@ -120,17 +85,17 @@
             {
                "fileName": "pivot/pivot.model.d.ts",
                "line": 13,
-               "character": 31
+               "character": 35
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            322
+            359
          ]
       }
    ],
@@ -141,5 +106,5 @@
          "character": 0
       }
    ],
-   "order": 164
+   "order": 179
 }

@@ -1,18 +1,18 @@
 {
-   "id": 539,
+   "id": 645,
    "name": "\"validation/validation.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/validation/validation.model.d.ts",
    "children": [
       {
-         "id": 540,
+         "id": 646,
          "name": "ValidationModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,63 +22,35 @@
          },
          "children": [
             {
-               "id": 541,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 542,
-                     "name": "new ValidationModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "ValidationModel",
-                        "id": 540
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "validation/validation.model.d.ts",
-                     "line": 10,
-                     "character": 38
-                  }
-               ]
-            },
-            {
-               "id": 543,
+               "id": 647,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "validation/validation.model.d.ts",
-                     "line": 13,
+                     "line": 11,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             },
             {
-               "id": 544,
+               "id": 648,
                "name": "rules",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "List of validation rules."
@@ -86,7 +58,7 @@
                "sources": [
                   {
                      "fileName": "validation/validation.model.d.ts",
-                     "line": 18,
+                     "line": 16,
                      "character": 6
                   }
                ],
@@ -101,18 +73,11 @@
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  541
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  543,
-                  544
+                  647,
+                  648
                ]
             }
          ],
@@ -120,17 +85,17 @@
             {
                "fileName": "validation/validation.model.d.ts",
                "line": 10,
-               "character": 36
+               "character": 40
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            540
+            646
          ]
       }
    ],
@@ -141,5 +106,5 @@
          "character": 0
       }
    ],
-   "order": 227
+   "order": 249
 }

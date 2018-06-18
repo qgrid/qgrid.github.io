@@ -1,15 +1,15 @@
 {
-   "id": 4816,
+   "id": 5350,
    "name": "\"style/style.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/style/style.view.d.ts",
    "children": [
       {
-         "id": 4817,
+         "id": 5351,
          "name": "StyleView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4818,
+               "id": 5352,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4819,
+                     "id": 5353,
                      "name": "new StyleView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4820,
+                           "id": 5354,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         },
                         {
-                           "id": 4821,
+                           "id": 5355,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,62 +57,27 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1473
+                              "id": 1578
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "StyleView",
-                        "id": 4817
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 5351
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "style/style.view.d.ts",
-                     "line": 9,
-                     "character": 45
+                     "line": 8,
+                     "character": 32
                   }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
+               ]
             },
             {
-               "id": 4832,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
-               }
-            },
-            {
-               "id": 4822,
+               "id": 5356,
                "name": "monitor",
                "kind": 1024,
                "kindString": "Property",
@@ -122,21 +87,21 @@
                "sources": [
                   {
                      "fileName": "style/style.view.d.ts",
-                     "line": 12,
-                     "character": 11
+                     "line": 11,
+                     "character": 8
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4823,
+                     "id": 5357,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "children": [
                         {
-                           "id": 4825,
+                           "id": 5359,
                            "name": "cell",
                            "kind": 32,
                            "kindString": "Variable",
@@ -144,18 +109,18 @@
                            "sources": [
                               {
                                  "fileName": "style/style.view.d.ts",
-                                 "line": 14,
-                                 "character": 12
+                                 "line": 13,
+                                 "character": 6
                               }
                            ],
                            "type": {
                               "type": "reference",
                               "name": "Monitor",
-                              "id": 4805
+                              "id": 5335
                            }
                         },
                         {
-                           "id": 4824,
+                           "id": 5358,
                            "name": "row",
                            "kind": 32,
                            "kindString": "Variable",
@@ -163,14 +128,14 @@
                            "sources": [
                               {
                                  "fileName": "style/style.view.d.ts",
-                                 "line": 13,
-                                 "character": 11
+                                 "line": 12,
+                                 "character": 5
                               }
                            ],
                            "type": {
                               "type": "reference",
                               "name": "Monitor",
-                              "id": 4805
+                              "id": 5335
                            }
                         }
                      ],
@@ -179,62 +144,23 @@
                            "title": "Variables",
                            "kind": 32,
                            "children": [
-                              4825,
-                              4824
+                              5359,
+                              5358
                            ]
                         }
                      ],
                      "sources": [
                         {
                            "fileName": "style/style.view.d.ts",
-                           "line": 12,
-                           "character": 12
+                           "line": 11,
+                           "character": 9
                         }
                      ]
                   }
                }
             },
             {
-               "id": 4840,
-               "name": "dispose",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4841,
-                     "name": "dispose",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
-               }
-            },
-            {
-               "id": 4826,
+               "id": 5360,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -243,14 +169,14 @@
                },
                "signatures": [
                   {
-                     "id": 4827,
+                     "id": 5361,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4828,
+                           "id": 5362,
                            "name": "domRow",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -261,7 +187,7 @@
                            }
                         },
                         {
-                           "id": 4829,
+                           "id": 5363,
                            "name": "domCell",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -281,13 +207,13 @@
                "sources": [
                   {
                      "fileName": "style/style.view.d.ts",
-                     "line": 17,
-                     "character": 14
+                     "line": 16,
+                     "character": 11
                   }
                ]
             },
             {
-               "id": 4830,
+               "id": 5364,
                "name": "needInvalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -296,7 +222,7 @@
                },
                "signatures": [
                   {
-                     "id": 4831,
+                     "id": 5365,
                      "name": "needInvalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -310,114 +236,10 @@
                "sources": [
                   {
                      "fileName": "style/style.view.d.ts",
-                     "line": 18,
-                     "character": 18
+                     "line": 17,
+                     "character": 15
                   }
                ]
-            },
-            {
-               "id": 4833,
-               "name": "using",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4834,
-                     "name": "using",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 4835,
-                           "name": "dispose",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                 "id": 4836,
-                                 "name": "__type",
-                                 "kind": 65536,
-                                 "kindString": "Type literal",
-                                 "flags": {},
-                                 "signatures": [
-                                    {
-                                       "id": 4837,
-                                       "name": "__call",
-                                       "kind": 4096,
-                                       "kindString": "Call signature",
-                                       "flags": {},
-                                       "type": {
-                                          "type": "intrinsic",
-                                          "name": "void"
-                                       }
-                                    }
-                                 ],
-                                 "sources": [
-                                    {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
-                                    }
-                                 ]
-                              }
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 4838,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 4839,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
-               }
             }
          ],
          "groups": [
@@ -425,40 +247,30 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4818
+                  5352
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4832,
-                  4822
+                  5356
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4840,
-                  4826,
-                  4830,
-                  4833
+                  5360,
+                  5364
                ]
             }
          ],
          "sources": [
             {
                "fileName": "style/style.view.d.ts",
-               "line": 9,
+               "line": 8,
                "character": 30
-            }
-         ],
-         "extendedTypes": [
-            {
-               "type": "reference",
-               "name": "View",
-               "id": 1150
             }
          ]
       }
@@ -468,7 +280,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4817
+            5351
          ]
       }
    ],
@@ -479,5 +291,5 @@
          "character": 0
       }
    ],
-   "order": 221
+   "order": 241
 }

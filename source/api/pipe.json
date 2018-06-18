@@ -1,15 +1,15 @@
 {
-   "id": 4323,
+   "id": 4687,
    "name": "\"pipe/pipe.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pipe/pipe.d.ts",
    "children": [
       {
-         "id": 4324,
+         "id": 4688,
          "name": "Pipe",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4332,
+               "id": 4752,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -33,23 +33,118 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 14,
-                     "character": 26
+                     "character": 23
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4753,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4754,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4755,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4756,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4757,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4758,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4759,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4760,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "reference",
+                                                      "name": "PipeMemo",
+                                                      "id": 166
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 14,
+                                             "character": 64
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 14,
+                           "character": 24
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4325,
+               "id": 4689,
                "name": "data",
                "kind": 1024,
                "kindString": "Property",
@@ -61,23 +156,120 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 7,
-                     "character": 24
+                     "character": 21
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4690,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4691,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4692,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4693,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4694,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4695,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4696,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4697,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "array",
+                                                      "elementType": {
+                                                         "type": "intrinsic",
+                                                         "name": "any"
+                                                      }
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 7,
+                                             "character": 62
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 7,
+                           "character": 22
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4326,
+               "id": 4698,
                "name": "filter",
                "kind": 1024,
                "kindString": "Property",
@@ -89,23 +281,120 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 8,
-                     "character": 26
+                     "character": 23
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4699,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4700,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4701,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4702,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4703,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4704,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4705,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4706,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "array",
+                                                      "elementType": {
+                                                         "type": "intrinsic",
+                                                         "name": "any"
+                                                      }
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 8,
+                                             "character": 64
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 8,
+                           "character": 24
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4330,
+               "id": 4734,
                "name": "group",
                "kind": 1024,
                "kindString": "Property",
@@ -117,23 +406,118 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 12,
-                     "character": 25
+                     "character": 22
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4735,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4736,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4737,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4738,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4739,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4740,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4741,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4742,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "reference",
+                                                      "name": "PipeMemo",
+                                                      "id": 166
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 12,
+                                             "character": 63
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 12,
+                           "character": 23
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4329,
+               "id": 4725,
                "name": "memo",
                "kind": 1024,
                "kindString": "Property",
@@ -145,23 +529,118 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 11,
-                     "character": 24
+                     "character": 21
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4726,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4727,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4728,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4729,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4730,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4731,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4732,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4733,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "reference",
+                                                      "name": "PipeMemo",
+                                                      "id": 166
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 11,
+                                             "character": 62
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 11,
+                           "character": 22
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4327,
+               "id": 4707,
                "name": "pagination",
                "kind": 1024,
                "kindString": "Property",
@@ -173,23 +652,120 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 9,
-                     "character": 30
+                     "character": 27
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4708,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4709,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4710,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4711,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4712,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4713,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4714,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4715,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "array",
+                                                      "elementType": {
+                                                         "type": "intrinsic",
+                                                         "name": "any"
+                                                      }
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 9,
+                                             "character": 68
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 9,
+                           "character": 28
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4331,
+               "id": 4743,
                "name": "pivot",
                "kind": 1024,
                "kindString": "Property",
@@ -201,23 +777,118 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 13,
-                     "character": 25
+                     "character": 22
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4744,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4745,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4746,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4747,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4748,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4749,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4750,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4751,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "reference",
+                                                      "name": "PipeMemo",
+                                                      "id": 166
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 13,
+                                             "character": 63
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 13,
+                           "character": 23
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4328,
+               "id": 4716,
                "name": "sort",
                "kind": 1024,
                "kindString": "Property",
@@ -229,23 +900,120 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 10,
-                     "character": 24
+                     "character": 21
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4717,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4718,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4719,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4720,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4721,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4722,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4723,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4724,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "array",
+                                                      "elementType": {
+                                                         "type": "intrinsic",
+                                                         "name": "any"
+                                                      }
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 10,
+                                             "character": 62
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 10,
+                           "character": 22
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 4333,
+               "id": 4761,
                "name": "view",
                "kind": 1024,
                "kindString": "Property",
@@ -257,19 +1025,114 @@
                   {
                      "fileName": "pipe/pipe.d.ts",
                      "line": 15,
-                     "character": 24
+                     "character": 21
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IPipe",
-                  "id": 118,
-                  "typeArguments": [
-                     {
-                        "type": "intrinsic",
-                        "name": "any"
-                     }
-                  ]
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4762,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 4763,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4764,
+                                 "name": "memo",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 4765,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "PipeContext",
+                                    "id": 170
+                                 }
+                              },
+                              {
+                                 "id": 4766,
+                                 "name": "next",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4767,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4768,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 4769,
+                                                   "name": "param",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "reference",
+                                                      "name": "PipeMemo",
+                                                      "id": 166
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "pipe/pipe.d.ts",
+                                             "line": 15,
+                                             "character": 62
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pipe/pipe.d.ts",
+                           "line": 15,
+                           "character": 22
+                        }
+                     ]
+                  }
                }
             }
          ],
@@ -278,15 +1141,15 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4332,
-                  4325,
-                  4326,
-                  4330,
-                  4329,
-                  4327,
-                  4331,
-                  4328,
-                  4333
+                  4752,
+                  4689,
+                  4698,
+                  4734,
+                  4725,
+                  4707,
+                  4743,
+                  4716,
+                  4761
                ]
             }
          ],
@@ -304,7 +1167,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4324
+            4688
          ]
       }
    ],
@@ -315,5 +1178,5 @@
          "character": 0
       }
    ],
-   "order": 151
+   "order": 163
 }

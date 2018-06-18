@@ -1,18 +1,18 @@
 {
-   "id": 438,
+   "id": 524,
    "name": "\"style/style.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/style/style.model.d.ts",
    "children": [
       {
-         "id": 439,
+         "id": 525,
          "name": "StyleModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,42 +22,13 @@
          },
          "children": [
             {
-               "id": 440,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 441,
-                     "name": "new StyleModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "StyleModel",
-                        "id": 439
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "style/style.model.d.ts",
-                     "line": 48,
-                     "character": 33
-                  }
-               ]
-            },
-            {
-               "id": 443,
+               "id": 531,
                "name": "cell",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Style cell."
@@ -66,21 +37,195 @@
                   {
                      "fileName": "style/style.model.d.ts",
                      "line": 59,
-                     "character": 8
+                     "character": 5
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "any"
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 532,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 533,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 534,
+                                 "name": "row",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 535,
+                                 "name": "column",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "ColumnModel",
+                                    "id": 88
+                                 }
+                              },
+                              {
+                                 "id": 536,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "StyleCellContext",
+                                    "id": 512
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "union",
+                              "types": [
+                                 {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 },
+                                 {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 537,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "indexSignature": [
+                                          {
+                                             "id": 538,
+                                             "name": "__index",
+                                             "kind": 8192,
+                                             "kindString": "Index signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 539,
+                                                   "name": "key",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "intrinsic",
+                                                      "name": "string"
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "reflection",
+                                                "declaration": {
+                                                   "id": 540,
+                                                   "name": "__type",
+                                                   "kind": 65536,
+                                                   "kindString": "Type literal",
+                                                   "flags": {},
+                                                   "signatures": [
+                                                      {
+                                                         "id": 541,
+                                                         "name": "__call",
+                                                         "kind": 4096,
+                                                         "kindString": "Call signature",
+                                                         "flags": {},
+                                                         "parameters": [
+                                                            {
+                                                               "id": 542,
+                                                               "name": "row",
+                                                               "kind": 32768,
+                                                               "kindString": "Parameter",
+                                                               "flags": {},
+                                                               "type": {
+                                                                  "type": "intrinsic",
+                                                                  "name": "any"
+                                                               }
+                                                            },
+                                                            {
+                                                               "id": 543,
+                                                               "name": "column",
+                                                               "kind": 32768,
+                                                               "kindString": "Parameter",
+                                                               "flags": {},
+                                                               "type": {
+                                                                  "type": "reference",
+                                                                  "name": "ColumnModel",
+                                                                  "id": 88
+                                                               }
+                                                            },
+                                                            {
+                                                               "id": 544,
+                                                               "name": "context",
+                                                               "kind": 32768,
+                                                               "kindString": "Parameter",
+                                                               "flags": {},
+                                                               "type": {
+                                                                  "type": "intrinsic",
+                                                                  "name": "any"
+                                                               }
+                                                            }
+                                                         ],
+                                                         "type": {
+                                                            "type": "intrinsic",
+                                                            "name": "void"
+                                                         }
+                                                      }
+                                                   ],
+                                                   "sources": [
+                                                      {
+                                                         "fileName": "style/style.model.d.ts",
+                                                         "line": 59,
+                                                         "character": 93
+                                                      }
+                                                   ]
+                                                }
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "style/style.model.d.ts",
+                                             "line": 59,
+                                             "character": 76
+                                          }
+                                       ]
+                                    }
+                                 }
+                              ]
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "style/style.model.d.ts",
+                           "line": 59,
+                           "character": 7
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 446,
+               "id": 551,
                "name": "cells",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Queue of cell styles that can be used internally or in plugins."
@@ -88,25 +233,121 @@
                "sources": [
                   {
                      "fileName": "style/style.model.d.ts",
-                     "line": 75,
-                     "character": 9
+                     "line": 74,
+                     "character": 6
                   }
                ],
                "type": {
-                  "type": "array",
-                  "elementType": {
-                     "type": "intrinsic",
-                     "name": "any"
-                  }
+                  "type": "reference",
+                  "name": "Array",
+                  "typeArguments": [
+                     {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 552,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 553,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "parameters": [
+                                    {
+                                       "id": 554,
+                                       "name": "row",
+                                       "kind": 32768,
+                                       "kindString": "Parameter",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    },
+                                    {
+                                       "id": 555,
+                                       "name": "column",
+                                       "kind": 32768,
+                                       "kindString": "Parameter",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "reference",
+                                          "name": "ColumnModel",
+                                          "id": 88
+                                       }
+                                    },
+                                    {
+                                       "id": 556,
+                                       "name": "context",
+                                       "kind": 32768,
+                                       "kindString": "Parameter",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    }
+                                 ],
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "style/style.model.d.ts",
+                                 "line": 74,
+                                 "character": 15
+                              }
+                           ]
+                        }
+                     }
+                  ]
                }
             },
             {
-               "id": 444,
+               "id": 557,
+               "name": "classList",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "List of CSS classes"
+               },
+               "sources": [
+                  {
+                     "fileName": "style/style.model.d.ts",
+                     "line": 79,
+                     "character": 10
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Array",
+                  "typeArguments": [
+                     {
+                        "type": "intrinsic",
+                        "name": "string"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 545,
                "name": "invalidate",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "On invalidate."
@@ -115,22 +356,23 @@
                   {
                      "fileName": "style/style.model.d.ts",
                      "line": 64,
-                     "character": 14
+                     "character": 11
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 442,
+               "id": 526,
                "name": "row",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Style row."
@@ -139,21 +381,73 @@
                   {
                      "fileName": "style/style.model.d.ts",
                      "line": 54,
-                     "character": 7
+                     "character": 4
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "any"
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 527,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 528,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 529,
+                                 "name": "row",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "any"
+                                 }
+                              },
+                              {
+                                 "id": 530,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "StyleRowContext",
+                                    "id": 501
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "void"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "style/style.model.d.ts",
+                           "line": 54,
+                           "character": 6
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 445,
+               "id": 546,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Queue of row styles that can be used internally or in plugins."
@@ -162,53 +456,100 @@
                   {
                      "fileName": "style/style.model.d.ts",
                      "line": 69,
-                     "character": 8
+                     "character": 5
                   }
                ],
                "type": {
-                  "type": "array",
-                  "elementType": {
-                     "type": "intrinsic",
-                     "name": "any"
-                  }
+                  "type": "reference",
+                  "name": "Array",
+                  "typeArguments": [
+                     {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 547,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 548,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "parameters": [
+                                    {
+                                       "id": 549,
+                                       "name": "row",
+                                       "kind": 32768,
+                                       "kindString": "Parameter",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    },
+                                    {
+                                       "id": 550,
+                                       "name": "context",
+                                       "kind": 32768,
+                                       "kindString": "Parameter",
+                                       "flags": {},
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    }
+                                 ],
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "style/style.model.d.ts",
+                                 "line": 69,
+                                 "character": 14
+                              }
+                           ]
+                        }
+                     }
+                  ]
                }
             }
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  440
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  443,
-                  446,
-                  444,
-                  442,
-                  445
+                  531,
+                  551,
+                  557,
+                  545,
+                  526,
+                  546
                ]
             }
          ],
          "sources": [
             {
                "fileName": "style/style.model.d.ts",
-               "line": 48,
-               "character": 31
+               "line": 50,
+               "character": 35
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            439
+            525
          ]
       }
    ],
@@ -219,5 +560,5 @@
          "character": 0
       }
    ],
-   "order": 219
+   "order": 239
 }

@@ -1,15 +1,15 @@
 {
-   "id": 500,
+   "id": 597,
    "name": "\"shortcut/shortcut.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/shortcut/shortcut.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/shortcut/shortcut.d.ts",
    "children": [
       {
-         "id": 501,
+         "id": 598,
          "name": "Shortcut",
          "kind": 128,
          "kindString": "Class",
@@ -22,7 +22,7 @@
          },
          "children": [
             {
-               "id": 502,
+               "id": 599,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,14 +31,14 @@
                },
                "signatures": [
                   {
-                     "id": 503,
+                     "id": 600,
                      "name": "new Shortcut",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 504,
+                           "id": 601,
                            "name": "manager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -46,27 +46,27 @@
                            "type": {
                               "type": "reference",
                               "name": "ShortcutDispatcher",
-                              "id": 483
+                              "id": 580
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "Shortcut",
-                        "id": 501
+                        "id": 598
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "shortcut/shortcut.d.ts",
-                     "line": 13,
+                     "line": 14,
                      "character": 31
                   }
                ]
             },
             {
-               "id": 517,
+               "id": 614,
                "name": "factory",
                "kind": 2048,
                "kindString": "Method",
@@ -75,14 +75,14 @@
                },
                "signatures": [
                   {
-                     "id": 518,
+                     "id": 615,
                      "name": "factory",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 519,
+                           "id": 616,
                            "name": "commandManager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -90,26 +90,111 @@
                            "type": {
                               "type": "reference",
                               "name": "CommandManager",
-                              "id": 471
+                              "id": 568
                            }
                         }
                      ],
                      "type": {
-                        "type": "intrinsic",
-                        "name": "object"
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 617,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "children": [
+                              {
+                                 "id": 618,
+                                 "name": "register",
+                                 "kind": 32,
+                                 "kindString": "Variable",
+                                 "flags": {},
+                                 "sources": [
+                                    {
+                                       "fileName": "shortcut/shortcut.d.ts",
+                                       "line": 23,
+                                       "character": 10
+                                    }
+                                 ],
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 619,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 620,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "parameters": [
+                                                {
+                                                   "id": 621,
+                                                   "name": "commands",
+                                                   "kind": 32768,
+                                                   "kindString": "Parameter",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "array",
+                                                      "elementType": {
+                                                         "type": "reference",
+                                                         "name": "Command",
+                                                         "id": 25
+                                                      }
+                                                   }
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "shortcut/shortcut.d.ts",
+                                             "line": 23,
+                                             "character": 11
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
+                           "groups": [
+                              {
+                                 "title": "Variables",
+                                 "kind": 32,
+                                 "children": [
+                                    618
+                                 ]
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "shortcut/shortcut.d.ts",
+                                 "line": 22,
+                                 "character": 41
+                              }
+                           ]
+                        }
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "shortcut/shortcut.d.ts",
-                     "line": 24,
-                     "character": 11
+                     "line": 22,
+                     "character": 8
                   }
                ]
             },
             {
-               "id": 520,
+               "id": 622,
                "name": "keyDown",
                "kind": 2048,
                "kindString": "Method",
@@ -118,25 +203,105 @@
                },
                "signatures": [
                   {
-                     "id": 521,
+                     "id": 623,
                      "name": "keyDown",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 522,
+                           "id": 624,
                            "name": "e",
                            "kind": 32768,
                            "kindString": "Parameter",
                            "flags": {},
                            "type": {
-                              "type": "intrinsic",
-                              "name": "any"
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 625,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "children": [
+                                    {
+                                       "id": 626,
+                                       "name": "key",
+                                       "kind": 32,
+                                       "kindString": "Variable",
+                                       "flags": {},
+                                       "sources": [
+                                          {
+                                             "fileName": "shortcut/shortcut.d.ts",
+                                             "line": 28,
+                                             "character": 6
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "string"
+                                       }
+                                    },
+                                    {
+                                       "id": 627,
+                                       "name": "keyCode",
+                                       "kind": 32,
+                                       "kindString": "Variable",
+                                       "flags": {},
+                                       "sources": [
+                                          {
+                                             "fileName": "shortcut/shortcut.d.ts",
+                                             "line": 29,
+                                             "character": 10
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "number"
+                                       }
+                                    },
+                                    {
+                                       "id": 628,
+                                       "name": "shiftKey",
+                                       "kind": 32,
+                                       "kindString": "Variable",
+                                       "flags": {},
+                                       "sources": [
+                                          {
+                                             "fileName": "shortcut/shortcut.d.ts",
+                                             "line": 30,
+                                             "character": 11
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "boolean"
+                                       }
+                                    }
+                                 ],
+                                 "groups": [
+                                    {
+                                       "title": "Variables",
+                                       "kind": 32,
+                                       "children": [
+                                          626,
+                                          627,
+                                          628
+                                       ]
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "shortcut/shortcut.d.ts",
+                                       "line": 27,
+                                       "character": 4
+                                    }
+                                 ]
+                              }
                            }
                         },
                         {
-                           "id": 523,
+                           "id": 629,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -150,8 +315,11 @@
                         }
                      ],
                      "type": {
-                        "type": "intrinsic",
-                        "name": "boolean"
+                        "type": "array",
+                        "elementType": {
+                           "type": "intrinsic",
+                           "name": "string"
+                        }
                      }
                   }
                ],
@@ -159,12 +327,12 @@
                   {
                      "fileName": "shortcut/shortcut.d.ts",
                      "line": 26,
-                     "character": 11
+                     "character": 8
                   }
                ]
             },
             {
-               "id": 524,
+               "id": 630,
                "name": "register",
                "kind": 2048,
                "kindString": "Method",
@@ -173,14 +341,14 @@
                },
                "signatures": [
                   {
-                     "id": 525,
+                     "id": 631,
                      "name": "register",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 526,
+                           "id": 632,
                            "name": "commandManager",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -188,11 +356,11 @@
                            "type": {
                               "type": "reference",
                               "name": "CommandManager",
-                              "id": 471
+                              "id": 568
                            }
                         },
                         {
-                           "id": 527,
+                           "id": 633,
                            "name": "commands",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -200,28 +368,55 @@
                            "type": {
                               "type": "array",
                               "elementType": {
-                                 "type": "intrinsic",
-                                 "name": "any"
+                                 "type": "reference",
+                                 "name": "Command",
+                                 "id": 25
                               }
                            }
                         }
                      ],
                      "type": {
-                        "type": "intrinsic",
-                        "name": "any"
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 634,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "signatures": [
+                              {
+                                 "id": 635,
+                                 "name": "__call",
+                                 "kind": 4096,
+                                 "kindString": "Call signature",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "void"
+                                 }
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "shortcut/shortcut.d.ts",
+                                 "line": 34,
+                                 "character": 63
+                              }
+                           ]
+                        }
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "shortcut/shortcut.d.ts",
-                     "line": 28,
-                     "character": 12
+                     "line": 34,
+                     "character": 9
                   }
                ]
             },
             {
-               "id": 505,
+               "id": 602,
                "name": "isControl",
                "kind": 2048,
                "kindString": "Method",
@@ -231,14 +426,14 @@
                },
                "signatures": [
                   {
-                     "id": 506,
+                     "id": 603,
                      "name": "isControl",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 507,
+                           "id": 604,
                            "name": "keyCode",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -246,7 +441,7 @@
                            "type": {
                               "type": "reference",
                               "name": "KeyCode",
-                              "id": 497
+                              "id": 594
                            }
                         }
                      ],
@@ -259,13 +454,13 @@
                "sources": [
                   {
                      "fileName": "shortcut/shortcut.d.ts",
-                     "line": 16,
-                     "character": 20
+                     "line": 17,
+                     "character": 17
                   }
                ]
             },
             {
-               "id": 508,
+               "id": 605,
                "name": "isPrintable",
                "kind": 2048,
                "kindString": "Method",
@@ -275,14 +470,14 @@
                },
                "signatures": [
                   {
-                     "id": 509,
+                     "id": 606,
                      "name": "isPrintable",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 510,
+                           "id": 607,
                            "name": "keyCode",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -290,7 +485,7 @@
                            "type": {
                               "type": "reference",
                               "name": "KeyCode",
-                              "id": 497
+                              "id": 594
                            }
                         }
                      ],
@@ -304,12 +499,12 @@
                   {
                      "fileName": "shortcut/shortcut.d.ts",
                      "line": 18,
-                     "character": 22
+                     "character": 19
                   }
                ]
             },
             {
-               "id": 511,
+               "id": 608,
                "name": "stringify",
                "kind": 2048,
                "kindString": "Method",
@@ -319,14 +514,14 @@
                },
                "signatures": [
                   {
-                     "id": 512,
+                     "id": 609,
                      "name": "stringify",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 513,
+                           "id": 610,
                            "name": "keyCode",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -334,7 +529,7 @@
                            "type": {
                               "type": "reference",
                               "name": "KeyCode",
-                              "id": 497
+                              "id": 594
                            }
                         }
                      ],
@@ -347,13 +542,13 @@
                "sources": [
                   {
                      "fileName": "shortcut/shortcut.d.ts",
-                     "line": 20,
-                     "character": 20
+                     "line": 19,
+                     "character": 17
                   }
                ]
             },
             {
-               "id": 514,
+               "id": 611,
                "name": "translate",
                "kind": 2048,
                "kindString": "Method",
@@ -363,14 +558,14 @@
                },
                "signatures": [
                   {
-                     "id": 515,
+                     "id": 612,
                      "name": "translate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 516,
+                           "id": 613,
                            "name": "e",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -390,8 +585,8 @@
                "sources": [
                   {
                      "fileName": "shortcut/shortcut.d.ts",
-                     "line": 22,
-                     "character": 20
+                     "line": 20,
+                     "character": 17
                   }
                ]
             }
@@ -401,27 +596,27 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  502
+                  599
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  517,
-                  520,
-                  524,
-                  505,
-                  508,
-                  511,
-                  514
+                  614,
+                  622,
+                  630,
+                  602,
+                  605,
+                  608,
+                  611
                ]
             }
          ],
          "sources": [
             {
                "fileName": "shortcut/shortcut.d.ts",
-               "line": 13,
+               "line": 14,
                "character": 29
             }
          ]
@@ -432,7 +627,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            501
+            598
          ]
       }
    ],
@@ -443,5 +638,5 @@
          "character": 0
       }
    ],
-   "order": 214
+   "order": 233
 }

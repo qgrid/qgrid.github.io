@@ -1,15 +1,15 @@
 {
-   "id": 4073,
+   "id": 4500,
    "name": "\"layout/layout.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/layout/layout.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/layout/layout.view.d.ts",
    "children": [
       {
-         "id": 4074,
+         "id": 4501,
          "name": "LayoutView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4075,
+               "id": 4502,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4076,
+                     "id": 4503,
                      "name": "new LayoutView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4077,
+                           "id": 4504,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         },
                         {
-                           "id": 4078,
+                           "id": 4505,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1473
+                              "id": 1578
                            }
                         },
                         {
-                           "id": 4079,
+                           "id": 4506,
                            "name": "gridService",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -69,19 +69,14 @@
                            "type": {
                               "type": "reference",
                               "name": "GridService",
-                              "id": 3818
+                              "id": 4188
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "LayoutView",
-                        "id": 4074
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 4501
                      }
                   }
                ],
@@ -89,112 +84,12 @@
                   {
                      "fileName": "layout/layout.view.d.ts",
                      "line": 10,
-                     "character": 46
-                  }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
-            },
-            {
-               "id": 4082,
-               "name": "form",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "layout/layout.view.d.ts",
-                     "line": 15,
-                     "character": 17
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "ColumnModel",
-                  "id": 19
-               }
-            },
-            {
-               "id": 4089,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
-               }
-            },
-            {
-               "id": 4088,
-               "name": "styleId",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "layout/layout.view.d.ts",
-                     "line": 21,
-                     "character": 20
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "string"
-               }
-            },
-            {
-               "id": 4086,
-               "name": "destroy",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4087,
-                     "name": "destroy",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "layout/layout.view.d.ts",
-                     "line": 19,
-                     "character": 11
+                     "character": 52
                   }
                ]
             },
             {
-               "id": 4097,
+               "id": 4515,
                "name": "dispose",
                "kind": 2048,
                "kindString": "Method",
@@ -203,7 +98,7 @@
                },
                "signatures": [
                   {
-                     "id": 4098,
+                     "id": 4516,
                      "name": "dispose",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -214,97 +109,26 @@
                      },
                      "inheritedFrom": {
                         "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
+                        "name": "Disposable.dispose",
+                        "id": 4065
                      }
                   }
                ],
                "sources": [
                   {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
+                     "fileName": "infrastructure/disposable.d.ts",
+                     "line": 3,
+                     "character": 8
                   }
                ],
                "inheritedFrom": {
                   "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
+                  "name": "Disposable.dispose",
+                  "id": 4065
                }
             },
             {
-               "id": 4083,
-               "name": "invalidateColumns",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4084,
-                     "name": "invalidateColumns",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 4085,
-                           "name": "form",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "object"
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "layout/layout.view.d.ts",
-                     "line": 17,
-                     "character": 21
-                  }
-               ]
-            },
-            {
-               "id": 4080,
-               "name": "onInit",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4081,
-                     "name": "onInit",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "layout/layout.view.d.ts",
-                     "line": 13,
-                     "character": 10
-                  }
-               ]
-            },
-            {
-               "id": 4090,
+               "id": 4507,
                "name": "using",
                "kind": 2048,
                "kindString": "Method",
@@ -313,29 +137,101 @@
                },
                "signatures": [
                   {
-                     "id": 4091,
+                     "id": 4508,
                      "name": "using",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
+                     "typeParameter": [
+                        {
+                           "id": 4509,
+                           "name": "T",
+                           "kind": 131072,
+                           "kindString": "Type parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "reference",
+                              "name": "Disposable",
+                              "id": 4056
+                           }
+                        }
+                     ],
                      "parameters": [
                         {
-                           "id": 4092,
-                           "name": "dispose",
+                           "id": 4510,
+                           "name": "instance",
                            "kind": 32768,
                            "kindString": "Parameter",
                            "flags": {},
                            "type": {
+                              "type": "union",
+                              "types": [
+                                 {
+                                    "type": "typeParameter",
+                                    "name": "T",
+                                    "constraint": {
+                                       "type": "reference",
+                                       "name": "Disposable",
+                                       "id": 4056
+                                    }
+                                 },
+                                 {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 4511,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "signatures": [
+                                          {
+                                             "id": 4512,
+                                             "name": "__call",
+                                             "kind": 4096,
+                                             "kindString": "Call signature",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "void"
+                                             }
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "infrastructure/disposable.d.ts",
+                                             "line": 2,
+                                             "character": 42
+                                          }
+                                       ]
+                                    }
+                                 }
+                              ]
+                           }
+                        }
+                     ],
+                     "type": {
+                        "type": "union",
+                        "types": [
+                           {
+                              "type": "typeParameter",
+                              "name": "T",
+                              "constraint": {
+                                 "type": "reference",
+                                 "name": "Disposable",
+                                 "id": 4056
+                              }
+                           },
+                           {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4093,
+                                 "id": 4513,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "signatures": [
                                     {
-                                       "id": 4094,
+                                       "id": 4514,
                                        "name": "__call",
                                        "kind": 4096,
                                        "kindString": "Call signature",
@@ -348,63 +244,33 @@
                                  ],
                                  "sources": [
                                     {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
+                                       "fileName": "infrastructure/disposable.d.ts",
+                                       "line": 2,
+                                       "character": 61
                                     }
                                  ]
                               }
                            }
-                        }
-                     ],
-                     "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 4095,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 4096,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
+                        ]
                      },
                      "inheritedFrom": {
                         "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
+                        "name": "Disposable.using",
+                        "id": 4057
                      }
                   }
                ],
                "sources": [
                   {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
+                     "fileName": "infrastructure/disposable.d.ts",
+                     "line": 2,
+                     "character": 6
                   }
                ],
                "inheritedFrom": {
                   "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
+                  "name": "Disposable.using",
+                  "id": 4057
                }
             }
          ],
@@ -413,27 +279,15 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4075
-               ]
-            },
-            {
-               "title": "Properties",
-               "kind": 1024,
-               "children": [
-                  4082,
-                  4089,
-                  4088
+                  4502
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4086,
-                  4097,
-                  4083,
-                  4080,
-                  4090
+                  4515,
+                  4507
                ]
             }
          ],
@@ -447,8 +301,8 @@
          "extendedTypes": [
             {
                "type": "reference",
-               "name": "View",
-               "id": 1150
+               "name": "Disposable",
+               "id": 4056
             }
          ]
       }
@@ -458,7 +312,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4074
+            4501
          ]
       }
    ],
@@ -469,5 +323,5 @@
          "character": 0
       }
    ],
-   "order": 129
+   "order": 142
 }

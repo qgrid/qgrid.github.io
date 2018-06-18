@@ -2,7 +2,7 @@
 title: PipeModel
 type: api
 group: API
-order: 153
+order: 165
 ---
 A class that contains setting to control when and how q-grid should be updated.
 
@@ -40,7 +40,7 @@ A class that contains setting to control when and how q-grid should be updated.
 		},
 		'row': {
 		   'status': PU.rowDetails,
-        'canDrag': PU.column,
+        'canMove': PU.column,
         'canResize': PU.column
 		},
 		'selection': {

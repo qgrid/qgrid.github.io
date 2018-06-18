@@ -2,7 +2,7 @@
 title: memoPipe
 type: api
 group: API
-order: 148
+order: 160
 ---
 > Under Construction.
 

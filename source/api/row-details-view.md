@@ -2,7 +2,7 @@
 title: RowDetailsView
 type: api
 group: API
-order: 174
+order: 190
 ---
 > Under Construction.
 

@@ -2,7 +2,7 @@
 title: NavigationView
 type: api
 group: API
-order: 132
+order: 145
 ---
 > Under Construction.
 

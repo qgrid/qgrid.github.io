@@ -1,18 +1,18 @@
 {
-   "id": 359,
+   "id": 392,
    "name": "\"pagination/pagination.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pagination/pagination.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pagination/pagination.model.d.ts",
    "children": [
       {
-         "id": 360,
+         "id": 393,
          "name": "PaginationModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,42 +22,13 @@
          },
          "children": [
             {
-               "id": 361,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 362,
-                     "name": "new PaginationModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "PaginationModel",
-                        "id": 360
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "pagination/pagination.model.d.ts",
-                     "line": 11,
-                     "character": 38
-                  }
-               ]
-            },
-            {
-               "id": 367,
+               "id": 398,
                "name": "count",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Count of total rows."
@@ -65,8 +36,8 @@
                "sources": [
                   {
                      "fileName": "pagination/pagination.model.d.ts",
-                     "line": 33,
-                     "character": 9
+                     "line": 32,
+                     "character": 6
                   }
                ],
                "type": {
@@ -75,12 +46,13 @@
                }
             },
             {
-               "id": 364,
+               "id": 395,
                "name": "current",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Current page number;"
@@ -88,7 +60,7 @@
                "sources": [
                   {
                      "fileName": "pagination/pagination.model.d.ts",
-                     "line": 18,
+                     "line": 17,
                      "character": 8
                   }
                ],
@@ -98,12 +70,13 @@
                }
             },
             {
-               "id": 368,
+               "id": 399,
                "name": "resetTriggers",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "List of `model name: [model properties]` pairs to reset pagination current property to 0."
@@ -111,46 +84,87 @@
                "sources": [
                   {
                      "fileName": "pagination/pagination.model.d.ts",
-                     "line": 38,
-                     "character": 17
+                     "line": 37,
+                     "character": 14
                   }
                ],
                "type": {
-                  "type": "array",
-                  "elementType": {
-                     "type": "intrinsic",
-                     "name": "any"
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 400,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "indexSignature": [
+                        {
+                           "id": 401,
+                           "name": "__index",
+                           "kind": 8192,
+                           "kindString": "Index signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 402,
+                                 "name": "key",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "string"
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "intrinsic",
+                                 "name": "string"
+                              }
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pagination/pagination.model.d.ts",
+                           "line": 37,
+                           "character": 16
+                        }
+                     ]
                   }
                }
             },
             {
-               "id": 363,
+               "id": 394,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "pagination/pagination.model.d.ts",
-                     "line": 13,
+                     "line": 12,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             },
             {
-               "id": 365,
+               "id": 396,
                "name": "size",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Selected page size."
@@ -158,7 +172,7 @@
                "sources": [
                   {
                      "fileName": "pagination/pagination.model.d.ts",
-                     "line": 23,
+                     "line": 22,
                      "character": 5
                   }
                ],
@@ -168,12 +182,13 @@
                }
             },
             {
-               "id": 366,
+               "id": 397,
                "name": "sizeList",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "List of available sizes."
@@ -181,7 +196,7 @@
                "sources": [
                   {
                      "fileName": "pagination/pagination.model.d.ts",
-                     "line": 28,
+                     "line": 27,
                      "character": 9
                   }
                ],
@@ -196,22 +211,15 @@
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  361
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  367,
-                  364,
-                  368,
-                  363,
-                  365,
-                  366
+                  398,
+                  395,
+                  399,
+                  394,
+                  396,
+                  397
                ]
             }
          ],
@@ -219,17 +227,17 @@
             {
                "fileName": "pagination/pagination.model.d.ts",
                "line": 11,
-               "character": 36
+               "character": 40
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            360
+            393
          ]
       }
    ],
@@ -240,5 +248,5 @@
          "character": 0
       }
    ],
-   "order": 138
+   "order": 150
 }

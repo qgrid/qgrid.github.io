@@ -1,15 +1,15 @@
 {
-   "id": 3541,
+   "id": 3763,
    "name": "\"edit/edit.cell.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.cell.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/edit/edit.cell.view.d.ts",
    "children": [
       {
-         "id": 3542,
+         "id": 3764,
          "name": "EditCellView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 3543,
+               "id": 3765,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 3544,
+                     "id": 3766,
                      "name": "new EditCellView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3545,
+                           "id": 3767,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         },
                         {
-                           "id": 3546,
+                           "id": 3768,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,31 +57,156 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1473
+                              "id": 1578
                            }
                         },
                         {
-                           "id": 3547,
-                           "name": "commandManager",
+                           "id": 3769,
+                           "name": "shortcut",
                            "kind": 32768,
                            "kindString": "Parameter",
                            "flags": {},
                            "type": {
-                              "type": "reference",
-                              "name": "CommandManager",
-                              "id": 471
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 3770,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "children": [
+                                    {
+                                       "id": 3775,
+                                       "name": "keyCode",
+                                       "kind": 32,
+                                       "kindString": "Variable",
+                                       "flags": {},
+                                       "sources": [
+                                          {
+                                             "fileName": "edit/edit.cell.view.d.ts",
+                                             "line": 15,
+                                             "character": 101
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "reflection",
+                                          "declaration": {
+                                             "id": 3776,
+                                             "name": "__type",
+                                             "kind": 65536,
+                                             "kindString": "Type literal",
+                                             "flags": {},
+                                             "signatures": [
+                                                {
+                                                   "id": 3777,
+                                                   "name": "__call",
+                                                   "kind": 4096,
+                                                   "kindString": "Call signature",
+                                                   "flags": {},
+                                                   "type": {
+                                                      "type": "reference",
+                                                      "name": "KeyCode",
+                                                      "id": 594
+                                                   }
+                                                }
+                                             ],
+                                             "sources": [
+                                                {
+                                                   "fileName": "edit/edit.cell.view.d.ts",
+                                                   "line": 15,
+                                                   "character": 102
+                                                }
+                                             ]
+                                          }
+                                       }
+                                    },
+                                    {
+                                       "id": 3771,
+                                       "name": "register",
+                                       "kind": 32,
+                                       "kindString": "Variable",
+                                       "flags": {},
+                                       "sources": [
+                                          {
+                                             "fileName": "edit/edit.cell.view.d.ts",
+                                             "line": 15,
+                                             "character": 61
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "reflection",
+                                          "declaration": {
+                                             "id": 3772,
+                                             "name": "__type",
+                                             "kind": 65536,
+                                             "kindString": "Type literal",
+                                             "flags": {},
+                                             "signatures": [
+                                                {
+                                                   "id": 3773,
+                                                   "name": "__call",
+                                                   "kind": 4096,
+                                                   "kindString": "Call signature",
+                                                   "flags": {},
+                                                   "parameters": [
+                                                      {
+                                                         "id": 3774,
+                                                         "name": "commands",
+                                                         "kind": 32768,
+                                                         "kindString": "Parameter",
+                                                         "flags": {},
+                                                         "type": {
+                                                            "type": "array",
+                                                            "elementType": {
+                                                               "type": "reference",
+                                                               "name": "Command",
+                                                               "id": 25
+                                                            }
+                                                         }
+                                                      }
+                                                   ],
+                                                   "type": {
+                                                      "type": "intrinsic",
+                                                      "name": "void"
+                                                   }
+                                                }
+                                             ],
+                                             "sources": [
+                                                {
+                                                   "fileName": "edit/edit.cell.view.d.ts",
+                                                   "line": 15,
+                                                   "character": 62
+                                                }
+                                             ]
+                                          }
+                                       }
+                                    }
+                                 ],
+                                 "groups": [
+                                    {
+                                       "title": "Variables",
+                                       "kind": 32,
+                                       "children": [
+                                          3775,
+                                          3771
+                                       ]
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "edit/edit.cell.view.d.ts",
+                                       "line": 15,
+                                       "character": 50
+                                    }
+                                 ]
+                              }
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "EditCellView",
-                        "id": 3542
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 3764
                      }
                   }
                ],
@@ -89,17 +214,12 @@
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
                      "line": 14,
-                     "character": 48
+                     "character": 35
                   }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
+               ]
             },
             {
-               "id": 3551,
+               "id": 3781,
                "name": "cancel",
                "kind": 1024,
                "kindString": "Property",
@@ -110,17 +230,38 @@
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
                      "line": 20,
-                     "character": 10
+                     "character": 16
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 3556,
+               "id": 3786,
+               "name": "cell",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 27,
+                     "character": 14
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "CellView",
+                  "id": 412
+               }
+            },
+            {
+               "id": 3788,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -130,18 +271,18 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 25,
-                     "character": 10
+                     "line": 29,
+                     "character": 16
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "ColumnModel",
-                  "id": 19
+                  "id": 88
                }
             },
             {
-               "id": 3550,
+               "id": 3779,
                "name": "commit",
                "kind": 1024,
                "kindString": "Property",
@@ -151,39 +292,18 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 19,
-                     "character": 10
+                     "line": 18,
+                     "character": 16
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 3548,
-               "name": "editor",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 17,
-                     "character": 10
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "CellEditor",
-                  "id": 3519
-               }
-            },
-            {
-               "id": 3549,
+               "id": 3778,
                "name": "enter",
                "kind": 1024,
                "kindString": "Property",
@@ -193,18 +313,18 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 18,
-                     "character": 9
+                     "line": 17,
+                     "character": 15
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 3553,
+               "id": 3783,
                "name": "exit",
                "kind": 1024,
                "kindString": "Property",
@@ -215,17 +335,17 @@
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
                      "line": 22,
-                     "character": 8
+                     "character": 14
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 3557,
+               "id": 3790,
                "name": "fetch",
                "kind": 1024,
                "kindString": "Property",
@@ -235,18 +355,43 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 26,
-                     "character": 18
+                     "line": 32,
+                     "character": 15
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "INoopResult",
-                  "id": 225
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 3791,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 3792,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "void"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "edit/edit.cell.view.d.ts",
+                           "line": 32,
+                           "character": 16
+                        }
+                     ]
+                  }
                }
             },
             {
-               "id": 3555,
+               "id": 3785,
                "name": "label",
                "kind": 1024,
                "kindString": "Property",
@@ -256,42 +401,17 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 24,
-                     "character": 9
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               }
-            },
-            {
-               "id": 3559,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
+                     "line": 25,
                      "character": 6
                   }
                ],
                "type": {
                   "type": "intrinsic",
                   "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
                }
             },
             {
-               "id": 3558,
+               "id": 3789,
                "name": "options",
                "kind": 1024,
                "kindString": "Property",
@@ -301,17 +421,39 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 27,
-                     "character": 20
+                     "line": 30,
+                     "character": 17
                   }
                ],
                "type": {
                   "type": "reference",
-                  "name": "IEditorOptions"
+                  "name": "EditorOptions",
+                  "id": 57
                }
             },
             {
-               "id": 3552,
+               "id": 3780,
+               "name": "push",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 19,
+                     "character": 14
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 3782,
                "name": "reset",
                "kind": 1024,
                "kindString": "Property",
@@ -322,17 +464,83 @@
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
                      "line": 21,
-                     "character": 9
+                     "character": 15
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 3554,
+               "id": 3793,
+               "name": "resetFetch",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 33,
+                     "character": 20
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 3794,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "signatures": [
+                        {
+                           "id": 3795,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "void"
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "edit/edit.cell.view.d.ts",
+                           "line": 33,
+                           "character": 21
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 3787,
+               "name": "row",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.cell.view.d.ts",
+                     "line": 28,
+                     "character": 13
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 3784,
                "name": "value",
                "kind": 1024,
                "kindString": "Property",
@@ -342,156 +550,13 @@
                "sources": [
                   {
                      "fileName": "edit/edit.cell.view.d.ts",
-                     "line": 23,
-                     "character": 9
+                     "line": 24,
+                     "character": 6
                   }
                ],
                "type": {
                   "type": "intrinsic",
                   "name": "any"
-               }
-            },
-            {
-               "id": 3567,
-               "name": "dispose",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 3568,
-                     "name": "dispose",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
-               }
-            },
-            {
-               "id": 3560,
-               "name": "using",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 3561,
-                     "name": "using",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 3562,
-                           "name": "dispose",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                 "id": 3563,
-                                 "name": "__type",
-                                 "kind": 65536,
-                                 "kindString": "Type literal",
-                                 "flags": {},
-                                 "signatures": [
-                                    {
-                                       "id": 3564,
-                                       "name": "__call",
-                                       "kind": 4096,
-                                       "kindString": "Call signature",
-                                       "flags": {},
-                                       "type": {
-                                          "type": "intrinsic",
-                                          "name": "void"
-                                       }
-                                    }
-                                 ],
-                                 "sources": [
-                                    {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
-                                    }
-                                 ]
-                              }
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 3565,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 3566,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
                }
             }
          ],
@@ -500,33 +565,27 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  3543
+                  3765
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  3551,
-                  3556,
-                  3550,
-                  3548,
-                  3549,
-                  3553,
-                  3557,
-                  3555,
-                  3559,
-                  3558,
-                  3552,
-                  3554
-               ]
-            },
-            {
-               "title": "Methods",
-               "kind": 2048,
-               "children": [
-                  3567,
-                  3560
+                  3781,
+                  3786,
+                  3788,
+                  3779,
+                  3778,
+                  3783,
+                  3790,
+                  3785,
+                  3789,
+                  3780,
+                  3782,
+                  3793,
+                  3787,
+                  3784
                ]
             }
          ],
@@ -536,13 +595,6 @@
                "line": 14,
                "character": 33
             }
-         ],
-         "extendedTypes": [
-            {
-               "type": "reference",
-               "name": "View",
-               "id": 1150
-            }
          ]
       }
    ],
@@ -551,7 +603,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            3542
+            3764
          ]
       }
    ],
@@ -562,5 +614,5 @@
          "character": 0
       }
    ],
-   "order": 77
+   "order": 84
 }

@@ -2,7 +2,7 @@
 title: ScrollModel
 type: api
 group: API
-order: 183
+order: 201
 ---
 A class that contains properties about scroll status.
 

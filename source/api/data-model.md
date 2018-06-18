@@ -2,41 +2,42 @@
 title: DataModel
 type: api
 group: API
-order: 45
+order: 48
 ---
-A class that gives access to the high level grid data structures.
+Use this class to get access to the high level qgrid data structures.
 
 {% docTable "source/api/data-model.json" %}
 
 ### Usage
-Usually grid user can define this properties in different places.
-Inside html through attribute bindings:
+In html through attribute bindings:
 ```html
-<q-grid [columns]="userColumns" [rows]="userRows">
+<q-grid [columns]="myColumns" [rows]="myRows">
+</q-grid>
 ```
 
-Inside html throught component:
+In html via component:
 ```html
 <q-grid>
 	<q-grid-columns>
-		<q-grid-column key="id"></q-grid-column>
-		<q-grid-column key="name"><q-grid-column>
+		<q-grid-column key="id" title="ID" type="id"></q-grid-column>
+		<q-grid-column key="myColumnKey" title="My Column Name"><q-grid-column>
 	</q-grid-columns>
 </q-grid>
 ```
 
-Inside js code throught model:
+In js code throught model:
 ```javascript
-const userRows = [];
-const userColumns = [];
+const myRows = [];
+const myColumns = [];
 
 gridModel.data({
- rows: userRows,
- columns: userColumns
-})
+ rows: myRows,
+ columns: myColumns
+});
 ```
 
 ### Suggested Links
 
-* [data.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/data.pipe.js)
+* [qgrid Model](/doc/api/model)
+* [Data Pipe](/doc/api/data-pipe)
 

@@ -1,18 +1,18 @@
 {
-   "id": 6,
+   "id": 56,
    "name": "\"column-type/editor.options.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/editor.options.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/column-type/editor.options.d.ts",
    "children": [
       {
-         "id": 7,
+         "id": 57,
          "name": "EditorOptions",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -21,12 +21,41 @@
          },
          "children": [
             {
-               "id": 9,
+               "id": 84,
+               "name": "actions",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "List of actions, can be used by row-options column to draw menu with commands."
+               },
+               "sources": [
+                  {
+                     "fileName": "column-type/editor.options.d.ts",
+                     "line": 46,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "array",
+                  "elementType": {
+                     "type": "reference",
+                     "name": "Action",
+                     "id": 45
+                  }
+               }
+            },
+            {
+               "id": 59,
                "name": "cruise",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Defines navigation behavior when cell is in edit mode.",
@@ -35,8 +64,8 @@
                "sources": [
                   {
                      "fileName": "column-type/editor.options.d.ts",
-                     "line": 23,
-                     "character": 10
+                     "line": 26,
+                     "character": 7
                   }
                ],
                "type": {
@@ -45,12 +74,13 @@
                }
             },
             {
-               "id": 13,
+               "id": 76,
                "name": "fetch",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Can be used by e.g. `auto-complete` editor to populate list of items."
@@ -58,21 +88,21 @@
                "sources": [
                   {
                      "fileName": "column-type/editor.options.d.ts",
-                     "line": 33,
-                     "character": 9
+                     "line": 41,
+                     "character": 6
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 14,
+                     "id": 77,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 15,
+                           "id": 78,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
@@ -81,12 +111,99 @@
                               "type": "union",
                               "types": [
                                  {
-                                    "type": "intrinsic",
-                                    "name": "any"
+                                    "type": "reference",
+                                    "name": "Promise",
+                                    "typeArguments": [
+                                       {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    ]
                                  },
                                  {
-                                    "type": "reference",
-                                    "name": "Promise"
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 79,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "children": [
+                                          {
+                                             "id": 80,
+                                             "name": "subscribe",
+                                             "kind": 32,
+                                             "kindString": "Variable",
+                                             "flags": {},
+                                             "sources": [
+                                                {
+                                                   "fileName": "column-type/editor.options.d.ts",
+                                                   "line": 41,
+                                                   "character": 41
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "reflection",
+                                                "declaration": {
+                                                   "id": 81,
+                                                   "name": "__type",
+                                                   "kind": 65536,
+                                                   "kindString": "Type literal",
+                                                   "flags": {},
+                                                   "signatures": [
+                                                      {
+                                                         "id": 82,
+                                                         "name": "__call",
+                                                         "kind": 4096,
+                                                         "kindString": "Call signature",
+                                                         "flags": {},
+                                                         "parameters": [
+                                                            {
+                                                               "id": 83,
+                                                               "name": "x",
+                                                               "kind": 32768,
+                                                               "kindString": "Parameter",
+                                                               "flags": {},
+                                                               "type": {
+                                                                  "type": "intrinsic",
+                                                                  "name": "any"
+                                                               }
+                                                            }
+                                                         ],
+                                                         "type": {
+                                                            "type": "intrinsic",
+                                                            "name": "void"
+                                                         }
+                                                      }
+                                                   ],
+                                                   "sources": [
+                                                      {
+                                                         "fileName": "column-type/editor.options.d.ts",
+                                                         "line": 41,
+                                                         "character": 42
+                                                      }
+                                                   ]
+                                                }
+                                             }
+                                          }
+                                       ],
+                                       "groups": [
+                                          {
+                                             "title": "Variables",
+                                             "kind": 32,
+                                             "children": [
+                                                80
+                                             ]
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "column-type/editor.options.d.ts",
+                                             "line": 41,
+                                             "character": 29
+                                          }
+                                       ]
+                                    }
                                  },
                                  {
                                     "type": "intrinsic",
@@ -99,26 +216,27 @@
                      "sources": [
                         {
                            "fileName": "column-type/editor.options.d.ts",
-                           "line": 33,
-                           "character": 10
+                           "line": 41,
+                           "character": 8
                         }
                      ]
                   }
                }
             },
             {
-               "id": 16,
+               "id": 85,
                "name": "label",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "column-type/editor.options.d.ts",
-                     "line": 35,
-                     "character": 9
+                     "line": 48,
+                     "character": 6
                   }
                ],
                "type": {
@@ -127,12 +245,13 @@
                }
             },
             {
-               "id": 10,
+               "id": 60,
                "name": "modelFactory",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "q-grid model factory, can be used by reference column to draw a anpther q-grid in edit cell mode."
@@ -140,49 +259,284 @@
                "sources": [
                   {
                      "fileName": "column-type/editor.options.d.ts",
-                     "line": 28,
-                     "character": 16
+                     "line": 31,
+                     "character": 13
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 11,
+                     "id": 61,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 12,
+                           "id": 62,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 63,
+                                 "name": "context",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reflection",
+                                    "declaration": {
+                                       "id": 64,
+                                       "name": "__type",
+                                       "kind": 65536,
+                                       "kindString": "Type literal",
+                                       "flags": {},
+                                       "children": [
+                                          {
+                                             "id": 66,
+                                             "name": "column",
+                                             "kind": 32,
+                                             "kindString": "Variable",
+                                             "flags": {},
+                                             "sources": [
+                                                {
+                                                   "fileName": "column-type/editor.options.d.ts",
+                                                   "line": 33,
+                                                   "character": 8
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "reference",
+                                                "name": "ColumnModel",
+                                                "id": 88
+                                             }
+                                          },
+                                          {
+                                             "id": 67,
+                                             "name": "getValue",
+                                             "kind": 32,
+                                             "kindString": "Variable",
+                                             "flags": {},
+                                             "sources": [
+                                                {
+                                                   "fileName": "column-type/editor.options.d.ts",
+                                                   "line": 34,
+                                                   "character": 10
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "reflection",
+                                                "declaration": {
+                                                   "id": 68,
+                                                   "name": "__type",
+                                                   "kind": 65536,
+                                                   "kindString": "Type literal",
+                                                   "flags": {},
+                                                   "signatures": [
+                                                      {
+                                                         "id": 69,
+                                                         "name": "__call",
+                                                         "kind": 4096,
+                                                         "kindString": "Call signature",
+                                                         "flags": {},
+                                                         "parameters": [
+                                                            {
+                                                               "id": 70,
+                                                               "name": "row",
+                                                               "kind": 32768,
+                                                               "kindString": "Parameter",
+                                                               "flags": {},
+                                                               "type": {
+                                                                  "type": "intrinsic",
+                                                                  "name": "any"
+                                                               }
+                                                            }
+                                                         ],
+                                                         "type": {
+                                                            "type": "intrinsic",
+                                                            "name": "any"
+                                                         }
+                                                      }
+                                                   ],
+                                                   "sources": [
+                                                      {
+                                                         "fileName": "column-type/editor.options.d.ts",
+                                                         "line": 34,
+                                                         "character": 11
+                                                      }
+                                                   ]
+                                                }
+                                             }
+                                          },
+                                          {
+                                             "id": 71,
+                                             "name": "reference",
+                                             "kind": 32,
+                                             "kindString": "Variable",
+                                             "flags": {},
+                                             "sources": [
+                                                {
+                                                   "fileName": "column-type/editor.options.d.ts",
+                                                   "line": 35,
+                                                   "character": 11
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "reflection",
+                                                "declaration": {
+                                                   "id": 72,
+                                                   "name": "__type",
+                                                   "kind": 65536,
+                                                   "kindString": "Type literal",
+                                                   "flags": {},
+                                                   "children": [
+                                                      {
+                                                         "id": 74,
+                                                         "name": "cancel",
+                                                         "kind": 32,
+                                                         "kindString": "Variable",
+                                                         "flags": {},
+                                                         "sources": [
+                                                            {
+                                                               "fileName": "column-type/editor.options.d.ts",
+                                                               "line": 35,
+                                                               "character": 38
+                                                            }
+                                                         ],
+                                                         "type": {
+                                                            "type": "reference",
+                                                            "name": "Command",
+                                                            "id": 25
+                                                         }
+                                                      },
+                                                      {
+                                                         "id": 73,
+                                                         "name": "commit",
+                                                         "kind": 32,
+                                                         "kindString": "Variable",
+                                                         "flags": {},
+                                                         "sources": [
+                                                            {
+                                                               "fileName": "column-type/editor.options.d.ts",
+                                                               "line": 35,
+                                                               "character": 21
+                                                            }
+                                                         ],
+                                                         "type": {
+                                                            "type": "reference",
+                                                            "name": "Command",
+                                                            "id": 25
+                                                         }
+                                                      },
+                                                      {
+                                                         "id": 75,
+                                                         "name": "value",
+                                                         "kind": 32,
+                                                         "kindString": "Variable",
+                                                         "flags": {},
+                                                         "sources": [
+                                                            {
+                                                               "fileName": "column-type/editor.options.d.ts",
+                                                               "line": 35,
+                                                               "character": 54
+                                                            }
+                                                         ],
+                                                         "type": {
+                                                            "type": "intrinsic",
+                                                            "name": "any"
+                                                         }
+                                                      }
+                                                   ],
+                                                   "groups": [
+                                                      {
+                                                         "title": "Variables",
+                                                         "kind": 32,
+                                                         "children": [
+                                                            74,
+                                                            73,
+                                                            75
+                                                         ]
+                                                      }
+                                                   ],
+                                                   "sources": [
+                                                      {
+                                                         "fileName": "column-type/editor.options.d.ts",
+                                                         "line": 35,
+                                                         "character": 12
+                                                      }
+                                                   ]
+                                                }
+                                             }
+                                          },
+                                          {
+                                             "id": 65,
+                                             "name": "row",
+                                             "kind": 32,
+                                             "kindString": "Variable",
+                                             "flags": {},
+                                             "sources": [
+                                                {
+                                                   "fileName": "column-type/editor.options.d.ts",
+                                                   "line": 32,
+                                                   "character": 5
+                                                }
+                                             ],
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "any"
+                                             }
+                                          }
+                                       ],
+                                       "groups": [
+                                          {
+                                             "title": "Variables",
+                                             "kind": 32,
+                                             "children": [
+                                                66,
+                                                67,
+                                                71,
+                                                65
+                                             ]
+                                          }
+                                       ],
+                                       "sources": [
+                                          {
+                                             "fileName": "column-type/editor.options.d.ts",
+                                             "line": 31,
+                                             "character": 25
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           ],
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         }
                      ],
                      "sources": [
                         {
                            "fileName": "column-type/editor.options.d.ts",
-                           "line": 28,
-                           "character": 17
+                           "line": 31,
+                           "character": 15
                         }
                      ]
                   }
                }
             },
             {
-               "id": 8,
+               "id": 58,
                "name": "trigger",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Says when cell should go to the edit mode.",
@@ -191,8 +545,8 @@
                "sources": [
                   {
                      "fileName": "column-type/editor.options.d.ts",
-                     "line": 15,
-                     "character": 11
+                     "line": 18,
+                     "character": 8
                   }
                ],
                "type": {
@@ -201,18 +555,19 @@
                }
             },
             {
-               "id": 17,
+               "id": 86,
                "name": "value",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "column-type/editor.options.d.ts",
-                     "line": 36,
-                     "character": 9
+                     "line": 49,
+                     "character": 6
                   }
                ],
                "type": {
@@ -226,30 +581,31 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  9,
-                  13,
-                  16,
-                  10,
-                  8,
-                  17
+                  84,
+                  59,
+                  76,
+                  85,
+                  60,
+                  58,
+                  86
                ]
             }
          ],
          "sources": [
             {
                "fileName": "column-type/editor.options.d.ts",
-               "line": 6,
-               "character": 26
+               "line": 9,
+               "character": 30
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            7
+            57
          ]
       }
    ],
@@ -260,5 +616,5 @@
          "character": 0
       }
    ],
-   "order": 17
+   "order": 18
 }

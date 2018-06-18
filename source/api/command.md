@@ -2,33 +2,35 @@
 title: Command
 type: api
 group: API
-order: 40
+order: 44
 ---
-A class that implements command pattern in the q-grid.
-Any q-grid actions are implemented through this pattern.
+Use this class to implement command pattern in the qgrid. The most of interactions in the qgrid are utilized by this pattern.
 
 {% docTable "source/api/command.json" %}
 
-### Instanciate a Command
+### Create a command using qgrid facade.
 
 ```javascript
 	const addRowCommand = new qgrid.Command({
+	   canExecute: () => true,
 	   execute: () => {
 	      const newRow = {
 			 id: 1,
-			 text: 'foo'
+			 text: 'Lorem ipsum dolor sit amet'
 	      };
 
-       gridModel.data({
-         rows: gridModel.data().rows.concat(newRow)
-       });
+		  gridModel.data({
+			 rows: gridModel.data().rows.concat(newRow)
+		  });
 	   },
 	   shortcut: 'F7'
-	});
+ });
 ```
 
-### Suggested Links
+### Suggested Links.
 
 * [Action Model](/doc/api/action-model.html)
 * [Action](/doc/api/action.html)
+* [Service](/doc/api/grid.html)
+* [Command Pattern Wiki](https://en.wikipedia.org/wiki/Command_pattern)
 

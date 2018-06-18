@@ -2,7 +2,7 @@
 title: EditCellView
 type: api
 group: API
-order: 77
+order: 84
 ---
 > Under Construction.
 

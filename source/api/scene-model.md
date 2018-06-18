@@ -2,7 +2,7 @@
 title: SceneModel
 type: api
 group: API
-order: 179
+order: 197
 ---
 A class that contains results of q-grid invalidate.
 

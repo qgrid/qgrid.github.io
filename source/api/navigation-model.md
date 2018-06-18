@@ -2,7 +2,7 @@
 title: NavigationModel
 type: api
 group: API
-order: 131
+order: 144
 ---
 A class that gives access to the current cell position inside the q-grid.
 

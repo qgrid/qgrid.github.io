@@ -1,15 +1,15 @@
 {
-   "id": 1511,
+   "id": 1729,
    "name": "\"body/body.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/body/body.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/body/body.view.d.ts",
    "children": [
       {
-         "id": 1512,
+         "id": 1730,
          "name": "BodyView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 1513,
+               "id": 1731,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 1514,
+                     "id": 1732,
                      "name": "new BodyView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 1515,
+                           "id": 1733,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         },
                         {
-                           "id": 1516,
+                           "id": 1734,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,62 +57,27 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1473
+                              "id": 1578
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "BodyView",
-                        "id": 1512
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 1730
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 12,
-                     "character": 44
+                     "line": 10,
+                     "character": 31
                   }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
+               ]
             },
             {
-               "id": 1541,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
-               }
-            },
-            {
-               "id": 1540,
+               "id": 1736,
                "name": "render",
                "kind": 1024,
                "kindString": "Property",
@@ -122,18 +87,18 @@
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 27,
-                     "character": 10
+                     "line": 15,
+                     "character": 7
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Renderer",
-                  "id": 1486
+                  "id": 1681
                }
             },
             {
-               "id": 1517,
+               "id": 1735,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -143,8 +108,8 @@
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 15,
-                     "character": 8
+                     "line": 13,
+                     "character": 14
                   }
                ],
                "type": {
@@ -156,61 +121,7 @@
                }
             },
             {
-               "id": 1526,
-               "name": "colspan",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 1527,
-                     "name": "colspan",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 1528,
-                           "name": "row",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        },
-                        {
-                           "id": 1529,
-                           "name": "column",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reference",
-                              "name": "ColumnView",
-                              "id": 72
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "number"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "body/body.view.d.ts",
-                     "line": 21,
-                     "character": 11
-                  }
-               ]
-            },
-            {
-               "id": 1518,
+               "id": 1737,
                "name": "columns",
                "kind": 2048,
                "kindString": "Method",
@@ -219,25 +130,14 @@
                },
                "signatures": [
                   {
-                     "id": 1519,
+                     "id": 1738,
                      "name": "columns",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 1520,
-                           "name": "row",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        },
-                        {
-                           "id": 1521,
+                           "id": 1739,
                            "name": "pin",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -253,7 +153,7 @@
                         "elementType": {
                            "type": "reference",
                            "name": "ColumnView",
-                           "id": 72
+                           "id": 141
                         }
                      }
                   }
@@ -262,338 +162,7 @@
                   {
                      "fileName": "body/body.view.d.ts",
                      "line": 17,
-                     "character": 11
-                  }
-               ]
-            },
-            {
-               "id": 1549,
-               "name": "dispose",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 1550,
-                     "name": "dispose",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
-               }
-            },
-            {
-               "id": 1535,
-               "name": "label",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 1536,
-                     "name": "label",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 1537,
-                           "name": "row",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        },
-                        {
-                           "id": 1538,
-                           "name": "column",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reference",
-                              "name": "ColumnModel",
-                              "id": 19
-                           }
-                        },
-                        {
-                           "id": 1539,
-                           "name": "value",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {
-                              "isOptional": true
-                           },
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "body/body.view.d.ts",
-                     "line": 25,
-                     "character": 9
-                  }
-               ]
-            },
-            {
-               "id": 1522,
-               "name": "rowspan",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 1523,
-                     "name": "rowspan",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 1524,
-                           "name": "row",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        },
-                        {
-                           "id": 1525,
-                           "name": "column",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reference",
-                              "name": "ColumnView",
-                              "id": 72
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "number"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "body/body.view.d.ts",
-                     "line": 19,
-                     "character": 11
-                  }
-               ]
-            },
-            {
-               "id": 1542,
-               "name": "using",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 1543,
-                     "name": "using",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 1544,
-                           "name": "dispose",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                 "id": 1545,
-                                 "name": "__type",
-                                 "kind": 65536,
-                                 "kindString": "Type literal",
-                                 "flags": {},
-                                 "signatures": [
-                                    {
-                                       "id": 1546,
-                                       "name": "__call",
-                                       "kind": 4096,
-                                       "kindString": "Call signature",
-                                       "flags": {},
-                                       "type": {
-                                          "type": "intrinsic",
-                                          "name": "void"
-                                       }
-                                    }
-                                 ],
-                                 "sources": [
-                                    {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
-                                    }
-                                 ]
-                              }
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 1547,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 1548,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
-               }
-            },
-            {
-               "id": 1530,
-               "name": "value",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 1531,
-                     "name": "value",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 1532,
-                           "name": "row",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        },
-                        {
-                           "id": 1533,
-                           "name": "column",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reference",
-                              "name": "ColumnModel",
-                              "id": 19
-                           }
-                        },
-                        {
-                           "id": 1534,
-                           "name": "value",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {
-                              "isOptional": true
-                           },
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "any"
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "string"
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "body/body.view.d.ts",
-                     "line": 23,
-                     "character": 9
+                     "character": 8
                   }
                ]
             }
@@ -603,44 +172,30 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  1513
+                  1731
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  1541,
-                  1540,
-                  1517
+                  1736,
+                  1735
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  1526,
-                  1518,
-                  1549,
-                  1535,
-                  1522,
-                  1542,
-                  1530
+                  1737
                ]
             }
          ],
          "sources": [
             {
                "fileName": "body/body.view.d.ts",
-               "line": 12,
+               "line": 10,
                "character": 29
-            }
-         ],
-         "extendedTypes": [
-            {
-               "type": "reference",
-               "name": "View",
-               "id": 1150
             }
          ]
       }
@@ -650,7 +205,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            1512
+            1730
          ]
       }
    ],
@@ -661,5 +216,5 @@
          "character": 0
       }
    ],
-   "order": 4
+   "order": 5
 }

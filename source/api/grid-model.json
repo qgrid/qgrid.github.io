@@ -6,13 +6,13 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/grid/grid.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/grid/grid.model.d.ts",
    "children": [
       {
          "id": 2,
          "name": "GridModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,12 +22,37 @@
          },
          "children": [
             {
+               "id": 5,
+               "name": "caption",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Text that is used by grid title plugin to show header inside top toolbar."
+               },
+               "sources": [
+                  {
+                     "fileName": "grid/grid.model.d.ts",
+                     "line": 29,
+                     "character": 8
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
                "id": 3,
                "name": "id",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Grid identifier that is in sync with element id.\nMostly this id is used in a style generation routine to link concrete grid with appropriate style.\nAlso is used in data manipulation plugin to identify correct list of pressets."
@@ -45,12 +70,50 @@
                }
             },
             {
+               "id": 6,
+               "name": "interactionMode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Allows to change perfomance strategy of the grid.\n* `full` grid has full interaction possibilities.\n* `readonly` grid starts to use cache to render values.\n* `detached` grid disable change detection after render."
+               },
+               "sources": [
+                  {
+                     "fileName": "grid/grid.model.d.ts",
+                     "line": 37,
+                     "character": 16
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "full"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "readonly"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "detached"
+                     }
+                  ]
+               }
+            },
+            {
                "id": 4,
                "name": "status",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates a state of the model:\n* `unbound` model is not connected to a grid element.\n* `bound` model connected to a grid element.",
@@ -69,20 +132,18 @@
                }
             },
             {
-               "id": 5,
+               "id": 7,
                "name": "title",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Text that is used by grid title plugin to show header inside top toolbar."
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "grid/grid.model.d.ts",
-                     "line": 29,
+                     "line": 40,
                      "character": 6
                   }
                ],
@@ -97,9 +158,11 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
+                  5,
                   3,
+                  6,
                   4,
-                  5
+                  7
                ]
             }
          ],
@@ -107,15 +170,15 @@
             {
                "fileName": "grid/grid.model.d.ts",
                "line": 8,
-               "character": 30
+               "character": 34
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
             2
          ]
@@ -128,5 +191,5 @@
          "character": 0
       }
    ],
-   "order": 102
+   "order": 114
 }

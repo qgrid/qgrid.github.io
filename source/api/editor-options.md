@@ -2,7 +2,7 @@
 title: EditorOptions
 type: api
 group: API
-order: 17
+order: 18
 ---
 Specific options for the cell edit mode.
 

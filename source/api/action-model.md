@@ -13,29 +13,29 @@ to execute user commands.
 ### Usage
 
 ```javascript
-	const addRowCommand = new qgrid.Command({
-	   execute: () => {
-	      const newRow = {
-			 id: 1,
-			 text: 'foo'
-	      };
+const addRowCommand = new qgrid.Command({
+  execute: () => {
+     const newRow = {
+		 id: 1,
+		 text: 'foo'
+     };
 
-       gridModel.data({
-         rows: gridModel.data().rows.concat(newRow)
-       });
-	   },
-	   shortcut: 'F7'
-	});
+     gridModel.data({
+       rows: gridModel.data().rows.concat(newRow)
+     });
+  },
+  shortcut: 'F7'
+});
 
- const addRowAction = new qgrid.Action({
-    command: addRowCommand,
-    title: 'Add new row',
-    icon: 'add'
- });
+const addRowAction = new qgrid.Action({
+   command: addRowCommand,
+   title: 'Add new row',
+   icon: 'add'
+});
 
- gridModel.action({
-    items: [addRowAction]
- });
+gridModel.action({
+   items: [addRowAction]
+});
 ```
 
 ### Suggested Links
