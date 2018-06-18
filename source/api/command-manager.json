@@ -1,15 +1,15 @@
 {
-   "id": 470,
+   "id": 567,
    "name": "\"command/command.manager.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.manager.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/command/command.manager.d.ts",
    "children": [
       {
-         "id": 471,
+         "id": 568,
          "name": "CommandManager",
          "kind": 128,
          "kindString": "Class",
@@ -22,7 +22,7 @@
          },
          "children": [
             {
-               "id": 472,
+               "id": 569,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,7 +31,7 @@
                },
                "signatures": [
                   {
-                     "id": 473,
+                     "id": 570,
                      "name": "new CommandManager",
                      "kind": 16384,
                      "kindString": "Constructor signature",
@@ -39,20 +39,20 @@
                      "type": {
                         "type": "reference",
                         "name": "CommandManager",
-                        "id": 471
+                        "id": 568
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "command/command.manager.d.ts",
-                     "line": 11,
+                     "line": 12,
                      "character": 37
                   }
                ]
             },
             {
-               "id": 478,
+               "id": 575,
                "name": "filter",
                "kind": 2048,
                "kindString": "Method",
@@ -61,7 +61,7 @@
                },
                "signatures": [
                   {
-                     "id": 479,
+                     "id": 576,
                      "name": "filter",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -71,7 +71,7 @@
                      },
                      "parameters": [
                         {
-                           "id": 480,
+                           "id": 577,
                            "name": "commands",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -84,12 +84,12 @@
                               "elementType": {
                                  "type": "reference",
                                  "name": "Command",
-                                 "id": 299
+                                 "id": 25
                               }
                            }
                         },
                         {
-                           "id": 481,
+                           "id": 578,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -110,7 +110,7 @@
                         "elementType": {
                            "type": "reference",
                            "name": "Command",
-                           "id": 299
+                           "id": 25
                         }
                      }
                   }
@@ -118,13 +118,13 @@
                "sources": [
                   {
                      "fileName": "command/command.manager.d.ts",
-                     "line": 28,
+                     "line": 29,
                      "character": 7
                   }
                ]
             },
             {
-               "id": 474,
+               "id": 571,
                "name": "invoke",
                "kind": 2048,
                "kindString": "Method",
@@ -133,7 +133,7 @@
                },
                "signatures": [
                   {
-                     "id": 475,
+                     "id": 572,
                      "name": "invoke",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -143,7 +143,7 @@
                      },
                      "parameters": [
                         {
-                           "id": 476,
+                           "id": 573,
                            "name": "commands",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -156,12 +156,12 @@
                               "elementType": {
                                  "type": "reference",
                                  "name": "Command",
-                                 "id": 299
+                                 "id": 25
                               }
                            }
                         },
                         {
-                           "id": 477,
+                           "id": 574,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -186,7 +186,7 @@
                "sources": [
                   {
                      "fileName": "command/command.manager.d.ts",
-                     "line": 20,
+                     "line": 21,
                      "character": 7
                   }
                ]
@@ -197,22 +197,22 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  472
+                  569
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  478,
-                  474
+                  575,
+                  571
                ]
             }
          ],
          "sources": [
             {
                "fileName": "command/command.manager.d.ts",
-               "line": 11,
+               "line": 12,
                "character": 35
             }
          ],
@@ -220,7 +220,7 @@
             {
                "type": "reference",
                "name": "TableCommandManager",
-               "id": 1651
+               "id": 3663
             }
          ]
       }
@@ -230,7 +230,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            471
+            568
          ]
       }
    ],
@@ -241,5 +241,5 @@
          "character": 0
       }
    ],
-   "order": 41
+   "order": 45
 }

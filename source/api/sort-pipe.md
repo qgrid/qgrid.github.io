@@ -2,7 +2,7 @@
 title: sortPipe
 type: api
 group: API
-order: 156
+order: 168
 ---
 > Under Construction.
 

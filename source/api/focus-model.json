@@ -1,18 +1,18 @@
 {
-   "id": 193,
+   "id": 260,
    "name": "\"focus/focus.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/focus/focus.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/focus/focus.model.d.ts",
    "children": [
       {
-         "id": 194,
+         "id": 261,
          "name": "FocusModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -21,12 +21,13 @@
          },
          "children": [
             {
-               "id": 196,
+               "id": 263,
                "name": "columnIndex",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Index of column for focused cell."
@@ -35,7 +36,7 @@
                   {
                      "fileName": "focus/focus.model.d.ts",
                      "line": 13,
-                     "character": 15
+                     "character": 12
                   }
                ],
                "type": {
@@ -44,12 +45,13 @@
                }
             },
             {
-               "id": 197,
+               "id": 264,
                "name": "isActive",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if grid is focused or not."
@@ -67,12 +69,13 @@
                }
             },
             {
-               "id": 195,
+               "id": 262,
                "name": "rowIndex",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Index of row for focused cell."
@@ -81,7 +84,7 @@
                   {
                      "fileName": "focus/focus.model.d.ts",
                      "line": 8,
-                     "character": 12
+                     "character": 9
                   }
                ],
                "type": {
@@ -95,9 +98,9 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  196,
-                  197,
-                  195
+                  263,
+                  264,
+                  262
                ]
             }
          ],
@@ -105,17 +108,17 @@
             {
                "fileName": "focus/focus.model.d.ts",
                "line": 4,
-               "character": 31
+               "character": 35
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            194
+            261
          ]
       }
    ],
@@ -126,5 +129,5 @@
          "character": 0
       }
    ],
-   "order": 98
+   "order": 108
 }

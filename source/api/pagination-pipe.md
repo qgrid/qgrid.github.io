@@ -2,7 +2,7 @@
 title: paginationPipe
 type: api
 group: API
-order: 149
+order: 161
 ---
 > Under Construction.
 

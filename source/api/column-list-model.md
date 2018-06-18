@@ -2,7 +2,7 @@
 title: ColumnListModel
 type: api
 group: API
-order: 9
+order: 10
 ---
 A class that responsible for the columns order and generation. Usually user does not interact directly
 with this model as the q-grid uses this in internal pipelines.

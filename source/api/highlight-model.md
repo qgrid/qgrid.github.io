@@ -2,7 +2,7 @@
 title: HighlightModel
 type: api
 group: API
-order: 109
+order: 121
 ---
 A class contains highlight data for rows and columns
 

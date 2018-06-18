@@ -2,7 +2,7 @@
 title: filterPipe
 type: api
 group: API
-order: 146
+order: 158
 ---
 > Under Construction.
 

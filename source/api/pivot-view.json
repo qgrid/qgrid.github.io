@@ -1,15 +1,15 @@
 {
-   "id": 4282,
+   "id": 4861,
    "name": "\"pivot/pivot.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pivot/pivot.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pivot/pivot.view.d.ts",
    "children": [
       {
-         "id": 4283,
+         "id": 4862,
          "name": "PivotView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4284,
+               "id": 4863,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4285,
+                     "id": 4864,
                      "name": "new PivotView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4286,
+                           "id": 4865,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,62 +45,27 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "PivotView",
-                        "id": 4283
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 4862
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "pivot/pivot.view.d.ts",
-                     "line": 9,
-                     "character": 45
+                     "line": 7,
+                     "character": 32
                   }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
+               ]
             },
             {
-               "id": 4296,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
-               }
-            },
-            {
-               "id": 4287,
+               "id": 4866,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -110,8 +75,8 @@
                "sources": [
                   {
                      "fileName": "pivot/pivot.view.d.ts",
-                     "line": 11,
-                     "character": 8
+                     "line": 10,
+                     "character": 5
                   }
                ],
                "type": {
@@ -123,7 +88,7 @@
                }
             },
             {
-               "id": 4288,
+               "id": 4867,
                "name": "valueFactory",
                "kind": 1024,
                "kindString": "Property",
@@ -133,57 +98,109 @@
                "sources": [
                   {
                      "fileName": "pivot/pivot.view.d.ts",
-                     "line": 12,
-                     "character": 16
+                     "line": 11,
+                     "character": 13
                   }
                ],
                "type": {
-                  "type": "reference",
-                  "name": "IValueFactory",
-                  "id": 1214
-               }
-            },
-            {
-               "id": 4304,
-               "name": "dispose",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4305,
-                     "name": "dispose",
-                     "kind": 4096,
-                     "kindString": "Call signature",
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 4868,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
                      "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
-                     }
+                     "signatures": [
+                        {
+                           "id": 4869,
+                           "name": "__call",
+                           "kind": 4096,
+                           "kindString": "Call signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 4870,
+                                 "name": "column",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "reference",
+                                    "name": "ColumnModel",
+                                    "id": 88
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 4871,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 4872,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "parameters": [
+                                          {
+                                             "id": 4873,
+                                             "name": "row",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "any"
+                                             }
+                                          },
+                                          {
+                                             "id": 4874,
+                                             "name": "value",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {
+                                                "isOptional": true
+                                             },
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "any"
+                                             }
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "pivot/pivot.view.d.ts",
+                                       "line": 11,
+                                       "character": 39
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "pivot/pivot.view.d.ts",
+                           "line": 11,
+                           "character": 14
+                        }
+                     ]
                   }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
                }
             },
             {
-               "id": 4289,
+               "id": 4875,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -192,14 +209,14 @@
                },
                "signatures": [
                   {
-                     "id": 4290,
+                     "id": 4876,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4291,
+                           "id": 4877,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -207,7 +224,7 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         }
                      ],
@@ -221,116 +238,12 @@
                   {
                      "fileName": "pivot/pivot.view.d.ts",
                      "line": 13,
-                     "character": 14
+                     "character": 11
                   }
                ]
             },
             {
-               "id": 4297,
-               "name": "using",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 4298,
-                     "name": "using",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "parameters": [
-                        {
-                           "id": 4299,
-                           "name": "dispose",
-                           "kind": 32768,
-                           "kindString": "Parameter",
-                           "flags": {},
-                           "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                 "id": 4300,
-                                 "name": "__type",
-                                 "kind": 65536,
-                                 "kindString": "Type literal",
-                                 "flags": {},
-                                 "signatures": [
-                                    {
-                                       "id": 4301,
-                                       "name": "__call",
-                                       "kind": 4096,
-                                       "kindString": "Call signature",
-                                       "flags": {},
-                                       "type": {
-                                          "type": "intrinsic",
-                                          "name": "void"
-                                       }
-                                    }
-                                 ],
-                                 "sources": [
-                                    {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
-                                    }
-                                 ]
-                              }
-                           }
-                        }
-                     ],
-                     "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 4302,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 4303,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
-               }
-            },
-            {
-               "id": 4292,
+               "id": 4878,
                "name": "value",
                "kind": 2048,
                "kindString": "Method",
@@ -339,14 +252,14 @@
                },
                "signatures": [
                   {
-                     "id": 4293,
+                     "id": 4879,
                      "name": "value",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4294,
+                           "id": 4880,
                            "name": "row",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -357,7 +270,7 @@
                            }
                         },
                         {
-                           "id": 4295,
+                           "id": 4881,
                            "name": "column",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -365,7 +278,7 @@
                            "type": {
                               "type": "reference",
                               "name": "ColumnModel",
-                              "id": 19
+                              "id": 88
                            }
                         }
                      ],
@@ -379,7 +292,7 @@
                   {
                      "fileName": "pivot/pivot.view.d.ts",
                      "line": 14,
-                     "character": 9
+                     "character": 6
                   }
                ]
             }
@@ -389,41 +302,31 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4284
+                  4863
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4296,
-                  4287,
-                  4288
+                  4866,
+                  4867
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4304,
-                  4289,
-                  4297,
-                  4292
+                  4875,
+                  4878
                ]
             }
          ],
          "sources": [
             {
                "fileName": "pivot/pivot.view.d.ts",
-               "line": 9,
+               "line": 7,
                "character": 30
-            }
-         ],
-         "extendedTypes": [
-            {
-               "type": "reference",
-               "name": "View",
-               "id": 1150
             }
          ]
       }
@@ -433,7 +336,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4283
+            4862
          ]
       }
    ],
@@ -444,5 +347,5 @@
          "character": 0
       }
    ],
-   "order": 165
+   "order": 180
 }

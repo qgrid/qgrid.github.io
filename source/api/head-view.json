@@ -1,15 +1,15 @@
 {
-   "id": 3904,
+   "id": 4277,
    "name": "\"head/head.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/head/head.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/head/head.view.d.ts",
    "children": [
       {
-         "id": 3905,
+         "id": 4278,
          "name": "HeadView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 3906,
+               "id": 4279,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 3907,
+                     "id": 4280,
                      "name": "new HeadView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3908,
+                           "id": 4281,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -45,11 +45,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Model",
-                              "id": 916
+                              "id": 819
                            }
                         },
                         {
-                           "id": 3909,
+                           "id": 4282,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1473
+                              "id": 1578
                            }
                         },
                         {
-                           "id": 3910,
+                           "id": 4283,
                            "name": "tagName",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -75,30 +75,20 @@
                      "type": {
                         "type": "reference",
                         "name": "HeadView",
-                        "id": 3905
-                     },
-                     "overwrites": {
-                        "type": "reference",
-                        "name": "View.__constructor",
-                        "id": 1151
+                        "id": 4278
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "head/head.view.d.ts",
-                     "line": 9,
-                     "character": 44
+                     "line": 10,
+                     "character": 31
                   }
-               ],
-               "overwrites": {
-                  "type": "reference",
-                  "name": "View.__constructor",
-                  "id": 1151
-               }
+               ]
             },
             {
-               "id": 3913,
+               "id": 4287,
                "name": "drag",
                "kind": 1024,
                "kindString": "Property",
@@ -109,17 +99,65 @@
                   {
                      "fileName": "head/head.view.d.ts",
                      "line": 14,
-                     "character": 6
+                     "character": 5
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25,
+                  "typeArguments": [
+                     {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 4288,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "children": [
+                              {
+                                 "id": 4289,
+                                 "name": "dragData",
+                                 "kind": 32,
+                                 "kindString": "Variable",
+                                 "flags": {},
+                                 "sources": [
+                                    {
+                                       "fileName": "head/head.view.d.ts",
+                                       "line": 14,
+                                       "character": 25
+                                    }
+                                 ],
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "string"
+                                 }
+                              }
+                           ],
+                           "groups": [
+                              {
+                                 "title": "Variables",
+                                 "kind": 32,
+                                 "children": [
+                                    4289
+                                 ]
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "head/head.view.d.ts",
+                                 "line": 14,
+                                 "character": 15
+                              }
+                           ]
+                        }
+                     }
+                  ]
                }
             },
             {
-               "id": 3912,
+               "id": 4284,
                "name": "drop",
                "kind": 1024,
                "kindString": "Property",
@@ -130,42 +168,65 @@
                   {
                      "fileName": "head/head.view.d.ts",
                      "line": 13,
-                     "character": 6
+                     "character": 5
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25,
+                  "typeArguments": [
+                     {
+                        "type": "reflection",
+                        "declaration": {
+                           "id": 4285,
+                           "name": "__type",
+                           "kind": 65536,
+                           "kindString": "Type literal",
+                           "flags": {},
+                           "children": [
+                              {
+                                 "id": 4286,
+                                 "name": "dragData",
+                                 "kind": 32,
+                                 "kindString": "Variable",
+                                 "flags": {},
+                                 "sources": [
+                                    {
+                                       "fileName": "head/head.view.d.ts",
+                                       "line": 13,
+                                       "character": 25
+                                    }
+                                 ],
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "string"
+                                 }
+                              }
+                           ],
+                           "groups": [
+                              {
+                                 "title": "Variables",
+                                 "kind": 32,
+                                 "children": [
+                                    4286
+                                 ]
+                              }
+                           ],
+                           "sources": [
+                              {
+                                 "fileName": "head/head.view.d.ts",
+                                 "line": 13,
+                                 "character": 15
+                              }
+                           ]
+                        }
+                     }
+                  ]
                }
             },
             {
-               "id": 3915,
-               "name": "model",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "sources": [
-                  {
-                     "fileName": "view/view.d.ts",
-                     "line": 6,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "any"
-               },
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "View.model",
-                  "id": 1154
-               }
-            },
-            {
-               "id": 3914,
+               "id": 4290,
                "name": "resize",
                "kind": 1024,
                "kindString": "Property",
@@ -175,18 +236,18 @@
                "sources": [
                   {
                      "fileName": "head/head.view.d.ts",
-                     "line": 15,
-                     "character": 8
+                     "line": 16,
+                     "character": 7
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 3911,
+               "id": 4291,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -196,60 +257,25 @@
                "sources": [
                   {
                      "fileName": "head/head.view.d.ts",
-                     "line": 12,
-                     "character": 6
+                     "line": 18,
+                     "character": 5
                   }
                ],
                "type": {
                   "type": "array",
                   "elementType": {
-                     "type": "intrinsic",
-                     "name": "any"
-                  }
-               }
-            },
-            {
-               "id": 3923,
-               "name": "dispose",
-               "kind": 2048,
-               "kindString": "Method",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 3924,
-                     "name": "dispose",
-                     "kind": 4096,
-                     "kindString": "Call signature",
-                     "flags": {},
-                     "type": {
-                        "type": "intrinsic",
-                        "name": "void"
-                     },
-                     "inheritedFrom": {
+                     "type": "array",
+                     "elementType": {
                         "type": "reference",
-                        "name": "DisposableView.dispose",
-                        "id": 1147
+                        "name": "ColumnView",
+                        "id": 141
                      }
                   }
-               ],
-               "sources": [
-                  {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 6,
-                     "character": 9
-                  }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.dispose",
-                  "id": 1147
                }
             },
             {
-               "id": 3916,
-               "name": "using",
+               "id": 4292,
+               "name": "columns",
                "kind": 2048,
                "kindString": "Method",
                "flags": {
@@ -257,99 +283,48 @@
                },
                "signatures": [
                   {
-                     "id": 3917,
-                     "name": "using",
+                     "id": 4293,
+                     "name": "columns",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3918,
-                           "name": "dispose",
+                           "id": 4294,
+                           "name": "row",
                            "kind": 32768,
                            "kindString": "Parameter",
                            "flags": {},
                            "type": {
-                              "type": "reflection",
-                              "declaration": {
-                                 "id": 3919,
-                                 "name": "__type",
-                                 "kind": 65536,
-                                 "kindString": "Type literal",
-                                 "flags": {},
-                                 "signatures": [
-                                    {
-                                       "id": 3920,
-                                       "name": "__call",
-                                       "kind": 4096,
-                                       "kindString": "Call signature",
-                                       "flags": {},
-                                       "type": {
-                                          "type": "intrinsic",
-                                          "name": "void"
-                                       }
-                                    }
-                                 ],
-                                 "sources": [
-                                    {
-                                       "fileName": "view/disposable.view.d.ts",
-                                       "line": 4,
-                                       "character": 16
-                                    }
-                                 ]
-                              }
+                              "type": "intrinsic",
+                              "name": "any"
+                           }
+                        },
+                        {
+                           "id": 4295,
+                           "name": "pin",
+                           "kind": 32768,
+                           "kindString": "Parameter",
+                           "flags": {},
+                           "type": {
+                              "type": "intrinsic",
+                              "name": "string"
                            }
                         }
                      ],
                      "type": {
-                        "type": "reflection",
-                        "declaration": {
-                           "id": 3921,
-                           "name": "__type",
-                           "kind": 65536,
-                           "kindString": "Type literal",
-                           "flags": {},
-                           "signatures": [
-                              {
-                                 "id": 3922,
-                                 "name": "__call",
-                                 "kind": 4096,
-                                 "kindString": "Call signature",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "void"
-                                 }
-                              }
-                           ],
-                           "sources": [
-                              {
-                                 "fileName": "view/disposable.view.d.ts",
-                                 "line": 4,
-                                 "character": 29
-                              }
-                           ]
-                        }
-                     },
-                     "inheritedFrom": {
-                        "type": "reference",
-                        "name": "DisposableView.using",
-                        "id": 1140
+                        "type": "intrinsic",
+                        "name": "any"
                      }
                   }
                ],
                "sources": [
                   {
-                     "fileName": "view/disposable.view.d.ts",
-                     "line": 4,
-                     "character": 7
+                     "fileName": "head/head.view.d.ts",
+                     "line": 19,
+                     "character": 8
                   }
-               ],
-               "inheritedFrom": {
-                  "type": "reference",
-                  "name": "DisposableView.using",
-                  "id": 1140
-               }
+               ]
             }
          ],
          "groups": [
@@ -357,41 +332,32 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  3906
+                  4279
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  3913,
-                  3912,
-                  3915,
-                  3914,
-                  3911
+                  4287,
+                  4284,
+                  4290,
+                  4291
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  3923,
-                  3916
+                  4292
                ]
             }
          ],
          "sources": [
             {
                "fileName": "head/head.view.d.ts",
-               "line": 9,
+               "line": 10,
                "character": 29
-            }
-         ],
-         "extendedTypes": [
-            {
-               "type": "reference",
-               "name": "View",
-               "id": 1150
             }
          ]
       }
@@ -401,7 +367,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            3905
+            4278
          ]
       }
    ],
@@ -412,5 +378,5 @@
          "character": 0
       }
    ],
-   "order": 108
+   "order": 120
 }

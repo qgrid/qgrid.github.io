@@ -1,43 +1,43 @@
 {
-   "id": 132,
+   "id": 178,
    "name": "\"data/data.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/data/data.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/data/data.model.d.ts",
    "children": [
       {
-         "id": 133,
+         "id": 179,
          "name": "DataModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that gives access to the high level grid data structures.",
-            "text": "### Usage\nUsually grid user can define this properties in different places.\nInside html through attribute bindings:\n```html\n<q-grid [columns]=\"userColumns\" [rows]=\"userRows\">\n```\n\nInside html throught component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nInside js code throught model:\n```javascript\nconst userRows = [];\nconst userColumns = [];\n\ngridModel.data({\n rows: userRows,\n columns: userColumns\n})\n```\n\n### Suggested Links\n\n* [data.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/data.pipe.js)\n"
+            "shortText": "Use this class to get access to the high level qgrid data structures.",
+            "text": "### Usage\nIn html through attribute bindings:\n```html\n<q-grid [columns]=\"myColumns\" [rows]=\"myRows\">\n</q-grid>\n```\n\nIn html via component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\" title=\"ID\" type=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"myColumnKey\" title=\"My Column Name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nIn js code throught model:\n```javascript\nconst myRows = [];\nconst myColumns = [];\n\ngridModel.data({\n rows: myRows,\n columns: myColumns\n});\n```\n\n### Suggested Links\n\n* [qgrid Model](/doc/api/model)\n* [Data Pipe](/doc/api/data-pipe)\n"
          },
          "children": [
             {
-               "id": 135,
+               "id": 181,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "Set of columns to display.\nUsually data columns can be setup from different places for the same grid:",
-                  "text": "* Columns `binding` property, `<q-grid [columns]=\"userColumns\">`.\n* Columns component, `<q-grid-columns>`.\n* Through q-grid model data columns property.\n\nWe can have different sources of columns because each column has `key` property,\nthat allows to make a merge. If you have defined columns in javascript and in template\nwith the same key, algorithm will try persist settings from both sources but\njavascript will have top priority.\n"
+                  "shortText": "A set of columns to display.\nqgrid makes it possible to add columns from various sources and then merge\nthem due to each column having a key property. Note that if you have defined columns in\njavascript and template with the same key, algorithm tries to keep the setting from both\nsources but javascript will have a top priority."
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 63,
-                     "character": 11
+                     "line": 55,
+                     "character": 8
                   }
                ],
                "type": {
@@ -45,54 +45,342 @@
                   "elementType": {
                      "type": "reference",
                      "name": "ColumnModel",
-                     "id": 19
+                     "id": 88
                   }
                }
             },
             {
-               "id": 136,
-               "name": "pipe",
+               "id": 191,
+               "name": "id",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "Chain of methods that grid invokes asyncroniuosly anytime refresh is required,\nsee `PipeModel` that contains information when grid demands refreshing."
+                  "shortText": "A set of 2 methods to identify column and row id. Note that if result id\nis not unique qgrid behavior can be unpredictable.\nBy default:",
+                  "text": "* `row` method is an identity function.\n* `column` method return column key property.\n"
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 69,
-                     "character": 8
+                     "line": 71,
+                     "character": 3
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 192,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "children": [
+                        {
+                           "id": 198,
+                           "name": "column",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "data/data.model.d.ts",
+                                 "line": 73,
+                                 "character": 8
+                              }
+                           ],
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 199,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 200,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "parameters": [
+                                          {
+                                             "id": 201,
+                                             "name": "index",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "number"
+                                             }
+                                          },
+                                          {
+                                             "id": 202,
+                                             "name": "column",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "reference",
+                                                "name": "ColumnModel",
+                                                "id": 88
+                                             }
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "data/data.model.d.ts",
+                                       "line": 73,
+                                       "character": 9
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        {
+                           "id": 193,
+                           "name": "row",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "data/data.model.d.ts",
+                                 "line": 72,
+                                 "character": 5
+                              }
+                           ],
+                           "type": {
+                              "type": "reflection",
+                              "declaration": {
+                                 "id": 194,
+                                 "name": "__type",
+                                 "kind": 65536,
+                                 "kindString": "Type literal",
+                                 "flags": {},
+                                 "signatures": [
+                                    {
+                                       "id": 195,
+                                       "name": "__call",
+                                       "kind": 4096,
+                                       "kindString": "Call signature",
+                                       "flags": {},
+                                       "parameters": [
+                                          {
+                                             "id": 196,
+                                             "name": "index",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "number"
+                                             }
+                                          },
+                                          {
+                                             "id": 197,
+                                             "name": "row",
+                                             "kind": 32768,
+                                             "kindString": "Parameter",
+                                             "flags": {},
+                                             "type": {
+                                                "type": "intrinsic",
+                                                "name": "any"
+                                             }
+                                          }
+                                       ],
+                                       "type": {
+                                          "type": "intrinsic",
+                                          "name": "any"
+                                       }
+                                    }
+                                 ],
+                                 "sources": [
+                                    {
+                                       "fileName": "data/data.model.d.ts",
+                                       "line": 72,
+                                       "character": 6
+                                    }
+                                 ]
+                              }
+                           }
+                        }
+                     ],
+                     "groups": [
+                        {
+                           "title": "Variables",
+                           "kind": 32,
+                           "children": [
+                              198,
+                              193
+                           ]
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "data/data.model.d.ts",
+                           "line": 71,
+                           "character": 5
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 182,
+               "name": "pipe",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "A series of methods that grid invokes asynchronously anytime refresh is required.\nPlease see PipeModel section for more information on grid refresh"
+               },
+               "sources": [
+                  {
+                     "fileName": "data/data.model.d.ts",
+                     "line": 61,
+                     "character": 5
                   }
                ],
                "type": {
                   "type": "array",
                   "elementType": {
-                     "type": "reference",
-                     "name": "IPipe",
-                     "id": 118
+                     "type": "reflection",
+                     "declaration": {
+                        "id": 183,
+                        "name": "__type",
+                        "kind": 65536,
+                        "kindString": "Type literal",
+                        "flags": {},
+                        "signatures": [
+                           {
+                              "id": 184,
+                              "name": "__call",
+                              "kind": 4096,
+                              "kindString": "Call signature",
+                              "flags": {},
+                              "parameters": [
+                                 {
+                                    "id": 185,
+                                    "name": "memo",
+                                    "kind": 32768,
+                                    "kindString": "Parameter",
+                                    "flags": {},
+                                    "type": {
+                                       "type": "intrinsic",
+                                       "name": "any"
+                                    }
+                                 },
+                                 {
+                                    "id": 186,
+                                    "name": "context",
+                                    "kind": 32768,
+                                    "kindString": "Parameter",
+                                    "flags": {},
+                                    "type": {
+                                       "type": "reference",
+                                       "name": "PipeContext",
+                                       "id": 170
+                                    }
+                                 },
+                                 {
+                                    "id": 187,
+                                    "name": "next",
+                                    "kind": 32768,
+                                    "kindString": "Parameter",
+                                    "flags": {},
+                                    "type": {
+                                       "type": "reflection",
+                                       "declaration": {
+                                          "id": 188,
+                                          "name": "__type",
+                                          "kind": 65536,
+                                          "kindString": "Type literal",
+                                          "flags": {},
+                                          "signatures": [
+                                             {
+                                                "id": 189,
+                                                "name": "__call",
+                                                "kind": 4096,
+                                                "kindString": "Call signature",
+                                                "flags": {},
+                                                "parameters": [
+                                                   {
+                                                      "id": 190,
+                                                      "name": "memo",
+                                                      "kind": 32768,
+                                                      "kindString": "Parameter",
+                                                      "flags": {},
+                                                      "type": {
+                                                         "type": "intrinsic",
+                                                         "name": "any"
+                                                      }
+                                                   }
+                                                ],
+                                                "type": {
+                                                   "type": "intrinsic",
+                                                   "name": "void"
+                                                }
+                                             }
+                                          ],
+                                          "sources": [
+                                             {
+                                                "fileName": "data/data.model.d.ts",
+                                                "line": 61,
+                                                "character": 48
+                                             }
+                                          ]
+                                       }
+                                    }
+                                 }
+                              ],
+                              "type": {
+                                 "type": "intrinsic",
+                                 "name": "any"
+                              }
+                           }
+                        ],
+                        "sources": [
+                           {
+                              "fileName": "data/data.model.d.ts",
+                              "line": 61,
+                              "character": 7
+                           }
+                        ]
+                     }
                   }
                }
             },
             {
-               "id": 134,
+               "id": 180,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "List of data rows to display.\nUsually data rows can be setup from different places:",
-                  "text": "* Rows `binding` property, `<q-grid [rows]=\"userRows\">`\n* Through q-grid mode data rows property.\n"
+                  "shortText": "A list of data rows to display."
                },
                "sources": [
                   {
                      "fileName": "data/data.model.d.ts",
-                     "line": 48,
-                     "character": 8
+                     "line": 46,
+                     "character": 5
                   }
                ],
                "type": {
@@ -109,27 +397,28 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  135,
-                  136,
-                  134
+                  181,
+                  191,
+                  182,
+                  180
                ]
             }
          ],
          "sources": [
             {
                "fileName": "data/data.model.d.ts",
-               "line": 39,
-               "character": 30
+               "line": 41,
+               "character": 34
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            133
+            179
          ]
       }
    ],
@@ -140,5 +429,5 @@
          "character": 0
       }
    ],
-   "order": 45
+   "order": 48
 }

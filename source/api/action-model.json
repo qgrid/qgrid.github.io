@@ -1,63 +1,34 @@
 {
-   "id": 528,
+   "id": 636,
    "name": "\"action/action.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/action/action.model.d.ts",
    "children": [
       {
-         "id": 529,
+         "id": 637,
          "name": "ActionModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
          "comment": {
             "shortText": "A class to handle and visualize in UI custom user behaviors(like add or delete row).\nFor instance, [action bar](/doc/feature/action.html) plugin uses this model to draw buttons on top of the q-grid\nto execute user commands.",
-            "text": "### Usage\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n\n const addRowAction = new qgrid.Action({\n    command: addRowCommand,\n    title: 'Add new row',\n    icon: 'add'\n });\n\n gridModel.action({\n    items: [addRowAction]\n });\n```\n\n### Suggested Links\n\n* [Action](/doc/api/action.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n* [Shortcut](/doc/api/shortcut.html)\n* [Command Manager](/doc/api/command-manager.html)\n"
+            "text": "### Usage\n\n```javascript\nconst addRowCommand = new qgrid.Command({\n  execute: () => {\n     const newRow = {\n\t\t id: 1,\n\t\t text: 'foo'\n     };\n\n     gridModel.data({\n       rows: gridModel.data().rows.concat(newRow)\n     });\n  },\n  shortcut: 'F7'\n});\n\nconst addRowAction = new qgrid.Action({\n   command: addRowCommand,\n   title: 'Add new row',\n   icon: 'add'\n});\n\ngridModel.action({\n   items: [addRowAction]\n});\n```\n\n### Suggested Links\n\n* [Action](/doc/api/action.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action.html)\n* [Shortcut](/doc/api/shortcut.html)\n* [Command Manager](/doc/api/command-manager.html)\n"
          },
          "children": [
             {
-               "id": 530,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 531,
-                     "name": "new ActionModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "ActionModel",
-                        "id": 529
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "action/action.model.d.ts",
-                     "line": 47,
-                     "character": 34
-                  }
-               ]
-            },
-            {
-               "id": 533,
+               "id": 639,
                "name": "items",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "List of actions that will be added to the command manager,\nand binded to the keydown events."
@@ -65,8 +36,8 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 56,
-                     "character": 9
+                     "line": 54,
+                     "character": 6
                   }
                ],
                "type": {
@@ -74,17 +45,18 @@
                   "elementType": {
                      "type": "reference",
                      "name": "Action",
-                     "id": 461
+                     "id": 45
                   }
                }
             },
             {
-               "id": 535,
+               "id": 641,
                "name": "manager",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Command manager is responsible for the next questions:\n* What commands can be executed.\n* How(e.g. in which order) commands should be executed."
@@ -92,44 +64,46 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 68,
-                     "character": 11
+                     "line": 66,
+                     "character": 8
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "CommandManager",
-                  "id": 471
+                  "id": 568
                }
             },
             {
-               "id": 532,
+               "id": 638,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 50,
-                     "character": 12
+                     "line": 48,
+                     "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             },
             {
-               "id": 534,
+               "id": 640,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "The service that connects keydown events and commands."
@@ -137,33 +111,26 @@
                "sources": [
                   {
                      "fileName": "action/action.model.d.ts",
-                     "line": 61,
-                     "character": 12
+                     "line": 59,
+                     "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Shortcut",
-                  "id": 501
+                  "id": 598
                }
             }
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  530
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  533,
-                  535,
-                  532,
-                  534
+                  639,
+                  641,
+                  638,
+                  640
                ]
             }
          ],
@@ -171,17 +138,17 @@
             {
                "fileName": "action/action.model.d.ts",
                "line": 47,
-               "character": 32
+               "character": 36
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            529
+            637
          ]
       }
    ],

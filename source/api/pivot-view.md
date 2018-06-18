@@ -2,7 +2,7 @@
 title: PivotView
 type: api
 group: API
-order: 165
+order: 180
 ---
 > Under Construction.
 

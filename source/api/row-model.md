@@ -2,7 +2,7 @@
 title: RowModel
 type: api
 group: API
-order: 175
+order: 192
 ---
 > Under construction.
 

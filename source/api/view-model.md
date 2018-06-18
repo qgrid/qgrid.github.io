@@ -2,7 +2,7 @@
 title: ViewModel
 type: api
 group: API
-order: 232
+order: 253
 ---
 A class that represent a raw data to render.
 

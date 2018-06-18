@@ -2,7 +2,7 @@
 title: EditRowView
 type: api
 group: API
-order: 80
+order: 87
 ---
 > Under Construction.
 

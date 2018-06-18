@@ -2,7 +2,7 @@
 title: FocusModel
 type: api
 group: API
-order: 98
+order: 108
 ---
 A class that contains focused cell position.
 

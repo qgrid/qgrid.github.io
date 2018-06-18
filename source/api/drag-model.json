@@ -1,18 +1,18 @@
 {
-   "id": 435,
+   "id": 497,
    "name": "\"drag/drag.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/drag/drag.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/drag/drag.model.d.ts",
    "children": [
       {
-         "id": 436,
+         "id": 498,
          "name": "DragModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -21,12 +21,13 @@
          },
          "children": [
             {
-               "id": 437,
+               "id": 499,
                "name": "isActive",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Flag that indicates drag in drop is perfoming.\nUsually is used inside the grid to apply some custom styles."
@@ -49,7 +50,7 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  437
+                  499
                ]
             }
          ],
@@ -57,17 +58,17 @@
             {
                "fileName": "drag/drag.model.d.ts",
                "line": 4,
-               "character": 30
+               "character": 34
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            436
+            498
          ]
       }
    ],
@@ -78,5 +79,5 @@
          "character": 0
       }
    ],
-   "order": 74
+   "order": 80
 }

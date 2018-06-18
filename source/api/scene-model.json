@@ -1,18 +1,18 @@
 {
-   "id": 93,
+   "id": 152,
    "name": "\"scene/scene.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scene/scene.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/scene/scene.model.d.ts",
    "children": [
       {
-         "id": 94,
+         "id": 153,
          "name": "SceneModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,42 +22,13 @@
          },
          "children": [
             {
-               "id": 95,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 96,
-                     "name": "new SceneModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "SceneModel",
-                        "id": 94
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "scene/scene.model.d.ts",
-                     "line": 10,
-                     "character": 33
-                  }
-               ]
-            },
-            {
-               "id": 100,
+               "id": 157,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Column rendering object."
@@ -65,62 +36,22 @@
                "sources": [
                   {
                      "fileName": "scene/scene.model.d.ts",
-                     "line": 34,
+                     "line": 32,
                      "character": 7
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 101,
+                     "id": 158,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "children": [
                         {
-                           "id": 104,
+                           "id": 161,
                            "name": "area",
-                           "kind": 32,
-                           "kindString": "Variable",
-                           "flags": {},
-                           "sources": [
-                              {
-                                 "fileName": "scene/scene.model.d.ts",
-                                 "line": 37,
-                                 "character": 6
-                              }
-                           ],
-                           "type": {
-                              "type": "reference",
-                              "name": "__type"
-                           }
-                        },
-                        {
-                           "id": 103,
-                           "name": "line",
-                           "kind": 32,
-                           "kindString": "Variable",
-                           "flags": {},
-                           "sources": [
-                              {
-                                 "fileName": "scene/scene.model.d.ts",
-                                 "line": 36,
-                                 "character": 6
-                              }
-                           ],
-                           "type": {
-                              "type": "array",
-                              "elementType": {
-                                 "type": "reference",
-                                 "name": "ColumnView",
-                                 "id": 72
-                              }
-                           }
-                        },
-                        {
-                           "id": 102,
-                           "name": "rows",
                            "kind": 32,
                            "kindString": "Variable",
                            "flags": {},
@@ -132,13 +63,53 @@
                               }
                            ],
                            "type": {
+                              "type": "reference",
+                              "name": "__type"
+                           }
+                        },
+                        {
+                           "id": 160,
+                           "name": "line",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "scene/scene.model.d.ts",
+                                 "line": 34,
+                                 "character": 6
+                              }
+                           ],
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "reference",
+                                 "name": "ColumnView",
+                                 "id": 141
+                              }
+                           }
+                        },
+                        {
+                           "id": 159,
+                           "name": "rows",
+                           "kind": 32,
+                           "kindString": "Variable",
+                           "flags": {},
+                           "sources": [
+                              {
+                                 "fileName": "scene/scene.model.d.ts",
+                                 "line": 33,
+                                 "character": 6
+                              }
+                           ],
+                           "type": {
                               "type": "array",
                               "elementType": {
                                  "type": "array",
                                  "elementType": {
                                     "type": "reference",
                                     "name": "ColumnView",
-                                    "id": 72
+                                    "id": 141
                                  }
                               }
                            }
@@ -149,29 +120,30 @@
                            "title": "Variables",
                            "kind": 32,
                            "children": [
-                              104,
-                              103,
-                              102
+                              161,
+                              160,
+                              159
                            ]
                         }
                      ],
                      "sources": [
                         {
                            "fileName": "scene/scene.model.d.ts",
-                           "line": 34,
-                           "character": 8
+                           "line": 32,
+                           "character": 9
                         }
                      ]
                   }
                }
             },
             {
-               "id": 97,
+               "id": 154,
                "name": "round",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Number of invalidations in queue. Is used to understand when dom is ready."
@@ -179,7 +151,7 @@
                "sources": [
                   {
                      "fileName": "scene/scene.model.d.ts",
-                     "line": 16,
+                     "line": 14,
                      "character": 6
                   }
                ],
@@ -189,12 +161,13 @@
                }
             },
             {
-               "id": 99,
+               "id": 156,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "List of rows to render."
@@ -202,7 +175,7 @@
                "sources": [
                   {
                      "fileName": "scene/scene.model.d.ts",
-                     "line": 29,
+                     "line": 27,
                      "character": 5
                   }
                ],
@@ -211,17 +184,18 @@
                   "elementType": {
                      "type": "reference",
                      "name": "RowView",
-                     "id": 87
+                     "id": 149
                   }
                }
             },
             {
-               "id": 98,
+               "id": 155,
                "name": "status",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Status of invalidation.",
@@ -230,7 +204,7 @@
                "sources": [
                   {
                      "fileName": "scene/scene.model.d.ts",
-                     "line": 24,
+                     "line": 22,
                      "character": 7
                   }
                ],
@@ -242,20 +216,13 @@
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  95
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  100,
-                  97,
-                  99,
-                  98
+                  157,
+                  154,
+                  156,
+                  155
                ]
             }
          ],
@@ -263,17 +230,17 @@
             {
                "fileName": "scene/scene.model.d.ts",
                "line": 10,
-               "character": 31
+               "character": 35
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            94
+            153
          ]
       }
    ],
@@ -284,5 +251,5 @@
          "character": 0
       }
    ],
-   "order": 179
+   "order": 197
 }

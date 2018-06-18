@@ -2,7 +2,7 @@
 title: GridModel
 type: api
 group: API
-order: 102
+order: 114
 ---
 A class contains basic grid options like id and title.
 

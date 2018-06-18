@@ -2,7 +2,7 @@
 title: ColumnModel
 type: api
 group: API
-order: 13
+order: 14
 ---
 A class that represents any column in the q-grid.
 

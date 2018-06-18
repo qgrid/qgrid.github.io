@@ -2,7 +2,7 @@
 title: HighlightView
 type: api
 group: API
-order: 110
+order: 122
 ---
 > Under Construction.
 

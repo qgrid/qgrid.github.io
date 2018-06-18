@@ -2,7 +2,7 @@
 title: PivotModel
 type: api
 group: API
-order: 164
+order: 179
 ---
 A class to control q-grid pivoting functions.
 

@@ -1,15 +1,15 @@
 {
-   "id": 298,
+   "id": 24,
    "name": "\"command/command.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/command/command.d.ts",
    "children": [
       {
-         "id": 299,
+         "id": 25,
          "name": "Command",
          "kind": 128,
          "kindString": "Class",
@@ -17,12 +17,21 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that implements command pattern in the q-grid.\nAny q-grid actions are implemented through this pattern.",
-            "text": "### Instanciate a Command\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'foo'\n\t      };\n\n       gridModel.data({\n         rows: gridModel.data().rows.concat(newRow)\n       });\n\t   },\n\t   shortcut: 'F7'\n\t});\n```\n\n### Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n"
+            "shortText": "Use this class to implement command pattern in the qgrid. The most of interactions in the qgrid are utilized by this pattern.",
+            "text": "### Create a command using qgrid facade.\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   canExecute: () => true,\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'Lorem ipsum dolor sit amet'\n\t      };\n\n\t\t  gridModel.data({\n\t\t\t rows: gridModel.data().rows.concat(newRow)\n\t\t  });\n\t   },\n\t   shortcut: 'F7'\n });\n```\n\n### Suggested Links.\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n* [Service](/doc/api/grid.html)\n* [Command Pattern Wiki](https://en.wikipedia.org/wiki/Command_pattern)\n"
          },
+         "typeParameter": [
+            {
+               "id": 26,
+               "name": "T",
+               "kind": 131072,
+               "kindString": "Type parameter",
+               "flags": {}
+            }
+         ],
          "children": [
             {
-               "id": 300,
+               "id": 27,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -31,14 +40,14 @@
                },
                "signatures": [
                   {
-                     "id": 301,
+                     "id": 28,
                      "name": "new Command",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 302,
+                           "id": 29,
                            "name": "context",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -47,28 +56,34 @@
                            },
                            "type": {
                               "type": "reference",
-                              "name": "IContext",
-                              "id": 288
+                              "name": "CommandContext",
+                              "id": 9,
+                              "typeArguments": [
+                                 {
+                                    "type": "typeParameter",
+                                    "name": "T"
+                                 }
+                              ]
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "Command",
-                        "id": 299
+                        "id": 25
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 30,
-                     "character": 30
+                     "line": 32,
+                     "character": 39
                   }
                ]
             },
             {
-               "id": 303,
+               "id": 30,
                "name": "canExecute",
                "kind": 1024,
                "kindString": "Property",
@@ -76,33 +91,46 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Indicates if command is invokable."
+                  "shortText": "Indicates if a command can be invoked. Use one argument to support typescript generic typification.\nBy default true value is returned."
                },
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 36,
-                     "character": 11
+                     "line": 39,
+                     "character": 14
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 304,
+                     "id": 31,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 305,
+                           "id": 32,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 306,
+                                 "id": 33,
+                                 "name": "e",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {
+                                    "isOptional": true
+                                 },
+                                 "type": {
+                                    "type": "typeParameter",
+                                    "name": "T"
+                                 }
+                              },
+                              {
+                                 "id": 34,
                                  "name": "args",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -127,15 +155,15 @@
                      "sources": [
                         {
                            "fileName": "command/command.d.ts",
-                           "line": 36,
-                           "character": 12
+                           "line": 39,
+                           "character": 15
                         }
                      ]
                   }
                }
             },
             {
-               "id": 307,
+               "id": 35,
                "name": "execute",
                "kind": 1024,
                "kindString": "Property",
@@ -143,33 +171,46 @@
                   "isExported": true
                },
                "comment": {
-                  "shortText": "Invoke the command."
+                  "shortText": "Invokes the command. Use one argument to support typescript generic typification.\nSometimes interaction model requires to return a value, for example, default command manager\nstops to process next commands if false is returned by the command execute method."
                },
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 41,
-                     "character": 8
+                     "line": 46,
+                     "character": 11
                   }
                ],
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 308,
+                     "id": 36,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 309,
+                           "id": 37,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 310,
+                                 "id": 38,
+                                 "name": "e",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {
+                                    "isOptional": true
+                                 },
+                                 "type": {
+                                    "type": "typeParameter",
+                                    "name": "T"
+                                 }
+                              },
+                              {
+                                 "id": 39,
                                  "name": "args",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -194,15 +235,15 @@
                      "sources": [
                         {
                            "fileName": "command/command.d.ts",
-                           "line": 41,
-                           "character": 9
+                           "line": 46,
+                           "character": 12
                         }
                      ]
                   }
                }
             },
             {
-               "id": 312,
+               "id": 41,
                "name": "priority",
                "kind": 1024,
                "kindString": "Property",
@@ -211,13 +252,13 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Command priority that can be used by `command manager` to specify order if commands to execute.\nOne of the examples if several commands have the same shortcut, we need a way to understand\nin what order these commands should be executed."
+                  "shortText": "Command priority that can be used by command manager to specify order of commands to execute.\nFor example, if several commands have the same shortcut, you may need to see in which order\nthese commands should be executed."
                },
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 60,
-                     "character": 9
+                     "line": 64,
+                     "character": 12
                   }
                ],
                "type": {
@@ -226,7 +267,7 @@
                }
             },
             {
-               "id": 311,
+               "id": 40,
                "name": "shortcut",
                "kind": 1024,
                "kindString": "Property",
@@ -235,14 +276,14 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Sequence of keyboard key codes, to execute the command.",
-                  "text": "Some examples:\n\n* `'shift+a'`\n* `'ctrl+s'`\n* `'f2'`\n\n"
+                  "shortText": "A sequence of keyboard key codes to execute the command.\nHere are some examples:",
+                  "text": "* shift+a\n* ctrl+s\n* f2\n\n"
                },
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 53,
-                     "character": 9
+                     "line": 57,
+                     "character": 12
                   }
                ],
                "type": {
@@ -251,7 +292,31 @@
                }
             },
             {
-               "id": 313,
+               "id": 43,
+               "name": "sink",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "If a command is executed by qgrid command manager, the sink value contains\nthe last canExecute result."
+               },
+               "sources": [
+                  {
+                     "fileName": "command/command.d.ts",
+                     "line": 75,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "any"
+               }
+            },
+            {
+               "id": 42,
                "name": "source",
                "kind": 1024,
                "kindString": "Property",
@@ -259,10 +324,13 @@
                   "isExported": true,
                   "isOptional": true
                },
+               "comment": {
+                  "shortText": "Idicates an origin of the command."
+               },
                "sources": [
                   {
                      "fileName": "command/command.d.ts",
-                     "line": 62,
+                     "line": 69,
                      "character": 7
                   }
                ],
@@ -277,25 +345,26 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  300
+                  27
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  303,
-                  307,
-                  312,
-                  311,
-                  313
+                  30,
+                  35,
+                  41,
+                  40,
+                  43,
+                  42
                ]
             }
          ],
          "sources": [
             {
                "fileName": "command/command.d.ts",
-               "line": 30,
+               "line": 32,
                "character": 28
             }
          ]
@@ -306,7 +375,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            299
+            25
          ]
       }
    ],
@@ -317,5 +386,5 @@
          "character": 0
       }
    ],
-   "order": 40
+   "order": 44
 }

@@ -2,7 +2,7 @@
 title: DragModel
 type: api
 group: API
-order: 74
+order: 80
 ---
 A class to work with drag and drop grid infrastructure.
 

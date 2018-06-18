@@ -2,7 +2,7 @@
 title: PaginationModel
 type: api
 group: API
-order: 138
+order: 150
 ---
 A class that allows to split data to pages, also virtual scroll use some options from here.
 

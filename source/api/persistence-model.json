@@ -1,18 +1,18 @@
 {
-   "id": 890,
+   "id": 702,
    "name": "\"persistence/persistence.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/persistence/persistence.model.d.ts",
    "children": [
       {
-         "id": 891,
+         "id": 703,
          "name": "PersistenceModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -21,12 +21,56 @@
          },
          "children": [
             {
-               "id": 892,
+               "id": 709,
+               "name": "create",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 13,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 705,
+               "name": "defaultGroup",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 9,
+                     "character": 13
+                  }
+               ],
+               "type": {
+                  "type": "intrinsic",
+                  "name": "string"
+               }
+            },
+            {
+               "id": 704,
                "name": "id",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
@@ -41,86 +85,198 @@
                }
             },
             {
-               "id": 894,
+               "id": 707,
                "name": "load",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "persistence/persistence.model.d.ts",
-                     "line": 10,
+                     "line": 11,
                      "character": 5
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 895,
-               "name": "remove",
+               "id": 710,
+               "name": "modify",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "persistence/persistence.model.d.ts",
-                     "line": 11,
+                     "line": 14,
                      "character": 7
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 896,
-               "name": "settings",
+               "id": 708,
+               "name": "remove",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "persistence/persistence.model.d.ts",
                      "line": 12,
-                     "character": 9
+                     "character": 7
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "object"
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
                }
             },
             {
-               "id": 893,
-               "name": "storage",
+               "id": 711,
+               "name": "reset",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "persistence/persistence.model.d.ts",
-                     "line": 9,
+                     "line": 15,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 712,
+               "name": "setDefault",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 16,
+                     "character": 11
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 713,
+               "name": "settings",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 17,
+                     "character": 9
+                  }
+               ],
+               "type": {
+                  "type": "reflection",
+                  "declaration": {
+                     "id": 714,
+                     "name": "__type",
+                     "kind": 65536,
+                     "kindString": "Type literal",
+                     "flags": {},
+                     "indexSignature": [
+                        {
+                           "id": 715,
+                           "name": "__index",
+                           "kind": 8192,
+                           "kindString": "Index signature",
+                           "flags": {},
+                           "parameters": [
+                              {
+                                 "id": 716,
+                                 "name": "key",
+                                 "kind": 32768,
+                                 "kindString": "Parameter",
+                                 "flags": {},
+                                 "type": {
+                                    "type": "intrinsic",
+                                    "name": "string"
+                                 }
+                              }
+                           ],
+                           "type": {
+                              "type": "array",
+                              "elementType": {
+                                 "type": "intrinsic",
+                                 "name": "string"
+                              }
+                           }
+                        }
+                     ],
+                     "sources": [
+                        {
+                           "fileName": "persistence/persistence.model.d.ts",
+                           "line": 17,
+                           "character": 11
+                        }
+                     ]
+                  }
+               }
+            },
+            {
+               "id": 706,
+               "name": "storage",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "sources": [
+                  {
+                     "fileName": "persistence/persistence.model.d.ts",
+                     "line": 10,
                      "character": 8
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "PersistenceStorage",
-                  "id": 878
+                  "id": 691
                }
             }
          ],
@@ -129,11 +285,16 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  892,
-                  894,
-                  895,
-                  896,
-                  893
+                  709,
+                  705,
+                  704,
+                  707,
+                  710,
+                  708,
+                  711,
+                  712,
+                  713,
+                  706
                ]
             }
          ],
@@ -141,17 +302,17 @@
             {
                "fileName": "persistence/persistence.model.d.ts",
                "line": 7,
-               "character": 37
+               "character": 41
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            891
+            703
          ]
       }
    ],
@@ -162,5 +323,5 @@
          "character": 0
       }
    ],
-   "order": 141
+   "order": 153
 }

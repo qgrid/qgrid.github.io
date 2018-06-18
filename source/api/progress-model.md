@@ -2,7 +2,7 @@
 title: ProgressModel
 type: api
 group: API
-order: 167
+order: 182
 ---
 A class representing the q-grid job state.
 

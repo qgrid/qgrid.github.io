@@ -2,7 +2,7 @@
 title: ValidationModel
 type: api
 group: API
-order: 227
+order: 249
 ---
 A class to setup validation rules settings.
 

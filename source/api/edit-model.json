@@ -1,18 +1,18 @@
 {
-   "id": 336,
+   "id": 374,
    "name": "\"edit/edit.model.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/edit/edit.model.d.ts",
    "children": [
       {
-         "id": 337,
+         "id": 375,
          "name": "EditModel",
-         "kind": 128,
-         "kindString": "Class",
+         "kind": 256,
+         "kindString": "Interface",
          "flags": {
             "isExported": true
          },
@@ -22,45 +22,66 @@
          },
          "children": [
             {
-               "id": 338,
-               "name": "constructor",
-               "kind": 512,
-               "kindString": "Constructor",
-               "flags": {
-                  "isExported": true
-               },
-               "signatures": [
-                  {
-                     "id": 339,
-                     "name": "new EditModel",
-                     "kind": 16384,
-                     "kindString": "Constructor signature",
-                     "flags": {},
-                     "type": {
-                        "type": "reference",
-                        "name": "EditModel",
-                        "id": 337
-                     }
-                  }
-               ],
-               "sources": [
-                  {
-                     "fileName": "edit/edit.model.d.ts",
-                     "line": 14,
-                     "character": 32
-                  }
-               ]
-            },
-            {
-               "id": 345,
+               "id": 382,
                "name": "cancel",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Allows to the grid user to control if cell can exit edit mode."
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.model.d.ts",
+                     "line": 49,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 384,
+               "name": "clear",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Allows to the grid user to manage clear action behavior in edit mode."
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.model.d.ts",
+                     "line": 59,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 381,
+               "name": "commit",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Allows to the grid user to control if new cell value can be stored in data source or not."
                },
                "sources": [
                   {
@@ -72,19 +93,138 @@
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 347,
-               "name": "clear",
+               "id": 385,
+               "name": "commitShortcuts",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
-                  "shortText": "Allows to the grid user to manage clear action behavior in edit mode."
+                  "shortText": "Object that contains `{columnKey: keyboardKeys}` map, that is used by q-grid to manage\nwhen commit command should be execute on key down event."
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.model.d.ts",
+                     "line": 65,
+                     "character": 16
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "CommitShortcuts",
+                  "id": 366
+               }
+            },
+            {
+               "id": 380,
+               "name": "enter",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Allows to the grid user to control if cell or row can be edited or not."
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.model.d.ts",
+                     "line": 39,
+                     "character": 6
+                  }
+               ],
+               "type": {
+                  "type": "reference",
+                  "name": "Command",
+                  "id": 25
+               }
+            },
+            {
+               "id": 379,
+               "name": "method",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Property that controls grid edit behavior.",
+                  "text": "* `'batch'` bath update.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.model.d.ts",
+                     "line": 34,
+                     "character": 7
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "intrinsic",
+                        "name": "null"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "batch"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 377,
+               "name": "mode",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Property that controls grid edit unit.",
+                  "text": "* `'cell'` data is editable through the grid cells.\n* `'row'` data is editable through the grid rows.\n"
+               },
+               "sources": [
+                  {
+                     "fileName": "edit/edit.model.d.ts",
+                     "line": 22,
+                     "character": 5
+                  }
+               ],
+               "type": {
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "cell"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "row"
+                     }
+                  ]
+               }
+            },
+            {
+               "id": 383,
+               "name": "reset",
+               "kind": 1024,
+               "kindString": "Property",
+               "flags": {
+                  "isExported": true,
+                  "isOptional": true
+               },
+               "comment": {
+                  "shortText": "Allows to the grid user to control if cell can exit edit mode."
                },
                "sources": [
                   {
@@ -96,157 +236,39 @@
                "type": {
                   "type": "reference",
                   "name": "Command",
-                  "id": 299
+                  "id": 25
                }
             },
             {
-               "id": 344,
-               "name": "commit",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Allows to the grid user to control if new cell value can be stored in data source or not."
-               },
-               "sources": [
-                  {
-                     "fileName": "edit/edit.model.d.ts",
-                     "line": 39,
-                     "character": 7
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "Command",
-                  "id": 299
-               }
-            },
-            {
-               "id": 348,
-               "name": "commitShortcuts",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Object that contains `{columnKey: keyboardKeys}` map, that is used by q-grid to manage\nwhen commit command should be execute on key down event."
-               },
-               "sources": [
-                  {
-                     "fileName": "edit/edit.model.d.ts",
-                     "line": 60,
-                     "character": 16
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "ICommitShortcuts",
-                  "id": 3486
-               }
-            },
-            {
-               "id": 343,
-               "name": "enter",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Allows to the grid user to control if cell or row can be edited or not."
-               },
-               "sources": [
-                  {
-                     "fileName": "edit/edit.model.d.ts",
-                     "line": 34,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "Command",
-                  "id": 299
-               }
-            },
-            {
-               "id": 341,
-               "name": "mode",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Property that controls grid edit unit.",
-                  "text": "* `'cell'` data is editable through the grid cells.\n* `'row'` data is editable through the grid rows.\n"
-               },
-               "sources": [
-                  {
-                     "fileName": "edit/edit.model.d.ts",
-                     "line": 24,
-                     "character": 5
-                  }
-               ],
-               "type": {
-                  "type": "intrinsic",
-                  "name": "string"
-               }
-            },
-            {
-               "id": 346,
-               "name": "reset",
-               "kind": 1024,
-               "kindString": "Property",
-               "flags": {
-                  "isExported": true
-               },
-               "comment": {
-                  "shortText": "Allows to the grid user to control if cell can exit edit mode."
-               },
-               "sources": [
-                  {
-                     "fileName": "edit/edit.model.d.ts",
-                     "line": 49,
-                     "character": 6
-                  }
-               ],
-               "type": {
-                  "type": "reference",
-                  "name": "Command",
-                  "id": 299
-               }
-            },
-            {
-               "id": 340,
+               "id": 376,
                "name": "resource",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 16,
+                     "line": 14,
                      "character": 9
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Resource",
-                  "id": 138
+                  "id": 204
                }
             },
             {
-               "id": 342,
+               "id": 378,
                "name": "state",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
-                  "isExported": true
+                  "isExported": true,
+                  "isOptional": true
                },
                "comment": {
                   "shortText": "Indicates if q-grid is in `'edit'` or in a `'view'` mode."
@@ -254,55 +276,66 @@
                "sources": [
                   {
                      "fileName": "edit/edit.model.d.ts",
-                     "line": 29,
+                     "line": 27,
                      "character": 6
                   }
                ],
                "type": {
-                  "type": "intrinsic",
-                  "name": "string"
+                  "type": "union",
+                  "types": [
+                     {
+                        "type": "stringLiteral",
+                        "value": "edit"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "view"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "startBatch"
+                     },
+                     {
+                        "type": "stringLiteral",
+                        "value": "endBatch"
+                     }
+                  ]
                }
             }
          ],
          "groups": [
             {
-               "title": "Constructors",
-               "kind": 512,
-               "children": [
-                  338
-               ]
-            },
-            {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  345,
-                  347,
-                  344,
-                  348,
-                  343,
-                  341,
-                  346,
-                  340,
-                  342
+                  382,
+                  384,
+                  381,
+                  385,
+                  380,
+                  379,
+                  377,
+                  383,
+                  376,
+                  378
                ]
             }
          ],
          "sources": [
             {
                "fileName": "edit/edit.model.d.ts",
-               "line": 14,
-               "character": 30
+               "line": 13,
+               "character": 34
             }
          ]
       }
    ],
    "groups": [
       {
-         "title": "Classes",
-         "kind": 128,
+         "title": "Interfaces",
+         "kind": 256,
          "children": [
-            337
+            375
          ]
       }
    ],
@@ -313,5 +346,5 @@
          "character": 0
       }
    ],
-   "order": 78
+   "order": 85
 }
