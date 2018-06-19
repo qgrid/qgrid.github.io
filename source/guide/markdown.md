@@ -2,7 +2,7 @@
 title: Markdown
 type: guide
 group: Getting started
-order: 7
+order: -1
 ---
 
 ### Header

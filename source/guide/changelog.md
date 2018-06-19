@@ -1,206 +1,295 @@
 ---
-title: Changelog
+title: Change Log
 type: guide
 group: Getting started
-order: 5
+order: 7
 ---
 
 ## [Unreleased]
-- Shortcut keycode can be a sequence.
-- Fix navigation behavior for row groups.
-- Brand new documentation.
-- Edit form performance improvements.
-- Revisit drop-down editor.
-- Column filter for date types. 
-- 107+ JIRA tasks :-)
+* Auto-complete cell editor.
+* Time cell editor.
+* Row edit form.
+* Infinite scrolling.
+* Validation framework.
+* Copy/paste selection to excel.
+* Live data plugin.
+* Float Row Navigation.
 
-## [1.2.0] - 2017-12-01
-### Added
-- Added `compare` property to the column [Sorting](https://qgrid.github.io/ng/#!/sorting-model).
-- Validation humane labels.
-- Validation array support.
-
+## [6.1.1] - 2018-06-15
 ### Fixed
-- Mouse `wheel` is working on whole grid.
-- Fix infinite scrolling request new data time.
+- Highlight on drag and drop.
+- Pager target should be closed after enter hit.
+
+### Changed 
+- Column Filter, Column Chooser, Query Builder, Persistence Plugins became responsible.
+
+## [6.1.0] - 2018-06-15
+### BREAKING
+- Need to change theme import from `import {ThemeModule} from 'ng2-qgrid'` to `import {ThemeModule} from 'ng2-qgrid/theme/material`
+
+### Deprecated
+- Use `FetchContext` `serach` property instead of `filter` property.
+- Don't use `<q-grid-row>` component, use `<q-grid rowCanMove rowCanResize>`, for row details use `<q-grid-column type="row-details"><ng-template for="body">...`.
+- Use `<q-grid caption="My Grid">` instead of `<q-grid header="My Grid">`.
+
+### Added
+- Support of custom themes, we are not linked tight with angular/material any more.
+- 113+ Examples.
+- Readonly strategies `<q-grid interactionMode="full | readonly | detached">`.
+- Spanned headers and column groups.
+- Group summaries.
+- `PluginServices` that allows to write own plugins for qgrid.
+- Better caching strategies for renders.
+- New `rowspan` mode for groups.
+- New `rowList` model.
+- Drag and drop column support in `column chooser`.
+- Initial basic theme.
+- Float(fixed) rows support through the `model.row()` `pin` property.
+- New column generation mode `cohort`.
+- Action trigger template support.
 
 ### Changed
-- +20% speed to `virtual` scrolling.
-- +15% `style API` performance.
-- 70% of core plugins are reusable from other frameworks.  
-- Better mechanism to handle dom loaded event, `scene rounds`. 
-- Row model `height property` now default value is function.
-
-## [1.1.3] - 2017-11-24
+- Live `drag and drop` for rows and columns.
+- Use `Model Proxy` for resource utilization.
+- New `Dom matrix` engine for rendering.
+- Reference column API.
+- Pin columns are highlighted when scroll horizontal.
+- 
 ### Fixed
-- Editor position does not work when parent element applies transformations. 
+- Better row details rendering. 
+- Fixed focus position on scene render (e.g. sort, filter etc.).
+- Column sort algorithm became more predictable.
+- Array cell editor doesn't work with keyboard.
 
-## [1.1.2] - 2017-11-24
-### Fixed
-- Scroll jumping when column sorting is applied.
-- Angular 1.5.8 as development base and appropriate code fixes.
-
-## [1.1.1] - 2017-11-22
+## [5.3.10] - 2018-05-21
 ### Added
-- Github integration with travis. 
-
-### Fixed
-- Cell editor should follow the cell position on window resize.
-- Keyboard navigation performance.
-
-## [1.1.0] - 2017-11-21
-### Added
-- [Legend plugin](https://qgrid.github.io/ng/#!/legend). 
-- Added `composite` utility to the grid service.
-- [Validation model](https://qgrid.github.io/ng/#!/validation).
-- Use [LIVR](https://github.com/koorchik/js-validator-livr) as internal validation engine.
-- Add clear button to file and image cell editors.
-- Command priorities.
-- `Tab trap` component that is used in the url editor.
-- Prevent default directive.
-- `Go command` in navigation model that can be use for user control.
-
-### Fixed
-- Handle space key down in view mode.
-- Cell editors not limited by grid area.
-- Redraw highlighting on page size changed.
-- Fix escape press behavior in auto-complete editor. 
-- Fix enter press behavior in email editor.
-- Use `focusin` event for the grid active indicator. 
-- Correct way to handle editor property for different column types.  
+- `ToggleAll` command that can be override to intersect toggle all groups action.
 
 ### Changed
-- (Persistence plugin)[(https://qgrid.github.io/ng/#!/persistence)] enhancements. Default settings, editing, tooltips. 
-- Get rid of cancel and save buttons in all cell editors, exceptions are: reference, file and image editors.
-- Edit keyboard navigation improvements.
-- Edit works in `virtual` mode.
-- Keyboard navigation improvements in `virtual` mode.
+- Clicking on group header leads to collapse/expand of all nodes in the view.
+- By default child node label is empty.
 
-## [1.0.65] - 2017-11-09
 ### Fixed
-- ENV variable in min version is not defined.
-- Added injector to PersistencePanelController.
+- `Group pipe` index calculation - the root cause of invalid filtering. 
 
-## [1.0.64] - 2017-11-09
+## [5.3.9] - 2018-05-18
 ### Added
-- Start using changelog.
-- To display grid title just write `<q-grid header="My Grid">`.
-- Click `Revert Row` in Data Manipulation plugin menu restores origin values for the row.
-- New property for array column `itemLabel` that can be used to display complex collection as a text.
-- New column `widthMode` property is used to convert percents to px depend on a grid size, can be `relative` or `absolute`.
-- New property `assertFactory` in filter model allows to change filter operator behavior for complex cases. 
-- New `Save\Load` plugin, just add `<q-grid:persistence></q-grid:persistence>` inside of your grid, persistence model can be used for extension.
-- Focus delay can be setup from attribute `q-grid:delay`. 
+- Focus method to the grid service.
 
 ### Changed
-- Column Filters and Column Chooser plugins start to behave as menus.
-- Release scipt - base branch name as an argument `npm run release -- --base-branch model-save`.
-- Column Chooser sarted to apply settings only after submit click.
-- Remove reset button in Column Filter and Column Chooser plugins.
+- AOT Compatible.
+- Angular CLI as app starter.
+- Rollup scripts to build the library.
 
 ### Fixed
-- Blank template is not showing on startup.
-- Data Manipulation plugin not rewriting grid actions.
+- FocusAfterRender service.
+- Column filter IsBlank is displayed in chips.
+- Legend template syntax.
+- TypeScript defenitions.
+- Async pipe for rows property.
 
-### Removed
-- Client side column filter started to work with column labels, not values. Now you can just store value from `const filterBy = filter().by` and restore it by simply execute `filter({by: filterBy})`.
-
-## [1.0.0] - 2017-11-09
+## [5.3.7] - 2018-07-08
 ### Added
-- Demo application.
-- Webpack build ES6.
-- Linting with eslint.
-- Karma tests.
-- SCSS loader.
-- CI\CD scripts.
-- Add grid to npm.
-- Add grid to bower.
-- Theme support.
-- Material theme that is used angular material inside.
-- Grid service that allows to create grid model and get more control on the grid itself.
-- Make grid header and footer sticky.
-- Sticky footer.
-- Top, left, right, bottom toolbars.
-- Embed flex css framework, that was extracted from angular-material. 
-- Auto generation modes for columns.
-- Allow to reorder columns.
-- Allow to resize columns.
-- Allow to setup width of column in percents.
-- Allow to have custom templates for cells in html.
-- Column multi-sort support
-- Column sort modes: single, multiple
-- Column sorting depends on position
-- Frozen columns.
-- Custom.
-- Array column type.
-- Bool column type.
-- Date column type.
-- Email column type.
-- Group column type.
-- Number column type.
-- Pad column type.
-- Password column type.
-- Pivot column type.
-- Row indicator column type.
-- Row number column type.
-- Select column type.
-- File column type.
-- Time column type.
-- Image column type.
-- Url column type.
-- Currency column type.
-- Row options column type.
-- Row expand column type.
-- Row details column type.
-- Reference column type.
-- Id column type.
-- Row details.
-- Cell inline editing.
-- Auto generation of row edit form.
-- Cell navigation with keyboard.
-- Mouse navigation.
-- Style API to apply runtime style to the cells and rows.
-- Row and cell highlighting.
-- Initial implementation of virtual scrolling.
-- Infinite scrolling.
-- Focus cell API.
-- Range selection.
-- Row selection.
-- Cell selection.
-- Mix selection, when user can select row by clicking on row-indicator column or cell.
-- Selection key that allows to reduce data row to some valuable thing.
-- Selection modes: single and multiple.
-- Keyboard editing support.
-- Edit API.
-- Autocomplete editor.
-- Dropdown editor.
-- Textarea editor.
-- Column filter plugin.
-- Initial filter row implementation.
-- Filter API for custom filters.
-- Column grouping.
-- Custom hierarchy for grouping.
-- Column pivoting.
-- Import/Export to csv, excel and pdf.
-- Column aggregation.
-- Plugin system.
-- Column chooser plugin.
-- Popup plugin.
-- Group bar plugin.
-- Sort bar plugin.
-- Selection bar plugin.
-- Pivot bar plugin.
-- Pager plugin.
-- Progress plugin.
-- Visibility plugin.
-- Action bar plugin.
-- Data manipulation plugin.
+- Template support of column filter items.
 
-[Unreleased]: https://github.com/qgrid/ng/compare/v1.2.0...HEAD
-[1.2.0]: https://github.com/qgrid/ng/compare/v1.1.3...v1.2.0
-[1.1.3]: https://github.com/qgrid/ng/compare/v1.1.2...v1.1.3
-[1.1.2]: https://github.com/qgrid/ng/compare/v1.1.1...v1.1.2
-[1.1.1]: https://github.com/qgrid/ng/compare/v1.1.0...v1.1.1
-[1.1.0]: https://github.com/qgrid/ng/compare/v1.0.65...v1.1.0
-[1.0.65]: https://github.com/qgrid/ng/compare/v1.0.64...v1.0.65
-[1.0.64]: https://github.com/qgrid/ng/compare/v1.0.63...v1.0.64
+### Fixed
+- Column sort plugin uses `FocusAfterRender` only on click.
+
+## [5.3.6] - 2018-04-20
+### Added
+- `Persistence` plugin - added groups.
+
+## [5.3.5] - 2018-04-19
+### Added
+- `Query builder panel` component styles are standalone.
+
+## [5.3.4] - 2018-04-18
+### Added
+- `Query builder` plugin.
+- Cell batch update.
+
+## [5.3.3] - 2018-04-13
+### Added
+- `Persistence` plugin.
+- `Status bar` plugin.
+- Selected chips in `column filter` plugin.
+- Focus cell when after sort or filter column.
+
+### Fixed
+- Vscroll reset.
+
+## [5.3.2] - 2018-03-23
+### Added
+- Supporting of custom fetch in the column filter.
+- Virtual scroll module.
+- Pager target menu.
+
+### Changed
+- Added grid core pipes under ther `ng2-qgrid` namespace.
+- Remove `popup` module.
+
+### Fixed
+- Pager custom size and sizeList not being honored/rendered correctly.
+- Rename `action-bar-core` to `action-bar`.
+
+## [5.2.4] - 2018-02-16
+### Changed
+- Renamed `action-bar-core` to `action-bar`.
+- `layout="row"` refactored to `class="layout-row"`.
+- Export q-grid `common module` to make `q-grid-position` directive available for the end user.
+
+### Fixed
+- Url editor.
+- Text alignment in the file editor.
+- Navigation should trigger detect changes.
+
+## [5.2.3] - 2018-02-12
+### Fixed
+- Embed style for `row-options` column type.
+- TypeScript declarations.
+
+## [5.2.2] - 2018-02-12
+### Fixed
+- Remove `BrowserModule` from componentns to allow lazy loading.
+- Fix column filter and column chooser styles.
+
+## [5.2.0] - 2018-02-09
+### Added
+- Column [viewWidth](https://qgrid.github.io/ng/#!/column-view-size) property.
+- Filter `by` property `blanks` option support.
+
+### Changed
+- Show (Blanks) checkbox in column filter if there is empty string, null or undefined in the list.
+- Explicitly set `display: inline` for label in column sort plugin.
+- Change q-grid-embed styles.
+
+### Fixed
+- Better layout of column filter and column sort icons.
+
+## [5.1.2] - 2018-01-03
+### Added
+* Possibility to change row size `<q-grid-row canResize="true"`.
+* Possibility to drag and drop rows `<q-grid-row canMove="true"`.
+* Style queue to the style Api, accessible through style model cells/rows props.
+* Rows property to the layout property.
+
+### Changed
+* Improve performance through change detection strategy.
+* Improve performance through reducing number of change detections.
+* Improve performance through adding track by index.
+* Improve performance through invoking drang and drop out of ng zone.
+* Layout columns property changed type form object to map.
+
+## [5.1.1] - 2017-12-28
+### Added
+* Legend plugin.
+* Bool cell editor.
+* File cell editor.
+* Image cell editor.
+
+### Changed
+* Theme module should be explicitly added to the user application.
+* Backdrop triggers close event on mouse wheel click.
+* Change dependencies to peer in prod package.json.
+
+### Fixed
+* Array cell editor improvements.
+* Fix minification in release script.
+* Grid in grid support.
+
+## [5.0.2] - 2017-12-22
+
+### Added
+* Theme support.
+* Material theme that is used angular material inside.
+* Grid service that allows to create grid model and get more control on the grid itself.
+* Make grid header and footer sticky.
+* Sticky footer.
+* Top, left, right, bottom toolbars.
+* Embed flex css framework, that was extracted from angular-material.
+* Auto generation modes for columns.
+* Allow to reorder columns.
+* Allow to resize columns.
+* Allow to setup width of column in percents.
+* Allow to have custom templates for cells in html.
+* Column multi-sort support
+* Column sort modes: single, multiple
+* Column sorting depends on position
+* Frozen columns.
+* Custom.
+* Array column type.
+* Bool column type.
+* Date column type.
+* Email column type.
+* Group column type.
+* Number column type.
+* Pad column type.
+* Password column type.
+* Pivot column type.
+* Row indicator column type.
+* Row number column type.
+* Select column type.
+* File column type.
+* Time column type.
+* Image column type.
+* Url column type.
+* Currency column type.
+* Row options column type.
+* Row expand column type.
+* Row details column type.
+* Reference column type.
+* Id column type.
+* Row details.
+* Cell inline editing.
+* Cell navigation with keyboard.
+* Mouse navigation.
+* Style API to apply runtime style to the cells and rows.
+* Row and cell highlighting.
+* Focus cell API.
+* Range selection.
+* Row selection.
+* Cell selection.
+* Mix selection, when user can select row by clicking on row-indicator column or cell.
+* Selection key that allows to reduce data row to some valuable thing.
+* Selection modes: single and multiple.
+* Keyboard editing support.
+* Edit API.
+* Dropdown editor.
+* Textarea editor.
+* Column filter plugin.
+* Initial filter row implementation.
+* Filter API for custom filters.
+* Column grouping.
+* Custom hierarchy for grouping.
+* Column pivoting.
+* Import/Export to csv, excel and pdf.
+* Column aggregation.
+* Plugin system.
+* Column chooser plugin.
+* Pager plugin.
+* Progress plugin.
+
+[unreleased]: https://github.com/qgrid/ng2/compare/v6.1.1...HEAD
+[6.1.1]: https://github.com/qgrid/ng2/compare/v6.1.1...v6.1.0
+[6.1.0]: https://github.com/qgrid/ng2/compare/v6.1.0...v5.3.10
+[5.3.10]: https://github.com/qgrid/ng2/compare/v5.3.10...v5.3.9
+[5.3.9]: https://github.com/qgrid/ng2/compare/v5.3.8...v5.3.7
+[5.3.7]: https://github.com/qgrid/ng2/compare/v5.3.7...v5.3.6
+[5.3.6]: https://github.com/qgrid/ng2/compare/v5.3.6...v5.3.5
+[5.3.5]: https://github.com/qgrid/ng2/compare/v5.3.5...v5.3.4
+[5.3.4]: https://github.com/qgrid/ng2/compare/v5.3.4...v5.3.2
+[5.3.3]: https://github.com/qgrid/ng2/compare/v5.3.2...v5.2.4
+[5.3.2]: https://github.com/qgrid/ng2/compare/v5.3.2...v5.2.4
+[5.2.4]: https://github.com/qgrid/ng2/compare/v5.2.4...v5.2.3
+[5.2.3]: https://github.com/qgrid/ng2/compare/v5.2.3...v5.2.2
+[5.2.2]: https://github.com/qgrid/ng2/compare/v5.2.2...v5.2.1
+[5.2.0]: https://github.com/qgrid/ng2/compare/v5.2.0...v5.1.2
+[5.1.2]: https://github.com/qgrid/ng2/compare/v5.1.2...v5.1.1
+[5.1.1]: https://github.com/qgrid/ng2/compare/v5.1.1...v5.0.2
+[5.0.0]: https://github.com/qgrid/ng2/compare/v5.0.0...v1.0.7
+[1.0.7]: https://github.com/qgrid/ng2/compare/v1.0.7...v1.0.6
+[1.0.6]: https://github.com/qgrid/ng2/compare/v1.0.6...v1.0.5
+[1.0.5]: https://github.com/qgrid/ng2/compare/v1.0.5...v1.0.4
+[1.0.4]: https://github.com/qgrid/ng2/compare/v1.0.4...v1.0.3
+[1.0.3]: https://github.com/qgrid/ng2/compare/v1.0.3...v1.0.2
+[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1

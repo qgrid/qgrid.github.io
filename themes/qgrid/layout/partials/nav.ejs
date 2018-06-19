@@ -15,7 +15,12 @@
         %>
                     <li><h3><%- group %></h3></li>
         <%
-                    var pages = pageGroups[group];
+                    var pages = 
+                        pageGroups[group]
+                            .filter(function(page) { 
+                                return page.order >= 0; 
+                            });
+
                     pages.sort(function (a, b) {
                         return a.order - b.order;
                     });
