@@ -1,8 +1,8 @@
 ---
-title: Theme
+title: My Theme
 type: guide
 group: Getting started
-order: 6
+order: 5
 ---
 
 > Under Construction.

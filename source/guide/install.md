@@ -2,24 +2,20 @@
 title: How to install
 type: guide
 group: Getting started
-order: 1
+order: 2
 ---
 
-## Install the q-grid
-
-Download and install the package.
+## Install the q-grid via npm
 
 ```bash
 npm install ng2-qgrid
 ```
 
-## Instantiate a q-grid
+## Add q-grid and theme modules to application root
 
-Once installed, import the `grid` and `theme` modules to your application root module.
-
-```javascript
-import {GridModule} from 'ng2-qgrid';
-import {ThemeModule} from 'ng2-qgrid/theme/material';
+```typescript
+import { GridModule } from 'ng2-qgrid';
+import { ThemeModule } from 'ng2-qgrid/theme/material';
 
 @NgModule({
    imports: [
@@ -30,62 +26,44 @@ import {ThemeModule} from 'ng2-qgrid/theme/material';
 export class AppModule {
 }
 ```
+Note that now q-grid supports 2 themes out of box `@angular/material` and `basic`, the second one doesn't require `@angular/material` to be installed.
 
-Add qgrid `model` and `front` to your component if you need to more control over the qgrid.
+## Create an angular component
 
-```javascript
-import { GridModel, Grid } from 'ng2-qgrid';
-
+```typescript
 @Component({
    selector: 'my-component',
-   templateUrl: './my-component.html'
+   templateUrl: `
+      <q-grid [rows]="myRows | async">
+            <q-grid-columns generation="deep">
+            </q-grid-columns>
+      </q-grid>
+      `
 })
-export class MyComponent implements OnInit {
-   public gridModel: GridModel;
+export class MyComponent {
+   myRows: Observable<[]>;
 
-   constructor(qgrid: Grid) {
-      this.gridModel = gridService.model();
-   }
-
-   ngOnInit(): void {
-      this.gridModel
-         .data({
-            rows: getRows()
-         });
+   constructor(dataService: MyDataService) {
+         this.myRows = dataService.getRows();
    }
 }
 ```
 
-Add html markup to your component.
-
-```html
-<q-grid [model]="gridModel">
-   <q-grid-columns generation="deep">
-      <q-grid-column type="number" aggregation="sum"></q-grid-column>
-      <q-grid-column key="totalAmount" type="currency" aggregation="sum"></q-grid-column>
-      <q-grid-column key="businessUnit">
-         <ng-template for="foot">
-            Total:
-         </ng-template>
-      </q-grid-column>
-   </q-grid-columns>
-</q-grid>
-```
+Note that q-grid rows should be an array of objects, any other types like array of numbers or strings will throw an error.
 
 ## Dependencies
 
-The q-grid package requires the following peer dependencies that have to be installed by your application.
+*  @angular/common
+*  @angular/core
+*  @angular/forms
+*  @angular/http
 
-* rxjs
-* core-js
+If you use `material` theme from the q-grid package, you also need to install [angular material](https://material.angular.io/)
+
 * @angular/cdk
-* @angular/core
-* @angular/forms
-* @angular/common
 * @angular/material
-* @angular/anmations
 
-## Development
+## Development.
 
 ```bash
 git clone https://github.com/qgrid/ng2.git
@@ -93,6 +71,13 @@ npm install
 npm run start
 ```
 
-## Licence
+## Browser support
+
+* `Chrome` supported.
+* `Safari` in progress.
+* `FireFox` in progress.
+* `Edge` in progress.
+
+## Licence.
 
 Code licensed under MIT license.

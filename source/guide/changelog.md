@@ -1,8 +1,8 @@
 ---
-title: Changelog
+title: Change Log
 type: guide
 group: Getting started
-order: 5
+order: 7
 ---
 
 ## [Unreleased]

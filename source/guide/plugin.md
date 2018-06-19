@@ -1,8 +1,8 @@
 ---
-title: Perfomance Tips
+title: My Plugin
 type: guide
 group: Getting started
-order: 6
+order: 4
 ---
 
 > Under Construction.
