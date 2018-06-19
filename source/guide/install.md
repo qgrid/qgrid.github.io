@@ -33,7 +33,7 @@ Note that now q-grid supports 2 themes out of box `@angular/material` and `basic
 ```typescript
 @Component({
    selector: 'my-component',
-   templateUrl: `
+   template: `
       <q-grid [rows]="myRows | async">
             <q-grid-columns generation="deep">
             </q-grid-columns>
@@ -63,7 +63,7 @@ If you use `material` theme from the q-grid package, you also need to install [a
 * @angular/cdk
 * @angular/material
 
-## Development.
+## Development
 
 ```bash
 git clone https://github.com/qgrid/ng2.git
@@ -73,11 +73,12 @@ npm run start
 
 ## Browser support
 
-* `Chrome` supported.
-* `Safari` in progress.
-* `FireFox` in progress.
-* `Edge` in progress.
+* `Chrome` is supported.
+* `Safari` is in progress.
+* `FireFox` is in progress.
+* `Edge` is in progress.
+* `IE11` is in progress.
 
-## Licence.
+## Licence
 
 Code licensed under MIT license.
