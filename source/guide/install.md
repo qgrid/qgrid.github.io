@@ -31,10 +31,10 @@ export class AppModule {
 }
 ```
 
-Add grid `model` and grid `service` to your component if it's required.
+Add qgrid `model` and `front` to your component if you need to more control over the qgrid.
 
 ```javascript
-import {GridModel, GridService} from 'ng2-qgrid';
+import { GridModel, Grid } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
@@ -43,7 +43,7 @@ import {GridModel, GridService} from 'ng2-qgrid';
 export class MyComponent implements OnInit {
    public gridModel: GridModel;
 
-   constructor(gridService: GridService) {
+   constructor(qgrid: Grid) {
       this.gridModel = gridService.model();
    }
 
