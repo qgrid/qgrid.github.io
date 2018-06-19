@@ -1,15 +1,15 @@
 {
-   "id": 3818,
+   "id": 3819,
    "name": "\"edit/edit.row.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/edit/edit.row.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.row.view.d.ts",
    "children": [
       {
-         "id": 3819,
+         "id": 3820,
          "name": "EditRowView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 3820,
+               "id": 3821,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 3821,
+                     "id": 3822,
                      "name": "new EditRowView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3822,
+                           "id": 3823,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -48,7 +48,7 @@
                            }
                         },
                         {
-                           "id": 3823,
+                           "id": 3824,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -56,11 +56,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         },
                         {
-                           "id": 3824,
+                           "id": 3825,
                            "name": "shortcut",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -68,14 +68,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 3825,
+                                 "id": 3826,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "children": [
                                     {
-                                       "id": 3826,
+                                       "id": 3827,
                                        "name": "register",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -90,21 +90,21 @@
                                        "type": {
                                           "type": "reflection",
                                           "declaration": {
-                                             "id": 3827,
+                                             "id": 3828,
                                              "name": "__type",
                                              "kind": 65536,
                                              "kindString": "Type literal",
                                              "flags": {},
                                              "signatures": [
                                                 {
-                                                   "id": 3828,
+                                                   "id": 3829,
                                                    "name": "__call",
                                                    "kind": 4096,
                                                    "kindString": "Call signature",
                                                    "flags": {},
                                                    "parameters": [
                                                       {
-                                                         "id": 3829,
+                                                         "id": 3830,
                                                          "name": "commands",
                                                          "kind": 32768,
                                                          "kindString": "Parameter",
@@ -141,7 +141,7 @@
                                        "title": "Variables",
                                        "kind": 32,
                                        "children": [
-                                          3826
+                                          3827
                                        ]
                                     }
                                  ],
@@ -159,7 +159,7 @@
                      "type": {
                         "type": "reference",
                         "name": "EditRowView",
-                        "id": 3819
+                        "id": 3820
                      }
                   }
                ],
@@ -172,7 +172,7 @@
                ]
             },
             {
-               "id": 3833,
+               "id": 3834,
                "name": "cancel",
                "kind": 1024,
                "kindString": "Property",
@@ -193,7 +193,7 @@
                }
             },
             {
-               "id": 3832,
+               "id": 3833,
                "name": "commit",
                "kind": 1024,
                "kindString": "Property",
@@ -214,7 +214,7 @@
                }
             },
             {
-               "id": 3830,
+               "id": 3831,
                "name": "editor",
                "kind": 1024,
                "kindString": "Property",
@@ -231,11 +231,11 @@
                "type": {
                   "type": "reference",
                   "name": "RowEditor",
-                  "id": 3805
+                  "id": 3806
                }
             },
             {
-               "id": 3831,
+               "id": 3832,
                "name": "enter",
                "kind": 1024,
                "kindString": "Property",
@@ -256,7 +256,7 @@
                }
             },
             {
-               "id": 3834,
+               "id": 3835,
                "name": "reset",
                "kind": 1024,
                "kindString": "Property",
@@ -282,18 +282,18 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  3820
+                  3821
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
+                  3834,
                   3833,
-                  3832,
-                  3830,
                   3831,
-                  3834
+                  3832,
+                  3835
                ]
             }
          ],
@@ -311,7 +311,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            3819
+            3820
          ]
       }
    ],

@@ -4,11 +4,11 @@ type: api
 group: API
 order: 44
 ---
-Use this class to implement command pattern in the qgrid. The most of interactions in the qgrid are utilized by this pattern.
+Use this class to implement command pattern in the qgrid. The most of interactions in the q-grid are utilized by this pattern.
 
 {% docTable "source/api/command.json" %}
 
-### Create a command using qgrid facade.
+### Create a command using q-grid facade.
 
 ```javascript
 	const addRowCommand = new qgrid.Command({

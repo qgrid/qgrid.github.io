@@ -1,15 +1,15 @@
 {
-   "id": 4187,
+   "id": 4188,
    "name": "\"services/grid.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/services/grid.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/services/grid.d.ts",
    "children": [
       {
-         "id": 4188,
+         "id": 4189,
          "name": "GridService",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4189,
+               "id": 4190,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4190,
+                     "id": 4191,
                      "name": "new GridService",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4191,
+                           "id": 4192,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -52,7 +52,7 @@
                      "type": {
                         "type": "reference",
                         "name": "GridService",
-                        "id": 4188
+                        "id": 4189
                      }
                   }
                ],
@@ -65,7 +65,7 @@
                ]
             },
             {
-               "id": 4192,
+               "id": 4193,
                "name": "state",
                "kind": 1024,
                "kindString": "Property",
@@ -82,11 +82,11 @@
                "type": {
                   "type": "reference",
                   "name": "PersistenceService",
-                  "id": 4173
+                  "id": 4174
                }
             },
             {
-               "id": 4221,
+               "id": 4222,
                "name": "busy",
                "kind": 2048,
                "kindString": "Method",
@@ -95,7 +95,7 @@
                },
                "signatures": [
                   {
-                     "id": 4222,
+                     "id": 4223,
                      "name": "busy",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -103,14 +103,14 @@
                      "type": {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4223,
+                           "id": 4224,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "signatures": [
                               {
-                                 "id": 4224,
+                                 "id": 4225,
                                  "name": "__call",
                                  "kind": 4096,
                                  "kindString": "Call signature",
@@ -141,7 +141,7 @@
                ]
             },
             {
-               "id": 4225,
+               "id": 4226,
                "name": "focus",
                "kind": 2048,
                "kindString": "Method",
@@ -150,14 +150,14 @@
                },
                "signatures": [
                   {
-                     "id": 4226,
+                     "id": 4227,
                      "name": "focus",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4227,
+                           "id": 4228,
                            "name": "rowIndex",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -170,7 +170,7 @@
                            }
                         },
                         {
-                           "id": 4228,
+                           "id": 4229,
                            "name": "columnIndex",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -198,7 +198,7 @@
                ]
             },
             {
-               "id": 4193,
+               "id": 4194,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -207,14 +207,14 @@
                },
                "signatures": [
                   {
-                     "id": 4194,
+                     "id": 4195,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4195,
+                           "id": 4196,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -227,7 +227,7 @@
                            }
                         },
                         {
-                           "id": 4196,
+                           "id": 4197,
                            "name": "changes",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -240,7 +240,7 @@
                            }
                         },
                         {
-                           "id": 4197,
+                           "id": 4198,
                            "name": "pipe",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -252,21 +252,21 @@
                               "elementType": {
                                  "type": "reflection",
                                  "declaration": {
-                                    "id": 4198,
+                                    "id": 4199,
                                     "name": "__type",
                                     "kind": 65536,
                                     "kindString": "Type literal",
                                     "flags": {},
                                     "signatures": [
                                        {
-                                          "id": 4199,
+                                          "id": 4200,
                                           "name": "__call",
                                           "kind": 4096,
                                           "kindString": "Call signature",
                                           "flags": {},
                                           "parameters": [
                                              {
-                                                "id": 4200,
+                                                "id": 4201,
                                                 "name": "memo",
                                                 "kind": 32768,
                                                 "kindString": "Parameter",
@@ -277,7 +277,7 @@
                                                 }
                                              },
                                              {
-                                                "id": 4201,
+                                                "id": 4202,
                                                 "name": "context",
                                                 "kind": 32768,
                                                 "kindString": "Parameter",
@@ -289,7 +289,7 @@
                                                 }
                                              },
                                              {
-                                                "id": 4202,
+                                                "id": 4203,
                                                 "name": "next",
                                                 "kind": 32768,
                                                 "kindString": "Parameter",
@@ -297,21 +297,21 @@
                                                 "type": {
                                                    "type": "reflection",
                                                    "declaration": {
-                                                      "id": 4203,
+                                                      "id": 4204,
                                                       "name": "__type",
                                                       "kind": 65536,
                                                       "kindString": "Type literal",
                                                       "flags": {},
                                                       "signatures": [
                                                          {
-                                                            "id": 4204,
+                                                            "id": 4205,
                                                             "name": "__call",
                                                             "kind": 4096,
                                                             "kindString": "Call signature",
                                                             "flags": {},
                                                             "parameters": [
                                                                {
-                                                                  "id": 4205,
+                                                                  "id": 4206,
                                                                   "name": "param",
                                                                   "kind": 32768,
                                                                   "kindString": "Parameter",
@@ -370,14 +370,14 @@
                      }
                   },
                   {
-                     "id": 4206,
+                     "id": 4207,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4207,
+                           "id": 4208,
                            "name": "settings",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -385,14 +385,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4208,
+                                 "id": 4209,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "children": [
                                     {
-                                       "id": 4210,
+                                       "id": 4211,
                                        "name": "changes",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -412,7 +412,7 @@
                                        }
                                     },
                                     {
-                                       "id": 4211,
+                                       "id": 4212,
                                        "name": "pipe",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -431,21 +431,21 @@
                                           "elementType": {
                                              "type": "reflection",
                                              "declaration": {
-                                                "id": 4212,
+                                                "id": 4213,
                                                 "name": "__type",
                                                 "kind": 65536,
                                                 "kindString": "Type literal",
                                                 "flags": {},
                                                 "signatures": [
                                                    {
-                                                      "id": 4213,
+                                                      "id": 4214,
                                                       "name": "__call",
                                                       "kind": 4096,
                                                       "kindString": "Call signature",
                                                       "flags": {},
                                                       "parameters": [
                                                          {
-                                                            "id": 4214,
+                                                            "id": 4215,
                                                             "name": "memo",
                                                             "kind": 32768,
                                                             "kindString": "Parameter",
@@ -456,7 +456,7 @@
                                                             }
                                                          },
                                                          {
-                                                            "id": 4215,
+                                                            "id": 4216,
                                                             "name": "context",
                                                             "kind": 32768,
                                                             "kindString": "Parameter",
@@ -468,7 +468,7 @@
                                                             }
                                                          },
                                                          {
-                                                            "id": 4216,
+                                                            "id": 4217,
                                                             "name": "next",
                                                             "kind": 32768,
                                                             "kindString": "Parameter",
@@ -476,21 +476,21 @@
                                                             "type": {
                                                                "type": "reflection",
                                                                "declaration": {
-                                                                  "id": 4217,
+                                                                  "id": 4218,
                                                                   "name": "__type",
                                                                   "kind": 65536,
                                                                   "kindString": "Type literal",
                                                                   "flags": {},
                                                                   "signatures": [
                                                                      {
-                                                                        "id": 4218,
+                                                                        "id": 4219,
                                                                         "name": "__call",
                                                                         "kind": 4096,
                                                                         "kindString": "Call signature",
                                                                         "flags": {},
                                                                         "parameters": [
                                                                            {
-                                                                              "id": 4219,
+                                                                              "id": 4220,
                                                                               "name": "param",
                                                                               "kind": 32768,
                                                                               "kindString": "Parameter",
@@ -537,7 +537,7 @@
                                        }
                                     },
                                     {
-                                       "id": 4209,
+                                       "id": 4210,
                                        "name": "source",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -557,7 +557,7 @@
                                        }
                                     },
                                     {
-                                       "id": 4220,
+                                       "id": 4221,
                                        "name": "why",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -591,10 +591,10 @@
                                        "title": "Variables",
                                        "kind": 32,
                                        "children": [
-                                          4210,
                                           4211,
-                                          4209,
-                                          4220
+                                          4212,
+                                          4210,
+                                          4221
                                        ]
                                     }
                                  ],
@@ -640,23 +640,23 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4189
+                  4190
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4192
+                  4193
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4221,
-                  4225,
-                  4193
+                  4222,
+                  4226,
+                  4194
                ]
             }
          ],
@@ -674,7 +674,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4188
+            4189
          ]
       }
    ],
@@ -685,5 +685,5 @@
          "character": 0
       }
    ],
-   "order": 220
+   "order": 221
 }

@@ -1,15 +1,15 @@
 {
-   "id": 4047,
+   "id": 4048,
    "name": "\"filter/filter.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/filter/filter.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/filter/filter.view.d.ts",
    "children": [
       {
-         "id": 4048,
+         "id": 4049,
          "name": "FilterView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4049,
+               "id": 4050,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4050,
+                     "id": 4051,
                      "name": "new FilterView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4051,
+                           "id": 4052,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -52,7 +52,7 @@
                      "type": {
                         "type": "reference",
                         "name": "FilterView",
-                        "id": 4048
+                        "id": 4049
                      }
                   }
                ],
@@ -65,7 +65,7 @@
                ]
             },
             {
-               "id": 4052,
+               "id": 4053,
                "name": "has",
                "kind": 2048,
                "kindString": "Method",
@@ -74,14 +74,14 @@
                },
                "signatures": [
                   {
-                     "id": 4053,
+                     "id": 4054,
                      "name": "has",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4054,
+                           "id": 4055,
                            "name": "column",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -113,14 +113,14 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4049
+                  4050
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4052
+                  4053
                ]
             }
          ],
@@ -138,7 +138,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4048
+            4049
          ]
       }
    ],

@@ -4,24 +4,20 @@ type: api
 group: API
 order: 10
 ---
-A class that responsible for the columns order and generation. Usually user does not interact directly
-with this model as the q-grid uses this in internal pipelines.
+Use this class to order and generate q-grid columns.
 
 {% docTable "source/api/column-list-model.json" %}
 
-### Usage
-
-* Example of how user usually can define column generation type and list of columns in template.
+### Setup column generation mode in html.
 
 ```html
 <q-grid>
    <q-grid-columns generation="deep">
-      <q-grid-column key="myKey"></q-grid-column>
    </q-grid-columns>
 </q-grid>
 ```
 
-* Example of how user usually can define some options for the all columns of appropriate type.
+### Add one column to the qgrid.
 
 ```html
 <q-grid>
@@ -30,6 +26,7 @@ with this model as the q-grid uses this in internal pipelines.
    </q-grid-columns>
 </q-grid>
 ```
+
 
 ### Suggested Links
 

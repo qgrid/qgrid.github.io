@@ -1,15 +1,15 @@
 {
-   "id": 4091,
+   "id": 4092,
    "name": "\"foot/foot.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/foot/foot.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/foot/foot.view.d.ts",
    "children": [
       {
-         "id": 4092,
+         "id": 4093,
          "name": "FootView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4093,
+               "id": 4094,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4094,
+                     "id": 4095,
                      "name": "new FootView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4095,
+                           "id": 4096,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 4096,
+                           "id": 4097,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,14 +57,14 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "FootView",
-                        "id": 4092
+                        "id": 4093
                      }
                   }
                ],
@@ -77,7 +77,7 @@
                ]
             },
             {
-               "id": 4097,
+               "id": 4098,
                "name": "count",
                "kind": 1024,
                "kindString": "Property",
@@ -97,7 +97,7 @@
                }
             },
             {
-               "id": 4098,
+               "id": 4099,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -120,7 +120,7 @@
                }
             },
             {
-               "id": 4109,
+               "id": 4110,
                "name": "valueFactory",
                "kind": 1024,
                "kindString": "Property",
@@ -137,21 +137,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4110,
+                     "id": 4111,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4111,
+                           "id": 4112,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4112,
+                                 "id": 4113,
                                  "name": "column",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -166,21 +166,21 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4113,
+                                 "id": 4114,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "signatures": [
                                     {
-                                       "id": 4114,
+                                       "id": 4115,
                                        "name": "__call",
                                        "kind": 4096,
                                        "kindString": "Call signature",
                                        "flags": {},
                                        "parameters": [
                                           {
-                                             "id": 4115,
+                                             "id": 4116,
                                              "name": "row",
                                              "kind": 32768,
                                              "kindString": "Parameter",
@@ -191,7 +191,7 @@
                                              }
                                           },
                                           {
-                                             "id": 4116,
+                                             "id": 4117,
                                              "name": "value",
                                              "kind": 32768,
                                              "kindString": "Parameter",
@@ -232,7 +232,7 @@
                }
             },
             {
-               "id": 4099,
+               "id": 4100,
                "name": "columns",
                "kind": 2048,
                "kindString": "Method",
@@ -241,14 +241,14 @@
                },
                "signatures": [
                   {
-                     "id": 4100,
+                     "id": 4101,
                      "name": "columns",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4101,
+                           "id": 4102,
                            "name": "row",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -259,7 +259,7 @@
                            }
                         },
                         {
-                           "id": 4102,
+                           "id": 4103,
                            "name": "pin",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -285,7 +285,7 @@
                ]
             },
             {
-               "id": 4103,
+               "id": 4104,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -294,14 +294,14 @@
                },
                "signatures": [
                   {
-                     "id": 4104,
+                     "id": 4105,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4105,
+                           "id": 4106,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -328,7 +328,7 @@
                ]
             },
             {
-               "id": 4106,
+               "id": 4107,
                "name": "value",
                "kind": 2048,
                "kindString": "Method",
@@ -337,14 +337,14 @@
                },
                "signatures": [
                   {
-                     "id": 4107,
+                     "id": 4108,
                      "name": "value",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4108,
+                           "id": 4109,
                            "name": "column",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -376,25 +376,25 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4093
+                  4094
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4097,
                   4098,
-                  4109
+                  4099,
+                  4110
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4099,
-                  4103,
-                  4106
+                  4100,
+                  4104,
+                  4107
                ]
             }
          ],
@@ -412,7 +412,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4092
+            4093
          ]
       }
    ],

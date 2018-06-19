@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/command/command.manager.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.manager.d.ts",
    "children": [
       {
          "id": 568,
@@ -149,7 +149,7 @@
                            "kindString": "Parameter",
                            "flags": {},
                            "comment": {
-                              "text": "list of commands to execute, usually come after filter invokation."
+                              "text": "list of commands to execute, usually come after filter invocation."
                            },
                            "type": {
                               "type": "array",
@@ -220,7 +220,7 @@
             {
                "type": "reference",
                "name": "TableCommandManager",
-               "id": 3663
+               "id": 3664
             }
          ]
       }

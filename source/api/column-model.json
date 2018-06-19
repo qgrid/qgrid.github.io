@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/column-type/column.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/column.model.d.ts",
    "children": [
       {
          "id": 88,
@@ -17,7 +17,7 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that represents any column in the q-grid.",
+            "shortText": "A class that represents any column in the qgrid.",
             "text": "### Usage\n\n``` javascript\ngridModel.data({\n   columns: [\n   {\n\t     key: 'id',\n\t  \t title: 'ID',\n\t\t type: 'id',\n\t\t editor: 'number'\n\t  },\n   {\n\t     key: 'avatar',\n\t\t title: 'Avatar',\n\t\t type: 'image',\n\t\t width: 80,\n\t\t value: (item, value) => isUndef(value) ? item.avatar : item.avatar = value,\n\t\t labelPath: 'avatarFileName'\n\t  },\n\t  {\n\t     key: 'name.last',\n\t\t title: 'Last Name',\n\t\t type: 'text',\n\t\t path: 'name.last'\n\t  },\n\t  {\n\t     key: 'gender',\n\t\t title: 'Gender',\n\t\t type: 'text',\n\t\t value: (item, value) => isUndef(value) ? item.gender : item.gender = value,\n\t\t editor: 'dropdown',\n\t\t editorOptions: {\n\t\t    fetch: ['female', 'male']\n\t\t }\n\t  },\n\t  {\n\t     key: 'birthday',\n\t\t title: 'Birthday',\n\t\t type: 'date'\n\t  },\n\t  {\n\t     key: 'comment',\n\t\t title: 'Comment',\n\t\t type: 'text',\n\t\t editor: 'text-area',\n\t\t width: 200,\n\t\t maxLength: 8000\n\t  },\n\t  {\n\t\t key: 'password',\n\t\t title: 'Password',\n\t\t type: 'password',\n\t\t isDefault: false\n\t  },\n\t  {\n\t     key: 'teammates',\n\t\t title: 'Teammates',\n\t\t type: 'reference',\n\t\t editorOptions: {\n\t\t    modelFactory: () => {\n\t\t\t   const model = qgrid.model();\n\t\t\t   model\n               .selection({\n\t\t\t         mode: 'multiple',\n\t\t\t\t     unit: 'row'\n\t\t\t      })\n\t\t\t\t  .columnList({\n\t\t\t\t     generation: 'deep'\n\t\t\t\t  })\n\t\t\t\t  .data({\n\t\t\t\t     rows: ctrl.rows\n\t\t\t\t  });\n\n\t\t\t      return model;\n\t\t\t   }\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'contact.address.zip',\n\t\t   title: 'Zip',\n\t\t   type: 'number',\n\t\t   path: 'contact.address.zip',\n\t\t   width: 70,\n\t\t   isDefault: false\n\t\t},\n\t\t{\n\t\t   key: 'contact.phone',\n\t\t   title: 'Contact Phones',\n\t\t   type: 'array',\n\t\t   path: 'contact.phone',\n\t\t   width: 250\n\t\t},\n\t\t{\n\t\t   key: 'contact.email.primary',\n\t\t   title: 'Primary Email',\n        type: 'email'\n     },\n\t\t{\n\t\t\tkey: 'contact.email.secondary',\n\t\t\ttitle: 'Secondary Email',\n\t\t\ttype: 'email',\n\t\t\teditor: 'autocomplete',\n\t\t\teditorOptions: {\n               fetch: (item, d, search = '') =>\n                   new Promise(resolve => resolve(['foo@bar.ru']))\n\t\t\t}\n\t\t},\n\t\t{\n\t\t   key: 'salary',\n\t\t   title: 'Salary',\n\t\t   type: 'currency'\n\t\t}\n\t\t{\n\t\t   key: 'modifiedTime',\n\t\t   title: 'Modified Time',\n\t\t   type: 'time'\n\t\t},\n\t\t{\n\t\t   key: 'webPage',\n\t\t   title: 'Web Page',\n\t\t   type: 'url'\n\t\t},\n\t\t{\n\t\t   key: 'attachment',\n\t\t   title: 'Attachment',\n\t\t   type: 'file'\n\t\t},\n\t\t{\n\t\t   key: 'isOnline',\n\t\t   title: 'Online',\n\t       type: 'bool'\n\t\t}]\n});\n```\n\n### Suggested Links\n\n* [value.js](https://github.com/qgrid/ng2/blob/master/core/services/value.js)\n* [label.js](https://github.com/qgrid/ng2/blob/master/core/services/label.js)\n* [column.pipe.js](https://github.com/qgrid/ng2/blob/master/core/pipe/column.pipe.js)\n"
          },
          "children": [
@@ -33,7 +33,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 338,
+                     "line": 345,
                      "character": 7
                   }
                ],
@@ -96,7 +96,7 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 338,
+                           "line": 345,
                            "character": 9
                         }
                      ]
@@ -115,7 +115,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 194,
+                     "line": 195,
                      "character": 7
                   }
                ],
@@ -169,7 +169,7 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 194,
+                           "line": 195,
                            "character": 9
                         }
                      ]
@@ -191,7 +191,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 272,
+                     "line": 279,
                      "character": 8
                   }
                ],
@@ -215,7 +215,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 294,
+                     "line": 301,
                      "character": 10
                   }
                ],
@@ -239,7 +239,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 304,
+                     "line": 311,
                      "character": 9
                   }
                ],
@@ -263,7 +263,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 299,
+                     "line": 306,
                      "character": 13
                   }
                ],
@@ -282,12 +282,12 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Indicates if drang and drop is allowed for the column."
+                  "shortText": "Indicates if drag and drop is allowed for the column."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 288,
+                     "line": 295,
                      "character": 8
                   }
                ],
@@ -306,12 +306,12 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Indicates if column is resizable."
+                  "shortText": "Indicates if use can change column width by drag and drop."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 277,
+                     "line": 284,
                      "character": 10
                   }
                ],
@@ -335,7 +335,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 283,
+                     "line": 290,
                      "character": 8
                   }
                ],
@@ -359,7 +359,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 336,
+                     "line": 343,
                      "character": 9
                   }
                ],
@@ -383,12 +383,12 @@
                },
                "comment": {
                   "shortText": "A functional type of a the column.",
-                  "text": " * `'control'` behavior controllers (e.g. `select` type column).\n * `'data'` real user data.\n * `'markup'` used for the internal markup needs (e.g. `pad` type column).\n * `'pivot'`multi head pivot.\n"
+                  "text": " * `control` behavior controllers (e.g. `select` type column).\n * `data` real user data.\n * `markup` used for the internal markup needs (e.g. `pad` type column).\n * `pivot`multi head pivot.\n"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 229,
+                     "line": 230,
                      "character": 6
                   }
                ],
@@ -429,7 +429,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 331,
+                     "line": 338,
                      "character": 8
                   }
                ],
@@ -481,7 +481,7 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 331,
+                           "line": 338,
                            "character": 10
                         }
                      ]
@@ -503,7 +503,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 235,
+                     "line": 236,
                      "character": 7
                   }
                ],
@@ -527,7 +527,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 240,
+                     "line": 241,
                      "character": 14
                   }
                ],
@@ -552,7 +552,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 314,
+                     "line": 321,
                      "character": 6
                   }
                ],
@@ -576,7 +576,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 309,
+                     "line": 316,
                      "character": 10
                   }
                ],
@@ -595,12 +595,12 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Column identifier, should be unique across all columns. If path is not setup, key property is used\nto retrieve a cell value."
+                  "shortText": "A column identifier, should be unique across all columns. If path is not setup, key property is used\nto retrieve a cell value."
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 182,
+                     "line": 183,
                      "character": 4
                   }
                ],
@@ -624,7 +624,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 320,
+                     "line": 327,
                      "character": 6
                   }
                ],
@@ -687,7 +687,7 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 320,
+                           "line": 327,
                            "character": 8
                         }
                      ]
@@ -709,7 +709,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 326,
+                     "line": 333,
                      "character": 10
                   }
                ],
@@ -733,7 +733,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 260,
+                     "line": 261,
                      "character": 9
                   }
                ],
@@ -757,7 +757,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 255,
+                     "line": 256,
                      "character": 9
                   }
                ],
@@ -778,7 +778,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 210,
+                     "line": 211,
                      "character": 7
                   }
                ],
@@ -802,7 +802,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 200,
+                     "line": 201,
                      "character": 5
                   }
                ],
@@ -826,7 +826,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 208,
+                     "line": 209,
                      "character": 4
                   }
                ],
@@ -859,12 +859,12 @@
                },
                "comment": {
                   "shortText": "Place where a column was created.",
-                  "text": "* `'generation'` was auto-generated by the q-grid.\n* `'template'` was defined by user in the html template.\n* `'user'` was defined by user in the javascript/typescript.\n"
+                  "text": "* `generation` was auto-generated by the q-grid.\n* `template` was defined by user in the html template.\n* `user` was defined by user in the javascript/typescript.\n"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 219,
+                     "line": 220,
                      "character": 7
                   }
                ],
@@ -888,7 +888,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 187,
+                     "line": 188,
                      "character": 6
                   }
                ],
@@ -907,12 +907,12 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Type of column. Beside below list user is free to define own column type.\nBe aware that some column types are used for internal purposes.\n- `array`\n- `bool`\n- `currency`\n- `date`\n- `email`\n- `file`\n- `filter-row`\n- `group`\n- `id`\n- `image`\n- `number`\n- `pad`\n- `pivot`\n- `reference`\n- `row-details`\n- `row-expand`\n- `row-indicator`\n- `row-number`\n- `row-options`\n- `select`\n- `summary`\n- `text`\n- `time`\n- `url`"
+                  "shortText": "Type of column. Beside below list user is free to define own column type.\nBe aware that some column types are used for internal purposes.\n- `array`\n- `bool`\n- `cohort`\n- `currency`\n- `date`\n- `email`\n- `file`\n- `filter-row`\n- `group`\n- `id`\n- `image`\n- `number`\n- `pad`\n- `pivot`\n- `reference`\n- `row-details`\n- `row-expand`\n- `row-indicator`\n- `row-number`\n- `row-options`\n- `select`\n- `summary`\n- `text`\n- `time`\n- `url`"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 176,
+                     "line": 177,
                      "character": 5
                   }
                ],
@@ -936,7 +936,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 192,
+                     "line": 193,
                      "character": 6
                   }
                ],
@@ -990,7 +990,7 @@
                      "sources": [
                         {
                            "fileName": "column-type/column.model.d.ts",
-                           "line": 192,
+                           "line": 193,
                            "character": 8
                         }
                      ]
@@ -1012,7 +1012,7 @@
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 265,
+                     "line": 266,
                      "character": 10
                   }
                ],
@@ -1032,12 +1032,12 @@
                },
                "comment": {
                   "shortText": "Width of the q-grid column.",
-                  "text": "* Can be setup in `pixels` like `<q-grid-column width=\"100\">`.\n* Can be setup in `persents` like `<q-grid-column width=\"20%\"`.\n\nPercents are materialized only once on init, and depend on the q-grid size.\n"
+                  "text": "* Can be setup in `pixels` like `<q-grid-column width=\"100\"></q-grid-column>`.\n* Can be setup in `percents` like `<q-grid-column width=\"20%\"></q-grid-column>`.\n\nPercents are materialized only once on init, and depend on the q-grid size.\n"
                },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 250,
+                     "line": 251,
                      "character": 6
                   }
                ],
@@ -1064,10 +1064,14 @@
                   "isExported": true,
                   "isOptional": true
                },
+               "comment": {
+                  "shortText": "Indicates how to calculate px from percentage:",
+                  "text": "* `relative` get whole grid width minus static px widths and apply percents.\n* `absolute` get whole grid width and apply percents.\n"
+               },
                "sources": [
                   {
                      "fileName": "column-type/column.model.d.ts",
-                     "line": 267,
+                     "line": 274,
                      "character": 10
                   }
                ],
@@ -1127,57 +1131,57 @@
             {
                "type": "reference",
                "name": "DataColumnModel",
-               "id": 1932
+               "id": 1933
             },
             {
                "type": "reference",
                "name": "CohortColumnModel",
-               "id": 2133
+               "id": 2134
             },
             {
                "type": "reference",
                "name": "FilterRowColumnModel",
-               "id": 2456
+               "id": 2457
             },
             {
                "type": "reference",
                "name": "GroupColumnModel",
-               "id": 2518
+               "id": 2519
             },
             {
                "type": "reference",
                "name": "PadColumnModel",
-               "id": 2839
+               "id": 2840
             },
             {
                "type": "reference",
                "name": "PivotColumnModel",
-               "id": 2964
+               "id": 2965
             },
             {
                "type": "reference",
                "name": "RowDetailsColumnModel",
-               "id": 3090
+               "id": 3091
             },
             {
                "type": "reference",
                "name": "RowExpandColumnModel",
-               "id": 3151
+               "id": 3152
             },
             {
                "type": "reference",
                "name": "RowIndicatorColumnModel",
-               "id": 3212
+               "id": 3213
             },
             {
                "type": "reference",
                "name": "RowNumberColumnModel",
-               "id": 3273
+               "id": 3274
             },
             {
                "type": "reference",
                "name": "SelectColumnModel",
-               "id": 3398
+               "id": 3399
             }
          ]
       }

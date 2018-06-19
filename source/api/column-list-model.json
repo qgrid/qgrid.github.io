@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/column-list/column.list.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-list/column.list.model.d.ts",
    "children": [
       {
          "id": 266,
@@ -17,8 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "A class that responsible for the columns order and generation. Usually user does not interact directly\nwith this model as the q-grid uses this in internal pipelines.",
-            "text": "### Usage\n\n* Example of how user usually can define column generation type and list of columns in template.\n\n```html\n<q-grid>\n   <q-grid-columns generation=\"deep\">\n      <q-grid-column key=\"myKey\"></q-grid-column>\n   </q-grid-columns>\n</q-grid>\n```\n\n* Example of how user usually can define some options for the all columns of appropriate type.\n\n```html\n<q-grid>\n   <q-grid-columns>\n      <q-grid-column type=\"number\" canSort=\"false\" canFilter=\"false\"></q-grid-column>\n   </q-grid-columns>\n</q-grid>\n```\n\n### Suggested Links\n\n* [Column Model](/doc/api/column-model.html)\n* [Column Sort](/doc/feature/sort.html)\n* [column.list.generate.js](https://github.com/qgrid/ng2/blob/master/core/column-list/column.list.generate.js)\n* [column.list.sort.js](https://github.com/qgrid/ng2/blob/master/core/column-list/column.list.sort.js)\n\n"
+            "shortText": "Use this class to order and generate q-grid columns.",
+            "text": "### Setup column generation mode in html.\n\n```html\n<q-grid>\n   <q-grid-columns generation=\"deep\">\n   </q-grid-columns>\n</q-grid>\n```\n\n### Add one column to the qgrid.\n\n```html\n<q-grid>\n   <q-grid-columns>\n      <q-grid-column type=\"number\" canSort=\"false\" canFilter=\"false\"></q-grid-column>\n   </q-grid-columns>\n</q-grid>\n```\n\n\n### Suggested Links\n\n* [Column Model](/doc/api/column-model.html)\n* [Column Sort](/doc/feature/sort.html)\n* [column.list.generate.js](https://github.com/qgrid/ng2/blob/master/core/column-list/column.list.generate.js)\n* [column.list.sort.js](https://github.com/qgrid/ng2/blob/master/core/column-list/column.list.sort.js)\n\n"
          },
          "children": [
             {
@@ -31,12 +31,12 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "List of columns from html template. Usually that kind of column can be\ndefined with `<q-grid-column>` componet in html,\nand has `column.source === 'tempate'`."
+                  "shortText": "List of columns from html template. Usually that kind of column can be\ndefined with `<q-grid-column>` component in html,\nand has `column.source === 'template'`."
                },
                "sources": [
                   {
                      "fileName": "column-list/column.list.model.d.ts",
-                     "line": 59,
+                     "line": 57,
                      "character": 8
                   }
                ],
@@ -59,12 +59,13 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "When setup columns will be generated automatically based on passed data source.\n- `null` means auto generation is off.\n- `'deep'` means that algorithm traverses all level keys of the passed data source item.\n- `'shallow'` means algoithm traverses only first level keys of the passed data source item.\n- `'cohort'` similar to deep, but use column groups."
+                  "shortText": "A column generation mode. Here are possible values:",
+                  "text": "- `null` auto generation is off.\n- `deep` number of columns will be equal to number of graph leafs after deep traversing of first row object.\n- `shallow` number of columns will be equal to number of keys from first row object.\n- `cohort` similar to deep, but use column groups to display hierarchy.\n"
                },
                "sources": [
                   {
                      "fileName": "column-list/column.list.model.d.ts",
-                     "line": 45,
+                     "line": 43,
                      "character": 11
                   }
                ],
@@ -100,12 +101,12 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "Contains array of column keys which q-grid uses for column ordering.\nThis is filled automatically by internal service, but can be modified, for instance,\nby [column sort](/doc/feature/sort.html) plugin."
+                  "shortText": "Array of column keys which q-grid uses for column ordering.\nThis is filled automatically by internal service, but can be modified, for instance,\nby [column sort](/doc/feature/sort.html) plugin."
                },
                "sources": [
                   {
                      "fileName": "column-list/column.list.model.d.ts",
-                     "line": 52,
+                     "line": 50,
                      "character": 6
                   }
                ],
@@ -132,7 +133,7 @@
                "sources": [
                   {
                      "fileName": "column-list/column.list.model.d.ts",
-                     "line": 66,
+                     "line": 64,
                      "character": 10
                   }
                ],
@@ -157,7 +158,7 @@
          "sources": [
             {
                "fileName": "column-list/column.list.model.d.ts",
-               "line": 37,
+               "line": 34,
                "character": 40
             }
          ]

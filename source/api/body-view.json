@@ -1,15 +1,15 @@
 {
-   "id": 1729,
+   "id": 1730,
    "name": "\"body/body.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/body/body.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/body/body.view.d.ts",
    "children": [
       {
-         "id": 1730,
+         "id": 1731,
          "name": "BodyView",
          "kind": 128,
          "kindString": "Class",
@@ -17,11 +17,12 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "> Under Construction."
+            "shortText": "Use this class to get access to the main area rendering options.",
+            "text": "### How to access\n\n```html\n<ng-template let-$view=\"$view\">\n\t\tCount of columns for the first row: {{$view.body.render.columns(rows[0], null, 0)]).length}}\n</ng-template>\n```\n\n* ### Suggested Links\n\n* [Render](/doc/api/render.html)\n* [View](/doc/api/view.html)\n"
          },
          "children": [
             {
-               "id": 1731,
+               "id": 1732,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +31,14 @@
                },
                "signatures": [
                   {
-                     "id": 1732,
+                     "id": 1733,
                      "name": "new BodyView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 1733,
+                           "id": 1734,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +50,7 @@
                            }
                         },
                         {
-                           "id": 1734,
+                           "id": 1735,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,48 +58,51 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "BodyView",
-                        "id": 1730
+                        "id": 1731
                      }
                   }
                ],
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 10,
+                     "line": 23,
                      "character": 31
                   }
                ]
             },
             {
-               "id": 1736,
+               "id": 1737,
                "name": "render",
                "kind": 1024,
                "kindString": "Property",
                "flags": {
                   "isExported": true
                },
+               "comment": {
+                  "shortText": " Use to build layout."
+               },
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 15,
+                     "line": 31,
                      "character": 7
                   }
                ],
                "type": {
                   "type": "reference",
                   "name": "Renderer",
-                  "id": 1681
+                  "id": 1682
                }
             },
             {
-               "id": 1735,
+               "id": 1736,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -108,7 +112,7 @@
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 13,
+                     "line": 26,
                      "character": 14
                   }
                ],
@@ -121,7 +125,7 @@
                }
             },
             {
-               "id": 1737,
+               "id": 1738,
                "name": "columns",
                "kind": 2048,
                "kindString": "Method",
@@ -130,14 +134,14 @@
                },
                "signatures": [
                   {
-                     "id": 1738,
+                     "id": 1739,
                      "name": "columns",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 1739,
+                           "id": 1740,
                            "name": "pin",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -161,7 +165,7 @@
                "sources": [
                   {
                      "fileName": "body/body.view.d.ts",
-                     "line": 17,
+                     "line": 33,
                      "character": 8
                   }
                ]
@@ -172,29 +176,29 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  1731
+                  1732
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  1736,
-                  1735
+                  1737,
+                  1736
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  1737
+                  1738
                ]
             }
          ],
          "sources": [
             {
                "fileName": "body/body.view.d.ts",
-               "line": 10,
+               "line": 23,
                "character": 29
             }
          ]
@@ -205,7 +209,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            1730
+            1731
          ]
       }
    ],

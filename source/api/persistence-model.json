@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/persistence/persistence.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/persistence/persistence.model.d.ts",
    "children": [
       {
          "id": 703,
@@ -218,35 +218,33 @@
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
-                     "indexSignature": [
-                        {
-                           "id": 715,
-                           "name": "__index",
-                           "kind": 8192,
-                           "kindString": "Index signature",
-                           "flags": {},
-                           "parameters": [
-                              {
-                                 "id": 716,
-                                 "name": "key",
-                                 "kind": 32768,
-                                 "kindString": "Parameter",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "string"
-                                 }
-                              }
-                           ],
-                           "type": {
-                              "type": "array",
-                              "elementType": {
+                     "indexSignature": {
+                        "id": 715,
+                        "name": "__index",
+                        "kind": 8192,
+                        "kindString": "Index signature",
+                        "flags": {},
+                        "parameters": [
+                           {
+                              "id": 716,
+                              "name": "key",
+                              "kind": 32768,
+                              "kindString": "Parameter",
+                              "flags": {},
+                              "type": {
                                  "type": "intrinsic",
                                  "name": "string"
                               }
                            }
+                        ],
+                        "type": {
+                           "type": "array",
+                           "elementType": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
                         }
-                     ],
+                     },
                      "sources": [
                         {
                            "fileName": "persistence/persistence.model.d.ts",

@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/column-type/editor.options.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/column-type/editor.options.d.ts",
    "children": [
       {
          "id": 57,
@@ -59,7 +59,7 @@
                },
                "comment": {
                   "shortText": "Defines navigation behavior when cell is in edit mode.",
-                  "text": "* `'control'` when cell is in edit mode, keyboard navigation events are disabled(in general, `tab` and `shift+tab` still works).\n* `'transparent'` when cell is in edit mode, keyboard navigation event are still applicable.\n"
+                  "text": "* `control` when cell is in edit mode, keyboard navigation events are disabled(in general, `tab` and `shift+tab` still works).\n* `transparent` when cell is in edit mode, keyboard navigation event are still applicable.\n"
                },
                "sources": [
                   {
@@ -254,7 +254,7 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "q-grid model factory, can be used by reference column to draw a anpther q-grid in edit cell mode."
+                  "shortText": "q-grid model factory, can be used by reference column to draw a another q-grid in edit cell mode."
                },
                "sources": [
                   {
@@ -540,7 +540,7 @@
                },
                "comment": {
                   "shortText": "Says when cell should go to the edit mode.",
-                  "text": "* `'click'` edit mode activates when user clicks on cell.\n* `'custom'` if user defines own edit mode trigger, like button for reference column edit, this option should be used.\n* `'focus'` edit mode activates when cell recieves focus.\n"
+                  "text": "* `click` edit mode activates when user clicks on cell.\n* `custom` if user defines own edit mode trigger, like button for reference column edit, this option should be used.\n* `focus` edit mode activates when cell receives focus.\n"
                },
                "sources": [
                   {

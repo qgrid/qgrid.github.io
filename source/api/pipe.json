@@ -1,15 +1,15 @@
 {
-   "id": 4687,
+   "id": 4688,
    "name": "\"pipe/pipe.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pipe/pipe.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/pipe.d.ts",
    "children": [
       {
-         "id": 4688,
+         "id": 4689,
          "name": "Pipe",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4752,
+               "id": 4753,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -39,21 +39,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4753,
+                     "id": 4754,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4754,
+                           "id": 4755,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4755,
+                                 "id": 4756,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -64,7 +64,7 @@
                                  }
                               },
                               {
-                                 "id": 4756,
+                                 "id": 4757,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -76,7 +76,7 @@
                                  }
                               },
                               {
-                                 "id": 4757,
+                                 "id": 4758,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -84,21 +84,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4758,
+                                       "id": 4759,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4759,
+                                             "id": 4760,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4760,
+                                                   "id": 4761,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -144,7 +144,7 @@
                }
             },
             {
-               "id": 4689,
+               "id": 4690,
                "name": "data",
                "kind": 1024,
                "kindString": "Property",
@@ -162,21 +162,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4690,
+                     "id": 4691,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4691,
+                           "id": 4692,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4692,
+                                 "id": 4693,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -187,7 +187,7 @@
                                  }
                               },
                               {
-                                 "id": 4693,
+                                 "id": 4694,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -199,7 +199,7 @@
                                  }
                               },
                               {
-                                 "id": 4694,
+                                 "id": 4695,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -207,21 +207,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4695,
+                                       "id": 4696,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4696,
+                                             "id": 4697,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4697,
+                                                   "id": 4698,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -269,7 +269,7 @@
                }
             },
             {
-               "id": 4698,
+               "id": 4699,
                "name": "filter",
                "kind": 1024,
                "kindString": "Property",
@@ -287,21 +287,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4699,
+                     "id": 4700,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4700,
+                           "id": 4701,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4701,
+                                 "id": 4702,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -312,7 +312,7 @@
                                  }
                               },
                               {
-                                 "id": 4702,
+                                 "id": 4703,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -324,7 +324,7 @@
                                  }
                               },
                               {
-                                 "id": 4703,
+                                 "id": 4704,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -332,21 +332,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4704,
+                                       "id": 4705,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4705,
+                                             "id": 4706,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4706,
+                                                   "id": 4707,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -394,7 +394,7 @@
                }
             },
             {
-               "id": 4734,
+               "id": 4735,
                "name": "group",
                "kind": 1024,
                "kindString": "Property",
@@ -412,21 +412,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4735,
+                     "id": 4736,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4736,
+                           "id": 4737,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4737,
+                                 "id": 4738,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -437,7 +437,7 @@
                                  }
                               },
                               {
-                                 "id": 4738,
+                                 "id": 4739,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -449,7 +449,7 @@
                                  }
                               },
                               {
-                                 "id": 4739,
+                                 "id": 4740,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -457,21 +457,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4740,
+                                       "id": 4741,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4741,
+                                             "id": 4742,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4742,
+                                                   "id": 4743,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -517,7 +517,7 @@
                }
             },
             {
-               "id": 4725,
+               "id": 4726,
                "name": "memo",
                "kind": 1024,
                "kindString": "Property",
@@ -535,21 +535,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4726,
+                     "id": 4727,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4727,
+                           "id": 4728,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4728,
+                                 "id": 4729,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -560,7 +560,7 @@
                                  }
                               },
                               {
-                                 "id": 4729,
+                                 "id": 4730,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -572,7 +572,7 @@
                                  }
                               },
                               {
-                                 "id": 4730,
+                                 "id": 4731,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -580,21 +580,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4731,
+                                       "id": 4732,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4732,
+                                             "id": 4733,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4733,
+                                                   "id": 4734,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -640,7 +640,7 @@
                }
             },
             {
-               "id": 4707,
+               "id": 4708,
                "name": "pagination",
                "kind": 1024,
                "kindString": "Property",
@@ -658,21 +658,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4708,
+                     "id": 4709,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4709,
+                           "id": 4710,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4710,
+                                 "id": 4711,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -683,7 +683,7 @@
                                  }
                               },
                               {
-                                 "id": 4711,
+                                 "id": 4712,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -695,7 +695,7 @@
                                  }
                               },
                               {
-                                 "id": 4712,
+                                 "id": 4713,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -703,21 +703,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4713,
+                                       "id": 4714,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4714,
+                                             "id": 4715,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4715,
+                                                   "id": 4716,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -765,7 +765,7 @@
                }
             },
             {
-               "id": 4743,
+               "id": 4744,
                "name": "pivot",
                "kind": 1024,
                "kindString": "Property",
@@ -783,21 +783,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4744,
+                     "id": 4745,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4745,
+                           "id": 4746,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4746,
+                                 "id": 4747,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -808,7 +808,7 @@
                                  }
                               },
                               {
-                                 "id": 4747,
+                                 "id": 4748,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -820,7 +820,7 @@
                                  }
                               },
                               {
-                                 "id": 4748,
+                                 "id": 4749,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -828,21 +828,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4749,
+                                       "id": 4750,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4750,
+                                             "id": 4751,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4751,
+                                                   "id": 4752,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -888,7 +888,7 @@
                }
             },
             {
-               "id": 4716,
+               "id": 4717,
                "name": "sort",
                "kind": 1024,
                "kindString": "Property",
@@ -906,21 +906,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4717,
+                     "id": 4718,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4718,
+                           "id": 4719,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4719,
+                                 "id": 4720,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -931,7 +931,7 @@
                                  }
                               },
                               {
-                                 "id": 4720,
+                                 "id": 4721,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -943,7 +943,7 @@
                                  }
                               },
                               {
-                                 "id": 4721,
+                                 "id": 4722,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -951,21 +951,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4722,
+                                       "id": 4723,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4723,
+                                             "id": 4724,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4724,
+                                                   "id": 4725,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -1013,7 +1013,7 @@
                }
             },
             {
-               "id": 4761,
+               "id": 4762,
                "name": "view",
                "kind": 1024,
                "kindString": "Property",
@@ -1031,21 +1031,21 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 4762,
+                     "id": 4763,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 4763,
+                           "id": 4764,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
                            "flags": {},
                            "parameters": [
                               {
-                                 "id": 4764,
+                                 "id": 4765,
                                  "name": "memo",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -1056,7 +1056,7 @@
                                  }
                               },
                               {
-                                 "id": 4765,
+                                 "id": 4766,
                                  "name": "context",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -1068,7 +1068,7 @@
                                  }
                               },
                               {
-                                 "id": 4766,
+                                 "id": 4767,
                                  "name": "next",
                                  "kind": 32768,
                                  "kindString": "Parameter",
@@ -1076,21 +1076,21 @@
                                  "type": {
                                     "type": "reflection",
                                     "declaration": {
-                                       "id": 4767,
+                                       "id": 4768,
                                        "name": "__type",
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
                                        "signatures": [
                                           {
-                                             "id": 4768,
+                                             "id": 4769,
                                              "name": "__call",
                                              "kind": 4096,
                                              "kindString": "Call signature",
                                              "flags": {},
                                              "parameters": [
                                                 {
-                                                   "id": 4769,
+                                                   "id": 4770,
                                                    "name": "param",
                                                    "kind": 32768,
                                                    "kindString": "Parameter",
@@ -1141,15 +1141,15 @@
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4752,
-                  4689,
-                  4698,
-                  4734,
-                  4725,
-                  4707,
-                  4743,
-                  4716,
-                  4761
+                  4753,
+                  4690,
+                  4699,
+                  4735,
+                  4726,
+                  4708,
+                  4744,
+                  4717,
+                  4762
                ]
             }
          ],
@@ -1167,7 +1167,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4688
+            4689
          ]
       }
    ],

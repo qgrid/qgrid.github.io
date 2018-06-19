@@ -1,15 +1,15 @@
 {
-   "id": 5350,
+   "id": 5385,
    "name": "\"style/style.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/style/style.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.view.d.ts",
    "children": [
       {
-         "id": 5351,
+         "id": 5386,
          "name": "StyleView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 5352,
+               "id": 5387,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 5353,
+                     "id": 5388,
                      "name": "new StyleView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 5354,
+                           "id": 5389,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 5355,
+                           "id": 5390,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,14 +57,14 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         }
                      ],
                      "type": {
                         "type": "reference",
                         "name": "StyleView",
-                        "id": 5351
+                        "id": 5386
                      }
                   }
                ],
@@ -77,7 +77,7 @@
                ]
             },
             {
-               "id": 5356,
+               "id": 5391,
                "name": "monitor",
                "kind": 1024,
                "kindString": "Property",
@@ -94,14 +94,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 5357,
+                     "id": 5392,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "children": [
                         {
-                           "id": 5359,
+                           "id": 5394,
                            "name": "cell",
                            "kind": 32,
                            "kindString": "Variable",
@@ -116,11 +116,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Monitor",
-                              "id": 5335
+                              "id": 5370
                            }
                         },
                         {
-                           "id": 5358,
+                           "id": 5393,
                            "name": "row",
                            "kind": 32,
                            "kindString": "Variable",
@@ -135,7 +135,7 @@
                            "type": {
                               "type": "reference",
                               "name": "Monitor",
-                              "id": 5335
+                              "id": 5370
                            }
                         }
                      ],
@@ -144,8 +144,8 @@
                            "title": "Variables",
                            "kind": 32,
                            "children": [
-                              5359,
-                              5358
+                              5394,
+                              5393
                            ]
                         }
                      ],
@@ -160,7 +160,7 @@
                }
             },
             {
-               "id": 5360,
+               "id": 5395,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -169,14 +169,14 @@
                },
                "signatures": [
                   {
-                     "id": 5361,
+                     "id": 5396,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 5362,
+                           "id": 5397,
                            "name": "domRow",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -187,7 +187,7 @@
                            }
                         },
                         {
-                           "id": 5363,
+                           "id": 5398,
                            "name": "domCell",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -213,7 +213,7 @@
                ]
             },
             {
-               "id": 5364,
+               "id": 5399,
                "name": "needInvalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -222,7 +222,7 @@
                },
                "signatures": [
                   {
-                     "id": 5365,
+                     "id": 5400,
                      "name": "needInvalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -247,22 +247,22 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  5352
+                  5387
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  5356
+                  5391
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  5360,
-                  5364
+                  5395,
+                  5399
                ]
             }
          ],
@@ -280,7 +280,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            5351
+            5386
          ]
       }
    ],
@@ -291,5 +291,5 @@
          "character": 0
       }
    ],
-   "order": 241
+   "order": 242
 }

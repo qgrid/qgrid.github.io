@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/sort/sort.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/sort/sort.model.d.ts",
    "children": [
       {
          "id": 318,
@@ -62,41 +62,39 @@
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
-                                 "indexSignature": [
-                                    {
-                                       "id": 322,
-                                       "name": "__index",
-                                       "kind": 8192,
-                                       "kindString": "Index signature",
-                                       "flags": {},
-                                       "parameters": [
-                                          {
-                                             "id": 323,
-                                             "name": "key",
-                                             "kind": 32768,
-                                             "kindString": "Parameter",
-                                             "flags": {},
-                                             "type": {
-                                                "type": "intrinsic",
-                                                "name": "string"
-                                             }
+                                 "indexSignature": {
+                                    "id": 322,
+                                    "name": "__index",
+                                    "kind": 8192,
+                                    "kindString": "Index signature",
+                                    "flags": {},
+                                    "parameters": [
+                                       {
+                                          "id": 323,
+                                          "name": "key",
+                                          "kind": 32768,
+                                          "kindString": "Parameter",
+                                          "flags": {},
+                                          "type": {
+                                             "type": "intrinsic",
+                                             "name": "string"
                                           }
-                                       ],
-                                       "type": {
-                                          "type": "union",
-                                          "types": [
-                                             {
-                                                "type": "stringLiteral",
-                                                "value": "desc"
-                                             },
-                                             {
-                                                "type": "stringLiteral",
-                                                "value": "asc"
-                                             }
-                                          ]
                                        }
+                                    ],
+                                    "type": {
+                                       "type": "union",
+                                       "types": [
+                                          {
+                                             "type": "stringLiteral",
+                                             "value": "desc"
+                                          },
+                                          {
+                                             "type": "stringLiteral",
+                                             "value": "asc"
+                                          }
+                                       ]
                                     }
-                                 ],
+                                 },
                                  "sources": [
                                     {
                                        "fileName": "sort/sort.model.d.ts",
@@ -232,5 +230,5 @@
          "character": 0
       }
    ],
-   "order": 235
+   "order": 236
 }

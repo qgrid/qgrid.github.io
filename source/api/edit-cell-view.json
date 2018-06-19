@@ -1,15 +1,15 @@
 {
-   "id": 3763,
+   "id": 3764,
    "name": "\"edit/edit.cell.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/edit/edit.cell.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/edit/edit.cell.view.d.ts",
    "children": [
       {
-         "id": 3764,
+         "id": 3765,
          "name": "EditCellView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 3765,
+               "id": 3766,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 3766,
+                     "id": 3767,
                      "name": "new EditCellView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 3767,
+                           "id": 3768,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 3768,
+                           "id": 3769,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         },
                         {
-                           "id": 3769,
+                           "id": 3770,
                            "name": "shortcut",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -69,14 +69,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 3770,
+                                 "id": 3771,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "children": [
                                     {
-                                       "id": 3775,
+                                       "id": 3776,
                                        "name": "keyCode",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -91,14 +91,14 @@
                                        "type": {
                                           "type": "reflection",
                                           "declaration": {
-                                             "id": 3776,
+                                             "id": 3777,
                                              "name": "__type",
                                              "kind": 65536,
                                              "kindString": "Type literal",
                                              "flags": {},
                                              "signatures": [
                                                 {
-                                                   "id": 3777,
+                                                   "id": 3778,
                                                    "name": "__call",
                                                    "kind": 4096,
                                                    "kindString": "Call signature",
@@ -121,7 +121,7 @@
                                        }
                                     },
                                     {
-                                       "id": 3771,
+                                       "id": 3772,
                                        "name": "register",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -136,21 +136,21 @@
                                        "type": {
                                           "type": "reflection",
                                           "declaration": {
-                                             "id": 3772,
+                                             "id": 3773,
                                              "name": "__type",
                                              "kind": 65536,
                                              "kindString": "Type literal",
                                              "flags": {},
                                              "signatures": [
                                                 {
-                                                   "id": 3773,
+                                                   "id": 3774,
                                                    "name": "__call",
                                                    "kind": 4096,
                                                    "kindString": "Call signature",
                                                    "flags": {},
                                                    "parameters": [
                                                       {
-                                                         "id": 3774,
+                                                         "id": 3775,
                                                          "name": "commands",
                                                          "kind": 32768,
                                                          "kindString": "Parameter",
@@ -187,8 +187,8 @@
                                        "title": "Variables",
                                        "kind": 32,
                                        "children": [
-                                          3775,
-                                          3771
+                                          3776,
+                                          3772
                                        ]
                                     }
                                  ],
@@ -206,7 +206,7 @@
                      "type": {
                         "type": "reference",
                         "name": "EditCellView",
-                        "id": 3764
+                        "id": 3765
                      }
                   }
                ],
@@ -219,7 +219,7 @@
                ]
             },
             {
-               "id": 3781,
+               "id": 3782,
                "name": "cancel",
                "kind": 1024,
                "kindString": "Property",
@@ -240,7 +240,7 @@
                }
             },
             {
-               "id": 3786,
+               "id": 3787,
                "name": "cell",
                "kind": 1024,
                "kindString": "Property",
@@ -261,7 +261,7 @@
                }
             },
             {
-               "id": 3788,
+               "id": 3789,
                "name": "column",
                "kind": 1024,
                "kindString": "Property",
@@ -282,7 +282,7 @@
                }
             },
             {
-               "id": 3779,
+               "id": 3780,
                "name": "commit",
                "kind": 1024,
                "kindString": "Property",
@@ -303,7 +303,7 @@
                }
             },
             {
-               "id": 3778,
+               "id": 3779,
                "name": "enter",
                "kind": 1024,
                "kindString": "Property",
@@ -324,7 +324,7 @@
                }
             },
             {
-               "id": 3783,
+               "id": 3784,
                "name": "exit",
                "kind": 1024,
                "kindString": "Property",
@@ -345,7 +345,7 @@
                }
             },
             {
-               "id": 3790,
+               "id": 3791,
                "name": "fetch",
                "kind": 1024,
                "kindString": "Property",
@@ -362,14 +362,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 3791,
+                     "id": 3792,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 3792,
+                           "id": 3793,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
@@ -391,7 +391,7 @@
                }
             },
             {
-               "id": 3785,
+               "id": 3786,
                "name": "label",
                "kind": 1024,
                "kindString": "Property",
@@ -411,7 +411,7 @@
                }
             },
             {
-               "id": 3789,
+               "id": 3790,
                "name": "options",
                "kind": 1024,
                "kindString": "Property",
@@ -432,7 +432,7 @@
                }
             },
             {
-               "id": 3780,
+               "id": 3781,
                "name": "push",
                "kind": 1024,
                "kindString": "Property",
@@ -453,7 +453,7 @@
                }
             },
             {
-               "id": 3782,
+               "id": 3783,
                "name": "reset",
                "kind": 1024,
                "kindString": "Property",
@@ -474,7 +474,7 @@
                }
             },
             {
-               "id": 3793,
+               "id": 3794,
                "name": "resetFetch",
                "kind": 1024,
                "kindString": "Property",
@@ -491,14 +491,14 @@
                "type": {
                   "type": "reflection",
                   "declaration": {
-                     "id": 3794,
+                     "id": 3795,
                      "name": "__type",
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
                      "signatures": [
                         {
-                           "id": 3795,
+                           "id": 3796,
                            "name": "__call",
                            "kind": 4096,
                            "kindString": "Call signature",
@@ -520,7 +520,7 @@
                }
             },
             {
-               "id": 3787,
+               "id": 3788,
                "name": "row",
                "kind": 1024,
                "kindString": "Property",
@@ -540,7 +540,7 @@
                }
             },
             {
-               "id": 3784,
+               "id": 3785,
                "name": "value",
                "kind": 1024,
                "kindString": "Property",
@@ -565,27 +565,27 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  3765
+                  3766
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  3781,
-                  3786,
-                  3788,
-                  3779,
-                  3778,
-                  3783,
-                  3790,
-                  3785,
+                  3782,
+                  3787,
                   3789,
                   3780,
-                  3782,
-                  3793,
-                  3787,
-                  3784
+                  3779,
+                  3784,
+                  3791,
+                  3786,
+                  3790,
+                  3781,
+                  3783,
+                  3794,
+                  3788,
+                  3785
                ]
             }
          ],
@@ -603,7 +603,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            3764
+            3765
          ]
       }
    ],

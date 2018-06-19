@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/data/data.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/data/data.model.d.ts",
    "children": [
       {
          "id": 179,
@@ -17,7 +17,7 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "Use this class to get access to the high level qgrid data structures.",
+            "shortText": "Use this class to get access to the high level q-grid data structures.",
             "text": "### Usage\nIn html through attribute bindings:\n```html\n<q-grid [columns]=\"myColumns\" [rows]=\"myRows\">\n</q-grid>\n```\n\nIn html via component:\n```html\n<q-grid>\n\t<q-grid-columns>\n\t\t<q-grid-column key=\"id\" title=\"ID\" type=\"id\"></q-grid-column>\n\t\t<q-grid-column key=\"myColumnKey\" title=\"My Column Name\"><q-grid-column>\n\t</q-grid-columns>\n</q-grid>\n```\n\nIn js code throught model:\n```javascript\nconst myRows = [];\nconst myColumns = [];\n\ngridModel.data({\n rows: myRows,\n columns: myColumns\n});\n```\n\n### Suggested Links\n\n* [qgrid Model](/doc/api/model)\n* [Data Pipe](/doc/api/data-pipe)\n"
          },
          "children": [
@@ -31,7 +31,7 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "A set of columns to display.\nqgrid makes it possible to add columns from various sources and then merge\nthem due to each column having a key property. Note that if you have defined columns in\njavascript and template with the same key, algorithm tries to keep the setting from both\nsources but javascript will have a top priority."
+                  "shortText": "A set of columns to display.\nq-grid makes it possible to add columns from various sources and then merge\nthem due to each column having a key property. Note that if you have defined columns in\njavascript and template with the same key, algorithm tries to keep the setting from both\nsources but javascript will have a top priority."
                },
                "sources": [
                   {
@@ -59,7 +59,7 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "A set of 2 methods to identify column and row id. Note that if result id\nis not unique qgrid behavior can be unpredictable.\nBy default:",
+                  "shortText": "A set of 2 methods to identify column and row id. Note that if result id\nis not unique q-grid behavior can be unpredictable.\nBy default:",
                   "text": "* `row` method is an identity function.\n* `column` method return column key property.\n"
                },
                "sources": [

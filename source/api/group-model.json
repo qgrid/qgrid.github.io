@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/group/group.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/group/group.model.d.ts",
    "children": [
       {
          "id": 344,
@@ -203,32 +203,30 @@
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
-                     "indexSignature": [
-                        {
-                           "id": 352,
-                           "name": "__index",
-                           "kind": 8192,
-                           "kindString": "Index signature",
-                           "flags": {},
-                           "parameters": [
-                              {
-                                 "id": 353,
-                                 "name": "key",
-                                 "kind": 32768,
-                                 "kindString": "Parameter",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "string"
-                                 }
+                     "indexSignature": {
+                        "id": 352,
+                        "name": "__index",
+                        "kind": 8192,
+                        "kindString": "Index signature",
+                        "flags": {},
+                        "parameters": [
+                           {
+                              "id": 353,
+                              "name": "key",
+                              "kind": 32768,
+                              "kindString": "Parameter",
+                              "flags": {},
+                              "type": {
+                                 "type": "intrinsic",
+                                 "name": "string"
                               }
-                           ],
-                           "type": {
-                              "type": "intrinsic",
-                              "name": "string"
                            }
+                        ],
+                        "type": {
+                           "type": "intrinsic",
+                           "name": "string"
                         }
-                     ],
+                     },
                      "sources": [
                         {
                            "fileName": "group/group.model.d.ts",

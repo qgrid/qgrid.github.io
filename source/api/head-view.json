@@ -1,15 +1,15 @@
 {
-   "id": 4277,
+   "id": 4278,
    "name": "\"head/head.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/head/head.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/head/head.view.d.ts",
    "children": [
       {
-         "id": 4278,
+         "id": 4279,
          "name": "HeadView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4279,
+               "id": 4280,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4280,
+                     "id": 4281,
                      "name": "new HeadView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4281,
+                           "id": 4282,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 4282,
+                           "id": 4283,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         },
                         {
-                           "id": 4283,
+                           "id": 4284,
                            "name": "tagName",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -75,7 +75,7 @@
                      "type": {
                         "type": "reference",
                         "name": "HeadView",
-                        "id": 4278
+                        "id": 4279
                      }
                   }
                ],
@@ -88,7 +88,7 @@
                ]
             },
             {
-               "id": 4287,
+               "id": 4288,
                "name": "drag",
                "kind": 1024,
                "kindString": "Property",
@@ -110,14 +110,14 @@
                      {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4288,
+                           "id": 4289,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "children": [
                               {
-                                 "id": 4289,
+                                 "id": 4290,
                                  "name": "dragData",
                                  "kind": 32,
                                  "kindString": "Variable",
@@ -140,7 +140,7 @@
                                  "title": "Variables",
                                  "kind": 32,
                                  "children": [
-                                    4289
+                                    4290
                                  ]
                               }
                            ],
@@ -157,7 +157,7 @@
                }
             },
             {
-               "id": 4284,
+               "id": 4285,
                "name": "drop",
                "kind": 1024,
                "kindString": "Property",
@@ -179,14 +179,14 @@
                      {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4285,
+                           "id": 4286,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "children": [
                               {
-                                 "id": 4286,
+                                 "id": 4287,
                                  "name": "dragData",
                                  "kind": 32,
                                  "kindString": "Variable",
@@ -209,7 +209,7 @@
                                  "title": "Variables",
                                  "kind": 32,
                                  "children": [
-                                    4286
+                                    4287
                                  ]
                               }
                            ],
@@ -226,7 +226,7 @@
                }
             },
             {
-               "id": 4290,
+               "id": 4291,
                "name": "resize",
                "kind": 1024,
                "kindString": "Property",
@@ -247,7 +247,7 @@
                }
             },
             {
-               "id": 4291,
+               "id": 4292,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -274,7 +274,7 @@
                }
             },
             {
-               "id": 4292,
+               "id": 4293,
                "name": "columns",
                "kind": 2048,
                "kindString": "Method",
@@ -283,14 +283,14 @@
                },
                "signatures": [
                   {
-                     "id": 4293,
+                     "id": 4294,
                      "name": "columns",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4294,
+                           "id": 4295,
                            "name": "row",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -301,7 +301,7 @@
                            }
                         },
                         {
-                           "id": 4295,
+                           "id": 4296,
                            "name": "pin",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -332,24 +332,24 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4279
+                  4280
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4287,
-                  4284,
-                  4290,
-                  4291
+                  4288,
+                  4285,
+                  4291,
+                  4292
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4292
+                  4293
                ]
             }
          ],
@@ -367,7 +367,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4278
+            4279
          ]
       }
    ],

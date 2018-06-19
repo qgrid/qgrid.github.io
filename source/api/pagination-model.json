@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pagination/pagination.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pagination/pagination.model.d.ts",
    "children": [
       {
          "id": 393,
@@ -96,35 +96,33 @@
                      "kind": 65536,
                      "kindString": "Type literal",
                      "flags": {},
-                     "indexSignature": [
-                        {
-                           "id": 401,
-                           "name": "__index",
-                           "kind": 8192,
-                           "kindString": "Index signature",
-                           "flags": {},
-                           "parameters": [
-                              {
-                                 "id": 402,
-                                 "name": "key",
-                                 "kind": 32768,
-                                 "kindString": "Parameter",
-                                 "flags": {},
-                                 "type": {
-                                    "type": "intrinsic",
-                                    "name": "string"
-                                 }
-                              }
-                           ],
-                           "type": {
-                              "type": "array",
-                              "elementType": {
+                     "indexSignature": {
+                        "id": 401,
+                        "name": "__index",
+                        "kind": 8192,
+                        "kindString": "Index signature",
+                        "flags": {},
+                        "parameters": [
+                           {
+                              "id": 402,
+                              "name": "key",
+                              "kind": 32768,
+                              "kindString": "Parameter",
+                              "flags": {},
+                              "type": {
                                  "type": "intrinsic",
                                  "name": "string"
                               }
                            }
+                        ],
+                        "type": {
+                           "type": "array",
+                           "elementType": {
+                              "type": "intrinsic",
+                              "name": "string"
+                           }
                         }
-                     ],
+                     },
                      "sources": [
                         {
                            "fileName": "pagination/pagination.model.d.ts",

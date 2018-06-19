@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/style/style.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/style/style.model.d.ts",
    "children": [
       {
          "id": 525,
@@ -107,94 +107,92 @@
                                        "kind": 65536,
                                        "kindString": "Type literal",
                                        "flags": {},
-                                       "indexSignature": [
-                                          {
-                                             "id": 538,
-                                             "name": "__index",
-                                             "kind": 8192,
-                                             "kindString": "Index signature",
-                                             "flags": {},
-                                             "parameters": [
-                                                {
-                                                   "id": 539,
-                                                   "name": "key",
-                                                   "kind": 32768,
-                                                   "kindString": "Parameter",
-                                                   "flags": {},
-                                                   "type": {
-                                                      "type": "intrinsic",
-                                                      "name": "string"
-                                                   }
-                                                }
-                                             ],
-                                             "type": {
-                                                "type": "reflection",
-                                                "declaration": {
-                                                   "id": 540,
-                                                   "name": "__type",
-                                                   "kind": 65536,
-                                                   "kindString": "Type literal",
-                                                   "flags": {},
-                                                   "signatures": [
-                                                      {
-                                                         "id": 541,
-                                                         "name": "__call",
-                                                         "kind": 4096,
-                                                         "kindString": "Call signature",
-                                                         "flags": {},
-                                                         "parameters": [
-                                                            {
-                                                               "id": 542,
-                                                               "name": "row",
-                                                               "kind": 32768,
-                                                               "kindString": "Parameter",
-                                                               "flags": {},
-                                                               "type": {
-                                                                  "type": "intrinsic",
-                                                                  "name": "any"
-                                                               }
-                                                            },
-                                                            {
-                                                               "id": 543,
-                                                               "name": "column",
-                                                               "kind": 32768,
-                                                               "kindString": "Parameter",
-                                                               "flags": {},
-                                                               "type": {
-                                                                  "type": "reference",
-                                                                  "name": "ColumnModel",
-                                                                  "id": 88
-                                                               }
-                                                            },
-                                                            {
-                                                               "id": 544,
-                                                               "name": "context",
-                                                               "kind": 32768,
-                                                               "kindString": "Parameter",
-                                                               "flags": {},
-                                                               "type": {
-                                                                  "type": "intrinsic",
-                                                                  "name": "any"
-                                                               }
-                                                            }
-                                                         ],
-                                                         "type": {
-                                                            "type": "intrinsic",
-                                                            "name": "void"
-                                                         }
-                                                      }
-                                                   ],
-                                                   "sources": [
-                                                      {
-                                                         "fileName": "style/style.model.d.ts",
-                                                         "line": 59,
-                                                         "character": 93
-                                                      }
-                                                   ]
+                                       "indexSignature": {
+                                          "id": 538,
+                                          "name": "__index",
+                                          "kind": 8192,
+                                          "kindString": "Index signature",
+                                          "flags": {},
+                                          "parameters": [
+                                             {
+                                                "id": 539,
+                                                "name": "key",
+                                                "kind": 32768,
+                                                "kindString": "Parameter",
+                                                "flags": {},
+                                                "type": {
+                                                   "type": "intrinsic",
+                                                   "name": "string"
                                                 }
                                              }
+                                          ],
+                                          "type": {
+                                             "type": "reflection",
+                                             "declaration": {
+                                                "id": 540,
+                                                "name": "__type",
+                                                "kind": 65536,
+                                                "kindString": "Type literal",
+                                                "flags": {},
+                                                "signatures": [
+                                                   {
+                                                      "id": 541,
+                                                      "name": "__call",
+                                                      "kind": 4096,
+                                                      "kindString": "Call signature",
+                                                      "flags": {},
+                                                      "parameters": [
+                                                         {
+                                                            "id": 542,
+                                                            "name": "row",
+                                                            "kind": 32768,
+                                                            "kindString": "Parameter",
+                                                            "flags": {},
+                                                            "type": {
+                                                               "type": "intrinsic",
+                                                               "name": "any"
+                                                            }
+                                                         },
+                                                         {
+                                                            "id": 543,
+                                                            "name": "column",
+                                                            "kind": 32768,
+                                                            "kindString": "Parameter",
+                                                            "flags": {},
+                                                            "type": {
+                                                               "type": "reference",
+                                                               "name": "ColumnModel",
+                                                               "id": 88
+                                                            }
+                                                         },
+                                                         {
+                                                            "id": 544,
+                                                            "name": "context",
+                                                            "kind": 32768,
+                                                            "kindString": "Parameter",
+                                                            "flags": {},
+                                                            "type": {
+                                                               "type": "intrinsic",
+                                                               "name": "any"
+                                                            }
+                                                         }
+                                                      ],
+                                                      "type": {
+                                                         "type": "intrinsic",
+                                                         "name": "void"
+                                                      }
+                                                   }
+                                                ],
+                                                "sources": [
+                                                   {
+                                                      "fileName": "style/style.model.d.ts",
+                                                      "line": 59,
+                                                      "character": 93
+                                                   }
+                                                ]
+                                             }
                                           }
-                                       ],
+                                       },
                                        "sources": [
                                           {
                                              "fileName": "style/style.model.d.ts",
@@ -560,5 +558,5 @@
          "character": 0
       }
    ],
-   "order": 239
+   "order": 240
 }

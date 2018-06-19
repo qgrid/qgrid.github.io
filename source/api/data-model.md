@@ -4,7 +4,7 @@ type: api
 group: API
 order: 48
 ---
-Use this class to get access to the high level qgrid data structures.
+Use this class to get access to the high level q-grid data structures.
 
 {% docTable "source/api/data-model.json" %}
 

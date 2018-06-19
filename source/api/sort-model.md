@@ -2,7 +2,7 @@
 title: SortModel
 type: api
 group: API
-order: 235
+order: 236
 ---
 A class that allows to control sorting.
 

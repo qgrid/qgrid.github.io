@@ -1,15 +1,15 @@
 {
-   "id": 4597,
+   "id": 4598,
    "name": "\"pagination/pagination.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pagination/pagination.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pagination/pagination.view.d.ts",
    "children": [
       {
-         "id": 4598,
+         "id": 4599,
          "name": "PaginationView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4599,
+               "id": 4600,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4600,
+                     "id": 4601,
                      "name": "new PaginationView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4601,
+                           "id": 4602,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -52,7 +52,7 @@
                      "type": {
                         "type": "reference",
                         "name": "PaginationView",
-                        "id": 4598
+                        "id": 4599
                      }
                   }
                ],
@@ -65,7 +65,7 @@
                ]
             },
             {
-               "id": 4602,
+               "id": 4603,
                "name": "current",
                "kind": 1024,
                "kindString": "Property",
@@ -85,7 +85,7 @@
                }
             },
             {
-               "id": 4603,
+               "id": 4604,
                "name": "size",
                "kind": 1024,
                "kindString": "Property",
@@ -110,15 +110,15 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4599
+                  4600
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4602,
-                  4603
+                  4603,
+                  4604
                ]
             }
          ],
@@ -136,7 +136,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4598
+            4599
          ]
       }
    ],

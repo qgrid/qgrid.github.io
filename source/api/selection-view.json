@@ -1,15 +1,15 @@
 {
-   "id": 5049,
+   "id": 5050,
    "name": "\"selection/selection.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/selection/selection.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/selection/selection.view.d.ts",
    "children": [
       {
-         "id": 5050,
+         "id": 5051,
          "name": "SelectionView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 5051,
+               "id": 5052,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 5052,
+                     "id": 5053,
                      "name": "new SelectionView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 5053,
+                           "id": 5054,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 5054,
+                           "id": 5055,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         },
                         {
-                           "id": 5055,
+                           "id": 5056,
                            "name": "shortcut",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -69,14 +69,14 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 5056,
+                                 "id": 5057,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "children": [
                                     {
-                                       "id": 5057,
+                                       "id": 5058,
                                        "name": "register",
                                        "kind": 32,
                                        "kindString": "Variable",
@@ -91,21 +91,21 @@
                                        "type": {
                                           "type": "reflection",
                                           "declaration": {
-                                             "id": 5058,
+                                             "id": 5059,
                                              "name": "__type",
                                              "kind": 65536,
                                              "kindString": "Type literal",
                                              "flags": {},
                                              "signatures": [
                                                 {
-                                                   "id": 5059,
+                                                   "id": 5060,
                                                    "name": "__call",
                                                    "kind": 4096,
                                                    "kindString": "Call signature",
                                                    "flags": {},
                                                    "parameters": [
                                                       {
-                                                         "id": 5060,
+                                                         "id": 5061,
                                                          "name": "commands",
                                                          "kind": 32768,
                                                          "kindString": "Parameter",
@@ -142,7 +142,7 @@
                                        "title": "Variables",
                                        "kind": 32,
                                        "children": [
-                                          5057
+                                          5058
                                        ]
                                     }
                                  ],
@@ -160,7 +160,7 @@
                      "type": {
                         "type": "reference",
                         "name": "SelectionView",
-                        "id": 5050
+                        "id": 5051
                      }
                   }
                ],
@@ -173,7 +173,7 @@
                ]
             },
             {
-               "id": 5063,
+               "id": 5064,
                "name": "columns",
                "kind": 1024,
                "kindString": "Property",
@@ -197,7 +197,7 @@
                }
             },
             {
-               "id": 5062,
+               "id": 5063,
                "name": "rows",
                "kind": 1024,
                "kindString": "Property",
@@ -220,7 +220,7 @@
                }
             },
             {
-               "id": 5061,
+               "id": 5062,
                "name": "selection",
                "kind": 1024,
                "kindString": "Property",
@@ -241,7 +241,7 @@
                }
             },
             {
-               "id": 5065,
+               "id": 5066,
                "name": "toggleCell",
                "kind": 1024,
                "kindString": "Property",
@@ -262,7 +262,7 @@
                }
             },
             {
-               "id": 5066,
+               "id": 5067,
                "name": "toggleColumn",
                "kind": 1024,
                "kindString": "Property",
@@ -283,7 +283,7 @@
                }
             },
             {
-               "id": 5064,
+               "id": 5065,
                "name": "toggleRow",
                "kind": 1024,
                "kindString": "Property",
@@ -304,7 +304,7 @@
                }
             },
             {
-               "id": 5075,
+               "id": 5076,
                "name": "isIndeterminate",
                "kind": 2048,
                "kindString": "Method",
@@ -313,14 +313,14 @@
                },
                "signatures": [
                   {
-                     "id": 5076,
+                     "id": 5077,
                      "name": "isIndeterminate",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 5077,
+                           "id": 5078,
                            "name": "item",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -346,7 +346,7 @@
                ]
             },
             {
-               "id": 5067,
+               "id": 5068,
                "name": "selectRange",
                "kind": 2048,
                "kindString": "Method",
@@ -355,14 +355,14 @@
                },
                "signatures": [
                   {
-                     "id": 5068,
+                     "id": 5069,
                      "name": "selectRange",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 5069,
+                           "id": 5070,
                            "name": "startCell",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -370,11 +370,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Td",
-                              "id": 1146
+                              "id": 1147
                            }
                         },
                         {
-                           "id": 5070,
+                           "id": 5071,
                            "name": "endCell",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -382,11 +382,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Td",
-                              "id": 1146
+                              "id": 1147
                            }
                         },
                         {
-                           "id": 5071,
+                           "id": 5072,
                            "name": "source",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -414,7 +414,7 @@
                ]
             },
             {
-               "id": 5072,
+               "id": 5073,
                "name": "state",
                "kind": 2048,
                "kindString": "Method",
@@ -423,14 +423,14 @@
                },
                "signatures": [
                   {
-                     "id": 5073,
+                     "id": 5074,
                      "name": "state",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 5074,
+                           "id": 5075,
                            "name": "item",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -461,28 +461,28 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  5051
+                  5052
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
+                  5064,
                   5063,
                   5062,
-                  5061,
-                  5065,
                   5066,
-                  5064
+                  5067,
+                  5065
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  5075,
-                  5067,
-                  5072
+                  5076,
+                  5068,
+                  5073
                ]
             }
          ],
@@ -500,7 +500,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            5050
+            5051
          ]
       }
    ],

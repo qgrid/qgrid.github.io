@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/action/action.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/action/action.d.ts",
    "children": [
       {
          "id": 45,
@@ -17,8 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "Use this class to connect qgrid [command](/doc/api/command.html) and UI.\nUsually action represents a button, but not nessesary, custom template can be used to,\nsee [action bar example](/doc/features/action-bar). If action doesn't populate UI,\ncommand still is executable through the keyboard shortcut.",
-            "text": "### Create an action using qgrid facade.\n\n```javascript\n\tconst addRowCommand =\n\t\tnew qgrid.Action(\n\t   \t\tnew qgrid.Command({\n\t  \t\t\texecute: () => {\n\t     \t\tconst newRow = {\n\t\t\t \t\tid: 1,\n\t\t\t \t\ttext: 'Lorem ipsum dolor sit amet'\n\t      \t\t};\n\n\t\t \t\tgridModel.data({\n\t\t\t \t\trows: gridModel.data().rows.concat(newRow)\n\t\t  \t\t});\n\t   \t\t}),\n\t\t\t'Add Row'\n \t});\n```\n\n### Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action-bar.html)\n"
+            "shortText": "Use this class to connect q-grid [command](/doc/api/command.html) and UI. Usually action represents a button, but not necessary, custom template can be [used to](/doc/features/action-bar).\nNote that even action doesn't populate UI, command should be still executable through the keyboard shortcut.",
+            "text": "### Create an action.\n\n```javascript\nthis.addRowCommand =\n\t\tnew qgrid.Action(\n\t\t\tnew qgrid.Command({\n\t\t  \t\texecute: () => {\n\t\t     \t\tconst newRow = { id: 1, text: 'Lorem ipsum dolor sit amet' };\n                 this.rows = this.rows.concat(newRow);\n\t\t   \t\t},\n\t\t\t}),\n\t\t\t'Add Row'\n\t\t);\n```\n\n### Suggested Links\n\n* [Action Model](/doc/api/action-model.html)\n* [Command](/doc/api/command.html)\n* [Action Bar](/doc/feature/action-bar.html)\n* [Grid Front](/doc/api/front.html)\n"
          },
          "children": [
             {
@@ -86,7 +86,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 35,
+                     "line": 29,
                      "character": 29
                   }
                ]
@@ -106,7 +106,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 45,
+                     "line": 39,
                      "character": 8
                   }
                ],
@@ -130,7 +130,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 55,
+                     "line": 49,
                      "character": 5
                   }
                ],
@@ -153,7 +153,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 60,
+                     "line": 54,
                      "character": 3
                   }
                ],
@@ -173,7 +173,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 62,
+                     "line": 56,
                      "character": 12
                   }
                ],
@@ -196,7 +196,7 @@
                "sources": [
                   {
                      "fileName": "action/action.d.ts",
-                     "line": 50,
+                     "line": 44,
                      "character": 6
                   }
                ],
@@ -229,7 +229,7 @@
          "sources": [
             {
                "fileName": "action/action.d.ts",
-               "line": 35,
+               "line": 29,
                "character": 27
             }
          ]

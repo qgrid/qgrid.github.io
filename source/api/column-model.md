@@ -4,7 +4,7 @@ type: api
 group: API
 order: 14
 ---
-A class that represents any column in the q-grid.
+A class that represents any column in the qgrid.
 
 {% docTable "source/api/column-model.json" %}
 

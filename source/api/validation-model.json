@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/validation/validation.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/validation/validation.model.d.ts",
    "children": [
       {
          "id": 646,
@@ -106,5 +106,5 @@
          "character": 0
       }
    ],
-   "order": 249
+   "order": 250
 }

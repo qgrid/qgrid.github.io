@@ -1,15 +1,15 @@
 {
-   "id": 4969,
+   "id": 4970,
    "name": "\"scroll/scroll.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/scroll/scroll.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/scroll/scroll.view.d.ts",
    "children": [
       {
-         "id": 4970,
+         "id": 4971,
          "name": "ScrollView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4971,
+               "id": 4972,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4972,
+                     "id": 4973,
                      "name": "new ScrollView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4973,
+                           "id": 4974,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 4974,
+                           "id": 4975,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         },
                         {
-                           "id": 4975,
+                           "id": 4976,
                            "name": "vscroll",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -75,7 +75,7 @@
                      "type": {
                         "type": "reference",
                         "name": "ScrollView",
-                        "id": 4970
+                        "id": 4971
                      }
                   }
                ],
@@ -88,7 +88,7 @@
                ]
             },
             {
-               "id": 4976,
+               "id": 4977,
                "name": "mode",
                "kind": 1024,
                "kindString": "Property",
@@ -117,7 +117,7 @@
                }
             },
             {
-               "id": 4977,
+               "id": 4978,
                "name": "invalidate",
                "kind": 2048,
                "kindString": "Method",
@@ -126,7 +126,7 @@
                },
                "signatures": [
                   {
-                     "id": 4978,
+                     "id": 4979,
                      "name": "invalidate",
                      "kind": 4096,
                      "kindString": "Call signature",
@@ -151,21 +151,21 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4971
+                  4972
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4976
+                  4977
                ]
             },
             {
                "title": "Methods",
                "kind": 2048,
                "children": [
-                  4977
+                  4978
                ]
             }
          ],
@@ -183,7 +183,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4970
+            4971
          ]
       }
    ],

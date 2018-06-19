@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/shortcut/key.code.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/shortcut/key.code.d.ts",
    "children": [
       {
          "id": 594,
@@ -96,5 +96,5 @@
          "character": 0
       }
    ],
-   "order": 232
+   "order": 233
 }

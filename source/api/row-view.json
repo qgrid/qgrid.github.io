@@ -1,15 +1,15 @@
 {
-   "id": 4888,
+   "id": 4889,
    "name": "\"row/row.view.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/row/row.view.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/row/row.view.d.ts",
    "children": [
       {
-         "id": 4889,
+         "id": 4890,
          "name": "RowView",
          "kind": 128,
          "kindString": "Class",
@@ -21,7 +21,7 @@
          },
          "children": [
             {
-               "id": 4890,
+               "id": 4891,
                "name": "constructor",
                "kind": 512,
                "kindString": "Constructor",
@@ -30,14 +30,14 @@
                },
                "signatures": [
                   {
-                     "id": 4891,
+                     "id": 4892,
                      "name": "new RowView",
                      "kind": 16384,
                      "kindString": "Constructor signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4892,
+                           "id": 4893,
                            "name": "model",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -49,7 +49,7 @@
                            }
                         },
                         {
-                           "id": 4893,
+                           "id": 4894,
                            "name": "table",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,11 +57,11 @@
                            "type": {
                               "type": "reference",
                               "name": "Table",
-                              "id": 1578
+                              "id": 1579
                            }
                         },
                         {
-                           "id": 4894,
+                           "id": 4895,
                            "name": "tagName",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -75,7 +75,7 @@
                      "type": {
                         "type": "reference",
                         "name": "RowView",
-                        "id": 4889
+                        "id": 4890
                      }
                   }
                ],
@@ -88,7 +88,7 @@
                ]
             },
             {
-               "id": 4901,
+               "id": 4902,
                "name": "canMove",
                "kind": 1024,
                "kindString": "Property",
@@ -108,7 +108,7 @@
                }
             },
             {
-               "id": 4902,
+               "id": 4903,
                "name": "canResize",
                "kind": 1024,
                "kindString": "Property",
@@ -128,7 +128,7 @@
                }
             },
             {
-               "id": 4898,
+               "id": 4899,
                "name": "drag",
                "kind": 1024,
                "kindString": "Property",
@@ -150,14 +150,14 @@
                      {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4899,
+                           "id": 4900,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "children": [
                               {
-                                 "id": 4900,
+                                 "id": 4901,
                                  "name": "dragData",
                                  "kind": 32,
                                  "kindString": "Variable",
@@ -180,7 +180,7 @@
                                  "title": "Variables",
                                  "kind": 32,
                                  "children": [
-                                    4900
+                                    4901
                                  ]
                               }
                            ],
@@ -197,7 +197,7 @@
                }
             },
             {
-               "id": 4895,
+               "id": 4896,
                "name": "drop",
                "kind": 1024,
                "kindString": "Property",
@@ -219,14 +219,14 @@
                      {
                         "type": "reflection",
                         "declaration": {
-                           "id": 4896,
+                           "id": 4897,
                            "name": "__type",
                            "kind": 65536,
                            "kindString": "Type literal",
                            "flags": {},
                            "children": [
                               {
-                                 "id": 4897,
+                                 "id": 4898,
                                  "name": "dragData",
                                  "kind": 32,
                                  "kindString": "Variable",
@@ -249,7 +249,7 @@
                                  "title": "Variables",
                                  "kind": 32,
                                  "children": [
-                                    4897
+                                    4898
                                  ]
                               }
                            ],
@@ -271,17 +271,17 @@
                "title": "Constructors",
                "kind": 512,
                "children": [
-                  4890
+                  4891
                ]
             },
             {
                "title": "Properties",
                "kind": 1024,
                "children": [
-                  4901,
                   4902,
-                  4898,
-                  4895
+                  4903,
+                  4899,
+                  4896
                ]
             }
          ],
@@ -299,7 +299,7 @@
          "title": "Classes",
          "kind": 128,
          "children": [
-            4889
+            4890
          ]
       }
    ],

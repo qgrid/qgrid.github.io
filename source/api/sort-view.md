@@ -2,7 +2,7 @@
 title: SortView
 type: api
 group: API
-order: 237
+order: 238
 ---
 > Under Construction.
 

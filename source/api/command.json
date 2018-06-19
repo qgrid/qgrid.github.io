@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/command/command.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/command/command.d.ts",
    "children": [
       {
          "id": 25,
@@ -17,8 +17,8 @@
             "isExported": true
          },
          "comment": {
-            "shortText": "Use this class to implement command pattern in the qgrid. The most of interactions in the qgrid are utilized by this pattern.",
-            "text": "### Create a command using qgrid facade.\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   canExecute: () => true,\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'Lorem ipsum dolor sit amet'\n\t      };\n\n\t\t  gridModel.data({\n\t\t\t rows: gridModel.data().rows.concat(newRow)\n\t\t  });\n\t   },\n\t   shortcut: 'F7'\n });\n```\n\n### Suggested Links.\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n* [Service](/doc/api/grid.html)\n* [Command Pattern Wiki](https://en.wikipedia.org/wiki/Command_pattern)\n"
+            "shortText": "Use this class to implement command pattern in the qgrid. The most of interactions in the q-grid are utilized by this pattern.",
+            "text": "### Create a command using q-grid facade.\n\n```javascript\n\tconst addRowCommand = new qgrid.Command({\n\t   canExecute: () => true,\n\t   execute: () => {\n\t      const newRow = {\n\t\t\t id: 1,\n\t\t\t text: 'Lorem ipsum dolor sit amet'\n\t      };\n\n\t\t  gridModel.data({\n\t\t\t rows: gridModel.data().rows.concat(newRow)\n\t\t  });\n\t   },\n\t   shortcut: 'F7'\n });\n```\n\n### Suggested Links.\n\n* [Action Model](/doc/api/action-model.html)\n* [Action](/doc/api/action.html)\n* [Service](/doc/api/grid.html)\n* [Command Pattern Wiki](https://en.wikipedia.org/wiki/Command_pattern)\n"
          },
          "typeParameter": [
             {
@@ -301,7 +301,7 @@
                   "isOptional": true
                },
                "comment": {
-                  "shortText": "If a command is executed by qgrid command manager, the sink value contains\nthe last canExecute result."
+                  "shortText": "If a command is executed by q-grid command manager, the sink value contains\nthe last canExecute result."
                },
                "sources": [
                   {

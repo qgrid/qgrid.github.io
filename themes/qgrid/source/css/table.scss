@@ -16,9 +16,6 @@
 				padding: 1em;
 				text-align: left;
 				vertical-align: top;
-				code {
-					background: $color-code-table;
-				}
 			}
 			&:nth-child(odd) {
 				background: $color-table-odd-row;

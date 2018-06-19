@@ -1,20 +1,21 @@
 {
-   "id": 4780,
+   "id": 4781,
    "name": "\"pipe/sort.pipe.d\"",
    "kind": 1,
    "kindString": "External module",
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/pipe/sort.pipe.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/pipe/sort.pipe.d.ts",
    "children": [
       {
-         "id": 4781,
+         "id": 4782,
          "name": "sortPipe",
          "kind": 32,
          "kindString": "Variable",
          "flags": {
-            "isExported": true
+            "isExported": true,
+            "isConst": true
          },
          "comment": {
             "shortText": "> Under Construction."
@@ -29,21 +30,21 @@
          "type": {
             "type": "reflection",
             "declaration": {
-               "id": 4782,
+               "id": 4783,
                "name": "__type",
                "kind": 65536,
                "kindString": "Type literal",
                "flags": {},
                "signatures": [
                   {
-                     "id": 4783,
+                     "id": 4784,
                      "name": "__call",
                      "kind": 4096,
                      "kindString": "Call signature",
                      "flags": {},
                      "parameters": [
                         {
-                           "id": 4784,
+                           "id": 4785,
                            "name": "rows",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -57,7 +58,7 @@
                            }
                         },
                         {
-                           "id": 4785,
+                           "id": 4786,
                            "name": "context",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -69,7 +70,7 @@
                            }
                         },
                         {
-                           "id": 4786,
+                           "id": 4787,
                            "name": "next",
                            "kind": 32768,
                            "kindString": "Parameter",
@@ -77,21 +78,21 @@
                            "type": {
                               "type": "reflection",
                               "declaration": {
-                                 "id": 4787,
+                                 "id": 4788,
                                  "name": "__type",
                                  "kind": 65536,
                                  "kindString": "Type literal",
                                  "flags": {},
                                  "signatures": [
                                     {
-                                       "id": 4788,
+                                       "id": 4789,
                                        "name": "__call",
                                        "kind": 4096,
                                        "kindString": "Call signature",
                                        "flags": {},
                                        "parameters": [
                                           {
-                                             "id": 4789,
+                                             "id": 4790,
                                              "name": "param",
                                              "kind": 32768,
                                              "kindString": "Parameter",
@@ -142,7 +143,7 @@
          "title": "Variables",
          "kind": 32,
          "children": [
-            4781
+            4782
          ]
       }
    ],

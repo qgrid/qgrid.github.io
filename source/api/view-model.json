@@ -6,7 +6,7 @@
    "flags": {
       "isExported": true
    },
-   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/core/view/view.model.d.ts",
+   "originalName": "C:/Projects/qgrid/doc/node_modules/ng2-qgrid/core/view/view.model.d.ts",
    "children": [
       {
          "id": 173,
@@ -165,5 +165,5 @@
          "character": 0
       }
    ],
-   "order": 253
+   "order": 254
 }

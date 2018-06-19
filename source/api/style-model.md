@@ -2,7 +2,7 @@
 title: StyleModel
 type: api
 group: API
-order: 239
+order: 240
 ---
 A class that allows to apply styles to rows and cells.
 
