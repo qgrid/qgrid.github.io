@@ -41,7 +41,7 @@ import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid [model]="myModel"></q-grid'
+   template: '<q-grid [model]="myModel"></q-grid>'
 })
 export class MyComponent {
    myModel: GridModel;
