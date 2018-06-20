@@ -41,7 +41,7 @@ import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid [model]="myModel"></q-grid'
+   template: '<q-grid [model]="myModel"></q-grid>'
 })
 export class MyComponent {
    myModel: GridModel;
@@ -57,4 +57,4 @@ export class MyComponent {
 
 ## Plugins
 
-The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear, along with `DOM table` plugins can be designed as standalone units without any knowledge about the q-grid internal infrastructure.
+The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge.
