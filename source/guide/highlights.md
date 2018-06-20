@@ -39,4 +39,103 @@ order: 0
 			</video>
 		</div>
 	</li>
+	<li>
+		<div class="description">
+			<h2>[Editing](/doc/feature/editing)</h2>
+			<p>Use predefined and make your own templates to edit cells of various data types</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/cell-editing.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Themes](/doc/guide/theme)</h2>
+			<p>Create and switch on custom theme appropriate your system appearance</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/theme.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Row Details](/doc/feature/row-details)</h2>
+			<p>Provide additional information about rows using their details and define view of the data</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/row-details.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Filtering](/doc/feature/filtering)</h2>
+			<p>Use built-in column filters or implement custom logic and view for them</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/filtering.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[State Persistence](/doc/feature/persistence)</h2>
+			<p>Use built-in tools to persist your state settings like filtering, grouping, sorting, etc and point out storage of the state</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/persistence.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Condition Builder](/doc/feature/query-builder)</h2>
+			<p>Set powerful filters with AND/OR logic using condition builder</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/condition-builder.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Style API](/doc/feature/style-api)</h2>
+			<p>Customize your row and column appearance dynamically with our style API</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/style-api.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Selection](/doc/feature/selection)</h2>
+			<p>Choose necessary mode of selection (row, column, cell or mixed) by setting of only one property</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/selection.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Pinned Columns](/doc/feature/pinned-columns) & [Rows](/doc/feature/pinned-rows)</h2>
+			<p>Pin your data which you want to see constantly to any border</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/pinned.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
 </ul>
