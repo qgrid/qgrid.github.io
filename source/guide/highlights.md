@@ -2,37 +2,41 @@
 title: Highlights
 type: guide
 group: Getting started
-order: 1
+order: 0
 ---
 
-
-<ul class="features">
+<ul class="highlights">
 	<li>
-		<div class="image-virtualize"></div>
 		<div class="description">
-			<strong>Virtualization everywhere</strong>
-			<p>Rows and columns should be virtualizable</p>
+			<h2>[Drag & Drop](/doc/feature)</h2>
+			<p>Define simple and clean properties to set drag & drop for row as well as for column</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/dnd.mp4" type="video/mp4" />
+			</video>
 		</div>
 	</li>
 	<li>
-		<div class="image-css"></div>
 		<div class="description">
-			<strong>Considered Styles</strong>
-			<p>User should be able to make any css customization in easy format</p>
+			<h2>[Sorting](/doc/feature/sorting)</h2>
+			<p>Use high-performance sorting by one or multiple columns by clicking the headers and fluently change order of sorting</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/sort.mp4" type="video/mp4" />
+			</video>
 		</div>
 	</li>
 	<li>
-		<div class="image-custom"></div>
 		<div class="description">
-			<strong>Fully Customizable</strong>
-			<p>Header, cells, rows, footer, pagination, etc. should be templatable</p>
+			<h2>[Grouping](/doc/feature/grouping)</h2>
+			<p>Explore your data in convenient view and group data by specific columns</p>
 		</div>
-	</li>
-	<li>
-		<div class="image-js"></div>
-		<div class="description">
-			<strong>Clear Javascript</strong>
-			<p>No html templates in javascript</p>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/group.mp4" type="video/mp4" />
+			</video>
 		</div>
 	</li>
 </ul>

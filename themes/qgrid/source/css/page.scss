@@ -3,6 +3,7 @@
 @import "table";
 @import "nav";
 @import "markdown";
+@import "highlights";
 body {
 	display: grid;
 	grid-template-areas: "nav content";
