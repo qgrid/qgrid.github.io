@@ -49,6 +49,8 @@ To show list of available pages we iterate through the component pages property 
 
 ## Pager component
 
+GridPluing serves as endpoint to access q-grid model and commands are convenient abstractions to handle keyboard and mouse events.
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
 import { GridPlugin, Command } from 'ng2-qgrid';
