@@ -5,6 +5,9 @@
 		margin: 0;
 		padding: 0;
 		> li {
+			br {
+				display: none;
+			}
 			display: flex;
 			flex-direction: column;
 			flex: 1;
