@@ -1,6 +1,5 @@
 ---
-title: Change Log
-type: guide
+title: Changelog
 group: Getting started
 order: 7
 ---

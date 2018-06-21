@@ -1,11 +1,11 @@
 ---
-title: Performance Tips
+title: Performance tips
 type: guide
 group: Getting started
 order: 6
 ---
 
-## Interaction Mode
+## Interaction mode
 
 q-grid introduces 3 modes that allows to change performance strategy. 
 
@@ -26,8 +26,7 @@ import { Grid, GridComponent } from 'ng2-qgrid';
 @Component({
    selector: 'my-component',
    template: `
-        <q-grid #myGrid
-                [rows]="rows" 
+        <q-grid [rows]="rows" 
                 interactionMode="readonly">
         </q-grid>
         `

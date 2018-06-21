@@ -1,6 +1,5 @@
 ---
 title: For Writers
-type: guide
 group: Getting started
 order: -1
 ---
@@ -9,7 +8,7 @@ order: -1
 
 * [The ultimate guide](https://blog.ghost.org/markdown/).
 * [Etalon example](/doc/feature/selection.html).
-* [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+* [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ## Typescript Documentation
 

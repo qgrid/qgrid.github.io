@@ -1,6 +1,5 @@
 ---
 title: Selection
-type: guide
 group: Features
 order: 2
 ---

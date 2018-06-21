@@ -1,6 +1,5 @@
 ---
 title: Architecture
-type: guide
 group: Getting started
 order: 3
 ---
