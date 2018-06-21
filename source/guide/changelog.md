@@ -15,6 +15,13 @@ order: 7
 * Live data plugin.
 * Float Row Navigation.
 
+## [6.1.3] - 2018-06-21
+### Fixed
+- Fixed AOT compilation.
+- Fixed time editor value assign.
+- Dark theme for plugins and cell handler.
+- Textarea editor now shows length of the input text.
+
 ## [6.1.1] - 2018-06-15
 ### Fixed
 - Highlight on drag and drop.
@@ -25,7 +32,7 @@ order: 7
 
 ## [6.1.0] - 2018-06-15
 ### BREAKING
-- Need to change theme import from `import {ThemeModule} from 'ng2-qgrid'` to `import {ThemeModule} from 'ng2-qgrid/theme/material`
+- Need to change theme import from `import { ThemeModule } from 'ng2-qgrid'` to `import { ThemeModule } from 'ng2-qgrid/theme/material`
 
 ### Deprecated
 - Use `FetchContext` `serach` property instead of `filter` property.
@@ -38,7 +45,7 @@ order: 7
 - Readonly strategies `<q-grid interactionMode="full | readonly | detached">`.
 - Spanned headers and column groups.
 - Group summaries.
-- `PluginServices` that allows to write own plugins for qgrid.
+- `PluginServices` that allows to write own plugins for q-grid.
 - Better caching strategies for renders.
 - New `rowspan` mode for groups.
 - New `rowList` model.
@@ -269,7 +276,8 @@ order: 7
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v6.1.1...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v6.1.3...HEAD
+[6.1.3]: https://github.com/qgrid/ng2/compare/v6.1.3...v6.1.1
 [6.1.1]: https://github.com/qgrid/ng2/compare/v6.1.1...v6.1.0
 [6.1.0]: https://github.com/qgrid/ng2/compare/v6.1.0...v5.3.10
 [5.3.10]: https://github.com/qgrid/ng2/compare/v5.3.10...v5.3.9

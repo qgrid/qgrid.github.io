@@ -11,7 +11,7 @@ order: 3
 q-grid uses basic DOM table elements, but there is no any component or service which works with core DOM directly. q-grid has an abstraction called `DOM Table` that encapsulates any low-level work with core DOM. The abstraction benefits:
 
 * Simple access to the columns, rows and cells. Use it is alike to use 2d array instead of boilerplate selectors.
-* Development transparency of the fixed header, footer, rows and columns, colspans and rowspans.
+* Development transparency of the fixed header, footer, rows and columns, colSpans and rowSpans.
 * Required Style API maintenance is simple, smooth and fast.
 * Everything can be virtualized without special code.
 
@@ -57,4 +57,33 @@ export class MyComponent {
 
 ## Plugins
 
-The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge.
+The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note, that all components except table core units are plugins.
+
+## Template System
+
+All plugins including cell renderers are using q-grid template system. The basic concept is to utilize pair of `ng-container` and `ng-template` primitives by using unique identifiers.
+
+* `ng-template[key]` q-grid adds the ng-template content to the internal template store under the `"key"` id.
+
+```html
+<ng-template key="toolbar-top.tpl.html">
+	<q-grid-caption></q-grid-caption>
+</ng-template>
+```
+
+* `ng-template[for]` acts the same as `ng-template[key]`, but `"for"` id has a lower priority and wont rewrite `"key"` id in the template store. q-grid client code is required to use it for the basic templates safety.
+
+```html
+<q-grid-column type="text">
+      <ng-template for="body" let-$cell>
+	      {{$cell.value}}
+	</ng-template>
+</q-grid-column>
+```
+
+* `ng-container[key]` q-grid replaces the ng-container and its content with a `ng-template[key|for]` keeping.
+
+```html
+<ng-container key="toolbar-top.tpl.html">
+</ng-container>
+```
