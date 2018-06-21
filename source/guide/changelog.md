@@ -1,5 +1,5 @@
 ---
-title: Change Log
+title: Changelog
 group: Getting started
 order: 7
 ---
