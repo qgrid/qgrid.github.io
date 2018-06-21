@@ -52,6 +52,17 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
+			<h2>[Batch Update](/doc/feature/batch-update)</h2>
+			<p>Update multiple cells in one batch quickly and conveniently</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/batch-update.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
 			<h2>[Themes](/doc/guide/theme)</h2>
 			<p>Create and switch on custom theme appropriate your system appearance</p>
 		</div>
@@ -107,17 +118,6 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Style API](/doc/feature/style-api)</h2>
-			<p>Customize your row and column appearance dynamically with our style API</p>
-		</div>
-		<div class="video">
-			<video autoplay loop muted>
-				<source src="assets/style-api.mp4" type="video/mp4" />
-			</video>
-		</div>
-	</li>
-	<li>
-		<div class="description">
 			<h2>[Selection](/doc/feature/selection)</h2>
 			<p>Choose necessary mode of selection (row, column, cell or mixed) by setting of only one property</p>
 		</div>
@@ -129,12 +129,34 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
+			<h2>[Style API](/doc/feature/style-api)</h2>
+			<p>Customize your row and column appearance dynamically with our style API</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/style-api.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
 			<h2>[Pinned Columns](/doc/feature/pinned-columns) & [Rows](/doc/feature/pinned-rows)</h2>
 			<p>Pin your data which you want to see constantly to any border</p>
 		</div>
 		<div class="video">
 			<video autoplay loop muted>
 				<source src="assets/pinned.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
+	<li>
+		<div class="description">
+			<h2>[Span Headers](/doc/feature/span-headers) & [Pivoting](/doc/feature/pivoting)</h2>
+			<p>Organize and extract the significant data using span headers and pivoting feature</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/span-and-pivoting.mp4" type="video/mp4" />
 			</video>
 		</div>
 	</li>
