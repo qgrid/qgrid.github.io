@@ -160,4 +160,15 @@ order: 0
 			</video>
 		</div>
 	</li>
+	<li>
+		<div class="description">
+			<h2>[Blank Layer](/doc/feature/layer)</h2>
+			<p>Сustomize the grid view until the data is received</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/layer-blank.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
 </ul>

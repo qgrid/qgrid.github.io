@@ -126,19 +126,3 @@
 		}
 	}
 }
-
-@media screen and (max-width: 1440px) {
-	.pages {
-		.page-wrapper {
-			ul.highlights {
-				li,
-				li:nth-of-type(even) {
-					flex-direction: column;
-					.video, .description {
-						padding: 0;
-					}
-				}
-			}
-		}
-	}
-}
