@@ -49,7 +49,7 @@ To show list of available pages we iterate through the component pages property 
 
 ## Pager component
 
-GridPluing serves as endpoint to access q-grid model and commands are convenient abstractions to handle keyboard and mouse events.
+GridPlugin serves as endpoint to access q-grid model and commands are convenient abstractions to handle keyboard and mouse events. It's not required to use commands but this is a way how q-grid interaction model is built.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
