@@ -10,38 +10,23 @@ This page covers the fundamentals of the q-grid theme system. We will build the 
 
 {% docEditor "doc-qgrid-ng2-theme" %}
 
-## Unit Templates
+## Theme Component
 
-Adds the ng-template content to the internal template store under the `"key"` id
+All plugins including cell renderers are using q-grid template system. Finally, theme component should contain necessary set of ng-template[key] directives to fit theme requirements.
 
 ```typescript
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-theme-body-cell',
-    template: `
-      <ng-template key="body-cell-text.tpl.html"
-                   let-$cell>
-        {{$cell.label}}
+  selector: 'q-grid-theme',
+  template: `
+      <ng-template key="body-cell-text.tpl.html" let-$cell>
+          {{$cell.label}}
       </ng-template>
-      `
-})
-export class BodyCellComponent {
-}
-```
-
-## Theme Component
-
-```typescript
-import { Component, ViewEncapsulation } from '@angular/core';
-
-@Component({
-	selector: 'q-grid-theme',
-    template: `
-        <my-theme-body-cell></my-theme-body-cell>
-        <my-theme-head-cell></my-theme-head-cell>
-    `,
-	encapsulation: ViewEncapsulation.None
+      <ng-template key="head-cell-text.tpl.html" let-$cell>
+          {{$cell.column.title}}
+      </ng-template>
+    `
 })
 export class ThemeComponent {
 }
@@ -49,25 +34,22 @@ export class ThemeComponent {
 
 ## Theme Module
 
+* Put ThemeComponent into the `entryComponents` section to support dynamic loading.
+* Add TemplateModule into the `imports` section to enable ng-template[key] directive.
+* Inject `ThemeService` to the module constructor.
+* Setup `theme name` property which will be added to the q-grid-view component as css class.
+* Setup `theme component` property to provide type for the q-grid component factory.
+
 ```typescript
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TemplateModule, ThemeService } from 'ng2-qgrid';
 import { ThemeComponent } from './theme.component';
-import { BodyCellComponent } from './components/body-cell.component';
-import { HeadCellComponent } from './components/head-cell.component';
 
 @NgModule({
   declarations: [
-    ThemeComponent,
-    BodyCellComponent,
-    HeadCellComponent
-  ],
-  exports: [
     ThemeComponent
   ],
-  imports: [
-    CommonModule,
+  imports: [    
     TemplateModule
   ],
   entryComponents: [
@@ -80,6 +62,9 @@ export class ThemeModule {
     theme.component = ThemeComponent;
   }
 }
+
 ```
 
+## Suggested links
 
+* [List of available templates](https://github.com/qgrid/ng2/tree/master/src/theme/material/templates)

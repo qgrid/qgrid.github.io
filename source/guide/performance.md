@@ -26,8 +26,7 @@ import { Grid, GridComponent } from 'ng2-qgrid';
 @Component({
    selector: 'my-component',
    template: `
-        <q-grid #myGrid
-                [rows]="rows" 
+        <q-grid [rows]="rows" 
                 interactionMode="readonly">
         </q-grid>
         `
