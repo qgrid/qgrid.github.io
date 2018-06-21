@@ -1,6 +1,5 @@
 ---
 title: For Writers
-type: guide
 group: Getting started
 order: -1
 ---

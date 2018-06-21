@@ -1,6 +1,5 @@
 ---
 title: How to install
-type: guide
 group: Getting started
 order: 2
 ---
