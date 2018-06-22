@@ -4,32 +4,53 @@ group: Features
 order: 4
 ---
 
-## Column types
+## Array
 
-* `array`
+Array type is utilized by the q-grid to show values of system array type. Usually primitive arrays are used. If collection of objects need to be visualized, it's required to setup `itemLabel` property. Here are some specific properties:
 
-* `bool`
+* `itemType` array element type, is used to populate correct input in the array editor.
+* `itemFormat` array element format string that is used to build correct item presentation.
+* `itemLabel` array element function that is used to return item presentation.
 
-* `currency`
-* `number`
+{% docEditor "github/qgrid/ng2-example/tree/column-array-basic/latest" %}
 
-* `date`
+# Bool
 
-* `email`
-* `url`
+{% docEditor "github/qgrid/ng2-example/tree/column-bool-basic/latest" %}
 
-* `image`
-* `file`
+# Currency & Number
 
-* `id`
+{% docEditor "github/qgrid/ng2-example/tree/column-currency-basic/latest" %}
 
-* `reference`
+# Date
 
-* `row-indicator`
-* `row-number`
+{% docEditor "github/qgrid/ng2-example/tree/column-date-basic/latest" %}
 
-* `row-options`
+# Email & Url
 
-* `text`
+{% docEditor "github/qgrid/ng2-example/tree/column-email-basic/latest" %}
 
-* `time`
+# Image & File
+
+{% docEditor "github/qgrid/ng2-example/tree/column-image-basic/latest" %}
+
+# Id
+
+# Reference
+
+{% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}
+
+# Row indicator
+# Row number
+
+# Row options
+
+{% docEditor "github/qgrid/ng2-example/tree/column-row-options-basic/latest" %}
+
+# Text
+
+{% docEditor "github/qgrid/ng2-example/tree/column-text-basic/latest" %}
+
+# Time
+
+{% docEditor "github/qgrid/ng2-example/tree/column-time-basic/latest" %}
