@@ -147,15 +147,15 @@ Predefined sets of typical pipe series called pipe units are used to change the 
 
 ```typescript
 qgrid.pipeUnit.default = [
-      qgrid.pipe.data,
-      qgrid.pipe.filter,
-      qgrid.pipe.sort,
-      qgrid.pipe.memo,
-      qgrid.pipe.group,
-      qgrid.pipe.pivot,
-      qgrid.pipe.column,
-      qgrid.pipe.pagination,
-      qgrid.pipe.view
+   qgrid.pipe.data,
+   qgrid.pipe.filter,
+   qgrid.pipe.sort,
+   qgrid.pipe.memo,
+   qgrid.pipe.group,
+   qgrid.pipe.pivot,
+   qgrid.pipe.column,
+   qgrid.pipe.pagination,
+   qgrid.pipe.view
 ];
 ```
 
@@ -163,9 +163,9 @@ qgrid.pipeUnit.default = [
 
 ```typescript
 qgrid.pipeUnit.view = [
-      qgrid.pipe.data,
-      qgrid.pipe.memo,
-      qgrid.pipe.column,
-      qgrid.pipe.view
+   qgrid.pipe.data,
+   qgrid.pipe.memo,
+   qgrid.pipe.column,
+   qgrid.pipe.view
 ];
 ```
