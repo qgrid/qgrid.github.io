@@ -107,3 +107,8 @@ gridModel.visibility({
    }
 });
 ```
+
+## Coming soon
+
+* Right toolbar customization example.
+* Visibility component, convenient way to setup visibility inside the template.

@@ -207,3 +207,9 @@ If children property is setup the column automatically becomes a group container
    </q-grid-column>
 </q-grid-columns>
 ```
+
+## Coming soon
+
+* Cohort column improvements: drag & drag, sorting, filtering, resizing fixes & column chooser support.
+* Column group template manipulation.
+* Column order user strategies.

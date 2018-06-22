@@ -15,13 +15,14 @@ Another way to setup selection is to use q-grid model directly.
 ```javascript
 gridModel.selection({
    unit: 'row',
-   mode: 'single'
+   mode: 'single',
+   area: 'custom'
 });
 ```
 
 ## Selection modes
 
-Option to control 
+Use this option to control selection behavior.
 
 * `single` mode when only one unit can be selected.
 * `multiple` mode when several units can be selected. When `row` unit is chosen, `select all` checkbox is displayed in the column header.
@@ -31,33 +32,48 @@ Option to control
 
 ## Selection units
 
-Selection primitive.
+Use this option to control selection primitive.
 	
-* `row` user can select rows by clicking on checkboxes or q-grid body area.
-* `cell` `default` user can select cells clicking on the q-grid body area.
-* `column` user can select columns by clicking on the q-grid body area.
-* `mix` user can select both rows and cells, rows are selectable by clicking on row-indicator column.
+* `row` unit when row can be selected by clicking on it or on the selection checkbox.
+* `cell` unit when cell can be selected by clicking on it.
+* `column` unit when column can be selected by clicking on it.
+* `mix` unit when need to select both rows and cells, rows can be selected by clicking on the row-indicator column.
 
 ## Selection area
 
-Controls if click on the q-grid body should select row or not.
+Use this option to control if q-grid body clicks lead to row selection.
 
-* `body` click on the q-grid body leads to row select/unselect.
-* `custom` only select checkbox click leads to row select/unselect.
+* `body` area when click on the q-grid body leads to row selection.
+* `custom` area when only check boxes are responsible for the selection.
 
 {% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-
 ## Selection event
 
-List of selected items. Set of map function, that can convert column and row to nessesary format.
-	 
-* `column` custom column key will be stored in the items property.
-* `row` custom row id will be stored in the items property.
+Use q-grid model to get list of selected items. Note that to configure format of the selected items, selection key could be used.
 
-```javascript	 
-key?: {
-    row: (row: any) => any,
-	column?: (column: ColumnModel) => any
-};
+```javascript
+gridModel.selection({       
+   key: {
+      row: row => row.myId,
+	  column: column => column.key
+   }
+});
+
+gridModel.selectionChanged.on(e => {
+   if (e.hasChanges('items')) {
+       const { items } = e.state;
+       const myId = items[0].row;
+   }
+});
 ```
+
+## Coming soon
+
+* Component selection change event.
+
+``` html
+<q-grid (selectionChange)="myHandler"></q-grid>
+```
+
+* Selection model reflecting on model data id.
