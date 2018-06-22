@@ -1,5 +1,5 @@
 ---
-title: Performance tips
+title: Performance Tips
 type: guide
 group: Getting started
 order: 6

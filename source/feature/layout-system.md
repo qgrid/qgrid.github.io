@@ -1,28 +1,12 @@
 ---
-title: Grid Layers
+title: Layout System
 group: Features
 order: 4
 ---
 
-Use grid layer system to define to define particular views that can be shown under certain or custom conditions.
+Use q-grid layout system to define particular templates that can be shown under certain or custom conditions.
 
-## Blank layer
-
-The blank layer template will be shown until data is received. Use `blank` trigger inside the `q-grid-layer` to activate this.
-
-```html
-<q-grid>
-   <q-grid-layer>
-      <ng-template for="blank">
-         No Data
-      </ng-template>
-   </q-grid-layer>
-</q-grid>
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/layer-grid-blank/latest" %}
-
-## Custom layers
+## Layers
 
 It's possible to add your own layers and define when they should be shown. Use `DomTable` to add or remove layer programmatically.
 
@@ -75,3 +59,51 @@ export class MyLayerTriggerComponent {
 ```
 
 {% docEditor "doc-qgrid-ng2-layer" %}
+
+## Blank layer
+
+Use a predefined `no-data` condition to show the custom template when the q-grid is empty.
+
+```html
+<q-grid>
+   <q-grid-layer>
+      <ng-template for="blank">
+         No Data
+      </ng-template>
+   </q-grid-layer>
+</q-grid>
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/layer-grid-blank/latest" %}
+
+## Toolbars
+
+There are four toolbars surrounding the q-grid: `top`, `right`, `bottom` and `left`. Any of them can be customized. By default, left and right toolbars are not visible.
+
+```html
+<q-grid>
+   <q-grid-toolbar>
+      <q-grid-toolbar for="bottom">
+         <my-pager></my-pager> 
+      </q-grid-toolbar>
+   </q-grid-toolbar>
+</q-grid>
+```
+
+## Visibility
+
+Use `visibility` model to hide/show a work areas of the q-grid. Here is the default visibility configuration.
+
+```javascript
+gridModel.visibility({
+   head: true,
+   foot: true,
+   body: true,
+   toolbar: {
+	  top: true,
+	  bottom: true,
+	  right: false,
+      left: false
+   }
+});
+```

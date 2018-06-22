@@ -84,9 +84,7 @@ import { GridComponent } from 'ng2-qgrid';
    template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;
-
-   constructor() {}
+   ViewChild(GridComponent) myGrid: GridComponent;   
 
    ngAfterViewInit() {
       const { model } = this.myGrid;

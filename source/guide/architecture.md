@@ -4,7 +4,6 @@ group: Getting started
 order: 3
 ---
 
-
 ## DOM
 
 q-grid uses basic DOM table elements, but there is no any component or service which works with core DOM directly. q-grid has an abstraction called `DOM Table` that encapsulates any low-level work with core DOM. The abstraction benefits:
@@ -52,6 +51,24 @@ export class MyComponent {
             .subscribe(rows => this.myModel.data({ rows }));
    }
 }
+```
+
+## Grid model events
+
+There are 2 ways to subscribe the model events.
+
+* `on` if the event fired before subscription, it will be lost for the new handler.
+
+```javascript
+gridModel.data({ rows: myRows });
+gridModel.dataChanged.on(e => /* :-( */));
+```
+
+* `watch` if the event fired before subscription, q-grid will artificially emit the latest event argument to the new handler.
+
+```javascript
+gridModel.data({ rows: myRows });
+gridModel.dataChanged.watch(e => /* :-) */);
 ```
 
 ## Plugins
