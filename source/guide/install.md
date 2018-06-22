@@ -48,7 +48,7 @@ export class MyComponent {
 }
 ```
 
-Note that q-grid rows should be an array of objects, any other types like array of numbers or strings will throw an error.
+Note that q-grid rows should be an array of objects, any other types, like array of numbers or strings, will throw an error.
 
 ## Dependencies
 

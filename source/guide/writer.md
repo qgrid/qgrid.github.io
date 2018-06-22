@@ -4,6 +4,15 @@ group: Getting started
 order: -1
 ---
 
+## Formatting
+
+* Use `.` on the end of paragraph or line, except in headers
+* Try to avoid `you`, `we` etc.
+* Use `q-grid` instead of just grid, except in headers.
+* Do `Some header example` and not do `Some Header Example`, except header describes one unit `The Grid Model`
+* Use 3 spaces for code formatting.
+* Use quotes to mark `attention words` but don't use it too much.
+
 ## Markdown Documentation
 
 * [The ultimate guide](https://blog.ghost.org/markdown/).
