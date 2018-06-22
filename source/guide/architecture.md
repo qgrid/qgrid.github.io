@@ -56,7 +56,7 @@ export class MyComponent {
 
 ## Plugins
 
-The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note, that all components except table core units are plugins.
+The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note that all components except table core units are plugins.
 
 ## Template System
 
@@ -85,4 +85,22 @@ All plugins including cell renderers are using q-grid template system. The basic
 ```html
 <ng-container key="toolbar-top.tpl.html">
 </ng-container>
+```
+
+## Data Pipe
+
+The q-grid pipe is a series of methods that grid invokes asynchronously anytime refresh is required. Every pipe in the series gets data from previous one, handles it and passes to the next one. This basic concept allows to modify how data rows are processed to display the data. Here is the default pipeline:
+
+```typescript
+[
+   qgrid.pipe.data,
+   qgrid.pipe.filter,
+   qgrid.pipe.sort,
+   qgrid.pipe.memo,
+   qgrid.pipe.group, 
+   qgrid.pipe.pivot,
+   qgrid.pipe.column,
+   qgrid.pipe.pagination,
+   qgrid.pipe.view
+];
 ```
