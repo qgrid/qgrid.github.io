@@ -1,7 +1,7 @@
 ---
 title: Data Rows
 group: Features
-order: 1
+order: 2
 ---
 
 There are a few ways to fill in the q-grid with data rows.
@@ -68,10 +68,10 @@ export class MyComponent implements AfterViewInit {
    constructor(dataService: MyDataService) {}
 
    ngAfterViewInit() {
-       const { model } = this.myGrid;
-       dataService
-          .getRows()
-          .subscribe(rows => model.data({ rows }));
+      const { model } = this.myGrid;
+      dataService
+         .getRows()
+         .subscribe(rows => model.data({ rows }));
    }
 }
 ```
