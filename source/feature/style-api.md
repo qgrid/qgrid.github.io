@@ -4,20 +4,55 @@ group: Features
 order: 5
 ---
 
-There are two ways to apply styles to q-grid rows and cells. It can be useful when there is need to change styles dynamically or depending on data context.
+It's possible to apply custom styles to q-grid. Automatically each header and data cell has class based on column key. Easiest way to style column is adding of common css rules to your component.
+Also q-grid provides way to apply styles dynamically by set up custom handlers where user has access to row and column contexts.
 
-## The component method
+## Use Grid Model
 
-To apply styles to the q-grid define component class method and bind it in the template.
+Use `Grid` model to fill in `style` with cell and row appearance customization. There can be passed method which assigns class with necessary styles to cell/row. For cell you can also pass object where properties are column keys and values are the same methods. Then logic of these methods will be applied only for target column.
 
 ```typescript
-import { StyleCellContext, Column } from 'ng2-qgrid';
+import { GridComponent, StyleCellContext, StyleRowContext } from 'ng2-qgrid';
+
+@Component({
+   selector: 'my-component',
+   template: '<q-grid></q-grid>'
+})
+export class MyComponent {
+   ViewChild(GridComponent) myGrid: GridComponent;
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+      model.style({
+         cell: {
+            'my-column-name': (row: any, column: Column, context: StyleCellContext) => {
+               context.class(`td-${row.name}`, {
+                  color: `#${row.color}`,
+                  background: '#3f51b5'
+               });
+            }
+         },
+         row: (row: any, context: StyleRowContext) => {
+            if (!row.isActive) {
+               context.class('inactive', { opacity: '0.5' });
+            }
+         }
+      });
+   }
+}
+```
+
+## Use Grid Component
+
+Another way is binding of methods with style logic to the q-grid via attributes.
+
+```typescript
+import { StyleCellContext, StyleRowContext, Column } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [styleCell]="styleCell"
-              [styleRow]="styleRow">
+      <q-grid [styleCell]="styleCell" [styleRow]="styleRow">
          <q-grid-columns generation="deep">
          </q-grid-columns>
       </q-grid>
@@ -27,58 +62,21 @@ export class MyComponent {
    styleCell(row: any, column: Column, context: StyleCellContext) {
       if (column.key === 'name') {
          context.class(`td-${row.name}`, {
-            'color': `#${row.color}`,
-            'background': '#3f51b5'
+            color: `#${row.color}`,
+            background: '#3f51b5'
          });
       }
    }
 
    styleRow(row: any, context: StyleRowContext) {
       if (!row.isActive) {
-         context.class('inactive', { 'opacity': '0.5' });
+         context.class('inactive', { opacity: '0.5' });
       }
-	}
+   }
 }
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/style-cell-basic/latest" %}
-
-{% docEditor "github/qgrid/ng2-example/tree/style-row-basic/latest" %}
-
-## The Grid Model
-
-Use `Grid` service to create q-grid model and fill in `style` with cell and row style methods.
-
-```typescript
-import { Grid, GridModel } from 'ng2-qgrid';
-
-@Component({
-   selector: 'my-component',
-   template: '<q-grid [model]="myModel"></q-grid>'
-})
-export class MyComponent {
-   myModel: GridModel;
-
-   constructor(qgrid: Grid) {
-      this.myModel = qgrid.model();
-      this.myModel.style({
-         cell: (row: any, column: Column, context: StyleCellContext) => {
-            if (column.key === 'name') {
-               context.class(`td-${row.name}`, {
-                  'color': `#${row.color}`,
-                  'background': '#3f51b5'
-               });
-            }
-         },
-         row: (row: any, context: StyleRowContext) => {
-            if (!row.isActive) {
-               context.class('inactive', { 'opacity': '0.5' });
-            }
-         }
-      });
-   }
-}
-```
 
 ## How it works
 
