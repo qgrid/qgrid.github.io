@@ -13,6 +13,7 @@ order: 7
 * Copy/paste selection to excel.
 * Live data plugin.
 * Float Row Navigation.
+* Better cohort groups interactions.
 
 ## [6.1.3] - 2018-06-21
 ### Fixed

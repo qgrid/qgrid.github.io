@@ -1,61 +1,79 @@
 ---
 title: Selection
 group: Features
-order: 4
+order: 7
 ---
 
-There are situations when you would like to enable the end user to select rows or cells in the grid table, and process data from them or make calculations based on this selection.
+There are situations when the end user need to select rows or cells in the q-grid. q-grid provides several modes to enable selection satisfaction. 
 
-### Setup
+```html
+<q-grid selectionMode="multiple" selectionUnit="column"></q-grid>
+```
 
-To enable the selection, configure the [selection model](/doc/api/selection-model.html).
+Another way to setup selection is to use q-grid model directly.
 
 ```javascript
 gridModel.selection({
-    unit: 'row',
-    mode: 'multiple'
+   unit: 'row',
+   mode: 'single',
+   area: 'custom'
 });
 ```
 
-### Modes and Features
+## Selection modes
 
-The q-grid provides interaction options for the user to select.
+Use this option to control selection behavior.
 
-* [Single row](#Single-Row)
-* [Multiple rows](#Multiple-Rows)
-* Rows through their checkboxes only
-* All items on a page through the select-all checkbox
-* Cell range
+* `single` mode when only one unit can be selected.
+* `multiple` mode when several units can be selected. When `row` unit is chosen, `select all` checkbox is displayed in the column header.
+* `range` mode when bag of units can be selected. Selection is made by mouse drag & drop.
 
-#### Single Row
+{% docEditor "github/qgrid/ng2-example/tree/select-cell-basic/latest" %}
 
-To select a row when the q-grid is in single selection mode, use either of the following approaches:
+## Selection units
 
-* Click the row, or
-* Select the checkbox of the row.
+Use this option to control selection primitive.
+	
+* `row` unit when row can be selected by clicking on it or on the selection checkbox.
+* `cell` unit when cell can be selected by clicking on it.
+* `column` unit when column can be selected by clicking on it.
+* `mix` unit when need to select both rows and cells, rows can be selected by clicking on the row-indicator column.
 
-To deselect a row when the q-grid is in single selection mode, either:
+## Selection area
 
-* Deselect the checkbox of the selected row, or
-* Click the selected row again.
+Use this option to control if q-grid body clicks lead to row selection.
 
-#### Multiple Rows
+* `body` area when click on the q-grid body leads to row selection.
+* `custom` area when only check boxes are responsible for the selection.
 
-To select multiple rows one by one when the q-grid is in multiple selection mode, use either of the following approaches:
+{% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-* Select the checkbox of each desired row, or
-* Press and hold shift, and go down or up with arrow keys.
+## Selection event
 
-To deselect one row at a time, either:
+Use q-grid model to get list of selected items. Note that to configure format of the selected items, selection key could be used.
 
-* Deselect the checkbox of the specific row, or
-* Press and hold shift, and go down or up with arrow keys.
+```javascript
+gridModel.selection({       
+   key: {
+      row: row => row.myId,
+	  column: column => column.key
+   }
+});
 
-### Example
+gridModel.selectionChanged.on(e => {
+   if (e.hasChanges('items')) {
+       const { items } = e.state;
+       const myId = items[0].row;
+   }
+});
+```
 
-{% docEditor "qgrid-ng-5-01-02-selection" %}
+## Coming soon
 
-### Suggested Links
+* Component selection change event.
 
-* [Selection Model](/doc/api/selection-model.html)
-* [Selection View](/doc/api/selection-view.html)
+``` html
+<q-grid (selectionChange)="myHandler"></q-grid>
+```
+
+* Selection model reflecting on model data id.

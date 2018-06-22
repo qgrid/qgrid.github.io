@@ -1,19 +1,23 @@
 ---
 title: Style API
 group: Features
-order: 5
+order: 6
 ---
 
-It's possible to apply custom styles to q-grid. Automatically each header and data cell has class based on column key. Easiest way to style column is adding of common css rules to your component.
-Also q-grid provides way to apply styles dynamically by set up custom handlers where user has access to row and column contexts.
+Use q-grid rich css class naming system to apply specific styles. If more dynamic way is required style model can be used.
 
-## Use Grid Model
+## CSS
 
-Use `Grid` model to fill in `style` with cell and row appearance customization. There can be passed method which assigns class with necessary styles to cell/row. For cell you can also pass object where properties are column keys and values are the same methods. Then logic of these methods will be applied only for target column.
+Each cell, no mater if it is located in header, body or footer, has specific set of css class names.
+
+* `q-grid-{column.type}` class name for css selectors which use column types.
+* `q-grid-the-{column.key}` class name for css selectors which use column identifiers. Note that `the` article is used to exclude ambiguous names.
+
+## Style Model
+
+Use style callbacks for dynamic class assignments. For the cell style it is possible to pass an object instead of callback. In this case, object keys will play the role of column key filters.
 
 ```typescript
-import { GridComponent, StyleCellContext, StyleRowContext } from 'ng2-qgrid';
-
 @Component({
    selector: 'my-component',
    template: '<q-grid></q-grid>'
@@ -25,16 +29,16 @@ export class MyComponent {
       const { model } = this.myGrid;
       model.style({
          cell: {
-            'my-column-name': (row: any, column: Column, context: StyleCellContext) => {
+            'myColumnKey': (row, column, context) => {
                context.class(`td-${row.name}`, {
                   color: `#${row.color}`,
                   background: '#3f51b5'
                });
             }
          },
-         row: (row: any, context: StyleRowContext) => {
+         row: (row, context) => {
             if (!row.isActive) {
-               context.class('inactive', { opacity: '0.5' });
+               context.class('inactive');
             }
          }
       });
@@ -42,24 +46,20 @@ export class MyComponent {
 }
 ```
 
-## Use Grid Component
+## Grid Component style callbacks
 
-Another way is binding of methods with style logic to the q-grid via attributes.
+Another way to utilizef style callbacks is appropriate attribute bindings.
 
 ```typescript
-import { StyleCellContext, StyleRowContext, Column } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [styleCell]="styleCell" [styleRow]="styleRow">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
-      </q-grid>
+      <q-grid [styleCell]="styleCell" [styleRow]="styleRow"></q-grid>
    `
 })
 export class MyComponent {
-   styleCell(row: any, column: Column, context: StyleCellContext) {
+   styleCell(row, column, context) {
       if (column.key === 'name') {
          context.class(`td-${row.name}`, {
             color: `#${row.color}`,
@@ -68,9 +68,9 @@ export class MyComponent {
       }
    }
 
-   styleRow(row: any, context: StyleRowContext) {
+   styleRow(row, context) {
       if (!row.isActive) {
-         context.class('inactive', { opacity: '0.5' });
+         context.class('inactive');
       }
    }
 }
@@ -78,8 +78,10 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/style-cell-basic/latest" %}
 
-## How it works
+## How style model works
 
-The q-grid updates styles for cells and rows on each change detection cycle. It creates internal stylesheets and set appropriate classes to td/tr elements. Class naming allows to avoid using of inline styles and make layout recalculation faster.
+Every change detection cycle the q-grid traverses through all visible rows and cells to invoke user defined style callbacks. Note that `context.class` method first argument requires to be an unique identifier. Later when callback series is finished style API will produce dynamic stylesheet using pair of context identifier and column key as a css class name. This technique avoids to use inline styles and makes style management easier. Resizing of rows or columns behaves the same way.
+
+Next picture can be found if open element inspector and follow the style section.
 
 <img src="assets/style-api-html.png" type="image/png" />

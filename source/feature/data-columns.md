@@ -84,9 +84,7 @@ import { GridComponent } from 'ng2-qgrid';
    template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;
-
-   constructor() {}
+   ViewChild(GridComponent) myGrid: GridComponent;   
 
    ngAfterViewInit() {
       const { model } = this.myGrid;
@@ -209,3 +207,9 @@ If children property is setup the column automatically becomes a group container
    </q-grid-column>
 </q-grid-columns>
 ```
+
+## Coming soon
+
+* Cohort column improvements: drag & drag, sorting, filtering, resizing fixes & column chooser support.
+* Column group template manipulation.
+* Column order user strategies.
