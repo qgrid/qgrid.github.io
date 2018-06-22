@@ -18,10 +18,9 @@ The preferred way to define cell templates is to you `ng-template` inside the `q
          </ng-template>
          <ng-template for="edit" let-$cell let-$view="$view">
             <input type="number"
-		 		   style="width: 100%"
-		 		   q-grid-focus
-		 		   [(ngModel)]="$view.edit.cell.value"
-				   (blur)="$view.edit.cell.exit.execute($cell)" />
+                   q-grid-focus
+                   [(ngModel)]="$view.edit.cell.value"
+                   (blur)="$view.edit.cell.exit.execute($cell)" />
          </ng-template>
       </q-grid-column>
    </q-grid-columns>
