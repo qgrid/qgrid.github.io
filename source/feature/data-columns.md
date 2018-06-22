@@ -54,6 +54,8 @@ Use `q-grid-column` components to declare a list of columns to show in the q-gri
 
 ## Use TypeScript to add columns
 
+Consider to use `columns` attribute of the q-grid component, when list of columns need to be created dynamically.
+
 ```typescript
 @Component({
    selector: 'my-component',
@@ -72,7 +74,7 @@ export class MyComponent {
 
 ## Use Grid Model to add columns
 
-Two previous example are nothing more than wrappers to fill in the data model with list of columns. Another way to do it, to use the q-grid model directly.
+Two previous examples are nothing more than wrappers to fill in the data model with a list of columns. Low-level way to add some columns is to use the q-grid model directly.
 
 ```typescript
 import { GridComponent } from 'ng2-qgrid';
@@ -98,6 +100,28 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
+
+## Column list order
+
+q-grid tries to do column sort in a smart way and applies weight calculation algorithm. The first candidate who has weight more than zero goes to the comparison routine. 
+
+```javascript
+const candidates = [
+    // Uses columnList index property to get a score.
+    listFind(key) + scoreFor.list(column), 
+    // Uses column index property to get a score.
+    column.index + scoreFor.index(column), 
+    // Uses column position defined in TypeScript to 
+    viewFind(key) + scoreFor.view(column), 
+    // Uses column position defined in HTML to get a score.
+	templateFind(key) + scoreFor.template(column) 
+];
+
+const weights = candidates.filter(w => w >= 0);
+const weight = weights.length ? weights[0] : -1;
+```
+
+Approximately, the code above means that the most left position will get the column `already being added` to the column list, then the column with `the lowest index` but more then zero, the column that has the lowest position in the `TypeScript code` and finally the column with the lowest position in the `HTML template`.
 
 ## Column Model
 
@@ -169,20 +193,7 @@ If setup, the column expands its width to viewWidth value on focus.
 Boolean triggers to control the column behavior.
 
 * `index`.
-Indicates the order of the column. q-grid tries to do sort in a smart way and uses weight calculation. The first candidate who has weight more than zero goes to the sorting routine.
-
-```javascript
-const candidates = [
-    // Uses columnList index property to get a score.
-    listFind(key) + scoreFor.list(column), 
-    // Uses column index property to get a score.
-    column.index + scoreFor.index(column), 
-    // Uses column position defined in TypeScript to 
-    viewFind(key) + scoreFor.view(column), 
-    // Uses column position defined in HTML to get a score.
-	templateFind(key) + scoreFor.template(column) 
-];
-```
+Indicates the order of the column.
 	 
 * `compare`.
 Setup this function to change order method that is used by `column sort pipe` to sort rows.
