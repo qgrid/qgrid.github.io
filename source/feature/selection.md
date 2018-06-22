@@ -1,7 +1,7 @@
 ---
 title: Selection
 group: Features
-order: 3
+order: 4
 ---
 
 There are situations when you would like to enable the end user to select rows or cells in the grid table, and process data from them or make calculations based on this selection.
