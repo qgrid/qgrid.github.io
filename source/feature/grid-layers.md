@@ -4,19 +4,17 @@ group: Features
 order: 4
 ---
 
-There is possibility to define grid layers. It's particular views that will be shown under certain conditions.
+Use grid layer system to define to define particular views that can be shown under certain or custom conditions.
 
 ## Blank layer
 
-The blank layer template will be shown until data is received. Define it using `ng-template` inside the `q-grid-layer` component.
+The blank layer template will be shown until data is received. Use `blank` trigger inside the `q-grid-layer` to activate this.
 
 ```html
 <q-grid>
    <q-grid-layer>
       <ng-template for="blank">
-         <div class="blank">
-            No Data
-         </div>
+         No Data
       </ng-template>
    </q-grid-layer>
 </q-grid>
@@ -24,19 +22,21 @@ The blank layer template will be shown until data is received. Define it using `
 
 {% docEditor "github/qgrid/ng2-example/tree/layer-grid-blank/latest" %}
 
-## Custom layer
+## Custom layers
 
-It's possible to add your own layers and define when it should be shown. `GridPlugin` should be used to add and remove layer dynamically.
+It's possible to add your own layers and define when they should be shown. Use `DomTable` to add or remove layer programmatically.
 
-* component which triggers appearance of layer
+* Custom layer trigger component.
 
 ```typescript
 import { GridPlugin } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-layer-trigger',
-   template: '<button (click)="toggleLayer()">Toggle Layer</button>',
-   providers: [GridPlugin]
+   providers: [GridPlugin],
+   template: `
+      <button (click)="toggleLayer()">Toggle Layer</button>
+   `
 })
 export class MyLayerTriggerComponent {
    private isActive = false;
@@ -56,7 +56,7 @@ export class MyLayerTriggerComponent {
 }
 ```
 
-* template of custom layer
+* Custom layer template.
 
 ```html
 <q-grid>
@@ -65,7 +65,7 @@ export class MyLayerTriggerComponent {
          <my-layer-trigger>
             <q-grid-layer>
                <ng-template for="my-layer">
-                  Hello from custom layer!
+                  Hello from the custom layer!
                </ng-template>
             </q-grid-layer>
 			</my-layer-trigger>
