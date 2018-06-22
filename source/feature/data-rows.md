@@ -1,7 +1,7 @@
 ---
 title: Data Rows
 group: Features
-order: 1
+order: 2
 ---
 
 There are a few ways to fill in the q-grid with data rows.
