@@ -1,7 +1,7 @@
 ---
 title: Style API
 group: Features
-order: 5
+order: 6
 ---
 
 It's possible to apply custom styles to q-grid. Automatically each header and data cell has class based on column key. Easiest way to style column is adding of common css rules to your component.

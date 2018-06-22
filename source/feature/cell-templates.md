@@ -32,108 +32,32 @@ The preferred way to define cell templates is to you `ng-template` inside the `q
 
 {% docEditor "github/qgrid/ng2-example/tree/column-number-basic/latest" %}
 
-## Column types and classes
-
-Column `type` is responsible for how the cell is drawn and how it behaves. Beside out of box column types it's possible to define own types. Here is a list of column types supported by the q-grid. Note that some of them are utilized for internal needs.
+## Column types
 
 * `array`
+
 * `bool`
-* `cohort`
+
 * `currency`
-* `date`
-* `email`
-* `file`
-* `filter-row`
-* `group`
-* `id`
-* `image`
 * `number`
-* `pad`
-* `pivot`
-* `reference`
-* `row-details`
-* `row-expand`
-* `row-indicator`
-* `row-number`
-* `row-options`
-* `select`
-* `summary`
-* `text`
-* `time`
+
+* `date`
+
+* `email`
 * `url`
 
-Column `class` is a functional type of the column. It responsible 
+* `image`
+* `file`
 
-* `control` 
-Behavior controllers (e.g. `select` type column).
+* `id`
 
-* `data` real user data.
-Data columns defined by the q-grid users.
+* `reference`
 
-* `markup` 
- Used for the internal markup needs (e.g. `pad` type column).
+* `row-indicator`
+* `row-number`
 
-* `pivot`
-Multi head pivot.
+* `row-options`
 
-## Column Model
+* `text`
 
-Here is a list of basic column properties, all them can be setup and in TypeScript and in HTML.
-
-* `type`.
-Column type is responsible for how the cell is drawn and how it behaves. Beside out of box column types it's possible to define own types. 
-
-* `key`.
-A column unique identifier, should be unique across all columns. If path is not setup, key property is used to retrieve a cell value.
-
-* `title`.
-Column header text, also can be shown as column tooltip, or used in plugins like column filter plugin.
-
-* `value`, `label`.
-Getter, setter for a cell value. If the value property is setup, it is used to get/set cell value. Indicates what text should be shown in the cell. If property is not set column value is used. Also `filter plugin` uses this property to show list of items and for filter application.
-
-* `path`, `labelPath`.
-Path to the value. Example is `address.phones.0.num`, if `path` property is setup, it is used to get/set cell value, but it has a lower priority than column `value` property.
-
-* `pin`.
-Indicates if column should be frozen. `left` or `right` is available.
-
-* `class`.
-A functional type of a the column.
-
-* `editor`, `editorOptions`.
-Editor type, will be shown in cell edit mode instead of default column type editor. For instance, it can be used for id type column 
-
-```html
-<q-grid-column type="id" editor="number"></q-grid-column>
-```
-
-* `width`, `maxWidth`, `minWidth`.
-Width of the q-grid column. Can be setup in `pixels` like `<q-grid-column width="100"></q-grid-column>`.Can be setup in `percents` like `<q-grid-column width="20%"></q-grid-column>`. Percents are materialized only once on init, and depend on the q-grid size.	 
-	
-* `viewWidth`
-If set, column width will be expanded to this value on focus.
-
-* `widthMode`
-Indicates how to calculate px from percentage: `relative` get whole grid width minus static px widths and apply percents. `absolute` get whole grid width and apply percents.  	 
-
-* `canEdit`, `canResize`, `canSort`, `canMove`, `canFilter`, `canHighlight`, `canFocus`, `isVisible`.
-Indicates if cells in the column are editable.
-
-* `index`.
-Indicates the order of the column. ORDER OF COLUMNS SOME NOTES.
-	 
-* `compare`.
-This function is used by `column sort` pipe to order row values.
-
-* `children`.
-If children property is setup the column automatically becomes a group container.	 
-
-```html
-<q-grid-columns>
-   <q-grid-column key="parent">
-      <q-grid-column key="child-1"></q-grid-column>
-      <q-grid-column key="child-2"></q-grid-column>
-   </q-grid-column>
-</q-grid-columns>
-```
+* `time`
