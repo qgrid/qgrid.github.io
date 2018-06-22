@@ -1,7 +1,7 @@
 ---
 title: Column Types
 group: Features
-order: 4
+order: -1
 ---
 
 ## Array
@@ -16,21 +16,44 @@ Array type is utilized by the q-grid to show values of system array type. Usuall
 
 # Bool
 
+Three state booleans are supported by the q-grid. Here are some specific properties:
+
+* `trueValue`
+* `falseValue`
+* `isIndeterminate`
+* `isChecked`
+
 {% docEditor "github/qgrid/ng2-example/tree/column-bool-basic/latest" %}
 
 # Currency & Number
+
+Use currency and number types to show decimal values in a appropriate format. Here are some specific properties:
+
+* `format`
+* `symbol`
+* `code`
+* `maxLength`
 
 {% docEditor "github/qgrid/ng2-example/tree/column-currency-basic/latest" %}
 
 # Date
 
+Use this column type to show date or date times. `format` property can be used to control textual representation.
+
 {% docEditor "github/qgrid/ng2-example/tree/column-date-basic/latest" %}
 
 # Email & Url
 
+To show links with appropriate editors email or url column types can be used.
+
 {% docEditor "github/qgrid/ng2-example/tree/column-email-basic/latest" %}
 
 # Image & File
+
+Use image or file column types to add possibility of uploading  links with appropriate editors email or url column types can be used.
+
+* canUpload
+* hasPreview
 
 {% docEditor "github/qgrid/ng2-example/tree/column-image-basic/latest" %}
 
