@@ -68,10 +68,10 @@ export class MyComponent implements AfterViewInit {
    constructor(dataService: MyDataService) {}
 
    ngAfterViewInit() {
-       const { model } = this.myGrid;
-       dataService
-          .getRows()
-          .subscribe(rows => model.data({ rows }));
+      const { model } = this.myGrid;
+      dataService
+         .getRows()
+         .subscribe(rows => model.data({ rows }));
    }
 }
 ```
