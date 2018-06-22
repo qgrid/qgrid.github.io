@@ -4,9 +4,7 @@ group: Features
 order: 3
 ---
 
-## Cell templates
-
-The preferred way to define cell templates is to you `ng-template` inside the `q-grid-column` component. 
+The preferred way to define cell templates is to you `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` triggers to fill in the appropriate cell containers.
 
 ```html
 <q-grid>
@@ -30,34 +28,35 @@ The preferred way to define cell templates is to you `ng-template` inside the `q
 </q-grid>
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/column-number-basic/latest" %}
+## $cell service
 
-## Column types
+Use this implicitly injected service to retrieve data cell information. Here are the list of available properties:
 
-* `array`
+* value
+* label
+* row
+* rowIndex
+* column
+* columnIndex
 
-* `bool`
+## $view service
 
-* `currency`
-* `number`
+Use this to take control over necessary actions. `$view` service is a facade for several micro utilities that are responsible for the q-grid rendering and interaction model.  Here are the list of available utilities:
 
-* `date`
-
-* `email`
-* `url`
-
-* `image`
-* `file`
-
-* `id`
-
-* `reference`
-
-* `row-indicator`
-* `row-number`
-
-* `row-options`
-
-* `text`
-
-* `time`
+* body
+* edit
+* filter
+* foot
+* group
+* head
+* highlight
+* layout
+* nav
+* pagination
+* pivot
+* row
+* rowDetails
+* scroll
+* selection
+* sort
+* style
