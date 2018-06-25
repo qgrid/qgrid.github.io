@@ -32,7 +32,7 @@
 				flex-direction: column;
 				div[class^="image-"] {
 					background-position: 50% 50%;
-					margin-bottom: 30px;
+					flex-basis: auto;
 				}
 				.image-virtualize {
 					background-size: 112px 121px;
@@ -43,7 +43,11 @@
 				.image-js {
 					background-size: 100px 100px;
 				}
+				.image-custom {
+					background-size: 115px 98px;
+				}
 				.description {
+					flex-basis: auto;
 					text-align: center;
 					p {
 						text-align: center;
@@ -88,9 +92,6 @@
 				}
 			}
 		}
-		grid-template-areas: "header" "content";
-		grid-template-rows: 70px auto;
-		grid-template-columns: 100%;
 		.nav-trigger {
 			display: block;
 		}

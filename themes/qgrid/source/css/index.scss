@@ -1,20 +1,14 @@
 @import "layout";
 .index {
-	grid-template-areas: "content" "footer";
-	grid-template-columns: 1fr;
-	grid-template-rows: auto $footer-height;
 	font-family: $font-serif;
 
 	main {
-		display: grid;
-		grid-template-areas: "get-started" "example" "features" "go-to";
-		grid-template-rows: auto auto auto auto;
-		grid-area: content;
+		display: flex;
+		flex-flow: column wrap;
 		background: $color-background;
 		color: $color-text;
 	}
 	footer {
-		grid-area: footer;
 		color: $color-footer-text;
 		background: $color-footer-background;
 		padding: 50px 0;
@@ -48,7 +42,6 @@
 		margin-bottom: 45px;
 		padding: 0;
 		list-style: none;
-		grid-area: features;
 		display: flex;
 		flex-flow: column wrap;
 		li {
@@ -56,7 +49,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: stretch;
-			flex: 1 100%;
+			flex: 1;
 			margin-bottom: 55px;
 			.description {
 				flex: 1 50%;
@@ -95,10 +88,9 @@
 		}
 	}
 	.go-to {
-		grid-area: go-to;
+		// grid-area: go-to;
 	}
 	.get-started {
-		grid-area: get-started;
 		background-color: $color-sidebar-background;
 		text-align: center;
 		color: $color-top-text;
@@ -170,7 +162,6 @@
 	}
 	.example {
 		margin-top: -50px;
-		grid-area: example;
 		align-items: center;
 		margin-bottom: 100px;
 		.preview {
