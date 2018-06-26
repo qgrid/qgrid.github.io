@@ -41,7 +41,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Editing](/doc/feature/editing)</h2>
+			<h2>[Editing](/doc/feature/cell-templates.html)</h2>
 			<p>Use predefined and make your own templates to edit cells of various data types.</p>
 		</div>
 		<div class="video">
@@ -118,7 +118,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Selection](/doc/feature/selection)</h2>
+			<h2>[Selection](/doc/feature/selection.html)</h2>
 			<p>Choose necessary mode of selection (row, column, cell or mixed) by setting of only one property.</p>
 		</div>
 		<div class="video">
@@ -129,7 +129,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Style API](/doc/feature/style-api)</h2>
+			<h2>[Style API](/doc/feature/style-api.html)</h2>
 			<p>Customize your row and column appearance dynamically with our style API.</p>
 		</div>
 		<div class="video">
@@ -162,7 +162,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Layer System](/doc/feature/layer)</h2>
+			<h2>[Layer System](/doc/feature/layout-system.html)</h2>
 			<p>Сustomize the grid view until the data is received.</p>
 		</div>
 		<div class="video">
