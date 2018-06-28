@@ -6,19 +6,19 @@ order: 3
 
 ## DOM
 
-q-grid uses basic DOM table elements, but there is no any component or service which works with core DOM directly. q-grid has an abstraction called `DOM Table` that encapsulates any low-level work with core DOM. The abstraction benefits:
+The q-grid internally uses basic DOM table elements, but there is no any component or service which works with core DOM directly. The q-grid populates an abstraction called `DOM Table` which encapsulates any low-level work with core DOM. This abstraction benefits:
 
-* Simple access to the columns, rows and cells. Use it is alike to use 2d array instead of boilerplate selectors.
-* Development transparency of the fixed header, footer, rows and columns, colSpans and rowSpans.
-* Required Style API maintenance is simple, smooth and fast.
-* Everything can be virtualized without special code.
+* Simple access to the columns, rows and cells. Work with `DOM Table` is alike to use 2d array instead of boilerplate selectors.
+* Development transparency of the fixed header, footer, rows and columns.
+* No worries about how to handle row and column spans.
+* Style API maintenance becomes easy, smooth and fast.
+* Everything can be virtualized without writing much of special code.
 
-## Grid Model
+## The Grid Model
 
-q-grid introduces work item called `model`. In development terms q-grid model is a data-driven state storage with some basic constraints:
+The q-grid introduces work item called `model`. In development terms the q-grid model can be described as a data-driven reactive state storage
 
-* There is only one way to get/set state.
-* Model state is immutable.
+> Note that q-grid model implements `immutable` pattern, to change any model property a new instance should be created.
 
 ```javascript
 // Works
@@ -32,7 +32,7 @@ const { rows } = myModel.data();
 rows.push(newRow);
 ```
 
-To setup `q-grid model` just add `Grid` service to the component and create your own model. Further typescript will force you to do the right things.
+There are two 2 to obtain access to the q-grid model. One of them is to use `ViewChild` selector and retrieve model from the `GridComponent`, another to add `Grid` service to the q-grid host component and create a new model.
 
 ```typescript
 import { Grid, GridModel } from 'ng2-qgrid';
@@ -53,18 +53,18 @@ export class MyComponent {
 }
 ```
 
-## Grid model events
+## The reactive idea
 
-There are 2 ways to subscribe the model events.
+Lets look how model changes can be handled.
 
-* `on` if the event fired before subscription, it will be lost for the new handler.
+* By using `on` method, if the event fired before subscription, it will be lost for the new handler.
 
 ```javascript
 gridModel.data({ rows: myRows });
 gridModel.dataChanged.on(e => /* :-( */));
 ```
 
-* `watch` if the event fired before subscription, q-grid will artificially emit the latest event argument to the new handler.
+* By using `watch` method, if the event fired before subscription, the q-grid will artificially emit the latest event argument to the added handler.
 
 ```javascript
 gridModel.data({ rows: myRows });

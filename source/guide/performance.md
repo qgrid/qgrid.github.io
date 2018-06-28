@@ -7,7 +7,7 @@ order: 6
 
 ## Interaction mode
 
-q-grid introduces 3 modes that allows to change performance strategy. 
+The q-grid introduces 3 modes that allows to change performance strategy. 
 
 ```html
 <q-grid interactionMode="readonly"></q-grid>
@@ -60,12 +60,13 @@ export class MyComponent {
 
 ## Virtualization
 
-> Under Construction
+> This is a beta version, don't use it in the production.
  
-Virtual scroll can offer performance benefits when working with very large collections. It does so by only rendering and processing a subset of the data which is visible to the user vs. processing the entire list of data. By creating only DOM elements for the visible items, this can greatly reduce the amount of work it has to do. q-grid provides `vscroll` module that is available not only for row and column virtualization but also for plugins. For instance, column filter plugin uses `vscroll` to virtualize value list. 
+Virtual scroll can offer performance benefits when working with large collections. It does so by only rendering and processing a subset of the data which is visible to the user vs. processing the entire list of data. By creating only DOM elements for the visible items, this can greatly reduce the amount of work it has to do. q-grid provides `vscroll` module that is available not only for row and column virtualization but also for plugins. For instance, column filter plugin uses `vscroll` to virtualize value list. 
 
 
 ```html
 <q-grid scrollMode="virtual"></q-grid>
 ```
 
+{% docEditor "github/qgrid/ng2-example/tree/scroll-virtual-style/latest" %}
