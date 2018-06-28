@@ -10,7 +10,7 @@ order: 2
 npm install ng2-qgrid
 ```
 
-## Add q-grid and theme modules to application root
+## Add q-grid and theme modules to the application root
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -25,7 +25,7 @@ import { ThemeModule } from 'ng2-qgrid/theme/material';
 export class AppModule {
 }
 ```
-Note that now q-grid supports 2 themes out of box `@angular/material` and `basic`, the second one doesn't require `@angular/material` to be installed.
+> Note that now q-grid supports 2 themes out of box `@angular/material` and `basic`, the second one doesn't require `@angular/material` to be installed.
 
 ## Create an angular component
 

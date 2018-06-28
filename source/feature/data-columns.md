@@ -36,7 +36,7 @@ export class MyComponent {
 
 ## Use HTML to add columns
 
-Use `q-grid-column` components to declare a list of columns to show in the q-grid. Note that preferred way to define cell templates is to you `ng-template` inside the `q-grid-column` component. 
+Use `q-grid-column` components to declare a list of columns to show in the q-grid. Note that preferred way to define cell templates is to use `ng-template` inside the `q-grid-column` component. 
 	 
 ```html
 <q-grid>
@@ -101,7 +101,7 @@ export class MyComponent implements AfterViewInit {
 
 ## Column list order
 
-q-grid tries to do column sort in a smart way and applies weight calculation algorithm. The first candidate who has weight more than zero goes to the comparison routine. 
+The q-grid tries to do column sort in a smart way and applies weight calculation algorithm. The first candidate who has weight more than zero goes to the comparison routine. 
 
 ```javascript
 const candidates = [
@@ -121,21 +121,23 @@ const weight = weights.length ? weights[0] : -1;
 
 Approximately, the code above means that the most left position will get the column `already being added` to the column list, then the column with `the lowest index` but more then zero, the column that has the lowest position in the `TypeScript code` and finally the column with the lowest position in the `HTML template`.
 
-## Column Model
+## Column Type
 
-Here is a list of basic column properties, all of them can be setup both in TypeScript and HTML.
+Column type is responsible for how the cell is drawn and how it behaves. Beside out of box column types it's possible to define own.  Note that some of supported column types are utilized for internal needs.
 
-* `type`.
-Column `type` is responsible for how the cell is drawn and how it behaves. Beside out of box column types it's possible to define own.  Note that some of supported column types are utilized for internal needs.
+## Column Key
 
-* `key`.
 A column unique identifier. If path or value properties are not setup, key property is used to retrieve the cell value.
 
-* `title`.
+## Column Title
+
 Column header text, can be shown as column tooltip and used in plugins like column-filter plugin.
 
-* `value`, `label`.
-If the property is setup, it is used to get/set cell value/label. Callback or constant ca be used as the value.
+## Column Value & Label
+
+if the property is setup, it is used to get/set cell value/label. Callback or constant ca be used as the value.
+
+> Be aware that if there is a requirement to use `this` pointer inside the `value` or `label` handler, it should be passed there by using closure or using lambda function.
 
 ```typescript
 columns = [
@@ -153,27 +155,32 @@ columns = [
 ];
 ```
 
-* `path`, `labelPath`.
+## Column Path & LabelPath
+
 Path to the value/label. The `path` property has a lower priority than the `value` property.
 
 ```html
 <q-grid-column path="address.phones.0.num"></q-grid-column>
 ```
 
-* `pin`.
+## Column Pin
+
 Indicates if a column should be frozen, `left` and `right` options are available.
 
-* `class`.
+## Column Class
+
 A functional type of the column. It's utilized by plugins and internal routines to filter out necessary columns.
 
-* `editor`, `editorOptions`.
+## Column Editor & EditorOptions
+
 An editor type that will be shown in the edit mode instead of default one.
 
 ```html
 <q-grid-column type="id" editor="number"></q-grid-column>
 ```
 
-* `width`, `maxWidth`, `minWidth`.
+## Column Width, MaxWidth & MinWidth
+
 Size of columns that can be setup in `pixels` or `percents`. Note that percents are materialized only once on init, depending on the initial q-grid width.
 
 ```html
@@ -181,22 +188,28 @@ Size of columns that can be setup in `pixels` or `percents`. Note that percents 
 <q-grid-column key="number" width="30%"></q-grid-column>
 ```
 	
-* `widthMode`
+## Column WidthMode
+
 Indicates how to calculate width px from percentage. Mode `relative` means to get whole q-grid width minus column static widths than calculate percents, `absolute` means to get whole q-grid width and calculate percents.
 
-* `viewWidth`
+## Column ViewWidth
+
 If setup, the column expands its width to viewWidth value on focus.
 
-* `canEdit`, `canResize`, `canSort`, `canMove`, `canFilter`, `canHighlight`, `canFocus`, `isVisible`.
-Boolean triggers to control the column behavior.
+## Column Indicators
 
-* `index`.
+`canEdit`, `canResize`, `canSort`, `canMove`, `canFilter`, `canHighlight`, `canFocus`, `isVisible` are serve to control the column behavior.
+
+## Column Index 
+
 Indicates the order of the column.
 	 
-* `compare`.
+## Column Compare
+
 Setup this function to change order method that is used by `column sort pipe` to sort rows.
 
-* `children`.
+## Column children
+
 If children property is setup the column automatically becomes a group container.
 
 ```html
@@ -207,6 +220,26 @@ If children property is setup the column automatically becomes a group container
    </q-grid-column>
 </q-grid-columns>
 ```
+
+## Control column visibility through the structural directives
+
+The q-grid allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
+
+```html
+<q-grid [ngSwitch]="group">
+   <q-grid-columns *ngSwitchCase="'name'">
+      <q-grid-column key="firstName" title="First Name"></q-grid-column>
+		<q-grid-column key="lastName" title="Last Name"></q-grid-column>
+	</q-grid-columns>
+
+	<q-grid-columns *ngSwitchCase="'address'">
+		<q-grid-column key="city" title="City"></q-grid-column>
+		<q-grid-column key="state" title="State"></q-grid-column>
+	</q-grid-columns>
+</q-grid>
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/column-list-basic/latest" %}
 
 ## Coming soon
 
