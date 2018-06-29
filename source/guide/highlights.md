@@ -171,4 +171,15 @@ order: 0
 			</video>
 		</div>
 	</li>
+   <li>
+		<div class="description">
+			<h2>[Export/Import](/doc/feature/export)</h2>
+			<p>Save and load your data in popular file formats.</p>
+		</div>
+		<div class="video">
+			<video autoplay loop muted>
+				<source src="assets/export-import.mp4" type="video/mp4" />
+			</video>
+		</div>
+	</li>
 </ul>
