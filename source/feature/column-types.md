@@ -1,7 +1,7 @@
 ---
 title: Column Types
 group: Features
-order: 4
+order: 5
 ---
 
 ## Array
@@ -14,7 +14,7 @@ Array type is utilized by the q-grid to visualize primitive type collections. He
 
 {% docEditor "github/qgrid/ng2-example/tree/column-array-basic/latest" %}
 
-> If list of complex objects need to be visualized, it's required to setup `itemLabel` property or rewrite cell templates, including edit template.
+> If list of complex objects need to be visualized, it's required to setup `itemLabel` property or make custom cell templates.
 
 ## Bool
 
@@ -81,20 +81,96 @@ Use number type to display decimal values. Here are some specific properties:
 
 ## Reference
 
+Use this column type when need to handle reference values. The `reference value` term describes data which can be defined using a key/value pair relationship. For edit mode `modelFactory` can be used to configure reference selection.
+
+```typescript
+@Component({
+    template: `
+       <q-grid [rows]="rows">
+          <q-grid-columns>
+             <q-grid-column key="friends"
+                            type="reference"                            
+                            [editorOptions]="friendsReference">
+          </q-grid-columns>
+       </q-grid>
+    `
+})
+export class MyComponent {
+   friendsReference: EditorOptions = {
+      modelFactory: ({ row, reference }) => {
+         const model = this.qgrid.model();
+
+         this.dataService
+            .getFriends(row.myId)
+            .subscribe(rows => model.data({ rows }));
+
+        return model;
+      }
+   };
+```
+
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}
 
 ## Row indicator
+
+Row indicator belongs to the `control class` columns.
+
+* `Selection` mode utilizes row-indicator column type to support `mix` mode when both rows and cells can be selected. 
+* `Data manipulation` plugin applies color coding to the row-indicator cells when appropriate rows were changed or deleted.
+* `Row drag` and `row resize` modes creates row-indicator column to show drag handlers.
+
+{% docEditor "github/qgrid/ng2-example/tree/column-row-indicator-basic/latest" %}
+
 ## Row number
 
+Use `row number` type to add left pinned column that displays row indices.
+
+{% docEditor "github/qgrid/ng2-example/tree/column-row-number-basic/latest" %}
+
 ## Row options
+
+Setup `editorOptions` property of the `row-indicator` column type to show list of the available actions for the appropriate row.
+
+```typescript
+@Component({
+    template: `
+       <q-grid [rows]="rows">
+          <q-grid-columns>
+             <q-grid-column key="rowIndicator"
+                            type="row-indicator"                            
+                            [editorOptions]="rowOptions">
+          </q-grid-columns>
+       </q-grid>
+    `
+})
+export class MyComponent {
+   rowOptions = {
+	   actions: [
+		   new Action(
+			   new Command<{ row: Atom }>({
+				   execute: cell => window.open(cell.row.wiki, '_blank')
+			   }),
+			   'Goto Wiki',
+			   'link-icon'
+		   )
+	   ];
+   };
+}
+```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-options-basic/latest" %}
 
 ## Text
 
+This is a basic data column type that is responsible for handling textual values.
+
+* Add `editor="text-area"` to the q-grid column to make cell display multi-line text.
+
 {% docEditor "github/qgrid/ng2-example/tree/column-text-basic/latest" %}
 
 ## Time
+
+Use number type to display time values in specific format.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-time-basic/latest" %}
 

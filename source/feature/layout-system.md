@@ -1,7 +1,7 @@
 ---
 title: Layout System
 group: Features
-order: 5
+order: 4
 ---
 
 Use q-grid layout system to define particular templates that can be shown under certain or custom conditions.

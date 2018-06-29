@@ -121,6 +121,26 @@ const weight = weights.length ? weights[0] : -1;
 
 Approximately, the code above means that the most left position will get the column `already being added` to the column list, then the column with `the lowest index` but more then zero, the column that has the lowest position in the `TypeScript code` and finally the column with the lowest position in the `HTML template`.
 
+## Control column visibility through the structural directives
+
+The q-grid allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
+
+```html
+<q-grid [ngSwitch]="group">
+   <q-grid-columns *ngSwitchCase="'name'">
+      <q-grid-column key="firstName" title="First Name"></q-grid-column>
+		<q-grid-column key="lastName" title="Last Name"></q-grid-column>
+	</q-grid-columns>
+
+	<q-grid-columns *ngSwitchCase="'address'">
+		<q-grid-column key="city" title="City"></q-grid-column>
+		<q-grid-column key="state" title="State"></q-grid-column>
+	</q-grid-columns>
+</q-grid>
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/column-list-basic/latest" %}
+
 ## Column Type
 
 Column type is responsible for how the cell is drawn and how it behaves. Beside out of box column types it's possible to define own.  Note that some of supported column types are utilized for internal needs.
@@ -264,26 +284,6 @@ The q-grid header can utilize column hierarchy by using nested components or chi
    </q-grid-column>
 </q-grid-columns>
 ```
-
-## Control column visibility through the structural directives
-
-The q-grid allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
-
-```html
-<q-grid [ngSwitch]="group">
-   <q-grid-columns *ngSwitchCase="'name'">
-      <q-grid-column key="firstName" title="First Name"></q-grid-column>
-		<q-grid-column key="lastName" title="Last Name"></q-grid-column>
-	</q-grid-columns>
-
-	<q-grid-columns *ngSwitchCase="'address'">
-		<q-grid-column key="city" title="City"></q-grid-column>
-		<q-grid-column key="state" title="State"></q-grid-column>
-	</q-grid-columns>
-</q-grid>
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/column-list-basic/latest" %}
 
 ## Coming soon
 
