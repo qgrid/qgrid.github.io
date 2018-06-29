@@ -6,11 +6,15 @@ order: 7
 
 There are situations when the end user need to select rows or cells in the q-grid. q-grid provides several modes to enable selection satisfaction. 
 
+## Setup
+
+Use q-grid html component to setup selection options.
+
 ```html
 <q-grid selectionMode="multiple" selectionUnit="column"></q-grid>
 ```
 
-Another way to setup selection is to use q-grid model directly.
+Or use q-grid model directly.
 
 ```javascript
 gridModel.selection({
