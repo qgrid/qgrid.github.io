@@ -20,18 +20,6 @@ Make work import from xlsx by adding http://github.com/SheetJS/js-xlsx library
 * `xlsx`
 * `xml`
 
-{% docEditor "github/qgrid/ng2-example/tree/select-cell-basic/latest" %}
-
-## Import options
-
-Only for xlsx, csv
-
-* `options`	takes options object
-
-## Options object properties
-
-* `head` takes one of three values : alpha, numeric or default. This option is applied to choose the type of title to import into the grid.
-   * `alpha` - imported columns titles will be shown in alphanumeric format.
-   * `numeric` - imported columns titles will be shown in numeric format.
-   
-   If header option isn't set or it's smth else - then first row of the imported document will be considered as column titles.
+<span class="editor">
+      <iframe data-src="//stackblitz.com/edit/doc-qgrid-ng2-import?embed=1&hideNavigation=1&view=preview"></iframe>
+</span>
