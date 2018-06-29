@@ -6,14 +6,30 @@ order: 7
 
 ## [Unreleased]
 * Auto-complete cell editor.
-* Time cell editor.
 * Row edit form.
 * Infinite scrolling.
 * Validation framework.
 * Copy/paste selection to excel.
 * Live data plugin.
 * Float Row Navigation.
-* Better cohort groups interactions.
+
+## [6.1.4] - 2018-06-28
+### Fixed
+- Time cell editor.
+- Fix q-grid-embedded array cell look.
+- Percent width are aware of pad column padding.
+- Show horizontal scroll-bar if there are no data rows, but some columns are present.
+- Observables in dropdown editors.
+
+### Added
+- Beta version of row virtual scrolling.
+- Tab-trap component for the url and email editors.
+- Column groups manipulation through the structural directives.
+- Import from csv, pdf, xlsx, json.
+- Export to csv, pdf, xlsx, json.
+
+### Changed
+- Improve performance of Style API using dom bags directly.
 
 ## [6.1.3] - 2018-06-21
 ### Fixed
@@ -36,7 +52,6 @@ order: 7
 
 ### Deprecated
 - Use `FetchContext` `serach` property instead of `filter` property.
-- Don't use `<q-grid-row>` component, use `<q-grid rowCanMove rowCanResize>`, for row details use `<q-grid-column type="row-details"><ng-template for="body">...`.
 - Use `<q-grid caption="My Grid">` instead of `<q-grid header="My Grid">`.
 
 ### Added
@@ -276,7 +291,8 @@ order: 7
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v6.1.3...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v6.1.4...HEAD
+[6.1.4]: https://github.com/qgrid/ng2/compare/v6.1.4...v6.1.3
 [6.1.3]: https://github.com/qgrid/ng2/compare/v6.1.3...v6.1.1
 [6.1.1]: https://github.com/qgrid/ng2/compare/v6.1.1...v6.1.0
 [6.1.0]: https://github.com/qgrid/ng2/compare/v6.1.0...v5.3.10

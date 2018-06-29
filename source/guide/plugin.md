@@ -12,7 +12,7 @@ This page covers the fundamentals of the q-grid plugin system. We will build a c
 
 ## The Command
 
-q-grid utilizes `command` class as an object-oriented callback to implement interaction patterns. Here are some major properties that q-grid command has:
+The q-grid utilizes `command` class as an object-oriented callback to implement interaction patterns. Here are some major properties that q-grid command has:
 
 * `execute` method runs the code identified by the command object. 
 * `canExecute` method indicates if a command can be executed.
@@ -44,11 +44,12 @@ To show list of available pages we iterate through the component pages property 
 ## The Plugin Service
 
 * `GridPlugin` service is used to access q-grid model. Note that in 99% `GridPlugin` should be added to the component `providers`. This ensures that all model resources, like event handlers, will be disposed automatically when the component is destroyed. 
+
 * Also `GridPlugin` service provides access to the q-grid DOM abstraction through the `table` property, which could be used for more complicated cases than pager plugin.
 
 ## Pager component
 
-GridPlugin serves as endpoint to access q-grid model and commands are convenient abstractions to handle keyboard and mouse events. It's not required to use commands but this is a way how q-grid interaction model is built.
+GridPlugin serves as endpoint to access q-grid model. Commands are convenient abstractions to handle keyboard and mouse events. It's not required to use commands but this is a way how q-grid interaction model is built internally.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
@@ -103,3 +104,7 @@ class MyPagerComponent {
     }
 }
 ```
+
+## Coming Soon
+
+Any of the q-grid peripheral components like sorting, pager and filtration are designed using plugin model. Right now it's about 18 plugins that are coming with q-grid module. To reduce final bundle size in terms of minimal q-grid functionality these plugins will be placed under the separate module which required to be added separately.

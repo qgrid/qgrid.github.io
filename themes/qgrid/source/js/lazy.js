@@ -1,9 +1,6 @@
 function isVisible(element) {
 	const rect = element.getBoundingClientRect();
-	const top = document.documentElement.scrollTop;
-	const bottom = top + document.documentElement.clientHeight;
-
-	return rect.top < 0 && rect.bottom > 0 || Math.max(rect.top, top) <= Math.min(rect.bottom, bottom);
+	return rect.top >= 0 && (rect.bottom - rect.height / 2) <= window.innerHeight;
 }
 
 function liveUp() {
@@ -15,9 +12,14 @@ function liveUp() {
 			element.removeAttribute('data-src');
 		}
 	}
-
 }
 
-window.onscroll = liveUp;
+var isScrolling;
+window.addEventListener('scroll', function () {
+	window.clearTimeout(isScrolling);
+	isScrolling = setTimeout(function () {
+		liveUp();
+	}, 66);
+}, false);
 
 document.addEventListener('DOMContentLoaded', liveUp);
