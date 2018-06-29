@@ -55,7 +55,7 @@ export class MyComponent {
 
 ## The reactive idea
 
-Lets look how model changes can be handled.
+Any registered entity in the model gets own `Changed` event hook, which can be used to handle model modifications. There are 2 ways to add event handlers in the q-grid.
 
 * By using `on` method, if the event fired before subscription, it will be lost for the new handler.
 
