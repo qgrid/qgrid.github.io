@@ -12,7 +12,7 @@ This page covers the fundamentals of the q-grid theme system. We will build the 
 
 ## Theme Component
 
-All plugins including cell renderers are using q-grid template system. Finally, theme component should contain necessary set of ng-template[key] directives to fit theme requirements.
+All plugins including cell renderers are using q-grid template system. Finally, theme component should contain necessary set of `ng-template[key]` directives to fit theme requirements.
 
 ```typescript
 import { Component } from '@angular/core';
@@ -34,11 +34,11 @@ export class ThemeComponent {
 
 ## Theme Module
 
-* Put ThemeComponent into the `entryComponents` section to support dynamic loading.
-* Add TemplateModule into the `imports` section to enable ng-template[key] directive.
-* Inject `ThemeService` to the module constructor.
-* Setup `theme name` property which will be added to the q-grid-view component as css class.
-* Setup `theme component` property to provide type for the q-grid component factory.
+* Put `ThemeComponent` into the `entryComponents` section to support dynamic loading.
+* Add `TemplateModule` into the `imports` section to enable ng-template[key] directive.
+* Inject `ThemeService` to the module `constructor`.
+* Setup `theme name` property which will be added to the `q-grid-view` component as css class.
+* Setup `theme component` property to provide type for the q-grid `component factory`.
 
 ```typescript
 import { NgModule } from '@angular/core';

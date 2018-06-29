@@ -125,19 +125,43 @@ Approximately, the code above means that the most left position will get the col
 
 Column type is responsible for how the cell is drawn and how it behaves. Beside out of box column types it's possible to define own.  Note that some of supported column types are utilized for internal needs.
 
+*  array
+*  bool
+*  cohort
+*  currency
+*  date
+*  email
+*  file
+*  filter-row
+*  group
+*  id
+*  image
+*  number
+*  pad
+*  pivot
+*  reference
+*  row-details
+*  row-expand
+*  row-indicator
+*  row-number
+*  row-options
+*  select
+*  summary
+*  text
+*  time
+*  url
+
 ## Column Key
 
-A column unique identifier. If path or value properties are not setup, key property is used to retrieve the cell value.
+A column unique identifier, used to retrieve cell values if path or value properties are not setup for the column.
 
 ## Column Title
 
-Column header text, can be shown as column tooltip and used in plugins like column-filter plugin.
+Column header text, could be shown as column tooltip or in plugins like a column-filter plugin.
 
 ## Column Value & Label
 
-if the property is setup, it is used to get/set cell value/label. Callback or constant ca be used as the value.
-
-> Be aware that if there is a requirement to use `this` pointer inside the `value` or `label` handler, it should be passed there by using closure or using lambda function.
+The callback or some constant could be used to retrieve or setup the cell value/label.
 
 ```typescript
 columns = [
@@ -155,9 +179,11 @@ columns = [
 ];
 ```
 
+> Be aware that if there is a requirement to use `this` pointer inside the `value` or `label` callback, `this` should be passed by using closure or lambda function.
+
 ## Column Path & LabelPath
 
-Path to the value/label. The `path` property has a lower priority than the `value` property.
+String path to the cell value or label. Note that `path` property has lower priority than the `value` property.
 
 ```html
 <q-grid-column path="address.phones.0.num"></q-grid-column>
@@ -165,7 +191,11 @@ Path to the value/label. The `path` property has a lower priority than the `valu
 
 ## Column Pin
 
-Indicates if a column should be frozen, `left` and `right` options are available.
+Indicates if the q-grid column should be frozen on `left` or `right`.
+
+```html
+<q-grid-column pin="right"></q-grid-column>
+```
 
 ## Column Class
 
@@ -173,44 +203,58 @@ A functional type of the column. It's utilized by plugins and internal routines 
 
 ## Column Editor & EditorOptions
 
-An editor type that will be shown in the edit mode instead of default one.
+Use editor type to shown predefined editor inside the not aligned type column.
 
 ```html
-<q-grid-column type="id" editor="number"></q-grid-column>
+<q-grid-column type="id" editor="reference" [editorOptions]="idOptions"></q-grid-column>
 ```
 
 ## Column Width, MaxWidth & MinWidth
 
-Size of columns that can be setup in `pixels` or `percents`. Note that percents are materialized only once on init, depending on the initial q-grid width.
+Indicates the column size which can be setup in `pixels` or `percents`. 
 
 ```html
 <q-grid-column key="id" maxWidth="65"></q-grid-column>
 <q-grid-column key="number" width="30%"></q-grid-column>
 ```
 	
+> Right now percents are materialized only once on view init, depending on the origin q-grid width. Future plans are to add additional modes to handle percents constantly.
+
 ## Column WidthMode
 
-Indicates how to calculate width px from percentage. Mode `relative` means to get whole q-grid width minus column static widths than calculate percents, `absolute` means to get whole q-grid width and calculate percents.
+Sets percentage calculation algorithm. 
+
+* `relative` mode means to get whole q-grid width minus static widths columns than apply percents.
+*  `absolute` mode means to get whole q-grid width and apply percents.
 
 ## Column ViewWidth
 
-If setup, the column expands its width to viewWidth value on focus.
+If setup, the host column expands width to the viewWidth value on focus occurs.
 
 ## Column Indicators
 
-`canEdit`, `canResize`, `canSort`, `canMove`, `canFilter`, `canHighlight`, `canFocus`, `isVisible` are serve to control the column behavior.
+Use `can-` and `is-` properties to control q-grid columns interaction behavior.
+
+* canEdit
+* canResize
+* canSort
+* canMove
+* canFilter
+* canHighlight
+* canFocus
+* isVisible 
 
 ## Column Index 
 
-Indicates the order of the column.
+Use index property to define the order of q-grid columns.
 	 
 ## Column Compare
 
 Setup this function to change order method that is used by `column sort pipe` to sort rows.
 
-## Column children
+## Column Children
 
-If children property is setup the column automatically becomes a group container.
+The q-grid header can utilize column hierarchy by using nested components or children property.
 
 ```html
 <q-grid-columns>

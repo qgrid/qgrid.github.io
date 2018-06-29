@@ -10,15 +10,19 @@ order: 6
 The q-grid introduces 3 modes that allows to change performance strategy. 
 
 ```html
-<q-grid interactionMode="readonly"></q-grid>
+<q-grid interactionMode="detached"></q-grid>
 ```
 
 * Use `full` mode to get all benefits of change detection, this is a default behavior. 
 * Use `readonly` mode to enable help of internal cache to acquire cell values.
-* Use `detached` mode to disable change detection after render occurs(angular events inside cell templates don't work in this case).
+* Use `detached` mode to disable change detection after render occurs.
+
+> Regardless of the detached setting, Angular will check the cells for changes whenever the component fires an event or an observable fires an event, and the async pipe is used in the view with that observable.
+
+{% docEditor "github/qgrid/ng2-example/tree/interaction-mode-detached/latest" %}
 
 ## Invalidate q-grid explicitly
-When interaction mode is equal to `readonly` or `detached` use invalidate to refresh cell values or create a new reference of data rows.
+When interaction mode is equal to readonly or detached use `invalidate` method to refresh cell values or create a `new reference` of the data rows.
 
 ```typescript
 import { Grid, GridComponent } from 'ng2-qgrid';
