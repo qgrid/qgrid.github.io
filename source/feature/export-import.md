@@ -1,5 +1,5 @@
 ---
-title: Import
+title: Export/Import
 group: Features
 order: 8
 ---
