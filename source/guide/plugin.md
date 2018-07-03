@@ -18,7 +18,7 @@ The q-grid utilizes `command` class as an object-oriented callback to implement 
 * `canExecute` method indicates if a command can be executed.
 * `shortcut` is a sequence of keyboard key codes to execute the command(e.g. 'shift+a', 'ctrl+s', 'f2').
 
-Note that it's not enough just to setup `shortcut` property. In the final code you can find these two lines that utilize special services to bind key presses and commands.
+Note that it's not enough just to setup `shortcut` property. In the final code next two lines have to be added to enable keyboard bindings.
 
 ```typescript
 const { shortcut, manager } = this.plugin.model.action();
@@ -45,11 +45,11 @@ To show list of available pages we iterate through the component pages property 
 
 * `GridPlugin` service is used to access q-grid model. Note that in 99% `GridPlugin` should be added to the component `providers`. This ensures that all model resources, like event handlers, will be disposed automatically when the component is destroyed. 
 
-* Also `GridPlugin` service provides access to the q-grid DOM abstraction through the `table` property, which could be used for more complicated cases than pager plugin.
+* Also `GridPlugin` service provides access to the q-grid DOM abstraction through the `table` property, which could be used in the complicated cases.
 
 ## Pager component
 
-GridPlugin serves as endpoint to access q-grid model. Commands are convenient abstractions to handle keyboard and mouse events. It's not required to use commands but this is a way how q-grid interaction model is built internally.
+GridPlugin serves as endpoint to access the q-grid model. Commands are convenient abstractions to handle keyboard and mouse events. It's not required to use commands but this is a way how q-grid interaction model is built internally.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

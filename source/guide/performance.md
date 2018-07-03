@@ -74,3 +74,7 @@ Virtual scroll can offer performance benefits when working with large collection
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/scroll-virtual-style/latest" %}
+
+## The OnPush Host
+
+If component which hosted q-grid implements `onPush` change detection strategy, the q-grid body behaves similar as interaction mode was set to `detached`.
