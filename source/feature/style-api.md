@@ -17,6 +17,8 @@ Each cell, no mater if it is located in header, body or footer, has specific set
 
 Use style callbacks for dynamic class assignments. For the cell style it is possible to pass an object instead of callback. In this case, object keys will play the role of column key filters.
 
+> Note that first argument of `context.class` method requires to be an unique identifier for the appropriate style group.
+
 ```typescript
 @Component({
    selector: 'my-component',
@@ -48,7 +50,7 @@ export class MyComponent {
 
 ## Grid Component style callbacks
 
-Another way to utilizef style callbacks is appropriate attribute bindings.
+Another way to utilize style callbacks is to use attribute bindings.
 
 ```typescript
 
@@ -80,7 +82,9 @@ export class MyComponent {
 
 ## How style model works
 
-Every change detection cycle the q-grid traverses through all visible rows and cells to invoke user defined style callbacks. Note that `context.class` method first argument requires to be an unique identifier. Later when callback series is finished style API will produce dynamic stylesheet using pair of context identifier and column key as a css class name. This technique avoids to use inline styles and makes style management easier. Resizing of rows or columns behaves the same way.
+Every change detection cycle the q-grid traverses through all visible rows and cells to invoke user defined style callbacks. Later when callback series is finished style API will produce dynamic stylesheet using pair of context identifier and column key as a css class name. This technique avoids to use inline styles and makes style management easier. Resizing of rows and columns behaves the same way. 
+
+## The Picture
 
 Next picture can be found if open element inspector and follow the style section.
 
