@@ -4,6 +4,8 @@ group: Features
 order: 5
 ---
 
+The q-grid provides various column types to handle all possible data type values inside the columns.
+
 ## Array
 
 Array type is utilized by the q-grid to visualize primitive type collections. Here are some specific properties:

@@ -4,7 +4,7 @@ group: Features
 order: 6
 ---
 
-Use q-grid rich css class naming system to apply specific styles. If more dynamic way is required style model can be used.
+Use q-grid rich css class naming system to apply specific styles. If more dynamic is required style model can be used.
 
 ## CSS
 

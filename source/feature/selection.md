@@ -4,7 +4,7 @@ group: Features
 order: 7
 ---
 
-There are situations when the end user need to select rows or cells in the q-grid. q-grid provides several modes to enable selection satisfaction. 
+There are situations when the end user need to select rows or cells in the q-grid. The q-grid provides several modes to enable selection satisfaction. 
 
 ## Setup
 
