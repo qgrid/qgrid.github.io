@@ -35,14 +35,14 @@ gridModel.row({
 
 The q-grid renderer utilizes `RowDetails` class to add details rows into the scene model.
 
-> Note that style API along with data rows will propagate `RowDetails` class to the end user for each expanded row.
-
 ```typescript
 declare class RowDetails {
    item: any;
    column: Column;
 }
 ```
+
+> Note that style API along with data rows will propagate `RowDetails` class to the end user for each expanded row.
 
 ## Row details modes
 
