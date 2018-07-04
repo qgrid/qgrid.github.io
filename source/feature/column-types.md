@@ -27,7 +27,7 @@ Three state booleans are supported by the q-grid. Here are some specific propert
 * Use `isIndeterminate` function to setup the undefined meaning.
 * Use `isChecked`  function to setup boolean comparison.
 
-Use editor options to disable value change on the q-grid cell click.
+Use editor options to disable value change on the boolean type cell click.
 
 ```html
 <q-grid-column type="bool" [editorOptions]="{trigger: 'focus'}"></q-grid-column>
