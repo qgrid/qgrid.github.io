@@ -90,3 +90,16 @@ Every change detection cycle the q-grid traverses through all visible rows and c
 Next picture can be found if open element inspector and follow the style section.
 
 <img src="assets/style-api-html.png" type="image/png" />
+
+## Column width
+
+Use column width attribute to setup desired column size using pixels or percentages.
+
+{% docEditor "github/qgrid/ng2-example/tree/size-column-basic/latest" %}
+
+> Right now percents are materialized only once on view init, depending on the origin q-grid width.
+
+## Coming soon
+
+* Column auto width regarding to cell content.
+* Constant column percents.
