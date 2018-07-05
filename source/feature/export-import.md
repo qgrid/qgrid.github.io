@@ -6,7 +6,7 @@ order: 8
 
 Use q-grid import plugin to fill in rows with data from files.
 
-## Setup
+## Setup Import
 
 Just add `q-grid-import` component inside the q-grid body and set auto generation mode for the columns.
 
@@ -17,7 +17,7 @@ Just add `q-grid-import` component inside the q-grid body and set auto generatio
 </q-grid>
 ```
 
-## Supported formats
+## Supported formats for import
 
 File types which are supported out of box for import into the q-grid:
 
@@ -62,6 +62,90 @@ Add own ng-template to override default launch import action.
 
 {% docEditor "doc-qgrid-ng2-import" %}
 
+
+## Setup Export
+
+Add `q-grid-export` component with required format type inside the q-grid body and set auto generation mode for the columns.
+
+```html
+<q-grid>
+   <q-grid-columns generation="deep"></q-grid-columns>
+   	<q-grid-export type="json">
+   	</q-grid-export>
+</q-grid>
+```
+
+Add file-saver library to the q-grid plugin model.
+
+```typescript
+import * as fileSaver from 'file-saver';
+
+@Component({
+  templateUrl: 'app.component.html',
+})
+export class MyComponent {
+  @ViewChild(GridComponent) myGrid: GridComponent;
+
+  ngAfterViewInit() {
+    this.myGrid.model.plugin({
+      imports: {
+        'fileSaver': fileSaver
+      }
+    });
+  }
+}
+```
+
+
+## Supported formats for export
+
+File types which are supported out of box for import into the q-grid:
+
+* `csv`
+* `json`
+* `xlsx`
+* `xml`
+
+## XLSX 
+
+If xlsx format is required, add SheetJs library to the q-grid plugin model.
+
+```typescript
+import * as fileSaver from 'file-saver';
+import * as XLSX from 'xlsx';
+
+@Component({
+  templateUrl: 'app.component.html',
+})
+export class MyComponent {
+  @ViewChild(GridComponent) myGrid: GridComponent;
+
+  ngAfterViewInit() {
+    this.myGrid.model.plugin({
+      imports: {
+        'fileSaver': fileSaver,
+        'xlsx': XLSX
+      }
+    });
+  }
+}
+```
+
+## Custom template for the export trigger
+
+Add own ng-template to override default launch export action.
+
+```html
+<q-grid-export type="csv">
+	<ng-template for="trigger" let-$action>
+		<button mat-button (click)="$action.execute()">Export to CSV</button>
+	</ng-template>
+</q-grid-export>
+```
+
+{% docEditor "doc-qgrid-ng2-export" %}
+
 ## Suggested links
 
 * [SheetJS](http://github.com/SheetJS/js-xlsx)
+* [FileSaver](https://github.com/eligrey/FileSaver.js/)
