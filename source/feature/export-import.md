@@ -1,7 +1,7 @@
 ---
 title: Export/Import
 group: Features
-order: 8
+order: 13
 ---
 
 Use q-grid import plugin to fill in rows with data from files.

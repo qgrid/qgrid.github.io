@@ -1,7 +1,7 @@
 ---
 title: Filtering
 group: Features
-order: 10
+order: 11
 ---
 
 There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary.
@@ -34,7 +34,29 @@ gridModel.filter({
 
 ## Column filters
 
+```typescript
+import { FetchContext } from 'ng2-qgrid';
+
+@Component({
+	template: '<q-grid [filterFetch]="getFilterItems"></q-grid>',
+})
+export class MyComponent {
+   getFilterItems(key: string, context: FetchContext) {
+      const { search, take, skip } = context;
+      return dataService.getFilterItemsFor(key, search, take, skip);
+   }
+}
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/filter-column-fetch/latest" %}
+
+## Filter Row
+
+{% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
+
 ## Custom filters
+
+{% docEditor "github/qgrid/ng2-example/tree/filter-row-custom/latest" %}
 
 ## Filter expressions
 
@@ -55,6 +77,10 @@ gridModel.filter({
    }
 });
 ```
+
+{% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
+
+## Expression builder contract
 
 
 ## Suggested links

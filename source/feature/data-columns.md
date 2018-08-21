@@ -105,8 +105,6 @@ The q-grid tries to do column sort in a smart way and applies weight calculation
 
 ```javascript
 const candidates = [
-    // Uses columnList index property to get a score.
-    listFind(key) + scoreFor.list(column), 
     // Uses column index property to get a score.
     column.index + scoreFor.index(column), 
     // Uses column position defined in TypeScript to 
@@ -287,6 +285,5 @@ The q-grid header can utilize column hierarchy by using nested components or chi
 
 ## Coming soon
 
-* Cohort column improvements: drag & drag, sorting, filtering, resizing fixes & column chooser support.
 * Column group template manipulation.
 * Column order user strategies.
