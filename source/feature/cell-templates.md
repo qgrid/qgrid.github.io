@@ -31,10 +31,6 @@ The preferred way to define a cell template is to you `ng-template` inside the `
 </q-grid>
 ```
 
-## Template priority
-
-...
-
 ## $cell service
 
 Use this implicitly injected service to retrieve data cell information. Here are the list of available properties:
@@ -60,7 +56,6 @@ Use this service to take control over any possible actions in the q-grid scope. 
 * layout
 * nav
 * pagination
-* pivot
 * row
 * rowDetails
 * scroll
