@@ -31,7 +31,7 @@ gridModel.row({
 });
 ```
 
-## Details model
+## Details Model
 
 The q-grid renderer utilizes `RowDetails` class to add details rows into the scene model.
 

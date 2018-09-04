@@ -70,7 +70,7 @@ npm install
 npm run start
 ```
 
-## Browser support
+## Browser Support
 
 * `Chrome` is supported.
 * `Safari` is in progress.

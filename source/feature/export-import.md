@@ -6,7 +6,7 @@ order: 13
 
 Use q-grid import plugin to fill in rows with data from files.
 
-## Supported formats
+## Supported Formats
 
 File types which are supported out of box for import into the q-grid:
 
@@ -111,7 +111,7 @@ Add own ng-template to override default launch import action.
 
 {% docEditor "doc-qgrid-ng2-import" %}
 
-## Suggested links
+## Suggested Links
 
 * [SheetJS](http://github.com/SheetJS/js-xlsx)
 * [FileSaver](https://github.com/eligrey/FileSaver.js/)

@@ -139,7 +139,7 @@ Applies pagination if scroll mode is not `virtual`.
 * `qgrid.pipe.view`
 The intent is to order rows appropriate to the `row list` model(row drag & drop support) and fill in the `scene` model that is used to render cells.
 
-## Pipe units
+## Pipe Units
 
 Predefined sets of typical pipe series called pipe units are used to change the q-grid data processing behavior. Here are some examples:
 

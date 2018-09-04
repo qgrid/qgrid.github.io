@@ -65,6 +65,6 @@ export class ThemeModule {
 
 ```
 
-## Suggested links
+## Suggested Links
 
 * [List of available templates](https://github.com/qgrid/ng2/tree/master/src/theme/material/templates)

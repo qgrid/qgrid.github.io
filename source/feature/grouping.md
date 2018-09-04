@@ -6,19 +6,19 @@ order: 10
 
 ## Setup
 
-## Basic grouping
+## Basic Grouping
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-basic/latest" %}
 
-## Flat grouping
+## Flat Grouping
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-flat/latest" %}
 
-## Rowspan grouping
+## Rowspan Grouping
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-rowspan/latest" %}
 
-## Subhead grouping
+## Subhead Grouping
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-subhead/latest" %}
 

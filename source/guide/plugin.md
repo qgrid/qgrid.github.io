@@ -41,13 +41,13 @@ To show list of available pages we iterate through the component pages property 
 
 ```
 
-## The Plugin Service
+## The Plugin service
 
 * `GridPlugin` service is used to access q-grid model. Note that in 99% `GridPlugin` should be added to the component `providers`. This ensures that all model resources, like event handlers, will be disposed automatically when the component is destroyed. 
 
 * Also `GridPlugin` service provides access to the q-grid DOM abstraction through the `table` property, which could be used in the complicated cases.
 
-## Pager component
+## Pager Component
 
 GridPlugin serves as endpoint to access the q-grid model. Commands are convenient abstractions to handle keyboard and mouse events. It's not required to use commands but this is a way how q-grid interaction model is built internally.
 

@@ -60,7 +60,7 @@ export class MyLayerTriggerComponent {
 
 {% docEditor "doc-qgrid-ng2-layer" %}
 
-## Blank layer
+## Blank Layer
 
 Use a predefined `no-data` condition to show the custom template when the q-grid is empty.
 
@@ -108,7 +108,7 @@ gridModel.visibility({
 });
 ```
 
-## Coming soon
+## Coming Soon
 
 * Right toolbar customization example.
 * Visibility component, convenient way to setup visibility inside the template.
