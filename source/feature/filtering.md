@@ -52,13 +52,51 @@ export class MyComponent {
 
 ## Filter Row
 
+To show input controls under the column headers to filter out rows, use `filterUnit` attribute. Any of these inputs could be override by template definitions.
+
+```html
+<q-grid filterUnit="row">
+   <q-grid-column key="myNumber">
+      <ng-template for="filter" let-$cell>
+         <input #input
+                type="number"
+                (change)="$view.filter.column.execute($cell.column.model, input.value)" />
+      </ng-template>
+   </q-grid-column>
+</q-grid>
+```
+
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
 
 ## Custom Filters
 
+There are various filter possibilities in the the q-grid but still to go own way is not a problem.
+
+```typescript
+import { GridComponent } from 'ng2-qgrid';
+
+@Component({
+   template: '<q-grid></q-grid>'
+})
+export class ExampleFilterRowCustomComponent {
+   @ViewChild(GridComponent) myGrid: GridComponent;
+
+   filter(value: string) {
+      const { model } = this.myGrid;
+      value = value.toLocaleLowerCase();
+      model.filter({
+         match: () => row => row.name.toLowerCase().indexOf(value) >= 0
+      });
+   }
+}
+```
+
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-custom/latest" %}
 
-## Filter Expressions
+## Condition Builder
+
+Use query builder component to add unlimited possibilities to filter data out using convenient hierarchical UI.
+
 
 ```javascript
 gridModel.filter({
@@ -105,6 +143,8 @@ gridModel.filter({
 {% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
 
 ## Expression Contract
+
+By supporting q-grid expression contract building any custom filters with complex logic should not be a problem.
 
 ```typescript
 {

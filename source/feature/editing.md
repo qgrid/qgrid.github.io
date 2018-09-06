@@ -34,7 +34,7 @@ Indicates the current q-grid status in term of data manipulation.
 * `edit` indicates that q-grid editor is opened.
 * `startBatch` and `endBatch` show status of the batch edit.
 
-## Enter, commit, reset, clear commands and shortcuts
+## Edit commands & shortcuts
 
 Use commands to have a global control over q-grid editing. Use shortcuts that have `{columnType: [keyboardKey]}` type to setup editing shortcuts.
 
