@@ -6,7 +6,7 @@ order: 12
 
 Use q-grid sorting model to sort single and multiple data-bound columns.
 
-## Direction
+## Sort Direction
 Use `+` and `-` symbols to identify the direction of sorting.
 
 ```html
