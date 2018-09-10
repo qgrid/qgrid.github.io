@@ -37,16 +37,16 @@ import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid [model]="myModel"></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent {
-   myModel: GridModel;
+   gridModel: GridModel;
 
    constructor(qgrid: Grid, dataService: MyDataService) {
-      this.myModel = qgrid.model();
+      this.gridModel = qgrid.model();
       dataService
          .getRows()
-         .subscribe(rows => this.myModel.data({ rows }));
+         .subscribe(rows => this.gridModel.data({ rows }));
    }
 }
 ```

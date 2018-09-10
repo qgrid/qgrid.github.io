@@ -39,7 +39,7 @@ Indicates the current q-grid status in term of data manipulation.
 Use commands to have a global control over q-grid editing. Use shortcuts that have `{columnType: [keyboardKey]}` type to setup editing shortcuts.
 
 ```javascript
-myModel.edit({
+gridModel.edit({
    enter: { 
       canExecute: e => e.column.class === 'data' 
    },
@@ -62,9 +62,9 @@ Use `editMethod` property to activate batch editing, this method activates cell 
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
 
-## Dropdown
+## Dropdown & autocomplete
 
-To populate list of items in dropdown columns return `fetch` property in editor options. Fetch option supports next data types.
+To populate list of items in dropdown/autocomplete columns use `fetch` editor property. Fetch option supports next data types.
 
 * Array of objects or basic types.
 * Function that returns array of basic types/objects/observables/promises.
@@ -128,7 +128,7 @@ import { Grid, GridModel } from 'ng2-qgrid';
 @Component({
    selector: 'my-component',
    template: `
-   <q-grid [model]="myModel">
+   <q-grid [model]="gridModel">
       <q-grid-columns generation="deep">
          <q-grid-column key="rowIndicator" type="row-indicator"></q-grid-column>
          <q-grid-column key="rowOptions" type="row-options"></q-grid-column>
@@ -140,13 +140,13 @@ import { Grid, GridModel } from 'ng2-qgrid';
    </q-grid>`
 })
 export class MyComponent {
-   myModel: GridModel;
+   gridModel: GridModel;
 
    constructor(qgrid: Grid, dataService: MyDataService) {
-      this.myModel = qgrid.model();
+      this.gridModel = qgrid.model();
       dataService
          .getPeople()
-         .subscribe(rows => this.myModel.data({ rows }));
+         .subscribe(rows => this.gridModel.data({ rows }));
    }
 
    myRowFactory() {
@@ -154,7 +154,7 @@ export class MyComponent {
    }
 
    submit() {
-       const { added, edited, deleted } = myModel.dataManipulation();
+       const { added, edited, deleted } = gridModel.dataManipulation();
 
        dataService
           .addPeople(added)
@@ -180,10 +180,6 @@ The q-grid validation is based on language independent validation rules called L
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/validation-basic/latest" %}
-
-## Coming Soon
-
-* Autocomplete
 
 ## Suggested Links
 

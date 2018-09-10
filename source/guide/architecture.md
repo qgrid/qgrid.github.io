@@ -22,13 +22,13 @@ The q-grid introduces work item called `model`. In development terms the q-grid 
 
 ```javascript
 // Works
-myModel.dataChanged.on(e => alert('It works!'));
-myModel.data({ rows: rows.concat(newRow) }); 
+gridModel.dataChanged.on(e => alert('It works!'));
+gridModel.data({ rows: rows.concat(newRow) }); 
 
 // Doesn't work
-myModel.dataChanged.on(e => alert('Never happens'));
+gridModel.dataChanged.on(e => alert('Never happens'));
 
-const { rows } = myModel.data();
+const { rows } = gridModel.data();
 rows.push(newRow);
 ```
 
@@ -39,16 +39,16 @@ import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid [model]="myModel"></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent {
-   myModel: GridModel;
+   gridModel: GridModel;
 
    constructor(qgrid: Grid, dataService: MyDataService) {
-      this.myModel = qgrid.model();
+      this.gridModel = qgrid.model();
       dataService
             .getRows()
-            .subscribe(rows => this.myModel.data({ rows }));
+            .subscribe(rows => this.gridModel.data({ rows }));
    }
 }
 ```
