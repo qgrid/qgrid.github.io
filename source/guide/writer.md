@@ -16,7 +16,7 @@ order: -1
 ## Markdown Documentation
 
 * [The ultimate guide](https://blog.ghost.org/markdown/).
-* [Etalon example](/doc/feature/selection.html).
+* [Etalon example](/feature/selection.html).
 * [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ## Typescript Documentation
@@ -65,8 +65,8 @@ export declare class MyClass {
 ### Build Markdown from Typescript
 
 * We use [typedoc](https://github.com/TypeStrong/typedoc) to generate `api.json` file that contains reflection metadata for defenitions.
-* We use [gulp](https://github.com/qgrid/doc/blob/master/gulpfile.js) + [handlebars](https://github.com/qgrid/doc/blob/master/api.hbs) + [habdlebars extensions](https://github.com/qgrid/doc/blob/master/hbs.js) to generate `markdown` files from `api.json`.
-* we use [ejs hexo plugin](https://github.com/qgrid/doc/blob/master/scripts/table.js) + [marked lib](https://www.npmjs.com/package/marked) to generate table that can contain markdown inside the cells.
+* We use [gulp](https://github.com/qgrid/qgrid.github.io/blob/master/gulpfile.js) + [handlebars](https://github.com/qgrid/qgrid.github.io/blob/master/api.hbs) + [habdlebars extensions](https://github.com/qgrid/qgrid.github.io/blob/master/hbs.js) to generate `markdown` files from `api.json`.
+* we use [ejs hexo plugin](https://github.com/qgrid/qgrid.github.io/blob/master/scripts/table.js) + [marked lib](https://www.npmjs.com/package/marked) to generate table that can contain markdown inside the cells.
 * You type `npm run doc` to generate documentation, from `node_modules/ng2-qgrid/core/` folder.
 * How you update `node_modules/ng2-qgrid/core/` folder is not defined yet.
 

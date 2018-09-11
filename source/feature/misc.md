@@ -165,31 +165,60 @@ Row resizing configuration is setting up through `q-grid-row` component.
 
 {% docEditor "github/qgrid/ng2-example/tree/size-row-basic/latest" %}
 
+## Floating Rows
+
+Use `row` model to pin rows to top or bottom.
+
+```typescript
+@Component({
+   template: '<q-grid></q-grid>'
+})
+export class MyComponent {
+   gridModel: GridModel;
+
+   constructor(dataService: DataService, qgrid: Grid) {
+      this.gridModel = qgrid.model();
+
+      dataService
+         .getRows()
+         .subscribe(rows => {
+            this.gridModel.data({ rows });
+            this.gridModel.row({
+               pinTop: [rows[0], rows[1]],
+               pinBottom: [rows[rows.length - 1]]
+            });
+         });
+      }
+}
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/floating-rows-basic/latest" %}
+
 ## Busy Indicator
 
 The q-grid service provides access to control progress bar visibility.
 
 ```typescript
 @Component({
-	template: '<q-grid></q-grid>'
+      template: '<q-grid></q-grid>'
 })
 export class MyComponent {
-	@ViewChild(GridComponent) myGrid: GridComponent;
+      @ViewChild(GridComponent) myGrid: GridComponent;
 
-	constructor(private dataService: DataService, private qgrid: Grid) {
-	}
+      constructor(private dataService: DataService, private qgrid: Grid) {
+      }
 
    onInit() {
       const { model } = this.myGrid;
       const service = this.qgrid.service(model);
-	   const cancelBusy = service.busy();
+         const cancelBusy = service.busy();
 
-		this.dataService
+            this.dataService
          .getAtoms()
          .subscribe(rows => {
             cancelBusy();
             model.data({ rows });
          });
-	}
+      }
 }
 ```
