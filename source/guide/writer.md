@@ -53,7 +53,7 @@ export declare class MyClass {
 }
 ```
 
-### Consider to
+### Consider To
 
 * Make comments inside declaration `d.ts` files.
 * Try to use `markdown` everywhere.

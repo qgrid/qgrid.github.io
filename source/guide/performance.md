@@ -5,7 +5,7 @@ group: Getting started
 order: 6
 ---
 
-## Interaction mode
+## Interaction Mode
 
 The q-grid introduces 3 modes that allows to change performance strategy. 
 

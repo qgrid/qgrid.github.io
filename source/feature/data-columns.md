@@ -34,7 +34,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
-## Use HTML to add columns
+## HTML Components
 
 Use `q-grid-column` components to declare a list of columns to show in the q-grid. Note that preferred way to define cell templates is to use `ng-template` inside the `q-grid-column` component. 
 	 
@@ -52,7 +52,7 @@ Use `q-grid-column` components to declare a list of columns to show in the q-gri
 </q-grid>
 ```
 
-## Use TypeScript to add columns
+## In TypeScript
 
 Consider to use `columns` attribute of the q-grid component, when list of columns need to be created dynamically.
 
@@ -72,7 +72,7 @@ export class MyComponent {
 }
 ```
 
-## Use Grid Model to add columns
+## Grid Model
 
 Two previous examples are nothing more than wrappers to fill in the data model with a list of columns. Low-level way to add some columns is to use the q-grid model directly.
 
@@ -99,14 +99,12 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## Column list order
+## The Order of Columns
 
 The q-grid tries to do column sort in a smart way and applies weight calculation algorithm. The first candidate who has weight more than zero goes to the comparison routine. 
 
 ```javascript
 const candidates = [
-    // Uses columnList index property to get a score.
-    listFind(key) + scoreFor.list(column), 
     // Uses column index property to get a score.
     column.index + scoreFor.index(column), 
     // Uses column position defined in TypeScript to 
@@ -121,7 +119,7 @@ const weight = weights.length ? weights[0] : -1;
 
 Approximately, the code above means that the most left position will get the column `already being added` to the column list, then the column with `the lowest index` but more then zero, the column that has the lowest position in the `TypeScript code` and finally the column with the lowest position in the `HTML template`.
 
-## Control column visibility through the structural directives
+## Column visibility & structural directives
 
 The q-grid allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
 
@@ -242,7 +240,7 @@ Indicates the column size which can be setup in `pixels` or `percents`.
 
 ## Column WidthMode
 
-Sets percentage calculation algorithm. 
+Controls the algorithm to materialize percents to pixels. 
 
 * `relative` mode means to get whole q-grid width minus static widths columns than apply percents.
 * `absolute` mode means to get whole q-grid width and apply percents.
@@ -274,7 +272,7 @@ Setup this function to change order method that is used by `column sort pipe` to
 
 ## Column Children
 
-The q-grid header can utilize column hierarchy by using nested components or children property.
+The q-grid header can utilize column hierarchy by using nested components or children property. Template below fills in the q-grid `columnList.index` property containing a node that represents header layout.
 
 ```html
 <q-grid-columns>
@@ -284,9 +282,3 @@ The q-grid header can utilize column hierarchy by using nested components or chi
    </q-grid-column>
 </q-grid-columns>
 ```
-
-## Coming soon
-
-* Cohort column improvements: drag & drag, sorting, filtering, resizing fixes & column chooser support.
-* Column group template manipulation.
-* Column order user strategies.

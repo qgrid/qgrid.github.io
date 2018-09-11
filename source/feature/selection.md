@@ -24,7 +24,7 @@ gridModel.selection({
 });
 ```
 
-## Selection modes
+## Selection Modes
 
 Use this option to control selection behavior.
 
@@ -34,7 +34,7 @@ Use this option to control selection behavior.
 
 {% docEditor "github/qgrid/ng2-example/tree/select-cell-basic/latest" %}
 
-## Selection units
+## Selection Units
 
 Use this option to control selection primitive.
 	
@@ -43,7 +43,7 @@ Use this option to control selection primitive.
 * `column` unit when column can be selected by clicking on it.
 * `mix` unit when need to select both rows and cells, rows can be selected by clicking on the row-indicator column.
 
-## Selection area
+## Selection Area
 
 Use this option to control if q-grid body clicks lead to row selection.
 
@@ -52,7 +52,7 @@ Use this option to control if q-grid body clicks lead to row selection.
 
 {% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-## Selection event
+## Selection Event
 
 Use q-grid model to get list of selected items. Note that to configure format of the selected items, selection key could be used.
 
@@ -72,7 +72,7 @@ gridModel.selectionChanged.on(e => {
 });
 ```
 
-## Coming soon
+## Coming Soon
 
 * Component selection change event.
 

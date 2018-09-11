@@ -56,7 +56,6 @@ Use this service to take control over any possible actions in the q-grid scope. 
 * layout
 * nav
 * pagination
-* pivot
 * row
 * rowDetails
 * scroll

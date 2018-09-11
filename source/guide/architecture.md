@@ -22,13 +22,13 @@ The q-grid introduces work item called `model`. In development terms the q-grid 
 
 ```javascript
 // Works
-myModel.dataChanged.on(e => alert('It works!'));
-myModel.data({ rows: rows.concat(newRow) }); 
+gridModel.dataChanged.on(e => alert('It works!'));
+gridModel.data({ rows: rows.concat(newRow) }); 
 
 // Doesn't work
-myModel.dataChanged.on(e => alert('Never happens'));
+gridModel.dataChanged.on(e => alert('Never happens'));
 
-const { rows } = myModel.data();
+const { rows } = gridModel.data();
 rows.push(newRow);
 ```
 
@@ -39,21 +39,21 @@ import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid [model]="myModel"></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent {
-   myModel: GridModel;
+   gridModel: GridModel;
 
    constructor(qgrid: Grid, dataService: MyDataService) {
-      this.myModel = qgrid.model();
+      this.gridModel = qgrid.model();
       dataService
             .getRows()
-            .subscribe(rows => this.myModel.data({ rows }));
+            .subscribe(rows => this.gridModel.data({ rows }));
    }
 }
 ```
 
-## The reactive idea
+## Reactive Idea
 
 Any registered entity in the model gets own `Changed` event hook, which can be used to handle model modifications. There are 2 ways to work with event handlers.
 
@@ -126,6 +126,6 @@ The q-grid pipe is a series of methods that grid invokes asynchronously anytime 
 
 A class that contains the q-grid pipe results, actually `qgrid.pipe.view` pipe fills the scene, further the q-grid renderer outputs rows and columns using the scene model. Another attribute of the scene is `status`, it's used by internal routines to manage the q-grid readiness.
 
-## Suggested Links
+## Suggested links
 * [How to build a plugin](plugin.html)
 * [How to make a custom theme](theme.html)

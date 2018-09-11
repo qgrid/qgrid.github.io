@@ -10,7 +10,7 @@ order: 2
 npm install ng2-qgrid
 ```
 
-## Add q-grid and theme modules to the application root
+## Add q-grid & theme modules to the application root
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -70,7 +70,7 @@ npm install
 npm run start
 ```
 
-## Browser support
+## Browser Support
 
 * `Chrome` is supported.
 * `Safari` is in progress.

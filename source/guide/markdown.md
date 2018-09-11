@@ -41,7 +41,7 @@ Markdown | Less | Pretty
 *Still* | [`renders`](https://www.google.com "Google's Homepage") | **nicely**
 1 | 2 | 3
 
-#### And lists
+#### And Lists
 
 * One
   * oneone

@@ -119,7 +119,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}
 
-## Row indicator
+## Row Indicator
 
 Row indicator belongs to the `control class` columns.
 
@@ -129,13 +129,13 @@ Row indicator belongs to the `control class` columns.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-indicator-basic/latest" %}
 
-## Row number
+## Row Number
 
 Use `row number` type to add left pinned column that displays row indices.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-number-basic/latest" %}
 
-## Row options
+## Row Options
 
 Setup `editorOptions` property of the `row-indicator` column type to show list of the available actions for the appropriate row.
 
@@ -189,7 +189,7 @@ To show url links with appropriate editors this column type could be used. Note 
 {% docEditor "github/qgrid/ng2-example/tree/column-url-basic/latest" %}
 
 
-## Suggested links
+## Suggested Links
 
 * [Angular currency pipe](https://angular.io/api/common/CurrencyPipe)
 * [Angular decimal pipe](https://angular.io/api/common/DecimalPipe)

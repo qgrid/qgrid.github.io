@@ -6,13 +6,34 @@ order: 7
 
 ## [Unreleased]
 * Auto-complete cell editor.
-* Row edit form.
-* Infinite scrolling.
-* Validation framework.
+* Batch edit improvements.
+* Vscroll improvements.
 * Copy/paste selection to excel.
 * Live data plugin.
 * Float Row Navigation.
+* Group keyboard navigation improvements.
 
+## [6.2.1] - 2018-06-28
+### Added
+- Edit form support.
+- Travis CI.
+- Cucumber specs infrastructure.
+- Edit cell validation support.
+
+### Fixed
+- Blanks position in the column filter.
+
+## [6.2.0] - 2018-06-28
+### Fixed
+- Column filter `blanks` is removed when reset clicked.
+
+### Added
+- Column hierarchy and dnd support in the column chooser.
+- Cohort column dnd support.
+
+### BREAKING
+- `model.columnList().index` now contains tree of columns, not a column key list.
+  
 ## [6.1.5] - 2018-07-03
 ### Fixed
 - Row highlight in details modes.
@@ -198,8 +219,8 @@ order: 7
 
 ## [5.1.2] - 2018-01-03
 ### Added
-* Possibility to change row size `<q-grid-row canResize="true"`.
-* Possibility to drag and drop rows `<q-grid-row canMove="true"`.
+* Possibility to change row size `<q-grid-row [canResize]="true"`.
+* Possibility to drag and drop rows `<q-grid-row [canMove]="true"`.
 * Style queue to the style Api, accessible through style model cells/rows props.
 * Rows property to the layout property.
 
@@ -299,7 +320,9 @@ order: 7
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v6.1.5...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v6.2.1...HEAD
+[6.2.1]: https://github.com/qgrid/ng2/compare/v6.2.1...v6.2.0
+[6.2.0]: https://github.com/qgrid/ng2/compare/v6.2.0...v6.1.5
 [6.1.5]: https://github.com/qgrid/ng2/compare/v6.1.5...v6.1.4
 [6.1.4]: https://github.com/qgrid/ng2/compare/v6.1.4...v6.1.3
 [6.1.3]: https://github.com/qgrid/ng2/compare/v6.1.3...v6.1.1
@@ -325,4 +348,4 @@ order: 7
 [1.0.5]: https://github.com/qgrid/ng2/compare/v1.0.5...v1.0.4
 [1.0.4]: https://github.com/qgrid/ng2/compare/v1.0.4...v1.0.3
 [1.0.3]: https://github.com/qgrid/ng2/compare/v1.0.3...v1.0.2
-[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1
+[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1 
