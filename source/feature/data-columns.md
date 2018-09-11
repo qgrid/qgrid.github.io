@@ -34,7 +34,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
-## HTML components
+## HTML Components
 
 Use `q-grid-column` components to declare a list of columns to show in the q-grid. Note that preferred way to define cell templates is to use `ng-template` inside the `q-grid-column` component. 
 	 
@@ -240,7 +240,7 @@ Indicates the column size which can be setup in `pixels` or `percents`.
 
 ## Column WidthMode
 
-Sets percentage calculation algorithm. 
+Controls the algorithm to materialize percents to pixels. 
 
 * `relative` mode means to get whole q-grid width minus static widths columns than apply percents.
 * `absolute` mode means to get whole q-grid width and apply percents.

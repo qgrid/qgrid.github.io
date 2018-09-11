@@ -11,7 +11,7 @@ Use q-grid grouping model to group rows by particular columns or use own impleme
 Use `groupBy` attribute to setup grouping columns and `groupMode` to change group representation. Mode equals to `nest`(by default) means that all hierarchy levels should be inside one group type column.
 
 ```html
-<q-grid [groupBy]="['bondingType', 'groupBlock']" groupMode="subhead"></q-grid>
+<q-grid [groupBy]="['bondingType', 'groupBlock']"></q-grid>
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-/latest" %}
@@ -126,7 +126,3 @@ Use `pivotBy` attribute and aggregates to setup pivoting columns. Also it's supp
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/pivot-column-template/latest" %}
-
-## Pivot Model
-
-

@@ -53,7 +53,7 @@ export class MyComponent {
 }
 ```
 
-## The reactive idea
+## Reactive Idea
 
 Any registered entity in the model gets own `Changed` event hook, which can be used to handle model modifications. There are 2 ways to work with event handlers.
 

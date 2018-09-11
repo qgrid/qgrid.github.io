@@ -62,7 +62,7 @@ Use `editMethod` property to activate batch editing, this method activates cell 
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
 
-## Dropdown & autocomplete
+## Dropdown & Autocomplete
 
 To populate list of items in dropdown/autocomplete columns use `fetch` editor property. Fetch option supports next data types.
 

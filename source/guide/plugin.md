@@ -25,7 +25,7 @@ const { shortcut, manager } = this.plugin.model.action();
 shortcut.register(manager, [this.gotoNext, this.gotoPrev]);
 ```
 
-## Pager template
+## Pager Template
 
 To show list of available pages we iterate through the component pages property and disable current page button. 
 
@@ -41,7 +41,7 @@ To show list of available pages we iterate through the component pages property 
 
 ```
 
-## The Plugin service
+## Plugin Service
 
 * `GridPlugin` service is used to access q-grid model. Note that in 99% `GridPlugin` should be added to the component `providers`. This ensures that all model resources, like event handlers, will be disposed automatically when the component is destroyed. 
 
