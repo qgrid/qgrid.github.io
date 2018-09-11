@@ -74,8 +74,8 @@ theme: qgrid
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/qgrid/doc
-  branch: gh-pages
+  repo: https://github.com/qgrid/qgrid.github.io
+  branch: master
   message: deploy
 
 node_sass:
