@@ -4,6 +4,8 @@
 
 ## Developing
 
+Use `dev` branch for documentation development.
+
 ``` bash
 $ npm install
 $ npm install hexo-cli -g
