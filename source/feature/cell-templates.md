@@ -4,7 +4,11 @@ group: Features
 order: 3
 ---
 
-The preferred way to define cell templates is to you `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` triggers to fill in the appropriate cell containers.
+There are situations when the end user need to apply custom templates to the column cells in the q-grid. The q-grid provides clean and intuitive solution for this case. 
+
+## ng-template
+
+The preferred way to define a cell template is to you `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` triggers to fill in the appropriate cell containers.
 
 ```html
 <q-grid>
@@ -40,7 +44,7 @@ Use this implicitly injected service to retrieve data cell information. Here are
 
 ## $view service
 
-Use this to take control over necessary actions. `$view` service is a facade for several micro utilities that are responsible for the q-grid rendering and interaction model.  Here are the list of available utilities:
+Use this service to take control over any possible actions in the q-grid scope. `$view` service is a facade for several micro utilities that are responsible for the q-grid rendering and interaction models. Here are the list of available routines:
 
 * body
 * edit

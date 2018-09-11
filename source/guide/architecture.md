@@ -6,13 +6,13 @@ order: 3
 
 ## DOM
 
-The q-grid internally uses basic DOM table elements, but there is no any component or service which works with core DOM directly. The q-grid populates an abstraction called `DOM Table` which encapsulates any low-level work with core DOM. This abstraction benefits:
+The q-grid internally uses basic DOM table elements, but there is no any component or service which works with core DOM directly. The q-grid populates an abstraction called `DOM Table` which encapsulates any low-level work with core DOM. The benefits:
 
-* Simple access to the columns, rows and cells. Work with `DOM Table` is alike to use 2d array instead of boilerplate selectors.
+* Simple access to the columns, rows and cells. Work with `DOM Table` just like using 2d array instead of complex selectors.
 * Development transparency of the fixed header, footer, rows and columns.
-* No worries about how to handle row and column spans.
-* Style API maintenance becomes easy, smooth and fast.
-* Everything can be virtualized without writing much of special code.
+* Much easier to handle row and column spans.
+* Style API maintenance becomes easy and fast.
+* Virtualization can be engaged without special code writing.
 
 ## The Grid Model
 
@@ -32,7 +32,7 @@ const { rows } = myModel.data();
 rows.push(newRow);
 ```
 
-There are two 2 to obtain access to the q-grid model. One of them is to use `ViewChild` selector and retrieve model from the `GridComponent`, another to add `Grid` service to the q-grid host component and create a new model.
+There are 2 ways to obtain access to the q-grid model. One of them is to use `ViewChild` selector and retrieve model from the `GridComponent` in ngAfterViewInit hook, another, to add `Grid` service to the host component and create a new q-grid model.
 
 ```typescript
 import { Grid, GridModel } from 'ng2-qgrid';
@@ -55,7 +55,7 @@ export class MyComponent {
 
 ## The reactive idea
 
-Any registered entity in the model gets own `Changed` event hook, which can be used to handle model modifications. There are 2 ways to add event handlers in the q-grid.
+Any registered entity in the model gets own `Changed` event hook, which can be used to handle model modifications. There are 2 ways to work with event handlers.
 
 * By using `on` method, if the event fired before subscription, it will be lost for the new handler.
 
@@ -64,7 +64,7 @@ gridModel.data({ rows: myRows });
 gridModel.dataChanged.on(e => /* :-( */));
 ```
 
-* By using `watch` method, if the event fired before subscription, the q-grid will artificially emit the latest event argument to the added handler.
+* By using `watch` method, if the event fired before subscription, the q-grid will artificially emit the latest event argument to a new handler.
 
 ```javascript
 gridModel.data({ rows: myRows });
@@ -73,13 +73,13 @@ gridModel.dataChanged.watch(e => /* :-) */);
 
 ## Plugins
 
-The main benefit of the q-grid model concept is a tight control over the q-grid state. Model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note that all components except table core units are plugins.
+The main benefit of the q-grid model concept is a tight control over the q-grid state. The model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note that all components except table core units are plugins.
 
 ## Template System
 
-All plugins including cell renderers are using q-grid template system. The basic concept is to utilize pair of `ng-container` and `ng-template` primitives by using unique identifiers.
+All plugins and cell renderers use q-grid template primitives. The basic concept is to utilize pair of `ng-container` and `ng-template` instances by using unique identifiers.
 
-* `ng-template[key]` q-grid adds the ng-template content to the internal template store under the `"key"` id.
+* Use `ng-template[key]` to add ng-template content to the internal template store under the `"key"` id.
 
 ```html
 <ng-template key="toolbar-top.tpl.html">
@@ -87,7 +87,7 @@ All plugins including cell renderers are using q-grid template system. The basic
 </ng-template>
 ```
 
-* `ng-template[for]` acts the same as `ng-template[key]`, but `"for"` id has a lower priority and wont rewrite `"key"` id in the template store. q-grid client code is required to use it for the basic templates safety.
+* `ng-template[for]` acts the same as `ng-template[key]`, but has a lower priority and wont rewrite `"key"` templates in the store. Client code need to use it for templates safety.
 
 ```html
 <q-grid-column type="text">
@@ -97,7 +97,7 @@ All plugins including cell renderers are using q-grid template system. The basic
 </q-grid-column>
 ```
 
-* `ng-container[key]` q-grid replaces the ng-container and its content with a `ng-template[key|for]` keeping.
+* Use `ng-container[key]` to replace ng-container content with a `ng-template[key|for]` keeping.
 
 ```html
 <ng-container key="toolbar-top.tpl.html">
@@ -121,3 +121,11 @@ The q-grid pipe is a series of methods that grid invokes asynchronously anytime 
    qgrid.pipe.view
 ];
 ```
+
+## The Scene
+
+A class that contains the q-grid pipe results, actually `qgrid.pipe.view` pipe fills the scene, further the q-grid renderer outputs rows and columns using the scene model. Another attribute of the scene is `status`, it's used by internal routines to manage the q-grid readiness.
+
+## Suggested Links
+* [How to build a plugin](plugin.html)
+* [How to make a custom theme](theme.html)

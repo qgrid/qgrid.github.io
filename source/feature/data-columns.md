@@ -245,7 +245,7 @@ Indicates the column size which can be setup in `pixels` or `percents`.
 Sets percentage calculation algorithm. 
 
 * `relative` mode means to get whole q-grid width minus static widths columns than apply percents.
-*  `absolute` mode means to get whole q-grid width and apply percents.
+* `absolute` mode means to get whole q-grid width and apply percents.
 
 ## Column ViewWidth
 

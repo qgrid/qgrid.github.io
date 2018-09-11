@@ -4,6 +4,8 @@ group: Features
 order: 5
 ---
 
+The q-grid provides various column types to handle all possible data type values inside the columns.
+
 ## Array
 
 Array type is utilized by the q-grid to visualize primitive type collections. Here are some specific properties:
@@ -24,6 +26,12 @@ Three state booleans are supported by the q-grid. Here are some specific propert
 * Use `falseValue` property to override the negative meaning.
 * Use `isIndeterminate` function to setup the undefined meaning.
 * Use `isChecked`  function to setup boolean comparison.
+
+Use editor options to disable value change on the boolean type cell click.
+
+```html
+<q-grid-column type="bool" [editorOptions]="{trigger: 'focus'}"></q-grid-column>
+```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-bool-basic/latest" %}
 

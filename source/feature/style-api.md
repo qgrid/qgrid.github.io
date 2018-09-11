@@ -4,7 +4,7 @@ group: Features
 order: 6
 ---
 
-Use q-grid rich css class naming system to apply specific styles. If more dynamic way is required style model can be used.
+Use q-grid rich css class naming system to apply specific styles. If more dynamic is required style model can be used.
 
 ## CSS
 
@@ -15,7 +15,10 @@ Each cell, no mater if it is located in header, body or footer, has specific set
 
 ## Style Model
 
-Use style callbacks for dynamic class assignments. For the cell style it is possible to pass an object instead of callback. In this case, object keys will play the role of column key filters.
+Use style callbacks for dynamic class assignments. For the cell style it is possible to pass an object instead of callback. In this case, object keys will play the role of column key filters. Besides the data rows style callbacks can accept `RowDetails` and `Node` classes depending on the q-grid settings. Be careful when use style API in a complicated cases. 
+
+
+> Note that first argument of `context.class` method requires to be an unique identifier for the appropriate style group.
 
 ```typescript
 @Component({
@@ -48,7 +51,7 @@ export class MyComponent {
 
 ## Grid Component style callbacks
 
-Another way to utilizef style callbacks is appropriate attribute bindings.
+Another way to utilize style callbacks is to use attribute bindings.
 
 ```typescript
 
@@ -80,8 +83,23 @@ export class MyComponent {
 
 ## How style model works
 
-Every change detection cycle the q-grid traverses through all visible rows and cells to invoke user defined style callbacks. Note that `context.class` method first argument requires to be an unique identifier. Later when callback series is finished style API will produce dynamic stylesheet using pair of context identifier and column key as a css class name. This technique avoids to use inline styles and makes style management easier. Resizing of rows or columns behaves the same way.
+Every change detection cycle the q-grid traverses through all visible rows and cells to invoke user defined style callbacks. Later when callback series is finished style API will produce dynamic stylesheet using pair of context identifier and column key as a css class name. This technique avoids to use inline styles and makes style management easier. Resizing of rows and columns behaves the same way. 
+
+## The Picture
 
 Next picture can be found if open element inspector and follow the style section.
 
 <img src="assets/style-api-html.png" type="image/png" />
+
+## Column width
+
+Use column width attribute to setup desired column size using pixels or percentages.
+
+{% docEditor "github/qgrid/ng2-example/tree/size-column-basic/latest" %}
+
+> Right now percents are materialized only once on view init, depending on the origin q-grid width.
+
+## Coming soon
+
+* Column auto width regarding to cell content.
+* Constant column percents.
