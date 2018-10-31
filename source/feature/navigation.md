@@ -38,8 +38,11 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
 * `Ctrl+W`
 This key combinations shouldn't be overriden. Browsers dissalow overriding this keycode combinations, linked bugs are closed with status `RESOLVED WONTFIX`
 
+If you use qgrid in your electron application - these shortcuts could be overwritten.
+
+
+## Suggested Links
+
 * [Chromium issues](https://bugs.chromium.org/p/chromium/issues/detail?id=33056) 
 * [Google code discussion](https://groups.google.com/a/chromium.org/forum/?fromgroups=#!topic/chromium-bugs/Ntc1byZXHfU)
 * [Bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1291706)
-
-If you use qgrid in your electron application - these shortcuts could be overwritten.
