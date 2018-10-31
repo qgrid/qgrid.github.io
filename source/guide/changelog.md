@@ -13,7 +13,7 @@ order: 7
 * Float Row Navigation.
 * Group keyboard navigation improvements.
 
-## [6.2.1] - 2018-06-28
+## [6.2.1] - 2018-07-28
 ### Added
 - Edit form support.
 - Travis CI.
@@ -23,7 +23,7 @@ order: 7
 ### Fixed
 - Blanks position in the column filter.
 
-## [6.2.0] - 2018-06-28
+## [6.2.0] - 2018-07-28
 ### Fixed
 - Column filter `blanks` is removed when reset clicked.
 
