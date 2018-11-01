@@ -36,7 +36,7 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
 * `Ctrl+T`
 * `Ctrl+Shift+T`
 * `Ctrl+W`
-This key combinations shouldn't be overriden. Browsers dissalow overriding this keycode combinations, linked bugs are closed with status `RESOLVED WONTFIX`
+This key combinations shouldn't be overriden. Browsers disallow overriding this keycode combinations, linked bugs are closed with status `RESOLVED WONTFIX`
 
 If you use qgrid in your electron application - these shortcuts could be overwritten.
 
