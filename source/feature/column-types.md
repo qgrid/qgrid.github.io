@@ -143,26 +143,24 @@ Setup `editorOptions` property of the `row-indicator` column type to show list o
 @Component({
     template: `
        <q-grid [rows]="rows">
-          <q-grid-columns>
-             <q-grid-column key="rowIndicator"
-                            type="row-indicator"                            
-                            [editorOptions]="rowOptions">
-          </q-grid-columns>
+         <q-grid-column key="rowOptions"
+		                  type="row-options"
+		                  [editorOptions]="{actions: rowActions}">
+		   </q-grid-column>
        </q-grid>
     `
 })
 export class MyComponent {
-   rowOptions = {
-	   actions: [
-		   new Action(
-			   new Command<{ row: Atom }>({
-				   execute: cell => window.open(cell.row.wiki, '_blank')
-			   }),
-			   'Goto Wiki',
-			   'link-icon'
-		   )
-	   ];
-   };
+	rowActions = [
+		new Action(
+			new Command<{ row: Atom }>({
+				execute: cell => window.open(cell.row.source, '_blank'),
+				shortcut: 'alt+g'
+			}),
+			'Goto Wiki',
+			'link'
+		)
+	];
 }
 ```
 
