@@ -83,9 +83,9 @@ There are four toolbars surrounding the q-grid: `top`, `right`, `bottom` and `le
 ```html
 <q-grid>
    <q-grid-toolbar>
-      <q-grid-toolbar for="bottom">
+      <ng-template for="bottom">
          <my-pager></my-pager> 
-      </q-grid-toolbar>
+      </ng-template>
    </q-grid-toolbar>
 </q-grid>
 ```
