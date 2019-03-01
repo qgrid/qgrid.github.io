@@ -21,14 +21,42 @@ function filter(e) {
 	const filter = input.value.toLowerCase();
 	const nav = document.getElementById('nav');
 	const li = nav.getElementsByTagName('li');
-
+	const h2 = document.getElementsByTagName('h2');
+	if (filter) location.hash = 'search=' + filter;
+	else location.hash = '';
 	for (let i = 0; i < li.length; i++) {
 		const a = li[i].getElementsByTagName('a')[0];
 		if (a) {
-			if (a.text.toLowerCase().indexOf(filter) > -1) {
+			const entr = a.text.toLowerCase().indexOf(filter);
+			if (entr > -1) {
+				const word = a.text.split('');
 				li[i].style.display = '';
+				for (let i = 0; i < filter.length; i++) {
+					word[entr + i] = '<font style=background-color:#efdf00>' + word[entr + i] + '</font>';
+				}
+				a.innerHTML = word.join('');
 			} else {
 				li[i].style.display = 'none';
+			}
+		}
+	}
+	for (let i = h2.length - 1; i >= 0; i--) {
+		const title = h2[i].textContent;
+		const words = title.split('');
+		const entry = title.toLowerCase().indexOf(filter);
+		if (entry > -1 && filter != '') {
+			const low = parseInt(h2[i].getBoundingClientRect().top);
+			document.body.scrollTop += low;
+			document.documentElement.scrollTop += low;
+			for (let i = 0; i < filter.length; i++) {
+				words[entry + i] = '<font style=background-color:#ffee00>' + words[entry + i] + '</font>';
+			}
+			h2[i].innerHTML = words.join('');
+		}
+		else {
+			let font = h2[i].getElementsByTagName('font');
+			for (let i = 0; i < font.length; i++) {
+				font[i].setAttribute('style', 'background-color:#ffffff');
 			}
 		}
 	}
