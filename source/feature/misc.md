@@ -1,19 +1,8 @@
 ---
 title: Miscellaneous
 group: Features
-order: 15
+order: 16
 ---
-
-## REST
-
-Use REST plugin to connect q-grid with backend. For sure backend service should support query string that q-grid produces but again it's possible to change the output format by overriding `serialize` method in the q-grid model. 
-
-```html
-<q-grid>
-   <q-grid-rest [url]="myServiceUrl" method="GET"></q-grid-rest>
-   <!-- Produces: filter=lastName=in:Doe,Jones;firstName=in:John,Harry&order=+firstName,-lastName&skip=100&take=50 -->
-</q-grid>
-```
 
 ## Action Bar
 
