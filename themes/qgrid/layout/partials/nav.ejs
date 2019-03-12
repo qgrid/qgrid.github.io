@@ -24,17 +24,10 @@
                     pages.sort(function (a, b) {
                         return a.order - b.order;
                     });
-                    var stringOftags = [];
-
                     for (var j = 0; j < pages.length; j++) {
                         var p = pages[j];
-                        if (p.tags){
-                            for (var index = 0; index < p.tags.length; index++){
-                                if (index==0){ stringOftags[j]=''};
-                                stringOftags[j] +=p.tags[index]+',';
-                            }}
         %>
-                        <li data-tag="<%- stringOftags[j]%>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
+                        <li  data-tag="<%- p.tags ? p.tags.join(','):' '%>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
         <%
                         
                             if (page.title === p.title) {
