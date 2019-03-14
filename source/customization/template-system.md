@@ -4,29 +4,37 @@ group: Customization
 order: 0
 ---
 
-All plugins and cell renderers use q-grid template primitives. The basic concept is to utilize pair of `ng-container` and `ng-template` instances by using unique identifiers.
+To support custom cell renderers and different ui frameworks q-grid introduces entry points to control look and feel.
 
-* Use `ng-template[key]` to add ng-template content to the internal template store under the `"key"` id.
+## ng-template[for]
 
-```html
-<ng-template key="toolbar-top.tpl.html">
-	<q-grid-caption></q-grid-caption>
-</ng-template>
-```
-
-* `ng-template[for]` acts the same as `ng-template[key]`, but has a lower priority and wont rewrite `"key"` templates in the store. Client code need to use it for templates safety.
+The receiving element is `ng-template` that allows to define content under some key by assign it to `for` attribute.
 
 ```html
-<q-grid-column type="text">
-      <ng-template for="body" let-$cell>
-	      {{$cell.value}}
-	</ng-template>
-</q-grid-column>
+<q-grid>
+    <q-grid-toolbar>
+	    <ng-template for="top">
+		    <q-grid-caption></q-grid-caption>
+		</ng-template>
+	</q-grid-toolbar>
+</q-grid>
 ```
 
-* Use `ng-container[key]` to replace ng-container content with a `ng-template[key|for]` keeping.
+## ng-container[key]
 
-```html
-<ng-container key="toolbar-top.tpl.html">
-</ng-container>
+Internally q-grid utilizes template definitions to build a final markup. Usually q-grid users do not worry about this till they start to work on q-grid contribution.
+
+```typescript
+@Component({
+	selector: 'q-grid-core-toolbar',
+	template: '<ng-container key="toolbar-{{position}}.tpl.html"></ng-container>'
+})
+export class ToolbarCoreComponent {
+	@Input() position: 'top' | 'right' | 'bottom' | 'left';;
+}
 ```
+
+## Suggested Links
+
+* [List of available material theme templates](https://github.com/qgrid/ng2/tree/master/src/theme/material/templates)
+* [List of available basic theme templates](https://github.com/qgrid/ng2/tree/master/src/theme/basic/templates)
