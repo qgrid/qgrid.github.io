@@ -4,8 +4,6 @@ group: Getting started
 order: 1
 ---
 
-## Install the q-grid via npm
-
 ```bash
 npm install ng2-qgrid
 ```
@@ -25,7 +23,7 @@ import { ThemeModule } from 'ng2-qgrid/theme/material';
 export class AppModule {
 }
 ```
-> The q-grid supports 2 themes out of box `@angular/material` and `basic`, the second one doesn't require `@angular/material` to be installed.
+> The q-grid supports 2 themes out of box `material` and `basic`, the first one requires `@angular/material` to be installed.
 
 ## Create an angular component
 
@@ -33,17 +31,17 @@ export class AppModule {
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="myRows | async">
+      <q-grid [rows]="rows$ | async">
             <q-grid-columns generation="deep">
             </q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent {
-   myRows: Observable<[]>;
+   rows$: Observable<[]>;
 
    constructor(dataService: MyDataService) {
-         this.myRows = dataService.getRows();
+         this.rows$ = dataService.getRows();
    }
 }
 ```
