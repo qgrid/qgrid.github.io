@@ -1,7 +1,7 @@
 ---
-title: My Theme
-group: Getting started
-order: 5
+title: Custom themes
+group: Customization
+order: 2
 ---
 
 ## What we are going to build

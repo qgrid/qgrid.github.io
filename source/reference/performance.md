@@ -1,11 +1,9 @@
 ---
 title: Performance Tips
 type: guide
-group: Getting started
-order: 6
+group: Reference
+order: 5
 ---
-
-## Interaction Mode
 
 The q-grid introduces 3 modes that allows to change performance strategy. 
 

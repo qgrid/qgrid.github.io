@@ -1,8 +1,10 @@
 ---
-title: My Plugin
-group: Getting started
-order: 4
+title: How to write a plugin
+group: Customization
+order: 1
 ---
+
+The main benefit of the q-grid model concept is a tight control over the q-grid state. The model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note that all components except table core units are plugins.
 
 ## What we are going to build
 

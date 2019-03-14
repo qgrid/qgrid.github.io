@@ -1,7 +1,7 @@
 ---
 title: How to install
 group: Getting started
-order: 2
+order: 1
 ---
 
 ## Install the q-grid via npm
