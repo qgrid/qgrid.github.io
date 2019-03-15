@@ -91,6 +91,9 @@ function tagSearch(search) {
 					menuItem.style.font = 'italic normal 10pt arial'
 					menuItem.style.paddingLeft = '8.8%';
 					menuItem.style.color = "grey";
+					if (menuItem.innerHTML.indexOf("/ ") == -1) {
+						menuItem.prepend("/ ");
+					}
 					displayTag(li[i], tag[j], indexTag, search);
 					break next;
 				}
@@ -133,20 +136,13 @@ function menuItemsSearch(search) {
 }
 function displayTag(line, tag, indexTag, search) {
 	const foundTag = tag.split(' ');
-	const menuItem = line.getElementsByClassName('title')[0];
 	for (let k = 0; k < foundTag.length; k++) {
 		const index = foundTag[k].toLowerCase().indexOf(search);
 		if (index > -1) {
 			if (line.getElementsByTagName('data-found').length === 0) {
-				menuItem.prepend("/ ");
 				let select = document.createElement('data-found');
 				select.appendChild(document.createElement('a'));
 				line.insertBefore(select, line.children[0]);
-			}
-			else {
-				if (menuItem.innerHTML.indexOf("/ ") == -1) {
-					menuItem.prepend("/ ");
-				}
 			}
 			let dataFound = line.getElementsByTagName('data-found')[0];
 			const a = dataFound.getElementsByTagName('a')[0];
@@ -160,7 +156,7 @@ function displayTag(line, tag, indexTag, search) {
 				a.innerHTML = tag;
 			}
 			dataFound.style.display = 'inline';
-			a.setAttribute('href', menuItem.getAttribute('href'));
+			a.setAttribute('href', line.getElementsByClassName('title')[0].getAttribute('href'));
 			a.style.display = 'inline';
 		}
 		else {
