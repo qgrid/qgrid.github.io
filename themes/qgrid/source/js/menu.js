@@ -83,33 +83,35 @@ function tagSearch(search) {
 			next: for (let j = 0; j < tag.length; j++) {
 				const indexTag = tag[j].toLowerCase().indexOf(search);
 				const menuItem = li[i].getElementsByClassName('title')[0];
-				if (indexTag > -1 && li[i] != active && search != '' && search != ' ') {
-					li[i].style.display = '';
-					menuItem.style.width = '50%';
-					menuItem.style.display = 'inline';
-					menuItem.style.font = 'italic normal 10pt arial'
-					menuItem.style.paddingLeft = '8.8%';
-					menuItem.style.color = "grey";
-					if (menuItem.innerHTML[0] != '/') {
-						menuItem.prepend("/ ");
+				if (menuItem) {
+					if (indexTag > -1 && li[i] != active && search != '' && search != ' ') {
+						li[i].style.display = '';
+						menuItem.style.width = '50%';
+						menuItem.style.display = 'inline';
+						menuItem.style.font = 'italic normal 10pt arial'
+						menuItem.style.paddingLeft = '8.8%';
+						menuItem.style.color = "grey";
+						if (menuItem.innerHTML[0] != '/') {
+							menuItem.prepend("/ ");
+						}
+						displayTag(li[i], tag[j], indexTag, search);
+						break next;
 					}
-					displayTag(li[i], tag[j], indexTag, search);
-					break next;
-				}
-				else {
-					let dataFound = li[i].getElementsByTagName('data-found')[0];
-					if (dataFound) {
-						dataFound.style.display = 'none';
-					}
-					menuItem.style.font = '';
-					menuItem.style.paddingLeft = '';
-					menuItem.style.color = '';
-					if (search == ' ' || search == '') {
-						const font = menuItem.getElementsByTagName('font')[0];
-						if (font) {
-							const a = font.parentNode;
-							while (font.firstChild) {
-								a.insertBefore(font.firstChild, font);
+					else {
+						let dataFound = li[i].getElementsByTagName('data-found')[0];
+						if (dataFound) {
+							dataFound.style.display = 'none';
+						}
+						menuItem.style.font = '';
+						menuItem.style.paddingLeft = '';
+						menuItem.style.color = '';
+						if (search == ' ' || search == '') {
+							const font = menuItem.getElementsByTagName('font')[0];
+							if (font) {
+								const a = font.parentNode;
+								while (font.firstChild) {
+									a.insertBefore(font.firstChild, font);
+								}
 							}
 						}
 						menuItem.innerHTML = menuItem.innerHTML.replace("/ ", '');
