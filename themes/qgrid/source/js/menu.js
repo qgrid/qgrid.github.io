@@ -70,7 +70,6 @@ function pageTextSearch(search) {
 			const space = parseInt(elements[i].getBoundingClientRect().top);
 			document.body.scrollTop += space;
 			document.documentElement.scrollTop += space;
-		} else {
 		}
 	}
 }
@@ -197,6 +196,7 @@ function init() {
 	if (navTrigger) {
 		navTrigger.addEventListener('click', toggleVisibility, true);
 	}
+
 	const overlay = document.getElementById('overlay');
 	overlay.addEventListener('click', toggleVisibility, true);
 
