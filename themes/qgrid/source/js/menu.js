@@ -106,17 +106,14 @@ function tagSearch(search) {
 					menuItem.style.color = '';
 					if (search == ' ' || search == '') {
 						const font = menuItem.getElementsByTagName('font')[0];
-						if (font){
+						if (font) {
 							const a = font.parentNode;
-							while(font.firstChild) {
+							while (font.firstChild) {
 								a.insertBefore(font.firstChild, font);
 							}
-						} 
-						menuItem.innerHTML = menuItem.innerHTML.replace("<font>", '');
-						menuItem.innerHTML = menuItem.innerHTML.replace("</font>", '');
+						}
 						menuItem.innerHTML = menuItem.innerHTML.replace("/ ", '');
 					}
-
 				}
 			}
 		}
