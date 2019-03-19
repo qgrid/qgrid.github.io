@@ -1,5 +1,4 @@
-﻿var nav, li;
-function toggleVisibility(e) {
+﻿function toggleVisibility(e) {
 	const target = e.target || e.srcElement;
 	if (target.dataset.hasOwnProperty('stopPropagation')) {
 		e.stopImmediatePropagation();
@@ -15,46 +14,68 @@ function toggleVisibility(e) {
 		overlay.style.display = 'none';
 	}
 }
+
 function searchOnLoad() {
 	const active = document.getElementsByClassName('active-topic')[0];
-	const search = replaceWhiteSpace(location.hash.substr(8)).toLowerCase();
-	nav = document.getElementById('nav');
-	li = nav.getElementsByTagName('li');
+	const search = getSearch();
 	if (active) {
 		if (search) {
 			pageTextSearch(search);
 			tagSearch(search);
 			menuItemsSearch(search);
 		}
-		else {
-			if (localStorage.getItem('input')) {
-				location.hash = 'search=' + localStorage.getItem('input');
-			}
-		}
 	}
-	localStorage.removeItem('input');
 }
+
 window.onhashchange = function () {
-	const search = replaceWhiteSpace(location.hash.substr(8)).toLowerCase();
+	const search = getSearch();
 	if (search) {
 		pageTextSearch(search);
+		tagSearch(search);
+		menuItemsSearch(search);
 	}
 }
+
 function filterMenu(e) {
 	e.stopImmediatePropagation();
 	const input = e.target || e.srcElement;
 	const filter = input.value.toLowerCase();
-	if (filter) { location.hash = 'search=' + filter; }
-	else { location.hash = ''; }
-	const search = replaceWhiteSpace(location.hash.substr(8)).toLowerCase();
+	const nav = document.getElementById('nav');
+	const li = nav.getElementsByTagName('li');
+	if (filter) {
+		location.hash = 'search=' + filter;
+	}
+	else {
+		location.hash = '';
+	}
+	const search = getSearch();
+	let dataFound;
+	for (let i = 0; i < li.length; i++) {
+		const a = li[i].getElementsByClassName('title')[0];
+		const tags = li[i].getElementsByTagName('data-found')[0];
+		if (tags) {
+			dataFound = tags.getElementsByTagName('a')[0];
+		}
+		if (a) {
+			let href = a.getAttribute('href');
+			if (href.indexOf('#search=') > -1) {
+				href = href.substr(0, href.indexOf('#'));
+			}
+			if (dataFound) {
+				dataFound.setAttribute('href', href + location.hash);
+			}
+			a.setAttribute('href', href + location.hash);
+		}
+	}
 	pageTextSearch(search);
 	tagSearch(search);
 	menuItemsSearch(search);
-	localStorage.setItem('input', search);
 }
-function replaceWhiteSpace(text) {
-	return text.replace(/%20/g, ' ');
+
+function getSearch() {
+	return location.hash.substr(8).replace(/%20/g, ' ').toLowerCase();
 }
+
 function pageTextSearch(search) {
 	const h2 = document.getElementsByTagName('h2');
 	const p = document.getElementsByTagName('p');
@@ -65,7 +86,7 @@ function pageTextSearch(search) {
 			elements[i] = a;
 		}
 		const index = elements[i].textContent.toLowerCase().indexOf(search);
-		highlightSymbol(elements[i], search);
+		highlightSymbols(elements[i], search);
 		if (index > -1 && search != '') {
 			const space = parseInt(elements[i].getBoundingClientRect().top);
 			document.body.scrollTop += space;
@@ -73,9 +94,12 @@ function pageTextSearch(search) {
 		}
 	}
 }
+
 function tagSearch(search) {
 	const tags = [];
 	const active = document.getElementsByClassName('active-topic')[0];
+	const nav = document.getElementById('nav');
+	const li = nav.getElementsByTagName('li');
 	for (let i = li.length - 1; i >= 0; i--) {
 		tags[i] = li[i].dataset.tag;
 		if (tags[i]) {
@@ -91,7 +115,7 @@ function tagSearch(search) {
 						menuItem.style.font = 'italic normal 10pt arial'
 						menuItem.style.paddingLeft = '8.8%';
 						menuItem.style.color = "grey";
-						if (menuItem.innerHTML[0] != '/') {
+						if (menuItem.textContent[0] != '/') {
 							menuItem.prepend("/ ");
 						}
 						displayTag(li[i], tag[j], indexTag, search);
@@ -121,15 +145,18 @@ function tagSearch(search) {
 		}
 	}
 }
+
 function menuItemsSearch(search) {
 	let foundTitle = [];
+	const nav = document.getElementById('nav');
+	const li = nav.getElementsByTagName('li');
 	for (let i = 0; i < li.length; i++) {
 		foundTitle[i] = 0;
 		const elements = li[i].getElementsByTagName('a');
 		for (let count = 0; count <= elements.length; count++) {
 			if (elements[count]) {
 				const index = elements[count].textContent.toLowerCase().indexOf(search);
-				highlightSymbol(elements[count], search);
+				highlightSymbols(elements[count], search);
 				if (index > -1 && search != '') {
 					foundTitle[i]++;
 					li[i].style.display = '';
@@ -137,6 +164,7 @@ function menuItemsSearch(search) {
 				else {
 					foundTitle[i]--;
 					if (-foundTitle[i] == li[i].getElementsByTagName('a').length) {
+
 						li[i].style.display = 'none';
 					}
 					if (search == '') {
@@ -147,11 +175,12 @@ function menuItemsSearch(search) {
 		}
 	}
 }
+
 function displayTag(line, tag, indexTag, search) {
 	const foundTag = tag.split(' ');
-	for (let k = 0; k < foundTag.length; k++) {
-		const index = foundTag[k].toLowerCase().indexOf(search);
-		if (index > -1 || search[0] == ' ') {
+	for (let i = 0; i < foundTag.length; i++) {
+		const index = foundTag[i].toLowerCase().indexOf(search);
+		if (index > -1) {
 			if (line.getElementsByTagName('data-found').length === 0) {
 				let select = document.createElement('data-found');
 				select.appendChild(document.createElement('a'));
@@ -159,14 +188,16 @@ function displayTag(line, tag, indexTag, search) {
 			}
 			let dataFound = line.getElementsByTagName('data-found')[0];
 			const a = dataFound.getElementsByTagName('a')[0];
-			if (foundTag.length > 2 && k != foundTag.length - 1 && k != foundTag.length - 2) {
-				a.innerHTML = foundTag[k] + ' ' + foundTag[k + 1] + ' ...';
-			}
-			else if (foundTag.length > 2 && (k == foundTag.length - 1 || k == foundTag.length - 2)) {
-				a.innerHTML = '... ' + foundTag[k - 1] + ' ' + foundTag[k];
+			if (foundTag.length > 2) {
+				if (i < foundTag.length - 2) {
+					a.textContent = foundTag[i] + ' ' + foundTag[i + 1] + ' ...';
+				}
+				else {
+					a.textContent = '... ' + foundTag[i - 1] + ' ' + foundTag[i];
+				}
 			}
 			else {
-				a.innerHTML = tag;
+				a.textContent = tag;
 			}
 			dataFound.style.display = 'inline';
 			a.setAttribute('href', line.getElementsByClassName('title')[0].getAttribute('href'));
@@ -179,7 +210,8 @@ function displayTag(line, tag, indexTag, search) {
 		}
 	}
 }
-function highlightSymbol(element, search) {
+
+function highlightSymbols(element, search) {
 	const text = element.textContent;
 	const index = text.toLowerCase().indexOf(search);
 	if (index > -1 && search != '') {
@@ -200,6 +232,7 @@ function highlightSymbol(element, search) {
 		}
 	}
 }
+
 function init() {
 	addEventListener('load', searchOnLoad, true);
 
@@ -235,4 +268,5 @@ function init() {
 		activeTopic.scrollIntoView();
 	}
 }
+
 document.addEventListener('DOMContentLoaded', init);
