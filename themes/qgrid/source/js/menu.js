@@ -18,58 +18,51 @@
 function searchOnLoad() {
 	const active = document.getElementsByClassName('active-topic')[0];
 	const search = getSearch();
-	if (active) {
-		if (search) {
-			pageTextSearch(search);
-			tagSearch(search);
-			menuItemsSearch(search);
-		}
-	}
-}
-
-window.onhashchange = function () {
-	const search = getSearch();
-	if (search) {
+	if (active && search) {
 		pageTextSearch(search);
 		tagSearch(search);
 		menuItemsSearch(search);
 	}
 }
 
-function filterMenu(e) {
+window.onhashchange = function () {
+	const search = getSearch();
+	pageTextSearch(search);
+	tagSearch(search);
+	menuItemsSearch(search);
+}
+
+function onInputChange(e) {
 	e.stopImmediatePropagation();
 	const input = e.target || e.srcElement;
 	const filter = input.value.toLowerCase();
-	const nav = document.getElementById('nav');
-	const li = nav.getElementsByTagName('li');
 	if (filter) {
 		location.hash = 'search=' + filter;
 	}
 	else {
 		location.hash = '';
 	}
-	const search = getSearch();
-	let dataFound;
+	updateHrefs();
+}
+
+function updateHrefs() {
+	const nav = document.getElementById('nav');
+	const li = nav.getElementsByTagName('li');
 	for (let i = 0; i < li.length; i++) {
 		const a = li[i].getElementsByClassName('title')[0];
-		const tags = li[i].getElementsByTagName('data-found')[0];
-		if (tags) {
-			dataFound = tags.getElementsByTagName('a')[0];
-		}
+		const dataFound = li[i].getElementsByTagName('data-found')[0];
 		if (a) {
 			let href = a.getAttribute('href');
 			if (href.indexOf('#search=') > -1) {
 				href = href.substr(0, href.indexOf('#'));
 			}
 			if (dataFound) {
-				dataFound.setAttribute('href', href + location.hash);
+				const tag = dataFound.getElementsByTagName('a')[0];
+				tag.setAttribute('href', href + location.hash);
 			}
 			a.setAttribute('href', href + location.hash);
 		}
 	}
-	pageTextSearch(search);
-	tagSearch(search);
-	menuItemsSearch(search);
 }
 
 function getSearch() {
@@ -79,18 +72,19 @@ function getSearch() {
 function pageTextSearch(search) {
 	const h2 = document.getElementsByTagName('h2');
 	const p = document.getElementsByTagName('p');
-	const elements = [...h2, ...p];
-	for (let i = elements.length - 1; i >= 0; i--) {
-		const a = elements[i].getElementsByTagName('a')[0];
+	const textOnPage = [...h2, ...p];
+	for (let i = 0; i < textOnPage.length; i++) {
+		const a = textOnPage[i].getElementsByTagName('a')[0];
 		if (a && a.textContent) {
-			elements[i] = a;
+			textOnPage[i] = a;
 		}
-		const index = elements[i].textContent.toLowerCase().indexOf(search);
-		highlightSymbols(elements[i], search);
+		highlightSymbols(textOnPage[i], search);
+	}
+	for (let i = 0; i < textOnPage.length; i++) {
+		const index = textOnPage[i].textContent.toLowerCase().indexOf(search);
 		if (index > -1 && search != '') {
-			const space = parseInt(elements[i].getBoundingClientRect().top);
-			document.body.scrollTop += space;
-			document.documentElement.scrollTop += space;
+			textOnPage[i].scrollIntoView();
+			return;
 		}
 	}
 }
@@ -110,11 +104,7 @@ function tagSearch(search) {
 				if (menuItem) {
 					if (indexTag > -1 && li[i] != active && search != '' && search != ' ') {
 						li[i].style.display = '';
-						menuItem.style.width = '50%';
-						menuItem.style.display = 'inline';
-						menuItem.style.font = 'italic normal 10pt arial'
-						menuItem.style.paddingLeft = '8.8%';
-						menuItem.style.color = "grey";
+						menuItem.classList.add('menuItem');
 						if (menuItem.textContent[0] != '/') {
 							menuItem.prepend("/ ");
 						}
@@ -126,9 +116,7 @@ function tagSearch(search) {
 						if (dataFound) {
 							dataFound.style.display = 'none';
 						}
-						menuItem.style.font = '';
-						menuItem.style.paddingLeft = '';
-						menuItem.style.color = '';
+						menuItem.classList.remove('menuItem');
 						if (search == ' ' || search == '') {
 							const font = menuItem.getElementsByTagName('font')[0];
 							if (font) {
@@ -138,7 +126,7 @@ function tagSearch(search) {
 								}
 							}
 						}
-						menuItem.innerHTML = menuItem.innerHTML.replace("/ ", '');
+						menuItem.innerHTML = menuItem.textContent.replace("/ ", '');
 					}
 				}
 			}
@@ -147,30 +135,27 @@ function tagSearch(search) {
 }
 
 function menuItemsSearch(search) {
-	let foundTitle = [];
 	const nav = document.getElementById('nav');
 	const li = nav.getElementsByTagName('li');
 	for (let i = 0; i < li.length; i++) {
-		foundTitle[i] = 0;
-		const elements = li[i].getElementsByTagName('a');
-		for (let count = 0; count <= elements.length; count++) {
-			if (elements[count]) {
-				const index = elements[count].textContent.toLowerCase().indexOf(search);
-				highlightSymbols(elements[count], search);
-				if (index > -1 && search != '') {
-					foundTitle[i]++;
-					li[i].style.display = '';
-				}
-				else {
-					foundTitle[i]--;
-					if (-foundTitle[i] == li[i].getElementsByTagName('a').length) {
-
-						li[i].style.display = 'none';
-					}
-					if (search == '') {
-						li[i].style.display = '';
-					}
-				}
+		const menuItems = li[i].getElementsByClassName('title')[0];
+		const dataFound = li[i].getElementsByTagName('data-found')[0];
+		if (menuItems || dataFound) {
+			let indexMenu, indexTag;
+			if (menuItems) {
+				indexMenu = menuItems.textContent.toLowerCase().indexOf(search);
+				highlightSymbols(menuItems, search);
+			}
+			if (dataFound) {
+				const tag = dataFound.getElementsByTagName('a')[0];
+				indexTag = tag.textContent.toLowerCase().indexOf(search);
+				highlightSymbols(tag, search);
+			}
+			if (indexMenu > -1 || indexTag > -1) {
+				li[i].style.display = '';
+			}
+			else {
+				li[i].style.display = 'none';
 			}
 		}
 	}
@@ -211,22 +196,22 @@ function displayTag(line, tag, indexTag, search) {
 	}
 }
 
-function highlightSymbols(element, search) {
-	const text = element.textContent;
+function highlightSymbols(foundText, search) {
+	const text = foundText.textContent;
 	const index = text.toLowerCase().indexOf(search);
 	if (index > -1 && search != '') {
 		const highlightedSymbol = text.split('');
 		for (let j = 0; j < search.length; j++) {
 			highlightedSymbol[index + j] = '<font>' + highlightedSymbol[index + j] + '</font>';
 		}
-		element.innerHTML = highlightedSymbol.join('');
-		let font = element.getElementsByTagName('font');
+		foundText.innerHTML = highlightedSymbol.join('');
+		let font = foundText.getElementsByTagName('font');
 		for (let j = 0; j < font.length; j++) {
 			font[j].style.backgroundColor = '#efdf00';
 		}
 	}
 	else {
-		let font = element.getElementsByTagName('font');
+		let font = foundText.getElementsByTagName('font');
 		for (let j = 0; j < font.length; j++) {
 			font[j].style.backgroundColor = '';
 		}
@@ -255,7 +240,7 @@ function init() {
 
 	const search = document.getElementById('search');
 	if (search) {
-		search.addEventListener('keyup', filterMenu, true);
+		search.addEventListener('keyup', onInputChange, true);
 	}
 
 	const searchTrigger = document.getElementById('search-trigger');

@@ -44,6 +44,12 @@
 					margin-left: -20px;
 					padding-left: 40px;
 				}
+				.menuItem{
+					display: inline;
+					font: italic normal 10pt arial;
+					padding-left: 8.8%;
+					color: grey;
+				}
 			}
 			.active-topic {
 				background-color: $accent-color;
