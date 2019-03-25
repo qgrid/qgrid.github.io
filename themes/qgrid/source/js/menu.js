@@ -20,29 +20,29 @@ function searchOnLoad() {
 	const search = getSearch();
 	if (active && search) {
 		pageTextSearch(search);
-		tagSearch(search);
+		tagsSearch(search);
 		menuItemsSearch(search);
 	}
 }
 
 function searchOnHashChange() {
 	const search = getSearch();
+	updateLinksInMenuItems(search);
 	pageTextSearch(search);
-	tagSearch(search);
+	tagsSearch(search);
 	menuItemsSearch(search);
 }
 
 function onSearchChange(e) {
 	e.stopImmediatePropagation();
 	const input = e.target || e.srcElement;
-	const filter = input.value.toLowerCase();
-	setSearch(filter);
-	updateLinksInMenu();
+	const search = input.value.toLowerCase();
+	setSearch(search);
 }
 
-function setSearch(filter) {
-	if (filter) {
-		location.hash = 'search=' + filter;
+function setSearch(search) {
+	if (search) {
+		location.hash = 'search=' + search;
 	}
 	else {
 		location.hash = '';
@@ -57,17 +57,15 @@ function getSearch() {
 	return '';
 }
 
-function updateLinksInMenu() {
+function updateLinksInMenuItems(search) {
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
-	for (let i = 0; i < menuItems.length; i++) {
-		const a = menuItems[i].querySelector('.title');
-		const dataFound = menuItems[i].getElementsByTagName('data-found')[0];
-		if (a) {
-			let href = a.getAttribute('href');
-			const search = getSearch();
+	for (let searchTarget of menuItems) {
+		const title = searchTarget.querySelector('.title');
+		if (title) {
+			let href = title.getAttribute('href');
 			if (href.indexOf('#search=') == -1) {
-				href = href + '#search=';
+				href += '#search=';
 			}
 			else {
 				href = href.substr(0, href.indexOf('=') + 1);
@@ -75,11 +73,7 @@ function updateLinksInMenu() {
 			if (search == '') {
 				href = href.replace(/#search=/, '');
 			}
-			if (dataFound) {
-				const tag = dataFound.getElementsByTagName('a')[0];
-				tag.setAttribute('href', href + search);
-			}
-			a.setAttribute('href', href + search);
+			title.setAttribute('href', href + search);
 		}
 	}
 }
@@ -103,42 +97,33 @@ function pageTextSearch(search) {
 	}
 }
 
-function tagSearch(search) {
+function tagsSearch(search) {
 	const active = document.getElementsByClassName('active-topic')[0];
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
-	for (let i = menuItems.length - 1; i >= 0; i--) {
-		const tags = menuItems[i].dataset.tag;
+	for (let searchMenuItem of menuItems) {
+		const tags = searchMenuItem.dataset.tag;
 		if (tags) {
 			const tag = tags.split(',');
-			next: for (let j = 0; j < tag.length; j++) {
-				const indexTag = tag[j].toLowerCase().indexOf(search);
-				const title = menuItems[i].querySelector('.title');
+			for (let searchTag of tag) {
+				const indexTag = searchTag.toLowerCase().indexOf(search);
+				const title = searchMenuItem.querySelector('.title');
 				if (title) {
-					if (indexTag > -1 && menuItems[i] != active && search != '' && search != ' ') {
-						menuItems[i].style.display = '';
+					if (indexTag > -1 && searchMenuItem != active && search != '') {
+						searchMenuItem.style.display = '';
 						title.classList.add('menu-item');
 						if (title.textContent[0] != '/') {
 							title.prepend("/ ");
 						}
-						displayTag(menuItems[i], tag[j], indexTag, search);
-						break next;
+						showTag(searchMenuItem, searchTag, search);
+						break;
 					}
 					else {
-						let dataFound = menuItems[i].getElementsByTagName('data-found')[0];
-						if (dataFound) {
-							dataFound.style.display = 'none';
+						let dataShowTag = searchMenuItem.getElementsByTagName('data-show-tag')[0];
+						if (dataShowTag) {
+							dataShowTag.style.display = 'none';
 						}
 						title.classList.remove('menu-item');
-						if (search == ' ' || search == '') {
-							const font = title.getElementsByTagName('font')[0];
-							if (font) {
-								const a = font.parentNode;
-								while (font.firstChild) {
-									a.insertBefore(font.firstChild, font);
-								}
-							}
-						}
 						title.textContent = title.textContent.replace("/ ", '');
 					}
 				}
@@ -147,94 +132,93 @@ function tagSearch(search) {
 	}
 }
 
+function showTag(menuItem, tagContent, search) {
+	const searchTarget = tagContent.split(' ');
+	const indexTag = tagContent.toLowerCase().indexOf(search);
+	for (let i = 0; i < searchTarget.length; i++) {
+		const indexTarget = searchTarget[i].toLowerCase().indexOf(search);
+		if (indexTarget > -1 || search == ' ') {
+			if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
+				let newTag = document.createElement('data-show-tag');
+				newTag.appendChild(document.createElement('a'));
+				menuItem.insertBefore(newTag, menuItem.children[0]);
+			}
+			const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
+			const a = dataShowTag.getElementsByTagName('a')[0];
+			if (searchTarget.length > 2) {
+				if (i < searchTarget.length - 2) {
+					a.textContent = searchTarget[i] + ' ' + searchTarget[i + 1] + ' ...';
+				}
+				else {
+					a.textContent = '... ' + searchTarget[i - 1] + ' ' + searchTarget[i];
+				}
+			}
+			else {
+				a.textContent = tagContent;
+			}
+			dataShowTag.style.display = 'inline';
+			a.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
+			a.style.display = 'inline';
+		}
+		else {
+			if (indexTag > -1 && menuItem.getElementsByTagName('data-show-tag').length > 0) {
+				menuItem.getElementsByTagName('data-show-tag')[0].style.display = '';
+			}
+		}
+	}
+}
+
 function menuItemsSearch(search) {
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
-	for (let i = 0; i < menuItems.length; i++) {
-		const title = menuItems[i].querySelector('.title');
-		const dataFound = menuItems[i].getElementsByTagName('data-found')[0];
-		if (title || dataFound) {
+	for (let searchTarget of menuItems) {
+		const title = searchTarget.querySelector('.title');
+		const dataShowTag = searchTarget.getElementsByTagName('data-show-tag')[0];
+		if (title || dataShowTag) {
 			let indexMenu, indexTag;
 			if (title) {
 				indexMenu = title.textContent.toLowerCase().indexOf(search);
 				highlightSymbols(title, search);
 			}
-			if (dataFound) {
-				const tag = dataFound.getElementsByTagName('a')[0];
+			if (dataShowTag) {
+				const tag = dataShowTag.getElementsByTagName('a')[0];
 				indexTag = tag.textContent.toLowerCase().indexOf(search);
 				highlightSymbols(tag, search);
 			}
 			if (indexMenu > -1 || indexTag > -1) {
-				menuItems[i].style.display = '';
+				searchTarget.style.display = '';
 			}
 			else {
-				menuItems[i].style.display = 'none';
+				searchTarget.style.display = 'none';
 			}
 		}
 	}
 }
 
-function displayTag(line, tag, indexTag, search) {
-	const foundTag = tag.split(' ');
-	for (let i = 0; i < foundTag.length; i++) {
-		const index = foundTag[i].toLowerCase().indexOf(search);
-		if (index > -1) {
-			if (line.getElementsByTagName('data-found').length === 0) {
-				let select = document.createElement('data-found');
-				select.appendChild(document.createElement('a'));
-				line.insertBefore(select, line.children[0]);
-			}
-			let dataFound = line.getElementsByTagName('data-found')[0];
-			const a = dataFound.getElementsByTagName('a')[0];
-			if (foundTag.length > 2) {
-				if (i < foundTag.length - 2) {
-					a.textContent = foundTag[i] + ' ' + foundTag[i + 1] + ' ...';
-				}
-				else {
-					a.textContent = '... ' + foundTag[i - 1] + ' ' + foundTag[i];
-				}
-			}
-			else {
-				a.textContent = tag;
-			}
-			dataFound.style.display = 'inline';
-			a.setAttribute('href', line.querySelector('.title').getAttribute('href'));
-			a.style.display = 'inline';
+function highlightSymbols(searchTarget, search) {
+	const searchTargetContent = searchTarget.textContent;
+	const index = searchTargetContent.toLowerCase().indexOf(search);
+	if (index > -1 && search != '' && searchTargetContent[index - 1] != '/') {
+		const highlightedSymbol = searchTargetContent.split('');
+		for (let i = 0; i < search.length; i++) {
+			highlightedSymbol[index + i] = '<font>' + highlightedSymbol[index + i] + '</font>';
 		}
-		else {
-			if (indexTag > -1 && line.getElementsByTagName('data-found').length > 0) {
-				line.getElementsByTagName('data-found')[0].style.display = '';
-			}
-		}
-	}
-}
-
-function highlightSymbols(foundText, search) {
-	const text = foundText.textContent;
-	const index = text.toLowerCase().indexOf(search);
-	if (index > -1 && search != '') {
-		const highlightedSymbol = text.split('');
-		for (let j = 0; j < search.length; j++) {
-			highlightedSymbol[index + j] = '<font>' + highlightedSymbol[index + j] + '</font>';
-		}
-		foundText.innerHTML = highlightedSymbol.join('');
-		let font = foundText.getElementsByTagName('font');
-		for (let j = 0; j < font.length; j++) {
-			font[j].style.backgroundColor = '#efdf00';
+		searchTarget.innerHTML = highlightedSymbol.join('');
+		let font = searchTarget.getElementsByTagName('font');
+		for (let i = 0; i < font.length; i++) {
+			font[i].style.backgroundColor = '#efdf00';
 		}
 	}
 	else {
-		let font = foundText.getElementsByTagName('font');
-		for (let j = 0; j < font.length; j++) {
-			font[j].style.backgroundColor = '';
+		let font = searchTarget.getElementsByTagName('font');
+		for (let i = 0; i < font.length; i++) {
+			font[i].style.backgroundColor = '';
 		}
 	}
 }
 
-window.onhashchange = searchOnHashChange;
-
 function init() {
-	addEventListener('load', searchOnLoad, true);
+	document.addEventListener('load', searchOnLoad, true);
 
 	const navTrigger = document.getElementById('nav-trigger');
 	if (navTrigger) {
@@ -268,5 +252,7 @@ function init() {
 		activeTopic.scrollIntoView();
 	}
 }
+
+window.onhashchange = searchOnHashChange;
 
 document.addEventListener('DOMContentLoaded', init);
