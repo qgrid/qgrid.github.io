@@ -16,7 +16,7 @@
 }
 
 function searchOnLoad() {
-	const active = document.getElementsByClassName('active-topic')[0];
+	const active = document.querySelector('.active');
 	const search = getSearch();
 	if (active && search) {
 		pageTextSearch(search);
@@ -27,7 +27,7 @@ function searchOnLoad() {
 
 function searchOnHashChange() {
 	const search = getSearch();
-	updateLinksInMenuItems(search);
+	updateMenuLinks(search);
 	pageTextSearch(search);
 	tagsSearch(search);
 	menuItemsSearch(search);
@@ -50,28 +50,31 @@ function setSearch(search) {
 }
 
 function getSearch() {
-	const contains = new RegExp(/^#search=/);
-	if (contains.test(location.hash)) {
-		return location.hash.substr(8).replace(/%20/g, ' ').toLowerCase();
+	const search = new RegExp(/^#search=/);
+	if (search.test(location.hash)) {
+		return location.hash.substr(search.source.length - 1).replace(/%20/g, ' ').toLowerCase();
 	}
 	return '';
 }
 
-function updateLinksInMenuItems(search) {
+function updateMenuLinks(search) {
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
 	for (let searchTarget of menuItems) {
 		const title = searchTarget.querySelector('.title');
 		if (title) {
 			let href = title.getAttribute('href');
-			if (href.indexOf('#search=') == -1) {
+			const index = href.lastIndexOf('#search=');
+			if (index == -1 && search != '') {
 				href += '#search=';
 			}
 			else {
-				href = href.substr(0, href.indexOf('=') + 1);
-			}
-			if (search == '') {
-				href = href.replace(/#search=/, '');
+				if (index > -1) {
+					href = href.substr(0, href.indexOf('=') + 1);
+				}
+				if (search == '') {
+					href = href.replace(/#search=/, '');
+				}
 			}
 			title.setAttribute('href', href + search);
 		}
@@ -86,7 +89,7 @@ function pageTextSearch(search) {
 		if (a && a.textContent) {
 			searchTarget = a;
 		}
-		highlightSymbols(searchTarget, search);
+		highlightText(searchTarget, search);
 	}
 	for (let searchTarget of [...h2, ...p]) {
 		const index = searchTarget.textContent.toLowerCase().indexOf(search);
@@ -98,7 +101,7 @@ function pageTextSearch(search) {
 }
 
 function tagsSearch(search) {
-	const active = document.getElementsByClassName('active-topic')[0];
+	const active = document.querySelector('.active');
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
 	for (let searchMenuItem of menuItems) {
@@ -139,7 +142,7 @@ function showTag(menuItem, tagContent, search) {
 		const indexTarget = searchTarget[i].toLowerCase().indexOf(search);
 		if (indexTarget > -1 || search == ' ') {
 			if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
-				let newTag = document.createElement('data-show-tag');
+				const newTag = document.createElement('data-show-tag');
 				newTag.appendChild(document.createElement('a'));
 				menuItem.insertBefore(newTag, menuItem.children[0]);
 			}
@@ -178,12 +181,12 @@ function menuItemsSearch(search) {
 			let indexMenu, indexTag;
 			if (title) {
 				indexMenu = title.textContent.toLowerCase().indexOf(search);
-				highlightSymbols(title, search);
+				highlightText(title, search);
 			}
 			if (dataShowTag) {
 				const tag = dataShowTag.getElementsByTagName('a')[0];
 				indexTag = tag.textContent.toLowerCase().indexOf(search);
-				highlightSymbols(tag, search);
+				highlightText(tag, search);
 			}
 			if (indexMenu > -1 || indexTag > -1) {
 				searchTarget.style.display = '';
@@ -195,24 +198,24 @@ function menuItemsSearch(search) {
 	}
 }
 
-function highlightSymbols(searchTarget, search) {
-	const searchTargetContent = searchTarget.textContent;
-	const index = searchTargetContent.toLowerCase().indexOf(search);
-	if (index > -1 && search != '' && searchTargetContent[index - 1] != '/') {
-		const highlightedSymbol = searchTargetContent.split('');
-		for (let i = 0; i < search.length; i++) {
-			highlightedSymbol[index + i] = '<font>' + highlightedSymbol[index + i] + '</font>';
+function highlightText(searchTarget, search) {
+	const { textContent } = searchTarget;
+	const index = textContent.toLowerCase().indexOf(search);
+	if (index > -1 && search != '' && textContent[index - 1] != '/') {
+		let hightlightContent = textContent;
+		for (let i = 1; i <= search.length; i++) {
+			hightlightContent = textContent.substring(0, index) + '<span>' + textContent.substring(index, index + i) + '</span>' + textContent.substring(index + i);
 		}
-		searchTarget.innerHTML = highlightedSymbol.join('');
-		let font = searchTarget.getElementsByTagName('font');
-		for (let i = 0; i < font.length; i++) {
-			font[i].style.backgroundColor = '#efdf00';
+		searchTarget.innerHTML = hightlightContent;
+		let span = searchTarget.getElementsByTagName('span');
+		for (let searchSpan of span) {
+			searchSpan.classList.add('highlight');
 		}
 	}
 	else {
-		let font = searchTarget.getElementsByTagName('font');
-		for (let i = 0; i < font.length; i++) {
-			font[i].style.backgroundColor = '';
+		let span = searchTarget.getElementsByTagName('span');
+		for (let searchSpan of span) {
+			searchSpan.classList.remove('highlight');
 		}
 	}
 }
