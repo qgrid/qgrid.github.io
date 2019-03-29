@@ -61,7 +61,7 @@ function tagsSearch(search) {
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
 	for (let menuItem of menuItems) {
-		const tags = searchMenuItem.dataset.tag || '';
+		const tags = menuItem.dataset.tag || '';
 		for (let tag of tags.split(',')) {
 			const index = tag.toLowerCase().indexOf(search);
 			const title = menuItem.querySelector('.title');
