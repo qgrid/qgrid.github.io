@@ -91,26 +91,29 @@ function tagsSearch(search) {
 function menuItemsSearch(search) {
 	const nav = document.getElementById('nav');
 	const menuItems = nav.getElementsByTagName('li');
-	for (let searchTarget of menuItems) {
-		const title = searchTarget.querySelector('.title');
-		const dataShowTag = searchTarget.getElementsByTagName('data-show-tag')[0];
-		if (title || dataShowTag) {
-			let indexMenu, indexTag;
-			if (title) {
-				indexMenu = title.textContent.toLowerCase().indexOf(search);
-				highlightText(title, search);
-			}
-			if (dataShowTag) {
-				const tag = dataShowTag.getElementsByTagName('a')[0];
-				indexTag = tag.textContent.toLowerCase().indexOf(search);
-				highlightText(tag, search);
-			}
-			if (indexMenu >= 0 || indexTag >= 0) {
-				searchTarget.style.display = '';
-			}
-			else {
-				searchTarget.style.display = 'none';
-			}
+	for (let menuItem of menuItems) {
+		const title = menuItem.querySelector('.title');
+		const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
+		let foundText = [];
+		let indexMenu = 0;
+		let indexTag = -1;
+		if (title) {
+			indexMenu = title.textContent.toLowerCase().indexOf(search);
+			foundText = foundText.concat(title);
+		}
+		if (dataShowTag) {
+			const tag = dataShowTag.getElementsByTagName('a')[0];
+			indexTag = tag.textContent.toLowerCase().indexOf(search);
+			foundText = foundText.concat(tag);
+		}
+		for (let searchTarget of foundText) {
+			highlightText(searchTarget, search);
+		}
+		if (indexMenu >= 0 || indexTag >= 0) {
+			menuItem.style.display = '';
+		}
+		else {
+			menuItem.style.display = 'none';
 		}
 	}
 }
@@ -141,10 +144,18 @@ function highlightText(searchTarget, search) {
 
 function showTag(menuItem, tag, search) {
 	for (let searchTarget of tag.split(' ')) {
-		const arraySearch = search.split(' ');
-		const indexTarget = searchTarget.toLowerCase().indexOf(arraySearch);
-		const indexSearch = arraySearch.indexOf(searchTarget.toLowerCase());
-		if (indexTarget >= 0 || indexSearch >= 0) {
+		let indexTarget = -1;
+		let foundMatch = false;
+		for (let arraySearch of search.split(' ')) {
+			if (indexTarget < 0 && !foundMatch) {
+				if (arraySearch != '') {
+					foundMatch = true;
+					indexTarget = searchTarget.toLowerCase().indexOf(arraySearch);
+				}
+			}
+		}
+		const indexSearch = search.split(' ').indexOf(searchTarget.toLowerCase());
+		if (indexTarget >= 0 || indexSearch >= 0 || search == ' ') {
 			if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
 				const newTag = document.createElement('data-show-tag');
 				newTag.appendChild(document.createElement('a'));
@@ -156,6 +167,7 @@ function showTag(menuItem, tag, search) {
 			a.textContent = getTagsContent(tag, searchTarget);
 			a.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 			a.style.display = 'inline';
+			break;
 		}
 	}
 }
@@ -185,11 +197,14 @@ function getTagsContent(tag, searchTag) {
 	const searchTarget = tag.split(' ');
 	const index = searchTarget.indexOf(searchTag);
 	if (searchTarget.length > 2) {
-		if (index < searchTarget.length - 2) {
+		if (index == 0) {
 			return searchTarget[index] + ' ' + searchTarget[index + 1] + ' ...';
 		}
-		else {
+		else if (index == searchTarget.length - 1) {
 			return '... ' + searchTarget[index - 1] + ' ' + searchTarget[index];
+		}
+		else {
+			return '... ' + searchTarget[index] + ' ' + searchTarget[index + 1] + ' ...';
 		}
 	}
 	else {
