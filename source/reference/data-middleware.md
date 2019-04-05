@@ -4,7 +4,6 @@ group: Reference
 order: 3
 ---
 
-
 The q-grid pipe is a series of methods that grid invokes asynchronously anytime refresh is required. Every pipe in the series gets data from previous one, handles it and passes to the next one. This basic concept allows to modify how data rows are processed to display the data. Here is the default pipeline:
 
 ```typescript

@@ -1,7 +1,7 @@
 ---
 title: DOM Internals
 group: Reference
-order: 6
+order: 7
 ---
 
 The q-grid internally uses basic DOM table elements, but there is no any component or service which works with core DOM directly. The q-grid populates an abstraction called `DOM Table` which encapsulates any low-level work with core DOM. The benefits:
