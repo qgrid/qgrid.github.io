@@ -1,7 +1,7 @@
 ---
 title: Url & Email
 group: Column Types
-order: 10
+order: 11
 ---
 
 To show url links with appropriate editors this column type could be used.

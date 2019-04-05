@@ -1,7 +1,7 @@
 ---
 title: Row Indicator
 group: Column Types
-order: 7
+order: 8
 ---
 
 Row indicator belongs to the `control class` columns. It can be used in different scenarios belonging to the data rows.

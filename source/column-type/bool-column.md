@@ -1,7 +1,7 @@
 ---
 title: Boolean
 group: Column Types
-order: 1
+order: 2
 ---
 
 Three state booleans are supported by the q-grid.

@@ -1,7 +1,7 @@
 ---
 title: Array
 group: Column Types
-order: 0
+order: 1
 ---
 
 Array type is utilized by the q-grid to visualize primitive type collections. If complex object list should be visualized, it's required to setup `itemLabel` property or make custom cell templates.

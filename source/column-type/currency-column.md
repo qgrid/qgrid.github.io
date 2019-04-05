@@ -1,7 +1,7 @@
 ---
 title: Currency
 group: Column Types
-order: 2
+order: 3
 ---
 
 Use currency type to display decimal values in a currency format.

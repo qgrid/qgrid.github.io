@@ -1,7 +1,7 @@
 ---
 title: Reference
 group: Column Types
-order: 6
+order: 7
 ---
 
 Use this column type when need to handle reference values, the `reference value` term describes data which can be defined using a key/value pair relationship.

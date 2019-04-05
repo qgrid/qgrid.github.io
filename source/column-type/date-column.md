@@ -1,7 +1,7 @@
 ---
 title: Date Time
 group: Column Types
-order: 3
+order: 4
 ---
 
 Use this column type to display date or date times.

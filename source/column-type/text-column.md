@@ -1,7 +1,7 @@
 ---
 title: Text
 group: Column Types
-order: 9
+order: 10
 ---
 
 This is a basic data column type that is responsible for handling textual values.

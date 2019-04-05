@@ -1,7 +1,7 @@
 ---
 title: Row Options
 group: Column Types
-order: 8
+order: 9
 ---
 
 Row options column allows to populate list of actions for the appropriate row by using `[editorOptions]` input.

@@ -1,7 +1,7 @@
 ---
 title: Numeric
 group: Column Types
-order: 5
+order: 6
 ---
 
 Use number type to display decimal values. Here are some specific properties:

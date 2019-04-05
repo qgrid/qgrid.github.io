@@ -1,7 +1,7 @@
 ---
 title: File & Image
 group: Column Types
-order: 4
+order: 5
 ---
 
 Use file column type for uploading and linking files.
