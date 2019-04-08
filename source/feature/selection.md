@@ -4,27 +4,45 @@ group: Features
 order: 7
 ---
 
-There are situations when the end user need to select rows or cells in the q-grid. The q-grid provides several modes to enable selection satisfaction. 
-
-## Setup
-
-Use q-grid html component to setup selection options.
+There are situations when the end user need to select rows or cells in the q-grid, the q-grid provides several modes to enable selection satisfaction. The simples way to setup selection is to use q-grid component for more advanced use cases q-grid-model should be used..
 
 ```html
-<q-grid selectionMode="multiple" selectionUnit="column"></q-grid>
+<q-grid selectionMode="multiple" 
+        selectionUnit="row" 
+        selectionArea="body">
+</q-grid>
 ```
 
-Or use q-grid model directly.
+{% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-```javascript
-gridModel.selection({
-   unit: 'row',
-   mode: 'single',
-   area: 'custom'
-});
+## Selection Changes
+
+Use q-grid model to get list of selected items.
+
+```typescript
+import { GridComponent } from 'ng2-qgrid';
+
+@Component({
+   selector: 'my-component',
+   template: '<q-grid selectionUnit="row"></q-grid>'
+})
+export class MyComponent implements AfterViewInit {
+   ViewChild(GridComponent) myGrid: GridComponent;   
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.selectionChanged.on(e => {
+         if (e.hasChanges('items')) {
+            const { items } = e.state;
+            console.log(items);
+         }
+      });
+   }
+}
 ```
 
-## Selection Modes
+## Selection Mode
 
 Use this option to control selection behavior.
 
@@ -32,12 +50,10 @@ Use this option to control selection behavior.
 * `multiple` mode when several units can be selected. When `row` unit is chosen, `select all` checkbox is displayed in the column header.
 * `range` mode when bag of units can be selected. Selection is made by mouse drag & drop.
 
-{% docEditor "github/qgrid/ng2-example/tree/select-cell-basic/latest" %}
-
-## Selection Units
+## Selection Unit
 
 Use this option to control selection primitive.
-	
+   
 * `row` unit when row can be selected by clicking on it or on the selection checkbox.
 * `cell` unit when cell can be selected by clicking on it.
 * `column` unit when column can be selected by clicking on it.
@@ -50,26 +66,50 @@ Use this option to control if q-grid body clicks lead to row selection.
 * `body` area when click on the q-grid body leads to row selection.
 * `custom` area when only check boxes are responsible for the selection.
 
-{% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
+## How to prevent unselecting of row on click again?
 
-## Selection Event
+Use `change` information to manipulate with logic of selection. Next lines prevent unselecting of row that was double clicked.
 
-Use q-grid model to get list of selected items. Note that to configure format of the selected items, selection key could be used.
-
-```javascript
-gridModel.selection({       
-   key: {
-      row: row => row.myId,
-	  column: column => column.key
-   }
-});
-
-gridModel.selectionChanged.on(e => {
-   if (e.hasChanges('items')) {
-       const { items } = e.state;
-       const myId = items[0].row;
+```typescript
+model.selectionChanged.on(e => {
+   const change = e.changes['items'];
+   if (change) {
+      const { newValue, oldValue } = change;
+      if (!newValue.length) {
+         model.selection({
+            items: oldValue
+         });
+      }
    }
 });
 ```
 
-Selection model reflecting on model data id.
+## How to hide column with check-boxes?
+
+Use `[isVisible]` input of to hide/show select column.
+
+```html
+<q-grid selectionUnit="row">
+   <q-grid-columns>
+      <q-grid-column type="select" [isVisible]="false">
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
+## How to select rows by id?
+
+To override what is located in `items` property selection `key` could be overridden.
+
+```typescript
+model.selection({       
+   key: {
+      row: row => row.myNumberId,
+      column: column => column.key
+   }
+});
+
+model.selection({
+   items: [0, 1, 2]
+});
+```

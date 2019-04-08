@@ -8,11 +8,11 @@ There are a few ways to fill in the q-grid with data columns.
 
 ## Auto Generation
 
-Use column generation mode for a quick start. Sometimes, especially when data source is not familiar, it can be convenient to turn on auto generation column mode to explore data and next settings. Here are possible modes:
+Use column generation mode for a quick start. Sometimes, especially when data source is not familiar, it can be convenient to turn on auto generation column mode to explore data and next settings. Next modes are available.
 	  
 * `deep` number of columns will be equal to number of graph leafs after deep traversing of first row object.
 * `shallow` number of columns will be equal to number of keys from first row object.
-* `cohort` similar to the `deep`, but column groups are used to display header hierarchy.
+* `cohort` similar to the `deep` but column groups are used to display header hierarchy.
 	 
 ```typescript
 @Component({
@@ -34,7 +34,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
-## HTML Components
+## Column Definitions in HTML
 
 Use `q-grid-column` components to declare a list of columns to show in the q-grid. Note that preferred way to define cell templates is to use `ng-template` inside the `q-grid-column` component. 
 	 
@@ -44,7 +44,7 @@ Use `q-grid-column` components to declare a list of columns to show in the q-gri
       <q-grid-column key="name.first" title="First Name"></q-grid-column>
       <q-grid-column key="name.last" title="Last Name"></q-grid-column>
       <q-grid-column key="age" title="Age" type="number">
-         <ng-template for="cell" let-$cell="$cell">
+         <ng-template for="body" let-$cell="$cell">
             <em>{{$cell.label}}</em>
          </ng-template>
       </q-grid-column>
@@ -72,7 +72,7 @@ export class MyComponent {
 
 ## Grid Model
 
-Two previous examples are nothing more than wrappers to fill in the data model with a list of columns. Low-level way to add some columns is to use the q-grid model directly.
+Two previous examples are nothing more than wrappers to fill in `data` state with a list of columns. Low-level way to add some columns is to use the q-grid model directly.
 
 ```typescript
 import { GridComponent } from 'ng2-qgrid';

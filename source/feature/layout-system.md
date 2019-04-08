@@ -6,11 +6,43 @@ order: 4
 
 Use q-grid layout system to define particular templates that can be shown under certain or custom conditions.
 
-## Layers
+## Blank Layer
 
-It's possible to add your own layers and define when they should be shown. Use `DomTable` to add or remove layer programmatically.
+Use a predefined `no-data` condition to show the custom template when the q-grid is empty.
 
-* Custom layer trigger component.
+```html
+<q-grid>
+   <q-grid-layer>
+      <ng-template for="blank">
+         No Data
+      </ng-template>
+   </q-grid-layer>
+</q-grid>
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/layer-grid-blank/latest" %}
+
+## Custom Layers
+
+It's possible to add your own layers and define when they should be shown. Imagine that we want to implement custom layer that should be shown on button click, so we have next markup under the q-grid, of course, it's not required to trigger be visual or setup inside toolbar, be free in choosing the strategy.
+
+```html
+<q-grid>
+   <q-grid-toolbar>
+      <ng-template for="top">
+         <my-layer-trigger>
+            <q-grid-layer>
+               <ng-template for="my-layer">
+                  Hello from the custom layer!
+               </ng-template>
+            </q-grid-layer>
+         </my-layer-trigger>
+      </ng-template>
+   </q-grid-toolbar>
+</q-grid>
+```
+
+Component `my-layer-trigger` should be implemented here. Bellow there is a basic implementation in which `table` abstraction is used to add/remove layer called `my-layer`. Please note that ng-template above should has appropriate to the code key, `my-layer` in this case.
 
 ```typescript
 import { GridPlugin } from 'ng2-qgrid';
@@ -18,9 +50,7 @@ import { GridPlugin } from 'ng2-qgrid';
 @Component({
    selector: 'my-layer-trigger',
    providers: [GridPlugin],
-   template: `
-      <button (click)="toggleLayer()">Toggle Layer</button>
-   `
+   template: `<button (click)="toggleLayer()">Toggle Layer</button>`
 })
 export class MyLayerTriggerComponent {
    private isActive = false;
@@ -40,41 +70,7 @@ export class MyLayerTriggerComponent {
 }
 ```
 
-* Custom layer template.
-
-```html
-<q-grid>
-   <q-grid-toolbar>
-      <ng-template for="top">
-         <my-layer-trigger>
-            <q-grid-layer>
-               <ng-template for="my-layer">
-                  Hello from the custom layer!
-               </ng-template>
-            </q-grid-layer>
-			</my-layer-trigger>
-		</ng-template>
-   </q-grid-toolbar>
-</q-grid>
-```
-
 {% docEditor "doc-qgrid-ng2-layer" %}
-
-## Blank Layer
-
-Use a predefined `no-data` condition to show the custom template when the q-grid is empty.
-
-```html
-<q-grid>
-   <q-grid-layer>
-      <ng-template for="blank">
-         No Data
-      </ng-template>
-   </q-grid-layer>
-</q-grid>
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/layer-grid-blank/latest" %}
 
 ## Toolbars
 
@@ -100,15 +96,10 @@ gridModel.visibility({
    foot: true,
    body: true,
    toolbar: {
-	  top: true,
-	  bottom: true,
-	  right: false,
-      left: false
+     top: true,
+     bottom: true,
+     right: false,
+     left: false
    }
 });
 ```
-
-## Coming Soon
-
-* Right toolbar customization example.
-* Visibility component, convenient way to setup visibility inside the template.

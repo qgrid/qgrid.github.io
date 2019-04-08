@@ -4,7 +4,7 @@ group: Reference
 order: 3
 ---
 
-The q-grid pipe is a series of methods that grid invokes asynchronously anytime refresh is required. Every pipe in the series gets data from previous one, handles it and passes to the next one. This basic concept allows to modify how data rows are processed to display the data. Here is the default pipeline:
+The q-grid pipe is a series of methods that grid invokes asynchronously anytime refresh is required. Every pipe in the series gets data from previous one, handles it and passes to the next one. This basic concept allows to modify how data rows are processed to display the data. Here is the default pipeline.
 
 ```typescript
 import { PipeContext } from 'ng2-qgrid';
@@ -28,7 +28,7 @@ export class MyComponent {
 
 ## Default Pipeline
 
-Next list is invoked item by item when data middleware is triggered.
+By default the chain below is invoked element by element when data middleware is triggered.
 
 ```typescript
 model.data({
@@ -45,16 +45,20 @@ model.data({
 ]});
 ```
 
-* `qgrid.pipe.data` 
-The intent is to fill data `rows` property and setup initial set of data `columns` to use them in the next pipes. Without filling data columns, next pipes in the default pipeline won't work, because they need to be aware of how to get column cell values from data source.  
+## Data Pipe
 
-* `qgrid.pipe.filter` 
-Applies client side filtration, utilizes `filter` model for getting input data and `expression builder` kit to support complex logic.
+The intent is to fill data `rows` property and setup initial set of data `columns` with or without auto generation to use them in the next pipes.
 
-* `qgrid.pipe.sort` 
+## Filter Pipe
+
+Applies client side filtration, utilizes `filter` model for getting input data and `expression builder` kit to support complex logic by invoking `match` function from filter state.
+
+## Sort Pipe
+
 Applies client side sorting, supports sorting by multiple columns.
 
-* `qgrid.pipe.memo` 
+## Memo pipe
+
 Converts input of data rows to output that supports grouping and pivoting. 
 
 ```javascript
@@ -67,19 +71,24 @@ function memoPipe(rows, context, next) {
 }
 ```
 
-* `qgrid.pipe.group` 
+## Group Pipe
+
 The intent is to build nodes from the raw data rows and fill in memo nodes section if group model has some input.
 
-* `qgrid.pipe.pivot` 
+## Pivot Pipe
+
 The intent is to build `pivot` data from the raw data rows and fill in memo pivot section if pivot model has some input.
 
-* `qgrid.pipe.column`
+## Column Pipe
+
 Responsible for support: adding `control` type columns, like select or group columns, column cohorts (rowSpans and colSpans inside header), pivot column generation, column visibility and sorting. To the memo output `columns` property is added.
 
-* `qgrid.pipe.pagination`
+## Pagination Pipe
+
 Applies pagination if scroll mode is not `virtual`.
 
-* `qgrid.pipe.view`
+## View Pipe
+
 The intent is to order rows appropriate to the `row list` model(row drag & drop support) and fill in the `scene` model that is used to render cells.
 
 ## Pipe Units
@@ -112,7 +121,6 @@ qgrid.pipeUnit.view = [
    qgrid.pipe.view
 ];
 ```
-
 
 ## The Scene
 

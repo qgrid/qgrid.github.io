@@ -33,7 +33,7 @@ The preferred way to define a cell template is to you `ng-template` inside the `
 
 ## $cell service
 
-Use this implicitly injected service to retrieve data cell information. Here are the list of available properties:
+Use this implicitly injected service to retrieve data cell information, it contains next properties.
 
 * value
 * label
