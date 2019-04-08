@@ -52,7 +52,7 @@ Use `q-grid-column` components to declare a list of columns to show in the q-gri
 </q-grid>
 ```
 
-## In TypeScript
+## [Columns] Input
 
 Consider to use `columns` attribute of the q-grid component, when list of columns need to be created dynamically.
 
@@ -137,6 +137,10 @@ The q-grid allows to utilize structural directives(starts with `*` in Angular) t
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-list-basic/latest" %}
+
+## How to override column order?
+
+Typically if default column order algorithm should be changed the q-grid pipeline should be overridden. Another way is to modify `index` tree in the `columnList` model.
 
 ## Suggested Links
 

@@ -72,12 +72,4 @@ gridModel.selectionChanged.on(e => {
 });
 ```
 
-## Coming Soon
-
-* Component selection change event.
-
-``` html
-<q-grid (selectionChange)="myHandler"></q-grid>
-```
-
-* Selection model reflecting on model data id.
+Selection model reflecting on model data id.
