@@ -4,16 +4,10 @@ group: Features
 order: 8
 ---
 
-There are situations when the end user need to edit data, in this case the q-grid provides a lot of possibilities.
-
-## Edit Cell
-
-Setup edit mode equals to `cell` to turn on editing. Use `canEdit` column attribute to disable editing of particular columns.
+There are situations when the end user need to edit data, in this case the q-grid provides a lot of possibilities. Setup edit mode equals to `cell` to turn on editing, use `canEdit` column attribute to disable editing of particular columns.
 
 ```html
-<q-grid editMode="cell">
-   <q-grid-column key="birth" canEdit="false"></q-grid-column>
-</q-grid>
+<q-grid editMode="cell"></q-grid>
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-basic/latest" %}
@@ -165,22 +159,3 @@ export class MyComponent {
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/manipulate-data-basic/latest" %}
-
-## Validation
-
-The q-grid validation is based on language independent validation rules called LIVR. Use `q-grid-rule` component to specify which specifications should be applied to appropriate column.
-
-```html
-<q-grid editMode="cell">
-    <q-grid-validation>
-        <q-grid-rule for="cell" key="salary" required></q-grid-rule>
-        <q-grid-rule for="cell" key="name" required [lengthBetween]="[3, 40]"></q-grid-rule>
-    </q-grid-validation>
-</q-grid>
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/validation-basic/latest" %}
-
-## Suggested Links
-
-* [LIVR](https://github.com/koorchik/LIVR)

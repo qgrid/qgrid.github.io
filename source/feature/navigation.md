@@ -1,7 +1,7 @@
 ---
 title: Navigation
 group: Features
-order: 13
+order: 14
 ---
 
 The q-grid navigation system supports various keyboard events but to start keyboard navigation q-grid should be focused. Focus can be setup in 3 different ways: by cell clicking, by using `q-grid-autofocus` directive and by using q-grid service.   

@@ -1,7 +1,7 @@
 ---
 title: Filtering
 group: Features
-order: 11
+order: 12
 ---
 
 There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary.
