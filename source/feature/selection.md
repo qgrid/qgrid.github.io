@@ -66,7 +66,7 @@ Use this option to control if q-grid body clicks lead to row selection.
 * `body` area when click on the q-grid body leads to row selection.
 * `custom` area when only check boxes are responsible for the selection.
 
-## How to prevent unselecting of row on click again?
+## How to prevent unselecting if row was clicked again?
 
 Use `change` information to manipulate with logic of selection. Next lines prevent unselecting of row that was double clicked.
 

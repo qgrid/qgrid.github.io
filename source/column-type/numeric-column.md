@@ -29,6 +29,7 @@ Use number type to display decimal values. Here are some specific properties:
            {{$cell.label | qGridNumber: $cell.column.format}}
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```
 

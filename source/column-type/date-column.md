@@ -45,6 +45,7 @@ Use number type to display time values in a specific format.
             {{$cell.label | qGridDate: $cell.column.format}}
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```
 

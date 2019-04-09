@@ -37,6 +37,7 @@ Three state booleans are supported by the q-grid.
             </mat-icon>
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```
 

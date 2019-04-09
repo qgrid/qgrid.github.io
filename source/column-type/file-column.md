@@ -49,5 +49,6 @@ Use this column type to display and upload images.
             </mat-icon>
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```

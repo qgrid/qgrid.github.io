@@ -45,5 +45,6 @@ Edit template is populated automatically when cell is clicked, because by defaul
             <mat-icon class="q-grid-icon">more_vert</mat-icon>
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```

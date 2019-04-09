@@ -36,5 +36,6 @@ Array type is utilized by the q-grid to visualize primitive type collections. If
             </ul>
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```

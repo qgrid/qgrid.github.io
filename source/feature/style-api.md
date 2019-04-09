@@ -15,10 +15,7 @@ Each cell, no mater if it is located in the header, body or footer has specific 
 
 ## Style Model
 
-Use style callbacks for dynamic class assignments. For the cell style it is possible to pass an object instead of callback. In this case, object keys will play the role of column key filters. Besides the data rows style callbacks can accept `RowDetails` and `Node` classes depending on the q-grid settings. Be careful when use style API in a complicated cases. 
-
-
-> Note that first argument of `context.class` method should be an unique identifier for the appropriate group of styles.
+Use style callbacks for dynamic class assignments. For the cell style it is possible to pass an object instead of callback in this case object keys will play the role of column key filters. Besides the data rows style callbacks can accept `RowDetails` and `Node` classes depending on the q-grid settings. Be careful when use style API in a complicated cases. 
 
 ```typescript
 @Component({
@@ -48,6 +45,8 @@ export class MyComponent {
    }
 }
 ```
+
+> Note that first argument of `context.class` method should be an unique identifier for the appropriate group of styles.
 
 {% docEditor "github/qgrid/ng2-example/tree/style-cell-basic/latest" %}
 

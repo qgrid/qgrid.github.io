@@ -29,6 +29,7 @@ Use currency type to display decimal values in a currency format.
             <span>{{$cell.value | qGridCurrency: $cell.column.code}}</span>
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```
 

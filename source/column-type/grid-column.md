@@ -16,7 +16,11 @@ A column unique identifier, used to retrieve cell values if `path` or `value` pr
 
 ## Column Title
 
-Column header text, could be shown as column tooltip or used by plugins like column-filter.
+Column header text also could be used by plugins like column-filter.
+
+## Column Description
+
+Column header tooltip text, could be shown as column tooltip.
 
 ## Column Value & Label
 

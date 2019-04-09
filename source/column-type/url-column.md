@@ -1,7 +1,7 @@
 ---
 title: Url & Email
 group: Column Types
-order: 11
+order: 12
 ---
 
 To show url links with appropriate editors this column type could be used.
@@ -55,5 +55,6 @@ To show email links with appropriate editors this column type could be used.
             </button>         
         </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```

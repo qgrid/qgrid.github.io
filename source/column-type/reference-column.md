@@ -57,5 +57,6 @@ export class MyComponent {
             </button>
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```

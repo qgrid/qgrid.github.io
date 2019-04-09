@@ -59,5 +59,6 @@ To display row number this column type can be used.
           </ng-container>         
         </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```

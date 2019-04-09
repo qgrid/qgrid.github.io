@@ -1,7 +1,7 @@
 ---
 title: Text
 group: Column Types
-order: 10
+order: 11
 ---
 
 This is a basic data column type that is responsible for handling textual values.
@@ -29,6 +29,7 @@ This is a basic data column type that is responsible for handling textual values
            {{$cell.label}}
          </ng-template>
       </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```
 
