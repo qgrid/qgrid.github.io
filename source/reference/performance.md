@@ -2,7 +2,7 @@
 title: Performance Tips
 type: guide
 group: Reference
-order: 6
+order: 7
 ---
 
 The q-grid introduces 3 modes that allows to change performance strategy. 
