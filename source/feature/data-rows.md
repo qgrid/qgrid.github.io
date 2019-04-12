@@ -4,22 +4,22 @@ group: Features
 order: 0
 ---
 
-Any array of objects can be directly bind to the q-grid `rows` attribute, if `observable` is used don't forget to add `async` pipe.
+Any array of objects can be directly bind to the q-grid, if `observable` is used just add `async` pipe.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="myRows | async">
+      <q-grid [rows]="rows$ | async">
             <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent {
-   myRows: Observable<MyRow[]>;
+   rows$: Observable<MyRow[]>;
 
    constructor(dataService: MyDataService) {
-      this.myRows = dataService.getRows();
+      this.rows$ = dataService.getRows();
    }
 }
 ```
@@ -50,3 +50,44 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
+
+## How to make rows frozen?
+
+Use `row` model to make rows frozen.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: '<q-grid></q-grid>'
+})
+export class MyComponent implements AfterViewInit {
+   ViewChild(GridComponent) myGrid: GridComponent;   
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      this.dataService
+         .getRows()
+         .subscribe(rows => {
+            model.data({ rows });
+            model.row({
+               pinTop: [rows[0], rows[1]],
+               pinBottom: [rows[rows.length - 1]]
+            });
+         });
+   }
+}
+```
+
+## How to enable row drag & drop and resizing?
+
+Use `q-grid-row` component.
+
+```html
+<q-grid>
+   <q-grid-row [canMove]="true" [canResize]="true">
+   </q-grid-row>
+</q-grid>
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/drag-row-basic/latest" %}
