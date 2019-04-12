@@ -23,6 +23,7 @@ import { ThemeModule } from 'ng2-qgrid/theme/material';
 export class AppModule {
 }
 ```
+
 > The q-grid supports 2 themes out of box `material` and `basic`, the first one requires `@angular/material` to be installed.
 
 ## Create an angular component
@@ -38,7 +39,7 @@ export class AppModule {
       `
 })
 export class MyComponent {
-   rows$: Observable<[]>;
+   rows$: Observable<any[]>;
 
    constructor(dataService: MyDataService) {
          this.rows$ = dataService.getRows();
@@ -46,7 +47,7 @@ export class MyComponent {
 }
 ```
 
-> Note that passed rows should be an array of objects, any other types, like array of numbers or strings, will throw an error.
+> Only array of objects is supported, if primitive types are used the q-grid won't be able to process it.
 
 ## Dependencies
 
@@ -70,10 +71,12 @@ npm run start
 
 ## Browser Support
 
-* `Chrome` is supported.
+* Last `Chrome` is supported.
+* Last `FireFox` is supported.
+* Last `Edge` is supported.
+
+
 * `Safari` is in progress.
-* `FireFox` is in progress.
-* `Edge` is in progress.
 * `IE11` is in progress.
 
 ## Licence
