@@ -1,14 +1,10 @@
 ---
 title: Data Rows
 group: Features
-order: 2
+order: 0
 ---
 
-There are a few ways to fill in the q-grid with data rows.
-
-## [Rows] Input
-
-Any array of objects can be directly bind to the q-grid `rows` attribute. If `observables` are used don't forget to add `async` pipe.
+Any array of objects can be directly bind to the q-grid `rows` attribute, if `observable` is used don't forget to add `async` pipe.
 
 ```typescript
 @Component({
@@ -28,11 +24,11 @@ export class MyComponent {
 }
 ```
 
-> Note that only object as item type is supported, if an array of primitive types is used the q-grid won't be able to process it.
+> Only array of objects is supported, if primitive types are used the q-grid won't be able to process it.
 
-## The Grid Model
+## How to setup rows using q-grid model?
 
-Use `GridComponent` selector for accessing the q-grid model. Note that grid component instance will be available only after view init.
+The preferred way is to use `GridComponent`, note that component will be available only after `ngAfterViewInit` hook being passed.
 
 ```typescript
 import { GridComponent } from 'ng2-qgrid';
