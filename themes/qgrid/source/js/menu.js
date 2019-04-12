@@ -26,8 +26,7 @@ function searchOnLoad() {
 	const active = document.querySelector('.active-topic');
 	const search = getSearch();
 	if (active && search) {
-		pageTextSearch(search);
-		tagsSearch(search);
+		currentPageSearch(search);
 		menuItemsSearch(search);
 	}
 }
@@ -35,12 +34,11 @@ function searchOnLoad() {
 function searchOnHashChange() {
 	const search = getSearch();
 	updateMenuLinks(search);
-	pageTextSearch(search);
-	tagsSearch(search);
+	currentPageSearch(search);
 	menuItemsSearch(search);
 }
 
-function pageTextSearch(search) {
+function currentPageSearch(search) {
 	const h2 = document.getElementsByTagName('h2');
 	const p = document.getElementsByTagName('p');
 	let scrolled = false;
@@ -56,55 +54,22 @@ function pageTextSearch(search) {
 	}
 }
 
-function tagsSearch(search) {
+function menuItemsSearch(search) {
 	const nav = document.getElementById('nav');
-	const titlesOfMenuItems = nav.querySelectorAll('.title');
-	for (let titleOfMenuItem of titlesOfMenuItems) {
-		const menuItem = titleOfMenuItem.parentElement;
+	const titles = nav.querySelectorAll('.title');
+	for (let title of titles) {
+		const menuItem = title.parentElement;
 		const tags = menuItem.dataset.tag || '';
 		for (let tag of tags.split(',')) {
-			if (tagFormatting(menuItem, tag, search)) {
+			if (tag.toLowerCase().indexOf(search) >= 0 && search != '') {
 				showTag(menuItem, tag, search);
 				const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0].querySelector('a');
 				highlightText(dataShowTag, search);
 				break;
 			}
+			hideTag(menuItem, search);
 		}
-	}
-}
-
-function menuItemsSearch(search) {
-	const nav = document.getElementById('nav');
-	const titlesOfMenuItems = nav.querySelectorAll('.title');
-	for (let titleOfMenuItem of titlesOfMenuItems) {
-		highlightText(titleOfMenuItem, search);
-	}
-}
-
-function tagFormatting(menuItem, tag, search) {
-	const titleOfMenuItem = menuItem.querySelector('.title');
-	if (tag.toLowerCase().indexOf(search) >= 0 && search != '') {
-		menuItem.style.display = '';
-		titleOfMenuItem.classList.add('menu-item');
-		if (titleOfMenuItem.textContent[0] != '/') {
-			titleOfMenuItem.prepend("/ ");
-		}
-		return true;
-	}
-	else {
-		if (search != '') {
-			menuItem.style.display = 'none';
-		}
-		else {
-			menuItem.style.display = '';
-		}
-		const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
-		if (dataShowTag) {
-			dataShowTag.style.display = 'none';
-		}
-		titleOfMenuItem.classList.remove('menu-item');
-		titleOfMenuItem.textContent = titleOfMenuItem.textContent.replace("/ ", '');
-		return false;
+		highlightText(title, search)
 	}
 }
 
@@ -114,21 +79,38 @@ function showTag(menuItem, tag, search) {
 		for (let arraySearch of search.split(' ')) {
 			if (indexTarget < 0 && arraySearch != '') {
 				indexTarget = searchTarget.toLowerCase().indexOf(arraySearch);
+				break;
 			}
 		}
 		const indexSearch = search.split(' ').indexOf(searchTarget.toLowerCase());
-		if ((indexTarget >= 0 || indexSearch >= 0) && search != '') {
+		if ((indexTarget >= 0 || indexSearch >= 0 || search == ' ') && search != '') {
 			if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
 				createDataShowTag(menuItem);
 			}
-			const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
-			dataShowTag.style.display = '';
-			const a = dataShowTag.getElementsByTagName('a')[0];
-			a.textContent = getFoundTagsContent(tag, searchTarget);
+			focusOnTag(menuItem);
+			const a = menuItem.getElementsByTagName('data-show-tag')[0].firstChild;
+			a.textContent = getFormattedTagsContent(tag, searchTarget);
 			a.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 			a.style.display = 'inline';
+			break;
 		}
 	}
+}
+
+function hideTag(menuItem, search) {
+	const title = menuItem.querySelector('.title');
+	if (search != '') {
+		menuItem.style.display = 'none';
+	}
+	else {
+		menuItem.style.display = '';
+	}
+	const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
+	if (dataShowTag) {
+		dataShowTag.style.display = 'none';
+	}
+	title.classList.remove('menu-item');
+	title.textContent = title.textContent.replace("/ ", '');
 }
 
 function createDataShowTag(menuItem) {
@@ -137,24 +119,28 @@ function createDataShowTag(menuItem) {
 	menuItem.insertBefore(newTag, menuItem.children[0]);
 }
 
-function highlightText(foundElement, search) {
-	const { textContent } = foundElement;
-	const index = textContent.toLowerCase().indexOf(search);
-	if (index >= 0 && search != '' && textContent[index - 1] != '/') {
-		let hightlightContent = textContent;
-		foundElement.parentElement.style.display = '';
-		for (let i = 1; i <= search.length; i++) {
-			hightlightContent = textContent.substring(0, index) + '<span>' + textContent.substring(index, index + i) + '</span>' + textContent.substring(index + i);
-		}
-		foundElement.innerHTML = hightlightContent;
-		const span = foundElement.getElementsByTagName('span');
-		for (let searchSpan of span) {
-			searchSpan.classList.add('highlight');
-		}
+function focusOnTag(menuItem) {
+	const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
+	dataShowTag.style.display = '';
+	const title = menuItem.querySelector('.title');
+	menuItem.style.display = '';
+	title.classList.add('menu-item');
+	if (title.textContent[0] != '/') {
+		title.prepend("/ ");
+	}
+}
+
+function highlightText(item, search) {
+	const { textContent } = item;
+	searchContains = new RegExp(search, 'ig');
+	if (textContent[0] != '/' && searchContains.test(textContent) && search) {
+		const highlightContent = textContent.replace(searchContains, addHighlight);
+		item.parentElement.style.display = '';
+		item.innerHTML = highlightContent;
 		return true;
 	}
 	else {
-		const span = foundElement.getElementsByTagName('span');
+		const span = item.getElementsByTagName('span');
 		for (let searchSpan of span) {
 			searchSpan.classList.remove('highlight');
 		}
@@ -162,40 +148,31 @@ function highlightText(foundElement, search) {
 	}
 }
 
+function addHighlight(match) {
+	return `<span class="highlight">${match}</span>`;
+}
+
 function updateMenuLinks(search) {
 	const nav = document.getElementById('nav');
-	for (title of nav.querySelectorAll('.title')) {
-		const hash = '#search=';
+	const hash = search ? '#search=' + search : '';
+	for (let title of nav.querySelectorAll('.title')) {
 		let href = title.getAttribute('href');
-		const index = href.indexOf(hash);
-		if (index < 0) {
-			href += hash;
+		const index = href.indexOf('#search=');
+		if (index >= 0) {
+			href = href.slice(0, index);
 		}
-		else {
-			if (search == '') {
-				href = href.slice(0, index);
-			}
-			else {
-				href = href.substr(0, index + hash.length);
-			}
-		}
-		title.setAttribute('href', href + search);
+		title.setAttribute('href', href + hash);
 	}
 }
 
-function getFoundTagsContent(tag, foundText) {
-	const searchTarget = tag.split(' ');
-	const index = searchTarget.indexOf(foundText);
-	let tagsContent = [];
-	tagsContent = searchTarget;
+function getFormattedTagsContent(tag, foundText) {
+	let tagsContent = tag.split(' ');
+	const index = tagsContent.indexOf(foundText);
 	if (tagsContent.length > 2) {
-		if (index < searchTarget.length - 2) {
-			tagsContent.splice(index + 2, searchTarget.length - 2, '...');
+		if (index < tagsContent.length - 2) {
+			tagsContent.splice(index + 2, tagsContent.length, '...');
 		}
-		if (index == searchTarget.length - 1) {
-			tagsContent.splice(0, index - 1, '...');
-		}
-		else if (index >= searchTarget.length - index - 2) {
+		if (index > 0) {
 			tagsContent.splice(0, index, '...');
 		}
 	}
