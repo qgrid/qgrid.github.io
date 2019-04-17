@@ -62,7 +62,8 @@ function menuItemsSearch(search) {
 		const tags = menuItem.dataset.tag || '';
 		for (let tag of tags.split(',')) {
 			if (tag.toLowerCase().indexOf(search) >= 0 && search != '') {
-				showTag(menuItem, tag, search);
+				const matchingTag = findMatchingTag(tag, search);
+				showTag(menuItem, tag, matchingTag);
 				const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0].querySelector('a');
 				highlightText(dataShowTag, search);
 				break;
@@ -73,7 +74,7 @@ function menuItemsSearch(search) {
 	}
 }
 
-function showTag(menuItem, tag, search) {
+function findMatchingTag(tag, search) {
 	for (let searchTarget of tag.split(' ')) {
 		let indexTarget = -1;
 		for (let arraySearch of search.split(' ')) {
@@ -84,27 +85,25 @@ function showTag(menuItem, tag, search) {
 		}
 		const indexSearch = search.split(' ').indexOf(searchTarget.toLowerCase());
 		if ((indexTarget >= 0 || indexSearch >= 0 || search == ' ') && search != '') {
-			if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
-				createDataShowTag(menuItem);
-			}
-			focusOnTag(menuItem);
-			const a = menuItem.getElementsByTagName('data-show-tag')[0].firstChild;
-			a.textContent = getFormattedTagsContent(tag, searchTarget);
-			a.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
-			a.style.display = 'inline';
-			break;
+			return searchTarget;
 		}
 	}
 }
 
+function showTag(menuItem, tag, searchTarget) {
+	if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
+		createDataShowTag(menuItem);
+	}
+	focusOnTag(menuItem);
+	const a = menuItem.getElementsByTagName('data-show-tag')[0].firstChild;
+	a.textContent = getFormattedTagsContent(tag, searchTarget);
+	a.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
+	a.style.display = 'inline';
+}
+
 function hideTag(menuItem, search) {
 	const title = menuItem.querySelector('.title');
-	if (search != '') {
-		menuItem.style.display = 'none';
-	}
-	else {
-		menuItem.style.display = '';
-	}
+	menuItem.style.display = (search == '') ? '' : 'none';
 	const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
 	if (dataShowTag) {
 		dataShowTag.style.display = 'none';
@@ -134,22 +133,14 @@ function highlightText(item, search) {
 	const { textContent } = item;
 	searchContains = new RegExp(search, 'ig');
 	if (textContent[0] != '/' && searchContains.test(textContent) && search) {
-		const highlightContent = textContent.replace(searchContains, addHighlight);
+		item.innerHTML = textContent.replace(searchContains, elem => `<span class="highlight">${elem}</span>`);
 		item.parentElement.style.display = '';
-		item.innerHTML = highlightContent;
 		return true;
 	}
 	else {
-		const span = item.getElementsByTagName('span');
-		for (let searchSpan of span) {
-			searchSpan.classList.remove('highlight');
-		}
+		item.innerHTML = textContent;
 		return false;
 	}
-}
-
-function addHighlight(match) {
-	return `<span class="highlight">${match}</span>`;
 }
 
 function updateMenuLinks(search) {
@@ -158,9 +149,7 @@ function updateMenuLinks(search) {
 	for (let title of nav.querySelectorAll('.title')) {
 		let href = title.getAttribute('href');
 		const index = href.indexOf('#search=');
-		if (index >= 0) {
-			href = href.slice(0, index);
-		}
+		href = (index >= 0) ? href.slice(0, index) : href;
 		title.setAttribute('href', href + hash);
 	}
 }
@@ -180,20 +169,14 @@ function getFormattedTagsContent(tag, foundText) {
 }
 
 function setSearch(search) {
-	if (search) {
-		location.hash = 'search=' + search;
-	}
-	else {
-		location.hash = '';
-	}
+	location.hash = (search) ? 'search=' + search : ''
 }
 
 function getSearch() {
 	const search = new RegExp(/^#search=/);
-	if (search.test(location.hash)) {
-		return location.hash.substr(search.source.length - 1).replace(/%20/g, ' ').toLowerCase();
-	}
-	return '';
+	return (search.test(location.hash))
+		? location.hash.substr(search.source.length - 1).replace(/%20/g, ' ').toLowerCase()
+		: ''
 }
 
 function init() {
