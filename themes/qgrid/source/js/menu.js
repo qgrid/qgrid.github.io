@@ -59,51 +59,42 @@ function menuItemsSearch(search) {
 	const titles = nav.querySelectorAll('.title');
 	for (let title of titles) {
 		const menuItem = title.parentElement;
-		const tags = menuItem.dataset.tag || '';
-		for (let tag of tags.split(',')) {
-			if (tag.toLowerCase().indexOf(search) >= 0 && search != '') {
-				const matchingTag = findMatchingTag(tag, search);
-				showTag(menuItem, tag, matchingTag);
+		for (let tag of getTags(menuItem)) {
+			if (search && tag.toLowerCase().indexOf(search) >= 0) {
+				appendTagText(menuItem, tag, search);
 				const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0].querySelector('a');
 				highlightText(dataShowTag, search);
 				break;
 			}
-			hideTag(menuItem, search);
+			removeTagText(menuItem, search);
 		}
-		highlightText(title, search)
-	}
-}
-
-function findMatchingTag(tag, search) {
-	for (let searchTarget of tag.split(' ')) {
-		let indexTarget = -1;
-		for (let arraySearch of search.split(' ')) {
-			if (indexTarget < 0 && arraySearch != '') {
-				indexTarget = searchTarget.toLowerCase().indexOf(arraySearch);
-				break;
-			}
-		}
-		const indexSearch = search.split(' ').indexOf(searchTarget.toLowerCase());
-		if ((indexTarget >= 0 || indexSearch >= 0 || search == ' ') && search != '') {
-			return searchTarget;
+		if (title.textContent[0] != '/') {
+			highlightText(title, search)
 		}
 	}
 }
 
-function showTag(menuItem, tag, searchTarget) {
+function appendTagText(menuItem, tag) {
+	menuItem.style.display = '';
 	if (menuItem.getElementsByTagName('data-show-tag').length === 0) {
-		createDataShowTag(menuItem);
+		const newTag = document.createElement('data-show-tag');
+		newTag.appendChild(document.createElement('a'));
+		menuItem.insertBefore(newTag, menuItem.children[0]);
 	}
-	focusOnTag(menuItem);
-	const a = menuItem.getElementsByTagName('data-show-tag')[0].firstChild;
-	a.textContent = getFormattedTagsContent(tag, searchTarget);
-	a.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
-	a.style.display = 'inline';
+	const title = menuItem.querySelector('.title');
+	title.classList.add('menu-item');
+	if (title.textContent[0] != '/') {
+		title.prepend("/ ");
+	}
+	const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
+	dataShowTag.style.display = '';
+	dataShowTag.firstChild.textContent = formatTag(tag);
+	dataShowTag.firstChild.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 }
 
-function hideTag(menuItem, search) {
+function removeTagText(menuItem, search) {
 	const title = menuItem.querySelector('.title');
-	menuItem.style.display = (search == '') ? '' : 'none';
+	menuItem.style.display = (search) ? 'none' : '';
 	const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
 	if (dataShowTag) {
 		dataShowTag.style.display = 'none';
@@ -112,34 +103,43 @@ function hideTag(menuItem, search) {
 	title.textContent = title.textContent.replace("/ ", '');
 }
 
-function createDataShowTag(menuItem) {
-	const newTag = document.createElement('data-show-tag');
-	newTag.appendChild(document.createElement('a'));
-	menuItem.insertBefore(newTag, menuItem.children[0]);
-}
-
-function focusOnTag(menuItem) {
-	const dataShowTag = menuItem.getElementsByTagName('data-show-tag')[0];
-	dataShowTag.style.display = '';
-	const title = menuItem.querySelector('.title');
-	menuItem.style.display = '';
-	title.classList.add('menu-item');
-	if (title.textContent[0] != '/') {
-		title.prepend("/ ");
-	}
-}
-
 function highlightText(item, search) {
 	const { textContent } = item;
-	searchContains = new RegExp(search, 'ig');
-	if (textContent[0] != '/' && searchContains.test(textContent) && search) {
+	const searchContains = new RegExp(search, 'ig');
+	if (search && searchContains.test(textContent)) {
 		item.innerHTML = textContent.replace(searchContains, elem => `<span class="highlight">${elem}</span>`);
 		item.parentElement.style.display = '';
 		return true;
 	}
-	else {
-		item.innerHTML = textContent;
-		return false;
+	item.innerHTML = textContent;
+}
+
+function formatTag(tag) {
+	let tagsContent = getSplitText(tag);
+	const matchingText = matchText(tagsContent);
+	const index = tagsContent.indexOf(matchingText);
+	if (tagsContent.length > 3) {
+		if (index < tagsContent.length - 3) {
+			tagsContent.splice(index + 2, tagsContent.length - 1, ' ...');
+		}
+		if (index > 0) {
+			tagsContent.splice(0, index, '...');
+		}
+	}
+	return tagsContent.join('');
+}
+
+function matchText(tag) {
+	for (let searchTarget of tag) {
+		let indexSearch = -1;
+		const search = getSearch();
+		for (let arraySearch of getSplitText(search)) {
+			indexSearch = (indexSearch < 0 && arraySearch.length > 1) ? searchTarget.toLowerCase().indexOf(arraySearch) : indexSearch;
+		}
+		const indexTarget = searchTarget.toLowerCase().indexOf(search);
+		if (indexTarget >= 0 || indexSearch >= 0) {
+			return searchTarget;
+		}
 	}
 }
 
@@ -154,18 +154,9 @@ function updateMenuLinks(search) {
 	}
 }
 
-function getFormattedTagsContent(tag, foundText) {
-	let tagsContent = tag.split(' ');
-	const index = tagsContent.indexOf(foundText);
-	if (tagsContent.length > 2) {
-		if (index < tagsContent.length - 2) {
-			tagsContent.splice(index + 2, tagsContent.length, '...');
-		}
-		if (index > 0) {
-			tagsContent.splice(0, index, '...');
-		}
-	}
-	return tagsContent.join(' ');
+function getSplitText(text) {
+	const template = new RegExp(/\s?[a-z,A-Z,0-9,&,-]*/, 'g');
+	return text.match(template);
 }
 
 function setSearch(search) {
@@ -177,6 +168,11 @@ function getSearch() {
 	return (search.test(location.hash))
 		? location.hash.substr(search.source.length - 1).replace(/%20/g, ' ').toLowerCase()
 		: ''
+}
+
+function getTags(menuItem) {
+	const tags = menuItem.dataset.tag || '';
+	return tags.split(',');
 }
 
 function init() {
