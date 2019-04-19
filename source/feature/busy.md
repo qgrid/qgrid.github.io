@@ -1,7 +1,7 @@
 ---
 title: Busy Indicator
 group: Features
-order: 16
+order: -1
 ---
 
 The q-grid service provides access to control progress bar visibility.

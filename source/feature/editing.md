@@ -1,7 +1,7 @@
 ---
 title: Editing
 group: Features
-order: 8
+order: -1
 ---
 
 There are situations when the end user need to edit data, in this case the q-grid provides a lot of possibilities. Setup edit mode equals to `cell` to turn on editing, use `canEdit` column attribute to disable editing of particular columns.
@@ -92,7 +92,7 @@ export class MyComponent {
 Use edit trigger component to show auto generated form that allows to change appropriate row data.
 
 ```html
-<q-grid [rows]="rows | async" [columns]="columns" editMode="row">
+<q-grid [rows]="rows$ | async" [columns]="columns" editMode="row">
     <q-grid-columns>
         <q-grid-column key="editForm" type="row-options" pin="left">
             <ng-template for="body" let-$cell>

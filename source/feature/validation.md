@@ -1,7 +1,7 @@
 ---
 title: Validation
 group: Features
-order: 9
+order: -1
 ---
 
 The q-grid validation is based on language independent validation rules called LIVR. Use `q-grid-rule` component to specify which specifications should be applied to appropriate column.

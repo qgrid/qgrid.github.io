@@ -1,7 +1,7 @@
 ---
 title: Legend
 group: Features
-order: 16
+order: -1
 ---
 
 To show hints or additional information use `q-grid-legend` component.

@@ -1,14 +1,10 @@
 ---
 title: Filtering
 group: Features
-order: 12
+order: 3
 ---
 
-There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary.
-
-## Setup
-
-Use q-grid model to setup filter options.
+There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary. Use q-grid model to setup filter options.
 
 ```javascript
 gridModel.filter({

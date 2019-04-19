@@ -1,14 +1,10 @@
 ---
 title: Cell Templates
 group: Features
-order: 3
+order: 2
 ---
 
 There are situations when the end user need to apply custom templates to the column cells in the q-grid. The q-grid provides clean and intuitive solution for this case. The preferred way to define a cell template is to you `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` triggers to fill in the appropriate cell containers.
-
-## Body Template
-
-Body templates are responsible for the column content rendering.
 
 ```html
 <q-grid>
@@ -22,9 +18,7 @@ Body templates are responsible for the column content rendering.
 </q-grid>
 ```
 
-## Head Template
-
-Head templates are responsible for the column header rendering.
+## How to change column header template?
 
 ```html
 <q-grid>
@@ -46,7 +40,7 @@ Head templates are responsible for the column header rendering.
 </q-grid>
 ```
 
-## Edit Template
+## How to change cell editor template?
 
 Edit templates are in game when q-grid enters to the edit mode.
 

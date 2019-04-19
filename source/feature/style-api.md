@@ -1,7 +1,7 @@
 ---
 title: Style API
 group: Features
-order: 6
+order: -1
 ---
 
 Use q-grid rich css class naming system to apply specific styles. For the dynamic styles `style` state could be used, 

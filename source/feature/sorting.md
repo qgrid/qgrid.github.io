@@ -1,7 +1,7 @@
 ---
 title: Sorting
 group: Features
-order: 13
+order: 4
 ---
 
 Use q-grid sorting model to sort single and multiple data-bound columns.

@@ -1,7 +1,7 @@
 ---
-title: Grouping & Pivoting
+title: Grouping
 group: Features
-order: 10
+order: 9
 ---
 
 Use q-grid grouping model to group rows by particular columns or use own implementation.

@@ -1,7 +1,7 @@
 ---
 title: Focus
 group: Features
-order: 16
+order: -1
 ---
 
 Action is just a representation of the command that is utilized by q-grid. Use `<ng-template for="trigger">` component to customize action.
