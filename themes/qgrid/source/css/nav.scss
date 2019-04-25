@@ -48,7 +48,7 @@
 					display: inline;
 					font-size: 13px;
 					font-style: italic;
-					padding-left: 25px;
+					padding-left: 20px;
 					color: grey;
 					> span {
 						margin-left: 0;
@@ -56,9 +56,18 @@
 					}
 
 				}
-				data-show-tag > a {
+				.tag {
 					display: inline;
 				}
+				.border {
+					display: inline;
+					font-style: italic;
+					margin-left: 10px;
+					color: grey;
+				}
+			}
+			.hidden {
+				display: none !important;
 			}
 			.active-topic {
 				background-color: $accent-color;
