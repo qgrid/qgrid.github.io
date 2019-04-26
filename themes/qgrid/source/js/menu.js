@@ -1,4 +1,6 @@
-﻿function toggleVisibility(e) {
+﻿const VISIBLE_MENU_TAG_COUNT = 2;
+
+function toggleVisibility(e) {
 	const target = e.target || e.srcElement;
 	if (target.dataset.hasOwnProperty('stopPropagation')) {
 		e.stopImmediatePropagation();
@@ -121,31 +123,30 @@ function highlightText(item, search) {
 }
 
 function formatTag(tag, search) {
-	let tagsContent = split(tag);
-	const index = getIndexOfTag(tagsContent, search);
-	const visibleWordCount = 2;
-	if (tagsContent.length > visibleWordCount) {
-		if (index < tagsContent.length - visibleWordCount) {
-			tagsContent.splice(index + visibleWordCount, tagsContent.length, ' ...');
+	let tagItems = split(tag);
+	const index = indexOf(tagItems, search);
+	if (tagItems.length > VISIBLE_MENU_TAG_COUNT) {
+		if (index < tagItems.length - VISIBLE_MENU_TAG_COUNT) {
+			tagElements.splice(index + VISIBLE_MENU_TAG_COUNT, tagItems.length, ' ...');
 		}
 		if (index > 0) {
-			tagsContent.splice(0, index, '...');
+			tagItems.splice(0, index, '...');
 		}
 	}
-	return tagsContent.join('');
+	return tagItems.join('');
 }
 
-function getIndexOfTag(tag, search) {
-	const arraySearch = split(search);
-	for (let indexTag = 0; indexTag < tag.length; indexTag++) {
-		let indexSearch = 0;
-		let index = tag[indexTag].toLowerCase().indexOf(arraySearch[indexSearch]);
+function indexOf(tagItems, search) {
+	const searchItems = split(search);
+	for (let i = 0; i < tagItems.length; i++) { 
+		let item = 0;
+		let index = tagItems[i].toLowerCase().indexOf(searchItems[item]);
 		while (index >= 0) {
-			if (indexSearch == arraySearch.length - 1) {
-				return indexTag;
+			if (item === searchItems.length - 1) {
+				return i;
 			}
-			indexSearch++;
-			index = tag[indexSearch + indexTag].toLowerCase().indexOf(arraySearch[indexSearch]);
+			item++;
+			index = tagItems[item + i].toLowerCase().indexOf(searchItems[item]);
 		}
 	}
 }
@@ -162,19 +163,19 @@ function updateMenuLinks(search) {
 }
 
 function split(text) {
-	const template = new RegExp(/\s?[a-z,A-Z,0-9,&,-]+/, 'g');
-	return text.match(template) || text.match(/\s/, 'g');
+	const pattern = new RegExp(/\s?[a-z,A-Z,0-9,&,-]+/, 'g');
+	return text.match(pattern) || text.match(/\s/, 'g');
 }
 
 function setSearch(search) {
-	location.hash = (search) ? 'search=' + search : ''
+	location.hash = (search) ? 'search=' + search : '';
 }
 
 function getSearch() {
 	const search = new RegExp(/^#search=/);
 	return (search.test(location.hash))
 		? location.hash.substr(search.source.length - 1).replace(/%20/g, ' ').toLowerCase()
-		: ''
+		: '';
 }
 
 function getTags(menuItem) {
