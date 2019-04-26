@@ -88,24 +88,22 @@ function appendTagText(menuItem, tag, search) {
 		border.textContent = '/ ';
 	}
 	const menuTag = menuItem.querySelector('.tag');
-	menuTag.classList.remove('hidden');
 	menuTag.textContent = formatTag(tag, search);
 	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 }
 
 function removeTagText(menuItem, search) {
 	const title = menuItem.querySelector('.title');
+	title.classList.remove('menu-item');
 	if (search) {
 		menuItem.classList.add('hidden');
 	}
 	else {
 		menuItem.classList.remove('hidden');
 	}
-	const tag = menuItem.querySelector('.tag');
-	if (tag) {
-		tag.classList.add('hidden');
+	if (menuItem.querySelector('.tag')) {
+		menuItem.removeChild(menuItem.querySelector('.tag'));
 	}
-	title.classList.remove('menu-item');
 	if (menuItem.querySelector('.border')) {
 		menuItem.removeChild(menuItem.querySelector('.border'));
 	}
@@ -127,7 +125,7 @@ function formatTag(tag, search) {
 	const index = indexOf(tagItems, search);
 	if (tagItems.length > VISIBLE_MENU_TAG_COUNT) {
 		if (index < tagItems.length - VISIBLE_MENU_TAG_COUNT) {
-			tagElements.splice(index + VISIBLE_MENU_TAG_COUNT, tagItems.length, ' ...');
+			tagItems.splice(index + VISIBLE_MENU_TAG_COUNT, tagItems.length, ' ...');
 		}
 		if (index > 0) {
 			tagItems.splice(0, index, '...');
@@ -138,7 +136,7 @@ function formatTag(tag, search) {
 
 function indexOf(tagItems, search) {
 	const searchItems = split(search);
-	for (let i = 0; i < tagItems.length; i++) { 
+	for (let i = 0; i < tagItems.length; i++) {
 		let item = 0;
 		let index = tagItems[i].toLowerCase().indexOf(searchItems[item]);
 		while (index >= 0) {
@@ -146,7 +144,7 @@ function indexOf(tagItems, search) {
 				return i;
 			}
 			item++;
-			index = tagItems[item + i].toLowerCase().indexOf(searchItems[item]);
+			index = tagItems[i + item].toLowerCase().indexOf(searchItems[item]);
 		}
 	}
 }
