@@ -64,8 +64,8 @@ function menuItemsSearch(search) {
 		for (let tag of getTags(menuItem)) {
 			if (search && tag.toLowerCase().indexOf(search) >= 0) {
 				appendTagText(menuItem, tag, search);
-				const dataShowTag = menuItem.querySelector('.tag');
-				highlightText(dataShowTag, search);
+				const menuTag = menuItem.querySelector('.tag');
+				highlightText(menuTag, search);
 				break;
 			}
 			removeTagText(menuItem, search);
@@ -76,12 +76,12 @@ function menuItemsSearch(search) {
 
 function appendTagText(menuItem, tag, search) {
 	menuItem.classList.remove('hidden');
+	const title = menuItem.querySelector('.title');
+	title.classList.add('menu-item');
 	if (!menuItem.querySelector('.tag')) {
 		menuItem.insertBefore(document.createElement('a'), menuItem.querySelector('.title'));
 		menuItem.querySelector('a').classList.add('tag');
 	}
-	const title = menuItem.querySelector('.title');
-	title.classList.add('menu-item');
 	if (!menuItem.querySelector('.border')) {
 		const border = menuItem.insertBefore(document.createElement('span'), menuItem.querySelector('.title'));
 		border.classList.add('border');
@@ -93,8 +93,7 @@ function appendTagText(menuItem, tag, search) {
 }
 
 function removeTagText(menuItem, search) {
-	const title = menuItem.querySelector('.title');
-	title.classList.remove('menu-item');
+	menuItem.querySelector('.title').classList.remove('menu-item');
 	if (search) {
 		menuItem.classList.add('hidden');
 	}
@@ -111,8 +110,8 @@ function removeTagText(menuItem, search) {
 
 function highlightText(item, search) {
 	const { textContent } = item;
-	const searchContains = new RegExp(search, 'ig');
-	if (search && searchContains.test(textContent)) {
+	const searchContains = new RegExp(escapeRegexp(search), 'ig');
+	if (search && searchContains.test(textContent.toLowerCase())) {
 		item.innerHTML = textContent.replace(searchContains, elem => `<span class="highlight">${elem}</span>`);
 		item.parentElement.classList.remove('hidden');
 		return true;
@@ -161,8 +160,12 @@ function updateMenuLinks(search) {
 }
 
 function split(text) {
-	const pattern = new RegExp(/\s?[a-z,A-Z,0-9,&,-]+/, 'g');
+	const pattern = new RegExp(/\s?[a-z,A-Z,0-9,&,$,-]+/, 'g');
 	return text.match(pattern) || text.match(/\s/, 'g');
+}
+
+function escapeRegexp(text) {
+	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
 
 function setSearch(search) {
