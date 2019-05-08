@@ -121,7 +121,8 @@ function highlightText(item, search) {
 
 function formatTag(tag, search) {
 	let tagItems = split(tag);
-	const index = indexOf(tagItems, search);
+	const searchItems = split(search);
+	const index = indexOf(tagItems, searchItems);
 	if (tagItems.length > VISIBLE_MENU_TAG_COUNT) {
 		if (index < tagItems.length - VISIBLE_MENU_TAG_COUNT) {
 			tagItems.splice(index + VISIBLE_MENU_TAG_COUNT, tagItems.length, ' ...');
@@ -133,17 +134,16 @@ function formatTag(tag, search) {
 	return tagItems.join('');
 }
 
-function indexOf(tagItems, search) {
-	const searchItems = split(search);
+function indexOf(tagItems, searchItems) {
 	for (let i = 0; i < tagItems.length; i++) {
-		let item = 0;
-		let index = tagItems[i].toLowerCase().indexOf(searchItems[item]);
+		let num = 0;
+		let index = tagItems[i].toLowerCase().indexOf(searchItems[num]);
 		while (index >= 0) {
-			if (item === searchItems.length - 1) {
+			if (num === searchItems.length - 1) {
 				return i;
 			}
-			item++;
-			index = tagItems[i + item].toLowerCase().indexOf(searchItems[item]);
+			num++;
+			index = tagItems[i + num].toLowerCase().indexOf(searchItems[num]);
 		}
 	}
 }
@@ -160,8 +160,8 @@ function updateMenuLinks(search) {
 }
 
 function split(text) {
-	const pattern = new RegExp(/\s?[a-z,A-Z,0-9,&,$,-]+/, 'g');
-	return text.match(pattern) || text.match(/\s/, 'g');
+	const pattern = new RegExp(/\s?[a-z,A-Z,0-9,&,$,\[,\-,\],\.]+|\s/, 'g');
+	return text.match(pattern);
 }
 
 function escapeRegexp(text) {
