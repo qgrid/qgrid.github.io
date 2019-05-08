@@ -20,13 +20,21 @@
                             .filter(function(page) { 
                                 return page.order >= 0; 
                             });
+
                     pages.sort(function (a, b) {
                         return a.order - b.order;
                     });
+                    var pattern = new RegExp(/\s##\s[A-Z,a-z,0-9, ,\-,&,%,$,\[,\],\.]+/, 'g');
                     for (var j = 0; j < pages.length; j++) {
                         var p = pages[j];
+                        var tags = p.raw.match(pattern);
+                        if (tags) {
+                            for (var k = 0; k < tags.length; k++){
+                                tags[k] = tags[k].replace(/\s##\s\[?|\]?/g, '');
+                            }
+                    }
         %>
-                        <li  data-tag="<%- p.tags ? p.tags : '' %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
+                            <li  data-tag="<%- tags %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
         <%     
                             if (page.title === p.title) {
         %>
