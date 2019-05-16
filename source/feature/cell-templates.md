@@ -4,7 +4,7 @@ group: Features
 order: 2
 ---
 
-There are situations when the end user need to apply custom templates to the column cells in the q-grid. The q-grid provides clean and intuitive solution for this case. The preferred way to define a cell template is to you `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` triggers to fill in the appropriate cell containers.
+There are situations when the end user need to apply custom templates to the column cells. The preferred way is to use `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` options to control when need to apply appropriate template.
 
 ```html
 <q-grid>
@@ -19,6 +19,8 @@ There are situations when the end user need to apply custom templates to the col
 ```
 
 ## How to change column header template?
+
+Default header template contains sort and filter components that could be used in custom templates also.
 
 ```html
 <q-grid>

@@ -124,7 +124,7 @@ Use `pin` property in column definition to control if the column should be pinne
 
 ## How to define column order?
 
-Column order depends on `index` property and column definition position. Position in the column list defined in TypeScript has higher priority than position defined in HTML. 
+Column order depends on `index` property and column definition position. Column position defined in TypeScript has higher priority than position defined in HTML. 
 
 ```html
 <q-grid>
@@ -135,8 +135,6 @@ Column order depends on `index` property and column definition position. Positio
    </q-grid-columns>
 </q-grid>
 ```
-
-
 
 ## Suggested Links
 
