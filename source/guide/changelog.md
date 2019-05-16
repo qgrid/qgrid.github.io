@@ -11,6 +11,35 @@ order: 4
 * Float rows navigation.
 * Grouped rows navigation improvements.
 
+## [6.4.0] - 2019-05-14
+### Added
+- Column filter modes.
+
+### Fixed
+- Selection toggle command can control checkbox disable state.
+
+## [6.3.9] - 2019-04-24
+### Added
+- Dropdown supports array of objects.
+
+## [6.3.8] - 2019-04-15
+### Fixed
+- Support right pinned column in details mode.
+
+## [6.3.7] - 2019-04-12
+### Fixed
+- Propagate `description` property in column component.
+- Reset scroll only if page size, page or filter was changed.
+- Better pagination behavior when after data rows changed.
+
+## [6.3.5] - 2019-04-11
+### Changed
+- `Focus service` takes into account pagination.
+
+### Fixed
+- Compatibility with Chrome implementation of flex box overflow since version 73.
+- Select all button.
+
 ## [6.3.4] - 2019-03-12
 ### Fixed
 - Default import template is shown up.
@@ -349,7 +378,12 @@ order: 4
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v6.3.4...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v6.4.0...HEAD
+[6.4.0]: https://github.com/qgrid/ng2/compare/v6.3.9...v6.4.0
+[6.3.9]: https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.9
+[6.3.8]: https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.8
+[6.3.7]: https://github.com/qgrid/ng2/compare/v6.3.5...v6.3.7
+[6.3.5]: https://github.com/qgrid/ng2/compare/v6.3.4...v6.3.5
 [6.3.4]: https://github.com/qgrid/ng2/compare/v6.3.0...v6.3.4
 [6.3.0]: https://github.com/qgrid/ng2/compare/v6.2.4...v6.3.0
 [6.2.4]: https://github.com/qgrid/ng2/compare/v6.2.4...v6.2.3
