@@ -4,7 +4,7 @@ group: Features
 order: 1
 ---
 
-Use column generation mode for a quick start, `shallow`, `deep` and `cohort` options are available.
+Use column generation mode for a quick start. Try `shallow`, `deep` or `cohort` options to explore data in depth.
     
 ```typescript
 @Component({
@@ -24,7 +24,7 @@ export class MyComponent {
 }
 ```
 
-> q-grid generation supports only objects in the array, if array item type is primitive q-grid won't be able to render it.
+> q-grid column generator supports only array of objects in rows, if row type is primitive it won't be rendered.
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
@@ -46,9 +46,9 @@ Use `q-grid-column` components to explicitly declare list of columns to show, co
 </q-grid>
 ```
 
-## Structural directives
+## Structural Directives
 
-The q-grid allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
+Component system allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
 
 ```html
 <q-grid [ngSwitch]="group">
@@ -107,6 +107,19 @@ export class MyComponent implements AfterViewInit {
       });
    }
 }
+```
+
+## How to make column frozen?
+
+Use `pin` property in column definition to control if the column should be pinned either to the right or to the left.
+
+```html
+<q-grid>
+   <q-grid-columns>
+      <q-grid-column key="firstName" title="First Name" pin="left"></q-grid-column>
+      <q-grid-column key="lastName" title="Last Name"></q-grid-column>
+   </q-grid-columns>
+</q-grid>
 ```
 
 ## How to define column order?
