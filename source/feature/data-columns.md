@@ -24,6 +24,8 @@ export class MyComponent {
 }
 ```
 
+> q-grid generation supports only objects in the array, if array item type is primitive q-grid won't be able to render it.
+
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
 ## Column Definitions

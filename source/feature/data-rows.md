@@ -16,15 +16,13 @@ Any array of objects can be directly bind to the q-grid, if `observable` is used
       `
 })
 export class MyComponent {
-   rows$: Observable<MyRow[]>;
+   rows$: Observable<any[]>;
 
    constructor(dataService: MyDataService) {
       this.rows$ = dataService.getRows();
    }
 }
 ```
-
-> Only array of objects is supported, if primitive types are used the q-grid won't be able to process it.
 
 ## How to setup rows using q-grid model?
 
@@ -44,6 +42,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       const { model } = this.myGrid;
+      
       dataService
          .getRows()
          .subscribe(rows => model.data({ rows }));
@@ -53,7 +52,7 @@ export class MyComponent implements AfterViewInit {
 
 ## How to make rows frozen?
 
-Use `row` model to make rows frozen.
+Use `row` state in the q-grid model to control which rows to pin.
 
 ```typescript
 @Component({
@@ -81,7 +80,7 @@ export class MyComponent implements AfterViewInit {
 
 ## How to enable row drag & drop and resizing?
 
-Use `q-grid-row` component.
+By setting up `canMove` and `canResize` inputs in the `q-grid-row` component or by using `row` state in the q-grid model.
 
 ```html
 <q-grid>

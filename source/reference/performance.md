@@ -20,6 +20,7 @@ The q-grid introduces 3 modes that allows to change performance strategy.
 {% docEditor "github/qgrid/ng2-example/tree/interaction-mode-detached/latest" %}
 
 ## Invalidate q-grid explicitly
+
 When interaction mode is equal to readonly or detached use `invalidate` method to refresh cell values or create a `new reference` of the data rows.
 
 ```typescript
