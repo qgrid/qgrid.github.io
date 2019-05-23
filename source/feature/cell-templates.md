@@ -4,7 +4,7 @@ group: Features
 order: 2
 ---
 
-There are situations when the end user need to apply custom templates to the column cells. The preferred way is to use `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` options to control when need to apply appropriate template.
+There are situations when cell custom templates need to be applied. Use `ng-template` inside the `q-grid-column` and `head`, `body`, `foot`, `edit` options to identify template location.
 
 ```html
 <q-grid>
@@ -24,14 +24,12 @@ Default header template contains sort and filter components that could be used i
 
 ```html
 <q-grid>
-   <q-grid-columns>
-      <ng-template for="head" let-$cell>
+   <q-grid-columns>     
       <q-grid-column key="age" title="Age" type="number">
+         <ng-template for="head" let-$cell>
             <q-grid-column-sort class="q-grid-sort"
                                 [column]="$cell.column">
-                  <label [matTooltip]="$cell.column.description">
-                     {{$cell.column.title}}
-                  </label>
+               {{$cell.column.title}}
             </q-grid-column-sort>
             <q-grid-column-filter-trigger class="q-grid-column-filter-trigger"                                       
                                           [column]="$cell.column">
