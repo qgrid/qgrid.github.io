@@ -1,5 +1,5 @@
 ---
-title: Custom themes
+title: How to made a theme
 group: Customization
 order: 2
 ---
