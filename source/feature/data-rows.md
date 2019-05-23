@@ -26,7 +26,7 @@ export class MyComponent {
 
 ## How to setup rows using q-grid model?
 
-The preferred way is to use `GridComponent`, note that component will be available only after `ngAfterViewInit` hook being passed.
+The preferred way to obtain q-grid model is to use `GridComponent` that will be available only after `ngAfterViewInit` hook being triggered.
 
 ```typescript
 import { GridComponent } from 'ng2-qgrid';
@@ -78,7 +78,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to enable row drag & drop and resizing?
+## How to enable row resizing and drag & drop?
 
 By setting up `canMove` and `canResize` inputs in the `q-grid-row` component or by using `row` state in the q-grid model.
 

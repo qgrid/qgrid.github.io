@@ -10,6 +10,8 @@ npm install ng2-qgrid
 
 ## Add q-grid & theme modules to the application root
 
+Two themes are supported out of box `material` and `basic`, the first one requires `@angular/material` to be installed.
+
 ```typescript
 import { GridModule } from 'ng2-qgrid';
 import { ThemeModule } from 'ng2-qgrid/theme/material';
@@ -24,9 +26,9 @@ export class AppModule {
 }
 ```
 
-> The q-grid supports 2 themes out of box `material` and `basic`, the first one requires `@angular/material` to be installed.
-
 ## Create an angular component
+
+Use column generation mode for a quick start.
 
 ```typescript
 @Component({
@@ -46,8 +48,6 @@ export class MyComponent {
    }
 }
 ```
-
-> Only array of objects is supported, if primitive types are used the q-grid won't be able to process it.
 
 ## Dependencies
 

@@ -4,7 +4,7 @@ group: Features
 order: 1
 ---
 
-Use column generation mode for a quick start. Try `shallow`, `deep` or `cohort` options to explore data in depth.
+Use column auto generation modes for a quick start, try `shallow`, `deep` or `cohort` options to explore data in depth.
     
 ```typescript
 @Component({
@@ -24,7 +24,7 @@ export class MyComponent {
 }
 ```
 
-> q-grid column generator supports only array of objects in rows, if row type is primitive it won't be rendered.
+> Column generator supports only array of objects in rows, if row type is primitive it won't be rendered.
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
@@ -46,7 +46,7 @@ Use `q-grid-column` components to explicitly declare list of columns to show, co
 </q-grid>
 ```
 
-## Structural Directives
+## Structural directives and column visibility
 
 Component system allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
 
@@ -85,7 +85,7 @@ export class MyComponent {
 
 ## How to define columns using q-grid model?
 
-The preferred way is to use `GridComponent`, note that component will be available only after `ngAfterViewInit` hook being passed.
+The preferred way to obtain q-grid model is to use `GridComponent` that will be available only after `ngAfterViewInit` hook being triggered.
 
 ```typescript
 @Component({
@@ -109,7 +109,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to make column frozen?
+## How to make columns frozen?
 
 Use `pin` property in column definition to control if the column should be pinned either to the right or to the left.
 
@@ -124,7 +124,7 @@ Use `pin` property in column definition to control if the column should be pinne
 
 ## How to define column order?
 
-Column order depends on `index` property and column definition position. Column position defined in TypeScript has higher priority than position defined in HTML. 
+Column order depends on `index` property and column definition position. If column index was not explicitly setup columns defined in TypeScript have higher priority than defined in HTML. 
 
 ```html
 <q-grid>

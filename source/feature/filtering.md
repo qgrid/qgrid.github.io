@@ -4,14 +4,14 @@ group: Features
 order: 3
 ---
 
-There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary. Use q-grid model to setup filter options.
+Use q-grid model to setup row filter options.
 
 ```javascript
 gridModel.filter({
    by: {
-      myTextColumn: { items: ['foo', 'bar'] },
-      myCurrencyColumn: { blanks: true },
-      myNumberColumn: { 
+      showAllSmithsColumnKey: { items: ['Smith'] },
+      showEmptyRowsColumnKey: { blanks: true },
+      showSmithAndBranColumnKey: { 
          expression: {
             kind: 'group',
             op: 'and',
@@ -19,7 +19,7 @@ gridModel.filter({
                kind: 'condition',
                left: key,
                op: 'in',
-               right: ['foo', 'bar']
+               right: ['Smith', 'Bran']
             },
             right: null
          }
@@ -27,24 +27,6 @@ gridModel.filter({
    }
 });
 ```
-
-## Column Filters
-
-```typescript
-import { FetchContext } from 'ng2-qgrid';
-
-@Component({
-      template: '<q-grid [filterFetch]="getFilterItems"></q-grid>',
-})
-export class MyComponent {
-   getFilterItems(key: string, context: FetchContext) {
-      const { search, take, skip } = context;
-      return dataService.getFilterItemsFor(key, search, take, skip);
-   }
-}
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/filter-column-fetch/latest" %}
 
 ## Filter Row
 
@@ -93,7 +75,6 @@ export class ExampleFilterRowCustomComponent {
 
 Use query builder component to add unlimited possibilities to filter data out using convenient hierarchical UI.
 
-
 ```javascript
 gridModel.filter({
    by: {
@@ -138,6 +119,34 @@ gridModel.filter({
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
 
+## How to propagate list of filter items from the server?
+
+```typescript
+import { FetchContext } from 'ng2-qgrid';
+
+@Component({
+      template: '<q-grid [filterFetch]="getFilterItems"></q-grid>',
+})
+export class MyComponent {
+   getFilterItems(key: string, context: FetchContext) {
+      const { search, take, skip } = context;
+      return dataService.getFilterItemsFor(key, search, take, skip);
+   }
+}
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/filter-column-fetch/latest" %}
+
+## How to disable filter of particular column?
+
+Each column has `canFilter` property that could be used as indicator if filter is applicable or not.
+
+```html
+<q-grid>
+   <q-grid-column key="noFilter" [canFilter]="false"></q-grid-column>
+</q-grid>
+```
+
 ## Expression Contract
 
 By supporting q-grid expression contract building any custom filters with complex logic should not be a problem.
@@ -165,6 +174,7 @@ By supporting q-grid expression contract building any custom filters with comple
       | 'notLike'
 }
 ```
+
 ## Suggested Links
 
 * [Standalone expression builder](https://github.com/qgrid/ng2-expression-builder)
