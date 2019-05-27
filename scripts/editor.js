@@ -1,10 +1,24 @@
 const helper = args => {
   const name = args[0];
-  const file = "app/app.component.html";
   const path = name.indexOf('github') >= 0 ? name : `edit/${name}`
+
+  const options = {
+    embed: 1,
+    file: args[1] || 'app/app.component.ts',
+    hideExplorer: 1,
+    hideNavigation: 0,
+    hidedevtools: 1,
+    view: 'preview'
+  };
+
+  const query = Object
+    .keys(options)
+    .map(key => `${key}=${options[key]}`)
+    .join('&');
+
   return `
     <span class="editor">
-      <iframe data-src="//stackblitz.com/${path}?embed=1&file=${file}&hideNavigation=1&view=preview"></iframe>
+      <iframe data-src="//stackblitz.com/${path}?${query}"></iframe>
     </span>
 `;
 };
