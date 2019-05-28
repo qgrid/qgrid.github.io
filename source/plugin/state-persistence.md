@@ -1,7 +1,7 @@
 ---
 title: State Persistence
-group: Features
-order: -1
+group: Plugins
+order: 6
 ---
 
 To allow save/load q-grid state use `q-grid-persistence` component, both client and server side configurations are supported.

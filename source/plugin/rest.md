@@ -1,7 +1,7 @@
 ---
 title: REST
-group: Features
-order: -1
+group: Plugins
+order: 5
 ---
 
 Use REST plugin to connect q-grid with back-end. For sure back-end service should support query string that q-grid produces but again it's possible to change the output format by overriding `serialize` method in the q-grid model. 

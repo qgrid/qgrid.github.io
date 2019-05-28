@@ -1,7 +1,7 @@
 ---
-title: Export/Import
-group: Features
-order: -1
+title: Export to File
+group: Plugins
+order: 2
 ---
 
 Use q-grid import plugin to fill in rows with data from files.
