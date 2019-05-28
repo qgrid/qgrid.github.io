@@ -6,6 +6,24 @@ order: 3
 
 ## Installation
 
+Add import module to imports section.
+
+```typescript
+import { GridModule } from 'ng2-qgrid';
+import { ThemeModule } from 'ng2-qgrid/theme/material';
+import { ImportModule } from 'ng2-qgrid/plugin/import';
+
+@NgModule({
+   imports: [
+      GridModule,
+      ThemeModule,
+      ImportModule
+   ]
+})
+export class AppModule {
+}
+```
+
 Add angular component inside of q-grid component, after that a new action should appear.
 
 ```typescript

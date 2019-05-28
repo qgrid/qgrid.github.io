@@ -51,7 +51,7 @@ export class MyComponent {
    rows$: Observable<Human[]>;
 
    constructor(dataService: MyDataService) {
-         this.rows$ = dataService.getHumans();
+      this.rows$ = dataService.getHumans();
    }
 
    humanFactory() {

@@ -44,7 +44,7 @@ export class MyComponent {
    rows$: Observable<any[]>;
 
    constructor(dataService: MyDataService) {
-         this.rows$ = dataService.getRows();
+      this.rows$ = dataService.getRows();
    }
 }
 ```
