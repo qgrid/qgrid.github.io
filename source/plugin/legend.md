@@ -1,6 +1,6 @@
 ---
 title: Legend
-group: Features
+group: Plugins
 order: 4
 ---
 

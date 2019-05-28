@@ -28,7 +28,7 @@ export class AppModule {
 }
 ```
 
-Add an angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that a new action should appear.
 
 ```typescript
 @Component({
@@ -41,7 +41,7 @@ Add an angular component inside of q-grid component, after that a new action sho
             <q-grid-condition-builder>
             </q-grid-condition-builder>
       </q-grid>
-      `
+   `
 })
 export class MyComponent {
    rows$: Observable<any[]>;
