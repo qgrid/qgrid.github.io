@@ -6,7 +6,7 @@ const helper = args => {
     embed: 1,
     file: args[1] || 'app/app.component.ts',
     hideExplorer: 1,
-    hideNavigation: 0,
+    hideNavigation: 1,
     hidedevtools: 1,
     view: 'preview'
   };
