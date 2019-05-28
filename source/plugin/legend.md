@@ -4,7 +4,7 @@ group: Plugins
 order: 4
 ---
 
-To show hints or additional information use `q-grid-legend` component.
+To show hints or additional information use `q-grid-legend` plugin.
 
 {% docEditor "github/qgrid/ng2-example/tree/legend-grid-basic/latest" %}
 
@@ -28,7 +28,7 @@ export class AppModule {
 }
 ```
 
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component and override legend template regarding to the task.
 
 ```typescript
 @Component({

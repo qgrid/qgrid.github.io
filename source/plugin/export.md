@@ -4,7 +4,7 @@ group: Plugins
 order: 2
 ---
 
-Use q-grid export plugin to fill in rows with data from files on client side.
+Use q-grid export plugin to build data files of required format on client side.
 
 {% docEditor "github/qgrid/ng2-example/tree/export-basic/latest" %}
 

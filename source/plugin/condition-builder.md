@@ -4,7 +4,7 @@ group: Plugins
 order: 0
 ---
 
-Use query builder component to add unlimited possibilities to filter data using convenient hierarchical UI.
+Use query builder plugin to add unlimited possibilities to filter data using convenient hierarchical UI.
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
 

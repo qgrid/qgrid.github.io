@@ -4,23 +4,47 @@ group: Plugins
 order: 5
 ---
 
-Use REST plugin to connect q-grid with back-end. For sure back-end service should support query string that q-grid produces but again it's possible to change the output format by overriding `serialize` method in the q-grid model. 
+Use REST plugin to connect q-grid with back-end directly.
 
-```html
-<q-grid>
-   <q-grid-rest [url]="myServiceUrl" method="GET"></q-grid-rest>
-</q-grid>
+## Installation
+
+Add rest module to imports section.
+
+```typescript
+import { GridModule } from 'ng2-qgrid';
+import { ThemeModule } from 'ng2-qgrid/theme/material';
+import { RestModule } from 'ng2-qgrid/plugin/rest';
+
+@NgModule({
+   imports: [
+      GridModule,
+      ThemeModule,
+      RestModule
+   ]
+})
+export class AppModule {
+}
 ```
 
-## GET Method Contract
+Add angular component inside of q-grid component, after that a new action should appear.
 
-By default if GET method is used q-grid produces next url for filtering, sorting and pagination.
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid>
+         <q-grid-rest [url]="myServiceUrl" method="GET"></q-grid-rest>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   myServiceUrl = 'http://localhost:4000/exampleData'
+}
+```
 
-`?filter=lastName=in:Doe,Jones;firstName=in:John,Harry&order=+firstName,-lastName&skip=100&take=50`
+## POST Method
 
-## POST Method Contract
-
-By default if POST method is used q-grid produces next request body.
+Next body is produced for filtering, sorting and pagination.
 
 ```javascript
 {
@@ -31,21 +55,28 @@ By default if POST method is used q-grid produces next request body.
 }
 ```
 
-## Custom Contract
+## GET Method
 
-The q-grid allows to override data contracts that are produced by REST plugin.
+Next url is produced for filtering, sorting and pagination.
+
+`?filter=lastName=in:Doe,Jones;firstName=in:John,Harry&order=+firstName,-lastName&skip=100&take=50`
+
+## How to make a custom contract?
+
+Override `serialize` method to change request output.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-   <q-grid>
-      <q-grid-rest url="qgrid.github.io" method="POST"></q-grid-rest>
-   </q-grid>
+     <q-grid>
+       <q-grid-rest [url]="myServiceUrl" method="POST"></q-grid-rest>
+     </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
    ViewChild(GridComponent) myGrid: GridComponent;   
+   myServiceUrl = 'http://localhost:4000/exampleData'
 
    ngAfterViewInit() {
       const { model } = this.myGrid;      
