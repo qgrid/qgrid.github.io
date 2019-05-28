@@ -35,8 +35,8 @@ Use column generation mode for a quick start.
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-            <q-grid-columns generation="deep">
-            </q-grid-columns>
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
       </q-grid>
       `
 })

@@ -67,27 +67,27 @@ import * as xlsx from 'xlsx';
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-        <q-grid-columns generation="deep">
-        </q-grid-columns>
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
 
-        <q-grid-import>
-        </q-grid-import>
+         <q-grid-import>
+         </q-grid-import>
       </q-grid>
    `
 })
 export class MyComponent {
-  @ViewChild(GridComponent) myGrid: GridComponent;
-  rows$: Observable<any[]>;
+   @ViewChild(GridComponent) myGrid: GridComponent;
+   rows$: Observable<any[]>;
 
-  constructor(dataService: MyDataService) {
-    this.rows$ = dataService.getRows();
-  }
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
 
-  ngAfterViewInit() {
-    this.myGrid.model.plugin({
-      imports: { xlsx }
-    });
-  }
+   ngAfterViewInit() {
+      this.myGrid.model.plugin({
+         imports: { xlsx }
+      });
+   }
 }
 ```
 
@@ -97,11 +97,11 @@ Use ng-template to override default import action template.
 
 ```html
 <q-grid-import>
-  <ng-template for="trigger" let-$action>
-    <button mat-button (click)="$action.execute()">
-      Custom import
-    </button>
-  </ng-template>
+   <ng-template for="trigger" let-$action>
+      <button mat-button (click)="$action.execute()">
+         Custom import
+      </button>
+   </ng-template>
 </q-grid-import>
 ```
 

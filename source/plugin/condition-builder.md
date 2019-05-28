@@ -35,11 +35,11 @@ Add angular component inside of q-grid component, after that a new action should
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-            <q-grid-columns generation="deep">
-            </q-grid-columns>
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
 
-            <q-grid-condition-builder>
-            </q-grid-condition-builder>
+         <q-grid-condition-builder>
+         </q-grid-condition-builder>
       </q-grid>
    `
 })

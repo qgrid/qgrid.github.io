@@ -55,17 +55,17 @@ export class MyComponent {
    }
 
    humanFactory() {
-       return new Human();
+      return new Human();
    }
 
    submit() {
-       const { added, edited, deleted } = gridModel.dataManipulation();
+      const { added, edited, deleted } = gridModel.dataManipulation();
 
-       dataService
-          .addPeople(added)
-          .editPeople(edited)
-          .deletePeople(deleted)
-          .save();
+      dataService
+         .addPeople(added)
+         .editPeople(edited)
+         .deletePeople(deleted)
+         .save();
    }
 }
 ```

@@ -43,27 +43,27 @@ import * as fileSaver from 'file-saver';
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-        <q-grid-columns generation="deep">
-        </q-grid-columns>
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
 
-        <q-grid-export type="json">
-        </q-grid-export>
+         <q-grid-export type="json">
+         </q-grid-export>
       </q-grid>
    `
 })
 export class MyComponent {
-  @ViewChild(GridComponent) myGrid: GridComponent;
-  rows$: Observable<any[]>;
+   @ViewChild(GridComponent) myGrid: GridComponent;
+   rows$: Observable<any[]>;
 
-  constructor(dataService: MyDataService) {
-    this.rows$ = dataService.getRows();
-  }
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
 
-  ngAfterViewInit() {
-    this.myGrid.model.plugin({
-      imports: { fileSaver }
-    });
-  }
+   ngAfterViewInit() {
+      this.myGrid.model.plugin({
+         imports: { fileSaver }
+      });
+   }
 }
 ```
 
@@ -85,27 +85,27 @@ import * as xlsx from 'xlsx';
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-        <q-grid-columns generation="deep">
-        </q-grid-columns>
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
 
-        <q-grid-export type="xlsx">
-        </q-grid-export>
+         <q-grid-export type="xlsx">
+         </q-grid-export>
       </q-grid>
    `
 })
 export class MyComponent {
-  @ViewChild(GridComponent) myGrid: GridComponent;
-  rows$: Observable<any[]>;
+   @ViewChild(GridComponent) myGrid: GridComponent;
+   rows$: Observable<any[]>;
 
-  constructor(dataService: MyDataService) {
-    this.rows$ = dataService.getRows();
-  }
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
 
-  ngAfterViewInit() {
-    this.myGrid.model.plugin({
-      imports: { fileSaver, xlsx }
-    });
-  }
+   ngAfterViewInit() {
+      this.myGrid.model.plugin({
+         imports: { fileSaver, xlsx }
+      });
+   }
 }
 ```
 
@@ -115,11 +115,11 @@ Use ng-template to override default export action template.
 
 ```html
 <q-grid-export type="csv">
-  <ng-template for="trigger" let-$action>
-    <button mat-button (click)="$action.execute()">
-      Custom export to CSV
-    </button>
-  </ng-template>
+   <ng-template for="trigger" let-$action>
+      <button mat-button (click)="$action.execute()">
+         Custom export to CSV
+      </button>
+   </ng-template>
 </q-grid-export>
 ```
 

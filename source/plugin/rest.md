@@ -100,3 +100,7 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
+
+## Suggested Links
+
+* [How to propagate list of items to the column filter from the server?](/feature/filtering.html#How-to-propagate-list-of-items-to-the-column-filter-from-the-server)

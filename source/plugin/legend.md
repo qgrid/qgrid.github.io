@@ -35,17 +35,17 @@ Add angular component inside of q-grid component and override legend template re
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-        <q-grid-columns generation="deep">
-        </q-grid-columns>
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
 
-        <q-grid-legend>
-          <ng-template for="content">
-            <ul class="q-grid-legend-list">
-              <li><div class="q-grid-legend-item gas"></div>Gas</li>
-              <li><div class="q-grid-legend-item solid"></div>Solid</li>
-            </ul>
-          </ng-template>
-        <q-grid-legend>
+         <q-grid-legend>
+            <ng-template for="content">
+               <ul class="q-grid-legend-list">
+                 <li><div class="q-grid-legend-item gas"></div>Gas</li>
+                 <li><div class="q-grid-legend-item solid"></div>Solid</li>
+               </ul>
+            </ng-template>
+         <q-grid-legend>
       </q-grid>
    `
 })

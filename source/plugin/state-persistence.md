@@ -4,7 +4,46 @@ group: Plugins
 order: 6
 ---
 
-To allow save/load q-grid state use `q-grid-persistence` component, both client and server side configurations are supported.
+Use persistence plugin to save and restore q-grid state.
+
+{% docEditor "github/qgrid/ng2-example/tree/persistence-basic/latest" %}
+
+## Installation
+
+Add persistence module to imports section.
+
+```typescript
+import { GridModule } from 'ng2-qgrid';
+import { ThemeModule } from 'ng2-qgrid/theme/material';
+import { PersistenceModule } from 'ng2-qgrid/plugin/persistence';
+
+@NgModule({
+   imports: [
+      GridModule,
+      ThemeModule,
+      PersistenceModule
+   ]
+})
+export class AppModule {
+}
+```
+
+Add angular component inside of q-grid component, after that a new action should appear.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid>
+         <q-grid-persistence></q-grid-persistence>
+      </q-grid>
+   `
+})
+export class MyComponent {
+}
+```
+
+## How to persist state on server?
 
 ```typescript
 @Component({
@@ -15,13 +54,15 @@ To allow save/load q-grid state use `q-grid-persistence` component, both client 
    `
 })
 export class MyComponent {
-   gridModel: GridModel;
+   @ViewChild(GridComponent) myGrid: GridComponent;
 
-   constructor(private dataService: DataService, private qgrid: Grid) {
-      this.gridModel = this.qgrid.model();
-      this.gridModel.persistence({
-         storage: this.buildStorage()
-      });
+   constructor(private dataService: DataService) {
+   }
+
+   ngAfterViewInit() {
+     this.myGrid.model.persistence({
+       storage: this.buildStorage()
+     });
    }
 
    buildStorage() {
@@ -29,18 +70,16 @@ export class MyComponent {
          getItem: id =>
             new Promise(resolve => {
                this.dataService
-                  .getRows(id)
+                  .getState(id)
                   .subscribe(resolve);
             }),
-         setItem: (id, items) =>
+         setItem: (id, state) =>
             new Promise(resolve => {
                this.dataService
-                  .setRows(id, items)
+                  .setState(id, state)
                   .subscribe(resolve);
             })
       };
    }
 }
 ```
-
-{% docEditor "github/qgrid/ng2-example/tree/focus-cell-auto/latest" %}
