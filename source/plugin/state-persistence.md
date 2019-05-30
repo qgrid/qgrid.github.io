@@ -43,7 +43,7 @@ export class MyComponent {
 }
 ```
 
-## How to persist state on server?
+## How to save/load state on server?
 
 ```typescript
 @Component({

@@ -10,10 +10,6 @@ Use q-grid model to setup row filter options.
 
 Use `by` property to get or set filter settings. 
 
-* items
-* blanks
-* expression
-
 ```javascript
 gridModel.filter({
    by: {
@@ -40,7 +36,7 @@ gridModel.filter({
 
 ## How to add a filter row?
 
-To show filter controls under the column headers use `filterUnit` attribute, filter can be overridden in column template definition.
+To show filter controls under the column headers use `filterUnit` attribute, filter view can be overridden in the template definition.
 
 ```html
 <q-grid filterUnit="row">
@@ -116,3 +112,7 @@ Each column has `canFilter` property that could be used as indicator if filter i
    <q-grid-column key="noFilter" [canFilter]="false"></q-grid-column>
 </q-grid>
 ```
+
+## Suggested Links
+
+* [Data manipulation plugin](/plugin/data-manipulation.html)
