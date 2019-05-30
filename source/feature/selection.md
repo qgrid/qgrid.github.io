@@ -1,7 +1,7 @@
 ---
 title: Selection
 group: Features
-order: 6
+order: -1
 ---
 
 There are situations when the end user need to select rows or cells in the q-grid, the q-grid provides several modes to enable selection satisfaction. The simples way to setup selection is to use q-grid component for more advanced use cases q-grid-model should be used..

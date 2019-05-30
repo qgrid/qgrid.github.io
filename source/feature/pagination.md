@@ -1,7 +1,7 @@
 ---
 title: Pagination
 group: Features
-order: 5
+order: -1
 ---
 
 Use pager component to change pagination options.

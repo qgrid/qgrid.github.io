@@ -1,7 +1,7 @@
 ---
 title: Row Details
 group: Features
-order: 7
+order: -1
 ---
 
 There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary.

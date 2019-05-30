@@ -83,7 +83,7 @@ export class MyComponent {
 }
 ```
 
-## How to define columns using q-grid model?
+## How to define columns by using q-grid model?
 
 The preferred way to obtain q-grid model is to use `GridComponent` that will be available only after `ngAfterViewInit` hook being triggered.
 
