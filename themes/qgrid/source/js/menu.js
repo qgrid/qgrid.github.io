@@ -1,4 +1,5 @@
 ﻿const VISIBLE_MENU_TAG_COUNT = 2;
+const SEARCHEABLE_ELEMENTS = ['H2', 'H3', 'P'];
 
 function toggleVisibility(e) {
 	const target = e.target || e.srcElement;
@@ -27,9 +28,9 @@ function onSearchChange(e) {
 function searchOnLoad() {
 	const active = document.querySelector('.active-topic');
 	const search = getSearch();
+
 	if (active && search) {
 		document.getElementById('search').value = search;
-		updateMenuLinks(search);
 		currentPageSearch(search);
 		menuItemsSearch(search);
 	}
@@ -38,29 +39,29 @@ function searchOnLoad() {
 function searchOnHashChange() {
 	const search = getSearch();
 	document.getElementById('search').value = search;
-	updateMenuLinks(search);
+
+	if (!search) {
+		document.getElementById('search').focus();
+	}
 	currentPageSearch(search);
 	menuItemsSearch(search);
 }
 
 function currentPageSearch(search) {
 	let scrolled = false;
+
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
-		if (node.nodeName == 'H2' || node.nodeName == 'H3' || node.nodeName == 'P') {
-			const a = node.querySelector('a');
-			const pageItem = (a && a.textContent) ? a : node;
+		if (SEARCHEABLE_ELEMENTS.includes(node.nodeName)) {
+			const a = node.querySelectorAll('a');
+			const pageItem = (a[a.length - 1] && a[a.length - 1].textContent) ? a[a.length - 1] : node;
 			const { textContent } = pageItem;
-			if (isCorrectSearch(textContent, search)) {
-				const searchWords = splitToWords(search);
-				const firstMatch = searchWords[indexOfSearch(textContent, searchWords)];
-				const searchValue = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
-				if (highlightText(pageItem, searchValue) && !scrolled) {
-					scrolled = true;
-					pageItem.scrollIntoView();
-				}
-			}
-			else {
-				pageItem.innerHTML = textContent;
+			const searchWords = splitToWords(search);
+			const firstMatch = (testSearch(textContent, search)) ? searchWords[indexOfSearch(textContent, searchWords)] : '';
+			const searchValue = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
+
+			if (highlightText(pageItem, searchValue) && !scrolled) {
+				scrolled = true;
+				pageItem.scrollIntoView();
 			}
 		}
 	});
@@ -69,10 +70,13 @@ function currentPageSearch(search) {
 function menuItemsSearch(search) {
 	const nav = document.getElementById('nav');
 	const titles = nav.querySelectorAll('.title');
+
 	for (let title of titles) {
 		const menuItem = title.parentElement;
 		for (let tag of getTags(menuItem)) {
-			if (isCorrectSearch(tag, search)) {
+			updateMenuLinks(title, tag, search);
+
+			if (testSearch(tag, search)) {
 				appendTagText(menuItem, tag, search);
 				const menuTag = menuItem.querySelector('.tag');
 				const { textContent } = menuTag;
@@ -88,9 +92,10 @@ function menuItemsSearch(search) {
 	}
 }
 
-function isCorrectSearch(tag, search) {
+function testSearch(tag, search) {
 	const searchWords = splitToWords(search);
 	let countMatches = 0;
+
 	for (let searchWord of searchWords) {
 		if (tag.toLowerCase().includes(searchWord)) {
 			countMatches++;
@@ -100,9 +105,10 @@ function isCorrectSearch(tag, search) {
 }
 
 function appendTagText(menuItem, tag, search) {
-	menuItem.classList.remove('hidden');
+	menuItem.classList.remove('hide');
+
 	if (!menuItem.querySelector('.border')) {
-		const border = menuItem.appendChild(document.createElement("span"));
+		const border = menuItem.appendChild(document.createElement('span'));
 		border.classList.add('border');
 		border.textContent = '/ ';
 	}
@@ -112,16 +118,17 @@ function appendTagText(menuItem, tag, search) {
 	}
 	const menuTag = menuItem.querySelector('.tag');
 	menuTag.textContent = formatTag(tag, search);
+
 	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 }
 
 function removeTagText(menuItem, search) {
 	menuItem.querySelector('.title').classList.remove('menu-item');
 	if (search) {
-		menuItem.classList.add('hidden');
+		menuItem.classList.add('hide');
 	}
 	else {
-		menuItem.classList.remove('hidden');
+		menuItem.classList.remove('hide');
 	}
 	if (menuItem.querySelector('.tag')) {
 		menuItem.removeChild(menuItem.querySelector('.tag'));
@@ -136,6 +143,7 @@ function indexOfSearch(tag, searchWords) {
 	const firstFoundWord = tagWords[indexOfTag(tag, searchWords)];
 	let index = 0;
 	let minIndexWord = firstFoundWord.length;
+
 	for (let i = 0; i < searchWords.length; i++) {
 		let indexWord = firstFoundWord.toLowerCase().indexOf(searchWords[i]);
 		if (indexWord >= 0 && indexWord < minIndexWord) {
@@ -162,12 +170,14 @@ function indexOfTag(tag, searchWords) {
 function highlightText(item, search) {
 	const { textContent } = item;
 	const searchContains = new RegExp(escape(search), 'i');
+
 	if (search && searchContains.test(textContent.toLowerCase())) {
 		item.innerHTML = textContent.replace(searchContains, elem => `<span class="highlight">${elem}</span>`);
-		item.parentElement.classList.remove('hidden');
+		item.parentElement.classList.remove('hide');
 		return true;
 	}
 	item.innerHTML = textContent;
+
 	return false;
 }
 
@@ -175,6 +185,7 @@ function formatTag(tag, search) {
 	let tagWords = splitToWords(tag);
 	const searchWords = splitToWords(search);
 	const index = indexOfTag(tag, searchWords);
+
 	if (tagWords.length > VISIBLE_MENU_TAG_COUNT) {
 		if (index < tagWords.length - VISIBLE_MENU_TAG_COUNT) {
 			tagWords.splice(index + VISIBLE_MENU_TAG_COUNT, tagWords.length, '...');
@@ -186,19 +197,18 @@ function formatTag(tag, search) {
 	return tagWords.join(' ');
 }
 
-function updateMenuLinks(search) {
-	const nav = document.getElementById('nav');
-	const hash = search ? '#search=' + search : '';
-	for (let title of nav.querySelectorAll('.title')) {
-		let href = title.getAttribute('href');
-		const index = href.indexOf('#search=');
-		href = (index >= 0) ? href.slice(0, index) : href;
-		title.setAttribute('href', href + hash);
-	}
+function updateMenuLinks(item, tag, search) {
+	let href = item.getAttribute('href');
+	const index = href.indexOf('#');
+	href = (index >= 0) ? href.slice(0, index) : href;
+	const anchor = search ? '#' + tag.replace(/(?= (?!-))(?=(?<!-) )|\./g, '-').replace('&', 'amp').replace(/(?<=-) | (?=-)|\$/mg, '') : '';
+	const hash = search ? ';search=' + search : '';
+
+	item.setAttribute('href', href + anchor + hash);
 }
 
 function splitToWords(text) {
-	return text.split(' ').filter(x => x);
+	return text.split(' ').filter(word => word);
 }
 
 function escape(text) {
@@ -206,13 +216,20 @@ function escape(text) {
 }
 
 function setSearch(search) {
-	location.hash = (search) ? 'search=' + search : '';
+	const indexSearch = location.hash.search(/(#|;)(?=search=)/);
+	const indexAnchor = location.hash.search(/#(?!search=)/);
+	const anchor = (indexSearch >= 0) ? location.hash.slice(0, indexSearch + 1) :
+		(indexAnchor >= 0) ? location.hash + ';' : '';
+
+	location.hash = (search) ? anchor + 'search=' + search : anchor.replace(/;$/, '');
 }
 
 function getSearch() {
-	const search = new RegExp(/^#search=/);
+	const search = new RegExp(/^#search=|;search=/);
+	const index = location.hash.indexOf(location.hash.match(search));
+
 	return (search.test(location.hash))
-		? decodeURIComponent(location.hash.substr(search.source.length - 1).toLowerCase())
+		? decodeURIComponent(location.hash.substring(index + location.hash.match(search)[0].length).toLowerCase())
 		: '';
 }
 
@@ -228,17 +245,12 @@ function init() {
 	if (navTrigger) {
 		navTrigger.addEventListener('click', toggleVisibility, true);
 	}
-
 	const overlay = document.getElementById('overlay');
 	overlay.addEventListener('click', toggleVisibility, true);
 
 	const nav = document.getElementById('nav');
 	if (nav) {
 		nav.addEventListener('click', toggleVisibility, true);
-		const logo = nav.getElementsByTagName('a')[0];
-		if (logo) {
-			logo.addEventListener('click', searchOnLoad, true);
-		}
 	}
 
 	const search = document.getElementById('search');
