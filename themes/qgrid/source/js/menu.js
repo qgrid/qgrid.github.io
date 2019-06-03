@@ -52,14 +52,14 @@ function currentPageSearch(search) {
 
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
 		if (SEARCHEABLE_ELEMENTS.includes(node.nodeName)) {
-			const a = node.querySelectorAll('a');
-			const pageItem = (a[a.length - 1] && a[a.length - 1].textContent) ? a[a.length - 1] : node;
+			const a = node.querySelector('a:last-child');
+			const pageItem = (a && a.textContent) ? a : node;
 			const { textContent } = pageItem;
-			const searchWords = splitToWords(search);
-			const firstMatch = (testSearch(textContent, search)) ? searchWords[indexOfSearch(textContent, searchWords)] : '';
-			const searchValue = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
+			const words = splitToWords(search);
+			const firstMatch = (testSearch(textContent, search)) ? words[indexOfSearch(textContent, words)] : '';
+			const searchTarget = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
 
-			if (highlightText(pageItem, searchValue) && !scrolled) {
+			if (highlightText(pageItem, searchTarget) && !scrolled) {
 				scrolled = true;
 				pageItem.scrollIntoView();
 			}
@@ -80,10 +80,10 @@ function menuItemsSearch(search) {
 				appendTagText(menuItem, tag, search);
 				const menuTag = menuItem.querySelector('.tag');
 				const { textContent } = menuTag;
-				const searchWords = splitToWords(search);
-				const firstMatch = searchWords[indexOfSearch(textContent, searchWords)];
-				const searchValue = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
-				highlightText(menuTag, searchValue);
+				const words = splitToWords(search);
+				const firstMatch = words[indexOfSearch(textContent, words)];
+				const searchTarget = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
+				highlightText(menuTag, searchTarget);
 				break;
 			}
 			removeTagText(menuItem, search);
@@ -93,15 +93,15 @@ function menuItemsSearch(search) {
 }
 
 function testSearch(tag, search) {
-	const searchWords = splitToWords(search);
-	let countMatches = 0;
+	const words = splitToWords(search);
+	let matchCount = 0;
 
-	for (let searchWord of searchWords) {
-		if (tag.toLowerCase().includes(searchWord)) {
-			countMatches++;
+	for (let word of words) {
+		if (tag.toLowerCase().includes(word)) {
+			matchCount++;
 		}
 	}
-	return (searchWords.length > 0 && countMatches == searchWords.length) ? true : false;
+	return (words.length > 0 && matchCount == words.length);
 }
 
 function appendTagText(menuItem, tag, search) {
@@ -112,13 +112,14 @@ function appendTagText(menuItem, tag, search) {
 		border.classList.add('border');
 		border.textContent = '/ ';
 	}
+
 	if (!menuItem.querySelector('.tag')) {
 		const tag = menuItem.appendChild(document.createElement('a'));
 		tag.classList.add('tag');
 	}
+
 	const menuTag = menuItem.querySelector('.tag');
 	menuTag.textContent = formatTag(tag, search);
-
 	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 }
 
@@ -157,9 +158,10 @@ function indexOfSearch(tag, searchWords) {
 function indexOfTag(tag, searchWords) {
 	const tagWords = splitToWords(tag);
 	let minIndex = tagWords.length;
+
 	for (let searchWord of searchWords) {
 		for (let i = 0; i < tagWords.length; i++) {
-			if (tagWords[i].toLowerCase().indexOf(searchWord) >= 0) {
+			if (tagWords[i].toLowerCase().includes(searchWord)) {
 				minIndex = Math.min(minIndex, i);
 			}
 		}

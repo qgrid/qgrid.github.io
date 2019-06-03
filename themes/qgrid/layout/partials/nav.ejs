@@ -27,7 +27,7 @@
                     const pattern = new RegExp(/^#+.*/, 'mg');
                     for (let j = 0; j < pages.length; j++) {
                         const p = pages[j];
-                        let tags = (p.raw.match(pattern) || []).map(tag => {
+                        const tags = (p.raw.match(pattern) || []).map(tag => {
                             return tag.replace(/^#+ |[\[?|\]?]/mg, '');
                         });
         %>
