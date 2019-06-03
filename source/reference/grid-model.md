@@ -14,7 +14,7 @@ import { Grid, GridModel } from 'ng2-qgrid';
    template: '<q-grid></q-grid>'
 })
 export class MyComponent {
-   ViewChild(GridComponent) grid: GridComponent;
+   @ViewChild(GridComponent) grid: GridComponent;
 
    ngAfterViewInit() {
       const { model } = this.grid;
@@ -43,7 +43,7 @@ All separate states in the model have `<name-of-state>Changed` property to handl
    template: '<q-grid></q-grid>'
 })
 export class MyComponent {
-   ViewChild(GridComponent) grid: GridComponent;
+   @ViewChild(GridComponent) grid: GridComponent;
 
    ngAfterViewInit() {
       const { model } = this.grid;

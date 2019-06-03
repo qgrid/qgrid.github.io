@@ -1,7 +1,7 @@
 ---
 title: Cell Templates
 group: Features
-order: 2
+order: 3
 ---
 
 There are situations when cell custom templates need to be applied. Use `ng-template` inside the `q-grid-column` and `head`, `body`, `foot`, `edit` options to identify template location.

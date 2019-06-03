@@ -93,7 +93,7 @@ The preferred way to obtain q-grid model is to use `GridComponent` that will be 
    template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;   
+   @ViewChild(GridComponent) myGrid: GridComponent;   
 
    ngAfterViewInit() {
       const { model } = this.myGrid;
@@ -111,13 +111,13 @@ export class MyComponent implements AfterViewInit {
 
 ## How to make columns frozen?
 
-Use `pin` property in column definition to control if the column should be pinned either to the right or to the left.
+Use `pin` property in column definition to control if the column should be pinned either to the `right` or to the `left`.
 
 ```html
 <q-grid>
-   <q-grid-columns>
-      <q-grid-column key="firstName" title="First Name" pin="left"></q-grid-column>
-      <q-grid-column key="lastName" title="Last Name"></q-grid-column>
+   <q-grid-columns generation="deep">
+      <q-grid-column key="firstName" pin="left">
+      </q-grid-column>
    </q-grid-columns>
 </q-grid>
 ```

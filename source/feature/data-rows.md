@@ -29,14 +29,12 @@ export class MyComponent {
 The preferred way to obtain q-grid model is to use `GridComponent` that will be available only after `ngAfterViewInit` hook being triggered.
 
 ```typescript
-import { GridComponent } from 'ng2-qgrid';
-
 @Component({
    selector: 'my-component',
    template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;
+   @ViewChild(GridComponent) myGrid: GridComponent;
 
    constructor(dataService: MyDataService) {}
 
@@ -60,7 +58,7 @@ Use `row` state in the q-grid model to control which rows to pin.
    template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;   
+   @ViewChild(GridComponent) myGrid: GridComponent;   
 
    ngAfterViewInit() {
       const { model } = this.myGrid;

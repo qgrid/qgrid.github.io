@@ -23,7 +23,7 @@ Use style callbacks for dynamic class assignments. For the cell style it is poss
    template: '<q-grid></q-grid>'
 })
 export class MyComponent {
-   ViewChild(GridComponent) myGrid: GridComponent;
+   @ViewChild(GridComponent) myGrid: GridComponent;
 
    ngAfterViewInit() {
       const { model } = this.myGrid;

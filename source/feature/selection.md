@@ -1,33 +1,70 @@
 ---
 title: Selection
 group: Features
-order: -1
+order: 2
 ---
 
-There are situations when the end user need to select rows or cells in the q-grid, the q-grid provides several modes to enable selection satisfaction. The simples way to setup selection is to use q-grid component for more advanced use cases q-grid-model should be used..
+There are situations when the end user need to select rows or cells, q-grid provides rich model to handle selection.
 
-```html
-<q-grid selectionMode="multiple" 
-        selectionUnit="row" 
-        selectionArea="body">
-</q-grid>
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.selection({
+         unit: 'row',
+         mode: 'multiple',
+         area: 'body'            
+      });
+   }
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-## Selection Changes
+## How to change selection mode?
+
+Use `mode` property to change selection mode.
+
+* Use  `single` mode when only one row/column should be selected.
+* Use `multiple` mode when several rows/columns could be selected.
+* Use `range` mode when drag and drop selection should be turned on.
+
+## How to change what should be selectable?
+
+Use `unit` property to say q-grid what is a selectable element.
+   
+* Use `row` value when row can be selected by clicking on checkbox.
+* Use `cell` value when cell can be selected by click.
+* Use `column` value when column can be selected by click.
+* Use `mix` unit to make both rows and cells selectable.
+
+## How to listen selection changes?
 
 Use q-grid model to get list of selected items.
 
 ```typescript
-import { GridComponent } from 'ng2-qgrid';
-
 @Component({
    selector: 'my-component',
-   template: '<q-grid selectionUnit="row"></q-grid>'
+   template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;   
+   @ViewChild(GridComponent) myGrid: GridComponent;   
 
    ngAfterViewInit() {
       const { model } = this.myGrid;
@@ -42,29 +79,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## Selection Mode
+## How to restrict selection only on checkbox click?
 
-Use this option to control selection behavior.
-
-* `single` mode when only one unit can be selected.
-* `multiple` mode when several units can be selected. When `row` unit is chosen, `select all` checkbox is displayed in the column header.
-* `range` mode when bag of units can be selected. Selection is made by mouse drag & drop.
-
-## Selection Unit
-
-Use this option to control selection primitive.
-   
-* `row` unit when row can be selected by clicking on it or on the selection checkbox.
-* `cell` unit when cell can be selected by clicking on it.
-* `column` unit when column can be selected by clicking on it.
-* `mix` unit when need to select both rows and cells, rows can be selected by clicking on the row-indicator column.
-
-## Selection Area
-
-Use this option to control if q-grid body clicks lead to row selection.
-
-* `body` area when click on the q-grid body leads to row selection.
-* `custom` area when only check boxes are responsible for the selection.
+If clicking to q-grid body should not lead to row selection set selection `area` property to `custom`.
 
 ## How to prevent unselecting if row was clicked again?
 
