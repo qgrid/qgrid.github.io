@@ -1,7 +1,7 @@
 ---
 title: Filtering
 group: Features
-order: 4
+order: 5
 ---
 
 Use q-grid model to setup row filter options.
