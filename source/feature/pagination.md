@@ -27,12 +27,36 @@ export class MyComponent implements AfterViewInit {
       const { model } = this.myGrid;
 
       model.pagination({
-         unit: 'row',
-         mode: 'multiple',
-         area: 'body'            
+		   size: 10;
+		   sizeList: [5, 10, 15];
       });
    }
 }
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/pagination-basic/latest" %}
+
+## How to set a page number?
+
+Use `current` property of pagination model.
+
+```typescript
+const { pagination } = model;
+pagination({
+   current: 1
+});
+```
+
+## How to reset pagination on sorting?
+
+Use `resetTriggers` property of pagination model.
+
+```typescript
+const { pagination } = model;
+pagination({
+   resetTriggers: {
+      ...pagination().resetTriggers,
+      sort: ['by']   
+   }
+});
+```
