@@ -1,7 +1,7 @@
 ---
 title: State Persistence
 group: Plugins
-order: 7
+order: 9
 ---
 
 Use persistence plugin to save and restore q-grid state.
@@ -44,6 +44,8 @@ export class MyComponent {
 ```
 
 ## How to save/load state on server?
+
+Use `persistence` model to override default behavior.
 
 ```typescript
 @Component({

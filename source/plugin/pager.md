@@ -10,7 +10,7 @@ Use pager plugin to add possibilities to setup initial pagination option in comp
 
 ## Installation
 
-Add condition builder module to imports section.
+Add pager module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';

@@ -1,7 +1,7 @@
 ---
 title: Pivoting
 group: Features
-order: 8
+order: -1
 ---
 
 Use `pivotBy` attribute and aggregates to setup pivoting columns. Also it's supported to use cohort columns and group within pivoting. To override basic cell template use `ng-template` as always.

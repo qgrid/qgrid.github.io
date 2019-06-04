@@ -1,7 +1,7 @@
 ---
 title: Layout System
 group: Features
-order: -1
+order: 7
 ---
 
 Use q-grid layout system to define particular templates that can be shown under certain or custom conditions.
@@ -22,7 +22,7 @@ Use a predefined `no-data` condition to show the custom template when the q-grid
 
 {% docEditor "github/qgrid/ng2-example/tree/layer-grid-blank/latest" %}
 
-## Custom Layers
+## How to implement a custom layer?
 
 It's possible to add your own layers and define when they should be shown. Imagine that we want to implement custom layer that should be shown on button click, so we have next markup under the q-grid, of course, it's not required to trigger be visual or setup inside toolbar, be free in choosing the strategy.
 
@@ -72,34 +72,43 @@ export class MyLayerTriggerComponent {
 
 {% docEditor "doc-qgrid-ng2-layer" %}
 
-## Toolbars
+## How to change q-grid areas visibility?
 
-There are four toolbars surrounding the q-grid: `top`, `right`, `bottom` and `left`. Any of them can be customized. By default, left and right toolbars are not visible.
+Use `visibility` model to show or hide areas of the q-grid.
 
-```html
-<q-grid>
-   <q-grid-toolbar>
-      <ng-template for="bottom">
-         <my-pager></my-pager> 
-      </ng-template>
-   </q-grid-toolbar>
-</q-grid>
-```
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+   `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
 
-## Visibility
-
-Use `visibility` model to hide/show a work areas of the q-grid. Here is the default visibility configuration.
-
-```javascript
-gridModel.visibility({
-   head: true,
-   foot: true,
-   body: true,
-   toolbar: {
-     top: true,
-     bottom: true,
-     right: false,
-     left: false
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
    }
-});
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.visibility({
+         head: true,
+         foot: true,
+         body: true,
+         toolbar: {
+            top: true,
+            bottom: true,
+            right: false,
+            left: false
+         }
+      });
+   }
+}
 ```
+
+## S
