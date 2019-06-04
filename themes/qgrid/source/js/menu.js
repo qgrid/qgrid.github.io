@@ -7,6 +7,7 @@ function toggleVisibility(e) {
 		e.stopImmediatePropagation();
 		return;
 	}
+
 	const nav = document.getElementById('nav');
 	const overlay = document.getElementById('overlay');
 	if (nav.style.display === 'none' || nav.style.display === '') {
@@ -28,7 +29,6 @@ function onSearchChange(e) {
 function searchOnLoad() {
 	const active = document.querySelector('.active-topic');
 	const search = getSearch();
-
 	if (active && search) {
 		document.getElementById('search').value = search;
 		currentPageSearch(search);
@@ -39,17 +39,16 @@ function searchOnLoad() {
 function searchOnHashChange() {
 	const search = getSearch();
 	document.getElementById('search').value = search;
-
 	if (!search) {
 		document.getElementById('search').focus();
 	}
+
 	currentPageSearch(search);
 	menuItemsSearch(search);
 }
 
 function currentPageSearch(search) {
 	let scrolled = false;
-
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
 		if (SEARCHEABLE_ELEMENTS.includes(node.nodeName)) {
 			const a = node.querySelector('a:last-child');
@@ -58,7 +57,6 @@ function currentPageSearch(search) {
 			const words = splitToWords(search);
 			const firstMatch = (testSearch(textContent, search)) ? words[indexOfSearch(textContent, words)] : '';
 			const searchTarget = (textContent.toLowerCase().includes(search)) ? search : firstMatch;
-
 			if (highlightText(pageItem, searchTarget) && !scrolled) {
 				scrolled = true;
 				pageItem.scrollIntoView();
@@ -70,12 +68,10 @@ function currentPageSearch(search) {
 function menuItemsSearch(search) {
 	const nav = document.getElementById('nav');
 	const titles = nav.querySelectorAll('.title');
-
 	for (let title of titles) {
 		const menuItem = title.parentElement;
 		for (let tag of getTags(menuItem)) {
 			updateMenuLinks(title, tag, search);
-
 			if (testSearch(tag, search)) {
 				appendTagText(menuItem, tag, search);
 				const menuTag = menuItem.querySelector('.tag');
@@ -86,8 +82,10 @@ function menuItemsSearch(search) {
 				highlightText(menuTag, searchTarget);
 				break;
 			}
+
 			removeTagText(menuItem, search);
 		}
+
 		highlightText(title, search);
 	}
 }
@@ -95,12 +93,12 @@ function menuItemsSearch(search) {
 function testSearch(tag, search) {
 	const words = splitToWords(search);
 	let matchCount = 0;
-
 	for (let word of words) {
 		if (tag.toLowerCase().includes(word)) {
 			matchCount++;
 		}
 	}
+
 	return (words.length > 0 && matchCount == words.length);
 }
 
@@ -118,22 +116,25 @@ function appendTagText(menuItem, tag, search) {
 		tag.classList.add('tag');
 	}
 
-	const menuTag = menuItem.querySelector('.tag');
+	const menuTag = menuItem.querySelector('.tag');	
 	menuTag.textContent = formatTag(tag, search);
 	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 }
 
 function removeTagText(menuItem, search) {
 	menuItem.querySelector('.title').classList.remove('menu-item');
+
 	if (search) {
 		menuItem.classList.add('hide');
 	}
 	else {
 		menuItem.classList.remove('hide');
 	}
+
 	if (menuItem.querySelector('.tag')) {
 		menuItem.removeChild(menuItem.querySelector('.tag'));
 	}
+
 	if (menuItem.querySelector('.border')) {
 		menuItem.removeChild(menuItem.querySelector('.border'));
 	}
@@ -144,7 +145,6 @@ function indexOfSearch(tag, searchWords) {
 	const firstFoundWord = tagWords[indexOfTag(tag, searchWords)];
 	let index = 0;
 	let minIndexWord = firstFoundWord.length;
-
 	for (let i = 0; i < searchWords.length; i++) {
 		let indexWord = firstFoundWord.toLowerCase().indexOf(searchWords[i]);
 		if (indexWord >= 0 && indexWord < minIndexWord) {
@@ -152,13 +152,13 @@ function indexOfSearch(tag, searchWords) {
 			index = i;
 		}
 	}
+
 	return index;
 }
 
 function indexOfTag(tag, searchWords) {
 	const tagWords = splitToWords(tag);
 	let minIndex = tagWords.length;
-
 	for (let searchWord of searchWords) {
 		for (let i = 0; i < tagWords.length; i++) {
 			if (tagWords[i].toLowerCase().includes(searchWord)) {
@@ -166,20 +166,20 @@ function indexOfTag(tag, searchWords) {
 			}
 		}
 	}
+
 	return minIndex;
 }
 
 function highlightText(item, search) {
 	const { textContent } = item;
 	const searchContains = new RegExp(escape(search), 'i');
-
 	if (search && searchContains.test(textContent.toLowerCase())) {
 		item.innerHTML = textContent.replace(searchContains, elem => `<span class="highlight">${elem}</span>`);
 		item.parentElement.classList.remove('hide');
 		return true;
 	}
-	item.innerHTML = textContent;
 
+	item.innerHTML = textContent;
 	return false;
 }
 
@@ -187,15 +187,15 @@ function formatTag(tag, search) {
 	let tagWords = splitToWords(tag);
 	const searchWords = splitToWords(search);
 	const index = indexOfTag(tag, searchWords);
-
 	if (tagWords.length > VISIBLE_MENU_TAG_COUNT) {
 		if (index < tagWords.length - VISIBLE_MENU_TAG_COUNT) {
 			tagWords.splice(index + VISIBLE_MENU_TAG_COUNT, tagWords.length, '...');
-		}
+		}		
 		if (index > 0) {
 			tagWords.splice(0, index, '...');
 		}
 	}
+
 	return tagWords.join(' ');
 }
 
