@@ -34,8 +34,6 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/pagination-basic/latest" %}
-
 ## How to set a page number?
 
 Use `current` property of pagination model.

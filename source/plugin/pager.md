@@ -4,9 +4,9 @@ group: Plugins
 order: 2
 ---
 
-Use query builder plugin to add unlimited possibilities to filter data using convenient hierarchical UI.
+Use pager plugin to add possibilities to setup initial pagination option in component way.
 
-{% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
+{% docEditor "github/qgrid/ng2-example/tree/pagination-basic/latest" %}
 
 ## Installation
 

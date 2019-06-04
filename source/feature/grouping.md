@@ -1,10 +1,10 @@
 ---
 title: Grouping
 group: Features
-order: -1
+order: 7
 ---
 
-Use q-grid grouping model to group rows by particular columns or use own implementation.
+Use q-grid model to group rows by particular columns or implement own way.
 
 ## Basic Grouping
 
@@ -56,7 +56,7 @@ Use `group-summary` column type to setup template for grouping aggregation rows.
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-summary/latest" %}
 
-## Custom Hierarchy
+## How to implement custom hierarchy model?
 
 By using pipe idea q-grid allows to transform any data processing to fit the requirements, grouping and pivoting is not exception, use custom pipe to define own hierarchies.
 
@@ -64,7 +64,7 @@ By using pipe idea q-grid allows to transform any data processing to fit the req
 import { Grid, Node, Command } from 'ng2-qgrid';
 
 @Component({
-   template: '<q-grid [model]="gridModel"></q-grid>',
+   template: '<q-grid></q-grid>',
 })
 export class MyComponent {
    gridModel: GridModel;
@@ -108,21 +108,3 @@ export class MyComponent {
 }
 ```
 {% docEditor "github/qgrid/ng2-example/tree/hierarchy-browser-basic/latest" %}
-
-## Pivoting
-
-Use `pivotBy` attribute and aggregates to setup pivoting columns. Also it's supported to use cohort columns and group within pivoting. To override basic cell template use `ng-template` as always.
-
-```html
-<q-grid [pivotBy]="['bondingType', 'groupBlock']">
-   <q-grid-columns>
-      <q-grid-column type="pivot">
-         <ng-template for="body" let-$cell>
-            <div [style.color]="'#' + $cell.row.color">X</div>
-         </ng-template>
-      </q-grid-column>
-   </q-grid-columns>
-</q-grid>
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/pivot-column-template/latest" %}
