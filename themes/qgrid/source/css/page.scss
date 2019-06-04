@@ -71,9 +71,6 @@ header {
 	&::placeholder {
 		@extend %placeholder;
 	}
-	&::-webkit-search-cancel-button {
-		-webkit-appearance: none;
-	}
 }
 
 .page-wrapper {
@@ -132,4 +129,8 @@ a.github-link2 {
 	z-index: 10;
 	background-color: rgba(10, 10, 10, 0.75);
 	cursor: default;
+}
+.highlight {
+	background-color: #efdf00;
+	margin-left: 0 !important;
 }
