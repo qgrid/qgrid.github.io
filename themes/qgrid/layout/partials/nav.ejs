@@ -24,20 +24,22 @@
                     pages.sort(function (a, b) {
                         return a.order - b.order;
                     });
-
-                    for (var j = 0; j < pages.length; j++) {
-                        var p = pages[j];
+                    const pattern = new RegExp(/^#+.*/, 'mg');
+                    for (let j = 0; j < pages.length; j++) {
+                        const p = pages[j];
+                        const tags = (p.raw.match(pattern) || []).map(tag => {
+                            return tag.replace(/^#+ |[\[?|\]?]/mg, '');
+                        });
         %>
-                        <li class="<%- page.title === p.title ? 'active-topic' : '' %> ">
-        <%
+                            <li data-tag="<%- tags %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
+        <%     
                             if (page.title === p.title) {
-
         %>
                             <span><%- p.title %></span>
         <%
                             } else {
         %>
-                            <a href="<%- url_for(p.path) %>"><%- p.title %></a>
+                            <a class="title" href="<%- url_for(p.path) %>"><%- p.title %></a>
         <%
                             }
         %>
