@@ -1,7 +1,7 @@
 ---
 title: REST
 group: Plugins
-order: 5
+order: 6
 ---
 
 Use REST plugin to connect q-grid with back-end directly.

@@ -1,7 +1,7 @@
 ---
 title: Import from file
 group: Plugins
-order: 3
+order: 4
 ---
 
 Use q-grid import plugin to fill in rows with data from files on client side.

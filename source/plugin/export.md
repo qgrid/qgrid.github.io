@@ -1,7 +1,7 @@
 ---
 title: Export to file
 group: Plugins
-order: 2
+order: 3
 ---
 
 Use q-grid export plugin to build data files of required format on client side.

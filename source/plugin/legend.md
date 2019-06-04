@@ -1,7 +1,7 @@
 ---
 title: Legend
 group: Plugins
-order: 4
+order: 5
 ---
 
 To show hints or additional information use `q-grid-legend` plugin.

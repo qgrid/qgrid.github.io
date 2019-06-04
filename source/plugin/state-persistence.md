@@ -1,7 +1,7 @@
 ---
 title: State Persistence
 group: Plugins
-order: 6
+order: 7
 ---
 
 Use persistence plugin to save and restore q-grid state.

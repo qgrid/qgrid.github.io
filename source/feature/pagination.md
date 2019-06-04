@@ -60,3 +60,7 @@ pagination({
    }
 });
 ```
+
+## Suggested Links
+
+* [Pager plugin](/plugin/pager.html)
