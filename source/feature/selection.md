@@ -130,3 +130,17 @@ model.selection({
    items: [0, 1, 2]
 });
 ```
+
+## What shortcuts does selection implement by default?
+
+* `shift+space` - toggle row.
+* `shift+up` - toggle previous row.
+* `shift+down` - `toggle next row.
+* `ctrl+space` - toggle column.
+* `shift+right` - toggle next column.
+* `shift+left` - toggle previous column.
+* `ctrl+a` - select all.
+
+## How to override default selection shortcuts?
+
+Use `shortcut` property in the selection model.

@@ -18,6 +18,25 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
   
 > If you use q-grid in electron box, these shortcuts could be overwritten.
 
+## What shortcuts does navigation implement by default?
+
+* `up` - up.
+* `down` - down.
+* `left` - left.
+* `right` - right.
+* `tab` - next.
+* `shift+tab` - previous.
+* `home` - home.
+* `end` - end.
+* `pageUp` - pageUp.
+* `pageDown` - pageDown.
+* `shift+pageUp` - upward.
+* `shift+pageDown`- downward.
+		
+## How to override default navigation shortcuts?
+
+Use `shortcut` property in the navigation model.
+
 ## Suggested Links
 
 * [Chromium issues](https://bugs.chromium.org/p/chromium/issues/detail?id=33056) 
