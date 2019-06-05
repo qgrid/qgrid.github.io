@@ -1,10 +1,8 @@
 ---
 title: Visibility
 group: Features
-order: -1
+order: 11
 ---
-
-## How to change q-grid areas visibility?
 
 Use `visibility` model to show or hide areas of the q-grid.
 
