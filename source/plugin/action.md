@@ -1,5 +1,5 @@
 ---
-title: Actions
+title: Action
 group: Plugins
 order: 8
 ---
