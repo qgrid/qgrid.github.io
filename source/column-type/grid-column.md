@@ -164,3 +164,17 @@ The q-grid header can utilize column hierarchy by using nested components or chi
    </q-grid-columns>
 </q-grid>
 ```
+
+## How to show tooltip in column header?
+
+Use description property of the column.
+
+```html
+<q-grid>
+   <q-grid-columns>
+      <q-grid-column key="my-column" description="Will be shown in tooltip">
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+

@@ -4,52 +4,69 @@ group: Features
 order: 9
 ---
 
-There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary.
-
-## Setup
-
-Use q-grid html component to setup row details options and template.
-
-```html
-<q-grid>
-   <q-grid-row unit="details" mode="multiple">
-      <ng-template for="details" let-$cell>
-         {{$cell.row.item.number}}
-      </ng-template>
-   </q-grid-row>
-</q-grid>
-```
-
-> In the details template to get access to the data row `$cell.row.item` expression need to be used.
-
-Or use q-grid model directly.
-
-```javascript
-gridModel.row({
-   unit: 'details',
-   mode: 'all'
-});
-```
-
-## Details Model
-
-The q-grid renderer utilizes `RowDetails` class to add details rows into the scene model.
+There are situations when the end user need to show additional information for the rows in the q-grid, row details can help with that.
 
 ```typescript
-declare class RowDetails {
-   item: any;
-   column: Column;
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+
+         <q-grid-row>
+            <ng-template for="details" let-$cell>
+               {{$cell.row.item.number}}
+            </ng-template>
+         </q-grid-row>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.row({
+          unit: 'details',
+          mode: 'multiple'
+      });
+   }
 }
 ```
 
-> Note that style API along with data rows will propagate `RowDetails` class to the end user for each expanded row.
+{% docEditor "github/qgrid/ng2-example/tree/details-row-api/latest" %}
 
-## Row details modes
+> Use `$cell.row.item` in template to get access to the data row.
 
-Use row `mode` option to configure row details expand/collapse behavior.
+## How to expand expand or collapse all row details?
 
-* Use `single` mode to restrict number of expanded details to one.
-* Use `multiple` mode to allow expanding of several rows.
-* Use `all` mode to expand all rows and to not allow to collapse them.
+Update `status` property in row model.
 
-{% docEditor "github/qgrid/ng2-example/tree/details-row-all/latest" %}
+```typescript
+const { model } = this.myGrid;
+
+const expand = true;
+model.row({
+   status: new Map(model.data().rows.map<[any, RowDetailsStatus]>(x => [x, new RowDetailsStatus(expand)]))
+});
+```
+
+## How to disable expand button?
+
+Use `toggle` command from row model.
+
+```typescript
+const { model } = this.myGrid;
+
+model.row({
+	toggle: new Command({
+		canExecute: ({ row }) => false
+	})
+});
+```
