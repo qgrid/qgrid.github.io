@@ -16,14 +16,20 @@
 			margin: 0;
 			padding: 0;
 			li {
+				color: grey;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 				list-style: none;
 				font-size: 16px;
 				line-height: 2;
-				padding-left: 20px;
+				padding: 0 10px 0 20px;
+				right: 10px;
 				&:first-child {
 					margin-top: 10px;
 				}
 				h3 {
+					color: white;
 					font-size: 18px;
 					font-weight: bold;
 					margin: 0;
@@ -47,7 +53,7 @@
 					display: inline;
 					font-size: 0.8em;
 					font-style: italic;
-					padding-left: 23px;
+					padding: 23px;
 					color: grey;
 					> span {
 						margin-left: 0;
