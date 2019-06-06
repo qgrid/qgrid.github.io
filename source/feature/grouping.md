@@ -1,7 +1,7 @@
 ---
 title: Grouping
 group: Features
-order: -1
+order: 14
 ---
 
 Use q-grid model to group rows by particular columns or implement own way.
