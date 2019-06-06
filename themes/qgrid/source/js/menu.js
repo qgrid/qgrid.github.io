@@ -47,9 +47,9 @@ function searchOnHashChange() {
 }
 
 function currentPageSearch(search) {
-	let scrolled = false;
 	const active = document.querySelector('.active-topic');
 	active.classList.remove('hide');
+	let scrolled = false;
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
 		if (SEARCHEABLE_ELEMENTS.includes(node.nodeName)) {
 			const a = node.querySelector('a:last-child');
@@ -64,6 +64,7 @@ function currentPageSearch(search) {
 			}
 		}
 	});
+
 	if (!scrolled && !active.textContent.toLowerCase().includes(search)) {
 		active.classList.add('hide');
 	}
@@ -182,6 +183,7 @@ function highlightText(item, search) {
 			item.insertBefore(a, item.firstChild);
 		}
 		item.parentElement.classList.remove('hide');
+
 		return true;
 	}
 
@@ -189,6 +191,7 @@ function highlightText(item, search) {
 	for (let a of aTags) {
 		item.insertBefore(a, item.firstChild);
 	}
+	
 	return false;
 }
 
