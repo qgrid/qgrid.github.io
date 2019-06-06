@@ -7,7 +7,6 @@ function toggleVisibility(e) {
 		e.stopImmediatePropagation();
 		return;
 	}
-
 	const nav = document.getElementById('nav');
 	const overlay = document.getElementById('overlay');
 	if (nav.style.display === 'none' || nav.style.display === '') {
@@ -48,6 +47,8 @@ function searchOnHashChange() {
 }
 
 function currentPageSearch(search) {
+	const active = document.querySelector('.active-topic');
+	active.classList.remove('hide');
 	let scrolled = false;
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
 		if (SEARCHEABLE_ELEMENTS.includes(node.nodeName)) {
@@ -63,6 +64,10 @@ function currentPageSearch(search) {
 			}
 		}
 	});
+
+	if (!scrolled && !active.textContent.toLowerCase().includes(search)) {
+		active.classList.add('hide');
+	}
 }
 
 function menuItemsSearch(search) {
@@ -104,7 +109,6 @@ function testSearch(tag, search) {
 
 function appendTagText(menuItem, tag, search) {
 	menuItem.classList.remove('hide');
-
 	if (!menuItem.querySelector('.border')) {
 		const border = menuItem.appendChild(document.createElement('span'));
 		border.classList.add('border');
@@ -115,8 +119,7 @@ function appendTagText(menuItem, tag, search) {
 		const tag = menuItem.appendChild(document.createElement('a'));
 		tag.classList.add('tag');
 	}
-
-	const menuTag = menuItem.querySelector('.tag');	
+	const menuTag = menuItem.querySelector('.tag');
 	menuTag.textContent = formatTag(tag, search);
 	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 }
@@ -173,13 +176,22 @@ function indexOfTag(tag, searchWords) {
 function highlightText(item, search) {
 	const { textContent } = item;
 	const searchContains = new RegExp(escape(search), 'i');
+	const aTags = item.querySelectorAll('a');
 	if (search && searchContains.test(textContent.toLowerCase())) {
 		item.innerHTML = textContent.replace(searchContains, elem => `<span class="highlight">${elem}</span>`);
+		for (let a of aTags) {
+			item.insertBefore(a, item.firstChild);
+		}
 		item.parentElement.classList.remove('hide');
+
 		return true;
 	}
 
 	item.innerHTML = textContent;
+	for (let a of aTags) {
+		item.insertBefore(a, item.firstChild);
+	}
+	
 	return false;
 }
 
@@ -190,7 +202,7 @@ function formatTag(tag, search) {
 	if (tagWords.length > VISIBLE_MENU_TAG_COUNT) {
 		if (index < tagWords.length - VISIBLE_MENU_TAG_COUNT) {
 			tagWords.splice(index + VISIBLE_MENU_TAG_COUNT, tagWords.length, '...');
-		}		
+		}
 		if (index > 0) {
 			tagWords.splice(0, index, '...');
 		}
