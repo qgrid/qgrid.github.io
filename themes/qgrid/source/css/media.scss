@@ -8,14 +8,14 @@
 		#overlay {
 			display: none !important;
 		}
-	}
-	.pages header {
-		display: block;
-		background: none;
-		.logo-wrapper .logo {
+		header {
+			display: block;
+			background: none;
+			.logo-wrapper .logo {
 				display: none;
 			}
-		height: 0;
+			height: 0;
+		}
 	}
 	.github {
 		color: black;
