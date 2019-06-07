@@ -1,7 +1,7 @@
 ---
 title: Editing
 group: Features
-order: -1
+order: 11
 ---
 
 There are situations when the end user need to edit data, in this case the q-grid provides a lot of possibilities. Setup edit mode equals to `cell` to turn on editing, use `canEdit` column attribute to disable editing of particular columns.

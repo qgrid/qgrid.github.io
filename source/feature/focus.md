@@ -1,7 +1,7 @@
 ---
-title: Focus
+title: Focusing
 group: Features
-order: 12
+order: 14
 ---
 
 Use q-grid service to get control over focused cell, selected page will be automatically adjusted.

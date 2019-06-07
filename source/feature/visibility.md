@@ -1,7 +1,7 @@
 ---
 title: Visibility
 group: Features
-order: 11
+order: 17
 ---
 
 Use `visibility` model to show or hide areas of the q-grid.

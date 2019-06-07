@@ -1,7 +1,7 @@
 ---
 title: Busy Indicator
 group: Features
-order: 10
+order: 16
 ---
 
 Use q-grid service to get control over progress bar visibility.

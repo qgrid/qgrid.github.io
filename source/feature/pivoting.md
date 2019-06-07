@@ -1,7 +1,7 @@
 ---
 title: Pivoting
 group: Features
-order: 12
+order: 15
 ---
 
 Pivot is a data summarization mode where users can break down raw data to highlight the desired information. It displays data in format such as spreadsheets or business intelligence applications.
