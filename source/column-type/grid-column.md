@@ -165,6 +165,29 @@ The q-grid header can utilize column hierarchy by using nested components or chi
 </q-grid>
 ```
 
+## Column Aggregation
+
+Use column aggregation to display summary data in the q-grid footer.
+
+* first
+* last
+* max
+* min
+* minMax
+* avg
+* sum
+* join
+* count
+
+```html
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns>
+      <q-grid-column key="age" aggregation="avg">         
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
 ## How to show tooltip in column header?
 
 Use description property of the column.
