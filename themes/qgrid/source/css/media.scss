@@ -9,14 +9,30 @@
 			display: none !important;
 		}
 	}
+	.pages header {
+		display: block;
+		background: none;
+		.logo-wrapper .logo {
+				display: none;
+			}
+		height: 0;
+	}
+	.github {
+		color: black;
+		font-size: 35px !important;
+		right: 45px !important;
+	}
 }
 
 // medium screen
-@media screen and (min-width: 851px) and (max-width: 1500px) {
+@media screen and (min-width: 851px) and (max-width: 1470px) {
 	.index {
 		.example .preview iframe {
 			width: 75%;
 		}
+	}
+	.pages header {
+		position: absolute;
 	}
 }
 
