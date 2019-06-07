@@ -4,104 +4,117 @@ group: Features
 order: 11
 ---
 
-There are situations when the end user need to edit data, in this case the q-grid provides a lot of possibilities. Setup edit mode equals to `cell` to turn on editing, use `canEdit` column attribute to disable editing of particular columns.
+There are situations when the end user need to edit data, in this case just setup edit mode equals to `cell` to turn on editing.
 
-```html
-<q-grid editMode="cell"></q-grid>
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.edit({
+         mode: 'cell',
+      });
+   }
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-basic/latest" %}
 
-## Edit Model
+## How to access edit events in q-grid?
 
-Edit model could give extended control over data edit, to access these possibilities use `model.edit()` type.
+Edit model force to use commands to control editing.
 
 ```typescript
-const { commit, commitShortcuts, state } = myGridModel.edit();
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.edit({
+      mode: 'cell',
+      enter: new Command({
+         canExecute: e => e.column.type === 'number'
+      }),
+      commit: new Command({
+         execute: e => console.log(e.newValue)
+      })
+   });
+}
 ```
 
-## Edit State
+## How to change edit shortcuts?
 
-Indicates the current q-grid status in term of data manipulation.
+Use shortcuts properties from the edit model to change commit or cancel keys.
 
-* `view` means that q-grid now is in the data browsing mode.
-* `edit` indicates that q-grid editor is opened.
-* `startBatch` and `endBatch` show status of the batch edit.
+```typescript
+ngAfterViewInit() {
+   const { model } = this.myGrid;
 
-## Edit commands & shortcuts
-
-Use commands to have a global control over q-grid editing. Use shortcuts that have `{columnType: [keyboardKey]}` type to setup editing shortcuts.
-
-```javascript
-gridModel.edit({
-   enter: { 
-      canExecute: e => e.column.class === 'data' 
-   },
-   commitShortcuts: {
-      '$default': 'tab|shift+tab|enter|ctrl+s',
-      'reference': 'ctrl+s',
-      'form': 'ctrl+s',
-      'bool': 'tab|shift+tab|left|right|up|down|home|end|pageUp|pageDown'
-   }
-});
+   model.edit({
+      mode: 'cell',
+      commitShortcuts: {
+         $default: 'tab|shift+tab|enter|ctrl+s',
+         bool: 'tab|shift+tab|left|right|up|down|home|end|pageUp|pageDown'
+      }
+   });
+}
 ```
 
-## Batch Edit
+## How to enable batch edit?
 
-Use `editMethod` property to activate batch editing, this method activates cell handler that could be dragged to apply start cell value to the selected cells.
+Use edit `method` property to activate batch editing, it activates cell handler that could be dragged to apply start cell value to the next selection.
 
-```html
-<q-grid editMode="cell" editMethod="batch"></q-grid>
+```typescript
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.edit({
+      mode: 'cell',
+      method: 'batch'
+   });
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
 
-## Dropdown & Autocomplete
+## How to reset edit mode?
 
-To populate list of items in dropdown/autocomplete columns use `fetch` editor property. Fetch option supports next data types.
-
-* Array of objects or basic types.
-* Function that returns array of basic types/objects/observables/promises.
-* Observable with an array argument.
-* Promise with an array argument.
+Just set edit mode equals to `null`.
 
 ```typescript
-import { of } from 'rxjs';
+ngAfterViewInit() {
+   const { model } = this.myGrid;
 
-@Component({
-    template: `
-       <q-grid editMode="cell">
-          <q-grid-columns>
-             <q-grid-column key="number" editor="dropdown" [editorOptions]="dropdownOptions">
-             </q-grid-column>
-          </q-grid-columns>
-       </q-grid>
-    `,
-})
-export class MyComponent {
-    dropdownOptions = {
-        fetch: of([Math.PI, Math.LN10, Math.LN2, Math.E, Math.LOG10E, Math.LOG2E, Math.SQRT1_2])
-    };
+   model.edit({
+      mode: null
+   });
 }
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/column-dropdown-basic/latest" %}
+## How to disable edit mode for the particular column?
 
-## Edit Row
-
-Use edit trigger component to show auto generated form that allows to change appropriate row data.
+Use `canEdit` attribute to not allow editing of the column.
 
 ```html
-<q-grid [rows]="rows$ | async" [columns]="columns" editMode="row">
-    <q-grid-columns>
-        <q-grid-column key="editForm" type="row-options" pin="left">
-            <ng-template for="body" let-$cell>
-                <q-grid-edit-form-trigger [caption]="$cell.row.name" [cell]="$cell">
-                </q-grid-edit-form-trigger>
-            </ng-template>
-        </q-grid-column>
-    </q-grid-columns>
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns generation="deep">
+      <q-grid-column type="text" 
+                     key="guid" 
+                     [canEdit]="false">
+      </q-grid-column>
+   </q-grid-columns>
 </q-grid>
 ```
-
-{% docEditor "github/qgrid/ng2-example/tree/edit-row-basic/latest" %}
