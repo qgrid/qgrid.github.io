@@ -188,6 +188,21 @@ Use column aggregation to display summary data in the q-grid footer.
 </q-grid>
 ```
 
+## Aggregation Options
+
+Use `distinct` and `separator` settings to change column aggregation template.
+
+```html
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns>
+      <q-grid-column key="phase"
+		               aggregation="join"
+		               [aggregationOptions]="{separator: '+', distinct: true}">
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
 ## How to show tooltip in column header?
 
 Use description property of the column.
