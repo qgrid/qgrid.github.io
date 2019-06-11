@@ -32,10 +32,50 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
 * `pageDown` - pageDown.
 * `shift+pageUp` - upward.
 * `shift+pageDown`- downward.
-		
+      
 ## How to override default navigation shortcuts?
 
 Use `shortcut` property in the navigation model.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.navigation({
+         shortcut: { 
+            up: 'up',
+            down: 'down',
+            left: 'left',
+            right: 'right',
+            next: 'tab',
+            previous: 'shift+tab',
+            home: 'home',
+            end: 'end',
+            pageUp: 'pageUp',
+            pageDown: 'pageDown',
+            upward: 'shift+pageUp',
+            downward: 'shift+pageDown'
+         }
+      });
+   }
+}
+```
 
 ## Suggested Links
 
