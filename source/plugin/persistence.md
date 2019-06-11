@@ -58,7 +58,7 @@ Use `persistence` model to override default behavior.
 export class MyComponent {
    @ViewChild(GridComponent) myGrid: GridComponent;
 
-   constructor(private dataService: DataService) {
+   constructor(private dataService: MyDataService) {
    }
 
    ngAfterViewInit() {

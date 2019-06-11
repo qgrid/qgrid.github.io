@@ -7,12 +7,6 @@ order: 18
 Use master selection event to filter out rows of details grid.
 
 ```typescript
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { DataService, Human } from '../data.service';
-import { Observable } from 'rxjs';
-import { GridModel, Grid } from 'ng2-qgrid';
-import { map } from 'rxjs/operators';
-
 @Component({
    selector: 'example-master-details-basic',
    template: `
@@ -32,7 +26,7 @@ export class ExampleMasterDetailsBasicComponent {
    masterRows$: Observable<Human[]>;
    detailsRows$: Observable<Human[]>;
 
-   constructor(dataService: DataService) {
+   constructor(dataService: MyDataService) {
       this.masterRows$ = dataService.getPeople();
    }
    
@@ -53,7 +47,6 @@ export class ExampleMasterDetailsBasicComponent {
       });
    }
 }
-
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/master-details-basic/latest" %}

@@ -49,8 +49,55 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       const { model } = this.myGrid;
+      
       model.sort({ 
          resetTrigger: [] 
+      });
+   }
+}
+```
+
+## How to change default column sorting?
+
+Each column has `compare` property that can be overridden to change sort algorithm.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid>
+         <q-grid-columns>
+            <q-grid-column key="myNumberColumn" 
+                           [compare]="myCompare">
+            </q-grid-column>
+         </q-grid-columns>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   myCompare(a: number, b: number) {
+      return a - b;
+   }
+}
+```
+
+## How to allow to sort only by one column at the same time?
+
+Set sort `mode` equals to `single`.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: '<q-grid></q-grid>'
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+      
+      model.sort({ 
+         mode: 'single'
       });
    }
 }

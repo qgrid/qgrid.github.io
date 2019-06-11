@@ -52,7 +52,7 @@ export class MyComponent implements AfterViewInit {
 
    constructor( 
       private qgrid: Grid,
-      private dataService: DataService
+      private dataService: MyDataService
    ) {
    }
 

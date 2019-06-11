@@ -28,9 +28,9 @@ export class MyComponent {
 
    ngAfterViewInit() {
       const { model } = this.myGrid;
-      const service = qgrid.service(model);
+      const service = this.qgrid.service(model);
       
-      gridService.focus(99, 2);
+      service.focus(5, 2);
    }
 }
 ```
@@ -48,3 +48,36 @@ Add `q-grid-autofocus` directive on q-grid component?
    </q-grid-columns>
 </q-grid>
 ```
+
+## How to focus the last row?
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(
+      private qgrid: Grid,   
+      private dataService: MyDataService
+   ) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+      const service = this.qgrid.service(model);
+
+      this.rows$.subscribe(rows => 
+         service.focus(rows.length - 1, 0);
+      );
+   }
+}
+`

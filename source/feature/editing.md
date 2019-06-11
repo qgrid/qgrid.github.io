@@ -118,3 +118,94 @@ Use `canEdit` attribute to not allow editing of the column.
    </q-grid-columns>
 </q-grid>
 ```
+
+## How to add a new row to the end?
+
+Use data model and focus service.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>         
+
+         <q-grid-actions>
+            <q-grid-action id="addRow"
+                           title="Add Row"
+                           icon="add"
+                           [command]="addRow">
+            </q-grid-action>
+         </q-grid-actions>
+      </q-grid>
+   `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   addRow = new Command({
+      execute: () => {
+         const { model } = this.myGrid;
+
+         const atom = new Atom();
+         const rows = Array.from(model.data().rows).concat([atom]);
+         model.data({ rows });
+
+         const service = this.qgrid.service(model);
+         service.focus(rows.length - 1);
+      }
+   });
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+}
+```
+
+## How to add delete button and implement row deletion?
+
+Use data model.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep">
+            <q-grid-column type="row-options"
+                           key="rowOptions"					         
+                           [canEdit]="false">
+               <ng-template for="body"
+                           let-$cell>
+                  <button (click)="deleteRow.execute($cell.row)">
+                     DELETE
+                  </button>
+               </ng-template>
+            </q-grid-column>
+         </q-grid-columns>         
+      </q-grid>
+   `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   deleteRow = new Command({
+      execute: (row: Human) => {
+         const { model } = this.grid;
+
+         const rows = model.data().rows.filter(x => x !== row);
+         model.data({ rows });
+      }
+   });
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+}
+```
+
+## Suggested Links
+
+* (Data manipulation plugin)[/plugin/data-manipulation.md]
