@@ -65,8 +65,69 @@ Use `toggle` command from row model.
 const { model } = this.myGrid;
 
 model.row({
-	toggle: new Command({
-		canExecute: ({ row }) => false
-	})
+   toggle: new Command({
+      canExecute: ({ row }) => false
+   })
 });
 ```
+
+## How to show nested q-grid in details template?
+
+Use let-`$cell` to pass data to the function that will return details rows.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
+
+         <q-grid-row>
+            <ng-template for="details" let-$cell>
+               <q-grid [rows]="getDetailsRows($cell.row.item) | async">
+                  <q-grid-columns generation="deep">
+                  </q-grid-columns>
+               </q-grid>
+            </ng-template>
+         </q-grid-row>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+   cache = new Map<string, Observable<Atom[]>>();
+
+   constructor(private dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.row({
+          unit: 'details',
+          mode: 'single'
+      });      
+   }
+
+   getDetailsRows(atom: Atom) {
+		let rows$ = this.cache.get(atom.phase);
+		if (!rows$) {
+         rows$ = 
+            dataService
+               .getRows()
+               .pipe(
+                  map(rows => rows.filter(row => row.phase === atom.phase)
+               ));
+
+			this.cache.set(atom.phase, rows$);
+		}
+
+		return subject;
+	}
+}
+```
+
+{% docEditor "github/qgrid/ng2-example/tree/details-row-grid/latest" %}

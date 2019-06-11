@@ -8,7 +8,7 @@ order: 2
 
 ## Create utility service
 
-Grid facade can create an utility service over q-grid model. It could help to control grid focus, progress etc.
+`Grid` facade can create an utility service over q-grid model. It could help to control grid focus, progress etc.
 
 ```typescript
 import { Grid, GridModel } from 'ng2-qgrid';
@@ -32,7 +32,7 @@ export class MyComponent {
 
 ## Create q-grid model in the code
 
-Grid service is another way to get access to the q-grid model  create a new model and add binding to the template.
+`Grid` service is another way to get access to the q-grid model  create a new model and add binding to the template.
 
 ```typescript
 import { Grid, GridModel } from 'ng2-qgrid';
