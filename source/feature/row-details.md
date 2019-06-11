@@ -57,7 +57,7 @@ model.row({
 });
 ```
 
-## How to disable expand button?
+## How to disable/hide expand button?
 
 Use `toggle` command from row model.
 

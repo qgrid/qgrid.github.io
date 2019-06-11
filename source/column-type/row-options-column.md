@@ -9,7 +9,7 @@ Row options column allows to populate list of actions for the appropriate row by
 ```typescript
 @Component({
     template: `
-       <q-grid [rows]="rows">
+       <q-grid [rows]="rows$ | async">
           <q-grid-column key="rowOptions"
                          type="row-options"
                          [editorOptions]="{actions: rowActions}">
@@ -48,3 +48,34 @@ Edit template is populated automatically when cell is clicked, because by defaul
    </q-grid-columns>
 </q-grid>
 ```
+
+## How to open row options menu on enter pressed?
+
+```typescript
+@Component({
+    template: `
+       <q-grid [rows]="rows">
+          <q-grid-column key="rowOptions"
+                         type="row-options"
+                         [editorOptions]="{actions: rowActions}">
+          </q-grid-column>
+       </q-grid>
+    `
+})
+export class MyComponent {
+  rowActions = [
+    new Action(
+      new Command<{ row: Atom }>({
+        execute: cell => window.open(cell.row.source, '_blank'),
+        shortcut: 'alt+g'
+      }),
+      'Goto Wiki',
+      'link'
+    )
+  ];
+}
+```
+
+## Suggested Links
+
+* [Action plugin](/plugin/action.html)

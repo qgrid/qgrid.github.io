@@ -206,6 +206,22 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
+## How to detect if any data was changed by user input?
+
+Use `commit` command to track if any data was changed by user input.
+
+```typescript
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.edit({
+      commit: new Command({
+         execute: e => console.log(e.newValue)
+      })
+   });
+}
+```
+
 ## Suggested Links
 
-* (Data manipulation plugin)[/plugin/data-manipulation.md]
+* [Data manipulation plugin](/plugin/data-manipulation.md)

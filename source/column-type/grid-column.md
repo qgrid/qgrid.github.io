@@ -20,7 +20,7 @@ Column header text also could be used by plugins like column-filter.
 
 ## Column Description
 
-Column header tooltip text, could be shown as column tooltip.
+Column header tooltip text could be shown as a column tooltip.
 
 ## Column Value & Label
 
@@ -100,7 +100,7 @@ Use editor type to shown predefined editor inside the not aligned type column.
    <q-grid-columns>      
       <q-grid-column key="site"
                      type="url"
-		               title="Edit on click"
+                     title="Edit on click"
                      [editorOptions]="{trigger: 'click'}">
       </q-grid-column>
    </q-grid-columns>
@@ -115,7 +115,7 @@ Indicates the column size which can be setup in `pixels` or `percents`.
 <q-grid-column key="id" [maxWidth]="65"></q-grid-column>
 <q-grid-column key="number" width="30%"></q-grid-column>
 ```
-	
+   
 > Right now percents are materialized only once on view init, depending on the origin q-grid width. Future plans are to add additional modes to handle percents constantly.
 
 ## Column WidthMode
@@ -145,7 +145,7 @@ Use `can-` and `is-` properties to control q-grid columns interaction behavior.
 ## Column Index 
 
 Use index property to define the order of q-grid columns.
-	 
+    
 ## Column Compare
 
 Setup this function to change order method that is used by `column sort pipe` to sort rows.
@@ -196,8 +196,8 @@ Use `distinct` and `separator` settings to change column aggregation template.
 <q-grid [rows]="rows$ | async">
    <q-grid-columns>
       <q-grid-column key="phase"
-		               aggregation="join"
-		               [aggregationOptions]="{separator: '+', distinct: true}">
+                     aggregation="join"
+                     [aggregationOptions]="{separator: '+', distinct: true}">
       </q-grid-column>
    </q-grid-columns>
 </q-grid>
@@ -205,12 +205,13 @@ Use `distinct` and `separator` settings to change column aggregation template.
 
 ## How to show tooltip in column header?
 
-Use description property of the column.
+Use description property in the column.
 
 ```html
 <q-grid>
    <q-grid-columns>
-      <q-grid-column key="my-column" description="Will be shown in tooltip">
+      <q-grid-column key="my-column" 
+                     description="Will be shown in tooltip">
       </q-grid-column>
    </q-grid-columns>
 </q-grid>
