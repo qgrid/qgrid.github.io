@@ -59,6 +59,24 @@ Edit templates are in game when q-grid enters to the edit mode.
 </q-grid>
 ```
 
+## How to change aggregation template in the column footer?
+
+Use let-`$cell` to have access to aggregated value.
+
+```html
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns generation="deep">
+      <q-grid-column key="phase"
+                     title="Phase"
+                     aggregation="count">
+         <ng-template for="foot" let-$cell">
+            Count is {{$cell.value}}
+         </ng-template>
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
 ## Suggested Links
 
 * [$cell service](/reference/cell-service.html)
