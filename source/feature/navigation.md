@@ -4,42 +4,78 @@ group: Features
 order: 13
 ---
 
-The q-grid navigation system supports various keyboard events but to start keyboard navigation q-grid should be focused. Focus can be setup in 3 different ways: by cell clicking, by using `q-grid-autofocus` directive and by using q-grid service.   
+The q-grid navigation system supports various keyboard events to start keyboard navigation q-grid should be focused. 
 
-```typescript
-export class MyComponent {
-   gridModel: GridModel;
+## Shortcut limitations for browsers
 
-   constructor(dataService: DataService, qgrid: Grid) {
-      this.gridModel = qgrid.model();
+Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript to override for preventing malicious websites.
 
-      dataService
-         .getAtoms()
-         .subscribe(rows => {
-            this.gridModel.data({ rows });
-
-            const gridService = qgrid.service(this.gridModel);
-            gridService.focus(1, 2);
-         });
-   }
-}
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/focus-cell-auto/latest" %}
-
-
-## Shortcut limitations for browser
-
-Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript to override for preventing malicious websites:
 * `Ctrl+N`
 * `Ctrl+Shift+N`
 * `Ctrl+T`
 * `Ctrl+Shift+T`
 * `Ctrl+W`
-This key combinations shouldn't be overriden. Browsers disallow overriding this keycode combinations, linked bugs are closed with status `RESOLVED WONTFIX`
+  
+> If you use q-grid in electron box, these shortcuts could be overwritten.
 
-If you use qgrid in your electron application - these shortcuts could be overwritten.
+## What shortcuts does navigation implement by default?
 
+* `up` - up.
+* `down` - down.
+* `left` - left.
+* `right` - right.
+* `tab` - next.
+* `shift+tab` - previous.
+* `home` - home.
+* `end` - end.
+* `pageUp` - pageUp.
+* `pageDown` - pageDown.
+* `shift+pageUp` - upward.
+* `shift+pageDown`- downward.
+      
+## How to override default navigation shortcuts?
+
+Use `shortcut` property in the navigation model.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.navigation({
+         shortcut: { 
+            up: 'up',
+            down: 'down',
+            left: 'left',
+            right: 'right',
+            next: 'tab',
+            previous: 'shift+tab',
+            home: 'home',
+            end: 'end',
+            pageUp: 'pageUp',
+            pageDown: 'pageDown',
+            upward: 'shift+pageUp',
+            downward: 'shift+pageDown'
+         }
+      });
+   }
+}
+```
 
 ## Suggested Links
 

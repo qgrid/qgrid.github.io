@@ -1,76 +1,108 @@
 ---
-title: Grouping & Pivoting
+title: Grouping
 group: Features
-order: 10
+order: 12
 ---
 
-Use q-grid grouping model to group rows by particular columns or use own implementation.
+Use q-grid model to group rows by particular columns or implement own hierarchies.
 
-## Basic Grouping
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
 
-Use `groupBy` attribute to setup grouping columns and `groupMode` to change group representation. Mode equals to `nest`(by default) means that all hierarchy levels should be inside one group type column.
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
 
-```html
-<q-grid [groupBy]="['bondingType', 'groupBlock']"></q-grid>
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.group({
+         by: ['bondingType', 'groupBlock'],
+      });
+   }
+}
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/group-row-/latest" %}
+## Grouping Modes
 
-## Flat Grouping
+Mode option controls how to group rows by default `nest` value is used.
 
-Use `flat` mode when all hierarch levels should have own columns.
+* `nest` - all hierarchy levels are inside the group column.
+* `flat` - all hierarch levels have own columns.
+* `rowspan` - group column occupies all available height on expand.
+* `subhead` - group column fills available space to display hierarchy.
 
-```html
-<q-grid [groupBy]="['bondingType', 'groupBlock']" groupMode="flat"></q-grid>
-```
+## How to enable group summary template?
 
-{% docEditor "github/qgrid/ng2-example/tree/group-row-flat/latest" %}
+Use `group-summary` column type to setup template for summary rows.
 
-## Rowspan Grouping
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep">
+            <q-grid-column type="group-summary" aggregation="count">
+               <ng-template for="body" let-$cell>
+                  Count: {{$cell.value}}
+               </ng-template>
+            </q-grid-column>
+         </q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;
+   rows$: Observable<[]>;
 
-Use `rowspan` mode when group column should occupy all available height on expand.
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
 
-{% docEditor "github/qgrid/ng2-example/tree/group-row-rowspan/latest" %}
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
 
-## Subhead Grouping
-
-Use `subhead` mode when group column should fill available space to display hierarchy.
-
-{% docEditor "github/qgrid/ng2-example/tree/group-row-subhead/latest" %}
-
-## Group Summary
-
-Use `group-summary` column type to setup template for grouping aggregation rows.
-
-```html
-<q-grid [groupBy]="['bondingType', 'groupBlock']" groupMode="subhead" groupSummary="leaf">
-   <q-grid-columns>
-      <q-grid-column type="group-summary" aggregation="count">
-         <ng-template for="body" let-$cell>
-            Count: {{$cell.value}}
-         </ng-template>
-      </q-grid-column>
-   </q-grid-columns>
-</q-grid>
+      model.group({         
+         by: ['bondingType', 'groupBlock'],
+         mode: 'subhead',
+         summary: 'leaf'
+      });
+   }
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-summary/latest" %}
 
-## Custom Hierarchy
+## How to implement custom hierarchy model?
 
-By using pipe idea q-grid allows to transform any data processing to fit the requirements, grouping and pivoting is not exception, use custom pipe to define own hierarchies.
+Use data middleware to fit the requirements, use custom pipe to define own hierarchies.
 
 ```typescript
 import { Grid, Node, Command } from 'ng2-qgrid';
 
 @Component({
-   template: '<q-grid [model]="gridModel"></q-grid>',
+   selector: 'my-component',
+   template: '<q-grid></q-grid>',
 })
-export class MyComponent {
-   gridModel: GridModel;
+export class MyComponent implements AfterViewInit {   
+   @ViewChild(GridComponent) myGrid: GridComponent;
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
+   constructor(private qgrid: Grid) {
+   }
+
+   ngAfterViewInit(){ 
+      const { qgrid } = this;
+      const { model } = this.myGrid;
 
       const root = new Node('$root', 0);
       const tree = [root];
@@ -107,22 +139,9 @@ export class MyComponent {
    }
 }
 ```
+
 {% docEditor "github/qgrid/ng2-example/tree/hierarchy-browser-basic/latest" %}
 
-## Pivoting
+## Suggested Links
 
-Use `pivotBy` attribute and aggregates to setup pivoting columns. Also it's supported to use cohort columns and group within pivoting. To override basic cell template use `ng-template` as always.
-
-```html
-<q-grid [pivotBy]="['bondingType', 'groupBlock']">
-   <q-grid-columns>
-      <q-grid-column type="pivot">
-         <ng-template for="body" let-$cell>
-            <div [style.color]="'#' + $cell.row.color">X</div>
-         </ng-template>
-      </q-grid-column>
-   </q-grid-columns>
-</q-grid>
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/pivot-column-template/latest" %}
+* [Data Middleware](/reference/data-middleware.html)

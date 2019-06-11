@@ -1,91 +1,168 @@
 ---
 title: Filtering
 group: Features
-order: 11
+order: 5
 ---
 
-There are situations when the end user need to show additional information for the rows in the q-grid. Row details serves to satisfy this necessary.
+Use q-grid model to setup row filter options.
 
-## Setup
+## How to add default filter on component load?
 
-Use q-grid model to setup filter options.
-
-```javascript
-gridModel.filter({
-   by: {
-      myTextColumn: { items: ['foo', 'bar'] },
-      myCurrencyColumn: { blanks: true },
-      myNumberColumn: { 
-         expression: {
-            kind: 'group',
-            op: 'and',
-            left: {
-               kind: 'condition',
-               left: key,
-               op: 'in',
-               right: ['foo', 'bar']
-            },
-            right: null
-         }
-      }
-   }
-});
-```
-
-## Column Filters
+Use `by` property to get or set filter settings. 
 
 ```typescript
-import { FetchContext } from 'ng2-qgrid';
-
 @Component({
-      template: '<q-grid [filterFetch]="getFilterItems"></q-grid>',
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
 })
-export class MyComponent {
-   getFilterItems(key: string, context: FetchContext) {
-      const { search, take, skip } = context;
-      return dataService.getFilterItemsFor(key, search, take, skip);
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      gridModel.filter({
+         by: {
+            showAllSmithsColumnKey: { items: ['Smith'] },
+            showEmptyRowsColumnKey: { blanks: true },
+            showSmithAndBranColumnKey: { 
+               expression: {
+                  kind: 'group',
+                  op: 'and',
+                  left: {
+                     kind: 'condition',
+                     left: key,
+                     op: 'in',
+                     right: ['Smith', 'Bran']
+                  },
+                  right: null
+               }
+            }
+         }
+      });   
    }
 }
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/filter-column-fetch/latest" %}
+## How to add a filter row?
 
-## Filter Row
+To show filter controls under the column headers use `filterUnit` attribute, filter view can be overridden in the template definition.
 
-To show input controls under the column headers to filter out rows, use `filterUnit` attribute. Any of these inputs could be override by template definitions.
+```typescript
+@Component({
+   template: `
+      <q-grid>
+         <q-grid-column key="myNumber">
+            <ng-template for="filter" let-$cell>
+               <input #input
+                     type="number"
+                     (change)="$view.filter.column.execute($cell.column.model, input.value)" />
+            </ng-template>
+         </q-grid-column>
+      </q-grid>
+   `
+})
+export class ExampleFilterRowCustomComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
 
-```html
-<q-grid filterUnit="row">
-   <q-grid-column key="myNumber">
-      <ng-template for="filter" let-$cell>
-         <input #input
-                type="number"
-                (change)="$view.filter.column.execute($cell.column.model, input.value)" />
-      </ng-template>
-   </q-grid-column>
-</q-grid>
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.filter({
+         unit: 'row'
+      });
+   }
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
 
-## Custom Filters
+## How to propagate list of items to the column filter from the server?
 
-There are various filter possibilities in the the q-grid but still to go own way is not a problem.
+When server side pagination is used the data in q-grid can be not loaded fully in this case `fetch` callback can be used to get list of items to show in column filter component.
 
 ```typescript
-import { GridComponent } from 'ng2-qgrid';
+import { GridComponent, FetchContext } from 'ng2-qgrid';
 
 @Component({
-   template: '<q-grid></q-grid>'
+   template: `
+      <q-grid [rows]="rows$ | async">
+            <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+   `
 })
-export class ExampleFilterRowCustomComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class ExampleFilterRowCustomComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
 
-   filter(value: string) {
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
       const { model } = this.myGrid;
-      value = value.toLocaleLowerCase();
+
       model.filter({
-         match: () => row => row.name.toLowerCase().indexOf(value) >= 0
+         fetch: (key: string, context: FetchContext) => {
+            const { search, take, skip } = context;
+            return dataService.getFilterItemsFor(key, search, take, skip);
+         }
+      });
+   }
+}
+```
+
+## How to disable particular column filter?
+
+Each column has `canFilter` property that could be used as indicator if filter is applicable or not.
+
+```html
+<q-grid>
+   <q-grid-column key="noFilter" [canFilter]="false"></q-grid-column>
+</q-grid>
+```
+
+## How to filter q-grid externally?
+
+Setup `match` predicate to execute custom filtration on loaded data.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+      `
+})
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+   @Input() value: string;
+
+   constructor(dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
+
+   ngAfterViewInit() {
+      const { model } = this.myGrid;
+
+      model.filter({
+         match: () => row => row.name.toLowerCase().indexOf(this.value) >= 0
       });
    }
 }
@@ -93,82 +170,6 @@ export class ExampleFilterRowCustomComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-custom/latest" %}
 
-## Condition Builder
-
-Use query builder component to add unlimited possibilities to filter data out using convenient hierarchical UI.
-
-
-```javascript
-gridModel.filter({
-   by: {
-      $expression: {
-      kind: 'group',
-      op: 'and',
-      left: {
-         kind: 'group',
-         op: 'or',
-         left: {
-            kind: 'condition',
-            op: 'between',
-            left: 'Age',
-               right: [25, 30]
-         },
-         right: {
-            kind: 'condition',
-            op: 'GreaterThan',
-            left: 'Age',
-            right: 40
-         }
-      },
-      right: {
-         kind: 'group',
-         op: 'and',
-         left: {
-            kind: 'condition',
-            op: 'in',
-            left: 'PayerName',
-            right: ['John', 'Gerard', 'Steve']
-         },
-         right: {
-            kind: 'condition',
-            op: 'isNotNull',
-            left: 'Account',
-            right: null
-         }
-      }
-   }
-});
-```
-
-{% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
-
-## Expression Contract
-
-By supporting q-grid expression contract building any custom filters with complex logic should not be a problem.
-
-```typescript
-{
-   kind: 'condition' | 'group'
-   group[left]: condition[left] | group
-   group[right]: condition[right] | group | null
-   group[op]: 'and' | 'or'
-   condition[left]: columnKey
-   condition[right]: string | number | array | bool | date | null
-   condition[op]: 
-      'isNotNull' 
-      | 'isNull' 
-      | 'equals' 
-      | 'notEquals' 
-      | 'greaterThanOrEquals' 
-      | 'greaterThan' 
-      | 'lessThanOrEquals' 
-      | 'lessThan' 
-      | 'between' 
-      | 'in' 
-      | 'like' 
-      | 'notLike'
-}
-```
 ## Suggested Links
 
-* [Standalone expression builder](https://github.com/qgrid/ng2-expression-builder)
+* [Data manipulation plugin](/plugin/data-manipulation.html)

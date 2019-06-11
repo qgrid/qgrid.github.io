@@ -4,11 +4,7 @@ group: Features
 order: 3
 ---
 
-There are situations when the end user need to apply custom templates to the column cells in the q-grid. The q-grid provides clean and intuitive solution for this case. 
-
-## ng-template
-
-The preferred way to define a cell template is to you `ng-template` inside the `q-grid-column` component. Use `head`, `body`, `foot` and `edit` triggers to fill in the appropriate cell containers.
+There are situations when cell custom templates need to be applied. Use `ng-template` inside the `q-grid-column` and `head`, `body`, `foot`, `edit` options to identify template location.
 
 ```html
 <q-grid>
@@ -17,9 +13,41 @@ The preferred way to define a cell template is to you `ng-template` inside the `
          <ng-template for="body" let-$cell>
             <em>{{$cell.value}}</em>
          </ng-template>
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
+## How to change column header template?
+
+Default header template contains sort and filter components that could be used in custom templates also.
+
+```html
+<q-grid>
+   <q-grid-columns>     
+      <q-grid-column key="age" title="Age" type="number">
          <ng-template for="head" let-$cell>
-            <strong>{{$cell.column.title}}</strong>
+            <q-grid-column-sort class="q-grid-sort"
+                                [column]="$cell.column">
+               {{$cell.column.title}}
+            </q-grid-column-sort>
+            <q-grid-column-filter-trigger class="q-grid-column-filter-trigger"                                       
+                                          [column]="$cell.column">
+            </q-grid-column-filter-trigger>
          </ng-template>
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
+## How to change cell editor template?
+
+Edit templates are in game when q-grid enters to the edit mode.
+
+```html
+<q-grid>
+   <q-grid-columns>
+      <q-grid-column key="age" title="Age" type="number">
          <ng-template for="edit" let-$cell let-$view="$view">
             <input type="number"
                    q-grid-focus
@@ -31,34 +59,26 @@ The preferred way to define a cell template is to you `ng-template` inside the `
 </q-grid>
 ```
 
-## $cell service
+## How to change aggregation template in the column footer?
 
-Use this implicitly injected service to retrieve data cell information. Here are the list of available properties:
+Use let-`$cell` to have access to aggregated value.
 
-* value
-* label
-* row
-* rowIndex
-* column
-* columnIndex
+```html
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns generation="deep">
+      <q-grid-column key="phase"
+                     title="Phase"
+                     aggregation="count">
+         <ng-template for="foot" let-$cell">
+            Count is {{$cell.value}}
+         </ng-template>
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
 
-## $view service
+## Suggested Links
 
-Use this service to take control over any possible actions in the q-grid scope. `$view` service is a facade for several micro utilities that are responsible for the q-grid rendering and interaction models. Here are the list of available routines:
-
-* body
-* edit
-* filter
-* foot
-* group
-* head
-* highlight
-* layout
-* nav
-* pagination
-* row
-* rowDetails
-* scroll
-* selection
-* sort
-* style
+* [$cell service](/reference/cell-service.html)
+* [$view service](/reference/view-service.html)
+* [Column Types](/column-type/grid-column.html)

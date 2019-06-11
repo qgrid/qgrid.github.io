@@ -1,10 +1,8 @@
 ---
-title: My Theme
-group: Getting started
-order: 5
+title: How to made a theme
+group: Customization
+order: 2
 ---
-
-## What we are going to build
 
 This page covers the fundamentals of the q-grid theme system. We will build the simplest one, which will contain only basic templates for cells.
 
@@ -67,4 +65,5 @@ export class ThemeModule {
 
 ## Suggested Links
 
-* [List of available templates](https://github.com/qgrid/ng2/tree/master/src/theme/material/templates)
+* [Material theme](https://github.com/qgrid/ng2/tree/master/src/theme/material)
+* [Basic theme](https://github.com/qgrid/ng2/tree/master/src/theme/basic)

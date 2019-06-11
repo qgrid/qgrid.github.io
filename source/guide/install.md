@@ -1,16 +1,16 @@
 ---
 title: How to install
 group: Getting started
-order: 2
+order: 1
 ---
-
-## Install the q-grid via npm
 
 ```bash
 npm install ng2-qgrid
 ```
 
 ## Add q-grid & theme modules to the application root
+
+Two themes are supported out of box `material` and `basic`, the first one requires `@angular/material` to be installed.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -25,30 +25,29 @@ import { ThemeModule } from 'ng2-qgrid/theme/material';
 export class AppModule {
 }
 ```
-> The q-grid supports 2 themes out of box `@angular/material` and `basic`, the second one doesn't require `@angular/material` to be installed.
 
 ## Create an angular component
+
+Use column generation mode for a quick start.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="myRows | async">
-            <q-grid-columns generation="deep">
-            </q-grid-columns>
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep">
+         </q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent {
-   myRows: Observable<[]>;
+   rows$: Observable<any[]>;
 
    constructor(dataService: MyDataService) {
-         this.myRows = dataService.getRows();
+      this.rows$ = dataService.getRows();
    }
 }
 ```
-
-> Note that passed rows should be an array of objects, any other types, like array of numbers or strings, will throw an error.
 
 ## Dependencies
 
@@ -72,10 +71,12 @@ npm run start
 
 ## Browser Support
 
-* `Chrome` is supported.
+* Last `Chrome` is supported.
+* Last `FireFox` is supported.
+* Last `Edge` is supported.
+
+
 * `Safari` is in progress.
-* `FireFox` is in progress.
-* `Edge` is in progress.
 * `IE11` is in progress.
 
 ## Licence

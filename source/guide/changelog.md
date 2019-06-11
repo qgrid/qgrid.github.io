@@ -1,19 +1,77 @@
 ---
 title: Changelog
 group: Getting started
-order: 7
+order: 4
 ---
 
 ## [Unreleased]
-* Auto-complete cell editor.
-* Batch edit improvements.
 * Vscroll improvements.
 * Copy/paste selection to excel.
 * Live data plugin.
-* Float Row Navigation.
-* Group keyboard navigation improvements.
+* Float rows navigation.
+* Grouped rows navigation improvements.
 
-## [6.2.1] - 2018-08-20
+## [6.4.0] - 2019-05-14
+### Added
+- Column filter modes.
+
+### Fixed
+- Selection toggle command can control checkbox disable state.
+
+## [6.3.9] - 2019-04-24
+### Added
+- Dropdown supports array of objects.
+
+## [6.3.8] - 2019-04-15
+### Fixed
+- Support right pinned column in details mode.
+
+## [6.3.7] - 2019-04-12
+### Fixed
+- Propagate `description` property in column component.
+- Reset scroll only if page size, page or filter was changed.
+- Better pagination behavior when after data rows changed.
+
+## [6.3.5] - 2019-04-11
+### Changed
+- `Focus service` takes into account pagination.
+
+### Fixed
+- Compatibility with Chrome implementation of flex box overflow since version 73.
+- Select all button.
+
+## [6.3.4] - 2019-03-12
+### Fixed
+- Default import template is shown up.
+
+## [6.3.0] - 2019-02-22
+### Added
+- Add support row options menu dividers.
+
+### Changed
+- Show action title if icon is not set.
+- Get rid of ng-template in cell editor component.
+
+### Fixed
+- Custom symbols in the column `key`.
+- Fix column chooser label style.
+- Fix column filter header style.
+- Pagination styles.
+
+## [6.2.4] - 2019-02-05
+### Fixed
+- Row options shortcut fix for multiple actions.
+
+## [6.2.3] - 2019-02-05
+### Added
+- Row options shortcut support.
+
+## [6.2.2]
+### Fixed
+- Better FireFox support by encapsulation of MouseEvent path property.
+- Better edit strategy when trigger of editor options is set to 'focus'.
+
+## [6.2.1]
 ### Added
 - Edit form support.
 - Travis CI.
@@ -23,7 +81,7 @@ order: 7
 ### Fixed
 - Blanks position in the column filter.
 
-## [6.2.0] - 2018-08-02
+## [6.2.0]
 ### Fixed
 - Column filter `blanks` is removed when reset clicked.
 
@@ -136,7 +194,7 @@ order: 7
 - FocusAfterRender service.
 - Column filter IsBlank is displayed in chips.
 - Legend template syntax.
-- TypeScript defenitions.
+- TypeScript definitions.
 - Async pipe for rows property.
 
 ## [5.3.7] - 2018-07-08
@@ -176,7 +234,7 @@ order: 7
 - Pager target menu.
 
 ### Changed
-- Added grid core pipes under ther `ng2-qgrid` namespace.
+- Added grid core pipes under there `ng2-qgrid` namespace.
 - Remove `popup` module.
 
 ### Fixed
@@ -201,7 +259,7 @@ order: 7
 
 ## [5.2.2] - 2018-02-12
 ### Fixed
-- Remove `BrowserModule` from componentns to allow lazy loading.
+- Remove `BrowserModule` from components to allow lazy loading.
 - Fix column filter and column chooser styles.
 
 ## [5.2.0] - 2018-02-09
@@ -228,7 +286,7 @@ order: 7
 * Improve performance through change detection strategy.
 * Improve performance through reducing number of change detections.
 * Improve performance through adding track by index.
-* Improve performance through invoking drang and drop out of ng zone.
+* Improve performance through invoking drag and drop out of ng zone.
 * Layout columns property changed type form object to map.
 
 ## [5.1.1] - 2017-12-28
@@ -320,7 +378,17 @@ order: 7
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v6.2.1...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v6.4.0...HEAD
+[6.4.0]: https://github.com/qgrid/ng2/compare/v6.3.9...v6.4.0
+[6.3.9]: https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.9
+[6.3.8]: https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.8
+[6.3.7]: https://github.com/qgrid/ng2/compare/v6.3.5...v6.3.7
+[6.3.5]: https://github.com/qgrid/ng2/compare/v6.3.4...v6.3.5
+[6.3.4]: https://github.com/qgrid/ng2/compare/v6.3.0...v6.3.4
+[6.3.0]: https://github.com/qgrid/ng2/compare/v6.2.4...v6.3.0
+[6.2.4]: https://github.com/qgrid/ng2/compare/v6.2.4...v6.2.3
+[6.2.3]: https://github.com/qgrid/ng2/compare/v6.2.3...v6.2.2
+[6.2.2]: https://github.com/qgrid/ng2/compare/v6.2.2...v6.2.1
 [6.2.1]: https://github.com/qgrid/ng2/compare/v6.2.1...v6.2.0
 [6.2.0]: https://github.com/qgrid/ng2/compare/v6.2.0...v6.1.5
 [6.1.5]: https://github.com/qgrid/ng2/compare/v6.1.5...v6.1.4
@@ -348,4 +416,4 @@ order: 7
 [1.0.5]: https://github.com/qgrid/ng2/compare/v1.0.5...v1.0.4
 [1.0.4]: https://github.com/qgrid/ng2/compare/v1.0.4...v1.0.3
 [1.0.3]: https://github.com/qgrid/ng2/compare/v1.0.3...v1.0.2
-[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1 
+[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1
