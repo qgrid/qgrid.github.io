@@ -8,7 +8,7 @@ order: 11
 
 ## Installation
 
-Add autocomplete module to imports section.
+<!-- Add autocomplete module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -24,7 +24,7 @@ import { AutocompleteModule } from 'ng2-qgrid/plugin/autocomplete';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Use `autocomplete` as a column editor.
 

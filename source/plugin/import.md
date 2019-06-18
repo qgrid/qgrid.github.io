@@ -8,7 +8,7 @@ Use q-grid import plugin to fill in rows with data from files on client side.
 
 ## Installation
 
-Add import module to imports section.
+<!-- Add import module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -24,7 +24,7 @@ import { ImportModule } from 'ng2-qgrid/plugin/import';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component, after that a new action should appear.
 

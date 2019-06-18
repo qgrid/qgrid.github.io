@@ -10,7 +10,7 @@ Use toolbar plugin to customize toolbar templates.
 
 ## Installation
 
-Add toolbar module to imports section.
+<!-- Add toolbar module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -26,7 +26,7 @@ import { ToolbarModule } from 'ng2-qgrid/plugin/toolbar';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component. `Top`, `right`, `bottom` and `left`  areas are supported.
 
