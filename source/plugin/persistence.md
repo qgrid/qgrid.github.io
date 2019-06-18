@@ -10,7 +10,7 @@ Use persistence plugin to save and restore q-grid state.
 
 ## Installation
 
-Add persistence module to imports section.
+<!-- Add persistence module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -26,7 +26,7 @@ import { PersistenceModule } from 'ng2-qgrid/plugin/persistence';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component, after that a new action should appear.
 

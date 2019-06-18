@@ -10,7 +10,7 @@ Validation plugin is based on language independent validation rules called LIVR.
 
 ## Installation
 
-Add validation module to imports section.
+<!-- Add validation module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -26,7 +26,7 @@ import { ValidationModule } from 'ng2-qgrid/plugin/validation';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component.
 

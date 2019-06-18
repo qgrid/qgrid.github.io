@@ -8,7 +8,7 @@ Use REST plugin to connect q-grid with back-end directly.
 
 ## Installation
 
-Add rest module to imports section.
+<!-- Add rest module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -24,7 +24,7 @@ import { RestModule } from 'ng2-qgrid/plugin/rest';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component, after that a new action should appear.
 

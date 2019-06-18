@@ -10,6 +10,7 @@ Use query builder plugin to add unlimited possibilities to filter data using con
 
 ## Installation
 
+<!-- 
 Add condition builder module to imports section.
 
 ```typescript
@@ -26,7 +27,7 @@ import { ConditionBuilderModule } from 'ng2-qgrid/plugin/condition-builder';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component, after that a new action should appear.
 

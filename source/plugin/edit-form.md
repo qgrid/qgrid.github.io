@@ -8,7 +8,7 @@ order: 12
 
 ## Installation
 
-Add dropdown module to imports section.
+<!-- Add dropdown module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -24,7 +24,7 @@ import { EditFormModule } from 'ng2-qgrid/plugin/edit-form';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Use `dropdown` as a column editor.
 

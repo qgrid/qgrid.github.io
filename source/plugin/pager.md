@@ -10,7 +10,7 @@ Use pager plugin to add possibilities to setup initial pagination option in comp
 
 ## Installation
 
-Add pager module to imports section.
+<!-- Add pager module to imports section.
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -26,7 +26,7 @@ import { PagerModule } from 'ng2-qgrid/plugin/pager';
 })
 export class AppModule {
 }
-```
+``` -->
 
 Add angular component inside of q-grid component, after that a new action should appear.
 
