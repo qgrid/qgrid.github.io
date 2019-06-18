@@ -22,6 +22,14 @@
 		font-size: 35px !important;
 		right: 45px !important;
 	}
+	.backbone {
+		transition: ease all .5s;
+		top: 75px;
+		right: 25px;
+		color: black;
+		font-size: 35px !important;
+		right: 50px !important;
+	}
 }
 
 // medium screen
@@ -33,6 +41,11 @@
 	}
 	.pages header {
 		position: absolute;
+	}
+	.backbone {
+		transition: ease .5s;
+		top: 23px;
+		right: 100px !important;
 	}
 }
 
@@ -109,6 +122,10 @@
 					font-size: 31px;
 					margin: 0;
 				}
+			}
+			.backbone{
+				top: 23px;
+				right: 67px;
 			}
 		}
 		.nav-trigger {
