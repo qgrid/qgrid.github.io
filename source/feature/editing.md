@@ -206,9 +206,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to detect if any data was changed by user input?
+## How to prevent value change it it empty?
 
-Use `commit` command to track if any data was changed by user input.
+Use `canExecute` method in `commit` command to decide if cell value should be changed.
 
 ```typescript
 ngAfterViewInit() {
@@ -216,8 +216,22 @@ ngAfterViewInit() {
 
    model.edit({
       commit: new Command({
-         execute: e => console.log(e.newValue)
+         canExecute: e => !!e.newValue
       })
+   });
+}
+```
+
+## How to enter or exit edit mode?
+
+Use `state` property in edit model. Use `view` or `edit` to define mode. 
+
+```typescript
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.edit({
+      state: 'edit'
    });
 }
 ```

@@ -60,6 +60,8 @@ export class MyComponent {
 
 Use column width attribute to setup desired column size using pixels or percentages.
 
+> If percents are used all columns should set `width` property for correct size calculation.
+
 ## How to make column width auto adjusted to the cell content?
 
 As q-grid utilizes `table-layout: fixed` right now we doesn't support auto size out of box, but it can be calculated using TypeScript in user code and applying style API.
