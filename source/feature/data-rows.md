@@ -48,7 +48,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to make rows frozen?
+## How to make rows frozen/pinned?
 
 Use `row` state in the q-grid model to control which rows to pin.
 
