@@ -92,7 +92,36 @@ import { Grid, Node, Command } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>',
+   template: `
+      <q-grid>
+         <q-grid-columns>
+            <q-grid-column type="group"
+                           offset="40"
+                           width="80%"
+                           widthMode="relative">
+               <ng-template for="body"
+                            let-$cell
+                            let-$view="$view">
+                  <div *ngIf="$view.group.isVisible($cell.row, $cell.column)"
+                       [ngStyle]="{'padding-left': $view.group.offset($cell.row, $cell.column) + 'px'}">
+               
+                     <button *ngIf="$view.group.toggleStatus.canExecute($cell.row, $cell.column)"
+                             (click)="$view.group.toggleStatus.execute($cell.row, $cell.column)">
+                        <mat-icon class="q-grid-icon">
+                           {{$view.group.status($cell.row, $cell.column) === 'expand' ? 'folder_open' : 'folder'}}
+                        </mat-icon>
+                     </button>
+                     
+                     <mat-icon *ngIf="($view.group.value($cell.row, $cell.column)).startsWith('file')"
+                              class="q-grid-icon">
+                        insert_drive_file
+                     </mat-icon>
+            </div>
+         </ng-template>
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+`
 })
 export class MyComponent implements AfterViewInit {   
    @ViewChild(GridComponent) myGrid: GridComponent;
@@ -106,16 +135,16 @@ export class MyComponent implements AfterViewInit {
 
       const root = new Node('$root', 0);
       const tree = [root];
-      const treePipe = (memo, context, next) => {
+      const myHierarchyPipe = (memo, context, next) => {
          memo.nodes = tree;
          next(memo);
       };
 
-      this.gridModel
+      model
          .data({
             pipe: [
                qgrid.pipe.memo,
-               treePipe,
+               myHierarchyPipe,
                qgrid.pipe.column,
                qgrid.pipe.view
             ]
@@ -129,8 +158,7 @@ export class MyComponent implements AfterViewInit {
                      node.children = Array.from(new Array(length), function (x, i) {
                         const type = Math.floor(Math.random() * 5) < 3 ? 'group' : 'value';
                         const title = type === 'group' ? 'folder' : 'file';
-                        const child = new Node(title + ' [' + level + ',' + i + '] ', level, type);
-                        return child;
+                        return new Node(`${title}[${level}, ${i}]`, level, type);
                      });
                   }
                }

@@ -28,7 +28,7 @@ export class AppModule {
 }
 ``` -->
 
-Add angular component inside of q-grid component and override legend template regarding to the task.
+Add angular component inside of q-grid component and override pange template regarding to the task.
 
 ```typescript
 @Component({

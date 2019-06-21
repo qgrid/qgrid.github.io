@@ -13,11 +13,11 @@ import { Grid, GridModel } from 'ng2-qgrid';
    selector: 'my-component',
    template: '<q-grid></q-grid>'
 })
-export class MyComponent {
-   @ViewChild(GridComponent) grid: GridComponent;
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;
 
    ngAfterViewInit() {
-      const { model } = this.grid;
+      const { model } = this.myGrid;
       const firstRow = model.data().rows[0];
 
       model.selection({ 
@@ -42,11 +42,11 @@ All separate states in the model have `<name-of-state>Changed` property to handl
    selector: 'my-component',
    template: '<q-grid></q-grid>'
 })
-export class MyComponent {
-   @ViewChild(GridComponent) grid: GridComponent;
+export class MyComponent implements AfterViewInit {
+   @ViewChild(GridComponent) myGrid: GridComponent;
 
    ngAfterViewInit() {
-      const { model } = this.grid;
+      const { model } = this.myGrid;
       model.selectionChanged.on(e => console.log('selection changed')));
    }
 }

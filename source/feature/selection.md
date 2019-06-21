@@ -4,7 +4,7 @@ group: Features
 order: 2
 ---
 
-There are situations when the end user need to select rows or cells, q-grid provides rich model to handle selection.
+There are situations when a user need to select rows or cells fortunately q-grid provides rich model to handle selections.
 
 ```typescript
 @Component({
@@ -41,9 +41,19 @@ export class MyComponent implements AfterViewInit {
 
 Use `mode` property to change selection mode.
 
-* Use  `single` mode when only one row/column should be selected.
+* Use `single` mode when only one row/column should be selected.
 * Use `multiple` mode when several rows/columns could be selected.
 * Use `range` mode when drag and drop selection should be turned on.
+
+```typescript
+ ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.selection({
+      mode: 'multiple',
+   });
+}
+```
 
 ## How to change what should be selectable?
 
@@ -81,7 +91,7 @@ export class MyComponent implements AfterViewInit {
 
 ## How to restrict selection only on checkbox click?
 
-If clicking to q-grid body should not lead to row selection set selection `area` property to `custom`.
+Set selection `area` property to `custom`  if clicking to q-grid body should not lead to row selection.
 
 ## How to prevent unselecting if row was clicked again?
 
@@ -92,7 +102,8 @@ model.selectionChanged.on(e => {
    const change = e.changes['items'];
    if (change) {
       const { newValue, oldValue } = change;
-      if (!newValue.length) {
+      const noSelection = !newValue.length;
+      if (noSelection) {
          model.selection({
             items: oldValue
          });
@@ -116,19 +127,41 @@ Use `[isVisible]` input of to hide/show select column.
 
 ## How to select rows by id?
 
-To override what is located in `items` property selection `key` could be overridden.
+Sometimes it's required to fill selection items properties with something different from just row references. To override default behavior selection `key` property could be overridden.
 
 ```typescript
-model.selection({       
-   key: {
-      row: row => row.myNumberId,
-      column: column => column.key
-   }
-});
+ngAfterViewInit() {
+   model.selection({       
+      key: {
+         row: row => row.myNumberId,
+         column: column => column.key
+      }
+   });
 
-model.selection({
-   items: [0, 1, 2]
-});
+   const rowIds = [0, 1, 4]; 
+   model.selection({
+      items: rowIds
+   });
+}
+```
+
+## How to disable particular rows from being selected?
+
+Use `toggle` command to disable particular checkboxes.
+
+```typescript
+ngAfterViewInit() {
+	const { model } = this.myGrid;
+
+	model.selection({
+		toggle: new Command({
+			canExecute: e => {
+            const target = e.items[0]; 
+				return target.gender === 'male';
+			}
+		})
+	});
+}
 ```
 
 ## What shortcuts does selection implement by default?
@@ -143,4 +176,4 @@ model.selection({
 
 ## How to override default selection shortcuts?
 
-Use `shortcut` property in the selection model.
+Use `shortcut` property from selection model.

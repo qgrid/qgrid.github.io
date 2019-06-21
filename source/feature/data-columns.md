@@ -24,7 +24,7 @@ export class MyComponent {
 }
 ```
 
-> Column generator supports only array of objects in rows, if row type is primitive it won't be rendered.
+> Column generator supports only rows of objects if row type is primitive it won't be rendered.
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
@@ -48,7 +48,7 @@ Use `q-grid-column` components to explicitly declare list of columns to show, co
 
 ## Structural directives and column visibility
 
-Component system allows to utilize structural directives(starts with `*` in Angular) to control column visibility.
+Component system allows to utilize structural directives(starts with `*` in Angular) to control column or column group visibility.
 
 ```html
 <q-grid [ngSwitch]="group">
@@ -67,7 +67,7 @@ Component system allows to utilize structural directives(starts with `*` in Angu
 
 ## How to define columns in TypeScript?
 
-Consider to use `columns` attribute of the q-grid component, when list of columns need to be created in TypeScript.
+Consider to use `[columns]` attribute of the q-grid component, when list of columns need to be created in TypeScript.
 
 ```typescript
 @Component({
@@ -109,7 +109,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to make columns frozen?
+## How to make columns frozen/pinned?
 
 Use `pin` property in column definition to control if the column should be pinned either to the `right` or to the `left`.
 
@@ -124,7 +124,7 @@ Use `pin` property in column definition to control if the column should be pinne
 
 ## How to define column order?
 
-Column order depends on `index` property and column definition position. If column index was not explicitly setup columns defined in TypeScript have higher priority than defined in HTML. 
+Column order heavily depends on column definition position within `index` property. Please not that in terms of ordering columns defined in TypeScript have higher priority rather than HTML column definitions. 
 
 ```html
 <q-grid>

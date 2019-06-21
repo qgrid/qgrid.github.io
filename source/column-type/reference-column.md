@@ -30,6 +30,9 @@ export class MyComponent {
         return model;
       }
    };
+
+   constructor(private qgrid: Grid) {
+   }
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}
