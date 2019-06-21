@@ -4,7 +4,7 @@ group: Features
 order: 9
 ---
 
-There are situations when the end user need to show additional information for the rows in the q-grid, row details can help with that.
+There are situations when additional information need to be showing by expanding row row details can help to handle this.
 
 ```typescript
 @Component({
@@ -49,12 +49,15 @@ export class MyComponent {
 Update `status` property in row model.
 
 ```typescript
-const { model } = this.myGrid;
+ngAfterViewInit() {
+   const { model } = this.myGrid;
 
-const expand = true;
-model.row({
-   status: new Map(model.data().rows.map<[any, RowDetailsStatus]>(x => [x, new RowDetailsStatus(expand)]))
-});
+   const { rows } = model.data();
+   const expand = true;
+   model.row({
+      status: new Map(rows.map<[any, RowDetailsStatus]>(x => [x, new RowDetailsStatus(expand)]))
+   });
+}
 ```
 
 ## How to disable/hide expand button?
@@ -62,13 +65,15 @@ model.row({
 Use `toggle` command from row model.
 
 ```typescript
-const { model } = this.myGrid;
+ngAfterViewInit() {
+   const { model } = this.myGrid;
 
-model.row({
-   toggle: new Command({
-      canExecute: ({ row }) => false
-   })
-});
+   model.row({
+      toggle: new Command({
+         canExecute: ({ row }) => false
+      })
+   });
+}
 ```
 
 ## How to show nested q-grid in details template?
@@ -113,20 +118,22 @@ export class MyComponent {
    }
 
    getDetailsRows(atom: Atom) {
-		let rows$ = this.cache.get(atom.phase);
-		if (!rows$) {
+      let rows$ = this.cache.get(atom.phase);
+      if (!rows$) {
+         const byPhase = row => row.phase === atom.phase;
+         
          rows$ = 
             dataService
                .getRows()
                .pipe(
-                  map(rows => rows.filter(row => row.phase === atom.phase)
+                  map(rows => rows.filter(byPhase))
                ));
 
-			this.cache.set(atom.phase, rows$);
-		}
+         this.cache.set(atom.phase, rows$);
+      }
 
-		return subject;
-	}
+      return rows$;
+   }
 }
 ```
 

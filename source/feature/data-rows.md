@@ -11,7 +11,7 @@ Any array of objects can be directly bind to the q-grid, if `observable` is used
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-            <q-grid-columns generation="deep"></q-grid-columns>
+         <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
@@ -23,6 +23,10 @@ export class MyComponent {
    }
 }
 ```
+
+## What will happen if array of rows is not consistent?
+
+If some of row properties are not accessible empty cells will be shown, on edit error will be thrown.
 
 ## How to setup rows using q-grid model?
 

@@ -4,7 +4,7 @@ group: Features
 order: 3
 ---
 
-There are situations when cell custom templates need to be applied. Use `ng-template` inside the `q-grid-column` and `head`, `body`, `foot`, `edit` options to identify template location.
+To apply cell custom templates use `ng-template` inside `q-grid-column` component. Use `head`, `body`, `foot` and `edit` inputs to identify template site.
 
 ```html
 <q-grid>

@@ -37,11 +37,12 @@ export class ExampleMasterDetailsBasicComponent {
          const items = e.state.items;
          if (items.length) {
             const { likes } = items[0];
+            const sameLikes = human => likes.every(like => human.likes.indexOf(like) >= 0;
 
             this.detailsRows = this.dataService
                .getPeople()
                .pipe(
-                  map(humans => humans.filter(human => likes.every(like => human.likes.indexOf(like) >= 0))
+                  map(humans => humans.filter(sameLikes))
                ));
          }
       });

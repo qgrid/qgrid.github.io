@@ -8,7 +8,7 @@ order: 0
 <ul class="highlights">
 	<li>
 		<div class="description">
-			<h2>[Drag & Drop](/feature/misc.html)</h2>
+			<h2>[Drag & Drop](/feature/data-rows.html#How-to-enable-row-resizing-and-drag-amp-drop)</h2>
 			<p>Define simple and clean properties to set drag & drop for row as well as for column.</p>
 		</div>
 		<div class="video">
@@ -41,7 +41,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Editing](/feature/editing.html)</h2>
+			<h2>[Editing](/feature/cell-templates.html)</h2>
 			<p>Use predefined and make your own templates to edit cells of various data types.</p>
 		</div>
 		<div class="video">
@@ -52,7 +52,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Batch Update](/feature/editing.html#Batch-Edit)</h2>
+			<h2>[Batch Update](/feature/editing.html#How-to-enable-batch-edit)</h2>
 			<p>Update multiple cells in one batch quickly and conveniently.</p>
 		</div>
 		<div class="video">
@@ -63,7 +63,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Themes](/guide/theme.html)</h2>
+			<h2>[Themes](/customization/theme.html)</h2>
 			<p>Create and switch on custom theme appropriate your system appearance.</p>
 		</div>
 		<div class="video">
@@ -96,7 +96,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[State Persistence](/feature/misc.html#Persistence)</h2>
+			<h2>[State Persistence](/plugin/persistence.html)</h2>
 			<p>Use built-in tools to persist your state settings like filtering, grouping, sorting, etc and point out storage of the state.</p>
 		</div>
 		<div class="video">
@@ -107,7 +107,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Condition Builder](/feature/filtering.html#Condition-Builder)</h2>
+			<h2>[Condition Builder](/plugin/condition-builder.html)</h2>
 			<p>Set powerful filters with AND/OR logic using condition builder.</p>
 		</div>
 		<div class="video">
@@ -129,7 +129,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Style API](/feature/style-api.html)</h2>
+			<h2>[Style API](/reference/style-api.html)</h2>
 			<p>Customize your row and column appearance dynamically with our style API.</p>
 		</div>
 		<div class="video">
@@ -140,7 +140,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Pinned Columns](/feature/data-columns.html#Column-Pin) & [Rows](/feature/misc.html#Floating-Rows)</h2>
+			<h2>[Pinned Columns](/column-type/grid-column.html#Column-Pin) & [Rows](/feature/data-rows.html#How-to-make-rows-frozen-pinned)</h2>
 			<p>Pin your data which you want to see constantly to any border.</p>
 		</div>
 		<div class="video">
@@ -151,7 +151,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Span Headers](/feature/data-columns#Column-Children) & [Pivoting](/feature/grouping#Pivoting)</h2>
+			<h2>[Span Headers](/column-type/grid-column.html#Column-Children) & [Pivoting](/feature/pivoting.html)</h2>
 			<p>Organize and extract the significant data using span headers and pivoting feature.</p>
 		</div>
 		<div class="video">
@@ -162,7 +162,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2>[Layer System](/feature/layout-system.html)</h2>
+			<h2>[Layer System](/feature/layer-system.html) & [Panes](/plugin/pane.html)</h2>
 			<p>Customize the grid view until the data is received.</p>
 		</div>
 		<div class="video">
@@ -173,7 +173,7 @@ order: 0
 	</li>
    <li>
 		<div class="description">
-			<h2>[Export/Import](/feature/export-import.html)</h2>
+			<h2>[Export/Import](/plugin/export.html)</h2>
 			<p>Save and load your data in popular file formats.</p>
 		</div>
 		<div class="video">

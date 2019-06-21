@@ -51,28 +51,47 @@ Edit template is populated automatically when cell is clicked, because by defaul
 
 ## How to open row options menu on enter pressed?
 
+Just focus row options column programmatically. 
+
 ```typescript
 @Component({
-    template: `
-       <q-grid [rows]="rows">
-          <q-grid-column key="rowOptions"
-                         type="row-options"
-                         [editorOptions]="{actions: rowActions}">
-          </q-grid-column>
-       </q-grid>
-    `
+   template: `
+      <q-grid [rows]="rows">
+         <q-grid-column key="rowOptions"
+                        type="row-options"
+                        [editorOptions]="rowOptions">
+         </q-grid-column>
+         <q-grid-actions>
+            <q-grid-action id="enterAction"
+                           [command]="enterCommand">
+            </q-grid-action>
+         </q-grid-actions>
+   </q-grid>
+   `
 })
 export class MyComponent {
-  rowActions = [
-    new Action(
-      new Command<{ row: Atom }>({
-        execute: cell => window.open(cell.row.source, '_blank'),
-        shortcut: 'alt+g'
-      }),
-      'Goto Wiki',
-      'link'
-    )
-  ];
+   @ViewChild(GridComponent) myGrid: GridComponent;
+
+   rowOptions = {
+      trigger: 'focus',
+      actions: [
+         new Action(new Command(), 'Hello'),
+         new Action(new Command(), 'World')
+      ]
+   };
+
+   enterCommand = new Command({
+      execute: () => {
+         const { model } = this.myGrid;
+         const { rowIndex, columnIndex } = this.gridModel.navigation();
+         const { columns } = this.gridModel.view();
+
+         const rowOptionsColumnIndex = columns.findIndex(c => c.key === 'rowOptions');
+         this.gridService.focus(rowIndex, rowOptionsColumnIndex);
+    },
+    shortcut: 'enter'
+  });
+
 }
 ```
 

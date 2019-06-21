@@ -4,7 +4,7 @@ group: Features
 order: 5
 ---
 
-Use q-grid model to setup row filter options.
+There are many UI abilities that q-grid provides to filter data. Choose column filters, filter row, condition builder or implement custom filters.
 
 ## How to add default filter on component load?
 
@@ -32,20 +32,18 @@ export class MyComponent implements AfterViewInit {
 
       gridModel.filter({
          by: {
-            showAllSmithsColumnKey: { items: ['Smith'] },
-            showEmptyRowsColumnKey: { blanks: true },
-            showSmithAndBranColumnKey: { 
-               expression: {
-                  kind: 'group',
-                  op: 'and',
-                  left: {
-                     kind: 'condition',
-                     left: key,
-                     op: 'in',
+            firstName: { items: ['Smith'] },
+            gender: { blanks: true },
+            $expression: {
+               kind: 'group',
+               op: 'and',
+               left: {
+                  kind: 'condition',
+                  left: 'firstName',
+                  op: 'in',
                      right: ['Smith', 'Bran']
-                  },
-                  right: null
-               }
+               },
+               right: null
             }
          }
       });   
@@ -91,7 +89,7 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
 
-## How to propagate list of items to the column filter from the server?
+## How to propagate list of filter by items to the column filter from the server?
 
 When server side pagination is used the data in q-grid can be not loaded fully in this case `fetch` callback can be used to get list of items to show in column filter component.
 
@@ -169,7 +167,3 @@ export class MyComponent implements AfterViewInit {
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-custom/latest" %}
-
-## Suggested Links
-
-* [Data manipulation plugin](/plugin/data-manipulation.html)

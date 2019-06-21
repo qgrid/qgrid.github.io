@@ -55,24 +55,6 @@ ngAfterViewInit() {
 }
 ```
 
-## How to change edit shortcuts?
-
-Use shortcuts properties from the edit model to change commit or cancel keys.
-
-```typescript
-ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
-      mode: 'cell',
-      commitShortcuts: {
-         $default: 'tab|shift+tab|enter|ctrl+s',
-         bool: 'tab|shift+tab|left|right|up|down|home|end|pageUp|pageDown'
-      }
-   });
-}
-```
-
 ## How to enable batch edit?
 
 Use edit `method` property to activate batch editing, it activates cell handler that could be dragged to apply start cell value to the next selection.
@@ -89,20 +71,6 @@ ngAfterViewInit() {
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
-
-## How to reset edit mode?
-
-Just set edit mode equals to `null`.
-
-```typescript
-ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
-      mode: null
-   });
-}
-```
 
 ## How to disable edit mode for the particular column?
 
@@ -193,7 +161,7 @@ export class MyComponent implements AfterViewInit {
 
    deleteRow = new Command({
       execute: (row: Human) => {
-         const { model } = this.grid;
+         const { model } = this.myGrid;
 
          const rows = model.data().rows.filter(x => x !== row);
          model.data({ rows });
@@ -206,7 +174,25 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to prevent value change it it empty?
+## How to change edit shortcuts?
+
+Use shortcuts properties from the edit model to change commit or cancel keys.
+
+```typescript
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.edit({
+      mode: 'cell',
+      commitShortcuts: {
+         $default: 'tab|shift+tab|enter|ctrl+s',
+         bool: 'tab|shift+tab|left|right|up|down|home|end|pageUp|pageDown'
+      }
+   });
+}
+```
+
+## How to prevent value change it it's empty?
 
 Use `canExecute` method in `commit` command to decide if cell value should be changed.
 
@@ -236,6 +222,21 @@ ngAfterViewInit() {
 }
 ```
 
+## How to disable edit mode?
+
+Just set edit mode equals to `null`.
+
+```typescript
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+
+   model.edit({
+      mode: null
+   });
+}
+```
+
 ## Suggested Links
 
 * [Data manipulation plugin](/plugin/data-manipulation.md)
+* [Edit form plugin](/plugin/edit-form.md)

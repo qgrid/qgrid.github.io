@@ -86,19 +86,11 @@ export class MyComponent {
 Set sort `mode` equals to `single`.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: '<q-grid></q-grid>'
-})
-export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-
-   ngAfterViewInit() {
-      const { model } = this.myGrid;
-      
-      model.sort({ 
-         mode: 'single'
-      });
-   }
+ngAfterViewInit() {
+   const { model } = this.myGrid;
+   
+   model.sort({ 
+      mode: 'single'
+   });
 }
 ```

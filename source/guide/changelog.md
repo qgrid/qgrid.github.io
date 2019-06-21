@@ -1,15 +1,37 @@
 ---
 title: Changelog
 group: Getting started
-order: 4
+order: 2
 ---
 
 ## [Unreleased]
-* Vscroll improvements.
+* Vscroll.
 * Copy/paste selection to excel.
 * Live data plugin.
 * Float rows navigation.
 * Grouped rows navigation improvements.
+
+## [7.2.1] - 2019-06-20
+### Fixed
+- Angular Material version
+
+## [7.2.0] - 2019-06-20
+### Changed
+- Migrate to Angular 7.
+- Reference editor cancels value on backdrop click.
+- Move layer component under the box.
+
+### Fixed
+- Commit command get correct arguments.
+- Better mouse navigation in edit mode.
+- Dropdown behavior on close.
+- Limit filter by chip width to support multiline text.
+- Do not show shortcut tooltip in action bar if it's empty
+- Same id layers can be accidentally shown.
+
+### Added
+- Possibility to add panes.
+- Layer panel gets class appropriate to layer name.
 
 ## [6.4.0] - 2019-05-14
 ### Added
@@ -378,7 +400,9 @@ order: 4
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v6.4.0...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v7.2.1...HEAD
+[7.2.1]: https://github.com/qgrid/ng2/compare/v7.2.0...v7.2.1
+[7.2.0]: https://github.com/qgrid/ng2/compare/v6.4.0...v7.2.0
 [6.4.0]: https://github.com/qgrid/ng2/compare/v6.3.9...v6.4.0
 [6.3.9]: https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.9
 [6.3.8]: https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.8

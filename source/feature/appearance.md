@@ -52,15 +52,24 @@ export class MyComponent {
 }
 ```
 
-> Note that first argument of `context.class` method should be an unique identifier for the appropriate group of styles.
+> Pass unique id to `context.class` method for the appropriate group of styles.
 
 {% docEditor "github/qgrid/ng2-example/tree/style-cell-basic/latest" %}
 
-## Column Width
+## How to change column width?
 
-Use column width attribute to setup desired column size using pixels or percentages.
+Use css styles or column `[width]` attribute to setup desired column size using pixels or percentages.
 
-> If percents are used all columns should set `width` property for correct size calculation.
+```html
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns>
+      <q-grid-column key="name" [width]="200"></q-grid-column>
+      <q-grid-column key="description" width="100%"></q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
+> If percents are used all columns should define `width` property for the correct size calculation.
 
 ## How to make column width auto adjusted to the cell content?
 
