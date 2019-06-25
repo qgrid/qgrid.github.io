@@ -30,6 +30,7 @@ function searchOnLoad() {
 	const search = getSearch();
 	if (active && search) {
 		document.getElementById('search').value = search;
+		updateExampleLink(search);
 		currentPageSearch(search);
 		menuItemsSearch(search);
 	}
@@ -42,6 +43,7 @@ function searchOnHashChange() {
 		document.getElementById('search').focus();
 	}
 
+	updateExampleLink(search);
 	currentPageSearch(search);
 	menuItemsSearch(search);
 }
@@ -123,7 +125,7 @@ function appendTagText(menuItem, tag, search) {
 	}
 	const menuTag = menuItem.querySelector('.tag');
 	menuTag.textContent = formatTag(tag, search);
-
+	
 	if (menuItem.querySelector('.title').getAttribute('href')) {
 		menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
 	}
@@ -232,6 +234,13 @@ function splitToWords(text) {
 
 function escape(text) {
 	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
+
+function updateExampleLink(search) {
+	const example = document.querySelector('.qgrid-examples');
+	const href = example.getAttribute('href').split('?')[0];
+	const param = (search) ? '?search=' + search : '';
+	example.setAttribute('href', href + param)
 }
 
 function setSearch(search) {
