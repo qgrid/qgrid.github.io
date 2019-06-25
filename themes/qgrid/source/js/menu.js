@@ -76,7 +76,9 @@ function menuItemsSearch(search) {
 	for (let title of titles) {
 		const menuItem = title.parentElement;
 		for (let tag of getTags(menuItem)) {
-			updateMenuLinks(title, tag, search);
+			if (!title.parentElement.classList.contains('active-topic')) {
+				updateMenuLinks(title, tag, search);
+			}
 			if (testSearch(tag, search)) {
 				appendTagText(menuItem, tag, search);
 				const menuTag = menuItem.querySelector('.tag');
@@ -121,7 +123,10 @@ function appendTagText(menuItem, tag, search) {
 	}
 	const menuTag = menuItem.querySelector('.tag');
 	menuTag.textContent = formatTag(tag, search);
-	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
+
+	if (menuItem.querySelector('.title').getAttribute('href')) {
+		menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
+	}
 }
 
 function removeTagText(menuItem, search) {
@@ -191,7 +196,7 @@ function highlightText(item, search) {
 	for (let a of aTags) {
 		item.insertBefore(a, item.firstChild);
 	}
-	
+
 	return false;
 }
 
