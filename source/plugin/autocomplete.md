@@ -49,9 +49,9 @@ import { of } from 'rxjs';
 export class MyComponent {
    rows$: Observable<any[]>;
 
-  	autocompleteOptions = {
-		fetch: of([Math.PI, Math.LN10, Math.LN2, Math.E, Math.LOG10E, Math.LOG2E, Math.SQRT1_2])
-	};
+     autocompleteOptions = {
+      fetch: of([Math.PI, Math.LN10, Math.LN2, Math.E, Math.LOG10E, Math.LOG2E, Math.SQRT1_2])
+   };
 
    constructor(dataService: MyDataService) {
       this.$rows = dataService.getData();
@@ -81,24 +81,24 @@ First make column type equals to `object`, than setup `[label]` callback that wi
 export class MyComponent {
    rows$: Observable<any[]>;
 
-  	autocompleteOptions = {
-		fetch: [
+   autocompleteOptions = {
+      fetch: [
          { id: 1, label: 'First Option' }
          { id: 2, label: 'Second Option' }
       ]
-	};
+   };
 
    constructor(dataService: MyDataService) {
       this.$rows = dataService.getData();
    }
 
-	getLabel(row: any) {
-		return row.object.label;
-	}
+   getLabel(row: any) {
+      return row.object.label;
+   }
 
-	getItemLabel(item: {id: number, label: string }) {
-		return item ? item.label : '';
-	}   
+   getItemLabel(item: {id: number, label: string }) {
+      return item ? item.label : '';
+   }   
 }
 ```
 
