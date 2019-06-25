@@ -11,9 +11,21 @@ order: 2
 * Float rows navigation.
 * Grouped rows navigation improvements.
 
+## [7.2.4] - 2019-06-25
+### Fixed
+- `itemLabel` works for auto-complete.
+
+## [7.2.3] - 2019-06-20
+### Fixed
+- Can't enter edit mode when selection unit is row.
+
+## [7.2.2] - 2019-06-20
+### Fixed
+- Layer default styles.
+
 ## [7.2.1] - 2019-06-20
 ### Fixed
-- Angular Material version
+- Angular Material version.
 
 ## [7.2.0] - 2019-06-20
 ### Changed
@@ -400,7 +412,10 @@ order: 2
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v7.2.1...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v7.2.4...HEAD
+[7.2.3]: https://github.com/qgrid/ng2/compare/v7.2.3...v7.2.4
+[7.2.3]: https://github.com/qgrid/ng2/compare/v7.2.2...v7.2.3
+[7.2.2]: https://github.com/qgrid/ng2/compare/v7.2.1...v7.2.2
 [7.2.1]: https://github.com/qgrid/ng2/compare/v7.2.0...v7.2.1
 [7.2.0]: https://github.com/qgrid/ng2/compare/v6.4.0...v7.2.0
 [6.4.0]: https://github.com/qgrid/ng2/compare/v6.3.9...v6.4.0
