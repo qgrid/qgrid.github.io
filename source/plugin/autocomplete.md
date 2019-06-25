@@ -59,6 +59,49 @@ export class MyComponent {
 }
 ```
 
+## How to show custom label for this list of objects?
+
+First make column type equals to `object`, than setup `[label]` callback that will receive data row and `[itemLabel]` callback that will receive values returned by `fetch` function. 
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep">
+            <q-grid-column key="objectColumn"
+                           type="object"
+                           editor="autocomplete"
+                           [editorOptions]="autocompleteOptions">
+            </q-grid-column>
+         </q-grid-columns>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   rows$: Observable<any[]>;
+
+  	autocompleteOptions = {
+		fetch: [
+         { id: 1, label: 'First Option' }
+         { id: 2, label: 'Second Option' }
+      ]
+	};
+
+   constructor(dataService: MyDataService) {
+      this.$rows = dataService.getData();
+   }
+
+	getLabel(row: any) {
+		return row.object.label;
+	}
+
+	getItemLabel(item: {id: number, label: string }) {
+		return item ? item.label : '';
+	}   
+}
+```
+
 ## Suggested Links
 
 * [Fetch](/reference/fetch.html)
