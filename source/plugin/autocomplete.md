@@ -72,6 +72,8 @@ First make column type equals to `object`, than setup `[label]` callback that wi
             <q-grid-column key="objectColumn"
                            type="object"
                            editor="autocomplete"
+                           [getLabel]="getLabel"
+                           [getItemLabel]="getItemLabel"
                            [editorOptions]="autocompleteOptions">
             </q-grid-column>
          </q-grid-columns>
