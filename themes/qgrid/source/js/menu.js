@@ -30,6 +30,7 @@ function searchOnLoad() {
 	const search = getSearch();
 	if (active && search) {
 		document.getElementById('search').value = search;
+		updateExampleLink(search);
 		currentPageSearch(search);
 		menuItemsSearch(search);
 	}
@@ -42,6 +43,7 @@ function searchOnHashChange() {
 		document.getElementById('search').focus();
 	}
 
+	updateExampleLink(search);
 	currentPageSearch(search);
 	menuItemsSearch(search);
 }
@@ -76,7 +78,9 @@ function menuItemsSearch(search) {
 	for (let title of titles) {
 		const menuItem = title.parentElement;
 		for (let tag of getTags(menuItem)) {
-			updateMenuLinks(title, tag, search);
+			if (!title.parentElement.classList.contains('active-topic')) {
+				updateMenuLinks(title, tag, search);
+			}
 			if (testSearch(tag, search)) {
 				appendTagText(menuItem, tag, search);
 				const menuTag = menuItem.querySelector('.tag');
@@ -121,7 +125,10 @@ function appendTagText(menuItem, tag, search) {
 	}
 	const menuTag = menuItem.querySelector('.tag');
 	menuTag.textContent = formatTag(tag, search);
-	menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
+	
+	if (menuItem.querySelector('.title').getAttribute('href')) {
+		menuTag.setAttribute('href', menuItem.querySelector('.title').getAttribute('href'));
+	}
 }
 
 function removeTagText(menuItem, search) {
@@ -191,7 +198,7 @@ function highlightText(item, search) {
 	for (let a of aTags) {
 		item.insertBefore(a, item.firstChild);
 	}
-	
+
 	return false;
 }
 
@@ -227,6 +234,13 @@ function splitToWords(text) {
 
 function escape(text) {
 	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+}
+
+function updateExampleLink(search) {
+	const example = document.querySelector('.qgrid-examples');
+	const href = example.getAttribute('href').split('?')[0];
+	const param = (search) ? '?search=' + search : '';
+	example.setAttribute('href', href + param)
 }
 
 function setSearch(search) {

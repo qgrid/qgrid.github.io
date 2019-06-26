@@ -22,13 +22,10 @@
 		font-size: 35px !important;
 		right: 45px !important;
 	}
-	.backbone {
+	.qgrid-examples {
 		transition: ease all .5s;
-		top: 75px;
-		right: 25px;
-		color: black;
-		font-size: 35px !important;
-		right: 50px !important;
+		top: 80px;
+		right: 37px;
 	}
 }
 
@@ -42,10 +39,10 @@
 	.pages header {
 		position: absolute;
 	}
-	.backbone {
+	.qgrid-examples {
 		transition: ease .5s;
-		top: 23px;
-		right: 100px !important;
+		top: 33px;
+		right: 100px;
 	}
 }
 
@@ -123,9 +120,12 @@
 					margin: 0;
 				}
 			}
-			.backbone{
-				top: 23px;
+			.qgrid-examples{
+				top: 27px;
 				right: 67px;
+				&::before{
+					content:url('../assets/images/qgex-small.svg');
+				}
 			}
 		}
 		.nav-trigger {
