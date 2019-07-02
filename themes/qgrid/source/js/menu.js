@@ -29,6 +29,7 @@ function searchOnLoad() {
 	const active = document.querySelector('.active-topic');
 	const search = getSearch();
 	updateExampleLink(search);
+
 	if (active && search) {
 		document.getElementById('search').value = search;
 		currentPageSearch(search);
@@ -240,10 +241,10 @@ function updateExampleLink(search) {
 	const example = document.querySelector('.qgrid-examples');
 	const active = document.querySelector('.active-topic');
 	if (active) {
-		let tags = active.dataset.exampleTag || '';
+		const tags = active.dataset.exampleTag || '';
+		const searchBy = [tags, search || ''].filter(x => !!x).join(',');
 		const href = example.getAttribute('href').split('?')[0];
-		tags = (tags && search) ? tags += ',' : tags;
-		const param = (tags || search) ? '?search=' + tags + search : '';
+		const param = searchBy ? '?search=' + searchBy : '';
 		example.setAttribute('href', href + param);
 	}
 }
