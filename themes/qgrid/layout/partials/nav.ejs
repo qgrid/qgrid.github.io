@@ -31,7 +31,7 @@
                             return tag.replace(/^#+ |[\[?|\]?]/mg, '');
                         });
         %>
-                            <li data-tag="<%- tags %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
+                            <li data-tag="<%- tags %>" data-example-tag="<%- p.tags %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
         <%     
                             if (page.title === p.title) {
         %>
