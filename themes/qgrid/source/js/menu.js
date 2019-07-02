@@ -29,10 +29,7 @@ function searchOnLoad() {
 	const active = document.querySelector('.active-topic');
 	const search = getSearch();
 	updateExampleLink(search);
-<<<<<<< HEAD
-
-=======
->>>>>>> e9f455656a7aabbe462234143306683855867515
+	
 	if (active && search) {
 		document.getElementById('search').value = search;
 		currentPageSearch(search);
