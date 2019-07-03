@@ -29,7 +29,7 @@ function searchOnLoad() {
 	const active = document.querySelector('.active-topic');
 	const search = getSearch();
 	updateExampleLink(search);
-	
+
 	if (active && search) {
 		document.getElementById('search').value = search;
 		currentPageSearch(search);
@@ -242,7 +242,7 @@ function updateExampleLink(search) {
 	const active = document.querySelector('.active-topic');
 	if (active) {
 		const tags = active.dataset.exampleTag || '';
-		const searchBy = [tags, search || ''].filter(x => !!x).join(',');
+		const searchBy = [tags, search || ''].filter(function (word) { return !!word }).join(',');
 		const href = example.getAttribute('href').split('?')[0];
 		const param = searchBy ? '?search=' + searchBy : '';
 		example.setAttribute('href', href + param);
