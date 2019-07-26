@@ -177,3 +177,11 @@ ngAfterViewInit() {
 ## How to override default selection shortcuts?
 
 Use `shortcut` property from selection model.
+
+## How to handle click events?
+
+q-grid does not provide custom click event, but it's always possible to use standard `(click)` directive. Use selection and click `$event` to identify what being clicked.
+
+```html
+<q-grid (click)="onClick($event)"></q-grid>
+```

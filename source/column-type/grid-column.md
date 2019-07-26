@@ -131,7 +131,7 @@ If setup, the host column expands width to the viewWidth value on focus occurs.
 
 ## Column Indicators
 
-Use `can-` and `is-` properties to control q-grid columns interaction behavior.
+Use `can` and `is` properties to control q-grid columns interaction behavior.
 
 * `[canEdit]`
 * `[canResize]`
@@ -141,6 +141,7 @@ Use `can-` and `is-` properties to control q-grid columns interaction behavior.
 * `[canHighlight]`
 * `[canFocus]`
 * `[isVisible]`
+* `[isDefault]`
 
 ## Column Index 
 
@@ -217,3 +218,6 @@ Use description property in the column.
 </q-grid>
 ```
 
+## How does isDefault property work?
+
+Column chooser does use `isDefault` property for selecting columns when click `Select Defaults` checkbox.
