@@ -41,7 +41,8 @@ export class MyComponent implements AfterViewInit {
 
 Use `mode` property to change selection mode.
 
-* Use `single` mode when only one row/column should be selected.
+* Use `single` mode when only one row/column could be selected.
+* Use `singleOne` mode when only one row/column could be selected and prevent unselecting by repeating clicks or key events.
 * Use `multiple` mode when several rows/columns could be selected.
 * Use `range` mode when drag and drop selection should be turned on.
 
@@ -95,7 +96,7 @@ Set selection `area` property to `custom`  if clicking to q-grid body should not
 
 ## How to prevent unselecting if row was clicked again?
 
-Use `change` information to manipulate with logic of selection. Next lines prevent unselecting of row that was double clicked.
+If `singleOne` mode is not a case use `selectionChange` event. Next lines prevent unselecting of row that was double clicked.
 
 ```typescript
 model.selectionChanged.on(e => {
@@ -166,7 +167,7 @@ ngAfterViewInit() {
 
 ## What shortcuts does selection implement by default?
 
-* `shift+space` - toggle row.
+* `space|shift+space` - toggle row.
 * `shift+up` - toggle previous row.
 * `shift+down` - `toggle next row.
 * `ctrl+space` - toggle column.
@@ -177,6 +178,19 @@ ngAfterViewInit() {
 ## How to override default selection shortcuts?
 
 Use `shortcut` property from selection model.
+
+```typescript
+ngAfterViewInit() {
+	const { model } = this.myGrid;
+
+	model.selection({
+      shortcut: {
+         ...model.selection().shortcut,
+         toggleRow: 'space'
+      }
+	});
+}
+```
 
 ## How to handle click events?
 
