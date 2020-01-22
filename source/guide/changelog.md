@@ -7,9 +7,53 @@ order: 2
 ## [Unreleased]
 * Vscroll.
 * Copy/paste selection to excel.
-* Live data plugin.
 * Float rows navigation.
 * Grouped rows navigation improvements.
+
+## [7.5.0] - 2020-01-22
+### Added
+- Keyboard API.
+- Mouse API.
+
+### Changed
+- Better column drag and drop.
+- Filter row style enhancements.
+ 
+### Fixed
+- Progress line.
+- Column filter matches labels not values.
+
+### BREAKING
+- Navigation event raised before selection.
+- Pane context receives value from the trigger not cell.
+- View model `rows` section now contains data before pagination.
+- Separate pipe `view` to two `scene` and `view`, `view` model contains rows before pagination `scene` after pagination.
+- Grid navigation does not trigger change detection.
+- Remove `debounce` property from navigation model.
+
+## [7.4.0] - 2019-08-16
+### Added
+- Selection `singleOnly` mode that prevent row unselecting, and draws radio buttons instead of check boxes.
+
+## [7.3.0] - 2019-08-08
+### Added
+- Live row plugin.
+- Live cell plugin.
+
+### Changed
+- `Space` key selects the row.
+
+## [7.2.6] - 2019-07-31
+### Fixed
+- Column `isDefault` property works as expected.
+
+## [7.2.5] - 2019-07-29
+### Added
+- Live cell plugin.
+
+### Fixed
+- Toggle column filter operator not reset predicate.
+- Search in column chooser does not work when column title is null.
 
 ## [7.2.4] - 2019-06-25
 ### Fixed
@@ -412,7 +456,12 @@ order: 2
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v7.2.4...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v7.5.0...HEAD
+[7.2.4]: https://github.com/qgrid/ng2/compare/v7.4.0...v7.5.0
+[7.2.4]: https://github.com/qgrid/ng2/compare/v7.3.0...v7.4.0
+[7.2.4]: https://github.com/qgrid/ng2/compare/v7.2.6...v7.3.0
+[7.2.4]: https://github.com/qgrid/ng2/compare/v7.2.5...v7.2.6
+[7.2.4]: https://github.com/qgrid/ng2/compare/v7.2.4...v7.2.5
 [7.2.3]: https://github.com/qgrid/ng2/compare/v7.2.3...v7.2.4
 [7.2.3]: https://github.com/qgrid/ng2/compare/v7.2.2...v7.2.3
 [7.2.2]: https://github.com/qgrid/ng2/compare/v7.2.1...v7.2.2
