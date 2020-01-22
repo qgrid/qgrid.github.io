@@ -44,7 +44,7 @@ export class MyComponent {
 
 > Use `$cell.row.item` in template to get access to the data row.
 
-## How to expand expand or collapse all row details?
+## How to expand or collapse all row details?
 
 Update `status` property in row model.
 
@@ -138,3 +138,28 @@ export class MyComponent {
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/details-row-grid/latest" %}
+
+## How to hide row details expand column?
+
+Use `[isVisible]` attribute of `row-expand` column type.
+
+```typescript
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns>
+	   <q-grid-column type="row-expand"
+			   		   [isVisible]="false">
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
+## How to expand details on row click or on keyboard event?
+
+Mouse and keyboard API provides services over user interactions, consider to use to implement manual details manipulations.
+
+{% docEditor "github/qgrid/ng2-example/tree/details-row-custom/latest" %}
+
+## Suggested Links
+
+* [Keyboard API](/reference/keyboard.html)
+* [Mouse API](/reference/mouse.html)

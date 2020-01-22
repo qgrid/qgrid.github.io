@@ -32,7 +32,7 @@ export class MyComponent {
    };
 
    constructor(private qgrid: Grid) {
-   }
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}

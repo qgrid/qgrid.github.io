@@ -1,7 +1,7 @@
 ---
 title: Fetch
 group: Reference
-order: 9
+order: 11
 ---
 
 Ofter q-grid provides API for passing collections by supporting next methods.

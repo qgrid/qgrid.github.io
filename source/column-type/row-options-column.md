@@ -10,10 +10,12 @@ Row options column allows to populate list of actions for the appropriate row by
 @Component({
     template: `
        <q-grid [rows]="rows$ | async">
-          <q-grid-column key="rowOptions"
-                         type="row-options"
-                         [editorOptions]="{actions: rowActions}">
-          </q-grid-column>
+          <q-grid-columns>
+            <q-grid-column key="rowOptions"
+                           type="row-options"
+                           [editorOptions]="{actions: rowActions}">
+            </q-grid-column>
+          </q-grid-columns>
        </q-grid>
     `
 })
@@ -57,10 +59,12 @@ Just focus row options column programmatically.
 @Component({
    template: `
       <q-grid [rows]="rows">
-         <q-grid-column key="rowOptions"
-                        type="row-options"
-                        [editorOptions]="rowOptions">
-         </q-grid-column>
+         <q-grid-columns>
+            <q-grid-column key="rowOptions"
+                           type="row-options"
+                           [editorOptions]="rowOptions">
+            </q-grid-column>
+         </q-grid-columns>
          <q-grid-actions>
             <q-grid-action id="enterAction"
                            [command]="enterCommand">
@@ -91,7 +95,6 @@ export class MyComponent {
     },
     shortcut: 'enter'
   });
-
 }
 ```
 
