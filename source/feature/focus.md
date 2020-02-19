@@ -84,7 +84,7 @@ export class MyComponent {
 }
 ```
 
-## How to understand if q-grid is on focus or not?
+## How to understand if q-grid is in focus or not?
 
 Use q-grid `focus` model to understand wether it's active or not.
 
