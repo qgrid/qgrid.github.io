@@ -51,6 +51,8 @@ Add `q-grid-autofocus` directive on q-grid component?
 
 ## How to focus the last row?
 
+Use focus method of q-grid service, it will automatically got to the necessary page if required.
+
 ```typescript
 @Component({
    selector: 'my-component',
@@ -78,6 +80,36 @@ export class MyComponent {
       this.rows$.subscribe(rows => 
          service.focus(rows.length - 1, 0);
       );
+   }
+}
+```
+
+## How to understand if q-grid is on focus or not?
+
+Use q-grid `focus` model to understand wether it's active or not.
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: `
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep"></q-grid-columns>
+      </q-grid>
+   `
+})
+export class MyComponent {
+   @ViewChild(GridComponent) myGrid: GridComponent;   
+   rows$: Observable<[]>;
+
+   loadCommand = new Command({
+        execute: () => {
+            this.rows$ = this.dataService.getAtoms();
+        },
+        canExecute: () => model.focus().isActive,
+        shortcut: 'ctrl+l'
+    });
+
+   constructor(private dataService: MyDataService) {
    }
 }
 ```
