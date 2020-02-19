@@ -69,8 +69,25 @@ Use let-`$cell` to have access to aggregated value.
       <q-grid-column key="phase"
                      title="Phase"
                      aggregation="count">
-         <ng-template for="foot" let-$cell">
+         <ng-template for="foot" let-$cell>
             Count is {{$cell.value}}
+         </ng-template>
+      </q-grid-column>
+   </q-grid-columns>
+</q-grid>
+```
+
+## How to implement custom aggregation in the column footer?
+
+Use footer template and your custom function from component.
+
+```html
+<q-grid [rows]="rows$ | async">
+   <q-grid-columns generation="deep">
+      <q-grid-column key="phase"
+                     title="Phase">
+         <ng-template for="foot" let-$cell>
+            Diff: {{getDiffFor('phase')}}
          </ng-template>
       </q-grid-column>
    </q-grid-columns>
