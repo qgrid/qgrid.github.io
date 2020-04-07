@@ -21,10 +21,44 @@
 }
 
 .editor {
+	position: relative;
+
 	iframe {
 		height: 640px;
 	}
+
+	.source-links {
+		position: absolute;
+		bottom: 3px;
+		left: 0;
+		right: 0;
+		height: 40px;
+		background: #3c3c3c;
+		text-align: center;
+		font-size: 0;
+
+		a {
+			color: #fff;
+	    background: #4288fd;
+	    position: relative;
+	    display: inline-block;
+	    margin: auto 2px;
+	    border-radius: 0 3px 3px 0;
+	    text-decoration: none;
+	    transition: background-color 0.05s ease;
+			padding: 0px 8px;
+	    min-height: 30px;
+	    line-height: 30px;
+	    font-size: 13px;
+			margin: 5px 0;
+
+			&:first-child {
+				border-radius: 3px 0 0 3px;
+			}
+
+			&:hover {
+				background: #5896ff;
+			}
+		}
+	}
 }
-
-
-
