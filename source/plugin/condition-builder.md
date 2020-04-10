@@ -29,7 +29,7 @@ export class AppModule {
 }
 ``` -->
 
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that extended filter icon should appear in the top toolbar.
 
 ```typescript
 @Component({

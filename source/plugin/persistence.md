@@ -28,7 +28,7 @@ export class AppModule {
 }
 ``` -->
 
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that persistance action should appear in the top toolbar.
 
 ```typescript
 @Component({
