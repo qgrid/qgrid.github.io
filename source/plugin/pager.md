@@ -28,7 +28,7 @@ export class AppModule {
 }
 ``` -->
 
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid to change pagination settings through it.
 
 ```typescript
 @Component({

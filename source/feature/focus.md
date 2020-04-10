@@ -86,7 +86,7 @@ export class MyComponent {
 
 ## How to understand if q-grid is in focus or not?
 
-Use q-grid `focus` model to understand wether it's active or not.
+Use q-grid `focus` model to understand whether it's active or not.
 
 ```typescript
 @Component({

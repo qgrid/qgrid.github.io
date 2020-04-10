@@ -26,7 +26,7 @@ export class AppModule {
 }
 ``` -->
 
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that q-grid will start using sorting, filtering and pagination from the rest service.
 
 ```typescript
 @Component({

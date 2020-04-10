@@ -1,5 +1,5 @@
-﻿const VISIBLE_MENU_TAG_COUNT = 2;
-const SEARCHEABLE_ELEMENTS = ['H2', 'H3', 'P'];
+﻿const NUMBER_OF_VISIBLE_TAGS = 2;
+const SEARCHABLE_ELEMENTS = ['H2', 'H3', 'P'];
 
 function toggleVisibility(e) {
 	const target = e.target || e.srcElement;
@@ -54,7 +54,7 @@ function currentPageSearch(search) {
 	active.classList.remove('hide');
 	let scrolled = false;
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
-		if (SEARCHEABLE_ELEMENTS.includes(node.nodeName)) {
+		if (SEARCHABLE_ELEMENTS.includes(node.nodeName)) {
 			const a = node.querySelector('a:last-child');
 			const pageItem = (a && a.textContent) ? a : node;
 			const { textContent } = pageItem;
@@ -207,9 +207,9 @@ function formatTag(tag, search) {
 	let tagWords = splitToWords(tag);
 	const searchWords = splitToWords(search);
 	const index = indexOfTag(tag, searchWords);
-	if (tagWords.length > VISIBLE_MENU_TAG_COUNT) {
-		if (index < tagWords.length - VISIBLE_MENU_TAG_COUNT) {
-			tagWords.splice(index + VISIBLE_MENU_TAG_COUNT, tagWords.length, '...');
+	if (tagWords.length > NUMBER_OF_VISIBLE_TAGS) {
+		if (index < tagWords.length - NUMBER_OF_VISIBLE_TAGS) {
+			tagWords.splice(index + NUMBER_OF_VISIBLE_TAGS, tagWords.length, '...');
 		}
 		if (index > 0) {
 			tagWords.splice(0, index, '...');

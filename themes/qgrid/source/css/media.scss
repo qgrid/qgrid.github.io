@@ -32,7 +32,7 @@
 // medium screen
 @media screen and (min-width: 851px) and (max-width: 1470px) {
 	.index {
-		.example .preview iframe {
+		.example .editor {
 			width: 75%;
 		}
 	}
@@ -49,7 +49,7 @@
 // small screen
 @media screen and (max-width: 850px) {
 	.index {
-		.example .preview iframe {
+		.example .editor {
 			width: 95%;
 		}
 		ul.features {

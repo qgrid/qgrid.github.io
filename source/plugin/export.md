@@ -34,7 +34,7 @@ export class AppModule {
 }
 ``` -->
 
-Add angular component inside of q-grid component, after that a new action should appear, format `type` is required property. Add `file saver` library to the q-grid plugin model.
+Add angular component inside of q-grid component, after export action should appear, format `type` is required property. Add `file saver` library to the q-grid plugin model.
 
 ```typescript
 import * as fileSaver from 'file-saver';
