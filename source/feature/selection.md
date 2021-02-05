@@ -42,7 +42,7 @@ export class MyComponent implements AfterViewInit {
 Use `mode` property to change selection mode.
 
 * Use `single` mode when only one row/column could be selected.
-* Use `singleOne` mode when only one row/column could be selected and prevent unselecting by repeating clicks or key events.
+* Use `singleOnly` mode when only one row/column could be selected and prevent unselecting by repeating clicks or key events.
 * Use `multiple` mode when several rows/columns could be selected.
 * Use `range` mode when drag and drop selection should be turned on.
 
