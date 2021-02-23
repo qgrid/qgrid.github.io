@@ -1,65 +1,75 @@
-<div class="get-started">
-    <div class="qgrid-logo"></div>
-    <h2>Fast and flexible data table solution.</h2>
-    <h1>Select version for your ecosystem.</h1>
-    <ul class="frameworks">
-        <li class="ready">
-            <a href="https://qgrid.github.io/ng" target="_blank">
-                <span class="angular-js"></span>
-                <label>AngularJS</label>
-            </a>
-        </li>
-        <li class="ready">
-            <a href="<%- url_for('guide/highlights.html') %>">
-                <span class="angular"></span>
-                <label>Angular 2+</label>
-            </a>
-        </li>
-        <li>
-            <span class="react"></span>
-            <label>In Development</label>
-        </li>
-        <li>
-            <span class="vue"></span>
-            <label>In Development</label>
-        </li>
-    </ul>
-</div>
-<div class="example">
-    <%- docEditor(["github/qgrid/ng2-example/tree/live-data-basic/latest"]) -%>
-</div>
-<ul class="features">
-    <li>
-        <div class="image-css"></div>
-        <div class="description">
-            <strong>Considered Styles</strong>
-            <p>User should be able to make any css customization in easy format</p>
-        </div>
-    </li>
-    <li>
-        <div class="image-custom"></div>
-        <div class="description">
-            <strong>Fully Customizable</strong>
-            <p>Header, cells, rows, footer, pagination, etc. should be templatable</p>
-        </div>
-    </li>
-    <li>
-        <div class="image-js"></div>
-        <div class="description">
-            <strong>Clear Javascript</strong>
-            <p>No html templates in javascript</p>
-        </div>
-    </li>
-    <li>
-        <div class="image-virtualize"></div>
-        <div class="description">
-            <strong>Perfomance</strong>
-            <p>Virtualization and interaction strategies for the speed</p>
-        </div>
-    </li>
-</ul>
-<div class="go-to">
-    <a href="<%- url_for('guide/install.html') %>">How to Install?</a>
-    <a href="<%- url_for('feature/data-columns.html') %>">Features and API</a>
-    <a href="<%- url_for('http://qgrid.github.io/ng2') %>" target="_blank">Examples</a>
-</div>
+<section class="get-started">
+	<div class="qgrid-logo"></div>
+	<h2>Fast and flexible data table solution.</h2>
+	<!--   <h1>Select version for your ecosystem.</h1> -->
+	<div>
+		<ul class="frameworks">
+			<li class="ready">
+				<!--        <a href="https://qgrid.github.io/ng" target="_blank"> -->
+				<a href="<%- url_for('guide/highlights.html') %>" target="_blank">
+					<span class="github"></span>
+					<label>Documentation</label>
+				</a>
+			</li>
+			<li class="ready">
+				<a href="<%- url_for('guide/highlights.html') %>">
+					<span class="github"></span>
+					<label>Examples</label>
+				</a>
+			</li>
+			<li>
+				<span class="github"></span>
+				<label>Github</label>
+			</li>
+
+		</ul>
+	</div>
+
+	<div class="example">
+		<%- docEditor(["github/qgrid/ng2-example/tree/live-data-basic/latest"]) -%>
+	</div>
+</section>
+
+<section class="">
+	<div>
+		<ul class="features"> <%# todo: move features class to section and fix @media responsive%>
+			<li>
+				<div class="image-css"></div>
+				<div class="description">
+					<strong>Considered Styles</strong>
+					<p>User should be able to make any css customization in easy format</p>
+				</div>
+			</li>
+			<li>
+				<div class="image-custom"></div>
+				<div class="description">
+					<strong>Fully Customizable</strong>
+					<p>Header, cells, rows, footer, pagination, etc. should be templatable</p>
+				</div>
+			</li>
+			<li>
+				<div class="image-js"></div>
+				<div class="description">
+					<strong>Clear Javascript</strong>
+					<p>No html templates in javascript</p>
+				</div>
+			</li>
+			<li>
+				<div class="image-virtualize"></div>
+				<div class="description">
+					<strong>Perfomance</strong>
+					<p>Virtualization and interaction strategies for the speed</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+</section>
+
+<section>
+	<div class="go-to">
+		<a href="<%- url_for('guide/install.html') %>">How to Install?</a>
+		<a href="<%- url_for('feature/data-columns.html') %>">Features and API</a>
+		<a href="<%- url_for('http://qgrid.github.io/ng2') %>" target="_blank">Examples</a>
+	</div>
+</section>
