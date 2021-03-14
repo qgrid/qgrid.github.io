@@ -1,11 +1,9 @@
 <section class="get-started">
 	<div class="qgrid-logo"></div>
-	<h2>Fast and flexible data table solution.</h2>
-	<!--   <h1>Select version for your ecosystem.</h1> -->
+	<h1>Fast and flexible data table solution.</h1>
 	<div>
 		<ul class="frameworks">
 			<li class="ready">
-				<!--        <a href="https://qgrid.github.io/ng" target="_blank"> -->
 				<a href="<%- url_for('guide/highlights.html') %>" target="_blank">
 					<span class="github"></span>
 					<label>Documentation</label>
@@ -21,164 +19,192 @@
 				<span class="github"></span>
 				<label>Github</label>
 			</li>
-
 		</ul>
 	</div>
-
 	<div class="example">
 		<%- docEditor(["github/qgrid/ng2-example/tree/live-data-basic/latest"]) -%>
 	</div>
 </section>
 
-
-<section class="news-container">
-	<h2>Latest Posts. Stay tuned!</h2>
-	<div class="news">
-		<div class="post">
-			<div class="image-post">
-				<img src="https://via.placeholder.com/320x196.png?text=GQ+News+Image+1" alt="">
-			</div>
-			<div class="description">
-				<p class="date">Dec 8, 2020</p>
-				<h3 class="header3">We’ve created a news section!</h3> <!-- or strong -->
-				<p>What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore consectetur adipiscing elit, sed do.....</p>
-			</div>
+<section class="news">
+	<div class="container">
+		<div class="news-heading">
+			<h2 class="news-heading__header2">Latest Posts. Stay tuned!</h2>
 		</div>
-
-		<div class="post">
-			<div class="image-post">
-				<img src="https://via.placeholder.com/320x196.png?text=GQ+News+Image+2" alt="">
-			</div>
-			<div class="description">
-				<p class="date">Dec 10, 2020</p>
-				<h3 class="header3">UX designers are cute. Real research!</h3> <!-- or strong -->
-				<p>What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore consectetur adipiscing elit, sed do.....</p>
-			</div>
-		</div>
-
-		<div class="post">
-			<div class="image-post">
-				<img src="https://via.placeholder.com/320x196.png?text=GQ+News+Image+3" alt="">
-			</div>
-			<div class="description">
-				<p class="date">Dec 12, 2020</p>
-				<h3 class="header3">Amazing updates in GQ! What was changed?</h3> <!-- or strong -->
-				<p>What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-					incididunt ut labore consectetur adipiscing elit, sed do.....</p>
-			</div>
-		</div>
-
-	</div>
-	<!-- 	<button class="go-to">See all news</button> -->
-	<div class="go-to">
-		<a href="<%- url_for('guide/install.html') %>">See all news</a>
-	</div>
-	<!-- 	todo: make btn class -->
-	<%# todo: make btn class%>
-</section>
-
-<section class="reasons-container">
-	<h2>Why QGrid?</h2>
-	<div class="reasons">
-		<div class="reason">
-			<span class="github"></span>
-			<h3>Fast and flexible solution</h3>
-			<p>Posibility to make any css customizationin easy format</p>
-		</div>
-		<div class="reason">
-			<span class="github"></span>
-			<h3>Fast and flexible solution</h3>
-			<p>Posibility to make any css customizationin easy format</p>
-		</div>
-	</div>
-	<div class="reasons">
-		<div class="reason">
-			<span class="github"></span>
-			<h3>Fast and flexible solution</h3>
-			<p>Posibility to make any css customizationin easy format</p>
-		</div>
-		<div class="reason">
-			<span class="github"></span>
-			<h3>Fast and flexible solution</h3>
-			<p>Posibility to make any css customizationin easy format</p>
-		</div>
-	</div>
-</section>
-
-<section class="pricing-container">
-	<div class="pricing">
-		<div class="price-tag">
-			<span>Free</span>
-			<h4><sup>$</sup>0<sub>/month</sub></h4>
-			<p>We are part of open source community, so you can jion us via Git Hub for free</p>
-			<div class="go-to">
-				<a href="<%- url_for('#') %>">Get started with GitHub</a>
-			</div>
-		</div>
-		<div class="price-tag">
-			<span>Support</span>
-			<h4><sup>$</sup>9<sub>/month</sub></h4>
-			<p>You can maintain our project and team. Help us to grow and improve our product</p>
-			<div class="go-to">
-				<a href="<%- url_for('#') %>">Get started with GitHub</a>
-			</div>
-		</div>
-		<div class="price-tag">
-			<span>Extended support</span>
-			<h4><sup>$</sup>39<sub>/month</sub></h4>
-			<p>You can influence the project, propose changes and we take your wishes into new solutions</p>
-			<div class="go-to">
-				<a href="<%- url_for('#') %>">Get started with GitHub</a>
-			</div>
-		</div>
-
-	</div>
-</section>
-
-
-<section class="">
-	<div>
-		<ul class="features"> <%# todo: move features class to section and fix @media responsive%>
-			<li>
-				<div class="image-css"></div>
-				<div class="description">
-					<strong>Considered Styles</strong>
-					<p>User should be able to make any css customization in easy format</p>
+		<div class="row align-items-center">
+			<div class="col-4 ">
+				<div class="news-block">
+					<div class="news-block__img">
+						<img src="../assets/images/qgrid_news1.png" alt="">
+					</div>
+					<div class="news-block-text">
+						<p class="news-block-text__date">Dec 12, 2020</p>
+						<h3 class="news-block-text__header3">Amazing updates in GQ! What was changed?</h3>
+						<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor
+							incididunt ut labore consectetur adipiscing elit, sed do.....</p>
+					</div>
 				</div>
-			</li>
-			<li>
-				<div class="image-custom"></div>
-				<div class="description">
-					<strong>Fully Customizable</strong>
-					<p>Header, cells, rows, footer, pagination, etc. should be templatable</p>
+			</div>
+			<div class="col-4 ">
+				<div class="news-block">
+					<div class="news-block__img">
+						<img src="../assets/images/qgrid_news2.png" alt="">
+					</div>
+					<div class="news-block-text">
+						<p class="news-block-text__date">Dec 12, 2020</p>
+						<h3 class="news-block-text__header3">Amazing updates in GQ! What was changed?</h3>
+						<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor
+							incididunt ut labore consectetur adipiscing elit, sed do.....</p>
+					</div>
 				</div>
-			</li>
-			<li>
-				<div class="image-js"></div>
-				<div class="description">
-					<strong>Clear Javascript</strong>
-					<p>No html templates in javascript</p>
+			</div>
+			<div class="col-4 ">
+				<div class="news-block">
+					<div class="news-block__img">
+						<img src="../assets/images/qgrid_news3.png" alt="">
+					</div>
+					<div class="news-block-text">
+						<p class="news-block-text__date">Dec 12, 2020</p>
+						<h3 class="news-block-text__header3">Amazing updates in GQ! What was changed?</h3>
+						<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor
+							incididunt ut labore consectetur adipiscing elit, sed do.....</p>
+					</div>
 				</div>
-			</li>
-			<li>
-				<div class="image-virtualize"></div>
-				<div class="description">
-					<strong>Perfomance</strong>
-					<p>Virtualization and interaction strategies for the speed</p>
-				</div>
-			</li>
-		</ul>
+			</div>
+		</div>
+		<div class="row align-items-center">
+			<div class="col text-center">
+				<a href="<%- url_for('#') %>" class="button news__btn">See all news</a>
+			</div>
+		</div>
 	</div>
 </section>
 
-
-
-<section>
-	<div class="go-to">
-		<a href="<%- url_for('guide/install.html') %>">How to Install?</a>
-		<a href="<%- url_for('feature/data-columns.html') %>">Features and API</a>
-		<a href="<%- url_for('http://qgrid.github.io/ng2') %>" target="_blank">Examples</a>
+<section class="reasons">
+	<div class="container">
+		<div class="reasons-heading">
+			<h2 class="reasons-heading__header2">Why QGrid?</h2>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="reasons-block">
+					<div class="row align-items-center ">
+						<div class="col-3">
+							<div class="reasons-block__img">
+								<span class="github"></span>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="reasons-block-text">
+								<h3 class="reasons-block-text__header3">Fast and flexible solution</h3>
+								<p class="reasons-block-text__descr">Posibility to make any css customizationin easy format</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="reasons-block">
+					<div class="row align-items-center ">
+						<div class="col-3">
+							<div class="reasons-block__img">
+								<span class="github"></span>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="reasons-block-text">
+								<h3 class="reasons-block-text__header3">Fast and flexible solution</h3>
+								<p class="reasons-block-text__descr">Posibility to make any css customizationin easy format</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="reasons-block">
+					<div class="row align-items-center ">
+						<div class="col-3">
+							<div class="reasons-block__img">
+								<span class="github"></span>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="reasons-block-text">
+								<h3 class="reasons-block-text__header3">Fast and flexible solution</h3>
+								<p class="reasons-block-text__descr">Posibility to make any css customizationin easy format</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="reasons-block">
+					<div class="row align-items-center">
+						<div class="col-3">
+							<div class="reasons-block__img">
+								<span class="github"></span>
+							</div>
+						</div>
+						<div class="col-9">
+							<div class="reasons-block-text">
+								<h3 class="reasons-block-text__header3">Fast and flexible solution</h3>
+								<p class="reasons-block-text__descr">Posibility to make any css customizationin easy format</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
+
+<section class="pricing">
+	<div class="container">
+		<div class="pricing-heading">
+			<h2 class="pricing-heading__header2">Choose your price</h2>
+		</div>
+		<div class="row">
+			<div class="col-4 text-center">
+				<div class="pricing-block">
+					<span class="pricing-block__rate">Support</span>
+					<h4 class="pricing-block__header4"><sup>$</sup><span
+							class="pricing-block-header4__price">9</span><sub>/mo</sub></h4>
+					<p class="pricing-block__text">You can maintain our project and team. Help us to grow and improve our
+						product</p>
+					<a href="<%- url_for('#') %>" class="button pricing-block__btn">Become a maintainer</a>
+				</div>
+			</div>
+			<div class="col-4 text-center">
+				<div class="pricing-block">
+					<span class="pricing-block__rate">Support</span>
+					<h4 class="pricing-block__header4"><sup>$</sup><span
+							class="pricing-block-header4__price">9</span><sub>/mo</sub></h4>
+					<p class="pricing-block__text">You can maintain our project and team. Help us to grow and improve our
+						product</p>
+					<a href="<%- url_for('#') %>" class="button pricing-block__btn">Become a maintainer</a>
+				</div>
+			</div>
+			<div class="col-4 text-center">
+				<div class="pricing-block">
+					<span class="pricing-block__rate">Support</span>
+					<h4 class="pricing-block__header4"><sup>$</sup><span
+							class="pricing-block-header4__price">9</span><sub>/mo</sub></h4>
+					<p class="pricing-block__text">You can maintain our project and team. Help us to grow and improve our
+						product</p>
+					<a href="<%- url_for('#') %>" class="button pricing-block__btn">Become a maintainer</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <div class="row align-items-center">
+	<div class="col text-center">
+		<a href="<%- url_for('#') %>" class="button news__btn">See all news</a>
+	</div>
+</div> -->

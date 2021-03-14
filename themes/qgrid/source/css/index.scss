@@ -1,8 +1,60 @@
 @import "layout";
 @import "editor";
 
+
+a.button {
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	appearance: button;
+	text-decoration: none;
+}
+
+.button {
+	vertical-align: middle;
+	padding: 8px;
+	font-size: 18px;
+	line-height: 24px;
+	color: $color-top-text;
+	background-color: $accent-color;
+	border: none;
+	border-radius: 4px;
+	text-decoration: none;
+
+	&_big {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	&:hover {
+		background-color: darken($accent-color, 5%);
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+
 .index {
 	font-family: $font-serif;
+
+	h1,
+	h2 {
+		margin: 0;
+		margin-top: 40px;
+		font-weight: normal;
+	}
+
+	h1 {
+		font-size: 1.714em;
+		line-height: 1.714em;
+	}
+
+	h2 {
+		font-size: 2.142em;
+		line-height: 2.142em;
+		margin-bottom: 10px;
+	}
 
 	main {
 		display: flex;
@@ -11,22 +63,17 @@
 		color: $color-text;
 	}
 
-	footer {
-		color: $color-footer-text;
-		background: $color-footer-background;
-		padding: 50px 0;
+	.go-to {
 		text-align: center;
-
-		font: {
-			family: $font-serif;
-			size: 18px;
-			weight: 200;
-		}
+		margin-bottom: 100px;
+		font-size: 0;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
 
 		a {
-			color: white;
-			text-decoration: none;
-			font-weight: 400;
+			@extend %accent-button;
+			margin: 5px;
 		}
 	}
 
@@ -34,7 +81,7 @@
 		text-decoration: none;
 		vertical-align: middle;
 		background-color: $accent-color;
-		color: white;
+		color: $color-top-text;
 		line-height: 24px;
 		font-size: 18px;
 		font-weight: normal;
@@ -45,140 +92,6 @@
 			background-color: darken($accent-color, 5%);
 		}
 	}
-
-	.reasons-container {
-		text-align: center;
-		background-color: $color-sidebar-background;
-		color: $color-top-text;
-		/* padding: 40px 0 0 0; */
-
-		.reasons {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-
-			.reason {
-			/* 	background-color: #fff; */
-				border-radius: 2rem;
-				padding: 2rem;
-				display: flex;
-			/* 	flex-direction: row; */
-				justify-content: space-between;
-/* 				text-align: center;
-				align-items: center; */
-				width: 50px;
-				height: 75px;
-				color: white;
-
-				span {
-					font-size: 5.2em;
-				}
-			}
-		}
-
-	}
-
-	.news-container {
-		text-align: center;
-	}
-
-	.news {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-
-		.post {
-			background-color: #fff;
-			border-radius: 2rem;
-			padding: 2rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			text-align: center;
-			align-items: center;
-			width: 300px;
-			height: 400px;
-		}
-
-		.btn {
-			text-align: center;
-			margin-bottom: 100px;
-			font-size: 0;
-			flex-flow: row wrap;
-			justify-content: center;
-
-			a {
-				@extend %accent-button;
-				margin: 5px;
-			}
-		}
-	}
-
-	.features {
-		margin-bottom: 45px;
-		padding: 0;
-		list-style: none;
-		display: flex;
-		flex-flow: column wrap;
-
-		li {
-			flex-flow: row wrap;
-			display: flex;
-			justify-content: center;
-			align-items: stretch;
-			flex: 1 1 auto;
-			margin-bottom: 55px;
-
-			.description {
-				flex: 1 50%;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-				text-align: left;
-				padding-left: 0;
-				font-size: 1.5em;
-				line-height: 1.5em;
-				position: relative;
-
-				p {
-					max-width: 400px;
-					position: absolute;
-					margin-bottom: 0;
-				}
-			}
-
-			div[class^="image-"] {
-				background-position: calc(100% - 70px) 0;
-			}
-
-			&:nth-child(2n+1) {
-				flex-direction: row-reverse;
-
-				.description {
-					text-align: right;
-					padding-right: 0;
-
-					p {
-						text-align: right;
-						position: absolute;
-						right: 0;
-					}
-				}
-
-				div[class^="image-"] {
-					background-position: 70px 0;
-				}
-			}
-		}
-	}
-
-
-
-	.go-to {
-		// grid-area: go-to;
-	}
-
-
 
 	.get-started {
 		background-color: $color-sidebar-background;
@@ -192,22 +105,6 @@
 			background-size: contain;
 		}
 
-		h1,
-		h2 {
-			margin: 0;
-			font-weight: normal;
-		}
-
-		h1 {
-			font-size: 2em;
-			line-height: 2em;
-		}
-
-		h2 {
-			font-size: 1.714em;
-			line-height: 1.714em;
-			margin-bottom: 10px;
-		}
 
 		.frameworks {
 			list-style: none;
@@ -290,3 +187,177 @@
 		}
 	}
 }
+
+
+.news {
+	background-color: $color-background;
+	margin-bottom: 60px;
+
+	&-heading {
+		text-align: center;
+
+		&__header2 {
+			margin-top: 20px !important;
+			margin-bottom: 40px !important;
+			font-weight: normal !important;
+			font-size: 2.142em !important;
+			line-height: 2.142em !important;
+			margin-bottom: 10px !important;
+			/* todo: refac to mixin h2 */
+		}
+	}
+
+	&-block {
+		width: 320px;
+		max-height: 400px;
+		background: $color-top-text;
+		border: 1px solid $color-border;
+		box-sizing: border-box;
+		border-radius: 4px;
+
+
+		&__img {
+			 	width: 100%;
+		}
+
+		&-text {
+
+			&__date {
+				margin-bottom: 0px;
+				font-family: $font-sans;
+				font-size: 1.142em;
+				text-align: left;
+			}
+
+			&__header3 {
+				margin-top: 8px;
+				font-size: 20px;
+				line-height: 26px;
+				font-weight: 400;
+			}
+
+			&__descr {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__btn {
+		@extend .button;
+		margin-top: 40px;
+		width: 144px;
+
+	}
+}
+
+.reasons {
+	padding-bottom: 60px;
+	background-color: $color-sidebar-background;
+	color: $color-top-text;
+
+	&-heading {
+		text-align: center;
+
+		&__header2 {}
+	}
+
+	&-block {
+		margin-bottom: 30px;
+		width: 360px;
+		height: 88px;
+
+		&__img {
+			text-align: center;
+			font-size: 5.2em;
+		}
+
+		&-text {
+			text-align: left;
+
+			&__header3 {
+				font-size: 20px;
+				font-weight: 400;
+			}
+
+			&__descr {}
+		}
+
+	}
+}
+
+.pricing {
+	background-color: $color-background;
+	margin-bottom: 60px;
+
+	&-heading {
+		text-align: center;
+	}
+
+	&-block {
+		text-align: center;
+		padding: 2rem;
+		width: 300px;
+		height: 400px;
+		border: 1px solid $color-border;
+		box-sizing: border-box;
+		border-radius: 4px;
+
+		&__rate {
+			font-size: 24px;
+		}
+
+		&-header4 {
+			font-size: 18px;
+
+			&__price {
+				font-size: 36px;
+			}
+		}
+
+		&__text {
+			margin-bottom: 73px;
+		}
+
+		&__btn {
+			@extend .button;
+			margin-top: 40px;
+			padding: 10px 20px;
+
+		}
+	}
+}
+
+
+.footer {
+	color: $color-footer-text;
+	background: $color-footer-background;
+	padding: 40px;
+
+	font: {
+		family: $font-serif;
+		size: 18px;
+		weight: 200;
+	}
+
+	a {
+		color: white;
+		text-decoration: none;
+		font-weight: 400;
+	}
+
+	&__img {
+		background: url("../assets/images/qgrid-logo.svg") 50% 50% no-repeat;
+		width: 120px;
+		height: 90px;
+		 margin: 0;
+		margin-right: 10px;
+		background-size: contain;
+	}
+
+	&__header2 {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}
+
+

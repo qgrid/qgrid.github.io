@@ -1,12 +1,12 @@
 // icons
-$iconMap: ( search-glass:'icon-search', logo:'icon-qgrid-logo-simple', angular: 'icon-angular', angular-js: 'icon-angularjs', react: 'icon-react', vue: 'icon-vue', backbone:'icon-backbone', github: 'icon-github', nav-trigger: 'icon-hamburger', search-trigger: 'icon-search');
+$iconMap: (search-glass:'icon-search', logo:'icon-qgrid-logo-simple', angular: 'icon-angular', angular-js: 'icon-angularjs', react: 'icon-react', vue: 'icon-vue', backbone:'icon-backbone', github: 'icon-github', nav-trigger: 'icon-hamburger', search-trigger: 'icon-search');
 // images
 $logo-url: '../assets/images/logo.png';
 $qgrid-logo-url: '../assets/images/qgrid-logo.svg';
-$featuresMap: ( virtualize:('../assets/images/virtualize.svg', 224px, 242px),
-        css:('../assets/images/css.svg', 297px, 142px),
-        custom: ('../assets/images/custom.svg', 231px, 199px),
-        js:('../assets/images/js.svg', 200px, 200px));
+$featuresMap: (virtualize:('../assets/images/virtualize.svg', 224px, 242px),
+	css:('../assets/images/css.svg', 297px, 142px),
+	custom: ('../assets/images/custom.svg', 231px, 199px),
+	js:('../assets/images/js.svg', 200px, 200px));
 // fonts
 $font-size: 14px;
 $font-sans: "Roboto",
@@ -22,19 +22,20 @@ $whitescale-75: rgba(255, 255, 255, 0.75);
 $whitescale-50: rgba(255, 255, 255, 0.5);
 $whitescale-30: rgba(255, 255, 255, 0.3);
 // colors
-$accent-color: #0078CF;
+$accent-color: #0078CF; //rename to button-color
 
 $color-text: #333;
 $color-background: #fff;
+$color-border: #DBDEE1;
 $color-top-text: #fff;
 $color-top-background: #353535;
 $color-sidebar-text: #fff;
-$color-sidebar-background: #353535;
+$color-sidebar-background: $color-top-background;
 $color-footer-text: #fff;
-$color-footer-background: #111;
+$color-footer-background: $color-top-background;
 $color-scrollbar-thumb: #649EED;
 $color-scrollbar-background: #F5F5F5;
-$color-table-header: #353535;
+$color-table-header: $color-top-background;
 $color-table-even-row: #CBDFFB;
 $color-table-odd-row: #e7f1ff;
 $color-code-default: #e7f1ff;
