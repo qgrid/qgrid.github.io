@@ -34,6 +34,10 @@ a.button {
 	text-align: center;
 }
 
+.container {
+	width: 1110px;
+	margin: 0 auto;
+}
 
 .index {
 	font-family: $font-serif;
@@ -56,12 +60,12 @@ a.button {
 		margin-bottom: 10px;
 	}
 
-	main {
+	/* 	main {
 		display: flex;
 		flex-flow: column wrap;
 		background: $color-background;
 		color: $color-text;
-	}
+	} */
 
 	.go-to {
 		text-align: center;
@@ -189,9 +193,16 @@ a.button {
 }
 
 
+
+
 .news {
 	background-color: $color-background;
 	margin-bottom: 60px;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-around;
+	}
 
 	&-heading {
 		text-align: center;
@@ -217,7 +228,7 @@ a.button {
 
 
 		&__img {
-			 	width: 100%;
+			width: 100%;
 		}
 
 		&-text {
@@ -242,18 +253,28 @@ a.button {
 		}
 	}
 
-	&__btn {
-		@extend .button;
+	&-button {
 		margin-top: 40px;
-		width: 144px;
+		text-align: center;
 
+		&__btn {
+			@extend .button;
+			margin-top: 40px;
+			width: 144px;
+		}
 	}
+
 }
 
 .reasons {
 	padding-bottom: 60px;
 	background-color: $color-sidebar-background;
 	color: $color-top-text;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-around;
+	}
 
 	&-heading {
 		text-align: center;
@@ -262,6 +283,7 @@ a.button {
 	}
 
 	&-block {
+		display: flex;
 		margin-bottom: 30px;
 		width: 360px;
 		height: 88px;
@@ -288,6 +310,11 @@ a.button {
 .pricing {
 	background-color: $color-background;
 	margin-bottom: 60px;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
 
 	&-heading {
 		text-align: center;
@@ -349,7 +376,7 @@ a.button {
 		background: url("../assets/images/qgrid-logo.svg") 50% 50% no-repeat;
 		width: 120px;
 		height: 90px;
-		 margin: 0;
+		margin: 0;
 		margin-right: 10px;
 		background-size: contain;
 	}
@@ -359,5 +386,3 @@ a.button {
 		padding: 0 !important;
 	}
 }
-
-
