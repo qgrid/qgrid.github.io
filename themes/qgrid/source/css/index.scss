@@ -371,6 +371,7 @@ a.button {
 .footer {
 	color: $color-footer-text;
 	background: $color-footer-background;
+	padding: 10px 0;
 
 	font: {
 		family: $font-serif;
@@ -398,3 +399,37 @@ a.button {
 		padding: 0 !important;
 	}
 }
+
+/* .social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social.social--header {
+
+	@media (min-width: 1254px) {
+		 flex-direction: column;
+
+	}
+
+}
+
+.social__item {
+	margin-left: 15px; //30px/2
+	margin-right: 15px;
+}
+
+.social--header .social__item {
+
+	@media (min-width: 1254px) {
+		 margin-left: 0;
+		 margin-right: 0;
+		 margin-bottom: 35px;
+
+		 &:last-child {
+			  margin-bottom: 0;
+		 }
+	}
+}
+ */

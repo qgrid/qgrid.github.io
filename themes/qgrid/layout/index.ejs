@@ -15,9 +15,12 @@
 					<label>Examples</label>
 				</a>
 			</li>
-			<li>
-				<span class="github"></span>
-				<label>Github</label>
+
+			<li class="ready">
+				<a href="<%- url_for('https://github.com/qgrid/qgrid.github.io.git') %>">
+					<span class="github"></span>
+					<label>GitHub</label>
+				</a>
 			</li>
 		</ul>
 	</div>
@@ -38,7 +41,7 @@
 				</div>
 				<div class="news-block-text">
 					<p class="news-block-text__date">Dec 12, 2020</p>
-					<h3 class="news-block-text__header3">Amazing updates in GQ! What was changed?</h3>
+					<h3 class="news-block-text__header3">We’ve created a news section!</h3>
 					<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
 						elit, sed do eiusmod tempor
 						incididunt ut labore consectetur adipiscing elit, sed do.....</p>
@@ -50,7 +53,8 @@
 				</div>
 				<div class="news-block-text">
 					<p class="news-block-text__date">Dec 12, 2020</p>
-					<h3 class="news-block-text__header3">Amazing updates in GQ! What was changed?</h3>
+					<h3 class="news-block-text__header3">UX designers are cute.
+						Real research!</h3>
 					<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
 						elit, sed do eiusmod tempor
 						incididunt ut labore consectetur adipiscing elit, sed do.....</p>
@@ -132,12 +136,11 @@
 		</div>
 		<div class="pricing-wrapper">
 			<div class="pricing-block">
-				<span class="pricing-block__rate">Support</span>
+				<span class="pricing-block__rate">Free</span>
 				<h4 class="pricing-block__header4"><sup>$</sup><span
-						class="pricing-block-header4__price">9</span><sub>/mo</sub></h4>
-				<p class="pricing-block__text">You can maintain our project and team. Help us to grow and improve our
-					product</p>
-				<a href="<%- url_for('#') %>" class="button pricing-block__btn">Become a maintainer</a>
+						class="pricing-block-header4__price">0</span><sub>/mo</sub></h4>
+				<p class="pricing-block__text">We are part of open source community, so you can jion us via Git Hub for free</p>
+				<a href="<%- url_for('#') %>" class="button pricing-block__btn">Get start with GitHub</a>
 			</div>
 			<div class="pricing-block">
 				<span class="pricing-block__rate">Support</span>
@@ -148,19 +151,14 @@
 				<a href="<%- url_for('#') %>" class="button pricing-block__btn">Become a maintainer</a>
 			</div>
 			<div class="pricing-block">
-				<span class="pricing-block__rate">Support</span>
+				<span class="pricing-block__rate">Extended support</span>
 				<h4 class="pricing-block__header4"><sup>$</sup><span
-						class="pricing-block-header4__price">9</span><sub>/mo</sub></h4>
-				<p class="pricing-block__text">You can maintain our project and team. Help us to grow and improve our
-					product</p>
+						class="pricing-block-header4__price">39</span><sub>/mo</sub></h4>
+				<p class="pricing-block__text">You can influence the project, propose changes and we take your wishes into new solutions</p>
 				<a href="<%- url_for('#') %>" class="button pricing-block__btn">Become a maintainer</a>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- <div class="row align-items-center">
-	<div class="col text-center">
-		<a href="<%- url_for('#') %>" class="button news__btn">See all news</a>
-	</div>
-</div> -->
+
