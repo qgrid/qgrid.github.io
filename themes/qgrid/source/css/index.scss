@@ -11,7 +11,7 @@ a.button {
 
 .button {
 	vertical-align: middle;
-	padding: 8px;
+	padding: 8px 18px;
 	font-size: 18px;
 	line-height: 24px;
 	color: $color-top-text;
@@ -19,6 +19,7 @@ a.button {
 	border: none;
 	border-radius: 4px;
 	text-decoration: none;
+	transition: all 0.5s ease;
 
 	&_big {
 		padding-top: 20px;
@@ -26,7 +27,9 @@ a.button {
 	}
 
 	&:hover {
-		background-color: darken($accent-color, 5%);
+		color: darken($color-top-background, 5%);
+		background-color: #fff;
+		border: 1px solid $accent-color;
 	}
 }
 
@@ -197,7 +200,7 @@ a.button {
 
 .news {
 	background-color: $color-background;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 
 	&-wrapper {
 		display: flex;
@@ -206,6 +209,7 @@ a.button {
 
 	&-heading {
 		text-align: center;
+		padding-bottom: 15px;
 
 		&__header2 {
 			margin-top: 20px !important;
@@ -278,6 +282,7 @@ a.button {
 
 	&-heading {
 		text-align: center;
+		padding-bottom: 15px;
 
 		&__header2 {}
 	}
@@ -291,12 +296,15 @@ a.button {
 		&__img {
 			text-align: center;
 			font-size: 5.2em;
+			margin-right: 30px;
 		}
 
 		&-text {
 			text-align: left;
 
+
 			&__header3 {
+				margin-top: 5px;
 				font-size: 20px;
 				font-weight: 400;
 			}
@@ -309,7 +317,6 @@ a.button {
 
 .pricing {
 	background-color: $color-background;
-	margin-bottom: 60px;
 
 	&-wrapper {
 		display: flex;
@@ -318,6 +325,7 @@ a.button {
 
 	&-heading {
 		text-align: center;
+		padding-bottom: 15px;
 	}
 
 	&-block {
@@ -328,6 +336,11 @@ a.button {
 		border: 1px solid $color-border;
 		box-sizing: border-box;
 		border-radius: 4px;
+
+		&:hover {
+			border: 1px solid $accent-color;
+		}
+
 
 		&__rate {
 			font-size: 24px;
@@ -358,7 +371,6 @@ a.button {
 .footer {
 	color: $color-footer-text;
 	background: $color-footer-background;
-	padding: 40px;
 
 	font: {
 		family: $font-serif;
