@@ -1,12 +1,5 @@
 @import "variables";
 
-/* @media (min-width: 1400px) {
-	.news {
-		background-color: yellowgreen;
-	}
-} */
-
-
 // not small screen
 @media screen and (min-width: 851px) {
 	.pages {
@@ -30,11 +23,6 @@
 		}
 	}
 
-	/* 	.github {
-		color: black;
-		font-size: 35px !important;
-		right: 45px !important;
-	} */
 	.qgrid-examples {
 		transition: ease all .5s;
 		top: 80px;
@@ -44,12 +32,6 @@
 
 // medium screen
 @media screen and (min-width: 851px) and (max-width: 1470px) {
-
-	/* 	.index {
-		.example .editor {
-			width: 75%;
-		}
-	} */
 	.pages header {
 		position: absolute;
 	}
@@ -71,10 +53,6 @@
 	}
 
 	.index {
-
-		/* 		.example .editor {
-			width: 95%;
-		} */
 		ul.features {
 
 			li,
