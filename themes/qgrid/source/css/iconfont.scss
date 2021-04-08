@@ -1,10 +1,10 @@
 @font-face {
 		font-family: "qgrid-iconfont";
 		src: url('../assets/fonts/qgrid-iconfont.eot');
-		src: url('../assets/fonts/qgrid-iconfont.eot?#iefix') format('eot'), 
+		src: url('../assets/fonts/qgrid-iconfont.eot?#iefix') format('eot'),
 		 url('../assets/fonts/qgrid-iconfont.woff2') format('woff2'),
-		 url('../assets/fonts/qgrid-iconfont.woff') format('woff'), 
-		 url('../assets/fonts/qgrid-iconfont.ttf') format('truetype'), 
+		 url('../assets/fonts/qgrid-iconfont.woff') format('woff'),
+		 url('../assets/fonts/qgrid-iconfont.ttf') format('truetype'),
 		 url('../assets/fonts/qgrid-iconfont.svg#qgrid-iconfont') format('svg');
 }
 
@@ -58,4 +58,23 @@
 
 .qgrid-examples::before {
 	content: url('../assets/images/qgrid-examples-logo.svg')
+}
+
+.icon-cleartypescripts:before{
+	content: url('../assets/images/cleartypescripts.svg')
+}
+.icon-documents:before{
+	content: url('../assets/images/documents.svg')
+}
+.icon-examples:before{
+	content: url('../assets/images/examples.svg')
+}
+.icon-fastflexible:before{
+	content: url('../assets/images/fastflexible.svg')
+}
+.icon-fullycustomable:before{
+	content: url('../assets/images/fullycustomable.svg')
+}
+.icon-performance:before{
+	content: url('../assets/images/performance.svg')
 }
