@@ -18,7 +18,31 @@ body {
 	background: $color-background;
 }
 
-section{
-	padding-top: 20px;
-	padding-bottom: 60px;
+section {
+	margin-bottom: 120px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 80px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (max-width: 1080px) {
+		max-width: calc(100% - 80px);
+		width: calc(100% - 80px);
+	}
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
 }
