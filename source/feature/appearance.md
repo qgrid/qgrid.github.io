@@ -25,6 +25,7 @@ Use style callbacks for dynamic class assignments, for the cell style it is poss
 })
 export class MyComponent {
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
    constructor(dataService: MyDataService, private qgrid: Grid) {
       this.rows$ = dataService.getRows();
