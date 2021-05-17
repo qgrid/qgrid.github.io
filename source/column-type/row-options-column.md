@@ -53,7 +53,7 @@ Edit template is populated automatically when cell is clicked, because by defaul
 
 ## How to open row options menu on enter pressed?
 
-Just focus row options column programmatically. 
+Just focus row options column programmatically.
 
 ```typescript
 @Component({
@@ -74,8 +74,6 @@ Just focus row options column programmatically.
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-
    rowOptions = {
       trigger: 'focus',
       actions: [
@@ -86,7 +84,6 @@ export class MyComponent {
 
    enterCommand = new Command({
       execute: () => {
-         const { model } = this.myGrid;
          const { rowIndex, columnIndex } = this.gridModel.navigation();
          const { columns } = this.gridModel.view();
 
