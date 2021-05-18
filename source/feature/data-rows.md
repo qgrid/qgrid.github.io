@@ -13,7 +13,7 @@ Any array of objects can be directly bind to the q-grid, if `observable` is used
       <q-grid [rows]="rows$ | async">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
-      `
+   `
 })
 export class MyComponent {
    rows$: Observable<any[]>;
@@ -30,24 +30,25 @@ If some of row properties are not accessible empty cells will be shown, on edit 
 
 ## How to setup rows using q-grid model?
 
-The preferred way to obtain q-grid model is to use `GridComponent` that will be available only after `ngAfterViewInit` hook being triggered.
+The preferred way to obtain q-grid model is to use `Grid.model()` and assign it in template.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {}
+   constructor(private dataService: MyDataService, private qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      
-      dataService
-         .getRows()
-         .subscribe(rows => model.data({ rows }));
+      this.gridModel.columnList({
+         generation: 'deep',
+      });
+      this.rows.subscribe((rows) => this.gridModel.data({ rows }));
    }
 }
 ```
@@ -59,23 +60,23 @@ Use `row` state in the q-grid model to control which rows to pin.
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel: GridModel;
+
+   constructor(private dataService: DataService, private qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      this.dataService
-         .getRows()
-         .subscribe(rows => {
-            model.data({ rows });
-            model.row({
-               pinTop: [rows[0], rows[1]],
-               pinBottom: [rows[rows.length - 1]]
-            });
+      this.dataService.getRows().subscribe((rows) => {
+         this.gridModel.data({ rows });
+         this.gridModel.row({
+            pinTop: [rows[0], rows[1]],
+            pinBottom: [rows[rows.length - 1]],
          });
+      });
    }
 }
 ```
