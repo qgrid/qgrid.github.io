@@ -8,22 +8,24 @@ Use mouse API to handle user clicks in q-grid.
 
 ```typescript
 @Component({
-   template: `
-   <q-grid [rows]="rows"></q-grid>
-   `
+   template: ` <q-grid [rows]="rows$ | async" [model]="gridModel"></q-grid> `,
 })
 export class MyComponent implements AfterViewInit {
-    @ViewChild(GridComponent) myGrid: GridComponent;
+   rows$: Observable<any[]>;
+   gridModel: GridModel;
 
-    ngAfterViewInit() {
-        const { model } = this.myGrid;
+   constructor(private dataService: MyDataService, private qgrid: Grid) {
+      this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
+   }
 
-        model.mouseChanged.on(e => {
-            const { code, status, target } = e.state;
-            if (code === 'left' && status === 'up') {
-                console.log(target);
-            }
-        });
+   ngAfterViewInit() {
+      this.gridModel.mouseChanged.on((e) => {
+         const { code, status, target } = e.state;
+         if (code === "left" && status === "up") {
+            console.log(target);
+         }
+      });
    }
 }
 ```
