@@ -13,7 +13,9 @@ import { Grid, GridModel } from 'ng2-qgrid';
    selector: 'my-component',
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
-export class MyComponent implements AfterViewInit {
+export class MyComponent {
+   gridModel: GridModel;
+
    constructor(private qgrid: Grid) {
       this.gridModel = qgrid.model();
    }
