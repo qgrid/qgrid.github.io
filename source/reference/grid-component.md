@@ -16,7 +16,7 @@ import { Grid, GridModel } from 'ng2-qgrid';
 export class MyComponent {
    gridModel: GridModel;
 
-   constructor(private qgrid: Grid) {
+   constructor(qgrid: Grid) {
       this.gridModel = qgrid.model();
    }
 }
