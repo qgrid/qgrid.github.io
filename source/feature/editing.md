@@ -10,23 +10,22 @@ There are situations when the end user need to edit data, in this case just setu
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
-      `
+   `,
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
    constructor(dataService: MyDataService) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.edit({
+      this.gridModel.edit({
          mode: 'cell',
       });
    }
@@ -41,9 +40,7 @@ Edit model force to use commands to control editing.
 
 ```typescript
 ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
+   this.gridModel.edit({
       mode: 'cell',
       enter: new Command({
          canExecute: e => e.column.type === 'number'
@@ -61,9 +58,7 @@ Use edit `method` property to activate batch editing, it activates cell handler 
 
 ```typescript
 ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
+   this.gridModel.edit({
       mode: 'cell',
       method: 'batch'
    });
@@ -80,7 +75,7 @@ Use `canEdit` attribute to not allow editing of the column.
 <q-grid [rows]="rows$ | async">
    <q-grid-columns generation="deep">
       <q-grid-column type="text" 
-                     key="guid" 
+                     key="guid"
                      [canEdit]="false">
       </q-grid-column>
    </q-grid-columns>
@@ -95,9 +90,8 @@ Use data model and focus service.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep"></q-grid-columns>         
-
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"></q-grid-columns>
          <q-grid-actions>
             <q-grid-action id="addRow"
                            title="Add Row"
@@ -108,25 +102,24 @@ Use data model and focus service.
       </q-grid>
    `
 })
-export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+export class MyComponent {
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
    addRow = new Command({
       execute: () => {
-         const { model } = this.myGrid;
-
          const atom = new Atom();
-         const rows = Array.from(model.data().rows).concat([atom]);
-         model.data({ rows });
+         const rows = Array.from(this.gridModel.data().rows).concat([atom]);
+         this.gridModel.data({ rows });
 
-         const service = this.qgrid.service(model);
+         const service = this.qgrid.service(this.gridModel);
          service.focus(rows.length - 1);
-      }
+      },
    });
 
    constructor(dataService: MyDataService) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 }
 ```
@@ -139,37 +132,36 @@ Use data model.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
             <q-grid-column type="row-options"
-                           key="rowOptions"					         
+                           key="rowOptions"
                            [canEdit]="false">
                <ng-template for="body"
-                           let-$cell>
+                            let-$cell>
                   <button (click)="deleteRow.execute($cell.row)">
                      DELETE
                   </button>
                </ng-template>
             </q-grid-column>
-         </q-grid-columns>         
+         </q-grid-columns>
       </q-grid>
-   `
+   `,
 })
-export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+export class MyComponent {
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
    deleteRow = new Command({
       execute: (row: Human) => {
-         const { model } = this.myGrid;
-
-         const rows = model.data().rows.filter(x => x !== row);
-         model.data({ rows });
-      }
+         const rows = this.gridModel.data().rows.filter((x) => x !== row);
+         this.gridModel.data({ rows });
+      },
    });
 
    constructor(dataService: MyDataService) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 }
 ```
@@ -180,9 +172,7 @@ Use shortcuts properties from the edit model to change commit or cancel keys.
 
 ```typescript
 ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
+   this.gridModel.edit({
       mode: 'cell',
       commitShortcuts: {
          $default: 'tab|shift+tab|enter|ctrl+s',
@@ -198,9 +188,7 @@ Use `canExecute` method in `commit` command to decide if cell value should be ch
 
 ```typescript
 ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
+   this.gridModel.edit({
       commit: new Command({
          canExecute: e => !!e.newValue
       })
@@ -210,13 +198,11 @@ ngAfterViewInit() {
 
 ## How to enter or exit edit mode?
 
-Use `state` property in edit model. Use `view` or `edit` to define mode. 
+Use `state` property in edit model. Use `view` or `edit` to define mode.
 
 ```typescript
 ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
+   this.gridModel.edit({
       state: 'edit'
    });
 }
@@ -228,9 +214,7 @@ Just set edit mode equals to `null`.
 
 ```typescript
 ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.edit({
+   this.gridModel.edit({
       mode: null
    });
 }
