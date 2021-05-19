@@ -15,7 +15,7 @@ Use keyboard API to handle key presses when q-grid is in focus.
 export class MyComponent implements AfterViewInit {
     gridModel: GridModel;
 
-    constructor(private qgrid: Grid) {
+    constructor(qgrid: Grid) {
         this.gridModel = qgrid.model();
     }
 
