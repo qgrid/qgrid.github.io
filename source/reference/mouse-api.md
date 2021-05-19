@@ -14,9 +14,9 @@ export class MyComponent implements AfterViewInit {
    rows$: Observable<any[]>;
    gridModel: GridModel;
 
-   constructor(private dataService: MyDataService, private qgrid: Grid) {
-      this.rows$ = dataService.getRows();
+   constructor(qgrid: Grid, dataService: MyDataService) {
       this.gridModel = qgrid.model();
+      this.rows$ = dataService.getRows();
    }
 
    ngAfterViewInit() {
