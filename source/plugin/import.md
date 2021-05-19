@@ -76,16 +76,17 @@ import * as xlsx from 'xlsx';
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
    rows$: Observable<any[]>;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, private qgrid: Grid) {
       this.rows$ = dataService.getRows();
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
-         imports: { xlsx }
+      this.qgrid.model().plugin({
+         imports: {
+            'xlsx': xlsx,
+         },
       });
    }
 }
