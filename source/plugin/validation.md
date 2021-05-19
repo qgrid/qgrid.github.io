@@ -56,13 +56,13 @@ export class MyComponent implements AfterViewInit {
    rows$: Observable<any[]>;
    gridModel: GridModel;
 
-   constructor(dataService: MyDataService, private qgrid: Grid) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
       this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.edit({
+      this.gridModel.edit({
          mode: 'cell'
       });
    }
