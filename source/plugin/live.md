@@ -16,30 +16,26 @@ Use `q-grid-live-cell` inside cell template to animate cell's content and `q-gri
 @Component({
    selector: 'my-component',
    template: `
-        <q-grid [rows]="rows$ | async">
-	        <q-grid-columns generation="deep">
-				<q-grid-column key="last" type="currency">
+      <q-grid [rows]="rows$ | async">
+         <q-grid-columns generation="deep">
+            <q-grid-column key="last" type="currency">
+               <ng-template for="change" let-$cell>
+                  <q-grid-live-cell [cell]="$cell">
+                  </q-grid-live-cell>
+               </ng-template>
+            </q-grid-column>
+         </q-grid-columns>
 
-			        <ng-template for="change" let-$cell>
-						<q-grid-live-cell [cell]="$cell"></q-grid-live-cell>
-					</ng-template>
-
-		        </q-grid-column>
-			</q-grid-columns>
-			
-			<q-grid-live-rows>
-			</q-grid-live-rows>
-
-         </q-grid>
-    `
+         <q-grid-live-rows> </q-grid-live-rows>
+      </q-grid>
+   `,
 })
 export class MyComponent {
-	@ViewChild(GridComponent) myGrid: GridComponent;
-	rows$: Observable<[]>;
+   rows$: Observable<[]>;
 
-	constructor(private dataService: MyDataService) {
-		 this.rows$ = dataService.getRows();
-	}
+   constructor(private dataService: MyDataService) {
+      this.rows$ = dataService.getRows();
+   }
 }
 ```
 
