@@ -10,24 +10,23 @@ Use q-grid model to group rows by particular columns or implement own hierarchie
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.group({
-         by: ['bondingType', 'groupBlock'],
+      this.gridModel.group({
+         by: ["bondingType", "groupBlock"]
       });
    }
 }
@@ -50,11 +49,11 @@ Use `group-summary` column type to setup template for summary rows.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
             <q-grid-column type="group-summary" aggregation="count">
                <ng-template for="body" let-$cell>
-                  Count: {{$cell.value}}
+                  Count: {{ $cell.value }}
                </ng-template>
             </q-grid-column>
          </q-grid-columns>
@@ -62,20 +61,19 @@ Use `group-summary` column type to setup template for summary rows.
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.group({         
-         by: ['bondingType', 'groupBlock'],
-         mode: 'subhead',
-         summary: 'leaf'
+      this.gridModel.group({
+         by: ["bondingType", "groupBlock"],
+         mode: "subhead",
+         summary: "leaf"
       });
    }
 }
@@ -88,12 +86,12 @@ export class MyComponent implements AfterViewInit {
 Use data middleware to fit the requirements, use custom pipe to define own hierarchies.
 
 ```typescript
-import { Grid, Node, Command } from 'ng2-qgrid';
+import { Grid, GridModel, Node, Command } from "ng2-qgrid";
 
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid>
+      <q-grid [model]="gridModel">
          <q-grid-columns>
             <q-grid-column type="group"
                            offset="40"
@@ -123,36 +121,35 @@ import { Grid, Node, Command } from 'ng2-qgrid';
 </q-grid>
 `
 })
-export class MyComponent implements AfterViewInit {   
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class MyComponent implements AfterViewInit {
+   gridModel: GridModel;
 
    constructor(private qgrid: Grid) {
+      this.gridModel = qgrid.model();
    }
 
-   ngAfterViewInit(){ 
+   ngAfterViewInit() {
       const { qgrid } = this;
-      const { model } = this.myGrid;
-
-      const root = new Node('$root', 0);
+      const root = new Node("$root", 0);
       const tree = [root];
       const myHierarchyPipe = (memo, context, next) => {
          memo.nodes = tree;
          next(memo);
       };
 
-      model
+      this.gridModel
          .data({
             pipe: [
                qgrid.pipe.memo,
                myHierarchyPipe,
                qgrid.pipe.column,
-               qgrid.pipe.view
-            ]
+               qgrid.pipe.view,
+            ],
          })
          .group({
             toggle: new Command({
                execute: function execute(node) {
-                  if(!node.children.length) {
+                  if (!node.children.length) {
                      const length = Math.floor(Math.random() * 9 + 1);
                      const level = node.level + 1;
                      node.children = Array.from(new Array(length), function (x, i) {
