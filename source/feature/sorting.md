@@ -10,24 +10,23 @@ Use q-grid sorting model to sort single and multiple data-bound columns.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.sort({ 
-         by: ['+gender', '-name.last']
+      this.gridModel.sort({
+         by: ["+gender", "-name.last"],
       });
    }
 }
@@ -37,21 +36,23 @@ export class MyComponent implements AfterViewInit {
 
 ## How to prevent column order affect on sorting?
 
-By default sorting order depends on column order, to apply sequent order `resetTrigger` array should be set to empty.
+By default sorting order depends on column order, to apply sequent order `trigger` array should be set to empty.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel: GridModel;
+
+   constructor(qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      
-      model.sort({ 
-         resetTrigger: [] 
+      this.gridModel.sort({
+         trigger: []
       });
    }
 }
@@ -67,8 +68,7 @@ Each column has `compare` property that can be overridden to change sort algorit
    template: `
       <q-grid>
          <q-grid-columns>
-            <q-grid-column key="myNumberColumn" 
-                           [compare]="myCompare">
+            <q-grid-column key="myNumberColumn" [compare]="myCompare">
             </q-grid-column>
          </q-grid-columns>
       </q-grid>
@@ -86,11 +86,9 @@ export class MyComponent {
 Set sort `mode` equals to `single`.
 
 ```typescript
-ngAfterViewInit() {
-   const { model } = this.myGrid;
-   
-   model.sort({ 
-      mode: 'single'
-   });
-}
+const gridModel = this.myGrid.model();
+
+gridModel.sort({
+   mode: 'single'
+});
 ```
