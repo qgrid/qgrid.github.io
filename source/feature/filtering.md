@@ -8,29 +8,28 @@ There are many UI abilities that q-grid provides to filter data. Choose column f
 
 ## How to add default filter on component load?
 
-Use `by` property to get or set filter settings. 
+Use `by` property to get or set filter settings.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      gridModel.filter({
+      this.gridModel.filter({
          by: {
             firstName: { items: ['Smith'] },
             gender: { blanks: true },
@@ -46,7 +45,7 @@ export class MyComponent implements AfterViewInit {
                right: null
             }
          }
-      });   
+      });
    }
 }
 ```
@@ -58,7 +57,7 @@ To show filter controls under the column headers use `filterUnit` attribute, fil
 ```typescript
 @Component({
    template: `
-      <q-grid>
+      <q-grid [model]="gridModel">
          <q-grid-column key="myNumber">
             <ng-template for="filter" let-$cell>
                <input #input
@@ -70,18 +69,17 @@ To show filter controls under the column headers use `filterUnit` attribute, fil
    `
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.filter({
-         unit: 'row'
+      this.gridModel.filter({
+         unit: "row",
       });
    }
 }
@@ -94,27 +92,26 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 When server side pagination is used the data in q-grid can be not loaded fully in this case `fetch` callback can be used to get list of items to show in column filter component.
 
 ```typescript
-import { GridComponent, FetchContext } from 'ng2-qgrid';
+import { Grid, GridModel, FetchContext } from 'ng2-qgrid';
 
 @Component({
    template: `
-      <q-grid [rows]="rows$ | async">
-            <q-grid-columns generation="deep"></q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.filter({
+      this.gridModel.filter({
          fetch: (key: string, context: FetchContext) => {
             const { search, take, skip } = context;
             return dataService.getFilterItemsFor(key, search, take, skip);
@@ -142,25 +139,25 @@ Setup `match` predicate to execute custom filtration on loaded data.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
+
    @Input() value: string;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.filter({
-         match: () => row => row.name.toLowerCase().indexOf(this.value) >= 0
+      this.gridModel.filter({
+         match: () => (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
       });
    }
 }
