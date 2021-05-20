@@ -50,7 +50,6 @@ import * as fileSaver from 'file-saver';
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;
    rows$: Observable<any[]>;
    gridModel: GridModel;
 
