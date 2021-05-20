@@ -42,26 +42,26 @@ import * as fileSaver from 'file-saver';
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"> </q-grid-columns>
 
-         <q-grid-export type="json">
-         </q-grid-export>
+         <q-grid-export type="json"> </q-grid-export>
       </q-grid>
    `
 })
-export class MyComponent {
+export class MyComponent implements AfterViewInit {
    @ViewChild(GridComponent) myGrid: GridComponent;
    rows$: Observable<any[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
-         imports: { fileSaver }
+      this.gridModel.plugin({
+         imports: { fileSaver },
       });
    }
 }
@@ -84,26 +84,25 @@ import * as xlsx from 'xlsx';
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"> </q-grid-columns>
 
-         <q-grid-export type="xlsx">
-         </q-grid-export>
+         <q-grid-export type="xlsx"> </q-grid-export>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class MyComponent implements AfterViewInit {
    rows$: Observable<any[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
-         imports: { fileSaver, xlsx }
+      this.gridModel.plugin({
+         imports: { fileSaver, xlsx },
       });
    }
 }
