@@ -4,7 +4,7 @@ group: Features
 order: 13
 ---
 
-The q-grid navigation system supports various keyboard events to start keyboard navigation q-grid should be focused. 
+The q-grid navigation system supports various keyboard events to start keyboard navigation q-grid should be focused.
 
 ## What shortcuts does navigation implement by default?
 
@@ -20,7 +20,7 @@ The q-grid navigation system supports various keyboard events to start keyboard 
 * `pageDown` - pageDown.
 * `shift+pageUp` - upward.
 * `shift+pageDown`- downward.
-      
+
 ## How to override default navigation shortcuts?
 
 Use `shortcut` property in the navigation model.
@@ -29,36 +29,35 @@ Use `shortcut` property in the navigation model.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.navigation({
-         shortcut: { 
-            up: 'up',
-            down: 'down',
-            left: 'left',
-            right: 'right',
-            next: 'tab',
-            previous: 'shift+tab',
-            home: 'home',
-            end: 'end',
-            pageUp: 'pageUp',
-            pageDown: 'pageDown',
-            upward: 'shift+pageUp',
-            downward: 'shift+pageDown'
+      this.gridModel.navigation({
+         shortcut: {
+            up: "up",
+            down: "down",
+            left: "left",
+            right: "right",
+            next: "tab",
+            previous: "shift+tab",
+            home: "home",
+            end: "end",
+            pageUp: "pageUp",
+            pageDown: "pageDown",
+            upward: "shift+pageUp",
+            downward: "shift+pageDown",
          }
       });
    }
