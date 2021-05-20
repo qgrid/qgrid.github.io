@@ -10,7 +10,7 @@ Use query builder plugin to add unlimited possibilities to filter data using con
 
 ## Installation
 
-<!-- 
+<!--
 Add condition builder module to imports section.
 
 ```typescript
@@ -65,18 +65,18 @@ By supporting q-grid expression contract building any custom filters with comple
    group[op]: 'and' | 'or'
    condition[left]: columnKey
    condition[right]: string | number | array | bool | date | null
-   condition[op]: 
-      'isNotNull' 
-      | 'isNull' 
-      | 'equals' 
-      | 'notEquals' 
-      | 'greaterThanOrEquals' 
-      | 'greaterThan' 
-      | 'lessThanOrEquals' 
-      | 'lessThan' 
-      | 'between' 
-      | 'in' 
-      | 'like' 
+   condition[op]:
+      'isNotNull'
+      | 'isNull'
+      | 'equals'
+      | 'notEquals'
+      | 'greaterThanOrEquals'
+      | 'greaterThan'
+      | 'lessThanOrEquals'
+      | 'lessThan'
+      | 'between'
+      | 'in'
+      | 'like'
       | 'notLike'
 }
 ```
@@ -89,52 +89,55 @@ Use filter model `$expression` property in `by` section, the same position shoul
 import { GridComponent, FetchContext } from 'ng2-qgrid';
 
 @Component({
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
-export class ExampleFilterRowCustomComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class ExampleFilterRowCustomComponent implements AfterViewInit {
+   gridModel: GridModel;
+
+   constructor(qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      value = value.toLocaleLowerCase();
-      model.filter({
+      this.gridModel.filter({
          by: {
             $expression: {
-               kind: 'group',
-               op: 'and',
+               kind: "group",
+               op: "and",
                left: {
-                  kind: 'group',
-                  op: 'or',
+                  kind: "group",
+                  op: "or",
                   left: {
-                     kind: 'condition',
-                     op: 'between',
-                     left: 'Age',
-                        right: [25, 30]
+                     kind: "condition",
+                     op: "between",
+                     left: "Age",
+                     right: [25, 30],
                   },
                   right: {
-                     kind: 'condition',
-                     op: 'GreaterThan',
-                     left: 'Age',
-                     right: 40
-                  }
+                     kind: "condition",
+                     op: "GreaterThan",
+                     left: "Age",
+                     right: 40,
+                  },
                },
                right: {
-                  kind: 'group',
-                  op: 'and',
+                  kind: "group",
+                  op: "and",
                   left: {
-                     kind: 'condition',
-                     op: 'in',
-                     left: 'PayerName',
-                     right: ['John', 'Gerard', 'Steve']
+                     kind: "condition",
+                     op: "in",
+                     left: "PayerName",
+                     right: ["John", "Gerard", "Steve"],
                   },
                   right: {
-                     kind: 'condition',
-                     op: 'isNotNull',
-                     left: 'Account',
-                     right: null
-                  }
-               }
-         }
+                     kind: "condition",
+                     op: "isNotNull",
+                     left: "Account",
+                     right: null,
+                  },
+               },
+            },
+         },
       });
    }
 }
