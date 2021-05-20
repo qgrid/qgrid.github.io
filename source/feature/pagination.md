@@ -10,25 +10,24 @@ Use pagination model to view large data sets in small chunks for faster loading 
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.pagination({
-		   size: 10;
-		   sizeList: [5, 10, 15];
+      this.gridModel.pagination({
+         size: 10;
+         sizeList: [5, 10, 15];
       });
    }
 }
@@ -54,8 +53,8 @@ const { pagination } = model;
 pagination({
    resetTriggers: {
       ...pagination().resetTriggers,
-      sort: ['by']   
-   }
+      sort: ["by"]
+   },
 });
 ```
 
