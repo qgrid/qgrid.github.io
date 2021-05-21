@@ -69,18 +69,21 @@ Override `serialize` method to change request output.
 @Component({
    selector: 'my-component',
    template: `
-     <q-grid>
+     <q-grid [model]="gridModel">
        <q-grid-rest [url]="myServiceUrl" method="POST"></q-grid-rest>
      </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel: GridModel;
    myServiceUrl = 'http://localhost:4000/exampleData'
 
+   constructor(qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
+
    ngAfterViewInit() {
-      const { model } = this.myGrid;      
-      model.rest({
+      this.gridModel.rest({
         serialize: () => {
             const pagination = model.pagination();
             const sort = model.sort();
@@ -95,7 +98,7 @@ export class MyComponent implements AfterViewInit {
                }),
                skip: pagination.current * paginationState.size,
                take: pagination.size
-            };      
+            };
       });
    }
 }
