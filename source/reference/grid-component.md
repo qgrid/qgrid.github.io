@@ -4,7 +4,7 @@ group: Reference
 order: 0
 ---
 
-The most of work could be configured in the HTML templates under the `q-grid` component. Sometimes it's required to have direct access to the q-grid model, in this case `Grid.model()` could be used.
+The most of work could be configured in the HTML templates under the `q-grid` component. Sometimes it's required to have direct access to the q-grid model, in this case `GridModel` could be used.
 
 ```typescript
 import { Grid, GridModel } from 'ng2-qgrid';

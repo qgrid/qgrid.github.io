@@ -102,42 +102,42 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
       this.gridModel.filter({
          by: {
             $expression: {
-               kind: "group",
-               op: "and",
+               kind: 'group',
+               op: 'and',
                left: {
-                  kind: "group",
-                  op: "or",
+                  kind: 'group',
+                  op: 'or',
                   left: {
-                     kind: "condition",
-                     op: "between",
-                     left: "Age",
+                     kind: 'condition',
+                     op: 'between',
+                     left: 'Age',
                      right: [25, 30],
                   },
                   right: {
-                     kind: "condition",
-                     op: "GreaterThan",
-                     left: "Age",
+                     kind: 'condition',
+                     op: 'GreaterThan',
+                     left: 'Age',
                      right: 40,
                   },
                },
                right: {
-                  kind: "group",
-                  op: "and",
+                  kind: 'group',
+                  op: 'and',
                   left: {
-                     kind: "condition",
-                     op: "in",
-                     left: "PayerName",
-                     right: ["John", "Gerard", "Steve"],
+                     kind: 'condition',
+                     op: 'in',
+                     left: 'PayerName',
+                     right: ['John', 'Gerard', 'Steve'],
                   },
                   right: {
-                     kind: "condition",
-                     op: "isNotNull",
-                     left: "Account",
+                     kind: 'condition',
+                     op: 'isNotNull',
+                     left: 'Account',
                      right: null,
-                  },
-               },
-            },
-         },
+                  }
+               }
+            }
+         }
       });
    }
 }

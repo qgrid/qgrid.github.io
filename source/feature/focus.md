@@ -58,7 +58,7 @@ Use focus method of q-grid service, it will automatically got to the necessary p
       </q-grid>
    `
 })
-export class MyComponent {
+export class MyComponent implements AfterViewInit {
    rows$: Observable<[]>;
    gridModel: GridModel;
 

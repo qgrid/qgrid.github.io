@@ -26,7 +26,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.sort({
-         by: ["+gender", "-name.last"],
+         by: ['+gender', '-name.last'],
       });
    }
 }
@@ -86,8 +86,6 @@ export class MyComponent {
 Set sort `mode` equals to `single`.
 
 ```typescript
-const gridModel = this.myGrid.model();
-
 gridModel.sort({
    mode: 'single'
 });

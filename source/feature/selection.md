@@ -47,7 +47,7 @@ Use `mode` property to change selection mode.
 
 ```typescript
 gridModel.selection({
-   mode: "multiple",
+   mode: 'multiple',
 });
 ```
 
@@ -97,7 +97,7 @@ If `singleOne` mode is not a case use `selectionChange` event. Next lines preven
 
 ```typescript
 gridModel.selectionChanged.on((e) => {
-   const change = e.changes["items"];
+   const change = e.changes['items'];
    if (change) {
       const { newValue, oldValue } = change;
       const noSelection = !newValue.length;
@@ -150,7 +150,7 @@ gridModel.selection({
    toggle: new Command({
       canExecute: (e) => {
          const target = e.items[0];
-         return target.gender === "male";
+         return target.gender === 'male';
       },
    }),
 });
@@ -174,7 +174,7 @@ Use `shortcut` property from selection model.
 gridModel.selection({
    shortcut: {
       ...model.selection().shortcut,
-      toggleRow: "space",
+      toggleRow: 'space',
    },
 });
 ```

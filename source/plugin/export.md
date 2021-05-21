@@ -60,7 +60,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.plugin({
-         imports: { fileSaver },
+         imports: { fileSaver }
       });
    }
 }
@@ -101,7 +101,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.plugin({
-         imports: { fileSaver, xlsx },
+         imports: { fileSaver, xlsx }
       });
    }
 }

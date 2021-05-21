@@ -53,8 +53,8 @@ const { pagination } = model;
 pagination({
    resetTriggers: {
       ...pagination().resetTriggers,
-      sort: ["by"]
-   },
+      sort: ['by']
+   }
 });
 ```
 

@@ -79,7 +79,7 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.filter({
-         unit: "row",
+         unit: 'row'
       });
    }
 }

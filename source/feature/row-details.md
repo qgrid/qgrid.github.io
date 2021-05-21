@@ -21,7 +21,7 @@ There are situations when additional information need to be showing by expanding
       </q-grid>
    `
 })
-export class MyComponent {
+export class MyComponent implements AfterViewInit {
    gridModel: GridModel;
    rows$: Observable<[]>;
 
@@ -95,7 +95,7 @@ Use let-`$cell` to pass data to the function that will return details rows.
       </q-grid>
    `
 })
-export class MyComponent {
+export class MyComponent implements AfterViewInit {
    gridModel: GridModel;
    rows$: Observable<[]>;
    cache = new Map<string, Observable<Atom[]>>();

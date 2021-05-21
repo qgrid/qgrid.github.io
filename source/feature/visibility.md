@@ -19,7 +19,7 @@ export class MyComponent implements AfterViewInit {
    rows$: Observable<[]>;
    gridModel: GridModel;
 
-   constructor(dataService: MyDataService, private qgrid: Grid) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
       this.gridModel = qgrid.model();
    }
@@ -33,8 +33,8 @@ export class MyComponent implements AfterViewInit {
             top: true,
             bottom: true,
             right: false,
-            left: false,
-         },
+            left: false
+         }
       });
    }
 }

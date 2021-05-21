@@ -26,7 +26,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.group({
-         by: ["bondingType", "groupBlock"]
+         by: ['bondingType', 'groupBlock']
       });
    }
 }
@@ -71,9 +71,9 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.group({
-         by: ["bondingType", "groupBlock"],
-         mode: "subhead",
-         summary: "leaf"
+         by: ['bondingType', 'groupBlock'],
+         mode: 'subhead',
+         summary: 'leaf'
       });
    }
 }
@@ -144,7 +144,7 @@ export class MyComponent implements AfterViewInit {
                myHierarchyPipe,
                qgrid.pipe.column,
                qgrid.pipe.view,
-            ],
+            ]
          })
          .group({
             toggle: new Command({

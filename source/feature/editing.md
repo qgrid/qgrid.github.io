@@ -13,13 +13,13 @@ There are situations when the end user need to edit data, in this case just setu
       <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
-   `,
+   `
 })
 export class MyComponent implements AfterViewInit {
    rows$: Observable<[]>;
    gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
       this.gridModel = qgrid.model();
    }
@@ -39,17 +39,15 @@ export class MyComponent implements AfterViewInit {
 Edit model force to use commands to control editing.
 
 ```typescript
-ngAfterViewInit() {
-   this.gridModel.edit({
-      mode: 'cell',
-      enter: new Command({
-         canExecute: e => e.column.type === 'number'
-      }),
-      commit: new Command({
-         execute: e => console.log(e.newValue)
-      })
-   });
-}
+gridModel.edit({
+   mode: 'cell',
+   enter: new Command({
+      canExecute: e => e.column.type === 'number'
+   }),
+   commit: new Command({
+      execute: e => console.log(e.newValue)
+   })
+});
 ```
 
 ## How to enable batch edit?
@@ -57,12 +55,11 @@ ngAfterViewInit() {
 Use edit `method` property to activate batch editing, it activates cell handler that could be dragged to apply start cell value to the next selection.
 
 ```typescript
-ngAfterViewInit() {
-   this.gridModel.edit({
-      mode: 'cell',
-      method: 'batch'
-   });
-}
+gridModel.edit({
+   mode: 'cell',
+   method: 'batch'
+});
+
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
@@ -156,10 +153,10 @@ export class MyComponent {
       execute: (row: Human) => {
          const rows = this.gridModel.data().rows.filter((x) => x !== row);
          this.gridModel.data({ rows });
-      },
+      }
    });
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
       this.gridModel = qgrid.model();
    }
@@ -171,15 +168,14 @@ export class MyComponent {
 Use shortcuts properties from the edit model to change commit or cancel keys.
 
 ```typescript
-ngAfterViewInit() {
-   this.gridModel.edit({
-      mode: 'cell',
-      commitShortcuts: {
-         $default: 'tab|shift+tab|enter|ctrl+s',
-         bool: 'tab|shift+tab|left|right|up|down|home|end|pageUp|pageDown'
-      }
-   });
-}
+gridModel.edit({
+   mode: 'cell',
+   commitShortcuts: {
+      $default: 'tab|shift+tab|enter|ctrl+s',
+      bool: 'tab|shift+tab|left|right|up|down|home|end|pageUp|pageDown'
+   }
+});
+
 ```
 
 ## How to prevent value change it it's empty?
@@ -187,13 +183,11 @@ ngAfterViewInit() {
 Use `canExecute` method in `commit` command to decide if cell value should be changed.
 
 ```typescript
-ngAfterViewInit() {
-   this.gridModel.edit({
-      commit: new Command({
-         canExecute: e => !!e.newValue
-      })
-   });
-}
+gridModel.edit({
+   commit: new Command({
+      canExecute: e => !!e.newValue
+   })
+});
 ```
 
 ## How to enter or exit edit mode?
@@ -201,11 +195,9 @@ ngAfterViewInit() {
 Use `state` property in edit model. Use `view` or `edit` to define mode.
 
 ```typescript
-ngAfterViewInit() {
-   this.gridModel.edit({
-      state: 'edit'
-   });
-}
+this.gridModel.edit({
+   state: 'edit'
+});
 ```
 
 ## How to disable edit mode?
@@ -213,11 +205,9 @@ ngAfterViewInit() {
 Just set edit mode equals to `null`.
 
 ```typescript
-ngAfterViewInit() {
-   this.gridModel.edit({
-      mode: null
-   });
-}
+gridModel.edit({
+   mode: null
+});
 ```
 
 ## Suggested Links

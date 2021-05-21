@@ -23,7 +23,7 @@ Use style callbacks for dynamic class assignments, for the cell style it is poss
       </q-grid>
    `
 })
-export class MyComponent {
+export class MyComponent implements AfterViewInit {
    rows$: Observable<[]>;
    gridModel: GridModel;
 

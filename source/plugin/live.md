@@ -31,7 +31,7 @@ Use `q-grid-live-cell` inside cell template to animate cell's content and `q-gri
    `,
 })
 export class MyComponent {
-   rows$: Observable<[]>;
+   rows$: Observable<any[]>;
 
    constructor(private dataService: MyDataService) {
       this.rows$ = dataService.getRows();
