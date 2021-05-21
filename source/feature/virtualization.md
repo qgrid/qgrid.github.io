@@ -11,31 +11,30 @@ Use pagination size to define number of rows that will be materialized.
 ```typescript
 @Component({
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
          </q-grid-columns>	
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid;
+   gridModel: GridModel;
    rows$: Observable<[]>;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
-   
-   ngAfterViewInit() {
-      const { model } = this.myGrid;
 
-      model.scroll({
+   ngAfterViewInit() {
+      this.gridModel.scroll({
          mode: 'virtual'
       });
 
-      model.pagination({
+      this.gridModel.pagination({
          size: 20
       });
-   }		
+   }
 }
 ```
 
@@ -45,40 +44,33 @@ Override default pipeline with serve call on the top.
 
 ```typescript
 @Component({
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid;
-
-   constructor( 
-      private qgrid: Grid,
-      private dataService: MyDataService
-   ) {
+   gridModel: GridModel;
+   constructor(private qgrid: Grid, private dataService: MyDataService) {
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
       const { pipeUnit } = this.qgrid;
 
-      model.scroll({
-         mode: 'virtual'
+      this.gridModel.scroll({
+         mode: "virtual",
       });
 
-      model.data({
+      this.gridModel.data({
          pipe: [
             (rows, context, next) => {
-               const { skip } = model.fetch();
-               const { size } = model.pagination();
+               const { skip } = this.gridModel.fetch();
+               const { size } = this.gridModel.pagination();
 
-               this.dataService
-                  .getAtoms()
-                  .subscribe(atoms => {
-                     const newPage = atoms.slice(skip, skip + size);
-                     next(rows.concat(newPage));
-                  });
-
-            }]
-            .concat(pipeUnit.view)
+               this.dataService.getAtoms().subscribe((atoms) => {
+                  const newPage = atoms.slice(skip, skip + size);
+                  next(rows.concat(newPage));
+               });
+            },
+         ].concat(pipeUnit.view),
       });
    }
 }
