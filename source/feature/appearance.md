@@ -27,7 +27,7 @@ export class MyComponent {
    rows$: Observable<[]>;
    gridModel: GridModel;
 
-   constructor(dataService: MyDataService, private qgrid: Grid) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
       this.gridModel = qgrid.model();
    }

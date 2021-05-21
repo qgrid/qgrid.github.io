@@ -30,25 +30,27 @@ If some of row properties are not accessible empty cells will be shown, on edit 
 
 ## How to setup rows using q-grid model?
 
-The preferred way to obtain q-grid model is to use `Grid.model()` and assign it in template.
+The preferred way to obtain q-grid model is to use `GridModel` and assign it in template.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid [model]="gridModel"></q-grid>',
+   template: '<q-grid [rows]="rows$ | async" [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
    gridModel: GridModel;
+   rows$: Observable<any[]>;
 
-   constructor(private dataService: MyDataService, private qgrid: Grid) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.gridModel = qgrid.model();
+      this.rows$ = dataService.getRows();
    }
 
    ngAfterViewInit() {
       this.gridModel.columnList({
          generation: 'deep',
       });
-      this.rows.subscribe((rows) => this.gridModel.data({ rows }));
+      this.rows$.subscribe((rows) => this.gridModel.data({ rows }));
    }
 }
 ```
@@ -65,7 +67,7 @@ Use `row` state in the q-grid model to control which rows to pin.
 export class MyComponent implements AfterViewInit {
    gridModel: GridModel;
 
-   constructor(private dataService: DataService, private qgrid: Grid) {
+   constructor(private dataService: DataService, qgrid: Grid) {
       this.gridModel = qgrid.model();
    }
 

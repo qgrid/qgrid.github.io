@@ -95,7 +95,7 @@ The preferred way to obtain q-grid model is to use `GridModel`.
 export class MyComponent implements AfterViewInit {
    gridModel: GridModel;
 
-   constructor(private qgrid: Grid) {
+   constructor(qgrid: Grid) {
       this.gridModel = qgrid.model();
    }
 
