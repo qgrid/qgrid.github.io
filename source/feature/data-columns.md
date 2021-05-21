@@ -5,7 +5,7 @@ order: 1
 ---
 
 Use column auto generation modes for a quick start, try `shallow`, `deep` or `cohort` options to explore data in depth.
-    
+
 ```typescript
 @Component({
    selector: 'my-component',
@@ -31,7 +31,7 @@ export class MyComponent {
 ## Column Definitions
 
 Use `q-grid-column` components to explicitly declare list of columns to show, column generation mode still can be used.
-    
+
 ```html
 <q-grid>
    <q-grid-columns>
@@ -85,20 +85,22 @@ export class MyComponent {
 
 ## How to define columns by using q-grid model?
 
-The preferred way to obtain q-grid model is to use `GridComponent` that will be available only after `ngAfterViewInit` hook being triggered.
+The preferred way to obtain q-grid model is to use `GridModel`.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: `<q-grid [model]="gridModel"></q-grid>`,
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel: GridModel;
+
+   constructor(private qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.data({
+      this.gridModel.data({
           columns: [
              { key: 'firstName', title: 'First Name' },
              { key: 'lastName', title: 'Last Name' },
@@ -124,7 +126,7 @@ Use `pin` property in column definition to control if the column should be pinne
 
 ## How to define column order?
 
-Column order heavily depends on column definition position within `index` property. Please not that in terms of ordering columns defined in TypeScript have higher priority rather than HTML column definitions. 
+Column order heavily depends on column definition position within `index` property. Please not that in terms of ordering columns defined in TypeScript have higher priority rather than HTML column definitions.
 
 ```html
 <q-grid>
