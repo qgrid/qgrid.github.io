@@ -10,7 +10,7 @@ Use keyboard API to handle key presses when q-grid is in focus.
 @Component({
     template: `
        <q-grid [model]="gridModel"></q-grid>
-    `,
+    `
 })
 export class MyComponent implements AfterViewInit {
     gridModel: GridModel;

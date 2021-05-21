@@ -85,7 +85,7 @@ export class MyComponent {
    ngAfterViewInit() {
       this.qgrid.model().plugin({
          imports: {
-            'xlsx': xlsx,
+            'xlsx': xlsx
          },
       });
    }

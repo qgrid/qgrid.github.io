@@ -22,7 +22,7 @@ export class MyComponent implements AfterViewInit {
    ngAfterViewInit() {
       this.gridModel.mouseChanged.on((e) => {
          const { code, status, target } = e.state;
-         if (code === "left" && status === "up") {
+         if (code === 'left' && status === 'up') {
             console.log(target);
          }
       });

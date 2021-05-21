@@ -86,7 +86,7 @@ export class MyComponent implements AfterViewInit {
 Use data middleware to fit the requirements, use custom pipe to define own hierarchies.
 
 ```typescript
-import { Grid, GridModel, Node, Command } from "ng2-qgrid";
+import { Grid, GridModel, Node, Command } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
@@ -130,7 +130,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       const { qgrid } = this;
-      const root = new Node("$root", 0);
+      const root = new Node('$root', 0);
       const tree = [root];
       const myHierarchyPipe = (memo, context, next) => {
          memo.nodes = tree;
@@ -143,7 +143,7 @@ export class MyComponent implements AfterViewInit {
                qgrid.pipe.memo,
                myHierarchyPipe,
                qgrid.pipe.column,
-               qgrid.pipe.view,
+               qgrid.pipe.view
             ]
          })
          .group({

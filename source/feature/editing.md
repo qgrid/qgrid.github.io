@@ -195,7 +195,7 @@ gridModel.edit({
 Use `state` property in edit model. Use `view` or `edit` to define mode.
 
 ```typescript
-this.gridModel.edit({
+gridModel.edit({
    state: 'edit'
 });
 ```

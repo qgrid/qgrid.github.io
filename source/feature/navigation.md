@@ -57,7 +57,7 @@ export class MyComponent implements AfterViewInit {
             pageUp: 'pageUp',
             pageDown: 'pageDown',
             upward: 'shift+pageUp',
-            downward: 'shift+pageDown',
+            downward: 'shift+pageDown'
          }
       });
    }

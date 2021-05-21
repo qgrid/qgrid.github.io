@@ -74,7 +74,7 @@ export class MyComponent {
          this.canLoad = true;
       },
       canExecute: () => !this.canLoad,
-      shortcut: 'ctrl+d',
+      shortcut: 'ctrl+d'
    });
 }
 ```

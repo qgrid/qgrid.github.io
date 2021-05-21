@@ -47,7 +47,7 @@ Use `mode` property to change selection mode.
 
 ```typescript
 gridModel.selection({
-   mode: 'multiple',
+   mode: 'multiple'
 });
 ```
 
@@ -67,7 +67,7 @@ Use q-grid model to get list of selected items.
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
    gridModel: GridModel;
@@ -103,7 +103,7 @@ gridModel.selectionChanged.on((e) => {
       const noSelection = !newValue.length;
       if (noSelection) {
          gridModel.selection({
-            items: oldValue,
+            items: oldValue
          });
       }
    }
@@ -131,13 +131,13 @@ Sometimes it's required to fill selection items properties with something differ
 gridModel.selection({
    key: {
       row: (row) => row.myNumberId,
-      column: (column) => column.key,
-   },
+      column: (column) => column.key
+   }
 });
 
 const rowIds = [0, 1, 4];
 gridModel.selection({
-   items: rowIds,
+   items: rowIds
 });
 ```
 
@@ -151,8 +151,8 @@ gridModel.selection({
       canExecute: (e) => {
          const target = e.items[0];
          return target.gender === 'male';
-      },
-   }),
+      }
+   })
 });
 ```
 
@@ -174,7 +174,7 @@ Use `shortcut` property from selection model.
 gridModel.selection({
    shortcut: {
       ...model.selection().shortcut,
-      toggleRow: 'space',
+      toggleRow: 'space'
    },
 });
 ```

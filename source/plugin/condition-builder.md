@@ -117,8 +117,8 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
                      kind: 'condition',
                      op: 'GreaterThan',
                      left: 'Age',
-                     right: 40,
-                  },
+                     right: 40
+                  }
                },
                right: {
                   kind: 'group',
@@ -127,13 +127,13 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
                      kind: 'condition',
                      op: 'in',
                      left: 'PayerName',
-                     right: ['John', 'Gerard', 'Steve'],
+                     right: ['John', 'Gerard', 'Steve']
                   },
                   right: {
                      kind: 'condition',
                      op: 'isNotNull',
                      left: 'Account',
-                     right: null,
+                     right: null
                   }
                }
             }
