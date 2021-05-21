@@ -10,26 +10,25 @@ There are situations when a user need to select rows or cells fortunately q-grid
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel: GridModel;
 
-   constructor(dataService: MyDataService) {
+   constructor(dataService: MyDataService, qgrid: Grid) {
       this.rows$ = dataService.getRows();
+      this.gridModel = qgrid.model();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.selection({
+      this.gridModel.selection({
          unit: 'row',
          mode: 'multiple',
-         area: 'body'            
+         area: 'body'
       });
    }
 }
@@ -47,13 +46,9 @@ Use `mode` property to change selection mode.
 * Use `range` mode when drag and drop selection should be turned on.
 
 ```typescript
- ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.selection({
-      mode: 'multiple',
-   });
-}
+gridModel.selection({
+   mode: "multiple",
+});
 ```
 
 ## How to change what should be selectable?
@@ -75,12 +70,14 @@ Use q-grid model to get list of selected items.
    template: '<q-grid></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel: GridModel;
+
+   constructor(qgrid: Grid) {
+      this.gridModel = qgrid.model();
+   }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.selectionChanged.on(e => {
+      this.gridModel.selectionChanged.on((e) => {
          if (e.hasChanges('items')) {
             const { items } = e.state;
             console.log(items);
@@ -92,21 +89,21 @@ export class MyComponent implements AfterViewInit {
 
 ## How to restrict selection only on checkbox click?
 
-Set selection `area` property to `custom`  if clicking to q-grid body should not lead to row selection.
+Set selection `area` property to `custom` if clicking to q-grid body should not lead to row selection.
 
 ## How to prevent unselecting if row was clicked again?
 
 If `singleOne` mode is not a case use `selectionChange` event. Next lines prevent unselecting of row that was double clicked.
 
 ```typescript
-model.selectionChanged.on(e => {
-   const change = e.changes['items'];
+gridModel.selectionChanged.on((e) => {
+   const change = e.changes["items"];
    if (change) {
       const { newValue, oldValue } = change;
       const noSelection = !newValue.length;
       if (noSelection) {
-         model.selection({
-            items: oldValue
+         gridModel.selection({
+            items: oldValue,
          });
       }
    }
@@ -131,19 +128,17 @@ Use `[isVisible]` input of to hide/show select column.
 Sometimes it's required to fill selection items properties with something different from just row references. To override default behavior selection `key` property could be overridden.
 
 ```typescript
-ngAfterViewInit() {
-   model.selection({       
-      key: {
-         row: row => row.myNumberId,
-         column: column => column.key
-      }
-   });
+gridModel.selection({
+   key: {
+      row: (row) => row.myNumberId,
+      column: (column) => column.key,
+   },
+});
 
-   const rowIds = [0, 1, 4]; 
-   model.selection({
-      items: rowIds
-   });
-}
+const rowIds = [0, 1, 4];
+gridModel.selection({
+   items: rowIds,
+});
 ```
 
 ## How to disable particular rows from being selected?
@@ -151,18 +146,14 @@ ngAfterViewInit() {
 Use `toggle` command to disable particular checkboxes.
 
 ```typescript
-ngAfterViewInit() {
-	const { model } = this.myGrid;
-
-	model.selection({
-		toggle: new Command({
-			canExecute: e => {
-            const target = e.items[0]; 
-				return target.gender === 'male';
-			}
-		})
-	});
-}
+gridModel.selection({
+   toggle: new Command({
+      canExecute: (e) => {
+         const target = e.items[0];
+         return target.gender === "male";
+      },
+   }),
+});
 ```
 
 ## What shortcuts does selection implement by default?
@@ -180,16 +171,12 @@ ngAfterViewInit() {
 Use `shortcut` property from selection model.
 
 ```typescript
-ngAfterViewInit() {
-	const { model } = this.myGrid;
-
-	model.selection({
-      shortcut: {
-         ...model.selection().shortcut,
-         toggleRow: 'space'
-      }
-	});
-}
+gridModel.selection({
+   shortcut: {
+      ...model.selection().shortcut,
+      toggleRow: "space",
+   },
+});
 ```
 
 ## How to handle click events?
