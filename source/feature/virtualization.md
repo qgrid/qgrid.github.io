@@ -60,7 +60,7 @@ export class MyComponent implements AfterViewInit {
       const { pipeUnit } = this.qgrid;
 
       this.gridModel.scroll({
-         mode: "virtual"
+         mode: 'virtual'
       });
 
       this.gridModel.data({
