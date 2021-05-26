@@ -16,12 +16,13 @@ There are situations when a user need to select rows or cells fortunately q-grid
       `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -70,11 +71,9 @@ Use q-grid model to get list of selected items.
    template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       this.gridModel.selectionChanged.on((e) => {

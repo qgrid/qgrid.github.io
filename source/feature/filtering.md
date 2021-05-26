@@ -20,12 +20,13 @@ Use `by` property to get or set filter settings.
       `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -69,12 +70,13 @@ To show filter controls under the column headers use `filterUnit` attribute, fil
    `
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -102,12 +104,13 @@ import { Grid, GridModel, FetchContext } from 'ng2-qgrid';
    `
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -145,14 +148,15 @@ Setup `match` predicate to execute custom filtration on loaded data.
       `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
    @Input() value: string;
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {

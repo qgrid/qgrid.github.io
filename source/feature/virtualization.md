@@ -18,12 +18,13 @@ Use pagination size to define number of rows that will be materialized.
    `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
-   rows$: Observable<[]>;
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -47,9 +48,12 @@ Override default pipeline with serve call on the top.
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
-   constructor(private qgrid: Grid, private dataService: MyDataService) {
-      this.gridModel = qgrid.model();
+   gridModel = this.qgrid.model();
+
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {

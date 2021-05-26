@@ -16,12 +16,13 @@ Use q-grid service to get control over focused cell, selected page will be autom
    `
 })
 export class MyComponent {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.qgrid.model();
+   gridModel = this.dataService.getRows();
 
-   constructor(private qgrid: Grid, dataService: MyDataService) {
-      this.gridModel = qgrid.model();
-      this.rows$ = dataService.getRows();
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {
@@ -59,15 +60,13 @@ Use focus method of q-grid service, it will automatically got to the necessary p
    `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
    constructor(
       private qgrid: Grid,
       private dataService: MyDataService
    ) {
-      this.gridModel = qgrid.model();
-      this.rows$ = dataService.getRows();
    }
 
    ngAfterViewInit() {
@@ -104,7 +103,7 @@ Use q-grid `focus` model to understand whether it's active or not.
 })
 export class MyComponent {
    rows$: Observable<[]>;
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
    loadCommand = new Command({
       execute: () => {
@@ -114,8 +113,10 @@ export class MyComponent {
       shortcut: 'ctrl+l',
    });
 
-   constructor(qgrid: Grid, private dataService: MyDataService) {
-      this.gridModel = qgrid.model();
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 }
 ```

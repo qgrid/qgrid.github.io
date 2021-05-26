@@ -16,12 +16,12 @@ Use q-grid service to get control over progress bar visibility.
    `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
    constructor(
       private qgrid: Grid,
-      private dataService: MyDataService) {
-         this.gridModel = qgrid.model();
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {

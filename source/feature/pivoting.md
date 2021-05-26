@@ -16,12 +16,13 @@ Pivot is a data summarization mode where users can break down raw data to highli
    `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) { 
    }
 
    ngAfterViewInit() {
@@ -54,12 +55,13 @@ Use ng-template inside column component with type `pivot`.
    `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {

@@ -75,12 +75,10 @@ Override `serialize` method to change request output.
    `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
    myServiceUrl = 'http://localhost:4000/exampleData'
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       this.gridModel.rest({

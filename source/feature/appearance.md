@@ -24,12 +24,13 @@ Use style callbacks for dynamic class assignments, for the cell style it is poss
    `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {

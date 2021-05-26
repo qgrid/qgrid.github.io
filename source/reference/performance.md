@@ -32,10 +32,12 @@ import { Grid, GridModel } from 'ng2-qgrid';
 })
 export class MyComponent {
    rows: [];
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(private qgrid: Grid, dataService: MyDataService) {
-      this.gridModel = qgrid.model();
+   constructor(
+      private qgrid: Grid, 
+      dataService: MyDataService
+   ) {
       dataService.getRows().subscribe((rows) => (this.rows = rows));
    }
 

@@ -16,12 +16,13 @@ Use q-grid model to group rows by particular columns or implement own hierarchie
       `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -61,12 +62,13 @@ Use `group-summary` column type to setup template for summary rows.
       `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -122,11 +124,9 @@ import { Grid, GridModel, Node, Command } from 'ng2-qgrid';
 `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.grid.model();
 
-   constructor(private qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       const { qgrid } = this;

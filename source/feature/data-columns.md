@@ -16,11 +16,9 @@ Use column auto generation modes for a quick start, try `shallow`, `deep` or `co
       `
 })
 export class MyComponent {
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
-   }
+   constructor(private dataService: MyDataService) {}
 }
 ```
 

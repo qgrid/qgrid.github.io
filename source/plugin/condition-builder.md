@@ -92,11 +92,9 @@ import { GridComponent, FetchContext } from 'ng2-qgrid';
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       this.gridModel.filter({

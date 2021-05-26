@@ -16,12 +16,13 @@ Use q-grid sorting model to sort single and multiple data-bound columns.
    `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -44,11 +45,9 @@ By default sorting order depends on column order, to apply sequent order `trigge
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       this.gridModel.sort({

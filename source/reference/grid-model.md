@@ -14,11 +14,9 @@ import { Grid, GridModel } from 'ng2-qgrid';
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       const firstRow = this.gridModel.data().rows[0];
@@ -46,11 +44,9 @@ All separate states in the model have `<name-of-state>Changed` property to handl
    template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(qgrid: Grid) {
-      this.gridModel = qgrid.model();
-   }
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
       this.gridModel.selectionChanged.on(e => console.log('selection changed')));

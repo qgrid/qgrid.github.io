@@ -56,10 +56,12 @@ Use `persistence` model to override default behavior.
    `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(qgrid: Grid, private dataService: MyDataService) {
-      this.gridModel = qgrid.model();
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {

@@ -22,12 +22,13 @@ There are situations when additional information need to be showing by expanding
    `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
-   rows$: Observable<[]>;
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -96,13 +97,14 @@ Use let-`$cell` to pass data to the function that will return details rows.
    `
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
-   rows$: Observable<[]>;
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
    cache = new Map<string, Observable<Atom[]>>();
 
-   constructor(private dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {

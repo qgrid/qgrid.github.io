@@ -16,12 +16,13 @@ There are situations when the end user need to edit data, in this case just setu
    `
 })
 export class MyComponent implements AfterViewInit {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -100,8 +101,8 @@ Use data model and focus service.
    `
 })
 export class MyComponent {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
    addRow = new Command({
       execute: () => {
@@ -114,9 +115,10 @@ export class MyComponent {
       },
    });
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 }
 ```
@@ -146,8 +148,8 @@ Use data model.
    `,
 })
 export class MyComponent {
-   rows$: Observable<[]>;
-   gridModel: GridModel;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
    deleteRow = new Command({
       execute: (row: Human) => {
@@ -156,9 +158,10 @@ export class MyComponent {
       }
    });
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.rows$ = dataService.getRows();
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 }
 ```

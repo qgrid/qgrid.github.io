@@ -16,11 +16,9 @@ Any array of objects can be directly bind to the q-grid, if `observable` is used
    `
 })
 export class MyComponent {
-   rows$: Observable<any[]>;
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
-   }
+   constructor(private dataService: MyDataService) {}
 }
 ```
 
@@ -38,12 +36,13 @@ The preferred way to obtain q-grid model is to use `GridModel` and assign it in 
    template: '<q-grid [rows]="rows$ | async" [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
-   rows$: Observable<any[]>;
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService, qgrid: Grid) {
-      this.gridModel = qgrid.model();
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
@@ -65,10 +64,12 @@ Use `row` state in the q-grid model to control which rows to pin.
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   gridModel: GridModel;
+   gridModel = this.qgrid.model();
 
-   constructor(private dataService: DataService, qgrid: Grid) {
-      this.gridModel = qgrid.model();
+   constructor(
+      private dataService: DataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
