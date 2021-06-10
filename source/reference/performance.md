@@ -5,7 +5,7 @@ group: Reference
 order: 7
 ---
 
-The q-grid introduces 3 modes that allows to change performance strategy. 
+The q-grid introduces 3 modes that allows to change performance strategy.
 
 ```html
 <q-grid interactionMode="detached"></q-grid>
@@ -24,41 +24,37 @@ The q-grid introduces 3 modes that allows to change performance strategy.
 When interaction mode is equal to readonly or detached use `invalidate` method to refresh cell values or create a `new reference` of the data rows.
 
 ```typescript
-import { Grid, GridComponent } from 'ng2-qgrid';
+import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: `
-        <q-grid [rows]="rows" 
-                interactionMode="readonly">
-        </q-grid>
-        `
+   template: ` <q-grid [rows]="rows" interactionMode="readonly"> </q-grid> `,
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
    rows: [];
+   gridModel = this.qgrid.model();
 
-   constructor(private qgrid: Grid, dataService: MyDataService) {
-        dataService
-            .getRows()
-            .subscribe(rows => this.rows = rows);
+   constructor(
+      private qgrid: Grid, 
+      dataService: MyDataService
+   ) {
+      dataService.getRows().subscribe((rows) => (this.rows = rows));
    }
 
    updateCellUsingInvalidate() {
-        this.rows[0].gender = 'female';
-    
-        const service = this.qgrid.service(this.myGrid.model);
-        service.invalidate();
+      this.rows[0].gender = 'female';
+
+      const service = this.qgrid.service(this.gridModel);
+      service.invalidate();
    }
 
    updateCellUsingNewRowsRef() {
-        const rows = Array.from(this.rows);
-        rows[0].gender = 'female';
+      const rows = Array.from(this.rows);
+      rows[0].gender = 'female';
 
-        this.myGrid.model.data({ rows });
+      this.gridModel.data({ rows });
    }
 }
-
 ```
 
 ## Virtualization

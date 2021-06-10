@@ -55,14 +55,17 @@ Use `persistence` model to override default behavior.
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
 
-   constructor(private dataService: MyDataService) {
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {
-     this.myGrid.model.persistence({
+     this.gridModel.persistence({
        storage: this.buildStorage()
      });
    }
@@ -70,7 +73,7 @@ export class MyComponent {
    buildStorage() {
       return {
          getItem: id =>
-            new Promise(resolve => {
+            new Promise<any>(resolve => {
                this.dataService
                   .getState(id)
                   .subscribe(resolve);
@@ -83,5 +86,4 @@ export class MyComponent {
             })
       };
    }
-}
 ```

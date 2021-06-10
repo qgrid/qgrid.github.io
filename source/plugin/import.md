@@ -42,11 +42,9 @@ Add angular component inside of q-grid component, after that import should appea
    `
 })
 export class MyComponent {
-  rows$: Observable<any[]>;
+  rows$ = this.dataService.getRows();
 
-  constructor(dataService: MyDataService) {
-    this.rows$ = dataService.getRows();
-  }
+  constructor(private dataService: MyDataService) {}
 }
 ```
 
@@ -76,16 +74,19 @@ import * as xlsx from 'xlsx';
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
-         imports: { xlsx }
+      this.qgrid.model().plugin({
+         imports: {
+            'xlsx': xlsx
+         },
       });
    }
 }

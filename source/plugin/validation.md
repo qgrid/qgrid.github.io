@@ -34,7 +34,7 @@ Add angular component inside of q-grid component.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
          </q-grid-columns>
 
@@ -44,7 +44,7 @@ Add angular component inside of q-grid component.
                          required>
             </q-grid-rule>
             <q-grid-rule for="cell" 
-                         key="name"                          
+                         key="name"
                          [lengthBetween]="[3, 40]"
                          required >
             </q-grid-rule>
@@ -52,16 +52,18 @@ Add angular component inside of q-grid component.
     </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.edit({
+      this.gridModel.edit({
          mode: 'cell'
       });
    }
