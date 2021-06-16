@@ -160,7 +160,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.filter({
-         match: () => (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
+         customFilter: (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
       });
    }
 }
