@@ -19,13 +19,16 @@ Use style callbacks for dynamic class assignments, for the cell style it is poss
    template: `
       <q-grid [rows]="rows$ | async"
               [model]="gridModel">
-         <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
    rows$ = this.dataService.getRows();
-   gridModel = this.qgrid.model();
+   gridModel = this.qgrid
+      .model()
+      .columnList({
+         generation: 'deep'
+      });
 
    constructor(
       private dataService: MyDataService,
