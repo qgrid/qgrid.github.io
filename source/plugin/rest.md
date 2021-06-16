@@ -8,24 +8,6 @@ Use REST plugin to connect q-grid with back-end directly.
 
 ## Installation
 
-<!-- Add rest module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { RestModule } from 'ng2-qgrid/plugin/rest';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      RestModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component, after that q-grid will start using sorting, filtering and pagination from the rest service.
 
 ```typescript

@@ -77,6 +77,10 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
   
 > If you use q-grid in electron box, these shortcuts could be overwritten.
 
+## Prevent default keyboard actions
+
+q-grid prevents some default browser shortcuts actions when it's focused, like `home` and `end` key presses. Use `prevent` property from the `model.navigation()` state to manage it. 
+
 ## Suggested Links
 
 * [Chromium issues](https://bugs.chromium.org/p/chromium/issues/detail?id=33056) 

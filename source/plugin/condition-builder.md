@@ -10,25 +10,6 @@ Use query builder plugin to add unlimited possibilities to filter data using con
 
 ## Installation
 
-<!--
-Add condition builder module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ConditionBuilderModule } from 'ng2-qgrid/plugin/condition-builder';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ConditionBuilderModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component, after that extended filter icon should appear in the top toolbar.
 
 ```typescript

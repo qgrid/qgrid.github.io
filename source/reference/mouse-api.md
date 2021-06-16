@@ -4,7 +4,7 @@ group: Reference
 order: 10
 ---
 
-Use mouse API to handle user clicks in q-grid.
+Use mouse API to handle user clicks and other mouse events inside the q-grid component.
 
 ```typescript
 @Component({

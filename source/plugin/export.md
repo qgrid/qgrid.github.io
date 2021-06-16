@@ -16,24 +16,6 @@ Install `FileSaver.js` package.
 npm install file-saver
 ```
 
-<!-- Add export module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ExportModule } from 'ng2-qgrid/plugin/export';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ExportModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component, after export action should appear, format `type` is required property. Add `file saver` library to the q-grid plugin model.
 
 ```typescript

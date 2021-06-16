@@ -136,14 +136,13 @@ Each column has `canFilter` property that could be used as indicator if filter i
 
 ## How to filter q-grid externally?
 
-Setup `match` predicate to execute custom filtration on loaded data.
+Setup `custom` predicate to execute custom filtration. If filtering is required after the user input, just setup another instance of `custom` function.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async" [model]="gridModel">
-         <q-grid-columns generation="deep"></q-grid-columns>
+      <q-grid [rows]="rows$ | async">
       </q-grid>
       `
 })
@@ -161,7 +160,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.filter({
-         match: () => (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
+         custom: (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
       });
    }
 }
