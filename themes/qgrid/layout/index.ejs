@@ -1,65 +1,149 @@
-<div class="get-started">
-    <div class="qgrid-logo"></div>
-    <h2>Fast and flexible data table solution.</h2>
-    <h1>Select version for your ecosystem.</h1>
-    <ul class="frameworks">
-        <li class="ready">
-            <a href="https://qgrid.github.io/ng" target="_blank">
-                <span class="angular-js"></span>
-                <label>AngularJS</label>
-            </a>
-        </li>
-        <li class="ready">
-            <a href="<%- url_for('guide/highlights.html') %>">
-                <span class="angular"></span>
-                <label>Angular 2+</label>
-            </a>
-        </li>
-        <li>
-            <span class="react"></span>
-            <label>In Development</label>
-        </li>
-        <li>
-            <span class="vue"></span>
-            <label>In Development</label>
-        </li>
-    </ul>
-</div>
-<div class="example">
-    <%- docEditor(["github/qgrid/ng2-example/tree/live-data-basic/latest"]) -%>
-</div>
-<ul class="features">
-    <li>
-        <div class="image-css"></div>
-        <div class="description">
-            <strong>Considered Styles</strong>
-            <p>User should be able to make any css customization in easy format</p>
-        </div>
-    </li>
-    <li>
-        <div class="image-custom"></div>
-        <div class="description">
-            <strong>Fully Customizable</strong>
-            <p>Header, cells, rows, footer, pagination, etc. should be templatable</p>
-        </div>
-    </li>
-    <li>
-        <div class="image-js"></div>
-        <div class="description">
-            <strong>Clear Javascript</strong>
-            <p>No html templates in javascript</p>
-        </div>
-    </li>
-    <li>
-        <div class="image-virtualize"></div>
-        <div class="description">
-            <strong>Perfomance</strong>
-            <p>Virtualization and interaction strategies for the speed</p>
-        </div>
-    </li>
-</ul>
-<div class="go-to">
-    <a href="<%- url_for('guide/install.html') %>">How to Install?</a>
-    <a href="<%- url_for('feature/data-columns.html') %>">Features and API</a>
-    <a href="<%- url_for('http://qgrid.github.io/ng2') %>" target="_blank">Examples</a>
-</div>
+<section class="header">
+	<nav class="nav container">
+		<a class="qgrid-logo"></a>
+		<ul class="frameworks">
+			<li class="ready">
+				<a href="<%- url_for('guide/highlights.html') %>" target="_blank">Documentation</a>
+			</li>
+			<li class="ready">
+				<a href="<%- url_for('guide/highlights.html') %>">Examples</a>
+			</li>
+			<li class="ready">
+				<a href="<%- url_for('https://github.com/qgrid/qgrid.github.io.git') %>">GitHub</a>
+			</li>
+		</ul>
+		<a class="button" href="#">Become maintainer</a>
+	</nav>
+	<h1><span class="highlight">Fast and flexible</span> data table solution</h1>
+</section>
+
+<section class="example container">
+	<%- docEditor(["github/qgrid/ng2-example/tree/live-data-basic/latest"]) -%>
+</section>
+
+<section class="products container">
+	<h2>Begin your QGrid journey</h2>
+	<div class="container-flex">
+		<a href="#" class="flex-item docs">
+			<span>Documentation</span>
+			<p>Сomplete guide to working with the library</p>
+		</a>
+		<a href="#" class="flex-item examp">
+			<span>Examples</span>
+			<p>How QGrid table solution works</p>
+		</a>
+		<a href="#" class="flex-item github">
+			<span>GitHub</span>
+			<p>Source codes for QGrid table solution</p>
+		</a>
+	</div>
+</section>
+
+<section class="features container">
+	<h2>Why QGrid?</h2>
+	<ul class="container-flex">
+		<li class="flex-item flexible">
+			<span>Fast and flexible solution</span>
+			<p>Posibility to make any css
+				customizationin easy format</p>
+		</li>
+		<li class="flex-item customizable">
+			<span>Fully Customizable</span>
+			<p>Header, cells, rows, footer,
+				pagination are templatable</p>
+		</li>
+		<li href="#" class="flex-item typescript">
+			<span>Clear Typescript</span>
+			<p>No html templates in javascript</p>
+		</li>
+		<li class="flex-item perform">
+			<span>Perfomance</span>
+			<p>Virtualization and interaction
+				strategies for the speed</p>
+		</li>
+	</ul>
+</section>
+
+<section class="news container">
+	<h2>What's new with QGrid?</h2>
+	<div class="container-flex">
+		<article class="news-block">
+			<a href="#">
+				<div class="news-block__img">
+					<img src="../assets/images/qgrid_news1.png" alt="">
+				</div>
+				<time class="news-block-text__date" datetime="2020-12-12">Dec 12, 2020</time>
+				<h3>We’ve created a news section!</h3>
+			</a>
+			<div class="news-block-text">
+				<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
+					elit, sed do eiusmod tempor
+					incididunt ut labore consectetur adipiscing elit, sed do.....</p>
+			</div>
+		</article>
+		<article class="news-block">
+			<a href="#">
+				<div class="news-block__img">
+					<img src="../assets/images/qgrid_news2.png" alt="">
+				</div>
+				<time class="news-block-text__date" datetime="2020-12-12">Dec 12, 2020</time>
+				<h3>UX designers are cute. Real research!</h3>
+			</a>
+			<div class="news-block-text">
+				<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
+					elit, sed do eiusmod tempor
+					incididunt ut labore consectetur adipiscing elit, sed do.....</p>
+			</div>
+		</article>
+		<article class="news-block">
+			<a href="#">
+				<div class="news-block__img">
+					<img src="../assets/images/qgrid_news3.png" alt="">
+				</div>
+				<time class="news-block-text__date" datetime="2020-12-12">Dec 12, 2020</time>
+				<h3>Amazing updates in GQ! What was changed?</h3>
+			</a>
+			<div class="news-block-text">
+				<p class="news-block-text__descr">What a wonderful lorem ipsum dolor sit amet, consectetur adipiscing
+					elit, sed do eiusmod tempor
+					incididunt ut labore consectetur adipiscing elit, sed do.....</p>
+			</div>
+		</article>
+	</div>
+	<span class="news-all">
+		<a href="#">View all news</a>
+	</span>
+</section>
+
+<section class="pricing container">
+	<h2>Choose your price</h2>
+	<div class="container-flex">
+		<div class="pricing-secondary flex-item">
+			<div>
+				<span class="pricing__rate">Free</span>
+				<h4><sup>$</sup><span>0</span><sub>/mo</sub></h4>
+				<p class="pricing__text">We are part of open source community, so you can join us via Git Hub for free
+				</p>
+			</div>
+			<a href="<%- url_for('#') %>" class="button-secondary">Get start with GitHub</a>
+		</div>
+		<div class="pricing-primary flex-item">
+			<div>
+				<span class="pricing__rate">Support</span>
+				<h4><sup>$</sup><span>9</span><sub>/mo</sub></h4>
+				<p class="pricing__text">You can maintain our project and team. Help us to grow and improve our
+					product</p>
+			</div>
+			<a href="<%- url_for('#') %>" class="button">Become a maintainer</a>
+		</div>
+		<div class="pricing-primary flex-item">
+			<div>
+				<span class="pricing__rate">Extended support</span>
+				<h4><sup>$</sup><span>39</span><sub>/mo</sub></h4>
+				<p class="pricing__text">You can influence the project, propose changes and we take your wishes into new
+					solutions</p>
+			</div>
+			<a href="<%- url_for('#') %>" class="button">Become a maintainer</a>
+		</div>
+	</div>
+</section>

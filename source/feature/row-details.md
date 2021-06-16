@@ -4,37 +4,37 @@ group: Features
 order: 9
 ---
 
-There are situations when additional information need to be showing by expanding row row details can help to handle this.
+There are situations when additional information need to be showing by expanding row, row details can help to handle this.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
 
          <q-grid-row>
             <ng-template for="details" let-$cell>
-               {{$cell.row.item.number}}
+               {{ $cell.row.item.number }}
             </ng-template>
          </q-grid-row>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.row({
-          unit: 'details',
-          mode: 'multiple'
+      this.gridModel.row({
+         unit: 'details',
+         mode: 'multiple',
       });
    }
 }
@@ -49,15 +49,16 @@ export class MyComponent {
 Update `status` property in row model.
 
 ```typescript
-ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   const { rows } = model.data();
-   const expand = true;
-   model.row({
-      status: new Map(rows.map<[any, RowDetailsStatus]>(x => [x, new RowDetailsStatus(expand)]))
-   });
-}
+const { rows } = gridModel.data();
+const expand = true;
+gridModel.row({
+   status: new Map(
+      rows.map<[any, RowDetailsStatus]>((x) => [
+         x,
+         new RowDetailsStatus(expand),
+      ])
+   ),
+});
 ```
 
 ## How to disable/hide expand button?
@@ -65,15 +66,11 @@ ngAfterViewInit() {
 Use `toggle` command from row model.
 
 ```typescript
-ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.row({
-      toggle: new Command({
-         canExecute: ({ row }) => false
-      })
-   });
-}
+gridModel.row({
+   toggle: new Command({
+      canExecute: ({ row }) => false,
+   }),
+});
 ```
 
 ## How to show nested q-grid in details template?
@@ -84,7 +81,7 @@ Use let-`$cell` to pass data to the function that will return details rows.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
          </q-grid-columns>
 
@@ -99,30 +96,30 @@ Use let-`$cell` to pass data to the function that will return details rows.
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
    cache = new Map<string, Observable<Atom[]>>();
 
-   constructor(private dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.row({
+      this.gridModel.row({
           unit: 'details',
           mode: 'single'
-      });      
+      });
    }
 
    getDetailsRows(atom: Atom) {
       let rows$ = this.cache.get(atom.phase);
       if (!rows$) {
          const byPhase = row => row.phase === atom.phase;
-         
-         rows$ = 
+
+         rows$ =
             dataService
                .getRows()
                .pipe(
@@ -146,8 +143,8 @@ Use `[isVisible]` attribute of `row-expand` column type.
 ```typescript
 <q-grid [rows]="rows$ | async">
    <q-grid-columns>
-	   <q-grid-column type="row-expand"
-			   		   [isVisible]="false">
+      <q-grid-column type="row-expand"
+                     [isVisible]="false">
       </q-grid-column>
    </q-grid-columns>
 </q-grid>

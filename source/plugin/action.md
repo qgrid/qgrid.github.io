@@ -54,30 +54,28 @@ import { Command } from 'ng2-qgrid';
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
    rows$: Observable<any[]>;
    canLoad = true;
 
-   constructor(private dataService: MyDataService) {
-   }
+   constructor(private dataService: MyDataService) {}
 
    loadCommand = new Command({
-        execute: () => {
-            this.rows = this.dataService.getAtoms();
-            this.canLoad = false;
-        },
-        canExecute: () => this.canLoad,
-        shortcut: 'ctrl+l'
-    });
+      execute: () => {
+         this.rows$ = this.dataService.getAtoms();
+         this.canLoad = false;
+      },
+      canExecute: () => this.canLoad,
+      shortcut: 'ctrl+l'
+   });
 
-    clearCommand = new Command({
-        execute: () => {
-            this.rows = of([]);
-            this.canLoad = true;
-        },
-        canExecute: () => !this.canLoad,
-        shortcut: 'ctrl+d'
-    });
+   clearCommand = new Command({
+      execute: () => {
+         this.rows$ = of([]);
+         this.canLoad = true;
+      },
+      canExecute: () => !this.canLoad,
+      shortcut: 'ctrl+d'
+   });
 }
 ```
 

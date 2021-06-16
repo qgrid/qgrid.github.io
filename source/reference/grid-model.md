@@ -11,16 +11,17 @@ import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+   gridModel = this.qgrid.model();
+
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      const firstRow = model.data().rows[0];
+      const firstRow = this.gridModel.data().rows[0];
 
-      model.selection({ 
+      this.gridModel.selection({
          unit: 'row',
          items: [firstRow]
       });
@@ -40,39 +41,17 @@ All separate states in the model have `<name-of-state>Changed` property to handl
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+   gridModel = this.qgrid.model();
+
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      model.selectionChanged.on(e => console.log('selection changed')));
+      this.gridModel.selectionChanged.on(e => console.log('selection changed')));
    }
 }
 ```
 
 > q-grid uses own event system that not guarantee that event is triggered in angular zone, so there can be situations that change detection should be triggered manually inside a subscription.
-
-## How to create q-grid model in the code?
-
-There could be situations when q-grid model should be created in the code, to get this `Grid` service should be used. Use `[model]` input to bind new instance of thw model to the q-grid component.
-
-```typescript
-import { Grid, GridModel } from 'ng2-qgrid';
-
-@Component({
-   selector: 'my-component',
-   template: '<q-grid [model]="gridModel"></q-grid>'
-})
-export class MyComponent {
-   gridModel: GridModel;
-
-   constructor(qgrid: Grid, dataService: MyDataService) {
-      this.gridModel = qgrid.model();
-      dataService
-         .getRows()
-         .subscribe(rows => this.gridModel.data({ rows }));
-   }
-}
-```

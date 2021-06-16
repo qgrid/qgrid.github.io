@@ -4,21 +4,19 @@ group: Reference
 order: 0
 ---
 
-The most of work could be configured in the HTML templates under the `q-grid` component. Sometimes it's required to have direct access to the q-grid model, in this case `GridComponent` could be used. Be aware that grid component instance will be available only after view init.
+The most of work could be configured in the HTML templates under the `q-grid` component. Sometimes it's required to have direct access to the q-grid model, in this case `GridModel` could be used.
 
 ```typescript
 import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: '<q-grid"></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
-export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class MyComponent {
+   gridModel = this.qgrid.model();
 
-   ngAfterViewInit() {
-      const { model } = this.myGrid;
-   }
+   constructor(private qgrid: Grid) {}
 }
 ```
 

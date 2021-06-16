@@ -46,18 +46,18 @@ By supporting q-grid expression contract building any custom filters with comple
    group[op]: 'and' | 'or'
    condition[left]: columnKey
    condition[right]: string | number | array | bool | date | null
-   condition[op]: 
-      'isNotNull' 
-      | 'isNull' 
-      | 'equals' 
-      | 'notEquals' 
-      | 'greaterThanOrEquals' 
-      | 'greaterThan' 
-      | 'lessThanOrEquals' 
-      | 'lessThan' 
-      | 'between' 
-      | 'in' 
-      | 'like' 
+   condition[op]:
+      'isNotNull'
+      | 'isNull'
+      | 'equals'
+      | 'notEquals'
+      | 'greaterThanOrEquals'
+      | 'greaterThan'
+      | 'lessThanOrEquals'
+      | 'lessThan'
+      | 'between'
+      | 'in'
+      | 'like'
       | 'notLike'
 }
 ```
@@ -70,15 +70,15 @@ Use filter model `$expression` property in `by` section, the same position shoul
 import { GridComponent, FetchContext } from 'ng2-qgrid';
 
 @Component({
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
-export class ExampleFilterRowCustomComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class ExampleFilterRowCustomComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
+
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      value = value.toLocaleLowerCase();
-      model.filter({
+      this.gridModel.filter({
          by: {
             $expression: {
                kind: 'group',
@@ -90,7 +90,7 @@ export class ExampleFilterRowCustomComponent {
                      kind: 'condition',
                      op: 'between',
                      left: 'Age',
-                        right: [25, 30]
+                     right: [25, 30],
                   },
                   right: {
                      kind: 'condition',
@@ -115,6 +115,7 @@ export class ExampleFilterRowCustomComponent {
                      right: null
                   }
                }
+            }
          }
       });
    }

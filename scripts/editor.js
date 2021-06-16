@@ -26,18 +26,6 @@ const helper = args => {
         </iframe>
       </span>
       <div class="source-links">
-        <a class="source-github" 
-           target="_blank" 
-           title="github" 
-           href="https://github.com/${ghPath}/src/app">
-          <span>GitHub</span>
-        </a>
-        <a class="source-stackblitz" 
-           target="_blank" 
-           title="StackBlitz" 
-           href="https://stackblitz.com/${sbPath}">
-          <span>StackBlitz</span>
-        </a>
       </div>
     </div>
 `;
