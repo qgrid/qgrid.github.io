@@ -49,10 +49,6 @@ section.header {
     right: 20px;
 }
 
-.qgrid-examples {
-    position: absolute;
-}
-
 .nav-trigger {
     font-size: 18px;
     display: none;
@@ -92,6 +88,10 @@ section.header {
     color: $color-white;
     padding: 9px 28px;
     width: 360px;
+
+    &::-ms-clear {
+        display: none;
+    }
 
     &::placeholder {
         @include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
