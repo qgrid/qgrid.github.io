@@ -46,3 +46,29 @@ ul {
 a {
     text-decoration: none;
 }
+
+.button {
+	@include fontStylingSet(18px, 24px, 400, $color-top-text);
+	@include btnStylingSet($color-accent, $color-transparent, $color-top-text);
+	vertical-align: middle;
+	padding: 8px 18px;
+	border-radius: 4px;
+	text-decoration: none;
+
+	&_big {
+		padding: 20px 18px 20px 18px;
+	}
+
+	&:hover {
+		@include btnStylingSet($color-white, $accent-color, darken($color-top-background, 5%));
+	}
+}
+
+.button-secondary {
+	@extend .button;
+	@include btnStylingSet($color-white, $accent-color, $color-top-background);
+
+	&:hover {
+		@include btnStylingSet($accent-color, $accent-color, $color-white);
+	}
+}
