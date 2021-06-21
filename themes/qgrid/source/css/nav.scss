@@ -14,8 +14,19 @@
 		overflow-x: hidden;
 		padding-top: 28px;
 
+		.hide-list {
+			ul {
+				display: none;
+			}
+
+			h3::after {
+				transform: rotate(180deg);
+			}
+		}
+
 		h3 {
 			@include fontStylingSet(18px, 18px, bold, $color-white);
+			cursor: pointer;
 			margin: 0;
 			display: flex;
 			align-items: center;
@@ -28,12 +39,15 @@
 				@include iconStylingSet(11px, 6px, "../assets/images/dropdown-arrow.svg");
 				display: inline-block;
 				background-repeat: no-repeat;
+				transform: rotate(0);
 			}
 		}
 
 		ul {
 			margin: 0;
 			padding: 0;
+			padding-bottom: 16px;
+
 			li {
 				color: grey;
 				white-space: nowrap;
