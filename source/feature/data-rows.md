@@ -12,7 +12,6 @@ order: 0
 
 - [How to enable row resizing and drag & drop?](#how-to-enable-row-resizing-and-drag-&-drop)
 
-
 Any array of objects can be directly bind to the q-grid, if `observable` is used just add `async` pipe.
 
 ```typescript

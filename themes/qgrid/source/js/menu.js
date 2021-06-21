@@ -216,7 +216,7 @@ function highlightText(item, search) {
 		item.parentElement.classList.remove('hide');
 
 		return true;
-	} 
+	}
 
 	item.innerHTML = textContent;
 	for (let a of aTags) {
