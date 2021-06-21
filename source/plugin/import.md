@@ -8,24 +8,6 @@ Use q-grid import plugin to fill in rows with data from files on client side.
 
 ## Installation
 
-<!-- Add import module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ImportModule } from 'ng2-qgrid/plugin/import';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ImportModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component, after that import should appear.
 
 ```typescript
@@ -42,11 +24,9 @@ Add angular component inside of q-grid component, after that import should appea
    `
 })
 export class MyComponent {
-  rows$: Observable<any[]>;
+  rows$ = this.dataService.getRows();
 
-  constructor(dataService: MyDataService) {
-    this.rows$ = dataService.getRows();
-  }
+  constructor(private dataService: MyDataService) {}
 }
 ```
 
@@ -76,16 +56,19 @@ import * as xlsx from 'xlsx';
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
-         imports: { xlsx }
+      this.qgrid.model().plugin({
+         imports: {
+            'xlsx': xlsx
+         },
       });
    }
 }

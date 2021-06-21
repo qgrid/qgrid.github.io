@@ -10,23 +10,23 @@ Pivot is a data summarization mode where users can break down raw data to highli
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) { 
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.pivot({ 
+      this.gridModel.pivot({
          by: ['bondingType', 'groupBlock']
       });
    }
@@ -43,7 +43,7 @@ Use ng-template inside column component with type `pivot`.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
             <q-grid-column type="pivot">
                <ng-template for="body" let-$cell>
@@ -55,17 +55,17 @@ Use ng-template inside column component with type `pivot`.
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.pivot({ 
+      this.gridModel.pivot({
          by: ['bondingType', 'groupBlock']
       });
    }

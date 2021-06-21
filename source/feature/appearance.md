@@ -17,23 +17,27 @@ Use style callbacks for dynamic class assignments, for the cell style it is poss
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep"></q-grid-columns>
+      <q-grid [rows]="rows$ | async"
+              [model]="gridModel">
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid
+      .model()
+      .columnList({
+         generation: 'deep'
+      });
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.style({
+      this.gridModel.style({
          cell: {
             'myColumnKey': (row, column, context) => {
                context.class(`td-${row.name}`, {
