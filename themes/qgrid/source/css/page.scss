@@ -16,15 +16,20 @@ main {
     flex: 1;
 }
 
-header {
-    display: none;
+section.header {
+    display: block;
     position: fixed;
     z-index: 1;
     color: $color-top-text;
     background: $color-top-background;
-    height: $header-height;
     width: 100vw;
     font-family: $font-serif;
+    margin-bottom: 0;
+
+    &.header-index {
+        height: $header-height;
+        margin-bottom: 120px;
+    }
 }
 
 .logo {
@@ -32,19 +37,16 @@ header {
     margin: 80px 0 35px 80px;
 }
 
+.pages .frameworks {
+    margin-left: 40px;
+    margin-right: 24px;
+}
+
 .github {
     font-size: 25px;
     position: absolute;
     top: 21px;
     right: 20px;
-}
-
-.qgrid-examples {
-    position: absolute;
-}
-
-%placeholder {
-    color: $whitescale-75;
 }
 
 .nav-trigger {
@@ -59,30 +61,46 @@ header {
     cursor: pointer;
 }
 
+.qgrid-search {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: auto;
+
+    &::before {
+        @include iconStylingSet(12px, 12px, "../assets/images/search.svg");
+        content: '';
+        display: block;
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 .search {
     display: block;
-    background-color: #444;
-
-    border: {
-        style: solid;
-        color: $whitescale-75;
-        width: 0 0 1px 0;
-    }
-
+    background-color: $color-gray-search;
+    border: 0;
     text-decoration: none;
     outline: none;
-    color: white;
-    margin: 20px auto 25px 17px;
-    padding: 15px;
-    width: 280px;
+    color: $color-white;
+    padding: 9px 28px;
+    width: 360px;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration { display: none; }
 
     &::placeholder {
-        @extend %placeholder;
+        @include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
     }
 }
 
 .page-wrapper {
-    margin: 0 30px 40px 30px;
+    margin: 72px 56px 40px 45px;
     max-width: 1000px;
     overflow: hidden;
 }

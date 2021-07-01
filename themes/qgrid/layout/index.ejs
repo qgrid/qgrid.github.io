@@ -1,21 +1,6 @@
-<section class="header">
-	<nav class="nav container">
-		<a class="qgrid-logo"></a>
-		<ul class="frameworks">
-			<li class="ready">
-				<a href="<%- url_for('guide/highlights.html') %>">Documentation</a>
-			</li>
-			<li class="ready">
-				<a href="<%- url_for('guide/highlights.html') %>">Examples</a>
-			</li>
-			<li class="ready">
-				<a href="<%- url_for('https://github.com/qgrid/qgrid.github.io.git') %>" target="_blank">GitHub</a>
-			</li>
-		</ul>
-		<a class="button" href="mailto:qgrid.team@gmail.com">Become a maintainer</a>
-	</nav>
-	<h1><span class="highlight">Fast and flexible</span> data table solution</h1>
-</section>
+<header>
+    <%- partial('partials/header') %>
+</header>
 
 <section class="example container">
 	<%- docEditor(["github/qgrid/ng2-example/tree/live-data-basic/latest"]) -%>

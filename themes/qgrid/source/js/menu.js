@@ -18,6 +18,27 @@ function toggleVisibility(e) {
 	}
 }
 
+function onTogglerClick(event) {
+	targetElement = event.target.parentElement;
+	if(targetElement.classList.contains('hide-list')) {
+		targetElement.classList.remove('hide-list')
+	} else {
+		targetElement.classList.add('hide-list')
+	}
+}
+
+function menuItemOpen(item) {
+	if (!item.parentElement.classList.contains('hide-list')) {
+		item.parentElement.classList.add('hide-list');
+	}
+}
+
+function menuItemHide(item) {
+	if (item.parentElement.classList.contains('hide-list')) {
+		item.parentElement.classList.remove('hide-list');
+	}
+}
+
 function onSearchChange(e) {
 	e.stopImmediatePropagation();
 	const input = e.target || e.srcElement;
@@ -85,6 +106,7 @@ function menuItemsSearch(search) {
 			if (testSearch(tag, search)) {
 				appendTagText(menuItem, tag, search);
 				const menuTag = menuItem.querySelector('.tag');
+				menuItemHide(menuItem.parentElement);
 				const { textContent } = menuTag;
 				const words = splitToWords(search);
 				const firstMatch = words[indexOfSearch(textContent, words)];
@@ -140,6 +162,7 @@ function removeTagText(menuItem, search) {
 	}
 	else {
 		menuItem.classList.remove('hide');
+		menuItemOpen(menuItem.parentElement);
 	}
 
 	if (menuItem.querySelector('.tag')) {

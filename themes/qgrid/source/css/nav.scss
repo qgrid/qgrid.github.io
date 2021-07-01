@@ -1,20 +1,53 @@
 @import "variables";
 #nav {
 	color: $color-sidebar-text;
-	background-color: $color-sidebar-background;
+	background-color: $color-top-background;
 	position: fixed;
 	height: 100vh;
 	width: $nav-width;
+	margin-top: 70px;
 	font-family: $font-serif;
 	box-sizing: border-box;
-	border-top: 1px solid $color-sidebar-background; //transition: 0.5s;
 	nav {
-		height: calc(100% - 340px);
+		height: calc(100% - 98px);
 		overflow-y: auto;
 		overflow-x: hidden;
+		padding-top: 28px;
+
+		.hide-list {
+			ul {
+				display: none;
+			}
+
+			h3::after {
+				transform: rotate(180deg);
+			}
+		}
+
+		h3 {
+			@include fontStylingSet(18px, 18px, bold, $color-white);
+			cursor: pointer;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 24px;
+			margin-bottom: 16px;
+
+			&::after {
+				content: '';
+				@include iconStylingSet(11px, 6px, "../assets/images/dropdown-arrow.svg");
+				display: inline-block;
+				background-repeat: no-repeat;
+				transform: rotate(0);
+			}
+		}
+
 		ul {
 			margin: 0;
 			padding: 0;
+			padding-bottom: 16px;
+
 			li {
 				color: grey;
 				white-space: nowrap;
@@ -23,16 +56,13 @@
 				list-style: none;
 				font-size: 16px;
 				line-height: 2;
-				padding: 0 10px 0 20px;
+				padding: 0 10px 0 24px;
 				right: 10px;
 				&:first-child {
 					margin-top: 10px;
 				}
 				h3 {
-					color: white;
-					font-size: 18px;
-					font-weight: bold;
-					margin: 0;
+					padding-left: 0;
 				}
 				a,
 				span {
@@ -41,13 +71,18 @@
 					margin-left: 20px;
 					cursor: pointer; //transition: 0.3s;
 					&:hover {
-						color: white;
+						color: $color-white;
 					}
 				}
 				a {
 					display: inline;
 					margin-left: -20px;
 					padding-left: 40px;
+					padding-left: 40px;
+
+					&:hover {
+						color: $color-accent;
+					}
 				}
 				.tag {
 					display: inline;
@@ -78,5 +113,46 @@
 				}
 			}
 		}
+	}
+}
+
+.nav {
+	@include flexBetweenSet;
+	background-color: $color-top-background;
+	align-items: center;
+	padding: 11px 25px;
+	border-bottom: 2px solid $color-aside-border; //transition: 0.5s;
+
+	.qgrid-logo {
+		width: 66px;
+		height: 46px;
+		background-size: contain;
+	}
+
+	.frameworks {
+		@include flexBetweenSet;
+		align-content: center;
+		margin-right: auto;
+		margin-left: auto;
+
+		li {
+			&:not(:last-child ) {
+				margin-right: 40px;
+			}
+
+			& > a {
+				@include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
+				transition: $transition;
+
+				&:hover {
+					color: $color-white;
+				}
+			}
+		}
+	}
+
+	.button {
+		font-size: 1em;
+		padding: 6px 23px;
 	}
 }

@@ -1,68 +1,6 @@
 @import "layout";
 @import "editor";
-
-.nav {
-	@include flexBetweenSet;
-	background-color: $color-dark-bg;
-	align-items: center;
-	padding: 20px 0;
-
-	.qgrid-logo {
-		width: 46px;
-		height: 32px;
-		background-size: contain;
-	}
-
-	.frameworks {
-		@include flexBetweenSet;
-		align-content: center;
-
-		li {
-			&:not(:last-child ) {
-				margin-right: 40px;
-			}
-
-			& > a {
-				@include fontStylingSet(15px, 20px, 500, $color-white);
-
-				&:hover {
-					color: rgba($color-white, 0.8);
-				}
-			}
-		}
-	}
-
-	.button {
-		font-size: 1em;
-		padding: 6px 23px;
-	}
-}
-
-.button {
-	@include fontStylingSet(18px, 24px, 400, $color-top-text);
-	@include btnStylingSet($color-accent, $color-transparent, $color-top-text);
-	vertical-align: middle;
-	padding: 8px 18px;
-	border-radius: 4px;
-	text-decoration: none;
-
-	&_big {
-		padding: 20px 18px 20px 18px;
-	}
-
-	&:hover {
-		@include btnStylingSet($color-white, $accent-color, darken($color-top-background, 5%));
-	}
-}
-
-.button-secondary {
-	@extend .button;
-	@include btnStylingSet($color-white, $accent-color, $color-top-background);
-
-	&:hover {
-		@include btnStylingSet($accent-color, $accent-color, $color-white);
-	}
-}
+@import "nav";
 
 .index {
 	font-family: $font-serif;
@@ -121,7 +59,7 @@
 	}
 
 	.header {
-		background-color: $color-dark-bg;
+		background-color: $color-top-background;
 		text-align: center;
 		color: $color-white;
 		padding-bottom: calc((#{$editor-height} / 2) + 72px);    // 72px is margin for h1

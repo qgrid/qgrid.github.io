@@ -1,9 +1,24 @@
 <% var isIndex = page.path === 'index.html' %>
-<% if (!isIndex) { %>
-<button class="nav-trigger" id="nav-trigger"></button>
-<div class="logo-wrapper">
-    <a href="<%- url_for('/') %>" class="logo"></a>
-</div>
-<% } %>
-<a target="_blank" href="https://github.com/qgrid/ng2" class="github"></a>
-<a target="_blank" href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
+<section class="header">
+	<nav class="nav">
+		<a class="qgrid-logo"></a>
+		<% if (!isIndex) { %>
+			<span class="qgrid-search">
+				<input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
+			</span>
+		<% } %>
+		<a target="_blank" href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
+		<ul class="frameworks">
+			<li class="ready">
+				<a href="<%- url_for('guide/highlights.html') %>" target="_blank">Documentation</a>
+			</li>
+			<li class="ready">
+				<a target="_blank" href="https://qgrid.github.io/ng2" class="qgrid-examples">Examples</a>
+			</li>
+			<li class="ready">
+				<a href="<%- url_for('https://github.com/qgrid/qgrid.github.io.git') %>">GitHub</a>
+			</li>
+		</ul>
+		<a class="button" href="#">Become maintainer</a>
+	</nav>
+</section>

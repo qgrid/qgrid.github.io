@@ -1,22 +1,18 @@
 	@import "variables";
 .page-wrapper {
 	h1:first-child {
-		font-family: "Roboto Slab", serif;
-		font-weight: normal;
-		padding-bottom: 30px;
-		margin-top: 80px;
-		font-size: 80px;
+		font-family: $font-serif;
+		font-weight: 500;
+		margin: 54px 0 32px 0;
+		font-size: 48px;
+		line-height: 63px;
 	}
 	h2 {
 		font-family: $font-serif;
-		font-weight: normal;
-		font-size: 2.5em;
-		padding: 0.5em 0;
-		a:first-child::before{
-			content: "#";
-			padding-right: 10px;
-			color: #0078cf;
-		}
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 32px;
+		margin: 54px 0 25px 0;
 	}
 	h3 {
 		@extend h2;
@@ -34,7 +30,9 @@
 		font-weight: bold;
 	}
 	p {
-		font-size: 1em;
+		font-family: $font-sans;
+		font-size: 14px;
+		line-height: 18px;
 	}
 	table {
 		margin: 1em 0;
@@ -82,17 +80,22 @@
 	}
 	ul {
 		list-style: none;
+		margin-bottom: 60px;
 		> li {
 			position: relative;
 			line-height: 1.4em;
+			padding-left: 12px;
 			&:before {
 				content: "";
 				position: absolute;
-				top: 0.6em;
-				left: -13px;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
 				width: 8px;
-				height: 1px;
-				background-color: #353535;
+				height: 8px;
+				background-repeat: no-repeat;
+				background-image: url("../assets/images/list-arrow.svg");
+				background-size: contain;
 			}
 		}
 	}
