@@ -16,24 +16,6 @@ Install `FileSaver.js` package.
 npm install file-saver
 ```
 
-<!-- Add export module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ExportModule } from 'ng2-qgrid/plugin/export';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ExportModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component, after export action should appear, format `type` is required property. Add `file saver` library to the q-grid plugin model.
 
 ```typescript
@@ -42,25 +24,25 @@ import * as fileSaver from 'file-saver';
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"> </q-grid-columns>
 
-         <q-grid-export type="json">
-         </q-grid-export>
+         <q-grid-export type="json"> </q-grid-export>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.grid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
+      this.gridModel.plugin({
          imports: { fileSaver }
       });
    }
@@ -84,25 +66,25 @@ import * as xlsx from 'xlsx';
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"> </q-grid-columns>
 
-         <q-grid-export type="xlsx">
-         </q-grid-export>
+         <q-grid-export type="xlsx"> </q-grid-export>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
+      this.gridModel.plugin({
          imports: { fileSaver, xlsx }
       });
    }

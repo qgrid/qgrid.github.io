@@ -10,29 +10,29 @@ Use q-grid service to get control over progress bar visibility.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid>
-         <q-grid-columns generation="deep"></q-grid-columns>
+      <q-grid [model]="gridModel">
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid
+      .model()
+      .columnList({
+         generation: 'deep'
+      });
 
    constructor(
       private qgrid: Grid,
-      private dataService: MyDataService) {
-   }
-
-   ngAfterViewInit() {
-      const { model } = this.myGrid;
-      const service = this.qgrid.service(model);
-
+      dataService: MyDataService
+   ) {
+      const service = this.qgrid.service(this.gridModel);
       const cancelBusy = service.busy();
-      this.dataService
+
+      dataService
          .getAtoms()
          .subscribe(rows => {
             cancelBusy();
-            model.data({ rows });
+            this.gridModel.data({ rows });
          });
       }
    }

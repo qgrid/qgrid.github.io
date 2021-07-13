@@ -10,26 +10,23 @@ Use q-grid service to get control over focused cell, selected page will be autom
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.qgrid.model();
+   gridModel = this.dataService.getRows();
 
    constructor(
-      private qgrid: Grid,   
-      dataService: MyDataService
+      private qgrid: Grid,
+      private dataService: MyDataService
    ) {
-      this.rows$ = dataService.getRows();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      const service = this.qgrid.service(model);
-      
+      const service = this.qgrid.service(this.gridModel);
       service.focus(5, 2);
    }
 }
@@ -57,28 +54,28 @@ Use focus method of q-grid service, it will automatically got to the necessary p
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
    constructor(
-      private qgrid: Grid,   
+      private qgrid: Grid,
       private dataService: MyDataService
    ) {
-      this.rows$ = dataService.getRows();
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      const service = this.qgrid.service(model);
+      const service = this.qgrid.service(this.gridModel);
 
-      this.rows$.subscribe(rows => 
-         service.focus(rows.length - 1, 0);
+      this.rows$.subscribe(
+         {
+            next: (rows) => { service.focus(rows.length - 1, 0);
+         }
       );
    }
 }
@@ -92,24 +89,34 @@ Use q-grid `focus` model to understand whether it's active or not.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
+         <q-grid-actions>
+            <q-grid-action
+               icon="refresh"
+               title="Load Data"
+               [command]="loadCommand">
+            </q-grid-action>
+         </q-grid-actions>
       </q-grid>
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
    rows$: Observable<[]>;
+   gridModel = this.qgrid.model();
 
    loadCommand = new Command({
-        execute: () => {
-            this.rows$ = this.dataService.getAtoms();
-        },
-        canExecute: () => model.focus().isActive,
-        shortcut: 'ctrl+l'
-    });
+      execute: () => {
+         this.rows$ = this.dataService.getAtoms();
+      },
+      canExecute: () => this.gridModel.focus().isActive,
+      shortcut: 'ctrl+l',
+   });
 
-   constructor(private dataService: MyDataService) {
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 }
 ```

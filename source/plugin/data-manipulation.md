@@ -10,24 +10,6 @@ Use data manipulation plugin to extend the q-grid with additional edit options.
 
 ## Installation
 
-<!-- Add data manipulation module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { DataManipulationModule } from 'ng2-qgrid/plugin/data-manipulation';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ConditionBuilderModule
-   ]
-})
-export class DataManipulationModule {
-}
-``` -->
-
 Add angular component inside of q-grid component. If `row indicator` column exists it will be used to show row status, `row options` column is an entry point to delete rows.
 
 ```typescript

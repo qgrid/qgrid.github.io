@@ -10,24 +10,6 @@ Use pager plugin to add possibilities to setup initial pagination option in comp
 
 ## Installation
 
-<!-- Add pager module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { PagerModule } from 'ng2-qgrid/plugin/pager';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      PagerModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid to change pagination settings through it.
 
 ```typescript

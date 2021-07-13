@@ -10,24 +10,6 @@ To show custom panels inside q-grid use `q-grid-pane` plugin.
 
 ## Installation
 
-<!-- Add pane module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { PaneModule } from 'ng2-qgrid/plugin/pane';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      PaneModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component and override pange template regarding to the task.
 
 ```typescript

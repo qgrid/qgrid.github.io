@@ -10,24 +10,6 @@ Use persistence plugin to save and restore q-grid state.
 
 ## Installation
 
-<!-- Add persistence module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { PersistenceModule } from 'ng2-qgrid/plugin/persistence';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      PersistenceModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
 Add angular component inside of q-grid component, after that persistance action should appear in the top toolbar.
 
 ```typescript
@@ -55,14 +37,17 @@ Use `persistence` model to override default behavior.
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
 
-   constructor(private dataService: MyDataService) {
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {
-     this.myGrid.model.persistence({
+     this.gridModel.persistence({
        storage: this.buildStorage()
      });
    }
@@ -70,7 +55,7 @@ export class MyComponent {
    buildStorage() {
       return {
          getItem: id =>
-            new Promise(resolve => {
+            new Promise<any>(resolve => {
                this.dataService
                   .getState(id)
                   .subscribe(resolve);
@@ -83,5 +68,4 @@ export class MyComponent {
             })
       };
    }
-}
 ```

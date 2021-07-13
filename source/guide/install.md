@@ -36,17 +36,23 @@ Use column generation mode for a quick start.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async"
+              [model]="gridModel">
       </q-grid>
       `
 })
 export class MyComponent {
-   rows$: Observable<any[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid
+      .model()
+      .columnList({
+         generation: 'deep'
+      });
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 }
 ```
