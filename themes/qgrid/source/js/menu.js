@@ -318,6 +318,7 @@ function init() {
 	const activeTopic = document.getElementsByClassName('active-topic')[0];
 	if (activeTopic) {
 		activeTopic.scrollIntoView();
+		activeTopic.parentNode.parentNode.classList.remove('hide-list');
 	}
 }
 
