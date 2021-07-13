@@ -14,13 +14,20 @@
 		@include fontStylingSet(5.8em, 1.2em, 700, inherit);
 		margin: 40px 0 0 0;
 
-		
 		@media screen and (max-width: 1080px) {
 			font-size: 4.8em;
 		}
 
 		@media screen and (max-width: 768px) {
 			font-size: 3.8em;
+		}
+
+		.marked {
+			display: block;
+			background: linear-gradient(180deg, #2F80ED 54%, #11DED2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: #2F80ED;
 		}
 	}
 
@@ -59,19 +66,39 @@
 	}
 
 	.header {
-		background-color: $color-top-background;
+		background-color: $color-dark-bg;
 		text-align: center;
 		color: $color-white;
+		padding-top: 27px;
 		padding-bottom: calc((#{$editor-height} / 2) + 72px);    // 72px is margin for h1
 		margin-bottom: 0;
 
 		h1 {
-			margin: 72px 0 0 0;
+			margin: 85px 0 0 0;
 		}
 	
 		.highlight {
 			display: block;
 			color: $accent-color;
+		}
+
+		.nav {
+			background-color: $color-dark-bg;
+			width: 100%;
+			max-width: 1024px;
+			margin-left: auto;
+			margin-right: auto;
+			border-bottom: 0;
+
+			.qgrid-logo {
+				width: 46px;
+				height: 32px;
+				margin-top: -14px;
+			}
+
+			.frameworks li:not(:last-child) {
+				margin-right: 40px;
+			}
 		}
 	}
 
@@ -136,6 +163,9 @@
 			margin-bottom: 16px;
 			border-radius: 4px;
 			overflow: hidden;
+
+			img {
+				border-radius: 4px;			}
 		}
 
 		&-text {
