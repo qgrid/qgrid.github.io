@@ -38,7 +38,11 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -83,8 +87,3 @@ node_sass:
   precision: 5
   sourceComments: false
   outputStyle: nested
-
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'vs'
-  line_number: true    # default false

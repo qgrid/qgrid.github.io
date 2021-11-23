@@ -4,6 +4,8 @@
 @import "nav";
 @import "markdown";
 @import "highlights";
+@import "prism-vs";
+@import "prism-line-numbers";
 
 body {
     display: flex;
