@@ -14,19 +14,12 @@
 		header {
 			display: block;
 			background: none;
+			height: 0;
 
 			.logo-wrapper .logo {
 				display: none;
 			}
-
-			height: 0;
 		}
-	}
-
-	.qgrid-examples {
-		transition: ease all .5s;
-		top: 80px;
-		right: 37px;
 	}
 }
 
@@ -45,7 +38,6 @@
 
 // small screen
 @media screen and (max-width: 850px) {
-
 	.news {
 		background-color: yellowgreen;
 		display: flex;
@@ -54,7 +46,6 @@
 
 	.index {
 		ul.features {
-
 			li,
 			li:nth-child(2n+1) {
 				flex-direction: column;
@@ -102,7 +93,7 @@
 		}
 
 		.page-wrapper {
-			margin: 0 20px 40px 20px;
+			margin: 55px 20px 40px 20px;
 
 			h1:first-child {
 				margin-top: 80px;
@@ -139,13 +130,35 @@
 				}
 			}
 
-			.qgrid-examples {
-				top: 27px;
-				right: 67px;
+			.nav {
+				flex-wrap: wrap;
+				justify-content: normal;
+				padding: 10px 0 0 0;
 
-				&::before {
-					content: url('../assets/images/qgex-small.svg');
+				.button {
+					margin-right: 24px;
+					margin-left: auto;
 				}
+
+				.qgrid-search {
+					order: 4;
+					flex-basis: 100%;
+					margin-top: 10px;
+
+					&::before {
+						left: 34px;
+					}
+
+					.search {
+						padding: 12px 58px;
+						width: 100%;
+					}
+				}
+			}
+
+			.frameworks,
+			.qgrid-examples {
+				display: none;
 			}
 		}
 
@@ -157,9 +170,20 @@
 			display: none;
 			padding-top: 0;
 			z-index: 12;
+			top: 29px;
+			border-top: 4px solid $color-white;
+			width: calc(100% - 48px);
+			transform: translateX(-50%);
+			left: 50%;
+			border-radius: 4px;
+			height: 189px;
+			
+			&.has-highlight {
+				display: block !important;
+			}
 
 			nav {
-				height: calc(100% - 95px);
+				height: calc(100% - 28px);
 			}
 
 			.logo {
@@ -167,8 +191,6 @@
 			}
 		}
 	}
-
-
 }
 
 @media screen and (max-width: 540px) {
@@ -183,10 +205,50 @@
 				font-size: 18px;
 				line-height: 18px;
 			}
+		}
 
-			.frameworks li {
-				font-size: 2.5em;
-				margin-bottom: 10px;
+		.header .nav .frameworks li {
+			font-size: 2.5em;
+			margin-bottom: 10px;
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+
+		.header .nav {
+			flex-wrap: wrap;
+			width: auto;
+		}
+	}
+
+	.pages {
+		header .nav {
+			.qgrid-logo {
+				width: 47px;
+				height: 33px;
+			}
+
+			.button {
+				font-size: 0.8em;
+				padding: 6px 14px;
+				margin-right: 16px;
+			}
+
+			.nav-trigger {
+				width: 24px;
+				margin-left: 16px;
+				margin-right: 24px;
+			}
+
+			.qgrid-search {
+				&::before {
+					left: 20px;
+				}
+
+				.search {
+					padding: 12px 45px;
+				}
 			}
 		}
 	}

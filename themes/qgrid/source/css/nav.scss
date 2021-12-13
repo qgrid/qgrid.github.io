@@ -127,6 +127,7 @@
 		width: 66px;
 		height: 46px;
 		background-size: contain;
+		margin-right: 34px;
 	}
 
 	.frameworks {
@@ -135,11 +136,10 @@
 		margin-right: auto;
 		margin-left: auto;
 
-		li {
+		li {		
 			&:not(:last-child ) {
-				margin-right: 16px;
-			}
-
+			margin-right: 16px;
+		}
 			& > a {
 				@include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
 				transition: $transition;
@@ -154,5 +154,6 @@
 	.button {
 		font-size: 1em;
 		padding: 6px 23px;
+		white-space: nowrap;
 	}
 }

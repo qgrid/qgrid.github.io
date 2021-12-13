@@ -96,6 +96,10 @@
 				margin-top: -14px;
 			}
 
+			.nav-trigger {
+				display: none;
+			}
+
 			.frameworks li:not(:last-child) {
 				margin-right: 40px;
 			}
@@ -308,18 +312,17 @@
 		top: 24px;
 	}
 
-	&.docs::before {
+	&.icon-documents::before {
 		@include iconStylingSet(36px, 42px, "../assets/images/documents-bluish.svg");
 	}
 
-	&.examp::before {
+	&.icon-examples::before {
 		@include iconStylingSet(58px, 38px, "../assets/images/examples-bluish.svg");
 	}
 
-	&.github::before {
-		@include iconStylingSet(48px, 48px, "../assets/images/github-bluish.svg");
+	&.icon-github::before {
+		@include iconStylingSet(48px, 48px, "../assets/images/github.svg");
 	}
-	
 	&::after {
 		@include iconStylingSet(10px, 10px, "../assets/images/arrow-icon.svg");
 		content: '';

@@ -7,14 +7,17 @@ function toggleVisibility(e) {
 		e.stopImmediatePropagation();
 		return;
 	}
+
 	const nav = document.getElementById('nav');
 	const overlay = document.getElementById('overlay');
-	if (nav.style.display === 'none' || nav.style.display === '') {
-		nav.style.display = 'block';
-		overlay.style.display = 'block';
-	} else {
-		nav.style.display = 'none';
-		overlay.style.display = 'none';
+	if(e.target.nodeName != 'H3') {
+		if (nav.style.display === 'none' || nav.style.display === '') {
+			nav.style.display = 'block';
+			overlay.style.display = 'block';
+		} else {
+			nav.style.display = 'none';
+			overlay.style.display = 'none';
+		}
 	}
 }
 
@@ -43,6 +46,13 @@ function onSearchChange(e) {
 	e.stopImmediatePropagation();
 	const input = e.target || e.srcElement;
 	const search = input.value.toLowerCase();
+	const highlightsCount = document.querySelectorAll('.highlight').length;
+	const searchValueLenght = document.querySelector('#search').value.length;
+	const menuClasses = document.querySelector('aside').classList;
+
+	highlightsCount > 0 && searchValueLenght != 0 ? menuClasses.add('has-highlight') :
+	menuClasses.remove('has-highlight');
+
 	setSearch(search);
 }
 
@@ -214,7 +224,6 @@ function highlightText(item, search) {
 			item.insertBefore(a, item.firstChild);
 		}
 		item.parentElement.classList.remove('hide');
-
 		return true;
 	}
 
