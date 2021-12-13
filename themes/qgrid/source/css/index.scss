@@ -321,7 +321,7 @@
 	}
 
 	&.icon-github::before {
-		@include iconStylingSet(48px, 48px, "../assets/images/github.svg");
+		@include iconStylingSet(48px, 48px, "../assets/images/github-bluish.svg");
 	}
 	&::after {
 		@include iconStylingSet(10px, 10px, "../assets/images/arrow-icon.svg");
