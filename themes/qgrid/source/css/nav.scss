@@ -19,7 +19,7 @@
 				display: none;
 			}
 
-			h3::after {
+			h3::before {
 				transform: rotate(180deg);
 			}
 		}
@@ -34,13 +34,19 @@
 			padding: 0 24px;
 			margin-bottom: 16px;
 
-			&::after {
-				content: '';
-				@include iconStylingSet(11px, 6px, "../assets/images/dropdown-arrow.svg");
+			&.icon-collapse {
+				flex-direction: row-reverse;
+			}
+
+			&::before {
+				font-size: 8px;
 				display: inline-block;
-				background-repeat: no-repeat;
 				transform: rotate(0);
 			}
+		}
+
+		.nav-item {
+			min-width: 270px;
 		}
 
 		ul {

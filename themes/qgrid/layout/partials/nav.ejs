@@ -14,7 +14,7 @@
             if (pageGroups.hasOwnProperty(group)) {
     %>
     <div class="<%- i > 0 ? 'nav-item hide-list' : 'nav-item' %>">
-        <h3 onclick="onTogglerClick(event)"><%- group %></h3>
+        <h3 onclick="onTogglerClick(event)" class="<%- i > 0 ? 'icon-collapse' : '' %>"><%- group %></h3>
         <ul>
  
     <%

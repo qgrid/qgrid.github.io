@@ -22,12 +22,6 @@
 	color: $color;
 }
 
-@mixin iconStylingSet($width, $height, $url) {
-	width: $width;
-	height: $height;
-	background-image: url($url);
-}
-
 @mixin decorationUnderlineSet($color) {
 	content: '';
 	width: 100%;
