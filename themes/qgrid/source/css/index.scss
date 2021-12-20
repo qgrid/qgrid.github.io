@@ -96,6 +96,10 @@
 				margin-top: -14px;
 			}
 
+			.nav-trigger {
+				display: none;
+			}
+
 			.frameworks li:not(:last-child) {
 				margin-right: 40px;
 			}
@@ -123,20 +127,8 @@
 		position: relative;
 
 		a {
-			@include fontStylingSet(18px, 24px, inherit, $color-accent);
-			transition: opacity .15s ease-in-out;
-
 			&:hover {
 				opacity: 0.8;
-			}
-
-			&::after {
-				@include iconStylingSet(19px, 8px, "../assets/images/link-arrow.svg");
-				content: '';
-				background-size: contain;
-				background-repeat: no-repeat;
-				display: inline-block;
-				margin-left: 10px;
 			}
 		}
 	}
@@ -300,34 +292,22 @@
 	}
 
 	&::before {
-		content: '';
+		font-size: 10px;
+		position: absolute;
+		right: 31px;
+		bottom: 24px;
+		display: block;
+		color: $color-accent;
+	}
+	
+	.flex-item-icon::before {
 		display: block;
 		width: 36px;
 		height: 42px;
 		position: absolute;
 		top: 24px;
-	}
-
-	&.docs::before {
-		@include iconStylingSet(36px, 42px, "../assets/images/documents-bluish.svg");
-	}
-
-	&.examp::before {
-		@include iconStylingSet(58px, 38px, "../assets/images/examples-bluish.svg");
-	}
-
-	&.github::before {
-		@include iconStylingSet(48px, 48px, "../assets/images/github-bluish.svg");
-	}
-	
-	&::after {
-		@include iconStylingSet(10px, 10px, "../assets/images/arrow-icon.svg");
-		content: '';
-		position: absolute;
-		right: 31px;
-		bottom: 24px;
-		display: block;
-		background-size: contain;
+		font-size: 45px;
+		color: $color-accent;
 	}
 }
 
@@ -350,37 +330,27 @@
 	}
 
 	&::before {
-		content: '';
-		display: block;
-		background-size: contain;
-		background-repeat: no-repeat;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin-bottom: 22px;
-	}
-
-	&.flexible::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/flexible-icon.svg");
-	}
-
-	&.customizable::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/castomizable-icon.svg");
-	}
-
-	&.typescript::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/typescript-icon.svg");
-	}
-
-	&.perform::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/perfomance-icon.svg");
+		border-radius: 100%;
+		width: 90px;
+		height: 90px;
+		font-size: 50px;
+		background-color: $color-accent;
 	}
 
 	span {
 		font-weight: 500;
 		font-size: 1.2em;
 		margin-bottom: 16px;
+		color: $color-dark-bg;
 	}
 
 	p {
 		font-size: 1.1em;
+		color: $color-dark-bg;
 	}
 }
 
