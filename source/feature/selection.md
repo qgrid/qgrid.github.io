@@ -195,7 +195,7 @@ gridModel.selection({
 * `shift+left` - toggle previous column.
 * `ctrl+a` - select all.
 
-<a name="how-to-override-default-selection-shortcuts">
+<a name="how-to-override-default-selection-shortcuts" href="#how-to-override-default-selection-shortcuts">
    How to override default selection shortcuts?
 </a>
 
@@ -210,7 +210,7 @@ gridModel.selection({
 });
 ```
 
-<a name="how-to-handle-click-events">
+<a name="how-to-handle-click-events" href="#how-to-handle-click-events">
    How to handle click events?
 </a>
 

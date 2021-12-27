@@ -335,8 +335,10 @@ function init() {
 		anchor.addEventListener('click', function (e) {
 			e.preventDefault()
 
+			console.log(window.screen.width < 850);
+
 			const element = document.querySelector(`a[name="${anchor.getAttribute('href').slice(1)}"]`);
-			var headerOffset = 75;
+			var headerOffset = window.screen.width < 850 ? 107 : 75;
 			var elementPosition = element.getBoundingClientRect().top;
 			var offsetPosition = elementPosition - headerOffset;
 		
