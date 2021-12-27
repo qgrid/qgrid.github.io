@@ -3,6 +3,8 @@ title: Text
 group: Column Types
 order: 11
 ---
+- [Default template and specific properties](#default-template-and-specific-properties)
+- [How to fit text to column width?](#how-to-fit-text-to-column-width)
 
 This is a basic data column type that is responsible for handling textual values.
 
@@ -17,7 +19,9 @@ This is a basic data column type that is responsible for handling textual values
 
 {% docEditor "github/qgrid/ng2-example/tree/column-text-basic/latest" %}
 
-## Default template and specific properties
+<a name="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Add `editor="text-area"` to the q-grid column to display multi-line text in the cell.
 
@@ -33,7 +37,9 @@ This is a basic data column type that is responsible for handling textual values
 </q-grid>
 ```
 
-## How to fit text to column width?
+<a name="#how-to-fit-text-to-column-width">
+   How to fit text to column width?
+</a>
 
 Often cells contain text that is not fit to default column width by setting up `viewWidth` column will expand the width of focus.
 

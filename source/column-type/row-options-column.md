@@ -3,6 +3,9 @@ title: Row Options
 group: Column Types
 order: 9
 ---
+- [Default template](#default-template)
+- [How to open row options menu on enter pressed?](#how-to-open-row-options-menu-on-enter-pressed)
+- [Suggested Links](#suggested-links)
 
 Row options column allows to populate list of actions for the appropriate row by using `[editorOptions]` input.
 
@@ -35,7 +38,9 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-options-basic/latest" %}
 
-## Default template
+<a name="#default-template">
+   Default template
+</a>
 
 Edit template is populated automatically when cell is clicked, because by default `row-options` column has `class` property equals to `control` and `canEdit` is `true`. So don't need to have any code regarding to `$view` service.
 
@@ -51,7 +56,9 @@ Edit template is populated automatically when cell is clicked, because by defaul
 </q-grid>
 ```
 
-## How to open row options menu on enter pressed?
+<a name="#how-to-open-row-options-menu-on-enter-pressed">
+   How to open row options menu on enter pressed?
+</a>
 
 Just focus row options column programmatically.
 
@@ -94,7 +101,8 @@ export class MyComponent {
   });
 }
 ```
-
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Action plugin](/plugin/action.html)

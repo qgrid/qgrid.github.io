@@ -3,6 +3,8 @@ title: Numeric
 group: Column Types
 order: 6
 ---
+- [Default template and specific properties](#default-template-and-specific-properties)
+- [Suggested Links](#suggested-links)
 
 Use number type to display decimal values. Here are some specific properties:
 
@@ -17,7 +19,9 @@ Use number type to display decimal values. Here are some specific properties:
 
 {% docEditor "github/qgrid/ng2-example/tree/column-number-basic/latest" %}
 
-## Default template and specific properties
+<a name="#default-template-and-specific-properties">
+  Default template and specific properties
+</a>
 
 * Use `format` property to transform a number into a string, formatted according to locale rules that determine group sizing and separator, decimal-point character, and other locale-specific configurations.
 
@@ -33,6 +37,8 @@ Use number type to display decimal values. Here are some specific properties:
 </q-grid>
 ```
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Angular decimal pipe](https://angular.io/api/common/DecimalPipe)

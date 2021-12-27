@@ -3,6 +3,7 @@ title: Pivoting
 group: Features
 order: 15
 ---
+- [How to override pivot cell template?](#how-to-override-pivot-cell-template)
 
 Pivot is a data summarization mode where users can break down raw data to highlight the desired information. It displays data in format such as spreadsheets or business intelligence applications.
 
@@ -35,7 +36,9 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/pivot-column-template/latest" %}
 
-## How to override pivot cell template?
+<a name="#how-to-override-pivot-cell-template">
+   How to override pivot cell template?
+</a>
 
 Use ng-template inside column component with type `pivot`.
 

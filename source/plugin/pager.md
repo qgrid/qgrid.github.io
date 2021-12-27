@@ -3,12 +3,16 @@ title: Pager
 group: Plugins
 order: 2
 ---
+- [Installation](#installation)
+- [Suggested Links](#suggestedlinks)
 
 Use pager plugin to add possibilities to setup initial pagination option in component way.
 
 {% docEditor "github/qgrid/ng2-example/tree/pagination-basic/latest" %}
 
-## Installation
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid to change pagination settings through it.
 
@@ -34,6 +38,8 @@ export class MyComponent {
 }
 ```
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Pagination](/feature/pagination.html)

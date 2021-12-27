@@ -3,6 +3,19 @@ title: Data Middleware
 group: Reference
 order: 3
 ---
+- [Default Pipeline](#default-pipeline)
+- [Data Pipe](#data-pipe)
+- [Filter Pipe](#filter-pipe)
+- [Sort Pipe](#sort-pipe)
+- [Memo pipe](#memo-pipe)
+- [Group Pipe](#group-pipe)
+- [Pivot Pipe](#pivot-pipe)
+- [Column Pipe](#column-pipe)
+- [Pagination Pipe](#pagination-pipe)
+- [View Pipe](#view-pipe)
+- [Pipe Units](#pipe-units)
+- [The Scene](#the-scene)
+
 
 The q-grid pipe is a series of methods that grid invokes asynchronously anytime refresh is required. Every pipe in the series gets data from previous one, handles it and passes to the next one. This basic concept allows to modify how data rows are processed to display the data. Here is the default pipeline.
 
@@ -26,7 +39,9 @@ export class MyComponent {
 }
 ```
 
-## Default Pipeline
+<a name="#default-pipeline">
+   Default Pipeline
+</a>
 
 By default the chain below is invoked element by element when data middleware is triggered.
 
@@ -45,19 +60,27 @@ model.data({
 ]});
 ```
 
-## Data Pipe
+<a name="#data-pipe">
+   Data Pipe
+</a>
 
 The intent is to fill data `rows` property and setup initial set of data `columns` with or without auto generation to use them in the next pipes.
 
-## Filter Pipe
+<a name="#filter-pipe">
+   Filter Pipe
+</a>
 
 Applies client side filtration, utilizes `filter` model for getting input data and `expression builder` kit to support complex logic by invoking `match` function from filter state.
 
-## Sort Pipe
+<a name="#sort-pipe">
+   Sort Pipe
+</a>
 
 Applies client side sorting, supports sorting by multiple columns.
 
-## Memo pipe
+<a name="#memo-pipe">
+   Memo pipe
+</a>
 
 Converts input of data rows to output that supports grouping and pivoting. 
 
@@ -71,27 +94,39 @@ function memoPipe(rows, context, next) {
 }
 ```
 
-## Group Pipe
+<a name="#group-pipe">
+   Group Pipe
+</a>
 
 The intent is to build nodes from the raw data rows and fill in memo nodes section if group model has some input.
 
-## Pivot Pipe
+<a name="#pivot-pipe">
+   Pivot Pipe
+</a>
 
 The intent is to build `pivot` data from the raw data rows and fill in memo pivot section if pivot model has some input.
 
-## Column Pipe
+<a name="#column-pipe">
+   Column Pipe
+</a>
 
 Responsible for support: adding `control` type columns, like select or group columns, column cohorts (rowSpans and colSpans inside header), pivot column generation, column visibility and sorting. To the memo output `columns` property is added.
 
-## Pagination Pipe
+<a name="#pagination-pipe">
+   Pagination Pipe
+</a>
 
 Applies pagination if scroll mode is not `virtual`.
 
-## View Pipe
+<a name="#view-pipe">
+   View Pipe
+</a>
 
 The intent is to order rows appropriate to the `row list` model(row drag & drop support) and fill in the `scene` model that is used to render cells.
 
-## Pipe Units
+<a name="#pipe-units">
+   Pipe Units
+</a>
 
 Predefined sets of typical pipe series called pipe units are used to change the q-grid data processing behavior. Here are some examples:
 
@@ -122,6 +157,8 @@ qgrid.pipeUnit.view = [
 ];
 ```
 
-## The Scene
+<a name="#the-scene">
+   The Scene
+</a>
 
 A class that contains the q-grid pipe results, actually `qgrid.pipe.view` pipe fills the scene, further the q-grid renderer outputs rows and columns using the scene model. Another attribute of the scene is `status`, it's used by internal routines to manage the q-grid readiness.

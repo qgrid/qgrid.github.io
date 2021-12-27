@@ -329,6 +329,23 @@ function init() {
 		activeTopic.scrollIntoView();
 		activeTopic.parentNode.parentNode.classList.remove('hide-list');
 	}
+
+	const anchors = document.querySelectorAll('.page-wrapper ul li a[href]');
+	for (let anchor of anchors) {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault()
+
+			const element = document.querySelector(`a[name="${anchor.getAttribute('href').slice(1)}"]`);
+			var headerOffset = 75;
+			var elementPosition = element.getBoundingClientRect().top;
+			var offsetPosition = elementPosition - headerOffset;
+		
+			window.scrollTo({
+				 top: offsetPosition,
+				 behavior: "smooth"
+			});
+		});
+	}
 }
 
 window.onhashchange = searchOnHashChange;

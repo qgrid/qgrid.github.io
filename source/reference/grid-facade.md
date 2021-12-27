@@ -3,10 +3,14 @@ title: Grid Facade
 group: Reference
 order: 2
 ---
+- [Create utility service](#create-utility-service)
+- [Create q-grid model in the code](#create-q-grid-model-in-the-code)
 
 `Grid` facade contains a set of entry points for more advance using of q-grid.
 
-## Create utility service
+<a name="#create-utility-service">
+   Create utility service
+</a>
 
 `Grid` facade can create an utility service over q-grid model. It could help to control grid focus, progress etc.
 
@@ -30,7 +34,9 @@ export class MyComponent {
 }
 ```
 
-## Create q-grid model in the code
+<a name="#create-q-grid-model-in-the-code">
+   Create q-grid model in the code
+</a>
 
 `Grid` service is another way to get access to the q-grid model  create a new model and add binding to the template.
 

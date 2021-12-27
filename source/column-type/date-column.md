@@ -3,6 +3,10 @@ title: Date Time
 group: Column Types
 order: 4
 ---
+- [Time](#time)
+- [Default template and specific properties](#default-template-and-specific-properties)
+- [Date as String](#date-as-string)
+- [Suggested Links](#suggested-links)
 
 Use this column type to display date or date times.
 
@@ -18,7 +22,9 @@ Use this column type to display date or date times.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-date-basic/latest" %}
 
-## Time
+<a name="#time">
+   Time
+</a>
 
 Use number type to display time values in a specific format.
 
@@ -33,7 +39,9 @@ Use number type to display time values in a specific format.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-time-basic/latest" %}
 
-## Default template and specific properties
+<a name="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Use `format` property to build a date display value according to locale rules.
 
@@ -49,7 +57,9 @@ Use number type to display time values in a specific format.
 </q-grid>
 ```
 
-## Date as String
+<a name="#date-as-string">
+   Date as String
+</a>
 
 Usually data from http request goes directly to the q-grid, in this case if column is marked or generated as date only ISO 8601 format is supported.
 
@@ -81,6 +91,9 @@ export class MyComponent {
 ```
 
 ## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Angular date pipe](https://angular.io/api/common/DatePipe)
 * [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)

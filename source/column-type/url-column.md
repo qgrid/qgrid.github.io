@@ -3,6 +3,8 @@ title: Url & Email
 group: Column Types
 order: 12
 ---
+- [Email](#email)
+- [Default template and specific properties](#default-template-and-specific-properties)
 
 To show url links with appropriate editors this column type could be used.
 
@@ -17,7 +19,9 @@ To show url links with appropriate editors this column type could be used.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-url-basic/latest" %}
 
-## Email
+<a name="#email">
+   Email
+</a>
 
 To show email links with appropriate editors this column type could be used. 
 
@@ -32,7 +36,9 @@ To show email links with appropriate editors this column type could be used.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-email-basic/latest" %}
 
-## Default template and specific properties
+<a name="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * If column `label` property is set up default editor will contain two input fields respectively for the value and for the label.
 

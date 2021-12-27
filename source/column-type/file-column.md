@@ -3,6 +3,8 @@ title: File & Image
 group: Column Types
 order: 5
 ---
+- [Image](#image)
+- [Default template and specific properties](#default-template-and-specific-properties)
 
 Use file column type for uploading and linking files.
 
@@ -17,7 +19,9 @@ Use file column type for uploading and linking files.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-file-basic/latest" %}
 
-## Image
+<a name="#image">
+   Image
+</a>
 
 Use this column type to display and upload images.
 
@@ -32,7 +36,9 @@ Use this column type to display and upload images.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-image-basic/latest" %}
 
-## Default template and specific properties
+<a name="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Use `[canUpload]` function to setup predicate if a file is suitable for the uploading.
 * Use `[hasPreview]` function to override predicate indicating if the uploading file is an image and can be displayed under the `img` tag. 

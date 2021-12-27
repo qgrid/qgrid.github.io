@@ -3,12 +3,17 @@ title: How to made a theme
 group: Customization
 order: 2
 ---
+- [Theme Component](#theme-component)
+- [Theme Module](#theme-module)
+- [Suggested Links](#suggested-links)
 
 This page covers the fundamentals of the q-grid theme system. We will build the simplest one, which will contain only basic templates for cells.
 
 {% docEditor "doc-qgrid-ng2-theme" %}
 
-## Theme Component
+<a name="#theme-component">
+   Theme Component
+</a>
 
 All plugins including cell renderers are using q-grid template system. Finally, theme component should contain necessary set of `ng-template[key]` directives to fit theme requirements.
 
@@ -29,8 +34,9 @@ import { Component } from '@angular/core';
 export class ThemeComponent {
 }
 ```
-
-## Theme Module
+<a name="#theme-module">
+   Theme Module
+</a>
 
 * Put `ThemeComponent` into the `entryComponents` section to support dynamic loading.
 * Add `TemplateModule` into the `imports` section to enable ng-template[key] directive.
@@ -63,7 +69,9 @@ export class ThemeModule {
 
 ```
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Material theme](https://github.com/qgrid/ng2/tree/master/src/theme/material)
 * [Basic theme](https://github.com/qgrid/ng2/tree/master/src/theme/basic)

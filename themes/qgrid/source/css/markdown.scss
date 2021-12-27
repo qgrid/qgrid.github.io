@@ -3,7 +3,7 @@
 	h1:first-child {
 		font-family: $font-serif;
 		font-weight: 500;
-		margin: 54px 0 32px 0;
+		margin: 0 0 32px 0;
 		font-size: 48px;
 		line-height: 63px;
 	}
@@ -63,7 +63,16 @@
 	}
 	a {
 		text-decoration: none;
-		color: #0078cf
+		color: #0078cf;
+	}
+	a[name] {
+		font-family: $font-serif;
+		display: block;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 500;
+		color: black;
+		margin: 25px 0;
 	}
 	blockquote {
 		padding: 1em 2em;

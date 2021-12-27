@@ -3,6 +3,8 @@ title: Boolean
 group: Column Types
 order: 2
 ---
+- [Default template and specific properties](#default-template-and-specific-properties)
+- [How to prevent value change on cell click?](#how-to-prevent-value-change-on-cell-click)
 
 Three state booleans are supported by the q-grid.
 
@@ -17,7 +19,9 @@ Three state booleans are supported by the q-grid.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-bool-basic/latest" %}
 
-## Default template and specific properties
+<a name="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Use `trueValue` property to override the positive meaning.  
 * Use `falseValue` property to override the negative meaning.
@@ -41,7 +45,9 @@ Three state booleans are supported by the q-grid.
 </q-grid>
 ```
 
-## How to prevent value change on cell click?
+<a name="#how-to-prevent-value-change-on-cell-click">
+   How to prevent value change on cell click?
+</a>
 
 * Use `[editorOptions]` trigger property by default the value is `click`, change it to `focus`.
 

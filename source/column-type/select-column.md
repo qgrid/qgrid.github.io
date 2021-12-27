@@ -3,6 +3,7 @@ title: Select
 group: Column Types
 order: 10
 ---
+- [Default template](#default-template)
 
 This is a basic data column type that is responsible for handling textual values.
 
@@ -15,7 +16,9 @@ This is a basic data column type that is responsible for handling textual values
 </q-grid>
 ```
 
-## Default template
+<a name="#default-template">
+   Default template
+</a>
 
 ```html
 <q-grid>

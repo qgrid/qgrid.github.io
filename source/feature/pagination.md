@@ -4,6 +4,10 @@ group: Features
 order: 4
 ---
 
+- [How to set a page number?](#how-to-set-a-page-number)
+- [How to reset pagination on sorting?](#how-to-reset-pagination-on-sorting)
+- [Suggested Links](#suggested-links)
+
 Use pagination model to view large data sets in small chunks for faster loading and navigation.
 
 ```typescript
@@ -34,7 +38,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to set a page number?
+<a name="how-to-set-a-page-number">
+   How to set a page number?
+</a>
 
 Use `current` property of pagination model.
 
@@ -45,7 +51,9 @@ pagination({
 });
 ```
 
-## How to reset pagination on sorting?
+<a name="how-to-reset-pagination-on-sorting">
+   How to reset pagination on sorting?
+</a>
 
 Use `resetTriggers` property of pagination model.
 
@@ -58,7 +66,8 @@ pagination({
    }
 });
 ```
-
-## Suggested Links
+<a name="suggested-links">
+   Suggested Links
+</a>
 
 * [Pager plugin](/plugin/pager.html)

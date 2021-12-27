@@ -3,12 +3,16 @@ title: Validation
 group: Plugins
 order: 7
 ---
+- [Installation](#installation)
+- [Suggested Links](#suggested-links)
 
 Validation plugin is based on language independent validation rules called LIVR.
 
 {% docEditor "github/qgrid/ng2-example/tree/validation-basic/latest" %}
 
-## Installation
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component.
 
@@ -52,6 +56,8 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [LIVR](https://github.com/koorchik/LIVR)

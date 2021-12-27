@@ -4,6 +4,11 @@ group: Features
 order: 12
 ---
 
+- [Grouping Modes](#grouping-modes)
+- [How to enable group summary template?](#how-to-enable-group-summary-template)
+- [How to implement custom hierarchy model?](#how-to-implement-custom-hierarchy-model)
+- [Suggested Links](#suggested-links)
+
 Use q-grid model to group rows by particular columns or implement own hierarchies.
 
 ```typescript
@@ -33,7 +38,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## Grouping Modes
+<a name="grouping-modes">
+   Grouping Modes
+</a>
 
 Mode option controls how to group rows by default `nest` value is used.
 
@@ -42,7 +49,9 @@ Mode option controls how to group rows by default `nest` value is used.
 * `rowspan` - group column occupies all available height on expand.
 * `subhead` - group column fills available space to display hierarchy.
 
-## How to enable group summary template?
+<a name="#how-to-enable-group-summary-template">
+   How to enable group summary template?
+</a>
 
 Use `group-summary` column type to setup template for summary rows.
 
@@ -83,7 +92,9 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-summary/latest" %}
 
-## How to implement custom hierarchy model?
+<a name="#how-to-implement-custom-hierarchy-model">
+   How to implement custom hierarchy model?
+</a>
 
 Use data middleware to fit the requirements, use custom pipe to define own hierarchies.
 
@@ -167,6 +178,8 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/hierarchy-browser-basic/latest" %}
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Data Middleware](/reference/data-middleware.html)

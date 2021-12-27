@@ -3,12 +3,15 @@ title: Legend
 group: Plugins
 order: 5
 ---
+- [Installation](#installation)
 
 To show hints or additional information use `q-grid-legend` plugin.
 
 {% docEditor "github/qgrid/ng2-example/tree/legend-grid-basic/latest" %}
 
-## Installation
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component and override legend template regarding to the task.
 

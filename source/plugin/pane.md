@@ -3,12 +3,16 @@ title: Pane
 group: Plugins
 order: 13
 ---
+- [Installation](#installation)
+- [How to open pane manually without trigger?](#how-to-open-pane-manually-without-trigger)
 
 To show custom panels inside q-grid use `q-grid-pane` plugin.
 
 {% docEditor "github/qgrid/ng2-example/tree/pane-basic/latest" %}
 
-## Installation
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component and override pange template regarding to the task.
 
@@ -43,7 +47,9 @@ export class MyComponent {
 }
 ```
 
-## How to open pane manually without trigger?
+<a name="#how-to-open-pane-manually-without-trigger">
+   How to open pane manually without trigger?
+</a>
 
 Get access to `PaneComponent` and use `open` or `close` method.
 

@@ -4,6 +4,12 @@ group: Features
 order: 3
 ---
 
+- [How to change column header template?](#how-to-change-selection-mode)
+- [How to change cell editor template?](#how-to-change-cell-editor-template)
+- [How to change aggregation template in the column footer?](#how-to-change-aggregation-template-in-the-column-footer)
+- [How to implement custom aggregation in the column footer?](#how-to-implement-custom-aggregation-in-the-column-footer?)
+- [Suggested Links](#suggested-links)
+
 To apply cell custom templates use `ng-template` with a new style `qGridColumnHead`, `qGridColumnBody`, `qGridColumnFoot`, `qGridColumnEdit` directives.
 
 ```html
@@ -14,7 +20,9 @@ To apply cell custom templates use `ng-template` with a new style `qGridColumnHe
 </q-grid>
 ```
 
-## How to change column header template?
+<a name="how-to-change-column-header-template">
+   How to change column header template?
+</a>
 
 Default header template contains sort and filter components that could be used in custom templates also.
 
@@ -32,7 +40,9 @@ Default header template contains sort and filter components that could be used i
 </q-grid>
 ```
 
-## How to change cell editor template?
+<a name="how-to-change-cell-editor-template?">
+   How to change cell editor template?
+</a>
 
 Edit templates are in game when q-grid enters to the edit mode.
 
@@ -47,7 +57,9 @@ Edit templates are in game when q-grid enters to the edit mode.
 </q-grid>
 ```
 
-## How to change aggregation template in the column footer?
+<a name="how-to-change-aggregation-template-in-the-column-footer">
+   How to change aggregation template in the column footer?
+</a>
 
 Use let-`$cell` to have access to aggregated value, it will work when `aggregation` property is setup for the column.
 
@@ -59,7 +71,9 @@ Use let-`$cell` to have access to aggregated value, it will work when `aggregati
 </q-grid>
 ```
 
-## How to implement custom aggregation in the column footer?
+<a name="how-to-implement-custom-aggregation-in-the-column-footer?">
+   How to implement custom aggregation in the column footer?
+</a>
 
 Use footer template and your custom function from the component.
 
@@ -71,7 +85,9 @@ Use footer template and your custom function from the component.
 </q-grid>
 ```
 
-## Suggested Links
+<a name="suggested-links">
+   Suggested Links
+</a>
 
 * [$cell service](/reference/cell-service.html)
 * [$view service](/reference/view-service.html)

@@ -3,12 +3,18 @@ title: Condition Builder
 group: Plugins
 order: 0
 ---
+- [Installation](#installation)
+- [The Contract](#the-contract)
+- [Hot wot setup default condition on component load?](#ho-wot-setup-default-condition-on-component-load)
+- [Suggested Links](#suggested-links)
 
 Use query builder plugin to add unlimited possibilities to filter data using convenient hierarchical UI.
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
 
-## Installation
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component, after that extended filter icon should appear in the top toolbar.
 
@@ -34,7 +40,9 @@ export class MyComponent {
 }
 ```
 
-## The Contract
+<a name="#the-contract">
+   The Contract
+</a>
 
 By supporting q-grid expression contract building any custom filters with complex logic should not be a problem.
 
@@ -62,7 +70,9 @@ By supporting q-grid expression contract building any custom filters with comple
 }
 ```
 
-## Hot wot setup default condition on component load?
+<a name="#hot-wot-setup-default-condition-on-component-load">
+   Hot wot setup default condition on component load?
+</a>
 
 Use filter model `$expression` property in `by` section, the same position should be used to get expression that was setup from UI.
 
@@ -122,6 +132,9 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 }
 ```
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
+
 
 * [Standalone expression builder](https://github.com/qgrid/ng2-expression-builder)

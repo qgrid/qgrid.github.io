@@ -3,6 +3,8 @@ title: Row Indicator
 group: Column Types
 order: 8
 ---
+- [Row Number](#row-number)
+- [Default template and use cases](#default-template-and-use-cases)
 
 Row indicator belongs to the `control class` columns. It can be used in different scenarios belonging to the data rows.
 
@@ -17,7 +19,9 @@ Row indicator belongs to the `control class` columns. It can be used in differen
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-indicator-basic/latest" %}
 
-## Row Number
+<a name="#row-number">
+   Row Number
+</a>
 
 To display row number this column type can be used.
 
@@ -32,7 +36,9 @@ To display row number this column type can be used.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-number-basic/latest" %}
 
-## Default template and use cases
+<a name="#default-template-and use cases">
+   Default template and use cases
+</a>
 
  * `Selection` utilizes row-indicator column type to support `mix` mode when both rows and cells can be selected. 
  * `Data manipulation` plugin applies color coding to the row-indicator cells when appropriate rows were changed or deleted. 

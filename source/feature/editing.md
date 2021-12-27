@@ -4,6 +4,17 @@ group: Features
 order: 11
 ---
 
+- [How to access edit events in q-grid?](#how-to-access-edit-events-in-q-grid)
+- [How to enable batch edit?](#how-to-enable-batch-edit)
+- [How to disable edit mode for the particular column?](#how-to-disable-edit-mode-for-the-particular-column)
+- [How to add a new row to the end?](#how-to-add-a-new-row-to-the-end)
+- [How to add delete button and implement row deletion?](#how-to-add-delete-button-and-implement-row-deletion)
+- [How to change edit shortcuts?](#how-to-change-edit-shortcuts)
+- [How to prevent value change it it's empty?](#How-to-prevent-value-change-it-it's-empty)
+- [How to enter or exit edit mode?](#how-to-enter-or-exit-edit-mode)
+- [How to disable edit mode?](#how-to-disable-edit-mode)
+- [Suggested Links](#suggested-links)
+      
 There are situations when the end user need to edit data, in this case just setup edit mode equals to `cell` to turn on editing.
 
 ```typescript
@@ -35,7 +46,9 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-basic/latest" %}
 
-## How to access edit events in q-grid?
+<a name="how-to-access-edit-events-in-q-grid">
+   How to access edit events in q-grid?
+</a>
 
 Edit model force to use commands to control editing.
 
@@ -50,8 +63,9 @@ gridModel.edit({
    })
 });
 ```
-
-## How to enable batch edit?
+<a name="how-to-enable-batch-edit">
+   How to enable batch edit?
+</a>
 
 Use edit `method` property to activate batch editing, it activates cell handler that could be dragged to apply start cell value to the next selection.
 
@@ -65,7 +79,9 @@ gridModel.edit({
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
 
-## How to disable edit mode for the particular column?
+<a name="How to disable edit mode for the particular column?">
+   How to disable edit mode for the particular column?
+</a>
 
 Use `canEdit` attribute to not allow editing of the column.
 
@@ -80,7 +96,9 @@ Use `canEdit` attribute to not allow editing of the column.
 </q-grid>
 ```
 
-## How to add a new row to the end?
+<a name="how-to-add-a-new-row-to-the-end">
+   How to add a new row to the end?
+</a>
 
 Use data model and focus service.
 
@@ -123,7 +141,9 @@ export class MyComponent {
 }
 ```
 
-## How to add delete button and implement row deletion?
+<a name="how-to-add-delete-button-and-implement-row-deletion">
+   How to add delete button and implement row deletion?
+</a>
 
 Use data model.
 
@@ -165,8 +185,9 @@ export class MyComponent {
    }
 }
 ```
-
-## How to change edit shortcuts?
+<a name="#how-to-change-edit-shortcuts">
+   How to change edit shortcuts?
+</a>
 
 Use shortcuts properties from the edit model to change commit or cancel keys.
 
@@ -181,7 +202,9 @@ gridModel.edit({
 
 ```
 
-## How to prevent value change it it's empty?
+<a name="#How-to-prevent-value-change-it-it's-empty">
+   How to prevent value change it it's empty?
+</a>
 
 Use `canExecute` method in `commit` command to decide if cell value should be changed.
 
@@ -193,7 +216,9 @@ gridModel.edit({
 });
 ```
 
-## How to enter or exit edit mode?
+<a name="#how-to-enter-or-exit-edit-mode">
+   How to enter or exit edit mode?
+</a>
 
 Use `state` property in edit model. Use `view` or `edit` to define mode.
 
@@ -203,7 +228,10 @@ gridModel.edit({
 });
 ```
 
-## How to disable edit mode?
+<a name="#how-to-disable-edit-mode">
+   How to disable edit mode?
+</a>
+
 
 Just set edit mode equals to `null`.
 
@@ -212,8 +240,9 @@ gridModel.edit({
    mode: null
 });
 ```
-
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [Data manipulation plugin](/plugin/data-manipulation.md)
 * [Edit form plugin](/plugin/edit-form.md)

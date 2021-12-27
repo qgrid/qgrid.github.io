@@ -3,10 +3,16 @@ title: REST
 group: Plugins
 order: 6
 ---
-
+- [Installation](#installation)
+- [POST Method](#POST-method)
+- [GET Method](#GET-method)
+- [How to make a custom contract?](#how-to-make-a-custom-contract)
+   
 Use REST plugin to connect q-grid with back-end directly.
 
-## Installation
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component, after that q-grid will start using sorting, filtering and pagination from the rest service.
 
@@ -24,7 +30,9 @@ export class MyComponent {
 }
 ```
 
-## POST Method
+<a name="#POST-method">
+   POST Method
+</a>
 
 Next body is produced for filtering, sorting and pagination.
 
@@ -37,13 +45,17 @@ Next body is produced for filtering, sorting and pagination.
 }
 ```
 
-## GET Method
+<a name="#GET-method">
+   GET Method
+</a>
 
 Next url is produced for filtering, sorting and pagination.
 
 `?filter=lastName=in:Doe,Jones;firstName=in:John,Harry&order=+firstName,-lastName&skip=100&take=50`
 
-## How to make a custom contract?
+<a name="#how-to-make-a-custom-contract">
+   How to make a custom contract?
+</a>
 
 Override `serialize` method to change request output.
 
@@ -84,6 +96,8 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## Suggested Links
+<a name="#suggested-links">
+   Suggested Links
+</a>
 
 * [How to propagate list of items to the column filter from the server?](/feature/filtering.html#How-to-propagate-list-of-items-to-the-column-filter-from-the-server)

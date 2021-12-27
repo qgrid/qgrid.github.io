@@ -4,6 +4,9 @@ type: guide
 group: Reference
 order: 7
 ---
+- [Invalidate q-grid explicitly?](#invalidate-q-grid-explicitly)
+- [Virtualization](#virtualization)
+- [The OnPush Host](#the-onPush-host)
 
 The q-grid introduces 3 modes that allows to change performance strategy.
 
@@ -19,7 +22,9 @@ The q-grid introduces 3 modes that allows to change performance strategy.
 
 {% docEditor "github/qgrid/ng2-example/tree/interaction-mode-detached/latest" %}
 
-## Invalidate q-grid explicitly
+<a name="#invalidate-q-grid-explicitly">
+   Invalidate q-grid explicitly
+</a>
 
 When interaction mode is equal to readonly or detached use `invalidate` method to refresh cell values or create a `new reference` of the data rows.
 
@@ -57,7 +62,9 @@ export class MyComponent {
 }
 ```
 
-## Virtualization
+<a name="#Virtualization">
+   Virtualization
+</a>
 
 > This is a beta version, don't use it in the production.
  
@@ -70,6 +77,8 @@ Virtual scroll can offer performance benefits when working with large collection
 
 {% docEditor "github/qgrid/ng2-example/tree/scroll-virtual-style/latest" %}
 
-## The OnPush Host
+<a name="#the-onPush-host">
+   The OnPush Host
+</a>
 
 If component which hosted q-grid implements `onPush` change detection strategy, the q-grid body behaves similar as interaction mode was set to `detached`.
