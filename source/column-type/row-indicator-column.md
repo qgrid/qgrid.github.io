@@ -19,7 +19,7 @@ Row indicator belongs to the `control class` columns. It can be used in differen
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-indicator-basic/latest" %}
 
-<a name="#row-number">
+<a name="row-number" href="#row-number">
    Row Number
 </a>
 
@@ -36,7 +36,7 @@ To display row number this column type can be used.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-number-basic/latest" %}
 
-<a name="#default-template-and use cases">
+<a name="default-template-and-use-cases" href="#default-template-and-use-cases">
    Default template and use cases
 </a>
 

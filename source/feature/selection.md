@@ -49,7 +49,7 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-<a name="how-to-change-selection-mode">
+<a name="how-to-change-selection-mode" href="#how-to-change-selection-mode">
    How to change selection mode?
 </a>
 
@@ -66,7 +66,7 @@ gridModel.selection({
 });
 ```
 
-<a name="how-to-change-what-should-be-selectable">
+<a name="how-to-change-what-should-be-selectable" href="#how-to-change-what-should-be-selectable">
    How to change what should be selectable?
 </a>
 
@@ -77,7 +77,7 @@ Use `unit` property to say q-grid what is a selectable element.
 * Use `column` value when column can be selected by click.
 * Use `mix` unit to make both rows and cells selectable.
 
-<a name="how-to-listen-selection-changes">
+<a name="how-to-listen-selection-changes" href="how-to-listen-selection-changes">
    How to listen selection changes?
 </a>
 
@@ -104,13 +104,13 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="how-to-restrict-selection-only-on-checkbox-click">
+<a name="how-to-restrict-selection-only-on-checkbox-click" href="#how-to-restrict-selection-only-on-checkbox-click">
    How to restrict selection only on checkbox click?
 </a>
 
 Set selection `area` property to `custom` if clicking to q-grid body should not lead to row selection.
 
-<a name="how-to-prevent-unselecting-if-row-was-clicked-again">
+<a name="how-to-prevent-unselecting-if-row-was-clicked-again" href="#how-to-prevent-unselecting-if-row-was-clicked-again">
    How to prevent unselecting if row was clicked again?
 </a>
 
@@ -131,7 +131,7 @@ gridModel.selectionChanged.on((e) => {
 });
 ```
 
-<a name="how-to-hide-column-with-check-boxes">
+<a name="how-to-hide-column-with-check-boxes" href="#how-to-hide-column-with-check-boxes">
    How to hide column with check-boxes?
 </a>
 
@@ -146,7 +146,7 @@ Use `[isVisible]` input of to hide/show select column.
 </q-grid>
 ```
 
-<a name="how-to-select-rows-by-id">
+<a name="how-to-select-rows-by-id" href="#how-to-select-rows-by-id">
    How to select rows by id?
 </a>
 
@@ -166,7 +166,7 @@ gridModel.selection({
 });
 ```
 
-<a name="how-to-disable-particular-rows-from-being-selected">
+<a name="how-to-disable-particular-rows-from-being-selected" href="#how-to-disable-particular-rows-from-being-selected">
    How to disable particular rows from being selected?
 </a>
 
@@ -183,7 +183,7 @@ gridModel.selection({
 });
 ```
 
-<a name="what-shortcuts-does-selection-implement-by-default">
+<a name="what-shortcuts-does-selection-implement-by-default" href="#what-shortcuts-does-selection-implement-by-default">
    What shortcuts does selection implement by default?
 </a>
 

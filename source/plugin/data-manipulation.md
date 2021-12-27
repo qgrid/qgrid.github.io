@@ -9,7 +9,7 @@ Use data manipulation plugin to extend the q-grid with additional edit options.
 
 {% docEditor "github/qgrid/ng2-example/tree/manipulate-data-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 

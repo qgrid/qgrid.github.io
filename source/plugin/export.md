@@ -13,7 +13,7 @@ Use q-grid export plugin to build data files of required format on client side.
 
 {% docEditor "github/qgrid/ng2-example/tree/export-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -57,7 +57,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#how-to-add-excel-support">
+<a name="how-to-add-excel-support" href="#how-to-add-excel-support">
    How to add excel support?
 </a>
 
@@ -101,7 +101,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#how-to-support-custom-template-for-export-action">
+<a name="how-to-support-custom-template-for-export-action" href="#how-to-support-custom-template-for-export-action">
    How to support custom template for export action?
 </a>
 
@@ -117,7 +117,7 @@ Use ng-template to override default export action template.
 </q-grid-export>
 ```
 
-<a name="#what-format-types-are-supported">
+<a name="what-format-types-are-supported" href="#what-format-types-are-supported">
    What format types are supported?
 </a>
 
@@ -128,7 +128,7 @@ Out of box supported next formats.
 * `xlsx`
 * `xml`
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

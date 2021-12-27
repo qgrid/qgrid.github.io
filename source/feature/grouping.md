@@ -38,7 +38,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="grouping-modes">
+<a name="grouping-modes" href="#grouping-modes">
    Grouping Modes
 </a>
 
@@ -49,7 +49,7 @@ Mode option controls how to group rows by default `nest` value is used.
 * `rowspan` - group column occupies all available height on expand.
 * `subhead` - group column fills available space to display hierarchy.
 
-<a name="#how-to-enable-group-summary-template">
+<a name="how-to-enable-group-summary-template" href="#how-to-enable-group-summary-template">
    How to enable group summary template?
 </a>
 
@@ -92,7 +92,7 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/group-row-summary/latest" %}
 
-<a name="#how-to-implement-custom-hierarchy-model">
+<a name="how-to-implement-custom-hierarchy-model" href="#how-to-implement-custom-hierarchy-model">
    How to implement custom hierarchy model?
 </a>
 
@@ -178,7 +178,7 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/hierarchy-browser-basic/latest" %}
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

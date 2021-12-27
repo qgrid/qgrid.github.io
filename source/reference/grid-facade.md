@@ -8,7 +8,7 @@ order: 2
 
 `Grid` facade contains a set of entry points for more advance using of q-grid.
 
-<a name="#create-utility-service">
+<a name="create-utility-service" href="#create-utility-service">
    Create utility service
 </a>
 
@@ -34,7 +34,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#create-q-grid-model-in-the-code">
+<a name="create-q-grid-model-in-the-code" href="#create-q-grid-model-in-the-code">
    Create q-grid model in the code
 </a>
 

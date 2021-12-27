@@ -11,7 +11,7 @@ This page covers the fundamentals of the q-grid theme system. We will build the 
 
 {% docEditor "doc-qgrid-ng2-theme" %}
 
-<a name="#theme-component">
+<a name="theme-component" href="#theme-component">
    Theme Component
 </a>
 
@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
 export class ThemeComponent {
 }
 ```
-<a name="#theme-module">
+<a name="theme-module" href="#theme-module">
    Theme Module
 </a>
 
@@ -69,7 +69,7 @@ export class ThemeModule {
 
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

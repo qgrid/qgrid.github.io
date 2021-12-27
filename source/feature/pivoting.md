@@ -36,7 +36,7 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/pivot-column-template/latest" %}
 
-<a name="#how-to-override-pivot-cell-template">
+<a name="how-to-override-pivot-cell-template" href="#how-to-override-pivot-cell-template">
    How to override pivot cell template?
 </a>
 

@@ -38,7 +38,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="how-to-set-a-page-number">
+<a name="how-to-set-a-page-number" href="#how-to-set-a-page-number">
    How to set a page number?
 </a>
 
@@ -51,7 +51,7 @@ pagination({
 });
 ```
 
-<a name="how-to-reset-pagination-on-sorting">
+<a name="how-to-reset-pagination-on-sorting" href="#how-to-reset-pagination-on-sorting">
    How to reset pagination on sorting?
 </a>
 
@@ -66,7 +66,7 @@ pagination({
    }
 });
 ```
-<a name="suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

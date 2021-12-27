@@ -18,7 +18,7 @@ Array type is utilized by the q-grid to visualize primitive type collections. If
 
 {% docEditor "github/qgrid/ng2-example/tree/column-array-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 

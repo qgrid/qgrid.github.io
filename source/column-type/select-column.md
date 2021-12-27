@@ -16,7 +16,7 @@ This is a basic data column type that is responsible for handling textual values
 </q-grid>
 ```
 
-<a name="#default-template">
+<a name="#default-template" href="#default-template">
    Default template
 </a>
 

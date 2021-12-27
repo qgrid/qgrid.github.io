@@ -6,10 +6,10 @@ order: 1
 
 - [Column Definitions](#column-definitions)
 - [Structural directives and column visibility](#structural-directives-and-column-visibility)
-- [How to define columns in TypeScript?](#how-to-define-columns-in-TypeScript?)
-- [How to define columns by using q-grid model?](#how-to-define-columns-by-using-q-grid-model?)
-- [How to make columns frozen/pinned?](#how-to-make-columns-frozen/pinned?)
-- [How to define column order?](#how-to-define-column-order?)
+- [How to define columns in TypeScript?](#how-to-define-columns-in-TypeScript)
+- [How to define columns by using q-grid model?](#how-to-define-columns-by-using-q-grid-model)
+- [How to make columns frozen/pinned?](#how-to-make-columns-frozen/pinned)
+- [How to define column order?](#how-to-define-column-order)
 - [Suggested Links](#suggested-links)
 
 Use column auto generation modes for a quick start, try `shallow`, `deep` or `cohort` options to explore data in depth.
@@ -34,7 +34,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/generate-column-cohort/latest" %}
 
-<a name="column-definitions">
+<a name="column-definitions" href="#column-definitions">
    Column Definitions
 </a>
 
@@ -54,7 +54,7 @@ Use `q-grid-column` components to explicitly declare list of columns to show, co
 </q-grid>
 ```
 
-<a name="structural-directives-and-column-visibility">
+<a name="structural-directives-and-column-visibility" href="#structural-directives-and-column-visibility">
    Structural directives and column visibility
 </a>
 
@@ -75,7 +75,7 @@ Component system allows to utilize structural directives(starts with `*` in Angu
 
 {% docEditor "github/qgrid/ng2-example/tree/column-list-basic/latest" %}
 
-<a name="How-to-define-columns-in-TypeScript?">
+<a name="how-to-define-columns-in-TypeScript" href="#how-to-define-columns-in-TypeScript">
    How to define columns in TypeScript?
 </a>
 
@@ -95,7 +95,7 @@ export class MyComponent {
 }
 ```
 
-<a name="how-to-define-columns-by-using-q-grid-model?">
+<a name="how-to-define-columns-by-using-q-grid-model" href="#how-to-define-columns-by-using-q-grid-model">
    How to define columns by using q-grid model?
 </a>
 
@@ -123,7 +123,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="how-to-make-columns-frozen/pinned?">
+<a name="how-to-make-columns-frozen/pinned" href="#how-to-make-columns-frozen/pinned">
    How to make columns frozen/pinned?
 </a>
 
@@ -138,7 +138,7 @@ Use `pin` property in column definition to control if the column should be pinne
 </q-grid>
 ```
 
-<a name="how-to-define-column-order?">
+<a name="how-to-define-column-order" href="#how-to-define-column-order">
    How to define column order?
 </a>
 
@@ -154,7 +154,7 @@ Column order heavily depends on column definition position within `index` proper
 </q-grid>
 ```
 
-<a name="suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

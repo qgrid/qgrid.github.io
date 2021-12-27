@@ -38,7 +38,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 

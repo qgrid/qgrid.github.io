@@ -10,7 +10,7 @@ order: 11
 
 {% docEditor "github/qgrid/ng2-example/tree/autocomplete-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -47,7 +47,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-show-custom-label-for-this-list-of-objects">
+<a name="how-to-show-custom-label-for-this-list-of-objects" href="#how-to-show-custom-label-for-this-list-of-objects">
    How to show custom label for this list of objects?
 </a>
 
@@ -94,7 +94,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

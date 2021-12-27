@@ -10,7 +10,7 @@ Use live plugin to animate cells and rows when they will be changed.
 
 {% docEditor "github/qgrid/ng2-example/tree/live-data-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -40,7 +40,7 @@ export class MyComponent {
    constructor(private dataService: MyDataService) {}
 ```
 
-<a name="#how-to-setup-animation-period">
+<a name="how-to-setup-animation-period" href="#how-to-setup-animation-period">
    How to setup animation period?
 </a>
 

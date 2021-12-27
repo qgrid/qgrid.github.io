@@ -10,7 +10,7 @@ Validation plugin is based on language independent validation rules called LIVR.
 
 {% docEditor "github/qgrid/ng2-example/tree/validation-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -56,7 +56,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

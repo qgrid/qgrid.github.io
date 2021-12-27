@@ -39,7 +39,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#default-pipeline">
+<a name="default-pipeline" href="#default-pipeline">
    Default Pipeline
 </a>
 
@@ -60,25 +60,25 @@ model.data({
 ]});
 ```
 
-<a name="#data-pipe">
+<a name="data-pipe" href="#data-pipe">
    Data Pipe
 </a>
 
 The intent is to fill data `rows` property and setup initial set of data `columns` with or without auto generation to use them in the next pipes.
 
-<a name="#filter-pipe">
+<a name="filter-pipe" href="#filter-pipe>
    Filter Pipe
 </a>
 
 Applies client side filtration, utilizes `filter` model for getting input data and `expression builder` kit to support complex logic by invoking `match` function from filter state.
 
-<a name="#sort-pipe">
+<a name="sort-pipe" href="#sort-pipe">
    Sort Pipe
 </a>
 
 Applies client side sorting, supports sorting by multiple columns.
 
-<a name="#memo-pipe">
+<a name="memo-pipe" href="#memo-pipe">
    Memo pipe
 </a>
 
@@ -94,37 +94,37 @@ function memoPipe(rows, context, next) {
 }
 ```
 
-<a name="#group-pipe">
+<a name="group-pipe" href="#group-pipe">
    Group Pipe
 </a>
 
 The intent is to build nodes from the raw data rows and fill in memo nodes section if group model has some input.
 
-<a name="#pivot-pipe">
+<a name="pivot-pipe" href="#pivot-pipe">
    Pivot Pipe
 </a>
 
 The intent is to build `pivot` data from the raw data rows and fill in memo pivot section if pivot model has some input.
 
-<a name="#column-pipe">
+<a name="column-pipe" href="#column-pipe">
    Column Pipe
 </a>
 
 Responsible for support: adding `control` type columns, like select or group columns, column cohorts (rowSpans and colSpans inside header), pivot column generation, column visibility and sorting. To the memo output `columns` property is added.
 
-<a name="#pagination-pipe">
+<a name="pagination-pipe" href="#pagination-pipe">
    Pagination Pipe
 </a>
 
 Applies pagination if scroll mode is not `virtual`.
 
-<a name="#view-pipe">
+<a name="view-pipe" href="#view-pipe">
    View Pipe
 </a>
 
 The intent is to order rows appropriate to the `row list` model(row drag & drop support) and fill in the `scene` model that is used to render cells.
 
-<a name="#pipe-units">
+<a name="pipe-units" href="#pipe-units">
    Pipe Units
 </a>
 
@@ -157,7 +157,7 @@ qgrid.pipeUnit.view = [
 ];
 ```
 
-<a name="#the-scene">
+<a name="the-scene" href="#the-scene">
    The Scene
 </a>
 

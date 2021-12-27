@@ -19,7 +19,7 @@ Three state booleans are supported by the q-grid.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-bool-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 
@@ -45,7 +45,7 @@ Three state booleans are supported by the q-grid.
 </q-grid>
 ```
 
-<a name="#how-to-prevent-value-change-on-cell-click">
+<a name="how-to-prevent-value-change-on-cell-click" href="#how-to-prevent-value-change-on-cell-click">
    How to prevent value change on cell click?
 </a>
 

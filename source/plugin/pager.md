@@ -10,7 +10,7 @@ Use pager plugin to add possibilities to setup initial pagination option in comp
 
 {% docEditor "github/qgrid/ng2-example/tree/pagination-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -38,7 +38,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

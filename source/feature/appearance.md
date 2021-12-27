@@ -14,7 +14,7 @@ Use rich css system to apply specific styles. Each cell, no mater if it is locat
 * Class `q-grid-{column.type}` is selectable by using column type.
 * Class `q-grid-the-{column.key}` is selectable by using column id.
 
-<a name="how-to-apply-styles-to-particular-cell-or-row">
+<a name="how-to-apply-styles-to-particular-cell-or-row" href="#how-to-apply-styles-to-particular-cell-or-row">
    How to apply styles to particular cell or row?
 </a>
 
@@ -68,7 +68,7 @@ export class MyComponent implements AfterViewInit {
 {% docEditor "github/qgrid/ng2-example/tree/style-cell-basic/latest" %}
 
 
-<a name="how-to-change-column-width">
+<a name="how-to-change-column-width" href="#how-to-change-column-width">
    How to change column width?
 </a>
 
@@ -85,13 +85,13 @@ Use css styles or column `[width]` attribute to setup desired column size using 
 
 > If percents are used all columns should define `width` property for the correct size calculation.
 
-<a name="how-to-make-column-width-auto-adjusted-to-the-cell-content">
+<a name="how-to-make-column-width-auto-adjusted-to-the-cell-content" href="#how-to-make-column-width-auto-adjusted-to-the-cell-content">
    How to make column width auto adjusted to the cell content?
 </a>
 
 As q-grid utilizes `table-layout: fixed` right now we doesn't support auto size out of box, but it can be calculated using TypeScript in user code and applying style API.
 
-<a name="suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

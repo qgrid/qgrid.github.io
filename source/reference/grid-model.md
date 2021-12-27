@@ -32,7 +32,7 @@ export class MyComponent implements AfterViewInit {
 
 > q-grid state implements immutable pattern so to change the state new value or reference should be created in other case nothing will happen.
 
-<a name="#how-to-detect-if-something-was-changed-in-the-model">
+<a name="how-to-detect-if-something-was-changed-in-the-model" href="#how-to-detect-if-something-was-changed-in-the-model">
    How to detect if something was changed in the model?
 </a>
 

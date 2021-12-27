@@ -40,7 +40,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#how-to-implement-infinite-scroll">
+<a name="how-to-implement-infinite-scroll" href="#how-to-implement-infinite-scroll">
    How to implement infinite scroll?
 </a>
 

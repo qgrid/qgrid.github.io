@@ -22,7 +22,7 @@ The q-grid introduces 3 modes that allows to change performance strategy.
 
 {% docEditor "github/qgrid/ng2-example/tree/interaction-mode-detached/latest" %}
 
-<a name="#invalidate-q-grid-explicitly">
+<a name="invalidate-q-grid-explicitly" href="#invalidate-q-grid-explicitly">
    Invalidate q-grid explicitly
 </a>
 
@@ -62,7 +62,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#Virtualization">
+<a name="virtualization" href="#virtualization">
    Virtualization
 </a>
 
@@ -77,7 +77,7 @@ Virtual scroll can offer performance benefits when working with large collection
 
 {% docEditor "github/qgrid/ng2-example/tree/scroll-virtual-style/latest" %}
 
-<a name="#the-onPush-host">
+<a name="the-onPush-host" href="#the-onPush-host">
    The OnPush Host
 </a>
 

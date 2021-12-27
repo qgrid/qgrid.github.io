@@ -38,7 +38,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-options-basic/latest" %}
 
-<a name="#default-template">
+<a name="default-template" href="#default-template">
    Default template
 </a>
 
@@ -56,7 +56,7 @@ Edit template is populated automatically when cell is clicked, because by defaul
 </q-grid>
 ```
 
-<a name="#how-to-open-row-options-menu-on-enter-pressed">
+<a name="how-to-open-row-options-menu-on-enter-pressed" href="#how-to-open-row-options-menu-on-enter-pressed">
    How to open row options menu on enter pressed?
 </a>
 
@@ -101,7 +101,7 @@ export class MyComponent {
   });
 }
 ```
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

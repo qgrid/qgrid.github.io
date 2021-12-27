@@ -19,7 +19,7 @@ To show url links with appropriate editors this column type could be used.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-url-basic/latest" %}
 
-<a name="#email">
+<a name="email" href="#email">
    Email
 </a>
 
@@ -36,7 +36,7 @@ To show email links with appropriate editors this column type could be used.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-email-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 

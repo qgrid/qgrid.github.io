@@ -7,7 +7,7 @@ order: 12
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-form-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 

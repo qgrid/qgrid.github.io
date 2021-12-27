@@ -19,7 +19,7 @@ Use currency type to display decimal values in a currency format.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-currency-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 
@@ -37,7 +37,7 @@ Use currency type to display decimal values in a currency format.
 </q-grid>
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

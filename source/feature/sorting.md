@@ -39,7 +39,7 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/sort-row-basic/latest" %}
 
-<a name="how-to-prevent-column-order-affect-on-sorting">
+<a name="how-to-prevent-column-order-affect-on-sorting" href="#how-to-prevent-column-order-affect-on-sorting">
    How to prevent column order affect on sorting?
 </a>
 
@@ -62,7 +62,7 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
-<a name="how-to-change-default-column-sorting">
+<a name="how-to-change-default-column-sorting" href="#how-to-change-default-column-sorting">
    How to change default column sorting?
 </a>
 
@@ -87,7 +87,7 @@ export class MyComponent {
 }
 ```
 
-<a name="how-to-allow-to-sort-only-by-one-column-at-the-same-time">
+<a name="how-to-allow-to-sort-only-by-one-column-at-the-same-time" href="#how-to-allow-to-sort-only-by-one-column-at-the-same-time">
    How to allow to sort only by one column at the same time?
 </a>
 

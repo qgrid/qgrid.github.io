@@ -10,7 +10,7 @@ To show custom panels inside q-grid use `q-grid-pane` plugin.
 
 {% docEditor "github/qgrid/ng2-example/tree/pane-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -47,7 +47,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-open-pane-manually-without-trigger">
+<a name="how-to-open-pane-manually-without-trigger" href="#how-to-open-pane-manually-without-trigger">
    How to open pane manually without trigger?
 </a>
 

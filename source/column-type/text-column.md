@@ -19,7 +19,7 @@ This is a basic data column type that is responsible for handling textual values
 
 {% docEditor "github/qgrid/ng2-example/tree/column-text-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 
@@ -37,7 +37,7 @@ This is a basic data column type that is responsible for handling textual values
 </q-grid>
 ```
 
-<a name="#how-to-fit-text-to-column-width">
+<a name="how-to-fit-text-to-column-width" href="#how-to-fit-text-to-column-width">
    How to fit text to column width?
 </a>
 

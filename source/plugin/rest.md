@@ -10,7 +10,7 @@ order: 6
    
 Use REST plugin to connect q-grid with back-end directly.
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -30,7 +30,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#POST-method">
+<a name="POST-method" href="#POST-method">
    POST Method
 </a>
 
@@ -45,7 +45,7 @@ Next body is produced for filtering, sorting and pagination.
 }
 ```
 
-<a name="#GET-method">
+<a name="GET-method" href="#GET-method">
    GET Method
 </a>
 
@@ -53,7 +53,7 @@ Next url is produced for filtering, sorting and pagination.
 
 `?filter=lastName=in:Doe,Jones;firstName=in:John,Harry&order=+firstName,-lastName&skip=100&take=50`
 
-<a name="#how-to-make-a-custom-contract">
+<a name="how-to-make-a-custom-contract" href="#how-to-make-a-custom-contract">
    How to make a custom contract?
 </a>
 
@@ -96,7 +96,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

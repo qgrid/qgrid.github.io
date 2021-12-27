@@ -38,7 +38,7 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/focus-cell-basic/latest" %}
 
-<a name="#how-to-apply-auto-focus-in-q-grid">
+<a name="how-to-apply-auto-focus-in-q-grid" href="#how-to-apply-auto-focus-in-q-grid">
    How to apply auto focus in q-grid?
 </a>
 
@@ -52,7 +52,7 @@ Add `q-grid-autofocus` directive on q-grid component?
 </q-grid>
 ```
 
-<a name="#how-to-focus-the-last-row">
+<a name="how-to-focus-the-last-row" href="#how-to-focus-the-last-row">
    How to focus the last row?
 </a>
 
@@ -89,7 +89,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#how-to-understand-if-q-grid-is-in-focus-or-not">
+<a name="how-to-understand-if-q-grid-is-in-focus-or-not" href="#how-to-understand-if-q-grid-is-in-focus-or-not">
    How to understand if q-grid is in focus or not?
 </a>
 

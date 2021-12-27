@@ -9,7 +9,7 @@ order: 0
 
 To support custom cell renderers and different ui frameworks q-grid introduces entry points to control look and feel.
 
-<a name="#ng-template-for">
+<a name="ng-template-for" href="#ng-template-for">
    ng-template[for]
 </a>
 
@@ -25,7 +25,7 @@ The receiving element is `ng-template` that allows to define content under some 
 </q-grid>
 ```
 
-<a name="#ng-container-key">
+<a name="ng-container-key" href="#ng-container-key">
    ng-container[key]
 </a>
 
@@ -41,7 +41,7 @@ export class ToolbarCoreComponent {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

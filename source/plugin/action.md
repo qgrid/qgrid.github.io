@@ -10,7 +10,7 @@ Action is just a representation of the command that is utilized by q-grid. Use `
 
 {% docEditor "github/qgrid/ng2-example/tree/action-bar-template/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -83,7 +83,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-override-action-template">
+<a name="how-to-override-action-template" href="#how-to-override-action-template">
    How to override action template?
 </a>
 

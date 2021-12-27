@@ -12,7 +12,7 @@ Use query builder plugin to add unlimited possibilities to filter data using con
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -40,7 +40,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#the-contract">
+<a name="the-contract" href="#the-contract">
    The Contract
 </a>
 
@@ -70,7 +70,7 @@ By supporting q-grid expression contract building any custom filters with comple
 }
 ```
 
-<a name="#hot-wot-setup-default-condition-on-component-load">
+<a name="hot-wot-setup-default-condition-on-component-load" href="#hot-wot-setup-default-condition-on-component-load">
    Hot wot setup default condition on component load?
 </a>
 
@@ -132,7 +132,7 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

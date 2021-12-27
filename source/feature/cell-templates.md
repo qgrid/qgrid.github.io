@@ -20,7 +20,7 @@ To apply cell custom templates use `ng-template` with a new style `qGridColumnHe
 </q-grid>
 ```
 
-<a name="how-to-change-column-header-template">
+<a name="how-to-change-column-header-template" href="#how-to-change-column-header-template">
    How to change column header template?
 </a>
 
@@ -40,7 +40,7 @@ Default header template contains sort and filter components that could be used i
 </q-grid>
 ```
 
-<a name="how-to-change-cell-editor-template?">
+<a name="how-to-change-cell-editor-template?" href="#how-to-change-cell-editor-template?">
    How to change cell editor template?
 </a>
 
@@ -57,7 +57,7 @@ Edit templates are in game when q-grid enters to the edit mode.
 </q-grid>
 ```
 
-<a name="how-to-change-aggregation-template-in-the-column-footer">
+<a name="how-to-change-aggregation-template-in-the-column-footer" href="#how-to-change-aggregation-template-in-the-column-footer">
    How to change aggregation template in the column footer?
 </a>
 
@@ -71,7 +71,7 @@ Use let-`$cell` to have access to aggregated value, it will work when `aggregati
 </q-grid>
 ```
 
-<a name="how-to-implement-custom-aggregation-in-the-column-footer?">
+<a name="how-to-implement-custom-aggregation-in-the-column-footer?" href="#how-to-implement-custom-aggregation-in-the-column-footer?">
    How to implement custom aggregation in the column footer?
 </a>
 
@@ -85,7 +85,7 @@ Use footer template and your custom function from the component.
 </q-grid>
 ```
 
-<a name="suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

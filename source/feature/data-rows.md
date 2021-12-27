@@ -27,13 +27,13 @@ export class MyComponent {
 }
 ```
 
-<a name="what-will-happen-if-array-of-rows-is-not-consistent">
+<a name="what-will-happen-if-array-of-rows-is-not-consistent" href="#what-will-happen-if-array-of-rows-is-not-consistent">
 What will happen if array of rows is not consistent? 
 </a>
 
 If some of row properties are not accessible empty cells will be shown, on edit error will be thrown.
 
-<a name="how-to-setup-rows-using-qgrid-model">
+<a name="how-to-setup-rows-using-qgrid-model" href="#how-to-setup-rows-using-qgrid-model">
 How to setup rows using q-grid model?
 </a>
 
@@ -62,7 +62,7 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
-<a name="how-to-make-rows-frozen-or-pinned">
+<a name="how-to-make-rows-frozen-or-pinned" href="#how-to-make-rows-frozen-or-pinned">
 How to make rows frozen or pinned?
 </a>
 
@@ -93,7 +93,7 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
-<a name="how-to-enable-row-resizing-and-drag-&-drop">
+<a name="how-to-enable-row-resizing-and-drag-&-drop" href="#how-to-enable-row-resizing-and-drag-&-drop">
 How to enable row resizing and drag & drop?
 </a>
 

@@ -9,7 +9,7 @@ Use toolbar plugin to customize toolbar templates.
 
 {% docEditor "github/qgrid/ng2-example/tree/dynamic-column-model/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 

@@ -11,7 +11,7 @@ order: 4
 
 Use q-grid import plugin to fill in rows with data from files on client side.
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -37,7 +37,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-add-excel-support">
+<a name="how-to-add-excel-support" href="#how-to-add-excel-support">
    How to add excel support?
 </a>
 
@@ -83,7 +83,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-support-custom-template for import action?">
+<a name="how-to-support-custom-template for import action?" href="#how-to-support-custom-template for import action?">
    How to support custom template for import action?
 </a>
 
@@ -99,7 +99,7 @@ Use ng-template to override default import action template.
 </q-grid-import>
 ```
 
-<a name="#what-format-types-are-supported">
+<a name="what-format-types-are-supported" href="#what-format-types-are-supported">
    What format types are supported?
 </a>
 
@@ -111,7 +111,7 @@ Out of box supported next formats.
 * `xlsx`
 * `xml`
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

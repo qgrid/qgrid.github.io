@@ -46,7 +46,7 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-basic/latest" %}
 
-<a name="how-to-access-edit-events-in-q-grid">
+<a name="how-to-access-edit-events-in-q-grid" href="#how-to-access-edit-events-in-q-grid">
    How to access edit events in q-grid?
 </a>
 
@@ -63,7 +63,7 @@ gridModel.edit({
    })
 });
 ```
-<a name="how-to-enable-batch-edit">
+<a name="how-to-enable-batch-edit" href="#how-to-enable-batch-edit">
    How to enable batch edit?
 </a>
 
@@ -79,7 +79,7 @@ gridModel.edit({
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-cell-batch/latest" %}
 
-<a name="How to disable edit mode for the particular column?">
+<a name="how-to-disable-edit-mode-for-the-particular-column" href="#how-to-disable-edit-mode-for-the-particular-column">
    How to disable edit mode for the particular column?
 </a>
 
@@ -96,7 +96,7 @@ Use `canEdit` attribute to not allow editing of the column.
 </q-grid>
 ```
 
-<a name="how-to-add-a-new-row-to-the-end">
+<a name="how-to-add-a-new-row-to-the-end" href="#how-to-add-a-new-row-to-the-end">
    How to add a new row to the end?
 </a>
 
@@ -141,7 +141,7 @@ export class MyComponent {
 }
 ```
 
-<a name="how-to-add-delete-button-and-implement-row-deletion">
+<a name="how-to-add-delete-button-and-implement-row-deletion" href="#how-to-add-delete-button-and-implement-row-deletion">
    How to add delete button and implement row deletion?
 </a>
 
@@ -185,7 +185,7 @@ export class MyComponent {
    }
 }
 ```
-<a name="#how-to-change-edit-shortcuts">
+<a name="how-to-change-edit-shortcuts" href="#how-to-change-edit-shortcuts">
    How to change edit shortcuts?
 </a>
 
@@ -202,7 +202,7 @@ gridModel.edit({
 
 ```
 
-<a name="#How-to-prevent-value-change-it-it's-empty">
+<a name="how-to-prevent-value-change-it-it's-empty" href="#how-to-prevent-value-change-it-it's-empty">
    How to prevent value change it it's empty?
 </a>
 
@@ -216,7 +216,7 @@ gridModel.edit({
 });
 ```
 
-<a name="#how-to-enter-or-exit-edit-mode">
+<a name="how-to-enter-or-exit-edit-mode" href="#how-to-enter-or-exit-edit-mode">
    How to enter or exit edit mode?
 </a>
 
@@ -228,7 +228,7 @@ gridModel.edit({
 });
 ```
 
-<a name="#how-to-disable-edit-mode">
+<a name="how-to-disable-edit-mode" href="#how-to-disable-edit-mode">
    How to disable edit mode?
 </a>
 
@@ -240,7 +240,7 @@ gridModel.edit({
    mode: null
 });
 ```
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

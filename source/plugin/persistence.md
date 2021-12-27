@@ -11,7 +11,7 @@ Use persistence plugin to save and restore q-grid state.
 
 {% docEditor "github/qgrid/ng2-example/tree/persistence-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -30,7 +30,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-save/load-state-on-server">
+<a name="how-to-save/load-state-on-server" href="#how-to-save/load-state-on-server">
    How to save/load state on server?
 </a>
 

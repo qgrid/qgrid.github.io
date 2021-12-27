@@ -12,7 +12,7 @@ order: 1
 
 The main benefit of the q-grid model concept is a tight control over the q-grid state. The model instance becomes an entry point for the q-grid behavior transformations. The plugin system uses this feature to be simple and clear. Along with `DOM table`, plugins can be designed as standalone units without any q-grid internal infrastructure knowledge. Note that all components except table core units are plugins.
 
-<a name="#what-we-are-going-to-build">
+<a name="what-we-are-going-to-build" href="#what-we-are-going-to-build">
    What we are going to build
 </a>
 
@@ -20,7 +20,7 @@ This page covers the fundamentals of the q-grid plugin system. We will build a c
 
 {% docEditor "doc-qgrid-ng2-plugin" %}
 
-<a name="#the-command">
+<a name="the-command" href="#the-command">
    The Command
 </a>
 
@@ -37,7 +37,7 @@ const { shortcut, manager } = this.plugin.model.action();
 shortcut.register(manager, [this.gotoNext, this.gotoPrev]);
 ```
 
-<a name="#pager-template">
+<a name="pager-template" href="#pager-template">
    Pager Template
 </a>
 
@@ -55,7 +55,7 @@ To show list of available pages we iterate through the component pages property 
 
 ```
 
-<a name="#plugin-service">
+<a name="plugin-service" href="#plugin-service">
     Plugin Service
 </a>
 
@@ -63,7 +63,7 @@ To show list of available pages we iterate through the component pages property 
 
 * Also `GridPlugin` service provides access to the q-grid DOM abstraction through the `table` property, which could be used in the complicated cases.
 
-<a name="#pager-component">
+<a name="pager-component" href="#pager-component">
     Pager Component
 </a>
 
@@ -123,7 +123,7 @@ class MyPagerComponent {
 }
 ```
 
-<a name="#coming-soon">
+<a name="coming-soon" href="#coming-soon">
    Coming Soon
 </a>
 

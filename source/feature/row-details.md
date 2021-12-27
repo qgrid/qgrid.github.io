@@ -50,7 +50,7 @@ export class MyComponent implements AfterViewInit {
 
 > Use `$cell.row.item` in template to get access to the data row.
 
-<a name="how-to-expand-or-collapse-all-row-details">
+<a name="how-to-expand-or-collapse-all-row-details" href="#how-to-expand-or-collapse-all-row-details">
    How to expand or collapse all row details?
 </a>
 
@@ -69,7 +69,7 @@ gridModel.row({
 });
 ```
 
-<a name="how-to-disable/hide-expand-button">
+<a name="how-to-disable/hide-expand-button" href="#how-to-disable/hide-expand-button">
    How to disable/hide expand button?
 </a>
 
@@ -83,7 +83,7 @@ gridModel.row({
 });
 ```
 
-<a name="how-to-show-nested-q-grid-in-details-template">
+<a name="how-to-show-nested-q-grid-in-details-template" href="#how-to-show-nested-q-grid-in-details-template">
    How to show nested q-grid in details template?
 </a>
 
@@ -149,7 +149,7 @@ export class MyComponent implements AfterViewInit {
 {% docEditor "github/qgrid/ng2-example/tree/details-row-grid/latest" %}
 
 
-<a name="how-to-hide-row-details-expand-column">
+<a name="how-to-hide-row-details-expand-column" href="#how-to-hide-row-details-expand-column">
    How to hide row details expand column?
 </a>
 
@@ -165,7 +165,7 @@ Use `[isVisible]` attribute of `row-expand` column type.
 </q-grid>
 ```
 
-<a name="how-to-expand-details-on-row-click-or-on-keyboard-event">
+<a name="how-to-expand-details-on-row-click-or-on-keyboard-event" href="#how-to-expand-details-on-row-click-or-on-keyboard-event">
    How to expand details on row click or on keyboard event?
 </a>
 
@@ -173,7 +173,7 @@ Mouse and keyboard API provides services over user interactions, consider to use
 
 {% docEditor "github/qgrid/ng2-example/tree/details-row-custom/latest" %}
 
-<a name="suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

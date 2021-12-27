@@ -7,7 +7,7 @@ order: 5
 
 Tooltip provides a text label that is displayed when the user hovers over a q-grid cell.
 
-<a name="#installation">
+<a name="#installation" href="#installation">
    Installation
 </a>
 

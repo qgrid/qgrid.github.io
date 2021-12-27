@@ -9,7 +9,7 @@ order: 11
 
 {% docEditor "github/qgrid/ng2-example/tree/dropdown-basic/latest" %}
 
-<a name="#installation">
+<a name="installation" href="#installation">
    Installation
 </a>
 
@@ -45,7 +45,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#how-to-show-labels-in-dropdown-list">
+<a name="how-to-show-labels-in-dropdown-list" href="#how-to-show-labels-in-dropdown-list">
    How to show labels in dropdown list?
 </a>
 
@@ -88,7 +88,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

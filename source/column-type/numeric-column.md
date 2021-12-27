@@ -19,7 +19,7 @@ Use number type to display decimal values. Here are some specific properties:
 
 {% docEditor "github/qgrid/ng2-example/tree/column-number-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
   Default template and specific properties
 </a>
 
@@ -37,7 +37,7 @@ Use number type to display decimal values. Here are some specific properties:
 </q-grid>
 ```
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
    Suggested Links
 </a>
 

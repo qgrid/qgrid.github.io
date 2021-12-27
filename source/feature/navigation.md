@@ -11,7 +11,7 @@ order: 13
 
 The q-grid navigation system supports various keyboard events to start keyboard navigation q-grid should be focused.
 
-<a name="#what-shortcuts-does-navigation-implement-by-default">
+<a name="what-shortcuts-does-navigation-implement-by-default" href="#what-shortcuts-does-navigation-implement-by-default">
    What shortcuts does navigation implement by default?
 </a>
 
@@ -28,7 +28,7 @@ The q-grid navigation system supports various keyboard events to start keyboard 
 * `shift+pageUp` - upward.
 * `shift+pageDown`- downward.
 
-<a name="#how-to-override-default-navigation-shortcuts?">
+<a name="how-to-override-default-navigation-shortcuts" href="#how-to-override-default-navigation-shortcuts">
    How to override default navigation shortcuts?
 </a>
 
@@ -74,7 +74,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="#shortcut-limitations-for-browsers">
+<a name="shortcut-limitations-for-browsers" href="#shortcut-limitations-for-browsers">
    Shortcut limitations for browsers
 </a>
 
@@ -88,13 +88,13 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
   
 > If you use q-grid in electron box, these shortcuts could be overwritten.
 
-<a name="#prevent-default-keyboard-actions">
+<a name="prevent-default-keyboard-actions" href="#prevent-default-keyboard-actions">
   Prevent default keyboard actions
 </a>
 
 q-grid prevents some default browser shortcuts actions when it's focused, like `home` and `end` key presses. Use `prevent` property from the `model.navigation()` state to manage it. 
 
-<a name="#suggested-links">
+<a name="suggested-links" href="#suggested-links">
   Suggested Links
 </a>
 

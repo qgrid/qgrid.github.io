@@ -12,7 +12,7 @@ order: 5
 
 There are many UI abilities that q-grid provides to filter data. Choose column filters, filter row, condition builder or implement custom filters.
 
-<a name="how-to-add-default-filter-on-component-load">
+<a name="how-to-add-default-filter-on-component-load" href="#how-to-add-default-filter-on-component-load">
    How to add default filter on component load?
 </a>
 
@@ -59,7 +59,7 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-<a name="how-to-add-a-filter-row">
+<a name="how-to-add-a-filter-row" href="#how-to-add-a-filter-row">
    How to add a filter row?
 </a>
 
@@ -99,7 +99,7 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
 
-<a name="how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server">
+<a name="how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server" href="#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server">
    How to propagate list of filter by items to the column filter from the server?
 </a>
 
@@ -136,7 +136,7 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 }
 ```
 
-<a name="how-to-disable-particular-column-filter">
+<a name="how-to-disable-particular-column-filter" href="#how-to-disable-particular-column-filter">
    How to disable particular column filter?
 </a>
 
@@ -148,7 +148,7 @@ Each column has `canFilter` property that could be used as indicator if filter i
 </q-grid>
 ```
 
-<a name="how-to-filter-q-grid-externally">
+<a name="how-to-filter-q-grid-externally" href="#how-to-filter-q-grid-externally">
    How to filter q-grid externally?
 </a>
 

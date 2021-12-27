@@ -19,7 +19,7 @@ Use file column type for uploading and linking files.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-file-basic/latest" %}
 
-<a name="#image">
+<a name="image" href="#image">
    Image
 </a>
 
@@ -36,7 +36,7 @@ Use this column type to display and upload images.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-image-basic/latest" %}
 
-<a name="#default-template-and-specific-properties">
+<a name="default-template-and-specific-properties" href="default-template-and-specific-properties">
    Default template and specific properties
 </a>
 

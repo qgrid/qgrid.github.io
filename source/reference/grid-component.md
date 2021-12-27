@@ -22,7 +22,7 @@ export class MyComponent {
 }
 ```
 
-<a name="#what-about-id-in-the-q-grid">
+<a name="what-about-id-in-the-q-grid" href="#what-about-id-in-the-q-grid">
    What about id in the q-grid?
 </a>
 
@@ -32,7 +32,7 @@ Be carful by setting up id in the q-grid it should be unique across whole html p
 <q-grid id="my-grid"></q-grid>
 ```
 
-<a name="#how-to-setup-title-of-the-grid">
+<a name="how-to-setup-title-of-the-grid" href="#how-to-setup-title-of-the-grid">
    How to setup title of the grid?
 </a>
 
