@@ -3,10 +3,16 @@ title: Autocomplete
 group: Plugins
 order: 11
 ---
+- [Installation](#installation)
+- [How to show custom label for this list of objects?](#how-to-show-custom-label-for-this-list-of-objects)
+- [Suggested Links](#suggested-links)
+
 
 {% docEditor "github/qgrid/ng2-example/tree/autocomplete-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 Use `autocomplete` as a column editor.
 
@@ -41,7 +47,9 @@ export class MyComponent {
 }
 ```
 
-## How to show custom label for this list of objects?
+<a name="how-to-show-custom-label-for-this-list-of-objects" href="#how-to-show-custom-label-for-this-list-of-objects">
+   How to show custom label for this list of objects?
+</a>
 
 First make column type equals to `object`, than setup `[label]` callback that will receive data row and `[itemLabel]` callback that will receive values returned by `fetch` function. 
 
@@ -86,6 +94,8 @@ export class MyComponent {
 }
 ```
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [Fetch](/reference/fetch.html)

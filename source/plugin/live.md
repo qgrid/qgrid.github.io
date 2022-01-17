@@ -3,12 +3,16 @@ title: Live
 group: Plugins
 order: 14
 ---
+- [Installation](#installation)
+- [InstaHow to setup animation period?llation](#how-to-setup-animation-period)
 
 Use live plugin to animate cells and rows when they will be changed.
 
 {% docEditor "github/qgrid/ng2-example/tree/live-data-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 Use `q-grid-live-cell` inside cell template to animate cell's content and `q-grid-live-row` for rows animation.
 
@@ -36,7 +40,9 @@ export class MyComponent {
    constructor(private dataService: MyDataService) {}
 ```
 
-## How to setup animation period?
+<a name="how-to-setup-animation-period" href="#how-to-setup-animation-period">
+   How to setup animation period?
+</a>
 
 Use `duration` attribute that receives milliseconds, by default duration equals to 200ms.
 

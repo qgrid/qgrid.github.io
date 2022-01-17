@@ -3,12 +3,16 @@ title: Action
 group: Plugins
 order: 8
 ---
+- [installation](#installation)
+- [How to override action template?](#how-to-override-action-template)
 
 Action is just a representation of the command that is utilized by q-grid. Use `<ng-template for="trigger">` component to customize action.
 
 {% docEditor "github/qgrid/ng2-example/tree/action-bar-template/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 Add validation module to imports section.
 
@@ -79,7 +83,9 @@ export class MyComponent {
 }
 ```
 
-## How to override action template?
+<a name="how-to-override-action-template" href="#how-to-override-action-template">
+   How to override action template?
+</a>
 
 Use `ng-template` inside `q-grid-action` template.
 

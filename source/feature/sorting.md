@@ -4,6 +4,10 @@ group: Features
 order: 6
 ---
 
+- [How to prevent column order affect on sorting?](#how-to-prevent-column-order-affect-on-sorting)
+- [How to change default column sorting?](#how-to-change-default-column-sorting)
+- [How to allow to sort only by one column at the same time?](#how-to-allow-to-sort-only-by-one-column-at-the-same-time)
+
 Use q-grid sorting model to sort single and multiple data-bound columns.
 
 ```typescript
@@ -35,7 +39,9 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/sort-row-basic/latest" %}
 
-## How to prevent column order affect on sorting?
+<a name="how-to-prevent-column-order-affect-on-sorting" href="#how-to-prevent-column-order-affect-on-sorting">
+   How to prevent column order affect on sorting?
+</a>
 
 By default sorting order depends on column order, to apply sequent order `trigger` array should be set to empty.
 
@@ -56,8 +62,9 @@ export class MyComponent implements AfterViewInit {
    }
 }
 ```
-
-## How to change default column sorting?
+<a name="how-to-change-default-column-sorting" href="#how-to-change-default-column-sorting">
+   How to change default column sorting?
+</a>
 
 Each column has `compare` property that can be overridden to change sort algorithm.
 
@@ -80,7 +87,10 @@ export class MyComponent {
 }
 ```
 
-## How to allow to sort only by one column at the same time?
+<a name="how-to-allow-to-sort-only-by-one-column-at-the-same-time" href="#how-to-allow-to-sort-only-by-one-column-at-the-same-time">
+   How to allow to sort only by one column at the same time?
+</a>
+
 
 Set sort `mode` equals to `single`.
 

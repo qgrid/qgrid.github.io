@@ -3,6 +3,10 @@ title: Focusing
 group: Features
 order: 14
 ---
+- [How to apply auto focus in q-grid?](#how-to-apply-auto-focus-in-q-grid)
+- [How to focus the last row?](#how-to-focus-the-last-row)
+- [How to understand if q-grid is in focus or not?](#how-to-understand-if-q-grid-is-in-focus-or-not)
+
 
 Use q-grid service to get control over focused cell, selected page will be automatically adjusted.
 
@@ -34,7 +38,9 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/focus-cell-basic/latest" %}
 
-## How to apply auto focus in q-grid?
+<a name="how-to-apply-auto-focus-in-q-grid" href="#how-to-apply-auto-focus-in-q-grid">
+   How to apply auto focus in q-grid?
+</a>
 
 Add `q-grid-autofocus` directive on q-grid component?
 
@@ -46,7 +52,9 @@ Add `q-grid-autofocus` directive on q-grid component?
 </q-grid>
 ```
 
-## How to focus the last row?
+<a name="how-to-focus-the-last-row" href="#how-to-focus-the-last-row">
+   How to focus the last row?
+</a>
 
 Use focus method of q-grid service, it will automatically got to the necessary page if required.
 
@@ -81,7 +89,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to understand if q-grid is in focus or not?
+<a name="how-to-understand-if-q-grid-is-in-focus-or-not" href="#how-to-understand-if-q-grid-is-in-focus-or-not">
+   How to understand if q-grid is in focus or not?
+</a>
 
 Use q-grid `focus` model to understand whether it's active or not.
 

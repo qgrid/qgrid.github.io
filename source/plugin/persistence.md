@@ -3,12 +3,17 @@ title: State Persistence
 group: Plugins
 order: 9
 ---
+- [Installation](#installation)
+- [How to save/load state on server?](#how-to-save/load-state-on-server)
+
 
 Use persistence plugin to save and restore q-grid state.
 
 {% docEditor "github/qgrid/ng2-example/tree/persistence-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component, after that persistance action should appear in the top toolbar.
 
@@ -25,7 +30,9 @@ export class MyComponent {
 }
 ```
 
-## How to save/load state on server?
+<a name="how-to-save/load-state-on-server" href="#how-to-save/load-state-on-server">
+   How to save/load state on server?
+</a>
 
 Use `persistence` model to override default behavior.
 
