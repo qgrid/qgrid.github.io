@@ -17,6 +17,10 @@
 		.hide-list {
 			ul {
 				display: none;
+
+				&.show {
+					display: block;
+				}
 			}
 
 			h3::before {
@@ -47,6 +51,10 @@
 
 		.nav-item {
 			min-width: 270px;
+
+			&:first-child ul {
+				display: block;
+			}
 		}
 
 		ul {

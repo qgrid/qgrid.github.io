@@ -169,10 +169,12 @@ function removeTagText(menuItem, search) {
 
 	if (search) {
 		menuItem.classList.add('hide');
+		menuItem.parentElement.classList.add('show');
 	}
 	else {
 		menuItem.classList.remove('hide');
 		menuItemOpen(menuItem.parentElement);
+		menuItem.parentElement.classList.remove('show');
 	}
 
 	if (menuItem.querySelector('.tag')) {
