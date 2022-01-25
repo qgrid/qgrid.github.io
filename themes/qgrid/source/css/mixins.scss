@@ -48,3 +48,8 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+@mixin squareSize($size) {
+	width: $size;
+	height: $size;
+}

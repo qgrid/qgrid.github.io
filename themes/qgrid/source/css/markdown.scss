@@ -66,12 +66,9 @@
 		color: #0078cf;
 	}
 	a[name] {
+		@include fontStylingSet(24px, 32px, 500, black);
 		font-family: $font-serif;
 		display: block;
-		font-size: 24px;
-		line-height: 32px;
-		font-weight: 500;
-		color: black;
 		margin: 25px 0;
 	}
 	blockquote {
@@ -95,14 +92,13 @@
 			line-height: 1.4em;
 			padding-left: 12px;
 			&:before {
+				@include squareSize(8px);
 				content: "\203A";
 				font-size: 18px;
 				color: $accent-color;
 				position: absolute;
 				left: 0;
 				top: -2px;
-				width: 8px;
-				height: 8px;
 			}
 		}
 	}

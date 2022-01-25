@@ -17,10 +17,6 @@
 		.hide-list {
 			ul {
 				display: none;
-
-				&.show {
-					display: block;
-				}
 			}
 
 			h3::before {
@@ -30,11 +26,10 @@
 
 		h3 {
 			@include fontStylingSet(18px, 18px, bold, $color-white);
+			@include flexBetweenSet;
 			cursor: pointer;
 			margin: 0;
-			display: flex;
 			align-items: center;
-			justify-content: space-between;
 			padding: 0 24px;
 			margin-bottom: 16px;
 
@@ -123,9 +118,14 @@
 				background-color: $accent-color;
 				a,
 				span {
-					color: white;
+					color: $color-white;
 				}
 			}
+		}
+	}
+	&.has-highlight nav div.nav-item.hide-list {
+		ul {
+			display: block
 		}
 	}
 }

@@ -3,14 +3,15 @@ const SEARCHABLE_ELEMENTS = ['H2', 'H3', 'P'];
 
 function toggleVisibility(e) {
 	const target = e.target || e.srcElement;
+	const nav = document.getElementById('nav');
+	const overlay = document.getElementById('overlay');
+
 	if (target.dataset.hasOwnProperty('stopPropagation')) {
 		e.stopImmediatePropagation();
 		return;
 	}
 
-	const nav = document.getElementById('nav');
-	const overlay = document.getElementById('overlay');
-	if(e.target.nodeName != 'H3') {
+	if(target.nodeName != 'H3') {
 		if (nav.style.display === 'none' || nav.style.display === '') {
 			nav.style.display = 'block';
 			overlay.style.display = 'block';
