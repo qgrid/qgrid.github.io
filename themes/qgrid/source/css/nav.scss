@@ -94,6 +94,7 @@
 					}
 				}
 				.tag {
+					position: relative;
 					display: inline;
 					font-size: 0.8em;
 					font-style: italic;
@@ -103,13 +104,22 @@
 						margin-left: 0;
 						color: inherit;
 					}
+
+					&::before {
+						content: '/';
+						display: inline;
+						font-style: italic;
+						margin-left: 5px;
+						margin-right: 8px;
+						color: grey;
+					}
 				}
-				.border {
-					display: inline;
-					font-style: italic;
-					margin-left: 5px;
-					color: grey;
-				}
+				// .border {
+				// 	display: none;
+				// 	font-style: italic;
+				// 	margin-left: 5px;
+				// 	color: grey;
+				// }
 			}
 			.hide {
 				display: none !important;
@@ -123,9 +133,16 @@
 			}
 		}
 	}
-	&.has-highlight nav div.nav-item.hide-list {
+	&.has-highlight nav div.nav-item {
 		ul {
-			display: block
+			display: block;
+
+			li {
+				display: none;
+				&.show {
+					display: block;
+				}
+			}
 		}
 	}
 }
