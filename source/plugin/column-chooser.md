@@ -4,6 +4,7 @@ group: Plugins
 order: 15
 ---
 - [Installation](#installation)
+- [How To](#howto)
 
 Column chooser plugin
 
@@ -16,3 +17,37 @@ Column chooser plugin
 This plugin is pre-installed in qgrid and will be rendered by default.
 
 To remove the column chooser, empty the actions array.
+
+<a name="howto" href="#howto">
+   How to
+</a>
+
+To remove the column chooser, empty the actions array.
+
+```typescript
+@Component({
+	selector: 'example',
+	template: `
+		<q-grid [caption]="title"
+			[rows]="rows | async"
+			[model]="gridModel">
+			<q-grid-columns generation="deep">
+			</q-grid-columns>
+		</q-grid>
+	`,
+	providers: [DataService],
+	changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class ExampleActionBarOnEnterComponent {
+	rows: Observable<Atom[]>;
+	gridModel: GridModel;
+	gridService: GridService;
+
+	constructor(dataService: DataService, qgrid: Grid) {
+		this.rows = dataService.getRows();
+
+      //Empty the actions array to remove the column chooser
+		this.gridModel = qgrid.model().action({items: []});
+	}
+}
+```
