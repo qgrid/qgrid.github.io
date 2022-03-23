@@ -38,16 +38,14 @@ To remove the column chooser, empty the actions array.
 	providers: [DataService],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExampleActionBarOnEnterComponent {
-	rows: Observable<Atom[]>;
-	gridModel: GridModel;
+export class ExampleComponent {
+	rows: Observable<any[]>;
 	gridService: GridService;
+   //Empty the actions array to remove the column chooser
+	gridModel: qgrid.model().action({items: []});
 
 	constructor(dataService: DataService, qgrid: Grid) {
 		this.rows = dataService.getRows();
-
-      //Empty the actions array to remove the column chooser
-		this.gridModel = qgrid.model().action({items: []});
 	}
 }
 ```
