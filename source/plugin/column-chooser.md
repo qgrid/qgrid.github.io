@@ -26,9 +26,9 @@ To remove the column chooser, empty the actions array.
 
 ```typescript
 @Component({
-	selector: 'example',
+	selector: 'my-component',
 	template: `
-		<q-grid [rows]="rows | async" [model]="gridModel">
+		<q-grid [rows]="rows$ | async" [model]="gridModel">
 			<q-grid-columns generation="deep">
 			</q-grid-columns>
 		</q-grid>
@@ -36,14 +36,14 @@ To remove the column chooser, empty the actions array.
 	providers: [DataService],
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ExampleComponent {
-	rows = this.dataService.getRows();
+export class MyComponent {
+	rows$= this.dataService.getRows();
 	gridModel = this.qgrid.model().action({items: []});
 
 	constructor(
-      dataService: DataService,
-      qgrid: Grid
-   ) {
+		private dataService: DataService,
+		private qgrid: Grid
+	) {
 	}
 }
 ```
