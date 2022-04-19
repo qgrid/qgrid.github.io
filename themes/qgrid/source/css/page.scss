@@ -143,12 +143,12 @@ section.header {
 a.github-link2 {
     @extend .github-link;
     float: right;
-    color: white;
+    color: $color-white;
     font-size: 12px;
     font-family: Roboto;
     position: relative;
     margin: -22px -19px 0 0;
-    border-color: white;
+    border-color: $color-white;
     padding: 3px 3px 0 6px;
     opacity: 0.75;
 }

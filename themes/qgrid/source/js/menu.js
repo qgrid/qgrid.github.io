@@ -3,14 +3,15 @@ const SEARCHABLE_ELEMENTS = ['H2', 'H3', 'P'];
 
 function toggleVisibility(e) {
 	const target = e.target || e.srcElement;
+	const nav = document.getElementById('nav');
+	const overlay = document.getElementById('overlay');
+
 	if (target.dataset.hasOwnProperty('stopPropagation')) {
 		e.stopImmediatePropagation();
 		return;
 	}
 
-	const nav = document.getElementById('nav');
-	const overlay = document.getElementById('overlay');
-	if(e.target.nodeName != 'H3') {
+	if(target.nodeName != 'H3') {
 		if (nav.style.display === 'none' || nav.style.display === '') {
 			nav.style.display = 'block';
 			overlay.style.display = 'block';
@@ -82,7 +83,6 @@ function searchOnHashChange() {
 
 function currentPageSearch(search) {
 	const active = document.querySelector('.active-topic');
-	active.classList.remove('hide');
 	let scrolled = false;
 	document.querySelectorAll('.page-wrapper *').forEach(node => {
 		if (SEARCHABLE_ELEMENTS.includes(node.nodeName)) {
@@ -98,10 +98,6 @@ function currentPageSearch(search) {
 			}
 		}
 	});
-
-	if (!scrolled && !active.textContent.toLowerCase().includes(search)) {
-		active.classList.add('hide');
-	}
 }
 
 function menuItemsSearch(search) {
@@ -145,13 +141,6 @@ function testSearch(tag, search) {
 }
 
 function appendTagText(menuItem, tag, search) {
-	menuItem.classList.remove('hide');
-	if (!menuItem.querySelector('.border')) {
-		const border = menuItem.appendChild(document.createElement('span'));
-		border.classList.add('border');
-		border.textContent = '/ ';
-	}
-
 	if (!menuItem.querySelector('.tag')) {
 		const tag = menuItem.appendChild(document.createElement('a'));
 		tag.classList.add('tag');
@@ -168,19 +157,14 @@ function removeTagText(menuItem, search) {
 	menuItem.querySelector('.title').classList.remove('menu-item');
 
 	if (search) {
-		menuItem.classList.add('hide');
+		menuItem.classList.remove('show'); 
 	}
 	else {
-		menuItem.classList.remove('hide');
 		menuItemOpen(menuItem.parentElement);
 	}
 
 	if (menuItem.querySelector('.tag')) {
 		menuItem.removeChild(menuItem.querySelector('.tag'));
-	}
-
-	if (menuItem.querySelector('.border')) {
-		menuItem.removeChild(menuItem.querySelector('.border'));
 	}
 }
 
@@ -223,7 +207,7 @@ function highlightText(item, search) {
 		for (let a of aTags) {
 			item.insertBefore(a, item.firstChild);
 		}
-		item.parentElement.classList.remove('hide');
+		item.parentElement.classList.add('show'); 
 		return true;
 	}
 
