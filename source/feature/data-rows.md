@@ -129,5 +129,3 @@ export class MyComponent implements AfterViewInit {
    constructor(private qgrid: Grid) {}
 }
 ```
-
-{% docEditor "github/qgrid/ng2-example/tree/drag-row-basic/latest" %}
