@@ -3,6 +3,7 @@ title: Virtualization
 group: Features
 order: 19
 ---
+- [How to implement infinite scroll?](#how-to-implement-infinite-scroll)
 
 > Don't use virtualization in the production code, it's in BETA .
 
@@ -39,7 +40,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to implement infinite scroll?
+<a name="how-to-implement-infinite-scroll" href="#how-to-implement-infinite-scroll">
+   How to implement infinite scroll?
+</a>
 
 Override default pipeline with serve call on the top.
 

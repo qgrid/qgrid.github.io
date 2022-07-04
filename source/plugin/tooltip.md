@@ -3,10 +3,13 @@ title: Tooltip
 group: Plugins
 order: 5
 ---
+- [Installation](#installation)
 
 Tooltip provides a text label that is displayed when the user hovers over a q-grid cell.
 
-## Installation
+<a name="#installation" href="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component.
 

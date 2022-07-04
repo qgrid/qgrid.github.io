@@ -3,6 +3,8 @@ title: Currency
 group: Column Types
 order: 3
 ---
+- [Default template and specific properties](#default-template-and-specific-properties)
+- [Suggested Links](#suggested-links)
 
 Use currency type to display decimal values in a currency format.
 
@@ -17,7 +19,9 @@ Use currency type to display decimal values in a currency format.
 
 {% docEditor "github/qgrid/ng2-example/tree/column-currency-basic/latest" %}
 
-## Default template and specific properties
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Use `code` property to set the ISO 4217 currency code, such as `USD` for the US dollar and `EUR` for the euro. The default is `USD`.
 
@@ -33,6 +37,8 @@ Use currency type to display decimal values in a currency format.
 </q-grid>
 ```
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [Angular currency pipe](https://angular.io/api/common/CurrencyPipe)

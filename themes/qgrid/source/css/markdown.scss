@@ -3,7 +3,7 @@
 	h1:first-child {
 		font-family: $font-serif;
 		font-weight: 500;
-		margin: 54px 0 32px 0;
+		margin: 0 0 32px 0;
 		font-size: 48px;
 		line-height: 63px;
 	}
@@ -63,7 +63,13 @@
 	}
 	a {
 		text-decoration: none;
-		color: #0078cf
+		color: #0078cf;
+	}
+	a[name] {
+		@include fontStylingSet(24px, 32px, 500, black);
+		font-family: $font-serif;
+		display: block;
+		margin: 25px 0;
 	}
 	blockquote {
 		padding: 1em 2em;
@@ -86,16 +92,13 @@
 			line-height: 1.4em;
 			padding-left: 12px;
 			&:before {
-				content: "";
+				@include squareSize(8px);
+				content: "\203A";
+				font-size: 18px;
+				color: $accent-color;
 				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
 				left: 0;
-				width: 8px;
-				height: 8px;
-				background-repeat: no-repeat;
-				background-image: url("../assets/images/list-arrow.svg");
-				background-size: contain;
+				top: -2px;
 			}
 		}
 	}

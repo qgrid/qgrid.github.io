@@ -3,6 +3,7 @@ title: Grid Model
 group: Reference
 order: 1
 ---
+- [How to detect if something was changed in the model?](#рow-to-detect-if-something-was-changed-in-the-model)
 
 The most of work could be configured in the HTML templates but sometimes it's required to have direct access to the `model` - a state container of the q-grid.
 
@@ -31,7 +32,9 @@ export class MyComponent implements AfterViewInit {
 
 > q-grid state implements immutable pattern so to change the state new value or reference should be created in other case nothing will happen.
 
-## How to detect if something was changed in the model?
+<a name="how-to-detect-if-something-was-changed-in-the-model" href="#how-to-detect-if-something-was-changed-in-the-model">
+   How to detect if something was changed in the model?
+</a>
 
 All separate states in the model have `<name-of-state>Changed` property to handle model modifications. There are two methods for changes subscription.
 

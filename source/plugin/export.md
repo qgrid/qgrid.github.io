@@ -3,12 +3,20 @@ title: Export to file
 group: Plugins
 order: 3
 ---
+- [Installation](#installation)
+- [How to add excel support?](#how-to-add-excel-support)
+- [How to support custom template for export action?](#how-to-support-custom-template-for-export-action)
+- [What format types are supported?](#what-format-types-are-supported)
+- [Suggested Links](#suggested-links)
 
 Use q-grid export plugin to build data files of required format on client side.
 
 {% docEditor "github/qgrid/ng2-example/tree/export-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
+
 
 Install `FileSaver.js` package.
 
@@ -49,7 +57,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to add excel support?
+<a name="how-to-add-excel-support" href="#how-to-add-excel-support">
+   How to add excel support?
+</a>
 
 Install `SheetJS` package.
 
@@ -91,7 +101,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to support custom template for export action?
+<a name="how-to-support-custom-template-for-export-action" href="#how-to-support-custom-template-for-export-action">
+   How to support custom template for export action?
+</a>
 
 Use ng-template to override default export action template.
 
@@ -105,7 +117,9 @@ Use ng-template to override default export action template.
 </q-grid-export>
 ```
 
-## What format types are supported?
+<a name="what-format-types-are-supported" href="#what-format-types-are-supported">
+   What format types are supported?
+</a>
 
 Out of box supported next formats.
 
@@ -114,7 +128,9 @@ Out of box supported next formats.
 * `xlsx`
 * `xml`
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [FileSaver.js](https://www.npmjs.com/package/file-saver)
 * [SheetJS](https://www.npmjs.com/package/xlsx)

@@ -24,10 +24,10 @@
 
 		.marked {
 			display: block;
-			background: linear-gradient(180deg, #2F80ED 54%, #11DED2 100%);
+			background: linear-gradient(180deg, $color-accent, 54%, #11DED2 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-			color: #2F80ED;
+			color: $color-accent;
 		}
 	}
 
@@ -74,7 +74,7 @@
 		margin-bottom: 0;
 
 		h1 {
-			margin: 85px 0 0 0;
+			margin: 73px 0 0 0;
 		}
 	
 		.highlight {
@@ -84,20 +84,28 @@
 
 		.nav {
 			background-color: $color-dark-bg;
-			width: 100%;
 			max-width: 1024px;
-			margin-left: auto;
-			margin-right: auto;
+			margin: 0 auto;
 			border-bottom: 0;
+			padding-top: 0;
 
 			.qgrid-logo {
 				width: 46px;
 				height: 32px;
 				margin-top: -14px;
+				margin-right: 0;
+			}
+
+			.nav-trigger {
+				display: none;
 			}
 
 			.frameworks li:not(:last-child) {
 				margin-right: 40px;
+			}
+
+			.button {
+				padding: 4px 22px;
 			}
 		}
 	}
@@ -107,6 +115,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: calc((#{$editor-height} / 2) * -1);
+		margin-bottom: 66px;
 	}
 }
 
@@ -123,20 +132,8 @@
 		position: relative;
 
 		a {
-			@include fontStylingSet(18px, 24px, inherit, $color-accent);
-			transition: opacity .15s ease-in-out;
-
 			&:hover {
 				opacity: 0.8;
-			}
-
-			&::after {
-				@include iconStylingSet(19px, 8px, "../assets/images/link-arrow.svg");
-				content: '';
-				background-size: contain;
-				background-repeat: no-repeat;
-				display: inline-block;
-				margin-left: 10px;
 			}
 		}
 	}
@@ -201,7 +198,7 @@
 	margin-bottom: 80px;
 
 	h4 {
-		margin: 40px 0 27px 0;
+		margin: 30px 0 27px 0;
 		font-weight: normal;
 	}
 
@@ -231,7 +228,7 @@
 		flex-direction: column;
 		text-align: center;
 		padding: 32px 24px 24px 24px;
-		height: 382px;
+		height: 380px;
 		box-sizing: border-box;
 		border-radius: 4px;
 
@@ -300,34 +297,22 @@
 	}
 
 	&::before {
-		content: '';
-		display: block;
-		width: 36px;
-		height: 42px;
-		position: absolute;
-		top: 24px;
-	}
-
-	&.docs::before {
-		@include iconStylingSet(36px, 42px, "../assets/images/documents-bluish.svg");
-	}
-
-	&.examp::before {
-		@include iconStylingSet(58px, 38px, "../assets/images/examples-bluish.svg");
-	}
-
-	&.github::before {
-		@include iconStylingSet(48px, 48px, "../assets/images/github-bluish.svg");
-	}
-	
-	&::after {
-		@include iconStylingSet(10px, 10px, "../assets/images/arrow-icon.svg");
-		content: '';
+		font-size: 10px;
 		position: absolute;
 		right: 31px;
 		bottom: 24px;
 		display: block;
-		background-size: contain;
+		color: $color-accent;
+	}
+	
+	.flex-item-icon::before {
+		display: block;
+		width: 36px;
+		height: 42px;
+		position: absolute;
+		top: 34px;
+		font-size: 40px;
+		color: $color-accent;
 	}
 }
 
@@ -350,37 +335,26 @@
 	}
 
 	&::before {
-		content: '';
-		display: block;
-		background-size: contain;
-		background-repeat: no-repeat;
+		@include squareSize(90px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin-bottom: 22px;
-	}
-
-	&.flexible::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/flexible-icon.svg");
-	}
-
-	&.customizable::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/castomizable-icon.svg");
-	}
-
-	&.typescript::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/typescript-icon.svg");
-	}
-
-	&.perform::before {
-		@include iconStylingSet(90px, 90px, "../assets/images/perfomance-icon.svg");
+		border-radius: 100%;
+		font-size: 50px;
+		background-color: $color-accent;
 	}
 
 	span {
 		font-weight: 500;
 		font-size: 1.2em;
 		margin-bottom: 16px;
+		color: $color-dark-bg;
 	}
 
 	p {
 		font-size: 1.1em;
+		color: $color-dark-bg;
 	}
 }
 
@@ -419,7 +393,9 @@
 
 		&.mail {
 			position: relative;
-			letter-spacing: 0.6px;
+			letter-spacing: 0;
+			font-size: 16px;
+			font-family: $font-sans;
 
 			&::after {
 				@include decorationUnderlineSet($color-white);
@@ -439,7 +415,8 @@
 
 	p {
 		@include fontStylingSet(14px, 16px, 400, inherit);
-		margin: 14px 0 0 0;
+		font-family: $font-sans;
+		margin: 22px 0 0 0;
 	}
 
 	h2 {
@@ -450,7 +427,7 @@
 	.footer__right {
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
+		justify-content: end;
 	}
 
 	.footer-logo-wrapper {

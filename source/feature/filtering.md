@@ -4,9 +4,17 @@ group: Features
 order: 5
 ---
 
+- [How to add default filter on component load?](#how-to-add-default-filter-on-component-load)
+- [How to add a filter row?](#how-to-add-a-filter-row)
+- [How to propagate list of filter by items to the column filter from the server?](#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server)
+- [How to disable particular column filter?](#how-to-disable-particular-column-filter)
+- [How to filter q-grid externally?](#how-to-filter-q-grid-externally)
+
 There are many UI abilities that q-grid provides to filter data. Choose column filters, filter row, condition builder or implement custom filters.
 
-## How to add default filter on component load?
+<a name="how-to-add-default-filter-on-component-load" href="#how-to-add-default-filter-on-component-load">
+   How to add default filter on component load?
+</a>
 
 Use `by` property to get or set filter settings.
 
@@ -51,7 +59,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to add a filter row?
+<a name="how-to-add-a-filter-row" href="#how-to-add-a-filter-row">
+   How to add a filter row?
+</a>
 
 To show filter controls under the column headers use `filterUnit` attribute, filter view can be overridden in the template definition.
 
@@ -89,7 +99,9 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
 
-## How to propagate list of filter by items to the column filter from the server?
+<a name="how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server" href="#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server">
+   How to propagate list of filter by items to the column filter from the server?
+</a>
 
 When server side pagination is used the data in q-grid can be not loaded fully in this case `fetch` callback can be used to get list of items to show in column filter component.
 
@@ -124,7 +136,9 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 }
 ```
 
-## How to disable particular column filter?
+<a name="how-to-disable-particular-column-filter" href="#how-to-disable-particular-column-filter">
+   How to disable particular column filter?
+</a>
 
 Each column has `canFilter` property that could be used as indicator if filter is applicable or not.
 
@@ -134,7 +148,9 @@ Each column has `canFilter` property that could be used as indicator if filter i
 </q-grid>
 ```
 
-## How to filter q-grid externally?
+<a name="how-to-filter-q-grid-externally" href="#how-to-filter-q-grid-externally">
+   How to filter q-grid externally?
+</a>
 
 Setup `custom` predicate to execute custom filtration. If filtering is required after the user input, just setup another instance of `custom` function.
 

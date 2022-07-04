@@ -52,11 +52,13 @@ section.header {
 }
 
 .nav-trigger {
+    width: 32px;
     font-size: 18px;
     display: none;
-    position: absolute;
-    top: 27px;
-    left: 20px;
+    position: relative;
+    padding: 0;
+    margin: 0 24px 0 32px;
+    border: none;
 }
 
 [class$="-trigger"] {
@@ -70,9 +72,9 @@ section.header {
     overflow: hidden;
     margin-left: auto;
 
-    &::before {
-        @include iconStylingSet(12px, 12px, "../assets/images/search.svg");
-        content: '';
+    &::before { 
+        color: $color-gray-placeholder;
+        font-size: 12px;
         display: block;
         position: absolute;
         left: 8px;
@@ -102,7 +104,7 @@ section.header {
 }
 
 .page-wrapper {
-    margin: 72px 56px 40px 45px;
+    margin: 128px 56px 40px 45px;
     max-width: 1000px;
     overflow: hidden;
 }
@@ -141,12 +143,12 @@ section.header {
 a.github-link2 {
     @extend .github-link;
     float: right;
-    color: white;
+    color: $color-white;
     font-size: 12px;
     font-family: Roboto;
     position: relative;
     margin: -22px -19px 0 0;
-    border-color: white;
+    border-color: $color-white;
     padding: 3px 3px 0 6px;
     opacity: 0.75;
 }

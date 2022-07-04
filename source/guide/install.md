@@ -4,11 +4,22 @@ group: Getting started
 order: 1
 ---
 
+- [Add q-grid & theme modules to the application root](#add-q-grid-theme-modules-to-the-application-root)
+- [Create an angular component](#create-an-angular-component)
+- [Dependencies](#dependencies)
+- [Development](#development)
+- [Browser Support](#browser-support)
+- [Licence](#licence)
+
+
 ```bash
 npm install ng2-qgrid
 ```
 
-## Add q-grid & theme modules to the application root
+<a name="add-q-grid-theme-modules-to-the-application-root" href="#add-q-grid-theme-modules-to-the-application-root">
+   Add q-grid & theme modules to the application root
+</a>
+
 
 There are 2 themes out of box `material` and `basic`.
 
@@ -28,7 +39,10 @@ export class AppModule {
 
 > Material theme requires `@angular/material` to be installed.
 
-## Create an angular component
+<a name="create-an-angular-component" href="#create-an-angular-component">
+   Create an angular component
+</a>
+
 
 Use column generation mode for a quick start.
 
@@ -57,7 +71,9 @@ export class MyComponent {
 }
 ```
 
-## Dependencies
+<a name="dependencies" href="#dependencies">
+   Dependencies
+</a>
 
 *  @angular/common
 *  @angular/core
@@ -68,7 +84,9 @@ If you use `material` theme from the q-grid package, you also need to install [a
 * @angular/cdk
 * @angular/material
 
-## Development
+<a name="development" href="#development">
+   Development
+</a>
 
 ```bash
 git clone https://github.com/qgrid/ng2.git
@@ -76,7 +94,9 @@ npm install
 npm run start
 ```
 
-## Browser Support
+<a name="browser-support" href="#browser-support">
+   Browser Support
+</a>
 
 * Last `Chrome` is supported.
 * Last `FireFox` is supported.
@@ -85,6 +105,8 @@ npm run start
 * `Safari` is in progress.
 * `IE11` is in progress.
 
-## Licence
+<a name="licence" href="#licence">
+   Licence
+</a>
 
 Code licensed under MIT license.

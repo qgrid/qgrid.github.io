@@ -3,12 +3,15 @@ title: Toolbar
 group: Plugins
 order: 10
 ---
+- [Installation](#installation)
 
 Use toolbar plugin to customize toolbar templates.
 
 {% docEditor "github/qgrid/ng2-example/tree/dynamic-column-model/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component. `Top`, `right`, `bottom` and `left`  areas are supported.
 

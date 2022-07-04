@@ -12,34 +12,43 @@
 		height: calc(100% - 98px);
 		overflow-y: auto;
 		overflow-x: hidden;
-		padding-top: 28px;
+		padding-top: 31px;
 
 		.hide-list {
 			ul {
 				display: none;
 			}
 
-			h3::after {
-				transform: rotate(180deg);
+			h3::before {
+				transform: rotate(0);
 			}
 		}
 
 		h3 {
 			@include fontStylingSet(18px, 18px, bold, $color-white);
+			@include flexBetweenSet;
 			cursor: pointer;
 			margin: 0;
-			display: flex;
 			align-items: center;
-			justify-content: space-between;
 			padding: 0 24px;
 			margin-bottom: 16px;
 
-			&::after {
-				content: '';
-				@include iconStylingSet(11px, 6px, "../assets/images/dropdown-arrow.svg");
+			&.icon-collapse {
+				flex-direction: row-reverse;
+			}
+
+			&::before {
+				font-size: 8px;
 				display: inline-block;
-				background-repeat: no-repeat;
-				transform: rotate(0);
+				transform: rotate(180deg);
+			}
+		}
+
+		.nav-item {
+			min-width: 270px;
+
+			&:first-child ul {
+				display: block;
 			}
 		}
 
@@ -85,6 +94,7 @@
 					}
 				}
 				.tag {
+					position: relative;
 					display: inline;
 					font-size: 0.8em;
 					font-style: italic;
@@ -94,12 +104,15 @@
 						margin-left: 0;
 						color: inherit;
 					}
-				}
-				.border {
-					display: inline;
-					font-style: italic;
-					margin-left: 5px;
-					color: grey;
+
+					&::before {
+						content: '/';
+						display: inline;
+						font-style: italic;
+						margin-left: 5px;
+						margin-right: 8px;
+						color: grey;
+					}
 				}
 			}
 			.hide {
@@ -109,7 +122,19 @@
 				background-color: $accent-color;
 				a,
 				span {
-					color: white;
+					color: $color-white;
+				}
+			}
+		}
+	}
+	&.has-highlight nav div.nav-item {
+		ul {
+			display: block;
+
+			li {
+				display: none;
+				&.show {
+					display: block;
 				}
 			}
 		}
@@ -127,6 +152,7 @@
 		width: 66px;
 		height: 46px;
 		background-size: contain;
+		margin-right: 34px;
 	}
 
 	.frameworks {
@@ -135,11 +161,10 @@
 		margin-right: auto;
 		margin-left: auto;
 
-		li {
+		li {		
 			&:not(:last-child ) {
-				margin-right: 16px;
-			}
-
+			margin-right: 16px;
+		}
 			& > a {
 				@include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
 				transition: $transition;
@@ -153,6 +178,7 @@
 
 	.button {
 		font-size: 1em;
-		padding: 6px 23px;
+		padding: 4px 21px;
+		white-space: nowrap;
 	}
 }
