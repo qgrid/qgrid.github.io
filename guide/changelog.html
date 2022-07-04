@@ -1,0 +1,1255 @@
+
+
+   <!DOCTYPE html>
+   <html lang="en">
+
+   <head>
+      <title>
+         Changelog — q-grid
+      </title>
+      <meta charset="utf-8">
+      <meta name="description" content="qgrid - Framework for creating data grids">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Changelog — qgrid">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="https:////images/logo.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Changelog — qgrid">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="https:///assets/logo.png">
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192"
+         href="/assets/favicons/android-chrome-192x192.png">
+      <link rel="icon" type="image/png" sizes="384x384"
+         href="/assets/favicons/android-chrome-384x384.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+      <meta name="msapplication-TileImage" content='/assets/favicons/ms-icon-144x144.png'>
+      <link rel="icon" href="/assets/logo.png" type="image/png">
+
+      <meta name="msapplication-TileColor" content="#2f80ed">
+      <meta name="theme-color" content="#2f80ed">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap"
+         rel="stylesheet">
+
+      <!-- main page styles -->
+      
+<link rel="stylesheet" href="/css/page.css">
+
+
+         <!-- this needs to be loaded before guide's inline scripts -->
+         <script src="/js/menu.js"></script>
+         <script src="/js/lazy.js"></script>
+         <script>window.PAGE_TYPE = "Getting started"</script>
+
+   <meta name="generator" content="Hexo 6.2.0"></head>
+
+   <body class="pages">
+
+      
+         <header>
+            
+<section class="header">
+	<nav class="nav">
+		<button id="nav-trigger" class="nav-trigger"></button>
+		<a class="qgrid-logo" href="/"></a>
+		
+			<span class="qgrid-search search-trigger">
+				<input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
+			</span>
+		
+		<a href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
+		<ul class="frameworks">
+			<li class="ready">
+				<a href="/guide/highlights.html">Documentation</a>
+			</li>
+			<li class="ready">
+				<a href="https://qgrid.github.io/ng2" class="qgrid-examples">Examples</a>
+			</li>
+			<li class="ready">
+				<a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2">GitHub</a>
+			</li>
+		</ul>
+	</nav>
+	
+</section>
+         </header>
+
+         <aside id="nav">
+            <nav>
+    
+    
+    <div class="nav-item">
+        <h3 onclick="onTogglerClick(event)" class="">Getting started</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/guide/highlights.html">Some Highlights</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/guide/install.html">How to install</a>
+        
+                        </li>
+
+    
+        <li data-tag="13.3.0 - 2022-07-04,Added,Changes,Fixes,11.2.0 - 2021-10-22,Added,Changes,Fixed,11.1.1 - 2021-06-16,Added,Fixed,11.0.1 - 2021-03-30,Fixed,11.0.0 - 2021-03-01,Added,Changed,BREAKING,9.2.1 - 2020-10-19,Fixed,Added,Changed,9.1.11 - 2020-08-19,Fixed,9.1.10 - 2020-08-17,Fixed,9.1.9 - 2020-08-13,Fixed,9.1.8 - 2020-08-11,Fixed,9.1.7 - 2020-07-23,Fixed,9.1.6 - 2020-07-20,Fixed,Changed,Added,9.1.5 - 2020-07-13,Fixed,Added,Changed,9.1.4 - 2020-06-01,BREAKING,Fixed,Added,9.1.2 - 2020-05-27,BREAKING,Added,Changed,Fixed,9.0.1 - 2020-03-13,Fixed,9.0.0 - 2020-03-13,Changed,BREAKING,7.5.2 - 2020-03-04,Fixed,7.5.1 - 2020-01-22,Fixed,7.5.0 - 2020-01-22,Added,Changed,Fixed,BREAKING,7.4.0 - 2019-08-16,Added,7.3.0 - 2019-08-08,Added,Changed,7.2.6 - 2019-07-31,Fixed,7.2.5 - 2019-07-29,Added,Fixed,7.2.4 - 2019-06-25,Fixed,7.2.3 - 2019-06-20,Fixed,7.2.2 - 2019-06-20,Fixed,7.2.1 - 2019-06-20,Fixed,7.2.0 - 2019-06-20,Changed,Fixed,Added,6.4.0 - 2019-05-14,Added,Fixed,6.3.9 - 2019-04-24,Added,6.3.8 - 2019-04-15,Fixed,6.3.7 - 2019-04-12,Fixed,6.3.5 - 2019-04-11,Changed,Fixed,6.3.4 - 2019-03-12,Fixed,6.3.0 - 2019-02-22,Added,Changed,Fixed,6.2.4 - 2019-02-05,Fixed,6.2.3 - 2019-02-05,Added,6.2.2,Fixed,6.2.1,Added,Fixed,6.2.0,Fixed,Added,BREAKING,6.1.5 - 2018-07-03,Fixed,Added,6.1.4 - 2018-06-28,Fixed,Added,Changed,6.1.3 - 2018-06-21,Fixed,6.1.1 - 2018-06-15,Fixed,Changed ,6.1.0 - 2018-06-15,BREAKING,Deprecated,Added,Changed,Fixed,5.3.10 - 2018-05-21,Added,Changed,Fixed,5.3.9 - 2018-05-18,Added,Changed,Fixed,5.3.7 - 2018-07-08,Added,Fixed,5.3.6 - 2018-04-20,Added,5.3.5 - 2018-04-19,Added,5.3.4 - 2018-04-18,Added,5.3.3 - 2018-04-13,Added,Fixed,5.3.2 - 2018-03-23,Added,Changed,Fixed,5.2.4 - 2018-02-16,Changed,Fixed,5.2.3 - 2018-02-12,Fixed,5.2.2 - 2018-02-12,Fixed,5.2.0 - 2018-02-09,Added,Changed,Fixed,5.1.2 - 2018-01-03,Added,Changed,5.1.1 - 2017-12-28,Added,Changed,Fixed,5.0.2 - 2017-12-22,Added" data-example-tag="" class="active-topic ">
+        
+                            <span class="title">Changelog</span>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Features</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/data-rows.html">Data Rows</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/data-columns.html">Data Columns</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/selection.html">Selection</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/cell-templates.html">Cell Templates</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/pagination.html">Pagination</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/filtering.html">Filtering</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/sorting.html">Sorting</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/layer-system.html">Layer System</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/appearance.html">Appearance</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/row-details.html">Row Details</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/editing.html">Editing</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/grouping.html">Grouping</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/navigation.html">Navigation</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/focus.html">Focusing</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/pivoting.html">Pivoting</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/busy.html">Busy Indicator</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/visibility.html">Visibility</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/master-details.html">Master-Details</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/virtualization.html">Virtualization</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Column Types</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/grid-column.html">Grid Column</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/array-column.html">Array</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/bool-column.html">Boolean</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/currency-column.html">Currency</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/date-column.html">Date Time</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/file-column.html">File & Image</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/numeric-column.html">Numeric</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/reference-column.html">Reference</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/row-indicator-column.html">Row Indicator</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/row-options-column.html">Row Options</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/select-column.html">Select</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/text-column.html">Text</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/url-column.html">Url & Email</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Customization</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/customization/template-system.html">Template System</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/customization/plugin.html">How to write a plugin</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/customization/theme.html">How to made a theme</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Plugins</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/condition-builder.html">Condition Builder</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/data-manipulation.html">Data Manipulation</a>
+        
+                        </li>
+
+    
+        <li data-tag="Request Total Count Once Strategy,Cache Already Requested Page Strategy,Check Next Page Count Strategy" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/data-provider.html">Data Provider</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/pager.html">Pager</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/export.html">Export to file</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/import.html">Import from file</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/legend.html">Legend</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/tooltip.html">Tooltip</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/rest.html">REST</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/validation.html">Validation</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/action.html">Action</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/persistence.html">State Persistence</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/toolbar.html">Toolbar</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/autocomplete.html">Autocomplete</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/dropdown.html">Dropdown</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/edit-form.html">Edit Form</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/pane.html">Pane</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/live.html">Live</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/column-chooser.html">Column chooser</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Reference</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/grid-component.html">Grid Component</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/grid-model.html">Grid Model</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/grid-facade.html">Grid Facade</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/data-middleware.html">Data Middleware</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/cell-service.html">Cell Service</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/view-service.html">View Service</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/performance.html">Performance Tips</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/style-api.html">Style API</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/dom.html">DOM Internals</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/keyboard-api.html">Keyboard API</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/mouse-api.html">Mouse API</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/fetch.html">Fetch</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    
+</nav>
+
+
+         </aside>
+         
+
+            <main>
+               <div class="page-wrapper">
+   <h1>
+      Changelog
+   </h1>
+   <h2 id="13-3-0-2022-07-04"><a href="#13-3-0-2022-07-04" class="headerlink" title="13.3.0 - 2022-07-04"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v13.3.0...v11.2.0">13.3.0</a> - 2022-07-04</h2><h3 id="Added"><a href="#Added" class="headerlink" title="Added"></a>Added</h3><ul>
+<li><code>expandOnDblClick</code> behavior for <code>q-grid-row</code> component, which allows to open row details on double click</li>
+<li>Experimental!! The <code>DataProvider</code> type is a new way to support pagination, filtering and sorting on the server side(do not use in prod, not a stable API)</li>
+</ul>
+<h3 id="Changes"><a href="#Changes" class="headerlink" title="Changes"></a>Changes</h3><ul>
+<li>Requires angular version 13.3.8, cdk\material version 13.3.9.</li>
+<li>Improvements due to Lighthouse report</li>
+<li>More strict Angular compilation mode, which allows you to be more strict in the final application</li>
+<li>Go to the lerna monorepo and use <code>ng build</code> instead of a custom build, which allows for faster upgrades.</li>
+<li>Experimental!! Use observable instead of ngOnChanges in the <code>dirty</code> directive</li>
+<li>The data manipulation plugin does a better job of comparing values.</li>
+<li>Column selection moved to actions by doing <code>model.action(&#123;items: []&#125;)</code>, it can be removed from the toolbar without touching the html. !!It can break the logic with actions, if there were any custom ones.</li>
+<li>Improved d.ts typing</li>
+</ul>
+<h3 id="Fixes"><a href="#Fixes" class="headerlink" title="Fixes"></a>Fixes</h3><ul>
+<li>Fixed issue with <code>row-number</code> column when second page has incorrect values.</li>
+<li>Fixed calculation of the <code>timestamp</code> property of the mouse state (usually used to emulate double clicks)</li>
+<li>Fix stack blitz examples</li>
+<li>Fixed huge number of selectionChange events when selection is in <code>range</code> mode</li>
+<li>Fixed data manipulation plugin clearing all actions on destruction.</li>
+<li>Fixed navigation in edit mode with <code>tab</code> and <code>shift-tab</code> keys for first or last cell.</li>
+<li>Fix classList element can be undefined when clicked outside the grid.</li>
+<li>Fix target modal pager not preventing click propagation</li>
+</ul>
+<h2 id="11-2-0-2021-10-22"><a href="#11-2-0-2021-10-22" class="headerlink" title="11.2.0 - 2021-10-22"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v11.2.0...v11.1.1">11.2.0</a> - 2021-10-22</h2><h3 id="Added-1"><a href="#Added-1" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>New options <code>fit-head</code> for the <code>columnWidth</code> property to set column width based on origin column head width.</li>
+<li>Be default save column widths in the persistence storage.</li>
+</ul>
+<h3 id="Changes-1"><a href="#Changes-1" class="headerlink" title="Changes"></a>Changes</h3><ul>
+<li>Remove HttpClientModule from the q-grid to fix setting up http interceptors when lazy loading.</li>
+</ul>
+<h3 id="Fixed"><a href="#Fixed" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Applying persistance storage settings when data rows are set up synchronously.</li>
+<li>Correctly invalidate selection when row was deleted.</li>
+<li>Batch edit.</li>
+</ul>
+<h2 id="11-1-1-2021-06-16"><a href="#11-1-1-2021-06-16" class="headerlink" title="11.1.1 - 2021-06-16"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v11.1.1...v11.0.1">11.1.1</a> - 2021-06-16</h2><h3 id="Added-2"><a href="#Added-2" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Introduce <code>custom</code> property that can be overridden to apply custom filter logic.</li>
+<li>New recommend way to override cell template by <code>&lt;ng-template qGridColumnBody=&quot;birth&quot;&gt;</code></li>
+<li>A brand new <code>q-grid-cell-template</code> component to show tooltips over the cells.</li>
+<li>Three new mouse statuses <code>move</code>, <code>enter</code> and <code>leave</code>.</li>
+</ul>
+<h3 id="Fixed-1"><a href="#Fixed-1" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Tab navigation on the page.</li>
+<li><code>in</code> filter condition works better with non-string types.</li>
+</ul>
+<h2 id="11-0-1-2021-03-30"><a href="#11-0-1-2021-03-30" class="headerlink" title="11.0.1 - 2021-03-30"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v11.0.0...v11.0.1">11.0.1</a> - 2021-03-30</h2><h3 id="Fixed-2"><a href="#Fixed-2" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Loading first page in virtual scroll container.</li>
+<li>Template column overrides all column props defined in typescript.</li>
+</ul>
+<h2 id="11-0-0-2021-03-01"><a href="#11-0-0-2021-03-01" class="headerlink" title="11.0.0 - 2021-03-01"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v11.0.0...v9.2.1">11.0.0</a> - 2021-03-01</h2><h3 id="Added-3"><a href="#Added-3" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Right click on the q-grid cell selects all content of it.</li>
+</ul>
+<h3 id="Changed"><a href="#Changed" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Better pane api for the manual control.</li>
+<li>Better parsing of non-ISO date formats.</li>
+</ul>
+<h3 id="BREAKING"><a href="#BREAKING" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li>Rename $view.filter.column to $view.filter.row.</li>
+<li>Remove <code>options</code> property from $view.edit.cell.</li>
+<li>Rename <code>shortcuts</code> to <code>shortcut</code> in the edit state.</li>
+<li>Remove <code>prevent</code> property from the navigation state.</li>
+<li>Remove <code>id</code> property from <code>Action</code> type.</li>
+</ul>
+<h2 id="9-2-1-2020-10-19"><a href="#9-2-1-2020-10-19" class="headerlink" title="9.2.1 - 2020-10-19"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.11...v9.2.1">9.2.1</a> - 2020-10-19</h2><h3 id="Fixed-3"><a href="#Fixed-3" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Fix datepicker which didn’t work in edit mode correctly, by introducing <code>q-grid-editor-part</code> css class.</li>
+<li>Empty date is a valid case.</li>
+<li>Filter row works when between operator is chosen.</li>
+</ul>
+<h3 id="Added-4"><a href="#Added-4" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Date mask to enhance user input performance.</li>
+<li>Two new properties in datetime columns <code>dateFormat</code> and <code>timeFormat</code> to enhance editing.</li>
+<li>Persistence state now accepts schedule equals to <code>onStateChange</code> that allows to auto save grid state on user changes.</li>
+</ul>
+<h3 id="Changed-1"><a href="#Changed-1" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Date input and datepicker takes the format from the date column by using DateAdapter.</li>
+</ul>
+<h2 id="9-1-11-2020-08-19"><a href="#9-1-11-2020-08-19" class="headerlink" title="9.1.11 - 2020-08-19"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.10...v9.1.11">9.1.11</a> - 2020-08-19</h2><h3 id="Fixed-4"><a href="#Fixed-4" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Do not focus grid on scene change.</li>
+</ul>
+<h2 id="9-1-10-2020-08-17"><a href="#9-1-10-2020-08-17" class="headerlink" title="9.1.10 - 2020-08-17"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.9...v9.1.10">9.1.10</a> - 2020-08-17</h2><h3 id="Fixed-5"><a href="#Fixed-5" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Dates are properly converted to midnights.</li>
+<li>When first input date in datetime input time is set to midnight.</li>
+</ul>
+<h2 id="9-1-9-2020-08-13"><a href="#9-1-9-2020-08-13" class="headerlink" title="9.1.9 - 2020-08-13"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.8...v9.1.9">9.1.9</a> - 2020-08-13</h2><h3 id="Fixed-6"><a href="#Fixed-6" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Predicate visitor get type from the column and not resolve it by itself.</li>
+<li>If start\end is not set using between operator it works like greaterOrEquals\lessOrEquals.</li>
+</ul>
+<h2 id="9-1-8-2020-08-11"><a href="#9-1-8-2020-08-11" class="headerlink" title="9.1.8 - 2020-08-11"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.7...v9.1.8">9.1.8</a> - 2020-08-11</h2><h3 id="Fixed-7"><a href="#Fixed-7" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Uncheck select all when switch to page with no-selection.</li>
+</ul>
+<h2 id="9-1-7-2020-07-23"><a href="#9-1-7-2020-07-23" class="headerlink" title="9.1.7 - 2020-07-23"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.6...v9.1.7">9.1.7</a> - 2020-07-23</h2><h3 id="Fixed-8"><a href="#Fixed-8" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Column filter between operator doesn’t appear.</li>
+<li>Column filter doesn’t work properly due to the not valid filter value type.</li>
+</ul>
+<h2 id="9-1-6-2020-07-20"><a href="#9-1-6-2020-07-20" class="headerlink" title="9.1.6 - 2020-07-20"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.5...v9.1.6">9.1.6</a> - 2020-07-20</h2><h3 id="Fixed-9"><a href="#Fixed-9" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Fix date editor width.</li>
+<li>Fix scrolling when column sort.</li>
+<li>Fix editor position when scrolling is required.</li>
+<li>Fix editor close event on navigation happen.</li>
+</ul>
+<h3 id="Changed-2"><a href="#Changed-2" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Cell handler is not animating when go to the row-details.</li>
+</ul>
+<h3 id="Added-5"><a href="#Added-5" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>To remove column chooser it’s not required to override toolbar template.</li>
+</ul>
+<h2 id="9-1-5-2020-07-13"><a href="#9-1-5-2020-07-13" class="headerlink" title="9.1.5 - 2020-07-13"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.4...v9.1.5">9.1.5</a> - 2020-07-13</h2><h3 id="Fixed-10"><a href="#Fixed-10" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Importing of LIVR library.</li>
+<li>Set compilation target to es5.</li>
+</ul>
+<h3 id="Added-6"><a href="#Added-6" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Support 2 version 9.1.x - Ivy, 9.1.x-ve - View Engine.</li>
+<li><code>q-grid-shortcut-host</code> directive that can change key event source for q-grid commands.</li>
+<li>Command palette API to access grid core commands.</li>
+<li>Command state added to the model.</li>
+</ul>
+<h3 id="Changed-3"><a href="#Changed-3" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Shortcut system.</li>
+<li>Better top toolbar layout.</li>
+<li>Grid title now wraps to the second row if not fit to width.</li>
+</ul>
+<h2 id="9-1-4-2020-06-01"><a href="#9-1-4-2020-06-01" class="headerlink" title="9.1.4 - 2020-06-01"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.1.3...v9.1.4">9.1.4</a> - 2020-06-01</h2><h3 id="BREAKING-1"><a href="#BREAKING-1" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li>Remove q-grid-title, use <code>q-grid-caption</code> instead.</li>
+</ul>
+<h3 id="Fixed-11"><a href="#Fixed-11" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Remove auto entering to the edit mode on cell focus.</li>
+<li>Row options column menu item click doesn’t trigger an action.</li>
+<li>Fixed when cell-handler go out of view port when hold page-up.</li>
+<li>Highlight column on mouse over even if it’s sorted.</li>
+<li>When focus grid using tab key, also focus first focusable cell.</li>
+<li>Clear function on column filter expression views deactivates filter.</li>
+<li>Pane doesn’t work when select row.</li>
+<li>Select all by <code>ctrl-a</code> in <code>multiple</code> and <code>range</code> modes.</li>
+</ul>
+<h3 id="Added-7"><a href="#Added-7" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Add new option for column generation, typeDetection &#x3D; ‘inference’ | ‘raw’.</li>
+<li>Add shortcuts to the pager’s next&#x2F;prev buttons (alt+pagedown, alt+pageup).</li>
+<li>Introduce q-grid-row <code>behavior</code> array input to control if it’s required to expand row on click or shortcut.</li>
+<li>Add <code>q-grid-focused</code> class to the row when one of it’s cell is in focus..</li>
+<li>Add <code>q-grid-alt</code> plugin that automatically set pagination and selection by <code>alt+[0-9]</code> shortcuts.</li>
+<li>Add <code>timestamp</code> property to mouse state to handle double clicks.</li>
+</ul>
+<h2 id="9-1-2-2020-05-27"><a href="#9-1-2-2020-05-27" class="headerlink" title="[9.1.2] - 2020-05-27"></a>[9.1.2] - 2020-05-27</h2><h3 id="BREAKING-2"><a href="#BREAKING-2" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li>q-grid is block element by default, was inline.</li>
+<li>Rename edit state property from <code>state</code> to <code>status</code>.</li>
+<li>Selection state <code>key</code> property split into 2 <code>rowKey</code> and <code>columnKey</code>.</li>
+<li>Data state <code>id</code> property split into 2 <code>rowId</code> and <code>columnId</code>.</li>
+<li>Remove <code>actions</code>, <code>pipe</code>, <code>selectionKey</code>, <code>filterFetch</code> input properties from the grid component.</li>
+<li>Remove <code>keep</code> method from grid plugin.</li>
+<li>Data rowId returns row index by default not the instance.</li>
+<li>Instead of class q-grid-cell.key use q-grid-<code>the</code>-cell.key.</li>
+<li>Get rid of redundant spans in cell templates.</li>
+<li>Column pin <code>min</code> instead of <code>null</code>.</li>
+<li>Rename column <code>class</code> to <code>category</code>.</li>
+<li>Remove <code>rowIndex</code>, <code>columnIndex</code>, <code>row</code>, <code>column</code> from navigation state.</li>
+</ul>
+<h3 id="Added-8"><a href="#Added-8" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Ivy support.</li>
+<li>New scene status called <code>idle</code>, before the first render.</li>
+<li>Introduce canExecuteCheck for the command to explicitly update canExecute status.</li>
+<li>Extend plugin interface with <code>observe</code> and <code>observeReply</code> functions.</li>
+<li>Copy cell label to clipboard.</li>
+<li>New column type <code>datetime</code> that represents date and time.</li>
+<li>Possibility to change column filter template for the particular column.</li>
+<li>New way to access dynamic states like columnChooser, through the <code>resolve</code> method.</li>
+<li>Introduce pager <code>mode</code> that can be equal to <code>showRows</code> or <code>showPages</code> value.</li>
+</ul>
+<h3 id="Changed-4"><a href="#Changed-4" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Better plugin support.</li>
+<li>Get rid of model proxy.</li>
+<li>Rendering performance improvements.</li>
+<li>All components got OnPush CDS.</li>
+<li>Better core types.</li>
+<li>Row details get focus on expand.</li>
+<li>Immutable model state to prevent event handling artifacts.</li>
+<li>Remove browser select.</li>
+<li>Optimize css styles for rendering performance and size.</li>
+<li>Pin <code>mid</code> instead of <code>null</code>.</li>
+</ul>
+<h3 id="Fixed-12"><a href="#Fixed-12" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>*ngIf for column component works.</li>
+<li>Fix row options icon is jumping on edit.</li>
+<li>Row resize algorithm.</li>
+<li>Better paddings for column filter and chooser.</li>
+</ul>
+<h2 id="9-0-1-2020-03-13"><a href="#9-0-1-2020-03-13" class="headerlink" title="9.0.1 - 2020-03-13"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v9.0.0...v9.0.1">9.0.1</a> - 2020-03-13</h2><h3 id="Fixed-13"><a href="#Fixed-13" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Build</li>
+</ul>
+<h2 id="9-0-0-2020-03-13"><a href="#9-0-0-2020-03-13" class="headerlink" title="9.0.0 - 2020-03-13"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.5.2...v9.0.0">9.0.0</a> - 2020-03-13</h2><h3 id="Changed-5"><a href="#Changed-5" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Migrate to Angular 9.</li>
+<li>Static query migration.</li>
+</ul>
+<h3 id="BREAKING-3"><a href="#BREAKING-3" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li>Cell selection occurs after mouse down not mouse up.</li>
+</ul>
+<h2 id="7-5-2-2020-03-04"><a href="#7-5-2-2020-03-04" class="headerlink" title="7.5.2 - 2020-03-04"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.5.1...v7.5.2">7.5.2</a> - 2020-03-04</h2><h3 id="Fixed-14"><a href="#Fixed-14" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Dynamic column visibility.</li>
+<li>Get rid of duplicate actions on destroy.</li>
+</ul>
+<h2 id="7-5-1-2020-01-22"><a href="#7-5-1-2020-01-22" class="headerlink" title="7.5.1 - 2020-01-22"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.5.0...v7.5.1">7.5.1</a> - 2020-01-22</h2><h3 id="Fixed-15"><a href="#Fixed-15" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Fix npm package.</li>
+</ul>
+<h2 id="7-5-0-2020-01-22"><a href="#7-5-0-2020-01-22" class="headerlink" title="7.5.0 - 2020-01-22"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.4.0...v7.5.0">7.5.0</a> - 2020-01-22</h2><h3 id="Added-9"><a href="#Added-9" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Keyboard API.</li>
+<li>Mouse API.</li>
+</ul>
+<h3 id="Changed-6"><a href="#Changed-6" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Better column drag and drop.</li>
+<li>Filter row style enhancements.</li>
+</ul>
+<h3 id="Fixed-16"><a href="#Fixed-16" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Progress line.</li>
+<li>Column filter matches labels not values.</li>
+</ul>
+<h3 id="BREAKING-4"><a href="#BREAKING-4" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li>Navigation event raised before selection event.</li>
+<li><code>Pane</code> context receives value from the trigger property <code>NOT</code> cell.</li>
+<li><code>View</code> model <code>rows</code> section now contains data before pagination.</li>
+<li>Separate <code>view</code> pipe to <code>scene</code> and <code>view</code> pipes.</li>
+<li>Remove <code>debounce</code> property from navigation model.</li>
+</ul>
+<h2 id="7-4-0-2019-08-16"><a href="#7-4-0-2019-08-16" class="headerlink" title="7.4.0 - 2019-08-16"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.3.0...v7.4.0">7.4.0</a> - 2019-08-16</h2><h3 id="Added-10"><a href="#Added-10" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Selection <code>singleOnly</code> mode that prevent row unselecting, and draws radio buttons instead of check boxes.</li>
+</ul>
+<h2 id="7-3-0-2019-08-08"><a href="#7-3-0-2019-08-08" class="headerlink" title="7.3.0 - 2019-08-08"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.6...v7.3.0">7.3.0</a> - 2019-08-08</h2><h3 id="Added-11"><a href="#Added-11" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Live row plugin.</li>
+<li>Live cell plugin.</li>
+</ul>
+<h3 id="Changed-7"><a href="#Changed-7" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li><code>Space</code> key selects the row.</li>
+</ul>
+<h2 id="7-2-6-2019-07-31"><a href="#7-2-6-2019-07-31" class="headerlink" title="7.2.6 - 2019-07-31"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.5...v7.2.6">7.2.6</a> - 2019-07-31</h2><h3 id="Fixed-17"><a href="#Fixed-17" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Column <code>isDefault</code> property works as expected.</li>
+</ul>
+<h2 id="7-2-5-2019-07-29"><a href="#7-2-5-2019-07-29" class="headerlink" title="7.2.5 - 2019-07-29"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.4...v7.2.5">7.2.5</a> - 2019-07-29</h2><h3 id="Added-12"><a href="#Added-12" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Live cell plugin.</li>
+</ul>
+<h3 id="Fixed-18"><a href="#Fixed-18" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Toggle column filter operator not reset predicate.</li>
+<li>Search in column chooser does not work when column title is null.</li>
+</ul>
+<h2 id="7-2-4-2019-06-25"><a href="#7-2-4-2019-06-25" class="headerlink" title="7.2.4 - 2019-06-25"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.3...v7.2.4">7.2.4</a> - 2019-06-25</h2><h3 id="Fixed-19"><a href="#Fixed-19" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li><code>itemLabel</code> works for auto-complete.</li>
+</ul>
+<h2 id="7-2-3-2019-06-20"><a href="#7-2-3-2019-06-20" class="headerlink" title="7.2.3 - 2019-06-20"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.2...v7.2.3">7.2.3</a> - 2019-06-20</h2><h3 id="Fixed-20"><a href="#Fixed-20" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Can’t enter edit mode when selection unit is row.</li>
+</ul>
+<h2 id="7-2-2-2019-06-20"><a href="#7-2-2-2019-06-20" class="headerlink" title="7.2.2 - 2019-06-20"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.1...v7.2.2">7.2.2</a> - 2019-06-20</h2><h3 id="Fixed-21"><a href="#Fixed-21" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Layer default styles.</li>
+</ul>
+<h2 id="7-2-1-2019-06-20"><a href="#7-2-1-2019-06-20" class="headerlink" title="7.2.1 - 2019-06-20"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v7.2.0...v7.2.1">7.2.1</a> - 2019-06-20</h2><h3 id="Fixed-22"><a href="#Fixed-22" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Angular Material version.</li>
+</ul>
+<h2 id="7-2-0-2019-06-20"><a href="#7-2-0-2019-06-20" class="headerlink" title="7.2.0 - 2019-06-20"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.4.0...v7.2.0">7.2.0</a> - 2019-06-20</h2><h3 id="Changed-8"><a href="#Changed-8" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Migrate to Angular 7.</li>
+<li>Reference editor cancels value on backdrop click.</li>
+<li>Move layer component under the box.</li>
+</ul>
+<h3 id="Fixed-23"><a href="#Fixed-23" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Commit command get correct arguments.</li>
+<li>Better mouse navigation in edit mode.</li>
+<li>Dropdown behavior on close.</li>
+<li>Limit filter by chip width to support multiline text.</li>
+<li>Do not show shortcut tooltip in action bar if it’s empty</li>
+<li>Same id layers can be accidentally shown.</li>
+</ul>
+<h3 id="Added-13"><a href="#Added-13" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Possibility to add panes.</li>
+<li>Layer panel gets class appropriate to layer name.</li>
+</ul>
+<h2 id="6-4-0-2019-05-14"><a href="#6-4-0-2019-05-14" class="headerlink" title="6.4.0 - 2019-05-14"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.3.9...v6.4.0">6.4.0</a> - 2019-05-14</h2><h3 id="Added-14"><a href="#Added-14" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Column filter modes.</li>
+</ul>
+<h3 id="Fixed-24"><a href="#Fixed-24" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Selection toggle command can control checkbox disable state.</li>
+</ul>
+<h2 id="6-3-9-2019-04-24"><a href="#6-3-9-2019-04-24" class="headerlink" title="6.3.9 - 2019-04-24"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.9">6.3.9</a> - 2019-04-24</h2><h3 id="Added-15"><a href="#Added-15" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Dropdown supports array of objects.</li>
+</ul>
+<h2 id="6-3-8-2019-04-15"><a href="#6-3-8-2019-04-15" class="headerlink" title="6.3.8 - 2019-04-15"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.3.7...v6.3.8">6.3.8</a> - 2019-04-15</h2><h3 id="Fixed-25"><a href="#Fixed-25" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Support right pinned column in details mode.</li>
+</ul>
+<h2 id="6-3-7-2019-04-12"><a href="#6-3-7-2019-04-12" class="headerlink" title="6.3.7 - 2019-04-12"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.3.5...v6.3.7">6.3.7</a> - 2019-04-12</h2><h3 id="Fixed-26"><a href="#Fixed-26" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Propagate <code>description</code> property in column component.</li>
+<li>Reset scroll only if page size, page or filter was changed.</li>
+<li>Better pagination behavior when after data rows changed.</li>
+</ul>
+<h2 id="6-3-5-2019-04-11"><a href="#6-3-5-2019-04-11" class="headerlink" title="6.3.5 - 2019-04-11"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.3.4...v6.3.5">6.3.5</a> - 2019-04-11</h2><h3 id="Changed-9"><a href="#Changed-9" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li><code>Focus service</code> takes into account pagination.</li>
+</ul>
+<h3 id="Fixed-27"><a href="#Fixed-27" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Compatibility with Chrome implementation of flex box overflow since version 73.</li>
+<li>Select all button.</li>
+</ul>
+<h2 id="6-3-4-2019-03-12"><a href="#6-3-4-2019-03-12" class="headerlink" title="6.3.4 - 2019-03-12"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.3.0...v6.3.4">6.3.4</a> - 2019-03-12</h2><h3 id="Fixed-28"><a href="#Fixed-28" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Default import template is shown up.</li>
+</ul>
+<h2 id="6-3-0-2019-02-22"><a href="#6-3-0-2019-02-22" class="headerlink" title="6.3.0 - 2019-02-22"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.2.4...v6.3.0">6.3.0</a> - 2019-02-22</h2><h3 id="Added-16"><a href="#Added-16" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Add support row options menu dividers.</li>
+</ul>
+<h3 id="Changed-10"><a href="#Changed-10" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Show action title if icon is not set.</li>
+<li>Get rid of ng-template in cell editor component.</li>
+</ul>
+<h3 id="Fixed-29"><a href="#Fixed-29" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Custom symbols in the column <code>key</code>.</li>
+<li>Fix column chooser label style.</li>
+<li>Fix column filter header style.</li>
+<li>Pagination styles.</li>
+</ul>
+<h2 id="6-2-4-2019-02-05"><a href="#6-2-4-2019-02-05" class="headerlink" title="6.2.4 - 2019-02-05"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.2.4...v6.2.3">6.2.4</a> - 2019-02-05</h2><h3 id="Fixed-30"><a href="#Fixed-30" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Row options shortcut fix for multiple actions.</li>
+</ul>
+<h2 id="6-2-3-2019-02-05"><a href="#6-2-3-2019-02-05" class="headerlink" title="6.2.3 - 2019-02-05"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.2.3...v6.2.2">6.2.3</a> - 2019-02-05</h2><h3 id="Added-17"><a href="#Added-17" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Row options shortcut support.</li>
+</ul>
+<h2 id="6-2-2"><a href="#6-2-2" class="headerlink" title="6.2.2"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.2.2...v6.2.1">6.2.2</a></h2><h3 id="Fixed-31"><a href="#Fixed-31" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Better FireFox support by encapsulation of MouseEvent path property.</li>
+<li>Better edit strategy when trigger of editor options is set to ‘focus’.</li>
+</ul>
+<h2 id="6-2-1"><a href="#6-2-1" class="headerlink" title="6.2.1"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.2.1...v6.2.0">6.2.1</a></h2><h3 id="Added-18"><a href="#Added-18" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Edit form support.</li>
+<li>Travis CI.</li>
+<li>Cucumber specs infrastructure.</li>
+<li>Edit cell validation support.</li>
+</ul>
+<h3 id="Fixed-32"><a href="#Fixed-32" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Blanks position in the column filter.</li>
+</ul>
+<h2 id="6-2-0"><a href="#6-2-0" class="headerlink" title="6.2.0"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.2.0...v6.1.5">6.2.0</a></h2><h3 id="Fixed-33"><a href="#Fixed-33" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Column filter <code>blanks</code> is removed when reset clicked.</li>
+</ul>
+<h3 id="Added-19"><a href="#Added-19" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Column hierarchy and dnd support in the column chooser.</li>
+<li>Cohort column dnd support.</li>
+</ul>
+<h3 id="BREAKING-5"><a href="#BREAKING-5" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li><code>model.columnList().index</code> now contains tree of columns, not a column key list.</li>
+</ul>
+<h2 id="6-1-5-2018-07-03"><a href="#6-1-5-2018-07-03" class="headerlink" title="6.1.5 - 2018-07-03"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.1.5...v6.1.4">6.1.5</a> - 2018-07-03</h2><h3 id="Fixed-34"><a href="#Fixed-34" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Row highlight in details modes.</li>
+<li>Mark q-grid for check on invalidate, that allows to have basic functionality when q-grid host has onPush strategy.</li>
+</ul>
+<h3 id="Added-20"><a href="#Added-20" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Basic theme array, url and email support.</li>
+</ul>
+<h2 id="6-1-4-2018-06-28"><a href="#6-1-4-2018-06-28" class="headerlink" title="6.1.4 - 2018-06-28"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.1.4...v6.1.3">6.1.4</a> - 2018-06-28</h2><h3 id="Fixed-35"><a href="#Fixed-35" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Time cell editor.</li>
+<li>Fix q-grid-embedded array cell look.</li>
+<li>Percent width are aware of pad column padding.</li>
+<li>Show horizontal scroll-bar if there are no data rows, but some columns are present.</li>
+<li>Observables in dropdown editors.</li>
+</ul>
+<h3 id="Added-21"><a href="#Added-21" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Beta version of row virtual scrolling.</li>
+<li>Tab-trap component for the url and email editors.</li>
+<li>Column groups manipulation through the structural directives.</li>
+<li>Import from csv, pdf, xlsx, json.</li>
+<li>Export to csv, pdf, xlsx, json.</li>
+</ul>
+<h3 id="Changed-11"><a href="#Changed-11" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Improve performance of Style API using dom bags directly.</li>
+</ul>
+<h2 id="6-1-3-2018-06-21"><a href="#6-1-3-2018-06-21" class="headerlink" title="6.1.3 - 2018-06-21"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.1.3...v6.1.1">6.1.3</a> - 2018-06-21</h2><h3 id="Fixed-36"><a href="#Fixed-36" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Fixed AOT compilation.</li>
+<li>Fixed time editor value assign.</li>
+<li>Dark theme for plugins and cell handler.</li>
+<li>Textarea editor now shows length of the input text.</li>
+</ul>
+<h2 id="6-1-1-2018-06-15"><a href="#6-1-1-2018-06-15" class="headerlink" title="6.1.1 - 2018-06-15"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.1.1...v6.1.0">6.1.1</a> - 2018-06-15</h2><h3 id="Fixed-37"><a href="#Fixed-37" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Highlight on drag and drop.</li>
+<li>Pager target should be closed after enter hit.</li>
+</ul>
+<h3 id="Changed-12"><a href="#Changed-12" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Column Filter, Column Chooser, Query Builder, Persistence Plugins became responsible.</li>
+</ul>
+<h2 id="6-1-0-2018-06-15"><a href="#6-1-0-2018-06-15" class="headerlink" title="6.1.0 - 2018-06-15"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v6.1.0...v5.3.10">6.1.0</a> - 2018-06-15</h2><h3 id="BREAKING-6"><a href="#BREAKING-6" class="headerlink" title="BREAKING"></a>BREAKING</h3><ul>
+<li>Need to change theme import from <code>import &#123; ThemeModule &#125; from &#39;ng2-qgrid&#39;</code> to <code>import &#123; ThemeModule &#125; from &#39;ng2-qgrid/theme/material</code></li>
+</ul>
+<h3 id="Deprecated"><a href="#Deprecated" class="headerlink" title="Deprecated"></a>Deprecated</h3><ul>
+<li>Use <code>FetchContext</code> <code>search</code> property instead of <code>filter</code> property.</li>
+<li>Use <code>&lt;q-grid caption=&quot;My Grid&quot;&gt;</code> instead of <code>&lt;q-grid header=&quot;My Grid&quot;&gt;</code>.</li>
+</ul>
+<h3 id="Added-22"><a href="#Added-22" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Support of custom themes, we are not linked tight with angular&#x2F;material any more.</li>
+<li>113+ Examples.</li>
+<li>Readonly strategies <code>&lt;q-grid interactionMode=&quot;full | readonly | detached&quot;&gt;</code>.</li>
+<li>Spanned headers and column groups.</li>
+<li>Group summaries.</li>
+<li><code>PluginServices</code> that allows to write own plugins for q-grid.</li>
+<li>Better caching strategies for renders.</li>
+<li>New <code>rowspan</code> mode for groups.</li>
+<li>New <code>rowList</code> model.</li>
+<li>Drag and drop column support in <code>column chooser</code>.</li>
+<li>Initial basic theme.</li>
+<li>Float(fixed) rows support through the <code>model.row()</code> <code>pin</code> property.</li>
+<li>New column generation mode <code>cohort</code>.</li>
+<li>Action trigger template support.</li>
+</ul>
+<h3 id="Changed-13"><a href="#Changed-13" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Live <code>drag and drop</code> for rows and columns.</li>
+<li>Use <code>Model Proxy</code> for resource utilization.</li>
+<li>New <code>Dom matrix</code> engine for rendering.</li>
+<li>Reference column API.</li>
+<li>Pin columns are highlighted when scroll horizontal.</li>
+<li></li>
+</ul>
+<h3 id="Fixed-38"><a href="#Fixed-38" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Better row details rendering. </li>
+<li>Fixed focus position on scene render (e.g. sort, filter etc.).</li>
+<li>Column sort algorithm became more predictable.</li>
+<li>Array cell editor doesn’t work with keyboard.</li>
+</ul>
+<h2 id="5-3-10-2018-05-21"><a href="#5-3-10-2018-05-21" class="headerlink" title="5.3.10 - 2018-05-21"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.10...v5.3.9">5.3.10</a> - 2018-05-21</h2><h3 id="Added-23"><a href="#Added-23" class="headerlink" title="Added"></a>Added</h3><ul>
+<li><code>ToggleAll</code> command that can be override to intersect toggle all groups action.</li>
+</ul>
+<h3 id="Changed-14"><a href="#Changed-14" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Clicking on group header leads to collapse&#x2F;expand of all nodes in the view.</li>
+<li>By default child node label is empty.</li>
+</ul>
+<h3 id="Fixed-39"><a href="#Fixed-39" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li><code>Group pipe</code> index calculation - the root cause of invalid filtering.</li>
+</ul>
+<h2 id="5-3-9-2018-05-18"><a href="#5-3-9-2018-05-18" class="headerlink" title="5.3.9 - 2018-05-18"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.8...v5.3.7">5.3.9</a> - 2018-05-18</h2><h3 id="Added-24"><a href="#Added-24" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Focus method to the grid service.</li>
+</ul>
+<h3 id="Changed-15"><a href="#Changed-15" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>AOT Compatible.</li>
+<li>Angular CLI as app starter.</li>
+<li>Rollup scripts to build the library.</li>
+</ul>
+<h3 id="Fixed-40"><a href="#Fixed-40" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>FocusAfterRender service.</li>
+<li>Column filter IsBlank is displayed in chips.</li>
+<li>Legend template syntax.</li>
+<li>TypeScript definitions.</li>
+<li>Async pipe for rows property.</li>
+</ul>
+<h2 id="5-3-7-2018-07-08"><a href="#5-3-7-2018-07-08" class="headerlink" title="5.3.7 - 2018-07-08"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.7...v5.3.6">5.3.7</a> - 2018-07-08</h2><h3 id="Added-25"><a href="#Added-25" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Template support of column filter items.</li>
+</ul>
+<h3 id="Fixed-41"><a href="#Fixed-41" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Column sort plugin uses <code>FocusAfterRender</code> only on click.</li>
+</ul>
+<h2 id="5-3-6-2018-04-20"><a href="#5-3-6-2018-04-20" class="headerlink" title="5.3.6 - 2018-04-20"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.6...v5.3.5">5.3.6</a> - 2018-04-20</h2><h3 id="Added-26"><a href="#Added-26" class="headerlink" title="Added"></a>Added</h3><ul>
+<li><code>Persistence</code> plugin - added groups.</li>
+</ul>
+<h2 id="5-3-5-2018-04-19"><a href="#5-3-5-2018-04-19" class="headerlink" title="5.3.5 - 2018-04-19"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.5...v5.3.4">5.3.5</a> - 2018-04-19</h2><h3 id="Added-27"><a href="#Added-27" class="headerlink" title="Added"></a>Added</h3><ul>
+<li><code>Query builder panel</code> component styles are standalone.</li>
+</ul>
+<h2 id="5-3-4-2018-04-18"><a href="#5-3-4-2018-04-18" class="headerlink" title="5.3.4 - 2018-04-18"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.4...v5.3.2">5.3.4</a> - 2018-04-18</h2><h3 id="Added-28"><a href="#Added-28" class="headerlink" title="Added"></a>Added</h3><ul>
+<li><code>Query builder</code> plugin.</li>
+<li>Cell batch update.</li>
+</ul>
+<h2 id="5-3-3-2018-04-13"><a href="#5-3-3-2018-04-13" class="headerlink" title="5.3.3 - 2018-04-13"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.2...v5.2.4">5.3.3</a> - 2018-04-13</h2><h3 id="Added-29"><a href="#Added-29" class="headerlink" title="Added"></a>Added</h3><ul>
+<li><code>Persistence</code> plugin.</li>
+<li><code>Status bar</code> plugin.</li>
+<li>Selected chips in <code>column filter</code> plugin.</li>
+<li>Focus cell when after sort or filter column.</li>
+</ul>
+<h3 id="Fixed-42"><a href="#Fixed-42" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Vscroll reset.</li>
+</ul>
+<h2 id="5-3-2-2018-03-23"><a href="#5-3-2-2018-03-23" class="headerlink" title="5.3.2 - 2018-03-23"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.3.2...v5.2.4">5.3.2</a> - 2018-03-23</h2><h3 id="Added-30"><a href="#Added-30" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Supporting of custom fetch in the column filter.</li>
+<li>Virtual scroll module.</li>
+<li>Pager target menu.</li>
+</ul>
+<h3 id="Changed-16"><a href="#Changed-16" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Added grid core pipes under there <code>ng2-qgrid</code> namespace.</li>
+<li>Remove <code>popup</code> module.</li>
+</ul>
+<h3 id="Fixed-43"><a href="#Fixed-43" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Pager custom size and sizeList not being honored&#x2F;rendered correctly.</li>
+<li>Rename <code>action-bar-core</code> to <code>action-bar</code>.</li>
+</ul>
+<h2 id="5-2-4-2018-02-16"><a href="#5-2-4-2018-02-16" class="headerlink" title="5.2.4 - 2018-02-16"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.2.4...v5.2.3">5.2.4</a> - 2018-02-16</h2><h3 id="Changed-17"><a href="#Changed-17" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Renamed <code>action-bar-core</code> to <code>action-bar</code>.</li>
+<li><code>layout=&quot;row&quot;</code> refactored to <code>class=&quot;layout-row&quot;</code>.</li>
+<li>Export q-grid <code>common module</code> to make <code>q-grid-position</code> directive available for the end user.</li>
+</ul>
+<h3 id="Fixed-44"><a href="#Fixed-44" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Url editor.</li>
+<li>Text alignment in the file editor.</li>
+<li>Navigation should trigger detect changes.</li>
+</ul>
+<h2 id="5-2-3-2018-02-12"><a href="#5-2-3-2018-02-12" class="headerlink" title="5.2.3 - 2018-02-12"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.2.3...v5.2.2">5.2.3</a> - 2018-02-12</h2><h3 id="Fixed-45"><a href="#Fixed-45" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Embed style for <code>row-options</code> column type.</li>
+<li>TypeScript declarations.</li>
+</ul>
+<h2 id="5-2-2-2018-02-12"><a href="#5-2-2-2018-02-12" class="headerlink" title="5.2.2 - 2018-02-12"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.2.2...v5.2.1">5.2.2</a> - 2018-02-12</h2><h3 id="Fixed-46"><a href="#Fixed-46" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Remove <code>BrowserModule</code> from components to allow lazy loading.</li>
+<li>Fix column filter and column chooser styles.</li>
+</ul>
+<h2 id="5-2-0-2018-02-09"><a href="#5-2-0-2018-02-09" class="headerlink" title="5.2.0 - 2018-02-09"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.2.0...v5.1.2">5.2.0</a> - 2018-02-09</h2><h3 id="Added-31"><a href="#Added-31" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Column <a href="https://qgrid.github.io/ng/#!/column-view-size">viewWidth</a> property.</li>
+<li>Filter <code>by</code> property <code>blanks</code> option support.</li>
+</ul>
+<h3 id="Changed-18"><a href="#Changed-18" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Show (Blanks) checkbox in column filter if there is empty string, null or undefined in the list.</li>
+<li>Explicitly set <code>display: inline</code> for label in column sort plugin.</li>
+<li>Change q-grid-embed styles.</li>
+</ul>
+<h3 id="Fixed-47"><a href="#Fixed-47" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Better layout of column filter and column sort icons.</li>
+</ul>
+<h2 id="5-1-2-2018-01-03"><a href="#5-1-2-2018-01-03" class="headerlink" title="5.1.2 - 2018-01-03"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.1.2...v5.1.1">5.1.2</a> - 2018-01-03</h2><h3 id="Added-32"><a href="#Added-32" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Possibility to change row size <code>&lt;q-grid-row [canResize]=&quot;true&quot;</code>.</li>
+<li>Possibility to drag and drop rows <code>&lt;q-grid-row [canMove]=&quot;true&quot;</code>.</li>
+<li>Style queue to the style Api, accessible through style model cells&#x2F;rows props.</li>
+<li>Rows property to the layout property.</li>
+</ul>
+<h3 id="Changed-19"><a href="#Changed-19" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Improve performance through change detection strategy.</li>
+<li>Improve performance through reducing number of change detections.</li>
+<li>Improve performance through adding track by index.</li>
+<li>Improve performance through invoking drag and drop out of ng zone.</li>
+<li>Layout columns property changed type form object to map.</li>
+</ul>
+<h2 id="5-1-1-2017-12-28"><a href="#5-1-1-2017-12-28" class="headerlink" title="5.1.1 - 2017-12-28"></a><a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2/compare/v5.1.1...v5.0.2">5.1.1</a> - 2017-12-28</h2><h3 id="Added-33"><a href="#Added-33" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Legend plugin.</li>
+<li>Bool cell editor.</li>
+<li>File cell editor.</li>
+<li>Image cell editor.</li>
+</ul>
+<h3 id="Changed-20"><a href="#Changed-20" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Theme module should be explicitly added to the user application.</li>
+<li>Backdrop triggers close event on mouse wheel click.</li>
+<li>Change dependencies to peer in prod package.json.</li>
+</ul>
+<h3 id="Fixed-48"><a href="#Fixed-48" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Array cell editor improvements.</li>
+<li>Fix minimization in release script.</li>
+<li>Grid in grid support.</li>
+</ul>
+<h2 id="5-0-2-2017-12-22"><a href="#5-0-2-2017-12-22" class="headerlink" title="[5.0.2] - 2017-12-22"></a>[5.0.2] - 2017-12-22</h2><h3 id="Added-34"><a href="#Added-34" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Theme support.</li>
+<li>Material theme that is used angular material inside.</li>
+<li>Grid service that allows to create grid model and get more control on the grid itself.</li>
+<li>Make grid header and footer sticky.</li>
+<li>Sticky footer.</li>
+<li>Top, left, right, bottom toolbars.</li>
+<li>Embed flex css framework, that was extracted from angular-material.</li>
+<li>Auto generation modes for columns.</li>
+<li>Allow to reorder columns.</li>
+<li>Allow to resize columns.</li>
+<li>Allow to setup width of column in percents.</li>
+<li>Allow to have custom templates for cells in html.</li>
+<li>Column multi-sort support</li>
+<li>Column sort modes: single, multiple</li>
+<li>Column sorting depends on position</li>
+<li>Frozen columns.</li>
+<li>Custom.</li>
+<li>Array column type.</li>
+<li>Bool column type.</li>
+<li>Date column type.</li>
+<li>Email column type.</li>
+<li>Group column type.</li>
+<li>Number column type.</li>
+<li>Pad column type.</li>
+<li>Password column type.</li>
+<li>Pivot column type.</li>
+<li>Row indicator column type.</li>
+<li>Row number column type.</li>
+<li>Select column type.</li>
+<li>File column type.</li>
+<li>Time column type.</li>
+<li>Image column type.</li>
+<li>Url column type.</li>
+<li>Currency column type.</li>
+<li>Row options column type.</li>
+<li>Row expand column type.</li>
+<li>Row details column type.</li>
+<li>Reference column type.</li>
+<li>Id column type.</li>
+<li>Row details.</li>
+<li>Cell inline editing.</li>
+<li>Cell navigation with keyboard.</li>
+<li>Mouse navigation.</li>
+<li>Style API to apply runtime style to the cells and rows.</li>
+<li>Row and cell highlighting.</li>
+<li>Focus cell API.</li>
+<li>Range selection.</li>
+<li>Row selection.</li>
+<li>Cell selection.</li>
+<li>Mix selection, when user can select row by clicking on row-indicator column or cell.</li>
+<li>Selection key that allows to reduce data row to some valuable thing.</li>
+<li>Selection modes: single and multiple.</li>
+<li>Keyboard editing support.</li>
+<li>Edit API.</li>
+<li>Dropdown editor.</li>
+<li>Textarea editor.</li>
+<li>Column filter plugin.</li>
+<li>Initial filter row implementation.</li>
+<li>Filter API for custom filters.</li>
+<li>Column grouping.</li>
+<li>Custom hierarchy for grouping.</li>
+<li>Column pivoting.</li>
+<li>Import&#x2F;Export to csv, excel and pdf.</li>
+<li>Column aggregation.</li>
+<li>Plugin system.</li>
+<li>Column chooser plugin.</li>
+<li>Pager plugin.</li>
+<li>Progress plugin.</li>
+</ul>
+
+</div>
+            </main>
+
+            
+                  <div id="overlay"></div>
+
+   </body>
+
+   </html>

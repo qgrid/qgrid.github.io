@@ -1,0 +1,341 @@
+/* @import "bootstrap-grid"; */
+@font-face {
+  font-family: "qgrid-iconfont";
+  src: url("../assets/fonts/qgrid-iconfont.eot");
+  src: url("../assets/fonts/qgrid-iconfont.eot?#iefix") format("eot"), url("../assets/fonts/qgrid-iconfont.woff2") format("woff2"), url("../assets/fonts/qgrid-iconfont.woff") format("woff"), url("../assets/fonts/qgrid-iconfont.ttf") format("truetype"), url("../assets/fonts/qgrid-iconfont.svg#qgrid-iconfont") format("svg"); }
+
+.icon:before, .performance:before, .fullycustomable:before, .fastflexible:before, .examples:before, .documents:before, .cleartypescripts:before, .search-glass:before, .logo:before, .angular:before, .angular-js:before, .react:before, .vue:before, .backbone:before, .github:before, .nav-trigger:before, .search-trigger:before, .icon-redirection:before, .icon-collapse:before {
+  font-family: "qgrid-iconfont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none; }
+
+.icon-angular:before, .angular:before {
+  content: "\E001"; }
+
+.icon-angularjs:before, .angular-js:before {
+  content: "\E002"; }
+
+.icon-backbone:before, .backbone:before {
+  content: "\E003"; }
+
+.icon-github:before, .github:before {
+  content: "\E004"; }
+
+.icon-hamburger:before, .nav-trigger:before {
+  content: "\E005"; }
+
+.icon-qgrid-logo-simple:before, .logo:before {
+  content: "\E006"; }
+
+.icon-react:before, .react:before {
+  content: "\E007"; }
+
+.icon-search:before, .search-glass:before, .search-trigger:before {
+  content: "\E008"; }
+
+.icon-examples:before, .examples:before {
+  content: "\e903"; }
+
+.icon-documents:before, .documents:before {
+  content: "\E906"; }
+
+.icon-redirection:before {
+  content: "\e902"; }
+
+.icon-vue:before, .vue:before {
+  content: "\E009"; }
+
+.icon-fastflexible:before, .fastflexible:before {
+  content: "\e90d"; }
+
+.icon-fullycustomable:before, .fullycustomable:before {
+  content: "\e90c"; }
+
+.icon-cleartypescripts:before, .cleartypescripts:before {
+  content: "\e904"; }
+
+.icon-performance:before, .performance:before {
+  content: "\e907"; }
+
+.icon-collapse:before {
+  content: "\e900"; }
+
+.qgrid-logo, .performance, .fullycustomable, .fastflexible, .examples, .documents, .cleartypescripts, .search-glass, .logo, .angular, .angular-js, .react, .vue, .backbone, .github, .nav-trigger, .search-trigger, .icon-redirection, .icon-collapse, .image-virtualize, .image-css, .image-custom, .image-js {
+  display: inline-block;
+  vertical-align: middle;
+  outline: none;
+  border: 0 transparent;
+  color: white;
+  text-decoration: none;
+  background-color: transparent; }
+
+.image-custom {
+  height: 242px;
+  flex: 1 50%;
+  margin: 0; }
+
+.qgrid-logo {
+  background: url("../assets/images/qgrid-logo.svg") 50% 50% no-repeat;
+  width: 120px;
+  height: 90px;
+  margin: 0; }
+
+.image-virtualize {
+  background: url("../assets/images/virtualize.svg") 50% 50% no-repeat;
+  background-size: 224px 242px;
+  height: 242px;
+  flex: 1 50%;
+  margin: 0; }
+
+.image-css {
+  background: url("../assets/images/css.svg") 50% 50% no-repeat;
+  background-size: 297px 142px;
+  height: 142px;
+  flex: 1 50%;
+  margin: 0; }
+
+.image-custom {
+  background: url("../assets/images/custom.svg") 50% 50% no-repeat;
+  background-size: 231px 199px;
+  height: 199px;
+  flex: 1 50%;
+  margin: 0; }
+
+.image-js {
+  background: url("../assets/images/js.svg") 50% 50% no-repeat;
+  background-size: 200px 200px;
+  height: 200px;
+  flex: 1 50%;
+  margin: 0; }
+
+@media screen and (min-width: 851px) {
+  .pages #nav {
+    display: block !important; }
+  .pages #overlay {
+    display: none !important; }
+  .pages header {
+    display: block;
+    background: none;
+    height: 0; }
+    .pages header .logo-wrapper .logo {
+      display: none; } }
+
+@media screen and (min-width: 851px) and (max-width: 1470px) {
+  .pages header {
+    position: absolute; }
+  .qgrid-examples {
+    transition: ease 0.5s;
+    top: 33px;
+    right: 100px; } }
+
+@media screen and (max-width: 850px) {
+  .news {
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: column; }
+  .index ul.features li,
+  .index ul.features li:nth-child(2n + 1) {
+    flex-direction: column; }
+    .index ul.features li div[class^="image-"],
+    .index ul.features li:nth-child(2n + 1) div[class^="image-"] {
+      background-position: 50% 50%;
+      flex-basis: auto; }
+    .index ul.features li .image-virtualize,
+    .index ul.features li:nth-child(2n + 1) .image-virtualize {
+      background-size: 112px 121px; }
+    .index ul.features li .image-css,
+    .index ul.features li:nth-child(2n + 1) .image-css {
+      background-size: 148.5px 71px; }
+    .index ul.features li .image-js,
+    .index ul.features li:nth-child(2n + 1) .image-js {
+      background-size: 100px 100px; }
+    .index ul.features li .image-custom,
+    .index ul.features li:nth-child(2n + 1) .image-custom {
+      background-size: 115px 98px; }
+    .index ul.features li .description,
+    .index ul.features li:nth-child(2n + 1) .description {
+      flex-basis: auto;
+      text-align: center; }
+      .index ul.features li .description p,
+      .index ul.features li:nth-child(2n + 1) .description p {
+        text-align: center;
+        position: relative;
+        max-width: none;
+        margin-right: 20px;
+        margin-left: 20px; }
+  .pages main {
+    margin-left: 0; }
+  .pages .page-wrapper {
+    margin: 100px 20px 40px 20px; }
+    .pages .page-wrapper h1:first-child {
+      margin-top: 40px;
+      font-size: 40px; }
+    .pages .page-wrapper h2 {
+      font-size: 1.5em; }
+    .pages .page-wrapper .github-link2 {
+      border: none; }
+      .pages .page-wrapper .github-link2 span {
+        display: none; }
+  .pages header {
+    display: block; }
+    .pages header .logo-wrapper {
+      margin: 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      top: 17px;
+      z-index: -1; }
+      .pages header .logo-wrapper .logo {
+        font-size: 31px;
+        margin: 0; }
+    .pages header .nav {
+      flex-wrap: wrap;
+      justify-content: normal;
+      padding: 10px 0 0 0; }
+      .pages header .nav .button, .pages header .nav .button-secondary {
+        margin-right: 24px;
+        margin-left: auto; }
+      .pages header .nav .qgrid-search {
+        order: 4;
+        flex-basis: 100%;
+        margin-top: 10px; }
+        .pages header .nav .qgrid-search::before {
+          left: 34px; }
+        .pages header .nav .qgrid-search .search {
+          padding: 12px 58px;
+          width: 100%; }
+    .pages header .frameworks,
+    .pages header .qgrid-examples {
+      display: none; }
+  .pages .nav-trigger {
+    display: block; }
+  .pages #nav {
+    display: none;
+    padding-top: 0;
+    z-index: 12;
+    top: 29px;
+    border-top: 4px solid #ffffff;
+    width: calc(100% - 48px);
+    transform: translateX(-50%);
+    left: 50%;
+    border-radius: 4px;
+    height: 189px; }
+    .pages #nav.has-highlight {
+      display: block !important; }
+    .pages #nav nav {
+      height: calc(100% - 28px); }
+    .pages #nav .logo {
+      display: none; } }
+
+@media screen and (max-width: 540px) {
+  .index main .get-started h1 {
+    font-size: 22px;
+    line-height: 22px; }
+  .index main .get-started h2 {
+    font-size: 18px;
+    line-height: 18px; }
+  .index main .header .nav .frameworks li {
+    font-size: 2.5em;
+    margin-bottom: 10px; }
+    .index main .header .nav .frameworks li:not(:last-child) {
+      margin-right: 10px; }
+  .index main .header .nav {
+    flex-wrap: wrap;
+    width: auto; }
+  .pages header .nav .qgrid-logo {
+    width: 47px;
+    height: 33px; }
+  .pages header .nav .button, .pages header .nav .button-secondary {
+    font-size: 0.8em;
+    padding: 6px 14px;
+    margin-right: 16px; }
+  .pages header .nav .nav-trigger {
+    width: 24px;
+    margin-left: 16px;
+    margin-right: 24px; }
+  .pages header .nav .qgrid-search::before {
+    left: 20px; }
+  .pages header .nav .qgrid-search .search {
+    padding: 12px 45px; } }
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em; }
+
+::-webkit-scrollbar-thumb {
+  background: #649eed; }
+
+::-webkit-scrollbar-track {
+  background: #b2cff6; }
+
+body {
+  scrollbar-face-color: #649eed;
+  scrollbar-track-color: #b2cff6; }
+
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+body {
+  background: #fff; }
+
+section {
+  margin-bottom: 160px; }
+  @media screen and (max-width: 768px) {
+    section {
+      margin-bottom: 80px; } }
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 1080px) {
+    .container {
+      max-width: calc(100% - 80px);
+      width: calc(100% - 80px); } }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+
+a {
+  text-decoration: none; }
+
+.button, .button-secondary {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #2f80ed;
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: #fff;
+  vertical-align: middle;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none; }
+  .button_big {
+    padding: 20px 18px 20px 18px; }
+  .button:hover, .button-secondary:hover {
+    background-color: #ffffff;
+    border: 1px solid #0078cf;
+    color: #282828; }
+
+.button-secondary {
+  background-color: #ffffff;
+  border: 1px solid #0078cf;
+  color: #353535; }
+  .button-secondary:hover {
+    background-color: #0078cf;
+    border: 1px solid #0078cf;
+    color: #ffffff; }

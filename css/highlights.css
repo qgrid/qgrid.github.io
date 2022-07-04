@@ -1,0 +1,28 @@
+.page-wrapper .highlights {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0;
+  padding: 0; }
+  .page-wrapper .highlights > li {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    margin-bottom: 55px; }
+    .page-wrapper .highlights > li br {
+      display: none; }
+    .page-wrapper .highlights > li .video {
+      width: 50%;
+      padding: 0; }
+    .page-wrapper .highlights > li:before {
+      content: none; }
+    .page-wrapper .highlights > li .description {
+      display: flex;
+      flex-flow: column wrap;
+      width: auto;
+      flex: 1 1 auto;
+      padding: 0; }
+      .page-wrapper .highlights > li .description h2 {
+        margin-top: 0; }
+      .page-wrapper .highlights > li .description p {
+        font-size: 1.5em;
+        line-height: 1.5em; }

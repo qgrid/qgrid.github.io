@@ -1,0 +1,723 @@
+
+
+   <!DOCTYPE html>
+   <html lang="en">
+
+   <head>
+      <title>
+         Pivoting — q-grid
+      </title>
+      <meta charset="utf-8">
+      <meta name="description" content="qgrid - Framework for creating data grids">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Pivoting — qgrid">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="https:////images/logo.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Pivoting — qgrid">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="https:///assets/logo.png">
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="192x192"
+         href="/assets/favicons/android-chrome-192x192.png">
+      <link rel="icon" type="image/png" sizes="384x384"
+         href="/assets/favicons/android-chrome-384x384.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+      <meta name="msapplication-TileImage" content='/assets/favicons/ms-icon-144x144.png'>
+      <link rel="icon" href="/assets/logo.png" type="image/png">
+
+      <meta name="msapplication-TileColor" content="#2f80ed">
+      <meta name="theme-color" content="#2f80ed">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap"
+         rel="stylesheet">
+
+      <!-- main page styles -->
+      
+<link rel="stylesheet" href="/css/page.css">
+
+
+         <!-- this needs to be loaded before guide's inline scripts -->
+         <script src="/js/menu.js"></script>
+         <script src="/js/lazy.js"></script>
+         <script>window.PAGE_TYPE = "Features"</script>
+
+   <meta name="generator" content="Hexo 6.2.0"></head>
+
+   <body class="pages">
+
+      
+         <header>
+            
+<section class="header">
+	<nav class="nav">
+		<button id="nav-trigger" class="nav-trigger"></button>
+		<a class="qgrid-logo" href="/"></a>
+		
+			<span class="qgrid-search search-trigger">
+				<input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
+			</span>
+		
+		<a href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
+		<ul class="frameworks">
+			<li class="ready">
+				<a href="/guide/highlights.html">Documentation</a>
+			</li>
+			<li class="ready">
+				<a href="https://qgrid.github.io/ng2" class="qgrid-examples">Examples</a>
+			</li>
+			<li class="ready">
+				<a target="_blank" rel="noopener" href="https://github.com/qgrid/ng2">GitHub</a>
+			</li>
+		</ul>
+	</nav>
+	
+</section>
+         </header>
+
+         <aside id="nav">
+            <nav>
+    
+    
+    <div class="nav-item">
+        <h3 onclick="onTogglerClick(event)" class="">Getting started</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/guide/highlights.html">Some Highlights</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/guide/install.html">How to install</a>
+        
+                        </li>
+
+    
+        <li data-tag="13.3.0 - 2022-07-04,Added,Changes,Fixes,11.2.0 - 2021-10-22,Added,Changes,Fixed,11.1.1 - 2021-06-16,Added,Fixed,11.0.1 - 2021-03-30,Fixed,11.0.0 - 2021-03-01,Added,Changed,BREAKING,9.2.1 - 2020-10-19,Fixed,Added,Changed,9.1.11 - 2020-08-19,Fixed,9.1.10 - 2020-08-17,Fixed,9.1.9 - 2020-08-13,Fixed,9.1.8 - 2020-08-11,Fixed,9.1.7 - 2020-07-23,Fixed,9.1.6 - 2020-07-20,Fixed,Changed,Added,9.1.5 - 2020-07-13,Fixed,Added,Changed,9.1.4 - 2020-06-01,BREAKING,Fixed,Added,9.1.2 - 2020-05-27,BREAKING,Added,Changed,Fixed,9.0.1 - 2020-03-13,Fixed,9.0.0 - 2020-03-13,Changed,BREAKING,7.5.2 - 2020-03-04,Fixed,7.5.1 - 2020-01-22,Fixed,7.5.0 - 2020-01-22,Added,Changed,Fixed,BREAKING,7.4.0 - 2019-08-16,Added,7.3.0 - 2019-08-08,Added,Changed,7.2.6 - 2019-07-31,Fixed,7.2.5 - 2019-07-29,Added,Fixed,7.2.4 - 2019-06-25,Fixed,7.2.3 - 2019-06-20,Fixed,7.2.2 - 2019-06-20,Fixed,7.2.1 - 2019-06-20,Fixed,7.2.0 - 2019-06-20,Changed,Fixed,Added,6.4.0 - 2019-05-14,Added,Fixed,6.3.9 - 2019-04-24,Added,6.3.8 - 2019-04-15,Fixed,6.3.7 - 2019-04-12,Fixed,6.3.5 - 2019-04-11,Changed,Fixed,6.3.4 - 2019-03-12,Fixed,6.3.0 - 2019-02-22,Added,Changed,Fixed,6.2.4 - 2019-02-05,Fixed,6.2.3 - 2019-02-05,Added,6.2.2,Fixed,6.2.1,Added,Fixed,6.2.0,Fixed,Added,BREAKING,6.1.5 - 2018-07-03,Fixed,Added,6.1.4 - 2018-06-28,Fixed,Added,Changed,6.1.3 - 2018-06-21,Fixed,6.1.1 - 2018-06-15,Fixed,Changed ,6.1.0 - 2018-06-15,BREAKING,Deprecated,Added,Changed,Fixed,5.3.10 - 2018-05-21,Added,Changed,Fixed,5.3.9 - 2018-05-18,Added,Changed,Fixed,5.3.7 - 2018-07-08,Added,Fixed,5.3.6 - 2018-04-20,Added,5.3.5 - 2018-04-19,Added,5.3.4 - 2018-04-18,Added,5.3.3 - 2018-04-13,Added,Fixed,5.3.2 - 2018-03-23,Added,Changed,Fixed,5.2.4 - 2018-02-16,Changed,Fixed,5.2.3 - 2018-02-12,Fixed,5.2.2 - 2018-02-12,Fixed,5.2.0 - 2018-02-09,Added,Changed,Fixed,5.1.2 - 2018-01-03,Added,Changed,5.1.1 - 2017-12-28,Added,Changed,Fixed,5.0.2 - 2017-12-22,Added" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/guide/changelog.html">Changelog</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Features</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/data-rows.html">Data Rows</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/data-columns.html">Data Columns</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/selection.html">Selection</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/cell-templates.html">Cell Templates</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/pagination.html">Pagination</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/filtering.html">Filtering</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/sorting.html">Sorting</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/layer-system.html">Layer System</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/appearance.html">Appearance</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/row-details.html">Row Details</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/editing.html">Editing</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/grouping.html">Grouping</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/navigation.html">Navigation</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/focus.html">Focusing</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class="active-topic ">
+        
+                            <span class="title">Pivoting</span>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/busy.html">Busy Indicator</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/visibility.html">Visibility</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/master-details.html">Master-Details</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/feature/virtualization.html">Virtualization</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Column Types</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/grid-column.html">Grid Column</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/array-column.html">Array</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/bool-column.html">Boolean</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/currency-column.html">Currency</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/date-column.html">Date Time</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/file-column.html">File & Image</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/numeric-column.html">Numeric</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/reference-column.html">Reference</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/row-indicator-column.html">Row Indicator</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/row-options-column.html">Row Options</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/select-column.html">Select</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/text-column.html">Text</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/column-type/url-column.html">Url & Email</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Customization</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/customization/template-system.html">Template System</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/customization/plugin.html">How to write a plugin</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/customization/theme.html">How to made a theme</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Plugins</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/condition-builder.html">Condition Builder</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/data-manipulation.html">Data Manipulation</a>
+        
+                        </li>
+
+    
+        <li data-tag="Request Total Count Once Strategy,Cache Already Requested Page Strategy,Check Next Page Count Strategy" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/data-provider.html">Data Provider</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/pager.html">Pager</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/export.html">Export to file</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/import.html">Import from file</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/legend.html">Legend</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/tooltip.html">Tooltip</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/rest.html">REST</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/validation.html">Validation</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/action.html">Action</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/persistence.html">State Persistence</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/toolbar.html">Toolbar</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/autocomplete.html">Autocomplete</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/dropdown.html">Dropdown</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/edit-form.html">Edit Form</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/pane.html">Pane</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/live.html">Live</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/plugin/column-chooser.html">Column chooser</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    <div class="nav-item hide-list">
+        <h3 onclick="onTogglerClick(event)" class="icon-collapse">Reference</h3>
+        <ul>
+ 
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/grid-component.html">Grid Component</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/grid-model.html">Grid Model</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/grid-facade.html">Grid Facade</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/data-middleware.html">Data Middleware</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/cell-service.html">Cell Service</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/view-service.html">View Service</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/performance.html">Performance Tips</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/style-api.html">Style API</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/dom.html">DOM Internals</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/keyboard-api.html">Keyboard API</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/mouse-api.html">Mouse API</a>
+        
+                        </li>
+
+    
+        <li data-tag="" data-example-tag="" class=" ">
+        
+                            <a class="title" href="/reference/fetch.html">Fetch</a>
+        
+                        </li>
+
+    
+        </ul>
+    </div>
+    
+    
+</nav>
+
+
+         </aside>
+         
+
+            <main>
+               <div class="page-wrapper">
+   <h1>
+      Pivoting
+   </h1>
+   <ul>
+<li><a href="#how-to-override-pivot-cell-template">How to override pivot cell template?</a></li>
+</ul>
+<p>Pivot is a data summarization mode where users can break down raw data to highlight the desired information. It displays data in format such as spreadsheets or business intelligence applications.</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+   selector<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+      &lt;q-grid [rows]="rows$ | async" [model]="gridModel">
+         &lt;q-grid-columns generation="deep">&lt;/q-grid-columns>
+      &lt;/q-grid>
+   </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">implements</span> <span class="token class-name">AfterViewInit</span> <span class="token punctuation">&#123;</span>
+   rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token function">constructor</span><span class="token punctuation">(</span>
+      <span class="token keyword">private</span> dataService<span class="token operator">:</span> MyDataService<span class="token punctuation">,</span>
+      <span class="token keyword">private</span> qgrid<span class="token operator">:</span> Grid
+   <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> 
+   <span class="token punctuation">&#125;</span>
+
+   <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">.</span><span class="token function">pivot</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+         by<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'bondingType'</span><span class="token punctuation">,</span> <span class="token string">'groupBlock'</span><span class="token punctuation">]</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+    <div class="editor">
+      <span class="editor-frame">
+        <iframe data-src="//stackblitz.com/github/qgrid/ng2-example/tree/pivot-column-template/latest?embed=1&file=app/app.component.ts&hideExplorer=1&hideNavigation=1&hidedevtools=1&view=preview">
+        </iframe>
+      </span>
+      <div class="source-links">
+      </div>
+    </div>
+
+
+<a name="how-to-override-pivot-cell-template" href="#how-to-override-pivot-cell-template">
+   How to override pivot cell template?
+</a>
+
+<p>Use ng-template inside column component with type <code>pivot</code>.</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+   selector<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
+   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+      &lt;q-grid [rows]="rows$ | async" [model]="gridModel">
+         &lt;q-grid-columns generation="deep">
+            &lt;q-grid-column type="pivot">
+               &lt;ng-template for="body" let-$cell>
+                  &lt;div [style.color]="'#' + $cell.row.color">X&lt;/div>
+               &lt;/ng-template>
+            &lt;/q-grid-column>
+         &lt;/q-grid-columns>
+      &lt;/q-grid>
+   </span><span class="token template-punctuation string">`</span></span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">implements</span> <span class="token class-name">AfterViewInit</span> <span class="token punctuation">&#123;</span>
+   rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+   <span class="token function">constructor</span><span class="token punctuation">(</span>
+      <span class="token keyword">private</span> dataService<span class="token operator">:</span> MyDataService<span class="token punctuation">,</span>
+      <span class="token keyword">private</span> qgrid<span class="token operator">:</span> Grid
+   <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+   <span class="token punctuation">&#125;</span>
+
+   <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">.</span><span class="token function">pivot</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+         by<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'bondingType'</span><span class="token punctuation">,</span> <span class="token string">'groupBlock'</span><span class="token punctuation">]</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</div>
+            </main>
+
+            
+                  <div id="overlay"></div>
+
+   </body>
+
+   </html>

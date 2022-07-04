@@ -1,0 +1,21 @@
+.page-wrapper table {
+  border-spacing: 0;
+  width: 100%; }
+  .page-wrapper table tr td, .page-wrapper table tr th {
+    padding: 1em;
+    text-align: left;
+    vertical-align: top; }
+    .page-wrapper table tr td p:first-child, .page-wrapper table tr th p:first-child {
+      margin-top: 0; }
+    .page-wrapper table tr td p:last-child, .page-wrapper table tr th p:last-child {
+      margin-bottom: 0; }
+  .page-wrapper table tr:nth-child(odd) {
+    background: #e7f1ff; }
+  .page-wrapper table tr:nth-child(even) {
+    background: #cbdffb; }
+  .page-wrapper table th {
+    color: #fff;
+    font-family: "Roboto Slab", serif;
+    font-weight: normal;
+    background: #353535;
+    padding: 0.5em !important; }
