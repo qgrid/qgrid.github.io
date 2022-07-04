@@ -1,10 +1,9 @@
 ---
-title: Highlights
+title: Some Highlights
 type: guide
 group: Getting started
 order: 0
 ---
-
 
 - [Drag & Drop](#dragndrop)
 - [Sorting](#sorting)
@@ -18,14 +17,12 @@ order: 0
 - [Condition Builder](#condition-builder)
 - [Selection](#selection)
 - [Style API](#style-API)
-- [Pinned Columns](#pinned-columns)
-- [Pinned Rows](#pinned-rows)
+- [Pinned/Frozen Columns](#pinned-columns)
 - [Span Headers](#span-headers)
 - [Pivoting](#pivoting)
 - [Layer System](#layer-system)
 - [Panes](#panes)
-- [Export Import](#export-import)
-
+- [Export and Import](#export-import)
 
 <ul class="highlights">
 	<li>
@@ -162,7 +159,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2><a href="/column-type/grid-column.html#Column-Pin" name="pinned-columns">Pinned Columns</a>) & <a href="/feature/data-rows.html#How-to-make-rows-frozen-pinned" name="pinned-rows">Pinned Rows</a></h2>
+			<h2><a href="/column-type/grid-column.html#Column-Pin" name="pinned-columns">Pinned/Frozen Columns</a></h2>
 			<p>Pin your data which you want to see constantly to any border.</p>
 		</div>
 		<div class="video">
@@ -173,7 +170,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2><a href="/column-type/grid-column.html#Column-Children" name="span-headers">Span Headers</a> & <a href="/feature/pivoting.html" name="pivoting">Pivoting</a></h2>
+			<h2><a href="/column-type/grid-column.html#Column-Children" name="span-headers">Span Headers & Pivoting</a></h2>
 			<p>Organize and extract the significant data using span headers and pivoting feature.</p>
 		</div>
 		<div class="video">
@@ -184,7 +181,7 @@ order: 0
 	</li>
 	<li>
 		<div class="description">
-			<h2><a href="/feature/layer-system.html" name="layer-system">Layer System</a> & <a href="/plugin/pane.html" name="panes">Panes</a></h2>
+			<h2><a href="/feature/layer-system.html" name="layer-system">Layer System & Panes</a></h2>
 			<p>Customize the grid view until the data is received.</p>
 		</div>
 		<div class="video">
@@ -195,7 +192,7 @@ order: 0
 	</li>
    <li>
 		<div class="description">
-			<h2><a href="/plugin/export.html" name="export-import">Export/Import</a></h2>
+			<h2><a href="/plugin/export.html" name="export-import">Client side Export and Import</a></h2>
 			<p>Save and load your data in popular file formats.</p>
 		</div>
 		<div class="video">
