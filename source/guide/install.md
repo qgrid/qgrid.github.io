@@ -46,6 +46,8 @@ export class AppModule {
 Use column `generation` mode for a quick start.
 
 ```typescript
+import { Grid } from 'ng2-qgrid';
+
 @Component({
    selector: 'my-component',
    template: `

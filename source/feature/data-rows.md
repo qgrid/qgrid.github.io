@@ -15,15 +15,25 @@ Any array of objects can be directly bind to the q-grid, if `observable` is used
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep"></q-grid-columns>
+      <q-grid [rows]="rows$ | async"
+              [model]="gridModel">
       </q-grid>
-   `
+      `
 })
 export class MyComponent {
    rows$ = this.dataService.getRows();
 
-   constructor(private dataService: MyDataService) {}
+   gridModel = this.qgrid
+      .model();
+      .columnList({ 
+         generation: 'deep' 
+      });
+
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
+   }
 }
 ```
 
@@ -31,42 +41,15 @@ export class MyComponent {
 What will happen if array of rows is not consistent? 
 </a>
 
-If some of row properties are not accessible empty cells will be shown, on edit error will be thrown.
+If some of the row fields are setup incorrectly - empty cells will be shown. 
+
+> When edit such a value, an error will be thrown.
 
 <a name="how-to-setup-rows-using-qgrid-model" href="#how-to-setup-rows-using-qgrid-model">
 How to setup rows using q-grid model?
 </a>
 
-The preferred way to obtain q-grid model is to use `GridModel` and assign it in template.
-
-```typescript
-@Component({
-   selector: 'my-component',
-   template: '<q-grid [rows]="rows$ | async" [model]="gridModel"></q-grid>',
-})
-export class MyComponent implements AfterViewInit {
-   gridModel = this.qgrid.model();
-   rows$ = this.dataService.getRows();
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-
-   ngAfterViewInit() {
-      this.gridModel.columnList({
-         generation: 'deep',
-      });
-      this.rows$.subscribe((rows) => this.gridModel.data({ rows }));
-   }
-}
-```
-<a name="how-to-make-rows-frozen-or-pinned" href="#how-to-make-rows-frozen-or-pinned">
-How to make rows frozen or pinned?
-</a>
-
-Use `row` state in the q-grid model to control which rows to pin.
+Almost all features and possibilities of the q-grid are accessible through the q-grid model, typically data comes from the observable so `rows$ | async` pattern looks elegant, when you already have an array of objects consider to put them to the model directly.
 
 ```typescript
 @Component({
@@ -74,22 +57,53 @@ Use `row` state in the q-grid model to control which rows to pin.
    template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid
+      .model()
+      .data({
+         rows: [
+            { name: 'Alex', age: 16 }, 
+            { name: 'Bill', age: 40 }
+         ]
+      })
+      .columnList({ 
+         generation: 'deep' 
+      });
+
+   constructor(private qgrid: Grid) {}
+}
+```
+
+<a name="how-to-make-rows-frozen-or-pinned" href="#how-to-make-rows-frozen-or-pinned">
+How to make rows frozen or pinned?
+</a>
+
+Use the q-grid `row` state to get control over the pinned rows.
+
+> This is an experimental feature, for instance, navigation doesn't work for the frozen rows
+
+```typescript
+@Component({
+   selector: 'my-component',
+   template: '<q-grid [model]="gridModel"></q-grid>',
+})
+export class MyComponent {
    gridModel = this.qgrid.model();
 
    constructor(
       private dataService: DataService,
       private qgrid: Grid
    ) {
-   }
-
-   ngAfterViewInit() {
-      this.dataService.getRows().subscribe((rows) => {
-         this.gridModel.data({ rows });
-         this.gridModel.row({
-            pinTop: [rows[0], rows[1]],
-            pinBottom: [rows[rows.length - 1]],
-         });
-      });
+      // do not forget to unsubscribe sometimes :)
+      this.dataService
+         .getRows()
+         .subscribe(rows => 
+            this.gridModel
+               .data({ rows });
+               .row({
+                  pinTop: [rows[0], rows[1]],
+                  pinBottom: [rows[rows.length - 1]],
+               })
+         );
    }
 }
 ```
@@ -99,11 +113,21 @@ How to enable row resizing and drag & drop?
 
 By setting up `canMove` and `canResize` inputs in the `q-grid-row` component or by using `row` state in the q-grid model.
 
-```html
-<q-grid>
-   <q-grid-row [canMove]="true" [canResize]="true">
-   </q-grid-row>
-</q-grid>
+```typescript
+@Component({
+   selector: 'my-component',
+   template: '<q-grid [model]="gridModel"></q-grid>',
+})
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid
+      .model()
+      .row({
+         canResize: true,
+         canMove: true,
+      });
+
+   constructor(private qgrid: Grid) {}
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/drag-row-basic/latest" %}
