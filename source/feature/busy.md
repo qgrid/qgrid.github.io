@@ -4,17 +4,14 @@ group: Features
 order: 16
 ---
 
-Use q-grid service to get control over progress bar visibility.
+To control progress bar visibility busy method from the q-grid service can be used.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: `
-      <q-grid [model]="gridModel">
-      </q-grid>
-   `
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
-export class MyComponent implements AfterViewInit {
+export class MyComponent {
    gridModel = this.qgrid
       .model()
       .columnList({
@@ -34,7 +31,6 @@ export class MyComponent implements AfterViewInit {
             cancelBusy();
             this.gridModel.data({ rows });
          });
-      }
    }
 }
 ```

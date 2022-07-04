@@ -166,7 +166,7 @@ export class MyComponent implements AfterViewInit {
    rows$ = this.dataService.getRows();
    gridModel = this.qgrid.model();
 
-   @Input() value: string;
+   @Input() search: string;
 
    constructor(
       private dataService: MyDataService,
@@ -176,7 +176,7 @@ export class MyComponent implements AfterViewInit {
 
    ngAfterViewInit() {
       this.gridModel.filter({
-         custom: (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
+         custom: row => row.name.toLowerCase().indexOf(this.search) >= 0,
       });
    }
 }

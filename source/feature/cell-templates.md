@@ -29,13 +29,14 @@ Default header template contains sort and filter components that could be used i
 ```html
 <q-grid>
    <ng-template qGridColumnHead="age" let-$cell>
-      <q-grid-column-sort class="q-grid-sort"
-                          [column]="$cell.column">
+
+      <q-grid-column-sort [column]="$cell.column" class="q-grid-sort">
          {{$cell.column.title}}
       </q-grid-column-sort>
-      <q-grid-column-filter-trigger class="q-grid-column-filter-trigger"                                       
-                                    [column]="$cell.column">
+
+      <q-grid-column-filter-trigger [column]="$cell.column" class="q-grid-column-filter-trigger">
       </q-grid-column-filter-trigger>
+
    </ng-template>
 </q-grid>
 ```

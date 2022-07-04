@@ -114,7 +114,7 @@ Set selection `area` property to `custom` if clicking to q-grid body should not 
    How to prevent unselecting if row was clicked again?
 </a>
 
-If `singleOne` mode is not a case use `selectionChange` event. Next lines prevent unselecting of row that was double clicked.
+If `singleOnly` mode is not a case use `selectionChange` event. Next lines prevent unselecting of row that was double clicked.
 
 ```typescript
 gridModel.selectionChanged.on((e) => {

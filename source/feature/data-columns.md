@@ -49,30 +49,14 @@ export class MyComponent {
 Use q-grid model to explicitly define column set to render. Still column generation can be used here.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async"
-              [model]="gridModel">
-      </q-grid>
-      `
-})
-export class MyComponent {
-   rows$ = this.dataService.getRows();
-
-   gridModel = this.qgrid
-      .model();
-      .data([
+qgrid
+   .model();
+   .data({
+      columns: [
          { key: 'name', type: 'text' },
          { key: 'age', type: 'number' },
-      ]);
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-}
+      ]
+   });
 ```
 
 <a name="structural-directives-and-column-visibility" href="#structural-directives-and-column-visibility">
@@ -97,8 +81,6 @@ Sometimes it's convenient to control column visibility inside the component's ht
 </q-grid>
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/column-list-basic/latest" %}
-
 <a name="how-to-make-columns-frozen/pinned" href="#how-to-make-columns-frozen/pinned">
    How to make columns frozen/pinned?
 </a>
@@ -106,30 +88,14 @@ Sometimes it's convenient to control column visibility inside the component's ht
 `pin` property controls if the column should be pinned either to the `right` or to the `left`.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async"
-              [model]="gridModel">
-      </q-grid>
-      `
-})
-export class MyComponent {
-   rows$ = this.dataService.getRows();
-
-   gridModel = this.qgrid
-      .model();
-      .data([
+qgrid
+   .model();
+   .data({
+      columns: [
          { key: 'name', type: 'text', pin: 'left' },
          { key: 'age', type: 'number' },
-      ]);
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-}
+      ]
+   });
 ```
 
 <a name="how-to-define-column-order" href="#how-to-define-column-order">
@@ -139,30 +105,14 @@ export class MyComponent {
 Column order calculates automatically depending on position in the array list and html template when `<q-grid-column>` is used. To explicitly set column order `index` property should be used.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async"
-              [model]="gridModel">
-      </q-grid>
-      `
-})
-export class MyComponent {
-   rows$ = this.dataService.getRows();
-
-   gridModel = this.qgrid
-      .model();
-      .data([
+qgrid
+   .model();
+   .data({
+      columns: [
          { key: 'name', type: 'text', index: 2 },
          { key: 'age', type: 'number', index: 1 },
-      ]);
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-}
+      ]
+   });
 ```
 
 <a name="suggested-links" href="#suggested-links">

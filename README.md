@@ -34,5 +34,5 @@ $ hexo clean
 The site is deployed using GitHub pages:
 
 ``` bash
-$ hexo clean && hexo deploy -g
+hexo clean && hexo deploy -g
 ```

@@ -11,14 +11,6 @@ order: 14
 Use q-grid service to get control over focused cell, selected page will be automatically adjusted.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async" [model]="gridModel">
-         <q-grid-columns generation="deep"></q-grid-columns>
-      </q-grid>
-   `
-})
 export class MyComponent {
    rows$ = this.qgrid.model();
    gridModel = this.dataService.getRows();
@@ -27,9 +19,6 @@ export class MyComponent {
       private qgrid: Grid,
       private dataService: MyDataService
    ) {
-   }
-
-   ngAfterViewInit() {
       const service = this.qgrid.service(this.gridModel);
       service.focus(5, 2);
    }
@@ -80,11 +69,9 @@ export class MyComponent implements AfterViewInit {
    ngAfterViewInit() {
       const service = this.qgrid.service(this.gridModel);
 
-      this.rows$.subscribe(
-         {
-            next: (rows) => { service.focus(rows.length - 1, 0);
-         }
-      );
+      this.rows$.subscribe({
+         next: rows => { service.focus(rows.length - 1, 0);
+      });
    }
 }
 ```
@@ -116,11 +103,11 @@ export class MyComponent {
    gridModel = this.qgrid.model();
 
    loadCommand = new Command({
+      shortcut: 'ctrl+l',
       execute: () => {
          this.rows$ = this.dataService.getAtoms();
       },
       canExecute: () => this.gridModel.focus().isActive,
-      shortcut: 'ctrl+l',
    });
 
    constructor(

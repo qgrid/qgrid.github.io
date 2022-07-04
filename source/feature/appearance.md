@@ -21,46 +21,23 @@ Use rich css system to apply specific styles. Each cell, no mater if it is locat
 Use style callbacks for dynamic class assignments, for the cell style it is possible to pass an object instead of callback in this case object keys will play the role of column key filters. Data rows style callbacks can accept `RowDetails` and `Node` classes depending on the q-grid settings.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async"
-              [model]="gridModel">
-      </q-grid>
-   `
-})
-export class MyComponent implements AfterViewInit {
-   rows$ = this.dataService.getRows();
-   gridModel = this.qgrid
-      .model()
-      .columnList({
-         generation: 'deep'
-      });
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-
-   ngAfterViewInit() {
-      this.gridModel.style({
-         cell: {
-            'myColumnKey': (row, column, context) => {
-               context.class(`td-${row.name}`, {
-                  color: `#${row.color}`,
-                  background: '#3f51b5'
-               });
-            }
-         },
-         row: (row, context) => {
-            if (!row.isActive) {
-               context.class('inactive');
-            }
+ qgrid
+   model()
+   .style({
+      cell: {
+         birthday: (row, column, context) => {
+            context.class(`td-${row.name}`, {
+               color: `#${row.color}`,
+               background: '#3f51b5'
+            });
          }
-      });
-   }
-}
+      },
+      row: (row, context) => {
+         if (row.isActive) {
+            context.class('active');
+         }
+      }
+   }):
 ```
 
 > Pass unique id to `context.class` method for the appropriate group of styles.
@@ -72,18 +49,21 @@ export class MyComponent implements AfterViewInit {
    How to change column width?
 </a>
 
-Use css styles or column `[width]` attribute to setup desired column size using pixels or percentages.
+Use css styles or column `width` property to setup desired column size using pixels or percentages.
 
-```html
-<q-grid [rows]="rows$ | async">
-   <q-grid-columns>
-      <q-grid-column key="name" [width]="200"></q-grid-column>
-      <q-grid-column key="description" width="100%"></q-grid-column>
-   </q-grid-columns>
-</q-grid>
+```typescript
+qgrid
+   .model();
+   .data({
+      columns: [
+         { key: 'name', type: 'text', width: 100 },
+         { key: 'age', type: 'number', width: '100%' },
+         { key: 'birthday', type: 'date', widthMode: 'fit-head' }
+      ]
+   });
 ```
 
-> If percents are used all columns should define `width` property for the correct size calculation.
+> If percents are used all columns should have `width` property for the correct size calculation.
 
 <a name="how-to-make-column-width-auto-adjusted-to-the-cell-content" href="#how-to-make-column-width-auto-adjusted-to-the-cell-content">
    How to make column width auto adjusted to the cell content?
