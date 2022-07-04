@@ -13,15 +13,14 @@ order: 1
 
 
 ```bash
-npm install ng2-qgrid
+npm install ng2-qgrid --save
 ```
 
-<a name="add-q-grid-theme-modules-to-the-application-root" href="#add-q-grid-theme-modules-to-the-application-root">
+<a name="add-q-grid-theme-modules-to-the-application-root"   href="#add-q-grid-theme-modules-to-the-application-root">
    Add q-grid & theme modules to the application root
 </a>
 
-
-There are 2 themes out of box `material` and `basic`.
+There are 2 themes out of box: `material` and `basic`(experimental).
 
 ```typescript
 import { GridModule } from 'ng2-qgrid';
@@ -37,14 +36,14 @@ export class AppModule {
 }
 ```
 
-> Material theme requires `@angular/material` to be installed.
+> If you use q-grid `material` theme install [angular material](https://material.angular.io/guide/getting-started)
+
 
 <a name="create-an-angular-component" href="#create-an-angular-component">
    Create an angular component
 </a>
 
-
-Use column generation mode for a quick start.
+Use column `generation` mode for a quick start.
 
 ```typescript
 @Component({
@@ -58,9 +57,9 @@ Use column generation mode for a quick start.
 export class MyComponent {
    rows$ = this.dataService.getRows();
    gridModel = this.qgrid
-      .model()
-      .columnList({
-         generation: 'deep'
+      .model();
+      .columnList({ 
+         generation: 'deep' 
       });
 
    constructor(
@@ -75,38 +74,38 @@ export class MyComponent {
    Dependencies
 </a>
 
-*  @angular/common
-*  @angular/core
-*  @angular/forms
+Next libraries should be installed separately to support client side export and import features.
 
-If you use `material` theme from the q-grid package, you also need to install [angular material](https://material.angular.io/)
-
-* @angular/cdk
-* @angular/material
+*  xlsx
+*  file-saver
+*  @types/xlsx
+*  @types/file-saver
 
 <a name="development" href="#development">
-   Development
+   Develop the q-grid
 </a>
+
+q-grid uses [yarn](https://classic.yarnpkg.com/lang/en/docs/install) to manage packages, after installed just execute the command line
 
 ```bash
 git clone https://github.com/qgrid/ng2.git
-npm install
-npm run start
+yarn install
+yarn start
 ```
 
-<a name="browser-support" href="#browser-support">
-   Browser Support
+<a name="stackblitz" href="#stackblitz">
+   Stackblitz
 </a>
 
-* Last `Chrome` is supported.
-* Last `FireFox` is supported.
-* Last `Edge` is supported.
+For the reason unknown [stackblitz](https://stackblitz.com/) requires to install next dependencies in addition to the ` ng2-qgrid`
 
-* `Safari` is in progress.
-* `IE11` is in progress.
+* @qgrid/core
+* @qgrid/plugins
+* @qgrid/ngx
+* @qgrid/ngx-plugins
 
-<a name="licence" href="#licence">
-   Licence
+<a name="license" href="#license">
+   License
 </a>
 
 Code licensed under MIT license.
