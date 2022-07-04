@@ -25,7 +25,7 @@ $ hexo generate --watch
 
 Delete public folder
 
-``` bash
+```bash
 $ hexo clean
 ```
 
