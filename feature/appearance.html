@@ -589,14 +589,14 @@
     
         <li data-tag="" data-example-tag="" class=" ">
         
-                            <a class="title" href="/reference/style-api.html">Style API</a>
+                            <a class="title" href="/reference/dom.html">DOM Internals</a>
         
                         </li>
 
     
         <li data-tag="" data-example-tag="" class=" ">
         
-                            <a class="title" href="/reference/dom.html">DOM Internals</a>
+                            <a class="title" href="/reference/style-api.html">Style API</a>
         
                         </li>
 
@@ -653,46 +653,23 @@
 </a>
 
 <p>Use style callbacks for dynamic class assignments, for the cell style it is possible to pass an object instead of callback in this case object keys will play the role of column key filters. Data rows style callbacks can accept <code>RowDetails</code> and <code>Node</code> classes depending on the q-grid settings.</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-   selector<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
-   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-      &lt;q-grid [rows]="rows$ | async"
-              [model]="gridModel">
-      &lt;/q-grid>
-   </span><span class="token template-punctuation string">`</span></span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">implements</span> <span class="token class-name">AfterViewInit</span> <span class="token punctuation">&#123;</span>
-   rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid
-      <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token punctuation">.</span><span class="token function">columnList</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-         generation<span class="token operator">:</span> <span class="token string">'deep'</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-   <span class="token function">constructor</span><span class="token punctuation">(</span>
-      <span class="token keyword">private</span> dataService<span class="token operator">:</span> MyDataService<span class="token punctuation">,</span>
-      <span class="token keyword">private</span> qgrid<span class="token operator">:</span> Grid
-   <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-   <span class="token punctuation">&#125;</span>
-
-   <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">.</span><span class="token function">style</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-         cell<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-            <span class="token string-property property">'myColumnKey'</span><span class="token operator">:</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> column<span class="token punctuation">,</span> context<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-               context<span class="token punctuation">.</span><span class="token function">class</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">td-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>row<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
-                  color<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>row<span class="token punctuation">.</span>color<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
-                  background<span class="token operator">:</span> <span class="token string">'#3f51b5'</span>
-               <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-         <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-         <span class="token function-variable function">row</span><span class="token operator">:</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> context<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>row<span class="token punctuation">.</span>isActive<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-               context<span class="token punctuation">.</span><span class="token function">class</span><span class="token punctuation">(</span><span class="token string">'inactive'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">&#125;</span>
-         <span class="token punctuation">&#125;</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">qgrid
+  <span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">style</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+     cell<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token function-variable function">birthday</span><span class="token operator">:</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> column<span class="token punctuation">,</span> context<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+           context<span class="token punctuation">.</span><span class="token function">class</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">td-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>row<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>
+              color<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>row<span class="token punctuation">.</span>color<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+              background<span class="token operator">:</span> <span class="token string">'#3f51b5'</span>
+           <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+     <span class="token function-variable function">row</span><span class="token operator">:</span> <span class="token punctuation">(</span>row<span class="token punctuation">,</span> context<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>row<span class="token punctuation">.</span>isActive<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+           context<span class="token punctuation">.</span><span class="token function">class</span><span class="token punctuation">(</span><span class="token string">'active'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+     <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token operator">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>Pass unique id to <code>context.class</code> method for the appropriate group of styles.</p>
@@ -713,16 +690,19 @@
    How to change column width?
 </a>
 
-<p>Use css styles or column <code>[width]</code> attribute to setup desired column size using pixels or percentages.</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span> <span class="token attr-name">[rows]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rows$ | async<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-columns</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">[width]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>100%<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-columns</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Use css styles or column <code>width</code> property to setup desired column size using pixels or percentages.</p>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">qgrid
+   <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      columns<span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">&#123;</span> key<span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'text'</span><span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token number">100</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+         <span class="token punctuation">&#123;</span> key<span class="token operator">:</span> <span class="token string">'age'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'number'</span><span class="token punctuation">,</span> width<span class="token operator">:</span> <span class="token string">'100%'</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+         <span class="token punctuation">&#123;</span> key<span class="token operator">:</span> <span class="token string">'birthday'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'date'</span><span class="token punctuation">,</span> widthMode<span class="token operator">:</span> <span class="token string">'fit-head'</span> <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p>If percents are used all columns should define <code>width</code> property for the correct size calculation.</p>
+<p>If percents are used all columns should have <code>width</code> property for the correct size calculation.</p>
 </blockquote>
 <a name="how-to-make-column-width-auto-adjusted-to-the-cell-content" href="#how-to-make-column-width-auto-adjusted-to-the-cell-content">
    How to make column width auto adjusted to the cell content?

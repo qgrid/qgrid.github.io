@@ -589,14 +589,14 @@
     
         <li data-tag="" data-example-tag="" class=" ">
         
-                            <a class="title" href="/reference/style-api.html">Style API</a>
+                            <a class="title" href="/reference/dom.html">DOM Internals</a>
         
                         </li>
 
     
         <li data-tag="" data-example-tag="" class=" ">
         
-                            <a class="title" href="/reference/dom.html">DOM Internals</a>
+                            <a class="title" href="/reference/style-api.html">Style API</a>
         
                         </li>
 
@@ -643,15 +643,7 @@
 <li><a href="#how-to-understand-if-q-grid-is-in-focus-or-not">How to understand if q-grid is in focus or not?</a></li>
 </ul>
 <p>Use q-grid service to get control over focused cell, selected page will be automatically adjusted.</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-   selector<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
-   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-      &lt;q-grid [rows]="rows$ | async" [model]="gridModel">
-         &lt;q-grid-columns generation="deep">&lt;/q-grid-columns>
-      &lt;/q-grid>
-   </span><span class="token template-punctuation string">`</span></span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
    rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
    gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -659,13 +651,10 @@
       <span class="token keyword">private</span> qgrid<span class="token operator">:</span> Grid<span class="token punctuation">,</span>
       <span class="token keyword">private</span> dataService<span class="token operator">:</span> MyDataService
    <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-   <span class="token punctuation">&#125;</span>
-
-   <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
       <span class="token keyword">const</span> service <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">service</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
       service<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
     <div class="editor">
@@ -715,13 +704,11 @@
    <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
       <span class="token keyword">const</span> service <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">service</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      <span class="token keyword">this</span><span class="token punctuation">.</span>rows$<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>
-         <span class="token punctuation">&#123;</span>
-            <span class="token function-variable function">next</span><span class="token operator">:</span> <span class="token punctuation">(</span>rows<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span> service<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span>rows<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-         <span class="token punctuation">&#125;</span>
-      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>rows$<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+         <span class="token function-variable function">next</span><span class="token operator">:</span> rows <span class="token operator">=></span> <span class="token punctuation">&#123;</span> service<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span>rows<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="how-to-understand-if-q-grid-is-in-focus-or-not" href="#how-to-understand-if-q-grid-is-in-focus-or-not">
    How to understand if q-grid is in focus or not?
@@ -748,11 +735,11 @@
    gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
    loadCommand <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Command</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      shortcut<span class="token operator">:</span> <span class="token string">'ctrl+l'</span><span class="token punctuation">,</span>
       <span class="token function-variable function">execute</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
          <span class="token keyword">this</span><span class="token punctuation">.</span>rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getAtoms</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
       <span class="token function-variable function">canExecute</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>isActive<span class="token punctuation">,</span>
-      shortcut<span class="token operator">:</span> <span class="token string">'ctrl+l'</span><span class="token punctuation">,</span>
    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
    <span class="token function">constructor</span><span class="token punctuation">(</span>

@@ -589,14 +589,14 @@
     
         <li data-tag="" data-example-tag="" class=" ">
         
-                            <a class="title" href="/reference/style-api.html">Style API</a>
+                            <a class="title" href="/reference/dom.html">DOM Internals</a>
         
                         </li>
 
     
         <li data-tag="" data-example-tag="" class=" ">
         
-                            <a class="title" href="/reference/dom.html">DOM Internals</a>
+                            <a class="title" href="/reference/style-api.html">Style API</a>
         
                         </li>
 
@@ -658,15 +658,16 @@
 <p>Default header template contains sort and filter components that could be used in custom templates also.</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">qGridColumnHead</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">let-$cell</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column-sort</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>q-grid-sort<span class="token punctuation">"</span></span>
-                          <span class="token attr-name">[column]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$cell.column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column-sort</span> <span class="token attr-name">[column]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$cell.column<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>q-grid-sort<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
          &#123;&#123;$cell.column.title&#125;&#125;
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column-sort</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column-filter-trigger</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>q-grid-column-filter-trigger<span class="token punctuation">"</span></span>                                       
-                                    <span class="token attr-name">[column]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$cell.column<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column-filter-trigger</span> <span class="token attr-name">[column]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>$cell.column<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>q-grid-column-filter-trigger<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column-filter-trigger</span><span class="token punctuation">></span></span>
+
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-template</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="how-to-change-cell-editor-template?" href="#how-to-change-cell-editor-template?">
    How to change cell editor template?
