@@ -3,6 +3,9 @@ title: Row Options
 group: Column Types
 order: 9
 ---
+- [Default template](#default-template)
+- [How to open row options menu on enter pressed?](#how-to-open-row-options-menu-on-enter-pressed)
+- [Suggested Links](#suggested-links)
 
 Row options column allows to populate list of actions for the appropriate row by using `[editorOptions]` input.
 
@@ -10,10 +13,12 @@ Row options column allows to populate list of actions for the appropriate row by
 @Component({
     template: `
        <q-grid [rows]="rows$ | async">
-          <q-grid-column key="rowOptions"
-                         type="row-options"
-                         [editorOptions]="{actions: rowActions}">
-          </q-grid-column>
+          <q-grid-columns>
+            <q-grid-column key="rowOptions"
+                           type="row-options"
+                           [editorOptions]="{actions: rowActions}">
+            </q-grid-column>
+          </q-grid-columns>
        </q-grid>
     `
 })
@@ -33,7 +38,9 @@ export class MyComponent {
 
 {% docEditor "github/qgrid/ng2-example/tree/column-row-options-basic/latest" %}
 
-## Default template
+<a name="default-template" href="#default-template">
+   Default template
+</a>
 
 Edit template is populated automatically when cell is clicked, because by default `row-options` column has `class` property equals to `control` and `canEdit` is `true`. So don't need to have any code regarding to `$view` service.
 
@@ -49,18 +56,22 @@ Edit template is populated automatically when cell is clicked, because by defaul
 </q-grid>
 ```
 
-## How to open row options menu on enter pressed?
+<a name="how-to-open-row-options-menu-on-enter-pressed" href="#how-to-open-row-options-menu-on-enter-pressed">
+   How to open row options menu on enter pressed?
+</a>
 
-Just focus row options column programmatically. 
+Just focus row options column programmatically.
 
 ```typescript
 @Component({
    template: `
       <q-grid [rows]="rows">
-         <q-grid-column key="rowOptions"
-                        type="row-options"
-                        [editorOptions]="rowOptions">
-         </q-grid-column>
+         <q-grid-columns>
+            <q-grid-column key="rowOptions"
+                           type="row-options"
+                           [editorOptions]="rowOptions">
+            </q-grid-column>
+         </q-grid-columns>
          <q-grid-actions>
             <q-grid-action id="enterAction"
                            [command]="enterCommand">
@@ -70,8 +81,6 @@ Just focus row options column programmatically.
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-
    rowOptions = {
       trigger: 'focus',
       actions: [
@@ -82,7 +91,6 @@ export class MyComponent {
 
    enterCommand = new Command({
       execute: () => {
-         const { model } = this.myGrid;
          const { rowIndex, columnIndex } = this.gridModel.navigation();
          const { columns } = this.gridModel.view();
 
@@ -91,10 +99,10 @@ export class MyComponent {
     },
     shortcut: 'enter'
   });
-
 }
 ```
-
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [Action plugin](/plugin/action.html)

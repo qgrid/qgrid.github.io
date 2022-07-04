@@ -4,33 +4,41 @@ group: Features
 order: 5
 ---
 
+- [How to add default filter on component load?](#how-to-add-default-filter-on-component-load)
+- [How to add a filter row?](#how-to-add-a-filter-row)
+- [How to propagate list of filter by items to the column filter from the server?](#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server)
+- [How to disable particular column filter?](#how-to-disable-particular-column-filter)
+- [How to filter q-grid externally?](#how-to-filter-q-grid-externally)
+
 There are many UI abilities that q-grid provides to filter data. Choose column filters, filter row, condition builder or implement custom filters.
 
-## How to add default filter on component load?
+<a name="how-to-add-default-filter-on-component-load" href="#how-to-add-default-filter-on-component-load">
+   How to add default filter on component load?
+</a>
 
-Use `by` property to get or set filter settings. 
+Use `by` property to get or set filter settings.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      gridModel.filter({
+      this.gridModel.filter({
          by: {
             firstName: { items: ['Smith'] },
             gender: { blanks: true },
@@ -46,19 +54,21 @@ export class MyComponent implements AfterViewInit {
                right: null
             }
          }
-      });   
+      });
    }
 }
 ```
 
-## How to add a filter row?
+<a name="how-to-add-a-filter-row" href="#how-to-add-a-filter-row">
+   How to add a filter row?
+</a>
 
 To show filter controls under the column headers use `filterUnit` attribute, filter view can be overridden in the template definition.
 
 ```typescript
 @Component({
    template: `
-      <q-grid>
+      <q-grid [model]="gridModel">
          <q-grid-column key="myNumber">
             <ng-template for="filter" let-$cell>
                <input #input
@@ -70,17 +80,17 @@ To show filter controls under the column headers use `filterUnit` attribute, fil
    `
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.filter({
+      this.gridModel.filter({
          unit: 'row'
       });
    }
@@ -89,32 +99,34 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
 
-## How to propagate list of filter by items to the column filter from the server?
+<a name="how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server" href="#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server">
+   How to propagate list of filter by items to the column filter from the server?
+</a>
 
 When server side pagination is used the data in q-grid can be not loaded fully in this case `fetch` callback can be used to get list of items to show in column filter component.
 
 ```typescript
-import { GridComponent, FetchContext } from 'ng2-qgrid';
+import { Grid, GridModel, FetchContext } from 'ng2-qgrid';
 
 @Component({
    template: `
-      <q-grid [rows]="rows$ | async">
-            <q-grid-columns generation="deep"></q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.filter({
+      this.gridModel.filter({
          fetch: (key: string, context: FetchContext) => {
             const { search, take, skip } = context;
             return dataService.getFilterItemsFor(key, search, take, skip);
@@ -124,7 +136,9 @@ export class ExampleFilterRowCustomComponent implements AfterViewInit {
 }
 ```
 
-## How to disable particular column filter?
+<a name="how-to-disable-particular-column-filter" href="#how-to-disable-particular-column-filter">
+   How to disable particular column filter?
+</a>
 
 Each column has `canFilter` property that could be used as indicator if filter is applicable or not.
 
@@ -134,33 +148,35 @@ Each column has `canFilter` property that could be used as indicator if filter i
 </q-grid>
 ```
 
-## How to filter q-grid externally?
+<a name="how-to-filter-q-grid-externally" href="#how-to-filter-q-grid-externally">
+   How to filter q-grid externally?
+</a>
 
-Setup `match` predicate to execute custom filtration on loaded data.
+Setup `custom` predicate to execute custom filtration. If filtering is required after the user input, just setup another instance of `custom` function.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
       <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
+
    @Input() value: string;
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.filter({
-         match: () => row => row.name.toLowerCase().indexOf(this.value) >= 0
+      this.gridModel.filter({
+         custom: (row) => row.name.toLowerCase().indexOf(this.value) >= 0,
       });
    }
 }

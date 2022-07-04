@@ -3,10 +3,17 @@ title: Navigation
 group: Features
 order: 13
 ---
+- [What shortcuts does navigation implement by default?](#what-shortcuts-does-navigation-implement-by-default)
+- [How to override default navigation shortcuts?](#how-to-override-default-navigation-shortcuts)
+- [Shortcut limitations for browsers](#shortcut-limitations-for-browsers)
+- [Prevent default keyboard actions](#prevent-default-keyboard-actions)
+- [Suggested Links](#suggested-links)
 
-The q-grid navigation system supports various keyboard events to start keyboard navigation q-grid should be focused. 
+The q-grid navigation system supports various keyboard events to start keyboard navigation q-grid should be focused.
 
-## What shortcuts does navigation implement by default?
+<a name="what-shortcuts-does-navigation-implement-by-default" href="#what-shortcuts-does-navigation-implement-by-default">
+   What shortcuts does navigation implement by default?
+</a>
 
 * `up` - up.
 * `down` - down.
@@ -20,8 +27,10 @@ The q-grid navigation system supports various keyboard events to start keyboard 
 * `pageDown` - pageDown.
 * `shift+pageUp` - upward.
 * `shift+pageDown`- downward.
-      
-## How to override default navigation shortcuts?
+
+<a name="how-to-override-default-navigation-shortcuts" href="#how-to-override-default-navigation-shortcuts">
+   How to override default navigation shortcuts?
+</a>
 
 Use `shortcut` property in the navigation model.
 
@@ -29,24 +38,24 @@ Use `shortcut` property in the navigation model.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.navigation({
-         shortcut: { 
+      this.gridModel.navigation({
+         shortcut: {
             up: 'up',
             down: 'down',
             left: 'left',
@@ -65,7 +74,9 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## Shortcut limitations for browsers
+<a name="shortcut-limitations-for-browsers" href="#shortcut-limitations-for-browsers">
+   Shortcut limitations for browsers
+</a>
 
 Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript to override for preventing malicious websites.
 
@@ -77,7 +88,15 @@ Here's a number of `Ctrl` key combinations that browsers do not allow JavaScript
   
 > If you use q-grid in electron box, these shortcuts could be overwritten.
 
-## Suggested Links
+<a name="prevent-default-keyboard-actions" href="#prevent-default-keyboard-actions">
+  Prevent default keyboard actions
+</a>
+
+q-grid prevents some default browser shortcuts actions when it's focused, like `home` and `end` key presses. Use `prevent` property from the `model.navigation()` state to manage it. 
+
+<a name="suggested-links" href="#suggested-links">
+  Suggested Links
+</a>
 
 * [Chromium issues](https://bugs.chromium.org/p/chromium/issues/detail?id=33056) 
 * [Google code discussion](https://groups.google.com/a/chromium.org/forum/?fromgroups=#!topic/chromium-bugs/Ntc1byZXHfU)

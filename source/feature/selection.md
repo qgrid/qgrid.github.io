@@ -4,32 +4,44 @@ group: Features
 order: 2
 ---
 
+- [How to change selection mode?](#how-to-change-selection-mode)
+- [How to change what should be selectable?](#how-to-change-what-should-be-selectable)
+- [How to listen selection changes?](#how-to-listen-selection-changes)
+- [How to restrict selection only on checkbox click?](#how-to-restrict-selection-only-on-checkbox-click)
+- [How to prevent unselecting if row was clicked again?](#how-to-prevent-unselecting-if-row-was-clicked-again)
+- [How to hide column with check-boxes?](#how-to-hide-column-with-check-boxes)
+- [How to select rows by id?](#how-to-select-rows-by-id)
+- [How to disable particular rows from being selected?](#how-to-disable-particular-rows-from-being-selected)
+- [What shortcuts does selection implement by default?](#what-shortcuts-does-selection-implement-by-default)
+- [How to override default selection shortcuts?](#how-to-override-default-selection-shortcuts)
+- [How to handle click events?](#how-to-handle-click-events)
+
 There are situations when a user need to select rows or cells fortunately q-grid provides rich model to handle selections.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
       `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.selection({
+      this.gridModel.selection({
          unit: 'row',
          mode: 'multiple',
-         area: 'body'            
+         area: 'body'
       });
    }
 }
@@ -37,25 +49,26 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/select-row-basic/latest" %}
 
-## How to change selection mode?
+<a name="how-to-change-selection-mode" href="#how-to-change-selection-mode">
+   How to change selection mode?
+</a>
 
 Use `mode` property to change selection mode.
 
-* Use `single` mode when only one row/column should be selected.
+* Use `single` mode when only one row/column could be selected.
+* Use `singleOnly` mode when only one row/column could be selected and prevent unselecting by repeating clicks or key events.
 * Use `multiple` mode when several rows/columns could be selected.
 * Use `range` mode when drag and drop selection should be turned on.
 
 ```typescript
- ngAfterViewInit() {
-   const { model } = this.myGrid;
-
-   model.selection({
-      mode: 'multiple',
-   });
-}
+gridModel.selection({
+   mode: 'multiple'
+});
 ```
 
-## How to change what should be selectable?
+<a name="how-to-change-what-should-be-selectable" href="#how-to-change-what-should-be-selectable">
+   How to change what should be selectable?
+</a>
 
 Use `unit` property to say q-grid what is a selectable element.
    
@@ -64,22 +77,24 @@ Use `unit` property to say q-grid what is a selectable element.
 * Use `column` value when column can be selected by click.
 * Use `mix` unit to make both rows and cells selectable.
 
-## How to listen selection changes?
+<a name="how-to-listen-selection-changes" href="how-to-listen-selection-changes">
+   How to listen selection changes?
+</a>
 
 Use q-grid model to get list of selected items.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>'
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel = this.qgrid.model();
+
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.selectionChanged.on(e => {
+      this.gridModel.selectionChanged.on((e) => {
          if (e.hasChanges('items')) {
             const { items } = e.state;
             console.log(items);
@@ -89,22 +104,26 @@ export class MyComponent implements AfterViewInit {
 }
 ```
 
-## How to restrict selection only on checkbox click?
+<a name="how-to-restrict-selection-only-on-checkbox-click" href="#how-to-restrict-selection-only-on-checkbox-click">
+   How to restrict selection only on checkbox click?
+</a>
 
-Set selection `area` property to `custom`  if clicking to q-grid body should not lead to row selection.
+Set selection `area` property to `custom` if clicking to q-grid body should not lead to row selection.
 
-## How to prevent unselecting if row was clicked again?
+<a name="how-to-prevent-unselecting-if-row-was-clicked-again" href="#how-to-prevent-unselecting-if-row-was-clicked-again">
+   How to prevent unselecting if row was clicked again?
+</a>
 
-Use `change` information to manipulate with logic of selection. Next lines prevent unselecting of row that was double clicked.
+If `singleOne` mode is not a case use `selectionChange` event. Next lines prevent unselecting of row that was double clicked.
 
 ```typescript
-model.selectionChanged.on(e => {
+gridModel.selectionChanged.on((e) => {
    const change = e.changes['items'];
    if (change) {
       const { newValue, oldValue } = change;
       const noSelection = !newValue.length;
       if (noSelection) {
-         model.selection({
+         gridModel.selection({
             items: oldValue
          });
       }
@@ -112,7 +131,9 @@ model.selectionChanged.on(e => {
 });
 ```
 
-## How to hide column with check-boxes?
+<a name="how-to-hide-column-with-check-boxes" href="#how-to-hide-column-with-check-boxes">
+   How to hide column with check-boxes?
+</a>
 
 Use `[isVisible]` input of to hide/show select column.
 
@@ -125,48 +146,48 @@ Use `[isVisible]` input of to hide/show select column.
 </q-grid>
 ```
 
-## How to select rows by id?
+<a name="how-to-select-rows-by-id" href="#how-to-select-rows-by-id">
+   How to select rows by id?
+</a>
 
 Sometimes it's required to fill selection items properties with something different from just row references. To override default behavior selection `key` property could be overridden.
 
 ```typescript
-ngAfterViewInit() {
-   model.selection({       
-      key: {
-         row: row => row.myNumberId,
-         column: column => column.key
-      }
-   });
+gridModel.selection({
+   key: {
+      row: (row) => row.myNumberId,
+      column: (column) => column.key
+   }
+});
 
-   const rowIds = [0, 1, 4]; 
-   model.selection({
-      items: rowIds
-   });
-}
+const rowIds = [0, 1, 4];
+gridModel.selection({
+   items: rowIds
+});
 ```
 
-## How to disable particular rows from being selected?
+<a name="how-to-disable-particular-rows-from-being-selected" href="#how-to-disable-particular-rows-from-being-selected">
+   How to disable particular rows from being selected?
+</a>
 
 Use `toggle` command to disable particular checkboxes.
 
 ```typescript
-ngAfterViewInit() {
-	const { model } = this.myGrid;
-
-	model.selection({
-		toggle: new Command({
-			canExecute: e => {
-            const target = e.items[0]; 
-				return target.gender === 'male';
-			}
-		})
-	});
-}
+gridModel.selection({
+   toggle: new Command({
+      canExecute: (e) => {
+         const target = e.items[0];
+         return target.gender === 'male';
+      }
+   })
+});
 ```
 
-## What shortcuts does selection implement by default?
+<a name="what-shortcuts-does-selection-implement-by-default" href="#what-shortcuts-does-selection-implement-by-default">
+   What shortcuts does selection implement by default?
+</a>
 
-* `shift+space` - toggle row.
+* `space|shift+space` - toggle row.
 * `shift+up` - toggle previous row.
 * `shift+down` - `toggle next row.
 * `ctrl+space` - toggle column.
@@ -174,11 +195,24 @@ ngAfterViewInit() {
 * `shift+left` - toggle previous column.
 * `ctrl+a` - select all.
 
-## How to override default selection shortcuts?
+<a name="how-to-override-default-selection-shortcuts" href="#how-to-override-default-selection-shortcuts">
+   How to override default selection shortcuts?
+</a>
 
 Use `shortcut` property from selection model.
 
-## How to handle click events?
+```typescript
+gridModel.selection({
+   shortcut: {
+      ...model.selection().shortcut,
+      toggleRow: 'space'
+   },
+});
+```
+
+<a name="how-to-handle-click-events" href="#how-to-handle-click-events">
+   How to handle click events?
+</a>
 
 q-grid does not provide custom click event, but it's always possible to use standard `(click)` directive. Use selection and click `$event` to identify what being clicked.
 

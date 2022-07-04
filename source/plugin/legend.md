@@ -3,30 +3,15 @@ title: Legend
 group: Plugins
 order: 5
 ---
+- [Installation](#installation)
 
 To show hints or additional information use `q-grid-legend` plugin.
 
 {% docEditor "github/qgrid/ng2-example/tree/legend-grid-basic/latest" %}
 
-## Installation
-
-<!-- Add legend module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ConditionBuilderModule } from 'ng2-qgrid/plugin/legend';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      LegendModule
-   ]
-})
-export class AppModule {
-}
-``` -->
+<a name="#installation">
+   Installation
+</a>
 
 Add angular component inside of q-grid component and override legend template regarding to the task.
 

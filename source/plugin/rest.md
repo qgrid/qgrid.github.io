@@ -3,30 +3,18 @@ title: REST
 group: Plugins
 order: 6
 ---
-
+- [Installation](#installation)
+- [POST Method](#POST-method)
+- [GET Method](#GET-method)
+- [How to make a custom contract?](#how-to-make-a-custom-contract)
+   
 Use REST plugin to connect q-grid with back-end directly.
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
-<!-- Add rest module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { RestModule } from 'ng2-qgrid/plugin/rest';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      RestModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that q-grid will start using sorting, filtering and pagination from the rest service.
 
 ```typescript
 @Component({
@@ -42,7 +30,9 @@ export class MyComponent {
 }
 ```
 
-## POST Method
+<a name="POST-method" href="#POST-method">
+   POST Method
+</a>
 
 Next body is produced for filtering, sorting and pagination.
 
@@ -55,13 +45,17 @@ Next body is produced for filtering, sorting and pagination.
 }
 ```
 
-## GET Method
+<a name="GET-method" href="#GET-method">
+   GET Method
+</a>
 
 Next url is produced for filtering, sorting and pagination.
 
 `?filter=lastName=in:Doe,Jones;firstName=in:John,Harry&order=+firstName,-lastName&skip=100&take=50`
 
-## How to make a custom contract?
+<a name="how-to-make-a-custom-contract" href="#how-to-make-a-custom-contract">
+   How to make a custom contract?
+</a>
 
 Override `serialize` method to change request output.
 
@@ -69,18 +63,19 @@ Override `serialize` method to change request output.
 @Component({
    selector: 'my-component',
    template: `
-     <q-grid>
+     <q-grid [model]="gridModel">
        <q-grid-rest [url]="myServiceUrl" method="POST"></q-grid-rest>
      </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel = this.qgrid.model();
    myServiceUrl = 'http://localhost:4000/exampleData'
 
+   constructor(private qgrid: Grid) {}
+
    ngAfterViewInit() {
-      const { model } = this.myGrid;      
-      model.rest({
+      this.gridModel.rest({
         serialize: () => {
             const pagination = model.pagination();
             const sort = model.sort();
@@ -95,12 +90,14 @@ export class MyComponent implements AfterViewInit {
                }),
                skip: pagination.current * paginationState.size,
                take: pagination.size
-            };      
+            };
       });
    }
 }
 ```
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [How to propagate list of items to the column filter from the server?](/feature/filtering.html#How-to-propagate-list-of-items-to-the-column-filter-from-the-server)

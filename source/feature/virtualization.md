@@ -3,6 +3,7 @@ title: Virtualization
 group: Features
 order: 19
 ---
+- [How to implement infinite scroll?](#how-to-implement-infinite-scroll)
 
 > Don't use virtualization in the production code, it's in BETA .
 
@@ -11,74 +12,72 @@ Use pagination size to define number of rows that will be materialized.
 ```typescript
 @Component({
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
          </q-grid-columns>	
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid;
-   rows$: Observable<[]>;
+   gridModel = this.qgrid.model();
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
-   
-   ngAfterViewInit() {
-      const { model } = this.myGrid;
 
-      model.scroll({
+   ngAfterViewInit() {
+      this.gridModel.scroll({
          mode: 'virtual'
       });
 
-      model.pagination({
+      this.gridModel.pagination({
          size: 20
       });
-   }		
+   }
 }
 ```
 
-## How to implement infinite scroll?
+<a name="how-to-implement-infinite-scroll" href="#how-to-implement-infinite-scroll">
+   How to implement infinite scroll?
+</a>
 
 Override default pipeline with serve call on the top.
 
 ```typescript
 @Component({
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid;
+   gridModel = this.qgrid.model();
 
-   constructor( 
+   constructor(
       private qgrid: Grid,
       private dataService: MyDataService
    ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
       const { pipeUnit } = this.qgrid;
 
-      model.scroll({
+      this.gridModel.scroll({
          mode: 'virtual'
       });
 
-      model.data({
+      this.gridModel.data({
          pipe: [
             (rows, context, next) => {
-               const { skip } = model.fetch();
-               const { size } = model.pagination();
+               const { skip } = this.gridModel.fetch();
+               const { size } = this.gridModel.pagination();
 
-               this.dataService
-                  .getAtoms()
-                  .subscribe(atoms => {
-                     const newPage = atoms.slice(skip, skip + size);
-                     next(rows.concat(newPage));
-                  });
-
-            }]
-            .concat(pipeUnit.view)
+               this.dataService.getAtoms().subscribe((atoms) => {
+                  const newPage = atoms.slice(skip, skip + size);
+                  next(rows.concat(newPage));
+               });
+            },
+         ].concat(pipeUnit.view)
       });
    }
 }

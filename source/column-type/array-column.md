@@ -3,6 +3,7 @@ title: Array
 group: Column Types
 order: 1
 ---
+- [Default template and specific properties](#default-template-and-specific-properties)
 
 Array type is utilized by the q-grid to visualize primitive type collections. If complex object list should be visualized, it's required to setup `itemLabel` property or make custom cell templates.
 
@@ -17,7 +18,9 @@ Array type is utilized by the q-grid to visualize primitive type collections. If
 
 {% docEditor "github/qgrid/ng2-example/tree/column-array-basic/latest" %}
 
-## Default template and specific properties
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Use `itemType` to setup array element type, could be used to populate correct input in the array editor.
 * Use `itemFormat` to setup array element format string, could be used to build correct item presentation.

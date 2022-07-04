@@ -43,8 +43,7 @@
 
     <meta name="msapplication-config" content="browserconfig.xml">
     <link rel="manifest" href="/manifest.json">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- main page styles -->
     <%- css(isIndex ? 'css/index' : 'css/page') %>
@@ -64,8 +63,6 @@
 </header>
 
 <aside id="nav">
-    <a href="<%- url_for('/') %>" class="logo"></a>
-    <input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
     <%- partial('partials/nav') %>
 </aside>
 <% } %>

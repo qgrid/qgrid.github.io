@@ -3,33 +3,20 @@ title: Condition Builder
 group: Plugins
 order: 0
 ---
+- [Installation](#installation)
+- [The Contract](#the-contract)
+- [Hot wot setup default condition on component load?](#ho-wot-setup-default-condition-on-component-load)
+- [Suggested Links](#suggested-links)
 
 Use query builder plugin to add unlimited possibilities to filter data using convenient hierarchical UI.
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-condition-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
-<!-- 
-Add condition builder module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ConditionBuilderModule } from 'ng2-qgrid/plugin/condition-builder';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ConditionBuilderModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that extended filter icon should appear in the top toolbar.
 
 ```typescript
 @Component({
@@ -53,7 +40,9 @@ export class MyComponent {
 }
 ```
 
-## The Contract
+<a name="the-contract" href="#the-contract">
+   The Contract
+</a>
 
 By supporting q-grid expression contract building any custom filters with complex logic should not be a problem.
 
@@ -65,23 +54,25 @@ By supporting q-grid expression contract building any custom filters with comple
    group[op]: 'and' | 'or'
    condition[left]: columnKey
    condition[right]: string | number | array | bool | date | null
-   condition[op]: 
-      'isNotNull' 
-      | 'isNull' 
-      | 'equals' 
-      | 'notEquals' 
-      | 'greaterThanOrEquals' 
-      | 'greaterThan' 
-      | 'lessThanOrEquals' 
-      | 'lessThan' 
-      | 'between' 
-      | 'in' 
-      | 'like' 
+   condition[op]:
+      'isNotNull'
+      | 'isNull'
+      | 'equals'
+      | 'notEquals'
+      | 'greaterThanOrEquals'
+      | 'greaterThan'
+      | 'lessThanOrEquals'
+      | 'lessThan'
+      | 'between'
+      | 'in'
+      | 'like'
       | 'notLike'
 }
 ```
 
-## Hot wot setup default condition on component load?
+<a name="hot-wot-setup-default-condition-on-component-load" href="#hot-wot-setup-default-condition-on-component-load">
+   Hot wot setup default condition on component load?
+</a>
 
 Use filter model `$expression` property in `by` section, the same position should be used to get expression that was setup from UI.
 
@@ -89,15 +80,15 @@ Use filter model `$expression` property in `by` section, the same position shoul
 import { GridComponent, FetchContext } from 'ng2-qgrid';
 
 @Component({
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
-export class ExampleFilterRowCustomComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class ExampleFilterRowCustomComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
+
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      value = value.toLocaleLowerCase();
-      model.filter({
+      this.gridModel.filter({
          by: {
             $expression: {
                kind: 'group',
@@ -109,7 +100,7 @@ export class ExampleFilterRowCustomComponent {
                      kind: 'condition',
                      op: 'between',
                      left: 'Age',
-                        right: [25, 30]
+                     right: [25, 30],
                   },
                   right: {
                      kind: 'condition',
@@ -134,12 +125,16 @@ export class ExampleFilterRowCustomComponent {
                      right: null
                   }
                }
+            }
          }
       });
    }
 }
 ```
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
+
 
 * [Standalone expression builder](https://github.com/qgrid/ng2-expression-builder)

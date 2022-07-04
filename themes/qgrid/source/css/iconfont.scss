@@ -1,10 +1,10 @@
 @font-face {
 		font-family: "qgrid-iconfont";
 		src: url('../assets/fonts/qgrid-iconfont.eot');
-		src: url('../assets/fonts/qgrid-iconfont.eot?#iefix') format('eot'), 
+		src: url('../assets/fonts/qgrid-iconfont.eot?#iefix') format('eot'),
 		 url('../assets/fonts/qgrid-iconfont.woff2') format('woff2'),
-		 url('../assets/fonts/qgrid-iconfont.woff') format('woff'), 
-		 url('../assets/fonts/qgrid-iconfont.ttf') format('truetype'), 
+		 url('../assets/fonts/qgrid-iconfont.woff') format('woff'),
+		 url('../assets/fonts/qgrid-iconfont.ttf') format('truetype'),
 		 url('../assets/fonts/qgrid-iconfont.svg#qgrid-iconfont') format('svg');
 }
 
@@ -49,13 +49,41 @@
 }
 
 .icon-search:before {
-		content: "\E008";
+	content: "\E008";
+}
+
+.icon-examples:before {
+	content: "\e903";
+}
+
+.icon-documents:before {
+	content: "\E906";
+}
+
+.icon-redirection:before {
+	content: "\e902";
 }
 
 .icon-vue:before {
-		content: "\E009";
+	content: "\E009";
 }
 
-.qgrid-examples::before {
-	content: url('../assets/images/qgrid-examples-logo.svg')
+.icon-fastflexible:before { 
+	content: "\e90d";
+}
+
+.icon-fullycustomable:before {
+	content: "\e90c";
+}
+
+.icon-cleartypescripts:before {
+	content: "\e904";
+}
+
+.icon-performance:before{
+	content: "\e907";
+}
+
+.icon-collapse:before {
+	content: "\e900";
 }

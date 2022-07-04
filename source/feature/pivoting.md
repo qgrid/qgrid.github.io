@@ -3,6 +3,7 @@ title: Pivoting
 group: Features
 order: 15
 ---
+- [How to override pivot cell template?](#how-to-override-pivot-cell-template)
 
 Pivot is a data summarization mode where users can break down raw data to highlight the desired information. It displays data in format such as spreadsheets or business intelligence applications.
 
@@ -10,23 +11,23 @@ Pivot is a data summarization mode where users can break down raw data to highli
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) { 
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.pivot({ 
+      this.gridModel.pivot({
          by: ['bondingType', 'groupBlock']
       });
    }
@@ -35,7 +36,9 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/pivot-column-template/latest" %}
 
-## How to override pivot cell template?
+<a name="how-to-override-pivot-cell-template" href="#how-to-override-pivot-cell-template">
+   How to override pivot cell template?
+</a>
 
 Use ng-template inside column component with type `pivot`.
 
@@ -43,7 +46,7 @@ Use ng-template inside column component with type `pivot`.
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep">
             <q-grid-column type="pivot">
                <ng-template for="body" let-$cell>
@@ -55,17 +58,17 @@ Use ng-template inside column component with type `pivot`.
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.pivot({ 
+      this.gridModel.pivot({
          by: ['bondingType', 'groupBlock']
       });
    }

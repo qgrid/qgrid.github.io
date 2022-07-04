@@ -1,3 +1,4 @@
+/* @import "bootstrap-grid"; */
 @import "variables";
 @import "icon";
 @import "mixins";
@@ -15,4 +16,59 @@ body {
 
 body {
 	background: $color-background;
+}
+
+section {
+	margin-bottom: 160px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 80px;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media screen and (max-width: 1080px) {
+		max-width: calc(100% - 80px);
+		width: calc(100% - 80px);
+	}
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+	@include fontStylingSet(18px, 24px, 400, $color-top-text);
+	@include btnStylingSet($color-accent, $color-transparent, $color-top-text);
+	vertical-align: middle;
+	padding: 8px 18px;
+	border-radius: 4px;
+	text-decoration: none;
+
+	&_big {
+		padding: 20px 18px 20px 18px;
+	}
+
+	&:hover {
+		@include btnStylingSet($color-white, $accent-color, darken($color-top-background, 5%));
+	}
+}
+
+.button-secondary {
+	@extend .button;
+	@include btnStylingSet($color-white, $accent-color, $color-top-background);
+
+	&:hover {
+		@include btnStylingSet($accent-color, $accent-color, $color-white);
+	}
 }

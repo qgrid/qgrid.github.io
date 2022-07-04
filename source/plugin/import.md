@@ -3,30 +3,19 @@ title: Import from file
 group: Plugins
 order: 4
 ---
+- [Installation](#installation)
+- [How to add excel support?](#how-to-add-excel-support)
+- [How to support custom template for import action?](#how-to-support-custom-template-for-import-action)
+- [What format types are supported?](#what-format-types-are-supported)
+- [Suggested Links](#suggested-links)
 
 Use q-grid import plugin to fill in rows with data from files on client side.
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
-<!-- Add import module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ImportModule } from 'ng2-qgrid/plugin/import';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ImportModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that import should appear.
 
 ```typescript
 @Component({
@@ -42,15 +31,15 @@ Add angular component inside of q-grid component, after that a new action should
    `
 })
 export class MyComponent {
-  rows$: Observable<any[]>;
+  rows$ = this.dataService.getRows();
 
-  constructor(dataService: MyDataService) {
-    this.rows$ = dataService.getRows();
-  }
+  constructor(private dataService: MyDataService) {}
 }
 ```
 
-## How to add excel support?
+<a name="how-to-add-excel-support" href="#how-to-add-excel-support">
+   How to add excel support?
+</a>
 
 Install `SheetJS` package.
 
@@ -76,22 +65,27 @@ import * as xlsx from 'xlsx';
    `
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+   rows$ = this.dataService.getRows();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
-         imports: { xlsx }
+      this.qgrid.model().plugin({
+         imports: {
+            'xlsx': xlsx
+         },
       });
    }
 }
 ```
 
-## How to support custom template for import action?
+<a name="how-to-support-custom-template for import action?" href="#how-to-support-custom-template for import action?">
+   How to support custom template for import action?
+</a>
 
 Use ng-template to override default import action template.
 
@@ -105,7 +99,10 @@ Use ng-template to override default import action template.
 </q-grid-import>
 ```
 
-## What format types are supported?
+<a name="what-format-types-are-supported" href="#what-format-types-are-supported">
+   What format types are supported?
+</a>
+
 
 Out of box supported next formats.
 
@@ -114,6 +111,8 @@ Out of box supported next formats.
 * `xlsx`
 * `xml`
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [SheetJS](http://github.com/SheetJS/js-xlsx)

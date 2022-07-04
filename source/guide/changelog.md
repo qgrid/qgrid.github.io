@@ -4,12 +4,233 @@ group: Getting started
 order: 2
 ---
 
-## [Unreleased]
-* Vscroll.
-* Copy/paste selection to excel.
-* Live data plugin.
-* Float rows navigation.
-* Grouped rows navigation improvements.
+## [11.1.1] - 2021-06-16
+### Added
+- Introduce `custom` property that can be overridden to apply custom filter logic.
+- New recommend way to override cell template by `<ng-template qGridColumnBody="birth">`
+- A brand new `q-grid-cell-template` component to show tooltips over the cells.
+- Three new mouse statuses `move`, `enter` and `leave`.
+
+### Fixed
+- Tab navigation on the page.
+- `in` filter condition works better with non-string types.
+
+## [11.0.1] - 2021-03-30
+### Fixed
+- Loading first page in virtual scroll container.
+- Template column overrides all column props defined in typescript.
+
+## [11.0.0] - 2021-03-01
+### Added
+- Right click on the q-grid cell selects all content of it.
+
+### Changed
+- Better pane api for the manual control.
+- Better parsing of non-ISO date formats.
+
+### BREAKING
+- Rename $view.filter.column to $view.filter.row.
+- Remove `options` property from $view.edit.cell.
+- Rename `shortcuts` to `shortcut` in the edit state.
+- Remove `prevent` property from the navigation state.
+- Remove `id` property from `Action` type.
+
+## [9.2.1] - 2020-10-19
+### Fixed
+- Fix datepicker which didn't work in edit mode correctly, by introducing `q-grid-editor-part` css class.
+- Empty date is a valid case.
+- Filter row works when between operator is chosen.
+
+### Added
+- Date mask to enhance user input performance.
+- Two new properties in datetime columns `dateFormat` and `timeFormat` to enhance editing.
+- Persistence state now accepts schedule equals to `onStateChange` that allows to auto save grid state on user changes.
+
+### Changed
+- Date input and datepicker takes the format from the date column by using DateAdapter.
+
+## [9.1.11] - 2020-08-19
+### Fixed
+- Do not focus grid on scene change.
+ 
+## [9.1.10] - 2020-08-17
+### Fixed
+- Dates are properly converted to midnights.
+- When first input date in datetime input time is set to midnight.
+
+## [9.1.9] - 2020-08-13
+### Fixed
+- Predicate visitor get type from the column and not resolve it by itself.
+- If start\end is not set using between operator it works like greaterOrEquals\lessOrEquals.
+
+## [9.1.8] - 2020-08-11
+### Fixed
+- Uncheck select all when switch to page with no-selection.
+
+## [9.1.7] - 2020-07-23
+### Fixed
+- Column filter between operator doesn't appear.
+- Column filter doesn't work properly due to the not valid filter value type.
+
+## [9.1.6] - 2020-07-20
+### Fixed
+- Fix date editor width.
+- Fix scrolling when column sort.
+- Fix editor position when scrolling is required.
+- Fix editor close event on navigation happen.
+
+### Changed
+- Cell handler is not animating when go to the row-details.
+
+### Added
+- To remove column chooser it's not required to override toolbar template.
+
+## [9.1.5] - 2020-07-13
+### Fixed
+- Importing of LIVR library.
+- Set compilation target to es5. 
+
+### Added
+- Support 2 version 9.1.x - Ivy, 9.1.x-ve - View Engine.
+- `q-grid-shortcut-host` directive that can change key event source for q-grid commands.
+- Command palette API to access grid core commands.
+- Command state added to the model.
+
+### Changed
+- Shortcut system.
+- Better top toolbar layout.
+- Grid title now wraps to the second row if not fit to width.
+
+## [9.1.4] - 2020-06-01
+### BREAKING
+* Remove q-grid-title, use `q-grid-caption` instead.
+
+### Fixed
+* Remove auto entering to the edit mode on cell focus.
+* Row options column menu item click doesn't trigger an action.
+* Fixed when cell-handler go out of view port when hold page-up.
+* Highlight column on mouse over even if it's sorted.
+* When focus grid using tab key, also focus first focusable cell.
+* Clear function on column filter expression views deactivates filter.
+* Pane doesn't work when select row.
+* Select all by `ctrl-a` in `multiple` and `range` modes.
+
+### Added
+* Add new option for column generation, typeDetection = 'inference' | 'raw'.
+* Add shortcuts to the pager's next/prev buttons (alt+pagedown, alt+pageup).
+* Introduce q-grid-row `behavior` array input to control if it's required to expand row on click or shortcut.
+* Add `q-grid-focused` class to the row when one of it's cell is in focus..
+* Add `q-grid-alt` plugin that automatically set pagination and selection by `alt+[0-9]` shortcuts.
+* Add `timestamp` property to mouse state to handle double clicks.
+
+## [9.1.2] - 2020-05-27
+### BREAKING
+- q-grid is block element by default, was inline.
+- Rename edit state property from `state` to `status`.
+- Selection state `key` property split into 2 `rowKey` and `columnKey`.
+- Data state `id` property split into 2 `rowId` and `columnId`.
+- Remove `actions`, `pipe`, `selectionKey`, `filterFetch` input properties from the grid component.
+- Remove `keep` method from grid plugin.
+- Data rowId returns row index by default not the instance.
+- Instead of class q-grid-cell.key use q-grid-`the`-cell.key.
+- Get rid of redundant spans in cell templates.
+- Column pin `min` instead of `null`.
+- Rename column `class` to `category`.
+- Remove `rowIndex`, `columnIndex`, `row`, `column` from navigation state.
+
+### Added
+- Ivy support.
+- New scene status called `idle`, before the first render.
+- Introduce canExecuteCheck for the command to explicitly update canExecute status.
+- Extend plugin interface with `observe` and `observeReply` functions.
+- Copy cell label to clipboard.
+- New column type `datetime` that represents date and time.
+- Possibility to change column filter template for the particular column.
+- New way to access dynamic states like columnChooser, through the `resolve` method.
+- Introduce pager `mode` that can be equal to `showRows` or `showPages` value.
+
+### Changed
+- Better plugin support.
+- Get rid of model proxy.
+- Rendering performance improvements.
+- All components got OnPush CDS.
+- Better core types.
+- Row details get focus on expand.
+- Immutable model state to prevent event handling artifacts.
+- Remove browser select.
+- Optimize css styles for rendering performance and size.
+- Pin `mid` instead of `null`.
+
+### Fixed
+- *ngIf for column component works.
+- Fix row options icon is jumping on edit.
+- Row resize algorithm.
+- Better paddings for column filter and chooser.
+
+## [9.0.1] - 2020-03-13
+### Fixed
+- Build
+
+## [9.0.0] - 2020-03-13
+### Changed
+- Migrate to Angular 9.
+- Static query migration.
+
+### BREAKING
+- Cell selection occurs after mouse down not mouse up.
+
+## [7.5.2] - 2020-03-04
+### Fixed
+- Dynamic column visibility.
+- Get rid of duplicate actions on destroy.
+
+## [7.5.1] - 2020-01-22
+### Fixed
+- Fix npm package.
+
+## [7.5.0] - 2020-01-22
+### Added
+- Keyboard API.
+- Mouse API.
+
+### Changed
+- Better column drag and drop.
+- Filter row style enhancements.
+ 
+### Fixed
+- Progress line.
+- Column filter matches labels not values.
+
+### BREAKING
+- Navigation event raised before selection event.
+- `Pane` context receives value from the trigger property `NOT` cell.
+- `View` model `rows` section now contains data before pagination.
+- Separate `view` pipe to `scene` and `view` pipes.
+- Remove `debounce` property from navigation model.
+
+## [7.4.0] - 2019-08-16
+### Added
+- Selection `singleOnly` mode that prevent row unselecting, and draws radio buttons instead of check boxes.
+
+## [7.3.0] - 2019-08-08
+### Added
+- Live row plugin.
+- Live cell plugin.
+
+### Changed
+- `Space` key selects the row.
+
+## [7.2.6] - 2019-07-31
+### Fixed
+- Column `isDefault` property works as expected.
+
+## [7.2.5] - 2019-07-29
+### Added
+- Live cell plugin.
+
+### Fixed
+- Toggle column filter operator not reset predicate.
+- Search in column chooser does not work when column title is null.
 
 ## [7.2.4] - 2019-06-25
 ### Fixed
@@ -172,7 +393,7 @@ order: 2
 - Need to change theme import from `import { ThemeModule } from 'ng2-qgrid'` to `import { ThemeModule } from 'ng2-qgrid/theme/material`
 
 ### Deprecated
-- Use `FetchContext` `serach` property instead of `filter` property.
+- Use `FetchContext` `search` property instead of `filter` property.
 - Use `<q-grid caption="My Grid">` instead of `<q-grid header="My Grid">`.
 
 ### Added
@@ -337,7 +558,7 @@ order: 2
 
 ### Fixed
 * Array cell editor improvements.
-* Fix minification in release script.
+* Fix minimization in release script.
 * Grid in grid support.
 
 ## [5.0.2] - 2017-12-22
@@ -412,8 +633,30 @@ order: 2
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v7.2.4...HEAD
-[7.2.3]: https://github.com/qgrid/ng2/compare/v7.2.3...v7.2.4
+[unreleased]: https://github.com/qgrid/ng2/compare/v11.1.1...HEAD
+[11.1.1]: https://github.com/qgrid/ng2/compare/v11.1.1...v11.0.1
+[11.0.1]: https://github.com/qgrid/ng2/compare/v11.0.0...v11.0.1
+[11.0.0]: https://github.com/qgrid/ng2/compare/v11.0.0...v9.2.1
+[9.2.1]: https://github.com/qgrid/ng2/compare/v9.1.11...v9.2.1
+[9.1.11]: https://github.com/qgrid/ng2/compare/v9.1.10...v9.1.11
+[9.1.10]: https://github.com/qgrid/ng2/compare/v9.1.9...v9.1.10
+[9.1.9]: https://github.com/qgrid/ng2/compare/v9.1.8...v9.1.9
+[9.1.8]: https://github.com/qgrid/ng2/compare/v9.1.7...v9.1.8
+[9.1.7]: https://github.com/qgrid/ng2/compare/v9.1.6...v9.1.7
+[9.1.6]: https://github.com/qgrid/ng2/compare/v9.1.5...v9.1.6
+[9.1.5]: https://github.com/qgrid/ng2/compare/v9.1.4...v9.1.5
+[9.1.4]: https://github.com/qgrid/ng2/compare/v9.1.3...v9.1.4
+[9.1.3]: https://github.com/qgrid/ng2/compare/v9.0.1...v9.1.3
+[9.0.1]: https://github.com/qgrid/ng2/compare/v9.0.0...v9.0.1
+[9.0.0]: https://github.com/qgrid/ng2/compare/v7.5.2...v9.0.0
+[7.5.2]: https://github.com/qgrid/ng2/compare/v7.5.1...v7.5.2
+[7.5.1]: https://github.com/qgrid/ng2/compare/v7.5.0...v7.5.1
+[7.5.0]: https://github.com/qgrid/ng2/compare/v7.4.0...v7.5.0
+[7.4.0]: https://github.com/qgrid/ng2/compare/v7.3.0...v7.4.0
+[7.3.0]: https://github.com/qgrid/ng2/compare/v7.2.6...v7.3.0
+[7.2.6]: https://github.com/qgrid/ng2/compare/v7.2.5...v7.2.6
+[7.2.5]: https://github.com/qgrid/ng2/compare/v7.2.4...v7.2.5
+[7.2.4]: https://github.com/qgrid/ng2/compare/v7.2.3...v7.2.4
 [7.2.3]: https://github.com/qgrid/ng2/compare/v7.2.2...v7.2.3
 [7.2.2]: https://github.com/qgrid/ng2/compare/v7.2.1...v7.2.2
 [7.2.1]: https://github.com/qgrid/ng2/compare/v7.2.0...v7.2.1

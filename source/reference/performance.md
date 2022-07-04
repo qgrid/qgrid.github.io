@@ -4,8 +4,11 @@ type: guide
 group: Reference
 order: 7
 ---
+- [Invalidate q-grid explicitly?](#invalidate-q-grid-explicitly)
+- [Virtualization](#virtualization)
+- [The OnPush Host](#the-onPush-host)
 
-The q-grid introduces 3 modes that allows to change performance strategy. 
+The q-grid introduces 3 modes that allows to change performance strategy.
 
 ```html
 <q-grid interactionMode="detached"></q-grid>
@@ -19,49 +22,49 @@ The q-grid introduces 3 modes that allows to change performance strategy.
 
 {% docEditor "github/qgrid/ng2-example/tree/interaction-mode-detached/latest" %}
 
-## Invalidate q-grid explicitly
+<a name="invalidate-q-grid-explicitly" href="#invalidate-q-grid-explicitly">
+   Invalidate q-grid explicitly
+</a>
 
 When interaction mode is equal to readonly or detached use `invalidate` method to refresh cell values or create a `new reference` of the data rows.
 
 ```typescript
-import { Grid, GridComponent } from 'ng2-qgrid';
+import { Grid, GridModel } from 'ng2-qgrid';
 
 @Component({
    selector: 'my-component',
-   template: `
-        <q-grid [rows]="rows" 
-                interactionMode="readonly">
-        </q-grid>
-        `
+   template: ` <q-grid [rows]="rows" interactionMode="readonly"> </q-grid> `,
 })
 export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
    rows: [];
+   gridModel = this.qgrid.model();
 
-   constructor(private qgrid: Grid, dataService: MyDataService) {
-        dataService
-            .getRows()
-            .subscribe(rows => this.rows = rows);
+   constructor(
+      private qgrid: Grid, 
+      dataService: MyDataService
+   ) {
+      dataService.getRows().subscribe((rows) => (this.rows = rows));
    }
 
    updateCellUsingInvalidate() {
-        this.rows[0].gender = 'female';
-    
-        const service = this.qgrid.service(this.myGrid.model);
-        service.invalidate();
+      this.rows[0].gender = 'female';
+
+      const service = this.qgrid.service(this.gridModel);
+      service.invalidate();
    }
 
    updateCellUsingNewRowsRef() {
-        const rows = Array.from(this.rows);
-        rows[0].gender = 'female';
+      const rows = Array.from(this.rows);
+      rows[0].gender = 'female';
 
-        this.myGrid.model.data({ rows });
+      this.gridModel.data({ rows });
    }
 }
-
 ```
 
-## Virtualization
+<a name="virtualization" href="#virtualization">
+   Virtualization
+</a>
 
 > This is a beta version, don't use it in the production.
  
@@ -74,6 +77,8 @@ Virtual scroll can offer performance benefits when working with large collection
 
 {% docEditor "github/qgrid/ng2-example/tree/scroll-virtual-style/latest" %}
 
-## The OnPush Host
+<a name="the-onPush-host" href="#the-onPush-host">
+   The OnPush Host
+</a>
 
 If component which hosted q-grid implements `onPush` change detection strategy, the q-grid body behaves similar as interaction mode was set to `detached`.

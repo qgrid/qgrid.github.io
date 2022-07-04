@@ -3,12 +3,20 @@ title: Export to file
 group: Plugins
 order: 3
 ---
+- [Installation](#installation)
+- [How to add excel support?](#how-to-add-excel-support)
+- [How to support custom template for export action?](#how-to-support-custom-template-for-export-action)
+- [What format types are supported?](#what-format-types-are-supported)
+- [Suggested Links](#suggested-links)
 
 Use q-grid export plugin to build data files of required format on client side.
 
 {% docEditor "github/qgrid/ng2-example/tree/export-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
+
 
 Install `FileSaver.js` package.
 
@@ -16,25 +24,7 @@ Install `FileSaver.js` package.
 npm install file-saver
 ```
 
-<!-- Add export module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { ExportModule } from 'ng2-qgrid/plugin/export';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      ExportModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
-Add angular component inside of q-grid component, after that a new action should appear, format `type` is required property. Add `file saver` library to the q-grid plugin model.
+Add angular component inside of q-grid component, after export action should appear, format `type` is required property. Add `file saver` library to the q-grid plugin model.
 
 ```typescript
 import * as fileSaver from 'file-saver';
@@ -42,32 +32,34 @@ import * as fileSaver from 'file-saver';
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"> </q-grid-columns>
 
-         <q-grid-export type="json">
-         </q-grid-export>
+         <q-grid-export type="json"> </q-grid-export>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.grid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
+      this.gridModel.plugin({
          imports: { fileSaver }
       });
    }
 }
 ```
 
-## How to add excel support?
+<a name="how-to-add-excel-support" href="#how-to-add-excel-support">
+   How to add excel support?
+</a>
 
 Install `SheetJS` package.
 
@@ -84,32 +76,34 @@ import * as xlsx from 'xlsx';
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
-         <q-grid-columns generation="deep">
-         </q-grid-columns>
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
+         <q-grid-columns generation="deep"> </q-grid-columns>
 
-         <q-grid-export type="xlsx">
-         </q-grid-export>
+         <q-grid-export type="xlsx"> </q-grid-export>
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
-   rows$: Observable<any[]>;
+export class MyComponent implements AfterViewInit {
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      this.myGrid.model.plugin({
+      this.gridModel.plugin({
          imports: { fileSaver, xlsx }
       });
    }
 }
 ```
 
-## How to support custom template for export action?
+<a name="how-to-support-custom-template-for-export-action" href="#how-to-support-custom-template-for-export-action">
+   How to support custom template for export action?
+</a>
 
 Use ng-template to override default export action template.
 
@@ -123,7 +117,9 @@ Use ng-template to override default export action template.
 </q-grid-export>
 ```
 
-## What format types are supported?
+<a name="what-format-types-are-supported" href="#what-format-types-are-supported">
+   What format types are supported?
+</a>
 
 Out of box supported next formats.
 
@@ -132,7 +128,9 @@ Out of box supported next formats.
 * `xlsx`
 * `xml`
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [FileSaver.js](https://www.npmjs.com/package/file-saver)
 * [SheetJS](https://www.npmjs.com/package/xlsx)

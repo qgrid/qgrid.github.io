@@ -1,37 +1,40 @@
 <nav>
-    <ul>
-        <%
-        var groups = ['Getting started', 'Features', 'Column Types', 'Customization', 'Plugins', 'Reference', 'API'];
-        var pageGroups = site.pages.reduce(function (memo, p) {
-            var key = p.group;
-            (memo[key] = memo[key] || []).push(p);
-            return memo;
-        }, {});
+    
+    <%
+    var groups = ['Getting started', 'Features', 'Column Types', 'Customization', 'Plugins', 'Reference', 'API'];
+    var pageGroups = site.pages.reduce(function (memo, p) {
+        var key = p.group;
+        (memo[key] = memo[key] || []).push(p);
+        return memo;
+    }, {});
 
-        for (var i = 0; i < groups.length; i++) {
-            var group = groups[i];
+    for (var i = 0; i < groups.length; i++) {
+        var group = groups[i];
 
-                if (pageGroups.hasOwnProperty(group)) {
+            if (pageGroups.hasOwnProperty(group)) {
+    %>
+    <div class="<%- i > 0 ? 'nav-item hide-list' : 'nav-item' %>">
+        <h3 onclick="onTogglerClick(event)" class="<%- i > 0 ? 'icon-collapse' : '' %>"><%- group %></h3>
+        <ul>
+ 
+    <%
+        var pages = 
+            pageGroups[group]
+                .filter(function(page) { 
+                    return page.order >= 0; 
+                });
+
+        pages.sort(function (a, b) {
+            return a.order - b.order;
+        });
+        const pattern = new RegExp(/^#+.*/, 'mg');
+        for (let j = 0; j < pages.length; j++) {
+            const p = pages[j];
+            const tags = (p.raw.match(pattern) || []).map(tag => {
+                return tag.replace(/^#+ |[\[?|\]?]/mg, '');
+            });
         %>
-                    <li><h3><%- group %></h3></li>
-        <%
-                    var pages = 
-                        pageGroups[group]
-                            .filter(function(page) { 
-                                return page.order >= 0; 
-                            });
-
-                    pages.sort(function (a, b) {
-                        return a.order - b.order;
-                    });
-                    const pattern = new RegExp(/^#+.*/, 'mg');
-                    for (let j = 0; j < pages.length; j++) {
-                        const p = pages[j];
-                        const tags = (p.raw.match(pattern) || []).map(tag => {
-                            return tag.replace(/^#+ |[\[?|\]?]/mg, '');
-                        });
-        %>
-                            <li data-tag="<%- tags %>" data-example-tag="<%- p.tags %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
+        <li data-tag="<%- tags %>" data-example-tag="<%- p.tags %>" class="<%- page.title === p.title ? 'active-topic' : '' %> ">
         <%     
                             if (page.title === p.title) {
         %>
@@ -44,11 +47,16 @@
                             }
         %>
                         </li>
-        <%
-                    }
-                }
-            }
-        %>
 
-    </ul>
+    <%
+            }
+            %>
+        </ul>
+    </div>
+    <%
+            }
+        }
+    %>
+    
 </nav>
+

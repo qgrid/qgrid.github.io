@@ -3,6 +3,7 @@ title: Reference
 group: Column Types
 order: 7
 ---
+- [Default template and specific properties](#default-template-and-specific-properties)
 
 Use this column type when need to handle reference values, the `reference value` term describes data which can be defined using a key/value pair relationship.
 
@@ -32,12 +33,14 @@ export class MyComponent {
    };
 
    constructor(private qgrid: Grid) {
-   }
+}
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}
 
-## Default template and specific properties
+<a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
+   Default template and specific properties
+</a>
 
 * Use `[editorOptions]` to configure reference selection. The `modelFactory` callback from `[editorOptions]` returns model to expose another q-grid in a popup for user selection.
 

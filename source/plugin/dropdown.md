@@ -3,28 +3,15 @@ title: Dropdown
 group: Plugins
 order: 11
 ---
+- [Installation](#installation)
+- [How to show labels in dropdown list?](#how-to-show-labels-in-dropdown-list?)
+- [Suggested Links](#suggested-links)
 
 {% docEditor "github/qgrid/ng2-example/tree/dropdown-basic/latest" %}
 
-## Installation
-
-<!-- Add dropdown module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { DropdownModule } from 'ng2-qgrid/plugin/dropdown';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      DropdownModule
-   ]
-})
-export class AppModule {
-}
-``` -->
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 Use `dropdown` as a column editor.
 
@@ -58,7 +45,9 @@ export class MyComponent {
 }
 ```
 
-## How to show labels in dropdown list?
+<a name="how-to-show-labels-in-dropdown-list" href="#how-to-show-labels-in-dropdown-list">
+   How to show labels in dropdown list?
+</a>
 
 Use `itemLabel` property in the dropdown column
 
@@ -99,6 +88,8 @@ export class MyComponent {
 }
 ```
 
-## Suggested Links
+<a name="suggested-links" href="#suggested-links">
+   Suggested Links
+</a>
 
 * [Fetch](/reference/fetch.html)

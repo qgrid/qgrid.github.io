@@ -3,32 +3,19 @@ title: State Persistence
 group: Plugins
 order: 9
 ---
+- [Installation](#installation)
+- [How to save/load state on server?](#how-to-save/load-state-on-server)
+
 
 Use persistence plugin to save and restore q-grid state.
 
 {% docEditor "github/qgrid/ng2-example/tree/persistence-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
-<!-- Add persistence module to imports section.
-
-```typescript
-import { GridModule } from 'ng2-qgrid';
-import { ThemeModule } from 'ng2-qgrid/theme/material';
-import { PersistenceModule } from 'ng2-qgrid/plugin/persistence';
-
-@NgModule({
-   imports: [
-      GridModule,
-      ThemeModule,
-      PersistenceModule
-   ]
-})
-export class AppModule {
-}
-``` -->
-
-Add angular component inside of q-grid component, after that a new action should appear.
+Add angular component inside of q-grid component, after that persistance action should appear in the top toolbar.
 
 ```typescript
 @Component({
@@ -43,7 +30,9 @@ export class MyComponent {
 }
 ```
 
-## How to save/load state on server?
+<a name="how-to-save/load-state-on-server" href="#how-to-save/load-state-on-server">
+   How to save/load state on server?
+</a>
 
 Use `persistence` model to override default behavior.
 
@@ -55,14 +44,17 @@ Use `persistence` model to override default behavior.
       </q-grid>
    `
 })
-export class MyComponent {
-   @ViewChild(GridComponent) myGrid: GridComponent;
+export class MyComponent implements AfterViewInit {
+   gridModel = this.qgrid.model();
 
-   constructor(private dataService: MyDataService) {
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
    }
 
    ngAfterViewInit() {
-     this.myGrid.model.persistence({
+     this.gridModel.persistence({
        storage: this.buildStorage()
      });
    }
@@ -70,7 +62,7 @@ export class MyComponent {
    buildStorage() {
       return {
          getItem: id =>
-            new Promise(resolve => {
+            new Promise<any>(resolve => {
                this.dataService
                   .getState(id)
                   .subscribe(resolve);
@@ -83,5 +75,4 @@ export class MyComponent {
             })
       };
    }
-}
 ```

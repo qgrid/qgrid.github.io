@@ -3,10 +3,13 @@ title: Edit Form
 group: Plugins
 order: 12
 ---
+- [Installation](#installation)
 
 {% docEditor "github/qgrid/ng2-example/tree/edit-form-basic/latest" %}
 
-## Installation
+<a name="installation" href="#installation">
+   Installation
+</a>
 
 <!-- Add dropdown module to imports section.
 

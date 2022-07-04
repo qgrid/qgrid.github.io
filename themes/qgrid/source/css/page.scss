@@ -4,137 +4,166 @@
 @import "nav";
 @import "markdown";
 @import "highlights";
+@import "prism-vs";
+@import "prism-line-numbers";
+
 body {
-	display: flex;
+    display: flex;
 }
 
 main {
-	background: $color-background;
-	color: $color-text;
-	margin-left: $nav-width;
-	flex: 1;
+    background: $color-background;
+    color: $color-text;
+    margin-left: $nav-width;
+    flex: 1;
 }
 
-header {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	color: $color-top-text;
-	background: $color-top-background;
-	height: $header-height;
-	width: 100vw;
-	font-family: $font-serif;
+section.header {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    color: $color-top-text;
+    background: $color-top-background;
+    width: 100vw;
+    font-family: $font-serif;
+    margin-bottom: 0;
+
+    &.header-index {
+        height: $header-height;
+        margin-bottom: 120px;
+    }
 }
 
 .logo {
-	font-size: 100px;
-	margin: 80px 0 35px 80px;
+    font-size: 100px;
+    margin: 80px 0 35px 80px;
+}
+
+.pages .frameworks {
+    margin-left: 40px;
+    margin-right: 24px;
 }
 
 .github {
-	font-size: 25px;
-	position: absolute;
-	top: 21px;
-	right: 20px;
-}
-
-.qgrid-examples {
-	position: absolute;
-}
-
-%placeholder {
-	color: $whitescale-75;
+    font-size: 25px;
+    position: absolute;
+    top: 21px;
+    right: 20px;
 }
 
 .nav-trigger {
-	font-size: 18px;
-	display: none;
-	position: absolute;
-	top: 27px;
-	left: 20px;
+    width: 32px;
+    font-size: 18px;
+    display: none;
+    position: relative;
+    padding: 0;
+    margin: 0 24px 0 32px;
+    border: none;
 }
 
 [class$="-trigger"] {
-	cursor: pointer;
+    cursor: pointer;
+}
+
+.qgrid-search {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: auto;
+
+    &::before { 
+        color: $color-gray-placeholder;
+        font-size: 12px;
+        display: block;
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .search {
-	display: block;
-	background-color: #444;
-	border: {
-		style: solid;
-		color: $whitescale-75;
-		width: 0 0 1px 0;
-	}
-	text-decoration: none;
-	outline: none;
-	color: white;
-	margin: 20px auto 25px 17px;
-	padding: 15px;
-	width: 280px;
-	&::placeholder {
-		@extend %placeholder;
-	}
+    display: block;
+    background-color: $color-gray-search;
+    border: 0;
+    text-decoration: none;
+    outline: none;
+    color: $color-white;
+    padding: 9px 28px;
+    width: 360px;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration { display: none; }
+
+    &::placeholder {
+        @include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
+    }
 }
 
 .page-wrapper {
-	margin: 0 30px 40px 30px;
-	max-width: 1000px;
-	overflow: hidden;
+    margin: 128px 56px 40px 45px;
+    max-width: 1000px;
+    overflow: hidden;
 }
 
 .github-link {
-	@extend .github;
-	position: relative;
-	color: blue;
-	display: inline-block;
-	font-size: 14px;
-	margin: -90px 0 0 20px;
-	padding: 7px 0px 5px 7px;
-	border-radius: 3px;
-	white-space: nowrap;
-	opacity: 0.5;
-	border: 1px solid blue;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-	&:hover {
-		overflow: visible;
-		width: auto;
-		opacity: 1;
-	}
-	span {
-		vertical-align: top;
-		display: inline-block;
-		margin: 0 5px;
-	}
+    @extend .github;
+    position: relative;
+    color: blue;
+    display: inline-block;
+    font-size: 14px;
+    margin: -90px 0 0 20px;
+    padding: 7px 0px 5px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0.5;
+    border: 1px solid blue;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+
+    &:hover {
+        overflow: visible;
+        width: auto;
+        opacity: 1;
+    }
+
+    span {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0 5px;
+    }
 }
 
 a.github-link2 {
-	@extend .github-link;
-	float: right;
-	color: white;
-	font-size: 12px;
-	font-family: Roboto;
-	position: relative;
-	margin: -22px -19px 0 0;
-	border-color: white;
-	padding: 3px 3px 0 6px;
-	opacity: 0.75;
+    @extend .github-link;
+    float: right;
+    color: $color-white;
+    font-size: 12px;
+    font-family: Roboto;
+    position: relative;
+    margin: -22px -19px 0 0;
+    border-color: $color-white;
+    padding: 3px 3px 0 6px;
+    opacity: 0.75;
 }
 
 #overlay {
-	display: none;
-	height: 100vh;
-	width: 100vw;
-	position: fixed;
-	z-index: 10;
-	background-color: rgba(10, 10, 10, 0.75);
-	cursor: default;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(10, 10, 10, 0.75);
+    cursor: default;
 }
+
 .highlight {
-	background-color: #efdf00;
-	margin-left: 0 !important;
+    background-color: #efdf00;
+    margin-left: 0 !important;
 }

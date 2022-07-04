@@ -4,30 +4,34 @@ group: Features
 order: 6
 ---
 
+- [How to prevent column order affect on sorting?](#how-to-prevent-column-order-affect-on-sorting)
+- [How to change default column sorting?](#how-to-change-default-column-sorting)
+- [How to allow to sort only by one column at the same time?](#how-to-allow-to-sort-only-by-one-column-at-the-same-time)
+
 Use q-grid sorting model to sort single and multiple data-bound columns.
 
 ```typescript
 @Component({
    selector: 'my-component',
    template: `
-      <q-grid [rows]="rows$ | async">
+      <q-grid [rows]="rows$ | async" [model]="gridModel">
          <q-grid-columns generation="deep"></q-grid-columns>
       </q-grid>
    `
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
-   rows$: Observable<[]>;
+   rows$ = this.dataService.getRows();
+   gridModel = this.qgrid.model();
 
-   constructor(dataService: MyDataService) {
-      this.rows$ = dataService.getRows();
+   constructor(
+      private dataService: MyDataService,
+      private qgrid: Grid
+   ) {
    }
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-
-      model.sort({ 
-         by: ['+gender', '-name.last']
+      this.gridModel.sort({
+         by: ['+gender', '-name.last'],
       });
    }
 }
@@ -35,29 +39,32 @@ export class MyComponent implements AfterViewInit {
 
 {% docEditor "github/qgrid/ng2-example/tree/sort-row-basic/latest" %}
 
-## How to prevent column order affect on sorting?
+<a name="how-to-prevent-column-order-affect-on-sorting" href="#how-to-prevent-column-order-affect-on-sorting">
+   How to prevent column order affect on sorting?
+</a>
 
-By default sorting order depends on column order, to apply sequent order `resetTrigger` array should be set to empty.
+By default sorting order depends on column order, to apply sequent order `trigger` array should be set to empty.
 
 ```typescript
 @Component({
    selector: 'my-component',
-   template: '<q-grid></q-grid>'
+   template: '<q-grid [model]="gridModel"></q-grid>',
 })
 export class MyComponent implements AfterViewInit {
-   @ViewChild(GridComponent) myGrid: GridComponent;   
+   gridModel = this.qgrid.model();
+
+   constructor(private qgrid: Grid) {}
 
    ngAfterViewInit() {
-      const { model } = this.myGrid;
-      
-      model.sort({ 
-         resetTrigger: [] 
+      this.gridModel.sort({
+         trigger: []
       });
    }
 }
 ```
-
-## How to change default column sorting?
+<a name="how-to-change-default-column-sorting" href="#how-to-change-default-column-sorting">
+   How to change default column sorting?
+</a>
 
 Each column has `compare` property that can be overridden to change sort algorithm.
 
@@ -67,8 +74,7 @@ Each column has `compare` property that can be overridden to change sort algorit
    template: `
       <q-grid>
          <q-grid-columns>
-            <q-grid-column key="myNumberColumn" 
-                           [compare]="myCompare">
+            <q-grid-column key="myNumberColumn" [compare]="myCompare">
             </q-grid-column>
          </q-grid-columns>
       </q-grid>
@@ -81,16 +87,15 @@ export class MyComponent {
 }
 ```
 
-## How to allow to sort only by one column at the same time?
+<a name="how-to-allow-to-sort-only-by-one-column-at-the-same-time" href="#how-to-allow-to-sort-only-by-one-column-at-the-same-time">
+   How to allow to sort only by one column at the same time?
+</a>
+
 
 Set sort `mode` equals to `single`.
 
 ```typescript
-ngAfterViewInit() {
-   const { model } = this.myGrid;
-   
-   model.sort({ 
-      mode: 'single'
-   });
-}
+gridModel.sort({
+   mode: 'single'
+});
 ```
