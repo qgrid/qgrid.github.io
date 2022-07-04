@@ -1,6 +1,6 @@
 {
   "name": "qgrid-doc",
-  "version": "1.0.0",
+  "version": "13.3.0",
   "private": false,
   "scripts": {
     "serve": "hexo serve",
@@ -8,26 +8,26 @@
     "doc": "gulp api"
   },
   "hexo": {
-    "version": "5.4.0"
+    "version": "6.2.0"
   },
   "dependencies": {
-    "hexo": "^5.4.0",
+    "hexo": "^6.2.0",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
-    "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^4.0.0",
-    "hexo-renderer-scss": "^1.2.0",
-    "hexo-server": "^2.0.0",
-    "marked": "^2.1.0"
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^5.0.0",
+    "hexo-renderer-sass": "github:cocowool/hexo-renderer-sass",
+    "hexo-server": "^3.0.0",
+    "marked": "^4.0.17"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-typedoc": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-typedoc": "^3.0.2",
     "handlebars": "^4.7.7",
-    "ng2-qgrid": "11.0.1",
-    "typedoc": "^0.20.36"
+    "ng2-qgrid": "13.3.0",
+    "typedoc": "^0.23.5"
   }
 }
