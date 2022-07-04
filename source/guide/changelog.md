@@ -671,7 +671,8 @@ order: 2
 * Pager plugin.
 * Progress plugin.
 
-[unreleased]: https://github.com/qgrid/ng2/compare/v11.2.0...HEAD
+[unreleased]: https://github.com/qgrid/ng2/compare/v13.3.0...HEAD
+[13.3.0]: https://github.com/qgrid/ng2/compare/v13.3.0...v11.2.0
 [11.2.0]: https://github.com/qgrid/ng2/compare/v11.2.0...v11.1.1
 [11.1.1]: https://github.com/qgrid/ng2/compare/v11.1.1...v11.0.1
 [11.0.1]: https://github.com/qgrid/ng2/compare/v11.0.0...v11.0.1
@@ -737,4 +738,4 @@ order: 2
 [1.0.5]: https://github.com/qgrid/ng2/compare/v1.0.5...v1.0.4
 [1.0.4]: https://github.com/qgrid/ng2/compare/v1.0.4...v1.0.3
 [1.0.3]: https://github.com/qgrid/ng2/compare/v1.0.3...v1.0.2
-[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1 
+[1.0.2]: https://github.com/qgrid/ng2/compare/v1.0.2...v1.0.1
