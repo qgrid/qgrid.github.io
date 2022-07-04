@@ -1,184 +1,185 @@
 @import "variables";
+
 #nav {
-	color: $color-sidebar-text;
-	background-color: $color-top-background;
-	position: fixed;
-	height: 100vh;
-	width: $nav-width;
-	margin-top: 70px;
-	font-family: $font-serif;
-	box-sizing: border-box;
-	nav {
-		height: calc(100% - 98px);
-		overflow-y: auto;
-		overflow-x: hidden;
-		padding-top: 31px;
+   color: $color-sidebar-text;
+   background-color: $color-top-background;
+   position: fixed;
+   height: 100vh;
+   width: $nav-width;
+   margin-top: 70px;
+   font-family: $font-serif;
+   box-sizing: border-box;
+   nav {
+      height: calc(100% - 98px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-top: 31px;
 
-		.hide-list {
-			ul {
-				display: none;
-			}
+      .hide-list {
+         ul {
+            display: none;
+         }
 
-			h3::before {
-				transform: rotate(0);
-			}
-		}
+         h3::before {
+            transform: rotate(0);
+         }
+      }
 
-		h3 {
-			@include fontStylingSet(18px, 18px, bold, $color-white);
-			@include flexBetweenSet;
-			cursor: pointer;
-			margin: 0;
-			align-items: center;
-			padding: 0 24px;
-			margin-bottom: 16px;
+      h3 {
+         @include fontStylingSet(18px, 18px, bold, $color-white);
+         @include flexBetweenSet;
+         cursor: pointer;
+         margin: 0;
+         align-items: center;
+         padding: 0 24px;
+         margin-bottom: 16px;
 
-			&.icon-collapse {
-				flex-direction: row-reverse;
-			}
+         &.icon-collapse {
+            flex-direction: row-reverse;
+         }
 
-			&::before {
-				font-size: 8px;
-				display: inline-block;
-				transform: rotate(180deg);
-			}
-		}
+         &::before {
+            font-size: 8px;
+            display: inline-block;
+            transform: rotate(180deg);
+         }
+      }
 
-		.nav-item {
-			min-width: 270px;
+      .nav-item {
+         min-width: 270px;
 
-			&:first-child ul {
-				display: block;
-			}
-		}
+         &:first-child ul {
+            display: block;
+         }
+      }
 
-		ul {
-			margin: 0;
-			padding: 0;
-			padding-bottom: 16px;
+      ul {
+         margin: 0;
+         padding: 0;
+         padding-bottom: 16px;
 
-			li {
-				color: grey;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				list-style: none;
-				font-size: 16px;
-				line-height: 2;
-				padding: 0 10px 0 24px;
-				right: 10px;
-				&:first-child {
-					margin-top: 10px;
-				}
-				h3 {
-					padding-left: 0;
-				}
-				a,
-				span {
-					color: rgba(255, 255, 255, 0.8);
-					text-decoration: none;
-					margin-left: 20px;
-					cursor: pointer; //transition: 0.3s;
-					&:hover {
-						color: $color-white;
-					}
-				}
-				a {
-					display: inline;
-					margin-left: -20px;
-					padding-left: 40px;
-					padding-left: 40px;
+         li {
+            color: grey;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            list-style: none;
+            font-size: 16px;
+            line-height: 2;
+            padding: 0 10px 0 24px;
+            right: 10px;
+            &:first-child {
+               margin-top: 10px;
+            }
+            h3 {
+               padding-left: 0;
+            }
+            a,
+            span {
+               color: rgba(255, 255, 255, 0.8);
+               text-decoration: none;
+               margin-left: 20px;
+               cursor: pointer; //transition: 0.3s;
+               &:hover {
+                  color: $color-white;
+               }
+            }
+            a {
+               display: inline;
+               margin-left: -20px;
+               padding-left: 40px;
+               padding-left: 40px;
 
-					&:hover {
-						color: $color-accent;
-					}
-				}
-				.tag {
-					position: relative;
-					display: inline;
-					font-size: 0.8em;
-					font-style: italic;
-					padding: 23px;
-					color: grey;
-					> span {
-						margin-left: 0;
-						color: inherit;
-					}
+               &:hover {
+                  color: $color-accent;
+               }
+            }
+            .tag {
+               position: relative;
+               display: inline;
+               font-size: 0.8em;
+               font-style: italic;
+               padding: 23px;
+               color: grey;
+               > span {
+                  margin-left: 0;
+                  color: inherit;
+               }
 
-					&::before {
-						content: '/';
-						display: inline;
-						font-style: italic;
-						margin-left: 5px;
-						margin-right: 8px;
-						color: grey;
-					}
-				}
-			}
-			.hide {
-				display: none !important;
-			}
-			.active-topic {
-				background-color: $accent-color;
-				a,
-				span {
-					color: $color-white;
-				}
-			}
-		}
-	}
-	&.has-highlight nav div.nav-item {
-		ul {
-			display: block;
+               &::before {
+                  content: "/";
+                  display: inline;
+                  font-style: italic;
+                  margin-left: 5px;
+                  margin-right: 8px;
+                  color: grey;
+               }
+            }
+         }
+         .hide {
+            display: none !important;
+         }
+         .active-topic {
+            background-color: $accent-color;
+            a,
+            span {
+               color: $color-white;
+            }
+         }
+      }
+   }
+   &.has-highlight nav div.nav-item {
+      ul {
+         display: block;
 
-			li {
-				display: none;
-				&.show {
-					display: block;
-				}
-			}
-		}
-	}
+         li {
+            display: none;
+            &.show {
+               display: block;
+            }
+         }
+      }
+   }
 }
 
 .nav {
-	@include flexBetweenSet;
-	background-color: $color-top-background;
-	align-items: center;
-	padding: 11px 25px;
-	border-bottom: 2px solid $color-aside-border; //transition: 0.5s;
+   @include flexBetweenSet;
+   background-color: $color-top-background;
+   align-items: center;
+   padding: 11px 25px;
+   border-bottom: 2px solid $color-aside-border; //transition: 0.5s;
 
-	.qgrid-logo {
-		width: 66px;
-		height: 46px;
-		background-size: contain;
-		margin-right: 34px;
-	}
+   .qgrid-logo {
+      width: 66px;
+      height: 46px;
+      background-size: contain;
+      margin-right: 34px;
+   }
 
-	.frameworks {
-		@include flexBetweenSet;
-		align-content: center;
-		margin-right: auto;
-		margin-left: auto;
+   .frameworks {
+      @include flexBetweenSet;
+      align-content: center;
+      margin-right: auto;
+      margin-left: auto;
 
-		li {		
-			&:not(:last-child ) {
-			margin-right: 16px;
-		}
-			& > a {
-				@include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
-				transition: $transition;
+      li {
+         &:not(:last-child) {
+            margin-right: 16px;
+         }
+         & > a {
+            @include fontStylingSet(15px, 20px, 500, $color-gray-placeholder);
+            transition: $transition;
 
-				&:hover {
-					color: $color-white;
-				}
-			}
-		}
-	}
+            &:hover {
+               color: $color-white;
+            }
+         }
+      }
+   }
 
-	.button {
-		font-size: 1em;
-		padding: 4px 21px;
-		white-space: nowrap;
-	}
+   .button {
+      font-size: 1em;
+      padding: 4px 21px;
+      white-space: nowrap;
+   }
 }

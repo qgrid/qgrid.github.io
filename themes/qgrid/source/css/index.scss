@@ -3,461 +3,461 @@
 @import "nav";
 
 .index {
-	font-family: $font-serif;
+   font-family: $font-serif;
 
-	h1,
-	h2 {
-		font-weight: normal;
-	}
+   h1,
+   h2 {
+      font-weight: normal;
+   }
 
-	h1 {
-		@include fontStylingSet(5.8em, 1.2em, 700, inherit);
-		margin: 40px 0 0 0;
+   h1 {
+      @include fontStylingSet(5.8em, 1.2em, 700, inherit);
+      margin: 40px 0 0 0;
 
-		@media screen and (max-width: 1080px) {
-			font-size: 4.8em;
-		}
+      @media screen and (max-width: 1080px) {
+         font-size: 4.8em;
+      }
 
-		@media screen and (max-width: 768px) {
-			font-size: 3.8em;
-		}
+      @media screen and (max-width: 768px) {
+         font-size: 3.8em;
+      }
 
-		.marked {
-			display: block;
-			background: linear-gradient(180deg, $color-accent, 54%, #11DED2 100%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			color: $color-accent;
-		}
-	}
+      .marked {
+         display: block;
+         background: linear-gradient(180deg, $color-accent, 54%, #11ded2 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         color: $color-accent;
+      }
+   }
 
-	h2 {
-		@include fontStylingSet(36px, inherit, 500, inherit);
-		text-align: center;
-		margin: 0 0 52px 0;
+   h2 {
+      @include fontStylingSet(36px, inherit, 500, inherit);
+      text-align: center;
+      margin: 0 0 52px 0;
 
-		@media screen and (max-width: 768px) {
-			font-size: 32px;
-			margin: 0 0 40px 0;
-		}
-	}
+      @media screen and (max-width: 768px) {
+         font-size: 32px;
+         margin: 0 0 40px 0;
+      }
+   }
 
-	h3 {
-		@include fontStylingSet(20px, 26px, 400, $color-dark-bg);
-		margin: 8px 0 8px 0;
-	}
+   h3 {
+      @include fontStylingSet(20px, 26px, 400, $color-dark-bg);
+      margin: 8px 0 8px 0;
+   }
 
-	h4 {
-		font-size: 36px;
+   h4 {
+      font-size: 36px;
 
-		sup {
-			@include fontStylingSet(18px, 18px, 400, $color-gray);
-		}
+      sup {
+         @include fontStylingSet(18px, 18px, 400, $color-gray);
+      }
 
-		sub {
-			@include fontStylingSet(14px, 18px, 400, $color-gray);
-			position: relative;
-			top: -8px;
-		}
-	}
+      sub {
+         @include fontStylingSet(14px, 18px, 400, $color-gray);
+         position: relative;
+         top: -8px;
+      }
+   }
 
-	a {
-		transition: $transition;
-	}
+   a {
+      transition: $transition;
+   }
 
-	.header {
-		background-color: $color-dark-bg;
-		text-align: center;
-		color: $color-white;
-		padding-top: 27px;
-		padding-bottom: calc((#{$editor-height} / 2) + 72px);    // 72px is margin for h1
-		margin-bottom: 0;
+   .header {
+      background-color: $color-dark-bg;
+      text-align: center;
+      color: $color-white;
+      padding-top: 27px;
+      padding-bottom: calc((#{$editor-height} / 2) + 72px); // 72px is margin for h1
+      margin-bottom: 0;
 
-		h1 {
-			margin: 73px 0 0 0;
-		}
-	
-		.highlight {
-			display: block;
-			color: $accent-color;
-		}
+      h1 {
+         margin: 73px 0 0 0;
+      }
 
-		.nav {
-			background-color: $color-dark-bg;
-			max-width: 1024px;
-			margin: 0 auto;
-			border-bottom: 0;
-			padding-top: 0;
+      .highlight {
+         display: block;
+         color: $accent-color;
+      }
 
-			.qgrid-logo {
-				width: 46px;
-				height: 32px;
-				margin-top: -14px;
-				margin-right: 0;
-			}
+      .nav {
+         background-color: $color-dark-bg;
+         max-width: 1024px;
+         margin: 0 auto;
+         border-bottom: 0;
+         padding-top: 0;
 
-			.nav-trigger {
-				display: none;
-			}
+         .qgrid-logo {
+            width: 46px;
+            height: 32px;
+            margin-top: -14px;
+            margin-right: 0;
+         }
 
-			.frameworks li:not(:last-child) {
-				margin-right: 40px;
-			}
+         .nav-trigger {
+            display: none;
+         }
 
-			.button {
-				padding: 4px 22px;
-			}
-		}
-	}
+         .frameworks li:not(:last-child) {
+            margin-right: 40px;
+         }
 
-	.example {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		margin-top: calc((#{$editor-height} / 2) * -1);
-		margin-bottom: 66px;
-	}
+         .button {
+            padding: 4px 22px;
+         }
+      }
+   }
+
+   .example {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-top: calc((#{$editor-height} / 2) * -1);
+      margin-bottom: 66px;
+   }
 }
 
 .news {
-	background-color: $color-background;
+   background-color: $color-background;
 
-	.container-flex {
-		margin-bottom: 26px;
-	}
+   .container-flex {
+      margin-bottom: 26px;
+   }
 
-	.news-all {
-		display: block;
-		text-align: center;
-		position: relative;
+   .news-all {
+      display: block;
+      text-align: center;
+      position: relative;
 
-		a {
-			&:hover {
-				opacity: 0.8;
-			}
-		}
-	}
+      a {
+         &:hover {
+            opacity: 0.8;
+         }
+      }
+   }
 
-	&-block {
-		width: 320px;
-		max-height: 386px;
-		box-sizing: border-box;
+   &-block {
+      width: 320px;
+      max-height: 386px;
+      box-sizing: border-box;
 
-		@media screen and (max-width: 1080px) {
-			margin: 0 40px 40px 40px;
-		}
+      @media screen and (max-width: 1080px) {
+         margin: 0 40px 40px 40px;
+      }
 
-		a {
-			cursor: pointer;
+      a {
+         cursor: pointer;
 
-			&:hover h3 {
-				color: $color-accent;
-			}
-		}
+         &:hover h3 {
+            color: $color-accent;
+         }
+      }
 
-		&__img {
-			width: 100%;
-			margin-bottom: 16px;
-			border-radius: 4px;
-			overflow: hidden;
+      &__img {
+         width: 100%;
+         margin-bottom: 16px;
+         border-radius: 4px;
+         overflow: hidden;
 
-			img {
-				border-radius: 4px;			
-			}
-		}
+         img {
+            border-radius: 4px;
+         }
+      }
 
-		&-text {
-			&__date {
-				font-family: $font-sans;
-				font-size: 1.1em;
-				margin: 0;
-				color: $color-gray;
-			}
+      &-text {
+         &__date {
+            font-family: $font-sans;
+            font-size: 1.1em;
+            margin: 0;
+            color: $color-gray;
+         }
 
-			&__descr {
-				margin: 0;
-				font-size: 16px;
-			}
-		}
-	}
+         &__descr {
+            margin: 0;
+            font-size: 16px;
+         }
+      }
+   }
 
-	&-button {
-		margin-top: 40px;
-		text-align: center;
+   &-button {
+      margin-top: 40px;
+      text-align: center;
 
-		&__btn {
-			@extend .button;
-			margin-top: 40px;
-			width: 144px;
-		}
-	}
+      &__btn {
+         @extend .button;
+         margin-top: 40px;
+         width: 144px;
+      }
+   }
 }
 
 .pricing {
-	background-color: $color-background;
-	margin-bottom: 80px;
+   background-color: $color-background;
+   margin-bottom: 80px;
 
-	h4 {
-		margin: 30px 0 27px 0;
-		font-weight: normal;
-	}
+   h4 {
+      margin: 30px 0 27px 0;
+      font-weight: normal;
+   }
 
-	&-wrapper {
-		@include flexBetweenSet;
-	}
+   &-wrapper {
+      @include flexBetweenSet;
+   }
 
-	&-heading {
-		text-align: center;
-		padding-bottom: 15px;
-	}
+   &-heading {
+      text-align: center;
+      padding-bottom: 15px;
+   }
 
-	&-secondary {
-		border: 1px solid $color-border;
+   &-secondary {
+      border: 1px solid $color-border;
 
-		@media screen and (max-width: 1080px) {
-			order: 3;
-		}
-	}
+      @media screen and (max-width: 1080px) {
+         order: 3;
+      }
+   }
 
-	&-primary {
-		border: 1px solid $color-accent;
-	}
+   &-primary {
+      border: 1px solid $color-accent;
+   }
 
-	.flex-item {
-		@include flexBetweenSet;
-		flex-direction: column;
-		text-align: center;
-		padding: 32px 24px 24px 24px;
-		height: 380px;
-		box-sizing: border-box;
-		border-radius: 4px;
+   .flex-item {
+      @include flexBetweenSet;
+      flex-direction: column;
+      text-align: center;
+      padding: 32px 24px 24px 24px;
+      height: 380px;
+      box-sizing: border-box;
+      border-radius: 4px;
 
-		@media screen and (max-width: 768px) {
-			height: 345px;
-		}
-	}
+      @media screen and (max-width: 768px) {
+         height: 345px;
+      }
+   }
 
-	&__rate {
-		font-size: 24px;
-	}
+   &__rate {
+      font-size: 24px;
+   }
 
-	&__text {
-		font-size: 16px;
-		text-align: left;
+   &__text {
+      font-size: 16px;
+      text-align: left;
 
-		@media screen and (max-width: 768px) {
-			text-align: center;
-		}
-	}
+      @media screen and (max-width: 768px) {
+         text-align: center;
+      }
+   }
 
-	.button {
-		@extend .button;
-		padding: 10px 20px;
-	}
+   .button {
+      @extend .button;
+      padding: 10px 20px;
+   }
 }
 
 .container-flex {
-	@include flexBetweenSet;
+   @include flexBetweenSet;
 
-	@media screen and (max-width: 1080px) {
-		flex-wrap: wrap;
-		justify-content: flex-start;
-	}
+   @media screen and (max-width: 1080px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+   }
 }
 
 .news,
-.products  {
-	margin-bottom: 158px;
+.products {
+   margin-bottom: 158px;
 
-	@media screen and (max-width: 1080px) {
-		margin-bottom: 100px;
-	}
+   @media screen and (max-width: 1080px) {
+      margin-bottom: 100px;
+   }
 }
 
 .products a.flex-item {
-	background-color: $color-bluish;
-	padding: 88px 24px 24px 32px;
-	box-sizing: border-box;
-	position: relative;
-	color: $color-dark-bg;
-	border: 1px solid $color-transparent;
+   background-color: $color-bluish;
+   padding: 88px 24px 24px 32px;
+   box-sizing: border-box;
+   position: relative;
+   color: $color-dark-bg;
+   border: 1px solid $color-transparent;
 
-	&:hover {
-		border: 1px solid $color-accent;
-		opacity: 1;
-	}
+   &:hover {
+      border: 1px solid $color-accent;
+      opacity: 1;
+   }
 
-	span {
-		@include fontStylingSet(18px, 24px, 500, inherit);
-	}
+   span {
+      @include fontStylingSet(18px, 24px, 500, inherit);
+   }
 
-	p {
-		font-size: 16px;
-		margin: 8px 0 0 0;
-	}
+   p {
+      font-size: 16px;
+      margin: 8px 0 0 0;
+   }
 
-	&::before {
-		font-size: 10px;
-		position: absolute;
-		right: 31px;
-		bottom: 24px;
-		display: block;
-		color: $color-accent;
-	}
-	
-	.flex-item-icon::before {
-		display: block;
-		width: 36px;
-		height: 42px;
-		position: absolute;
-		top: 34px;
-		font-size: 40px;
-		color: $color-accent;
-	}
+   &::before {
+      font-size: 10px;
+      position: absolute;
+      right: 31px;
+      bottom: 24px;
+      display: block;
+      color: $color-accent;
+   }
+
+   .flex-item-icon::before {
+      display: block;
+      width: 36px;
+      height: 42px;
+      position: absolute;
+      top: 34px;
+      font-size: 40px;
+      color: $color-accent;
+   }
 }
 
 .features .flex-item {
-	@include widthSet(216px);
-	box-sizing: border-box;
+   @include widthSet(216px);
+   box-sizing: border-box;
 
-	@media screen and (max-width: 1080px) {
-		@include widthSet(50%);
-		padding: 0 40px;
-		margin-bottom: 30px;
-	}
+   @media screen and (max-width: 1080px) {
+      @include widthSet(50%);
+      padding: 0 40px;
+      margin-bottom: 30px;
+   }
 
-	&:not(:last-child) {
-		margin-right: 40px;
+   &:not(:last-child) {
+      margin-right: 40px;
 
-		@media screen and (max-width: 1080px) {
-			margin-right: 0;
-		}
-	}
+      @media screen and (max-width: 1080px) {
+         margin-right: 0;
+      }
+   }
 
-	&::before {
-		@include squareSize(90px);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 22px;
-		border-radius: 100%;
-		font-size: 50px;
-		background-color: $color-accent;
-	}
+   &::before {
+      @include squareSize(90px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      border-radius: 100%;
+      font-size: 50px;
+      background-color: $color-accent;
+   }
 
-	span {
-		font-weight: 500;
-		font-size: 1.2em;
-		margin-bottom: 16px;
-		color: $color-dark-bg;
-	}
+   span {
+      font-weight: 500;
+      font-size: 1.2em;
+      margin-bottom: 16px;
+      color: $color-dark-bg;
+   }
 
-	p {
-		font-size: 1.1em;
-		color: $color-dark-bg;
-	}
+   p {
+      font-size: 1.1em;
+      color: $color-dark-bg;
+   }
 }
 
 .footer {
-	color: $color-footer-text;
-	background-color: $color-dark-bg;
-	padding: 40px 0;
+   color: $color-footer-text;
+   background-color: $color-dark-bg;
+   padding: 40px 0;
 
-	a:hover {
-		color: rgba($color-white, 0.8);
-	}
+   a:hover {
+      color: rgba($color-white, 0.8);
+   }
 
-	.container {
-		@include flexBetweenSet;
-	}
+   .container {
+      @include flexBetweenSet;
+   }
 
-	.social__item {
-		transition: opacity .15s ease-in-out;
+   .social__item {
+      transition: opacity 0.15s ease-in-out;
 
-		&:hover {
-			opacity: 0.8;
-		}
+      &:hover {
+         opacity: 0.8;
+      }
 
-		&:not(:last-child) {
-			margin-right: 20px;
-		}
-	}
+      &:not(:last-child) {
+         margin-right: 20px;
+      }
+   }
 
-	.social {
-		display: flex;
-		margin-bottom: 17px;
-	}
+   .social {
+      display: flex;
+      margin-bottom: 17px;
+   }
 
-	.footer__link {
-		letter-spacing: 1.4px;
+   .footer__link {
+      letter-spacing: 1.4px;
 
-		&.mail {
-			position: relative;
-			letter-spacing: 0;
-			font-size: 16px;
-			font-family: $font-sans;
+      &.mail {
+         position: relative;
+         letter-spacing: 0;
+         font-size: 16px;
+         font-family: $font-sans;
 
-			&::after {
-				@include decorationUnderlineSet($color-white);
-			}
-		}
-		
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}
-	}
+         &::after {
+            @include decorationUnderlineSet($color-white);
+         }
+      }
 
-	a {
-		color: $color-white;
-		text-decoration: none;
-		font-weight: 400;
-	}
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
 
-	p {
-		@include fontStylingSet(14px, 16px, 400, inherit);
-		font-family: $font-sans;
-		margin: 22px 0 0 0;
-	}
+   a {
+      color: $color-white;
+      text-decoration: none;
+      font-weight: 400;
+   }
 
-	h2 {
-		@include fontStylingSet(18px, 24px, 400, inherit);
-		margin-bottom: 0;
-	}
+   p {
+      @include fontStylingSet(14px, 16px, 400, inherit);
+      font-family: $font-sans;
+      margin: 22px 0 0 0;
+   }
 
-	.footer__right {
-		display: flex;
-		flex-direction: column;
-		justify-content: end;
-	}
+   h2 {
+      @include fontStylingSet(18px, 24px, 400, inherit);
+      margin-bottom: 0;
+   }
 
-	.footer-logo-wrapper {
-		width: 330px;
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-	}
+   .footer__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+   }
 
-	&__img {
-		background: url("../assets/images/qgrid-logo.svg") 50% 50% no-repeat;
-		width: 81px;
-		height: 52px;
-		margin: 0;
-		margin-right: 21px;
-		background-size: contain;
-	}
+   .footer-logo-wrapper {
+      width: 330px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+
+   &__img {
+      background: url("../assets/images/qgrid-logo.svg") 50% 50% no-repeat;
+      width: 81px;
+      height: 52px;
+      margin: 0;
+      margin-right: 21px;
+      background-size: contain;
+   }
 }
 
 .products .flex-item,
 .pricing .flex-item {
-	@include widthSet(320px);
+   @include widthSet(320px);
 
-	@media screen and (max-width: 1080px) {
-		margin: 0 40px 40px 40px;
-	}
+   @media screen and (max-width: 1080px) {
+      margin: 0 40px 40px 40px;
+   }
 
-	@media screen and (max-width: 768px) {
-		max-width: calc(100% - 80px);
-		flex: 0 0 100%;
-		margin: 0 40px 20px 40px;
-	}
+   @media screen and (max-width: 768px) {
+      max-width: calc(100% - 80px);
+      flex: 0 0 100%;
+      margin: 0 40px 20px 40px;
+   }
 }

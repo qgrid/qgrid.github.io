@@ -1,42 +1,74 @@
 // icons
-$iconMap: (performance: 'icon-performance', fullycustomable: 'icon-fullycustomable', fastflexible: 'icon-fastflexible', examples: 'icon-examples', documents: 'icon-documents', cleartypescripts: 'icon-cleartypescripts', search-glass:'icon-search', logo:'icon-qgrid-logo-simple', angular: 'icon-angular', angular-js: 'icon-angularjs', react: 'icon-react', vue: 'icon-vue', backbone:'icon-backbone', github: 'icon-github', nav-trigger: 'icon-hamburger', search-trigger: 'icon-search', icon-redirection: 'icon-redirection', icon-collapse: 'icon-collapse');
+$iconMap: (
+   performance: "icon-performance",
+   fullycustomable: "icon-fullycustomable",
+   fastflexible: "icon-fastflexible",
+   examples: "icon-examples",
+   documents: "icon-documents",
+   cleartypescripts: "icon-cleartypescripts",
+   search-glass: "icon-search",
+   logo: "icon-qgrid-logo-simple",
+   angular: "icon-angular",
+   angular-js: "icon-angularjs",
+   react: "icon-react",
+   vue: "icon-vue",
+   backbone: "icon-backbone",
+   github: "icon-github",
+   nav-trigger: "icon-hamburger",
+   search-trigger: "icon-search",
+   icon-redirection: "icon-redirection",
+   icon-collapse: "icon-collapse",
+);
 // images
-$logo-url: '../assets/images/logo.png';
-$qgrid-logo-url: '../assets/images/qgrid-logo.svg';
-$featuresMap: (virtualize:('../assets/images/virtualize.svg', 224px, 242px),
-	css:('../assets/images/css.svg', 297px, 142px),
-	custom: ('../assets/images/custom.svg', 231px, 199px),
-	js:('../assets/images/js.svg', 200px, 200px));
+$logo-url: "../assets/images/logo.png";
+$qgrid-logo-url: "../assets/images/qgrid-logo.svg";
+$featuresMap: (
+   virtualize: (
+      "../assets/images/virtualize.svg",
+      224px,
+      242px,
+   ),
+   css: (
+      "../assets/images/css.svg",
+      297px,
+      142px,
+   ),
+   custom: (
+      "../assets/images/custom.svg",
+      231px,
+      199px,
+   ),
+   js: (
+      "../assets/images/js.svg",
+      200px,
+      200px,
+   ),
+);
 // fonts
 $font-size: 14px;
-$font-sans: "Roboto",
-Helvetica,
-Arial,
-sans-serif;
-$font-serif: 'Roboto Slab',
-serif;
-$font-mono: "Roboto Mono",
-monospace;
+$font-sans: "Roboto", Helvetica, Arial, sans-serif;
+$font-serif: "Roboto Slab", serif;
+$font-mono: "Roboto Mono", monospace;
 //whitescale
 $whitescale-75: rgba(255, 255, 255, 0.75);
 $whitescale-50: rgba(255, 255, 255, 0.5);
 $whitescale-30: rgba(255, 255, 255, 0.3);
 // colors
-$accent-color: #0078CF; //rename to button-color
+$accent-color: #0078cf; //rename to button-color
 
 $color-text: #333;
 $color-background: #fff;
-$color-border: #DBDEE1;
+$color-border: #dbdee1;
 $color-top-text: #fff;
 $color-top-background: #353535;
 $color-sidebar-text: #fff;
 $color-sidebar-background: $color-top-background;
 $color-footer-text: #fff;
 $color-footer-background: $color-top-background;
-$color-scrollbar-thumb: #649EED;
-$color-scrollbar-background: #F5F5F5;
+$color-scrollbar-thumb: #649eed;
+$color-scrollbar-background: #f5f5f5;
 $color-table-header: $color-top-background;
-$color-table-even-row: #CBDFFB;
+$color-table-even-row: #cbdffb;
 $color-table-odd-row: #e7f1ff;
 $color-code-default: #e7f1ff;
 $color-code-selection: $color-code-default;
@@ -48,17 +80,17 @@ $nav-width: 270px;
 // footer
 $footer-height: 215px;
 
-
 //redesign variables
-$transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+$transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+   box-shadow 0.15s ease-in-out;
 $color-dark-bg: #121212;
 $color-white: #ffffff;
 $color-bluish: rgba(47, 128, 237, 0.04);
-$color-gray:  #828282;
+$color-gray: #828282;
 $color-gray-search: #444444;
-$color-gray-placeholder:  #C9C9C9;
+$color-gray-placeholder: #c9c9c9;
 $color-aside-border: #565656;
-$color-accent: #2F80ED;
+$color-accent: #2f80ed;
 $color-transparent: rgba(255, 255, 255, 0);
 
 $editor-height: 617px;

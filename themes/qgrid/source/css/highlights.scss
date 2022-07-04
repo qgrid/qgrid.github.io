@@ -1,38 +1,38 @@
 .page-wrapper {
-	.highlights {
-		display: flex;
-		flex-flow: column wrap;
-		margin: 0;
-		padding: 0;
-		> li {
-			br {
-				display: none;
-			}
-			display: flex;
-			flex-direction: column;
-			flex: 1 1 auto;
-			margin-bottom: 55px;
-			.video {
-				width: 50%;
-				padding: 0;
-			}
-			&:before {
-				content: none;
-			}
-			.description {
-				display: flex;
-				flex-flow: column wrap;
-				width: auto;
-				flex: 1 1 auto;
-				padding: 0;
-				h2 {
-					margin-top: 0;
-				}
-				p {
-					font-size: 1.5em;
-					line-height: 1.5em;
-				}
-			}
-		}
-	}
+   .highlights {
+      display: flex;
+      flex-flow: column wrap;
+      margin: 0;
+      padding: 0;
+      > li {
+         br {
+            display: none;
+         }
+         display: flex;
+         flex-direction: column;
+         flex: 1 1 auto;
+         margin-bottom: 55px;
+         .video {
+            width: 50%;
+            padding: 0;
+         }
+         &:before {
+            content: none;
+         }
+         .description {
+            display: flex;
+            flex-flow: column wrap;
+            width: auto;
+            flex: 1 1 auto;
+            padding: 0;
+            h2 {
+               margin-top: 0;
+            }
+            p {
+               font-size: 1.5em;
+               line-height: 1.5em;
+            }
+         }
+      }
+   }
 }

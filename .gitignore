@@ -1,8 +1,7 @@
-db.json
+.deploy_git/
+.idea
 *.log
+db.json
 node_modules
 public 
-package-lock.json
-.idea
-.deploy_git/
 source/api/api.json

@@ -1,4 +1,4 @@
-	@import "variables";
+@import "variables";
 .page-wrapper {
 	h1:first-child {
 		font-family: $font-serif;
@@ -42,7 +42,7 @@
 			width: 100%;
 		}
 
-		td.comment{
+		td.comment {
 			min-width: 200px;
 		}
 	}
@@ -86,7 +86,17 @@
 	}
 	ul {
 		list-style: none;
-		margin-bottom: 60px;
+		&:first-of-type {
+			margin-bottom: 60px;
+
+			> li {
+				&:before {
+					color: $accent-color;
+					top: -1px;
+				}
+			}
+		}
+
 		> li {
 			position: relative;
 			line-height: 1.4em;
@@ -95,10 +105,9 @@
 				@include squareSize(8px);
 				content: "\203A";
 				font-size: 18px;
-				color: $accent-color;
 				position: absolute;
 				left: 0;
-				top: -2px;
+				top: -1px;
 			}
 		}
 	}

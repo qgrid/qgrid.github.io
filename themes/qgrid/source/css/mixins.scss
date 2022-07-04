@@ -1,55 +1,55 @@
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
-	 ::-webkit-scrollbar {
-		width: $size;
-		height: $size;
-	}
-	 ::-webkit-scrollbar-thumb {
-		background: $foreground-color;
-	}
-	 ::-webkit-scrollbar-track {
-		background: $background-color;
-	} // For Internet Explorer
-	body {
-		scrollbar-face-color: $foreground-color;
-		scrollbar-track-color: $background-color;
-	}
+   ::-webkit-scrollbar {
+      width: $size;
+      height: $size;
+   }
+   ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+   }
+   ::-webkit-scrollbar-track {
+      background: $background-color;
+   } // For Internet Explorer
+   body {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+   }
 }
 
 @mixin fontStylingSet($font-size, $line-height, $font-weight, $color) {
-	font-size: $font-size;
-	line-height: $line-height;
-	font-weight: $font-weight;
-	color: $color;
+   font-size: $font-size;
+   line-height: $line-height;
+   font-weight: $font-weight;
+   color: $color;
 }
 
 @mixin decorationUnderlineSet($color) {
-	content: '';
-	width: 100%;
-	height: 1px;
-	background-color: $color;
-	display: block;
-	position: absolute;
-	left: 0;
-	bottom: 2px;
+   content: "";
+   width: 100%;
+   height: 1px;
+   background-color: $color;
+   display: block;
+   position: absolute;
+   left: 0;
+   bottom: 2px;
 }
 
 @mixin btnStylingSet($bg-color, $border-color, $color) {
-	background-color: $bg-color;
-	border: 1px solid $border-color;
-	color: $color;
+   background-color: $bg-color;
+   border: 1px solid $border-color;
+   color: $color;
 }
 
 @mixin widthSet($width) {
-	flex: 0 0 $width;
-  	max-width: $width;
+   flex: 0 0 $width;
+   max-width: $width;
 }
 
 @mixin flexBetweenSet {
-	display: flex;
-	justify-content: space-between;
+   display: flex;
+   justify-content: space-between;
 }
 
 @mixin squareSize($size) {
-	width: $size;
-	height: $size;
+   width: $size;
+   height: $size;
 }

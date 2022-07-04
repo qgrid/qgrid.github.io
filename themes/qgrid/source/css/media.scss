@@ -2,254 +2,254 @@
 
 // not small screen
 @media screen and (min-width: 851px) {
-	.pages {
-		#nav {
-			display: block !important;
-		}
+   .pages {
+      #nav {
+         display: block !important;
+      }
 
-		#overlay {
-			display: none !important;
-		}
+      #overlay {
+         display: none !important;
+      }
 
-		header {
-			display: block;
-			background: none;
-			height: 0;
+      header {
+         display: block;
+         background: none;
+         height: 0;
 
-			.logo-wrapper .logo {
-				display: none;
-			}
-		}
-	}
+         .logo-wrapper .logo {
+            display: none;
+         }
+      }
+   }
 }
 
 // medium screen
 @media screen and (min-width: 851px) and (max-width: 1470px) {
-	.pages header {
-		position: absolute;
-	}
+   .pages header {
+      position: absolute;
+   }
 
-	.qgrid-examples {
-		transition: ease .5s;
-		top: 33px;
-		right: 100px;
-	}
+   .qgrid-examples {
+      transition: ease 0.5s;
+      top: 33px;
+      right: 100px;
+   }
 }
 
 // small screen
 @media screen and (max-width: 850px) {
-	.news {
-		background-color: yellowgreen;
-		display: flex;
-		flex-direction: column;
-	}
+   .news {
+      background-color: yellowgreen;
+      display: flex;
+      flex-direction: column;
+   }
 
-	.index {
-		ul.features {
-			li,
-			li:nth-child(2n+1) {
-				flex-direction: column;
+   .index {
+      ul.features {
+         li,
+         li:nth-child(2n + 1) {
+            flex-direction: column;
 
-				div[class^="image-"] {
-					background-position: 50% 50%;
-					flex-basis: auto;
-				}
+            div[class^="image-"] {
+               background-position: 50% 50%;
+               flex-basis: auto;
+            }
 
-				.image-virtualize {
-					background-size: 112px 121px;
-				}
+            .image-virtualize {
+               background-size: 112px 121px;
+            }
 
-				.image-css {
-					background-size: 148.5px 71px;
-				}
+            .image-css {
+               background-size: 148.5px 71px;
+            }
 
-				.image-js {
-					background-size: 100px 100px;
-				}
+            .image-js {
+               background-size: 100px 100px;
+            }
 
-				.image-custom {
-					background-size: 115px 98px;
-				}
+            .image-custom {
+               background-size: 115px 98px;
+            }
 
-				.description {
-					flex-basis: auto;
-					text-align: center;
+            .description {
+               flex-basis: auto;
+               text-align: center;
 
-					p {
-						text-align: center;
-						position: relative;
-						max-width: none;
-						margin-right: 20px;
-						margin-left: 20px;
-					}
-				}
-			}
-		}
-	}
+               p {
+                  text-align: center;
+                  position: relative;
+                  max-width: none;
+                  margin-right: 20px;
+                  margin-left: 20px;
+               }
+            }
+         }
+      }
+   }
 
-	.pages {
-		main {
-			margin-left: 0;
-		}
+   .pages {
+      main {
+         margin-left: 0;
+      }
 
-		.page-wrapper {
-			margin: 100px 20px 40px 20px;
+      .page-wrapper {
+         margin: 100px 20px 40px 20px;
 
-			h1:first-child {
-				margin-top: 40px;
-				font-size: 40px;
-			}
+         h1:first-child {
+            margin-top: 40px;
+            font-size: 40px;
+         }
 
-			h2 {
-				font-size: 1.5em;
-			}
+         h2 {
+            font-size: 1.5em;
+         }
 
-			.github-link2 {
-				border: none;
+         .github-link2 {
+            border: none;
 
-				span {
-					display: none;
-				}
-			}
-		}
+            span {
+               display: none;
+            }
+         }
+      }
 
-		header {
-			display: block;
+      header {
+         display: block;
 
-			.logo-wrapper {
-				margin: 0;
-				position: absolute;
-				text-align: center;
-				width: 100%;
-				top: 17px;
-				z-index: -1;
+         .logo-wrapper {
+            margin: 0;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            top: 17px;
+            z-index: -1;
 
-				.logo {
-					font-size: 31px;
-					margin: 0;
-				}
-			}
+            .logo {
+               font-size: 31px;
+               margin: 0;
+            }
+         }
 
-			.nav {
-				flex-wrap: wrap;
-				justify-content: normal;
-				padding: 10px 0 0 0;
+         .nav {
+            flex-wrap: wrap;
+            justify-content: normal;
+            padding: 10px 0 0 0;
 
-				.button {
-					margin-right: 24px;
-					margin-left: auto;
-				}
+            .button {
+               margin-right: 24px;
+               margin-left: auto;
+            }
 
-				.qgrid-search {
-					order: 4;
-					flex-basis: 100%;
-					margin-top: 10px;
+            .qgrid-search {
+               order: 4;
+               flex-basis: 100%;
+               margin-top: 10px;
 
-					&::before {
-						left: 34px;
-					}
+               &::before {
+                  left: 34px;
+               }
 
-					.search {
-						padding: 12px 58px;
-						width: 100%;
-					}
-				}
-			}
+               .search {
+                  padding: 12px 58px;
+                  width: 100%;
+               }
+            }
+         }
 
-			.frameworks,
-			.qgrid-examples {
-				display: none;
-			}
-		}
+         .frameworks,
+         .qgrid-examples {
+            display: none;
+         }
+      }
 
-		.nav-trigger {
-			display: block;
-		}
+      .nav-trigger {
+         display: block;
+      }
 
-		#nav {
-			display: none;
-			padding-top: 0;
-			z-index: 12;
-			top: 29px;
-			border-top: 4px solid $color-white;
-			width: calc(100% - 48px);
-			transform: translateX(-50%);
-			left: 50%;
-			border-radius: 4px;
-			height: 189px;
-			
-			&.has-highlight {
-				display: block !important;
-			}
+      #nav {
+         display: none;
+         padding-top: 0;
+         z-index: 12;
+         top: 29px;
+         border-top: 4px solid $color-white;
+         width: calc(100% - 48px);
+         transform: translateX(-50%);
+         left: 50%;
+         border-radius: 4px;
+         height: 189px;
 
-			nav {
-				height: calc(100% - 28px);
-			}
+         &.has-highlight {
+            display: block !important;
+         }
 
-			.logo {
-				display: none;
-			}
-		}
-	}
+         nav {
+            height: calc(100% - 28px);
+         }
+
+         .logo {
+            display: none;
+         }
+      }
+   }
 }
 
 @media screen and (max-width: 540px) {
-	.index main {
-		.get-started {
-			h1 {
-				font-size: 22px;
-				line-height: 22px;
-			}
+   .index main {
+      .get-started {
+         h1 {
+            font-size: 22px;
+            line-height: 22px;
+         }
 
-			h2 {
-				font-size: 18px;
-				line-height: 18px;
-			}
-		}
+         h2 {
+            font-size: 18px;
+            line-height: 18px;
+         }
+      }
 
-		.header .nav .frameworks li {
-			font-size: 2.5em;
-			margin-bottom: 10px;
+      .header .nav .frameworks li {
+         font-size: 2.5em;
+         margin-bottom: 10px;
 
-			&:not(:last-child) {
-				margin-right: 10px;
-			}
-		}
+         &:not(:last-child) {
+            margin-right: 10px;
+         }
+      }
 
-		.header .nav {
-			flex-wrap: wrap;
-			width: auto;
-		}
-	}
+      .header .nav {
+         flex-wrap: wrap;
+         width: auto;
+      }
+   }
 
-	.pages {
-		header .nav {
-			.qgrid-logo {
-				width: 47px;
-				height: 33px;
-			}
+   .pages {
+      header .nav {
+         .qgrid-logo {
+            width: 47px;
+            height: 33px;
+         }
 
-			.button {
-				font-size: 0.8em;
-				padding: 6px 14px;
-				margin-right: 16px;
-			}
+         .button {
+            font-size: 0.8em;
+            padding: 6px 14px;
+            margin-right: 16px;
+         }
 
-			.nav-trigger {
-				width: 24px;
-				margin-left: 16px;
-				margin-right: 24px;
-			}
+         .nav-trigger {
+            width: 24px;
+            margin-left: 16px;
+            margin-right: 24px;
+         }
 
-			.qgrid-search {
-				&::before {
-					left: 20px;
-				}
+         .qgrid-search {
+            &::before {
+               left: 20px;
+            }
 
-				.search {
-					padding: 12px 45px;
-				}
-			}
-		}
-	}
+            .search {
+               padding: 12px 45px;
+            }
+         }
+      }
+   }
 }
