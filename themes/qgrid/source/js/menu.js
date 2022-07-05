@@ -64,7 +64,7 @@ function searchOnLoad() {
 
    if (active && search) {
       document.getElementById('search').value = search;
-      currentPageSearch(search);
+      // currentPageSearch(search);
       menuItemsSearch(search);
    }
 }
@@ -77,7 +77,7 @@ function searchOnHashChange() {
    }
 
    updateExampleLink(search);
-   currentPageSearch(search);
+   // currentPageSearch(search);
    menuItemsSearch(search);
 }
 
