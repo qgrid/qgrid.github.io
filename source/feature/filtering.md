@@ -10,7 +10,7 @@ order: 5
 - [How to disable particular column filter?](#how-to-disable-particular-column-filter)
 - [How to filter q-grid externally?](#how-to-filter-q-grid-externally)
 
-There are many UI abilities that q-grid provides to filter data. Choose column filters, filter row, condition builder or implement custom filters.
+There are many UI abilities that q-grid provides to filter data out of box: column filters, filter row, condition builder and custom predicate.
 
 <a name="how-to-add-default-filter-on-component-load" href="#how-to-add-default-filter-on-component-load">
    How to add default filter on component load?
@@ -19,80 +19,57 @@ There are many UI abilities that q-grid provides to filter data. Choose column f
 Use `by` property to get or set filter settings.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async" [model]="gridModel">
-         <q-grid-columns generation="deep"></q-grid-columns>
-      </q-grid>
-      `
-})
-export class MyComponent implements AfterViewInit {
-   rows$ = this.dataService.getRows();
-   gridModel = this.qgrid.model();
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-
-   ngAfterViewInit() {
-      this.gridModel.filter({
-         by: {
-            firstName: { items: ['Smith'] },
-            gender: { blanks: true },
-            $expression: {
-               kind: 'group',
-               op: 'and',
-               left: {
-                  kind: 'condition',
-                  left: 'firstName',
-                  op: 'in',
-                     right: ['Smith', 'Bran']
-               },
-               right: null
-            }
+qgrid
+   .model()
+   .filter({
+      by: {
+         firstName: { items: ['Smith'] },
+         gender: { blanks: true },
+         $expression: {
+            kind: 'group',
+            op: 'and',
+            left: {
+               kind: 'condition',
+               left: 'firstName',
+               op: 'in',
+                  right: ['Smith', 'Bran']
+            },
+            right: null
          }
-      });
-   }
-}
+      }
+   });
 ```
 
 <a name="how-to-add-a-filter-row" href="#how-to-add-a-filter-row">
    How to add a filter row?
 </a>
 
-To show filter controls under the column headers use `filterUnit` attribute, filter view can be overridden in the template definition.
+To show a filter row(controls under the column headers) use filter state, also filter template can be overridden .
 
 ```typescript
 @Component({
    template: `
       <q-grid [model]="gridModel">
-         <q-grid-column key="myNumber">
-            <ng-template for="filter" let-$cell>
-               <input #input
-                     type="number"
-                     (change)="$view.filter.column.execute($cell.column.model, input.value)" />
-            </ng-template>
-         </q-grid-column>
+         <ng-template qGridColumnFilter="age" let-$cell>
+            <input #input
+                   type="number"
+                   (change)="$view.filter.column.execute($cell.column.model, input.value)" />
+         </ng-template>
       </q-grid>
    `
 })
-export class ExampleFilterRowCustomComponent implements AfterViewInit {
+export class MyComponent {
    rows$ = this.dataService.getRows();
-   gridModel = this.qgrid.model();
+   gridModel = this.qgrid
+      .model()
+      .filter({
+         unit: 'row'
+      });
 
    constructor(
       private dataService: MyDataService,
       private qgrid: Grid
    ) {
-   }
-
-   ngAfterViewInit() {
-      this.gridModel.filter({
-         unit: 'row'
-      });
    }
 }
 ```

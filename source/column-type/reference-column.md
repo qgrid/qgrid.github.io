@@ -9,31 +9,34 @@ Use this column type when need to handle reference values, the `reference value`
 
 ```typescript
 @Component({
-    template: `
-       <q-grid [rows]="rows">
-          <q-grid-columns>
-             <q-grid-column key="friends"
-                            type="reference"                            
-                            [editorOptions]="friends">
-          </q-grid-columns>
-       </q-grid>
-    `
+    template: `<q-grid [rows]="rows$ | async" [model]="gridModel"></q-grid>`
 })
 export class MyComponent {
-   friends: EditorOptions = {
+   gridModel = qgrid
+      .model()
+      .data({
+         columns: [
+            { key: 'friends', editorOptions: friendsOptions }
+         ]
+      });
+
+   friendsOptions: EditorOptions = {
       modelFactory: ({ row, reference }) => {
-         const model = this.qgrid.model();
+         const friendsModel = this.qgrid.model();
 
          this.dataService
             .getFriends(row.myId)
             .subscribe(rows => model.data({ rows }));
 
-        return model;
+        return friendsModel;
       }
    };
 
-   constructor(private qgrid: Grid) {
-}
+   constructor(
+      private qgrid: Grid,
+      private dataService: MyDataService
+   ) {
+   }
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/column-reference-basic/latest" %}

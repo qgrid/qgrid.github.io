@@ -7,10 +7,9 @@ order: 3
 - [How to change column header template?](#how-to-change-selection-mode)
 - [How to change cell editor template?](#how-to-change-cell-editor-template)
 - [How to change aggregation template in the column footer?](#how-to-change-aggregation-template-in-the-column-footer)
-- [How to implement custom aggregation in the column footer?](#how-to-implement-custom-aggregation-in-the-column-footer?)
 - [Suggested Links](#suggested-links)
 
-To apply cell custom templates use `ng-template` with a new style `qGridColumnHead`, `qGridColumnBody`, `qGridColumnFoot`, `qGridColumnEdit` directives.
+To apply custom template to the cell use `ng-template` along with `qGridColumnHead`, `qGridColumnBody`, `qGridColumnFoot`, `qGridColumnEdit` directives.
 
 ```html
 <q-grid>
@@ -68,20 +67,6 @@ Use let-`$cell` to have access to aggregated value, it will work when `aggregati
 <q-grid [rows]="rows$ | async">
    <ng-template qGridColumnFoot="phase" let-$cell>
       Count is {{$cell.value}}
-   </ng-template>
-</q-grid>
-```
-
-<a name="how-to-implement-custom-aggregation-in-the-column-footer?" href="#how-to-implement-custom-aggregation-in-the-column-footer?">
-   How to implement custom aggregation in the column footer?
-</a>
-
-Use footer template and your custom function from the component.
-
-```html
-<q-grid [rows]="rows$ | async">
-   <ng-template qGridColumnFoot="phase" let-$cell>
-      Diff: {{getDiffFor('phase')}}
    </ng-template>
 </q-grid>
 ```

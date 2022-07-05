@@ -10,16 +10,15 @@ order: 4
 
 Use this column type to display date or date times.
 
-```html
-<q-grid>
-   <q-grid-columns>
-      <q-grid-column type="date" key="birth">
-      </q-grid-column>
-   </q-grid-columns>
-</q-grid>
+```typescript
+qgrid
+   .model()
+   .data({
+      columns: [
+         { key: 'birthday', type: 'date' }
+      ]
+   });
 ```
-
-{% docEditor "github/qgrid/ng2-example/tree/column-date-basic/latest" %}
 
 <a name="time" href="#time">
    Time
@@ -27,32 +26,27 @@ Use this column type to display date or date times.
 
 Use number type to display time values in a specific format.
 
-```html
-<q-grid>
-   <q-grid-columns>
-      <q-grid-column type="time" key="alarm">
-      </q-grid-column>
-   </q-grid-columns>
-</q-grid>
+```typescript
+qgrid
+   .model()
+   .data({
+      columns: [
+         { key: 'alarm', type: 'time' }
+      ]
+   });
 ```
-
-{% docEditor "github/qgrid/ng2-example/tree/column-time-basic/latest" %}
 
 <a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 
-* Use `format` property to build a date display value according to locale rules.
+* Use `qGridDate` directive to display a date according to the locale rules.
 
 ```html
 <q-grid>
-   <q-grid-columns>
-      <q-grid-column type="date">
-         <ng-template for="body" let-$cell>
-            {{$cell.label | qGridDate: $cell.column.format}}
-         </ng-template>
-      </q-grid-column>
-   </q-grid-columns>
+   <ng-template qGridColumnBody="birthday" let-$cell>
+      {{$cell.label | qGridDate: $cell.column.format}}
+   </ng-template>
 </q-grid>
 ```
 
@@ -70,23 +64,13 @@ Usually data from http request goes directly to the q-grid, in this case if colu
 If it's not possible to lead data contract to ISO 8601 and there is no chance to to convert string to date object before putting it to q-grid column `value` property can be overridden.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid>
-         <q-grid-columns>
-            <q-grid-column type="date" 
-                           [value]="toDate">
-            </q-grid-column>
-         </q-grid-columns>
-      </q-grid>
-      `
-})
-export class MyComponent {
-   toDate(row: any, column: Column) {
-      return new Date(row[column.key]);
-   }
-}
+qgrid
+   .model()
+   .data({
+      columns: [
+         { key: 'birthday', type: 'date', value: row => new Date(row.birthdayString) }
+      ]
+   });
 ```
 
 <a name="suggested-links" href="#suggested-links">

@@ -58,9 +58,6 @@ qgrid
          { name: 'Alex', age: 16 }, 
          { name: 'Bill', age: 40 }
       ]
-   })
-   .columnList({ 
-      generation: 'deep' 
    });
 ```
 

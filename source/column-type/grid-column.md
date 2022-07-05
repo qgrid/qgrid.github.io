@@ -58,24 +58,13 @@ Column header tooltip text could be shown as a column tooltip.
 The callback or some constant could be used to retrieve or setup the cell value/label.
 
 ```typescript
-@Component({
-    template: `
-       <q-grid [rows]="rows">
-          <q-grid-columns>
-             <q-grid-column key="address" [value]="address">
-          </q-grid-columns>
-       </q-grid>
-    `
-})
-export class MyComponent {
-   address(row, value) {
-      if (arguments.length > 1) {
-         row.contact.address = value;
-         return;
-      }
-
-      return row.contact.address;
-   }
+qgrid
+   .model()
+   .data({
+      columns: [
+         { key: 'address', value: row => row.contact.address }
+      ]
+   })
 ```
 
 > Be aware that if there is a requirement to use `this` pointer inside the `value` or `label` callback, `this` should be passed by using closure or lambda function.
