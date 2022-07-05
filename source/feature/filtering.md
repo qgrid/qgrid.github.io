@@ -6,7 +6,7 @@ order: 5
 
 - [How to add default filter on component load?](#how-to-add-default-filter-on-component-load)
 - [How to add a filter row?](#how-to-add-a-filter-row)
-- [How to propagate list of filter by items to the column filter from the server?](#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server)
+- [How to propagate filter items to the column filter from the server?](#how-to-propagate-filter-items-to-the-column-filter-from-the-server)
 - [How to disable particular column filter?](#how-to-disable-particular-column-filter)
 - [How to filter q-grid externally?](#how-to-filter-q-grid-externally)
 
@@ -74,43 +74,21 @@ export class MyComponent {
 }
 ```
 
-{% docEditor "github/qgrid/ng2-example/tree/filter-row-basic/latest" %}
-
-<a name="how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server" href="#how-to-propagate-list-of-filter-by-items-to-the-column-filter-from-the-server">
-   How to propagate list of filter by items to the column filter from the server?
+<a name="how-to-propagate-filter-items-to-the-column-filter-from-the-server" href="#how-to-propagate-filter-items-to-the-column-filter-from-the-server">
+   How to propagate filter items to the column filter from the server?
 </a>
 
 When server side pagination is used the data in q-grid can be not loaded fully in this case `fetch` callback can be used to get list of items to show in column filter component.
 
 ```typescript
-import { Grid, GridModel, FetchContext } from 'ng2-qgrid';
-
-@Component({
-   template: `
-      <q-grid [rows]="rows$ | async" [model]="gridModel">
-         <q-grid-columns generation="deep"></q-grid-columns>
-      </q-grid>
-   `
-})
-export class ExampleFilterRowCustomComponent implements AfterViewInit {
-   rows$ = this.dataService.getRows();
-   gridModel = this.qgrid.model();
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-
-   ngAfterViewInit() {
-      this.gridModel.filter({
-         fetch: (key: string, context: FetchContext) => {
-            const { search, take, skip } = context;
-            return dataService.getFilterItemsFor(key, search, take, skip);
-         }
-      });
-   }
-}
+qgrid
+   .model()
+   .filter({
+      fetch: (key: string, context: FetchContext) => {
+         const { search, take, skip } = context;
+         return dataService.getFilterItemsFor(key, search, take, skip);
+      }
+   });
 ```
 
 <a name="how-to-disable-particular-column-filter" href="#how-to-disable-particular-column-filter">
@@ -132,31 +110,11 @@ Each column has `canFilter` property that could be used as indicator if filter i
 Setup `custom` predicate to execute custom filtration. If filtering is required after the user input, just setup another instance of `custom` function.
 
 ```typescript
-@Component({
-   selector: 'my-component',
-   template: `
-      <q-grid [rows]="rows$ | async">
-      </q-grid>
-      `
-})
-export class MyComponent implements AfterViewInit {
-   rows$ = this.dataService.getRows();
-   gridModel = this.qgrid.model();
-
-   @Input() search: string;
-
-   constructor(
-      private dataService: MyDataService,
-      private qgrid: Grid
-   ) {
-   }
-
-   ngAfterViewInit() {
-      this.gridModel.filter({
-         custom: row => row.name.toLowerCase().indexOf(this.search) >= 0,
-      });
-   }
-}
+qgrid
+   .model()
+   .filter({
+      custom: row => row.name.toLowerCase().indexOf('Bob') >= 0,
+   });
 ```
 
 {% docEditor "github/qgrid/ng2-example/tree/filter-row-custom/latest" %}

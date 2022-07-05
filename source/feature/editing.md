@@ -8,9 +8,8 @@ order: 11
 - [How to enable batch edit?](#how-to-enable-batch-edit)
 - [How to disable edit mode for the particular column?](#how-to-disable-edit-mode-for-the-particular-column)
 - [How to add a new row to the end?](#how-to-add-a-new-row-to-the-end)
-(#how-to-add-delete-button-and-implement-row-deletion)
 - [How to change edit shortcuts?](#how-to-change-edit-shortcuts)
-- [How to prevent value change it it's empty?](#How-to-prevent-value-change-it-it's-empty)
+- [How to prevent value change when it's empty?](#How-to-prevent-value-change-when-it's-empty)
 - [How to enter or exit edit mode?](#how-to-enter-or-exit-edit-mode)
 - [How to disable edit mode?](#how-to-disable-edit-mode)
 - [Suggested Links](#suggested-links)
@@ -31,7 +30,7 @@ qgrid
    How to access edit events in q-grid?
 </a>
 
-Edit model force to use commands to control editing.
+Use appropriate commands from the q-grid model to control editing.
 
 ```typescript
 qgrid
@@ -50,7 +49,7 @@ qgrid
    How to enable batch edit?
 </a>
 
-Use edit `method` property to activate batch editing, it activates cell handler that could be dragged to apply start cell value to the next selection.
+Set `method` equals to `batch` to activate batch editing. The special cell handler will be displayed that could be dragged to apply start cell value to the future selection.
 
 ```typescript
 qgrid
@@ -150,11 +149,11 @@ qgrid
    });
 ```
 
-<a name="how-to-prevent-value-change-it-it's-empty" href="#how-to-prevent-value-change-it-it's-empty">
-   How to prevent value change it it's empty?
+<a name="how-to-prevent-value-change-when-it's-empty" href="#how-to-prevent-value-change-when-it's-empty">
+   How to prevent value change when it's empty?
 </a>
 
-Use `canExecute` method in `commit` command to decide if cell value should be changed.
+Use `canExecute` method in `commit` command to decide if cell value need to be changed.
 
 ```typescript
 qgrid
@@ -179,6 +178,8 @@ qgrid
       state: 'edit'
    });
 ```
+
+> It won't work if the q-grid not in the edit mode.
 
 <a name="how-to-disable-edit-mode" href="#how-to-disable-edit-mode">
    How to disable edit mode?

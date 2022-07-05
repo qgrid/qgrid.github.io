@@ -4,29 +4,27 @@ group: Features
 order: 8
 ---
 
-- [How to apply styles to particular cell or row?](#how-to-apply-styles-to-particular-cell-or-row)
+- [How to apply styles to the particular cell or row?](#how-to-apply-styles-to-the-particular-cell-or-row)
 - [How to change column width?](#how-to-change-column-width)
 - [How to make column width auto adjusted to the cell content?](#how-to-make-column-width-auto-adjusted-to-the-cell-content)
 - [Suggested Links](#suggested-links)
 
-Use rich css system to apply specific styles. Each cell, no mater if it is located in the header, body or footer has specific set of css class names.
+Using standard css selection is the easiest option to apply some styles, almost any q-grid element is reachable by convenient class name. For instance you can use `q-grid-{column.type}` to select cells base on column type and `q-grid-the-{column.key}` to select cells based on column key.
 
-* Class `q-grid-{column.type}` is selectable by using column type.
-* Class `q-grid-the-{column.key}` is selectable by using column id.
-
-<a name="how-to-apply-styles-to-particular-cell-or-row" href="#how-to-apply-styles-to-particular-cell-or-row">
-   How to apply styles to particular cell or row?
+<a name="how-to-apply-styles-to-the-particular-cell-or-row" href="#how-to-apply-styles-to-the-particular-cell-or-row">
+   How to apply styles to the particular cell or row?
 </a>
 
-Use style callbacks for dynamic class assignments, for the cell style it is possible to pass an object instead of callback in this case object keys will play the role of column key filters. Data rows style callbacks can accept `RowDetails` and `Node` classes depending on the q-grid settings.
+There are style callbacks in q-grid model to define css classes to the appropriate cells or rows.
 
 ```typescript
- qgrid
+qgrid
    model()
    .style({
       cell: {
          birthday: (row, column, context) => {
-            context.class(`td-${row.name}`, {
+            // as a result td.hey-bob or td.hey-bill
+            context.class(`hey-${row.name}`, {
                color: `#${row.color}`,
                background: '#3f51b5'
             });
@@ -40,16 +38,15 @@ Use style callbacks for dynamic class assignments, for the cell style it is poss
    }):
 ```
 
-> Pass unique id to `context.class` method for the appropriate group of styles.
+> Please note, that `row` callback as a row can receive `RowDetails` or `Node` depending on settings.
 
 {% docEditor "github/qgrid/ng2-example/tree/style-cell-basic/latest" %}
-
 
 <a name="how-to-change-column-width" href="#how-to-change-column-width">
    How to change column width?
 </a>
 
-Use css styles or column `width` property to setup desired column size using pixels or percentages.
+Use css styles or column `width` property to setup desired column size using pixels or percentages. To better control layout when percents are used you should consider to explicitly define widths for every colum.
 
 ```typescript
 qgrid
@@ -57,19 +54,17 @@ qgrid
    .data({
       columns: [
          { key: 'name', type: 'text', width: 100 },
-         { key: 'age', type: 'number', width: '100%' },
+         { key: 'age', type: 'number', width: '100%', widthMode: 'relative' },
          { key: 'birthday', type: 'date', widthMode: 'fit-head' }
       ]
    });
 ```
 
-> If percents are used all columns should have `width` property for the correct size calculation.
-
 <a name="how-to-make-column-width-auto-adjusted-to-the-cell-content" href="#how-to-make-column-width-auto-adjusted-to-the-cell-content">
    How to make column width auto adjusted to the cell content?
 </a>
 
-As q-grid utilizes `table-layout: fixed` right now we doesn't support auto size out of box, but it can be calculated using TypeScript in user code and applying style API.
+Now q-grid doesn't support column auto size, you can try to use style callback to do it on your side.
 
 <a name="suggested-links" href="#suggested-links">
    Suggested Links

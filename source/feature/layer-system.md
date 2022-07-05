@@ -7,13 +7,13 @@ order: 7
 - [How to implement a custom layer?](#how-to-implement-a-custom-layer)
 - [How to show message when there is no data?](#how-to-show-message-when-there-is-no-data)
 
-Use q-grid layer system to define custom templates that can be shown inside q-grid.
+Use q-grid layer system to define custom templates that can be shown inside the q-grid.
 
 <a name="how-to-implement-a-custom-layer" href="#how-to-implement-a-custom-layer">
    How to implement a custom layer?
 </a>
 
-First - implement a custom trigger that will control when to show a new layer. Note that trigger not obligatory should be a visual component, any strategy could be selected where `GridPlugin` is available.
+First, implement a custom trigger that will control when to show a new layer. Note that trigger not obligatory should be a visual component.
 
 ```typescript
 import { GridPlugin } from 'ng2-qgrid';
