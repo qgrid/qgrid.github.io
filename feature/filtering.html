@@ -70,7 +70,7 @@
 		<a class="qgrid-logo" href="/"></a>
 		
 			<span class="qgrid-search search-trigger">
-				<input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
+				<input id="search" placeholder="Search" type="search" class="search" autocomplete="off" data-stop-propagation/>
 			</span>
 		
 		<a href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
@@ -644,85 +644,62 @@
 <li><a href="#how-to-disable-particular-column-filter">How to disable particular column filter?</a></li>
 <li><a href="#how-to-filter-q-grid-externally">How to filter q-grid externally?</a></li>
 </ul>
-<p>There are many UI abilities that q-grid provides to filter data. Choose column filters, filter row, condition builder or implement custom filters.</p>
+<p>There are many UI abilities that q-grid provides to filter data out of box: column filters, filter row, condition builder and custom predicate.</p>
 <a name="how-to-add-default-filter-on-component-load" href="#how-to-add-default-filter-on-component-load">
    How to add default filter on component load?
 </a>
 
 <p>Use <code>by</code> property to get or set filter settings.</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-   selector<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
-   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-      &lt;q-grid [rows]="rows$ | async" [model]="gridModel">
-         &lt;q-grid-columns generation="deep">&lt;/q-grid-columns>
-      &lt;/q-grid>
-      </span><span class="token template-punctuation string">`</span></span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">implements</span> <span class="token class-name">AfterViewInit</span> <span class="token punctuation">&#123;</span>
-   rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-   <span class="token function">constructor</span><span class="token punctuation">(</span>
-      <span class="token keyword">private</span> dataService<span class="token operator">:</span> MyDataService<span class="token punctuation">,</span>
-      <span class="token keyword">private</span> qgrid<span class="token operator">:</span> Grid
-   <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-   <span class="token punctuation">&#125;</span>
-
-   <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-         by<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-            firstName<span class="token operator">:</span> <span class="token punctuation">&#123;</span> items<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Smith'</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-            gender<span class="token operator">:</span> <span class="token punctuation">&#123;</span> blanks<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-            $expression<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-               kind<span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
-               op<span class="token operator">:</span> <span class="token string">'and'</span><span class="token punctuation">,</span>
-               left<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-                  kind<span class="token operator">:</span> <span class="token string">'condition'</span><span class="token punctuation">,</span>
-                  left<span class="token operator">:</span> <span class="token string">'firstName'</span><span class="token punctuation">,</span>
-                  op<span class="token operator">:</span> <span class="token string">'in'</span><span class="token punctuation">,</span>
-                     right<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Smith'</span><span class="token punctuation">,</span> <span class="token string">'Bran'</span><span class="token punctuation">]</span>
-               <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-               right<span class="token operator">:</span> <span class="token keyword">null</span>
-            <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">qgrid
+   <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      by<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+         firstName<span class="token operator">:</span> <span class="token punctuation">&#123;</span> items<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Smith'</span><span class="token punctuation">]</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+         gender<span class="token operator">:</span> <span class="token punctuation">&#123;</span> blanks<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+         $expression<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+            kind<span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
+            op<span class="token operator">:</span> <span class="token string">'and'</span><span class="token punctuation">,</span>
+            left<span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+               kind<span class="token operator">:</span> <span class="token string">'condition'</span><span class="token punctuation">,</span>
+               left<span class="token operator">:</span> <span class="token string">'firstName'</span><span class="token punctuation">,</span>
+               op<span class="token operator">:</span> <span class="token string">'in'</span><span class="token punctuation">,</span>
+                  right<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'Smith'</span><span class="token punctuation">,</span> <span class="token string">'Bran'</span><span class="token punctuation">]</span>
+            <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+            right<span class="token operator">:</span> <span class="token keyword">null</span>
          <span class="token punctuation">&#125;</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+      <span class="token punctuation">&#125;</span>
+   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="how-to-add-a-filter-row" href="#how-to-add-a-filter-row">
    How to add a filter row?
 </a>
 
-<p>To show filter controls under the column headers use <code>filterUnit</code> attribute, filter view can be overridden in the template definition.</p>
+<p>To show a filter row(controls under the column headers) use filter state, also filter template can be overridden .</p>
 <pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
    template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
       &lt;q-grid [model]="gridModel">
-         &lt;q-grid-column key="myNumber">
-            &lt;ng-template for="filter" let-$cell>
-               &lt;input #input
-                     type="number"
-                     (change)="$view.filter.column.execute($cell.column.model, input.value)" />
-            &lt;/ng-template>
-         &lt;/q-grid-column>
+         &lt;ng-template qGridColumnFilter="age" let-$cell>
+            &lt;input #input
+                   type="number"
+                   (change)="$view.filter.column.execute($cell.column.model, input.value)" />
+         &lt;/ng-template>
       &lt;/q-grid>
    </span><span class="token template-punctuation string">`</span></span>
 <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ExampleFilterRowCustomComponent</span> <span class="token keyword">implements</span> <span class="token class-name">AfterViewInit</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
    rows$ <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>dataService<span class="token punctuation">.</span><span class="token function">getRows</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid<span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   gridModel <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>qgrid
+      <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+         unit<span class="token operator">:</span> <span class="token string">'row'</span>
+      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
    <span class="token function">constructor</span><span class="token punctuation">(</span>
       <span class="token keyword">private</span> dataService<span class="token operator">:</span> MyDataService<span class="token punctuation">,</span>
       <span class="token keyword">private</span> qgrid<span class="token operator">:</span> Grid
    <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
    <span class="token punctuation">&#125;</span>
-
-   <span class="token function">ngAfterViewInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token keyword">this</span><span class="token punctuation">.</span>gridModel<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-         unit<span class="token operator">:</span> <span class="token string">'row'</span>
-      <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
     <div class="editor">

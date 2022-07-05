@@ -70,7 +70,7 @@
 		<a class="qgrid-logo" href="/"></a>
 		
 			<span class="qgrid-search search-trigger">
-				<input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
+				<input id="search" placeholder="Search" type="search" class="search" autocomplete="off" data-stop-propagation/>
 			</span>
 		
 		<a href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
@@ -641,10 +641,9 @@
 <li><a href="#how-to-change-selection-mode">How to change column header template?</a></li>
 <li><a href="#how-to-change-cell-editor-template">How to change cell editor template?</a></li>
 <li><a href="#how-to-change-aggregation-template-in-the-column-footer">How to change aggregation template in the column footer?</a></li>
-<li><a href="#how-to-implement-custom-aggregation-in-the-column-footer?">How to implement custom aggregation in the column footer?</a></li>
 <li><a href="#suggested-links">Suggested Links</a></li>
 </ul>
-<p>To apply cell custom templates use <code>ng-template</code> with a new style <code>qGridColumnHead</code>, <code>qGridColumnBody</code>, <code>qGridColumnFoot</code>, <code>qGridColumnEdit</code> directives.</p>
+<p>To apply custom template to the cell use <code>ng-template</code> along with <code>qGridColumnHead</code>, <code>qGridColumnBody</code>, <code>qGridColumnFoot</code>, <code>qGridColumnEdit</code> directives.</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">qGridColumnBody</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>birthday<span class="token punctuation">"</span></span> <span class="token attr-name">let-$cell</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">></span></span>&#123;&#123;$cell.value&#125;&#125;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">></span></span>
@@ -691,17 +690,6 @@
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span> <span class="token attr-name">[rows]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rows$ | async<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">qGridColumnFoot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>phase<span class="token punctuation">"</span></span> <span class="token attr-name">let-$cell</span><span class="token punctuation">></span></span>
       Count is &#123;&#123;$cell.value&#125;&#125;
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-template</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<a name="how-to-implement-custom-aggregation-in-the-column-footer?" href="#how-to-implement-custom-aggregation-in-the-column-footer?">
-   How to implement custom aggregation in the column footer?
-</a>
-
-<p>Use footer template and your custom function from the component.</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span> <span class="token attr-name">[rows]</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>rows$ | async<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">qGridColumnFoot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>phase<span class="token punctuation">"</span></span> <span class="token attr-name">let-$cell</span><span class="token punctuation">></span></span>
-      Diff: &#123;&#123;getDiffFor('phase')&#125;&#125;
    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-template</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 

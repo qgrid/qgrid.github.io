@@ -225,11 +225,11 @@
     transform: translateX(-50%);
     left: 50%;
     border-radius: 4px;
-    height: 189px; }
+    height: 40%; }
     .pages #nav.has-highlight {
       display: block !important; }
     .pages #nav nav {
-      height: calc(100% - 28px); }
+      height: calc(100% - 31px); }
     .pages #nav .logo {
       display: none; } }
 

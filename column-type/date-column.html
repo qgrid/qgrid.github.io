@@ -70,7 +70,7 @@
 		<a class="qgrid-logo" href="/"></a>
 		
 			<span class="qgrid-search search-trigger">
-				<input id="search" placeholder="Search" type="search" class="search" data-stop-propagation/>
+				<input id="search" placeholder="Search" type="search" class="search" autocomplete="off" data-stop-propagation/>
 			</span>
 		
 		<a href="https://qgrid.github.io/ng2" class="qgrid-examples"></a>
@@ -644,63 +644,39 @@
 <li><a href="#suggested-links">Suggested Links</a></li>
 </ul>
 <p>Use this column type to display date or date times.</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-columns</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>date<span class="token punctuation">"</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>birth<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-columns</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-    <div class="editor">
-      <span class="editor-frame">
-        <iframe data-src="//stackblitz.com/github/qgrid/ng2-example/tree/column-date-basic/latest?embed=1&file=app/app.component.ts&hideExplorer=1&hideNavigation=1&hidedevtools=1&view=preview">
-        </iframe>
-      </span>
-      <div class="source-links">
-      </div>
-    </div>
-
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">qgrid
+   <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      columns<span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">&#123;</span> key<span class="token operator">:</span> <span class="token string">'birthday'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'date'</span> <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="time" href="#time">
    Time
 </a>
 
 <p>Use number type to display time values in a specific format.</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-columns</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>time<span class="token punctuation">"</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alarm<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-columns</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-    <div class="editor">
-      <span class="editor-frame">
-        <iframe data-src="//stackblitz.com/github/qgrid/ng2-example/tree/column-time-basic/latest?embed=1&file=app/app.component.ts&hideExplorer=1&hideNavigation=1&hidedevtools=1&view=preview">
-        </iframe>
-      </span>
-      <div class="source-links">
-      </div>
-    </div>
-
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">qgrid
+   <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      columns<span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">&#123;</span> key<span class="token operator">:</span> <span class="token string">'alarm'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'time'</span> <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="default-template-and-specific-properties" href="#default-template-and-specific-properties">
    Default template and specific properties
 </a>
 
 <ul>
-<li>Use <code>format</code> property to build a date display value according to locale rules.</li>
+<li>Use <code>qGridDate</code> directive to display a date according to the locale rules.</li>
 </ul>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-columns</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>q-grid-column</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>date<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>body<span class="token punctuation">"</span></span> <span class="token attr-name">let-$cell</span><span class="token punctuation">></span></span>
-            &#123;&#123;$cell.label | qGridDate: $cell.column.format&#125;&#125;
-         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-template</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-column</span><span class="token punctuation">></span></span>
-   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid-columns</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ng-template</span> <span class="token attr-name">qGridColumnBody</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>birthday<span class="token punctuation">"</span></span> <span class="token attr-name">let-$cell</span><span class="token punctuation">></span></span>
+      &#123;&#123;$cell.label | qGridDate: $cell.column.format&#125;&#125;
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ng-template</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>q-grid</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="date-as-string" href="#date-as-string">
    Date as String
@@ -714,23 +690,13 @@
 <li><code>YYYY-MM-DDTHH:mm</code> - 2017-08-10T15:20:23.738Z</li>
 </ul>
 <p>If it’s not possible to lead data contract to ISO 8601 and there is no chance to to convert string to date object before putting it to q-grid column <code>value</code> property can be overridden.</p>
-<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token decorator"><span class="token at operator">@</span><span class="token function">Component</span></span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-   selector<span class="token operator">:</span> <span class="token string">'my-component'</span><span class="token punctuation">,</span>
-   template<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
-      &lt;q-grid>
-         &lt;q-grid-columns>
-            &lt;q-grid-column type="date" 
-                           [value]="toDate">
-            &lt;/q-grid-column>
-         &lt;/q-grid-columns>
-      &lt;/q-grid>
-      </span><span class="token template-punctuation string">`</span></span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token punctuation">&#123;</span>
-   <span class="token function">toDate</span><span class="token punctuation">(</span>row<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> column<span class="token operator">:</span> Column<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-      <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>row<span class="token punctuation">[</span>column<span class="token punctuation">.</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript">qgrid
+   <span class="token punctuation">.</span><span class="token function">model</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+      columns<span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">&#123;</span> key<span class="token operator">:</span> <span class="token string">'birthday'</span><span class="token punctuation">,</span> type<span class="token operator">:</span> <span class="token string">'date'</span><span class="token punctuation">,</span> <span class="token function-variable function">value</span><span class="token operator">:</span> row <span class="token operator">=></span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>row<span class="token punctuation">.</span>birthdayString<span class="token punctuation">)</span> <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <a name="suggested-links" href="#suggested-links">
    Suggested Links
